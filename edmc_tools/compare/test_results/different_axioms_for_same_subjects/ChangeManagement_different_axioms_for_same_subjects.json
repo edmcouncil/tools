@@ -1,0 +1,63 @@
+[
+    {
+        "subject": "https://spec.pistoiaalliance.org/idmp/ontology/META/ChangeManagement/",
+        "left and not right": [
+            [
+                "https://spec.pistoiaalliance.org/idmp/ontology/META/ChangeManagement/hasMaturityLevel",
+                "https://spec.pistoiaalliance.org/idmp/ontology/META/ChangeManagement/Provisional"
+            ],
+            [
+                "http://www.w3.org/2002/07/owl#versionIRI",
+                "https://spec.pistoiaalliance.org/idmp/ontology/META/20220801/ChangeManagement/"
+            ]
+        ],
+        "right and not left": [
+            [
+                "https://spec.pistoiaalliance.org/idmp/ontology/META/ChangeManagement/hasMaturityLevel",
+                "https://spec.pistoiaalliance.org/idmp/ontology/META/ChangeManagement/Release"
+            ],
+            [
+                "http://www.w3.org/2002/07/owl#versionIRI",
+                "https://spec.pistoiaalliance.org/idmp/ontology/META/20221001/ChangeManagement/"
+            ]
+        ],
+        "both right and left": [
+            [
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                "http://www.w3.org/2002/07/owl#Ontology"
+            ],
+            [
+                "http://www.w3.org/2002/07/owl#imports",
+                "https://www.omg.org/spec/Commons/AnnotationVocabulary/"
+            ],
+            [
+                "http://www.w3.org/2002/07/owl#imports",
+                "https://www.omg.org/spec/Commons/Classifiers/"
+            ],
+            [
+                "http://purl.org/dc/terms/references",
+                "http://purl.org/dc/terms/"
+            ],
+            [
+                "http://www.w3.org/2000/01/rdf-schema#label",
+                "Change Management Ontology"
+            ],
+            [
+                "http://purl.org/dc/terms/license",
+                "http://opensource.org/licenses/MIT"
+            ],
+            [
+                "https://www.omg.org/spec/Commons/AnnotationVocabulary/copyright",
+                "Copyright (c) 2022 EDM Council, Inc."
+            ],
+            [
+                "https://www.omg.org/spec/Commons/AnnotationVocabulary/copyright",
+                "Copyright (c) 2022 Pistoia Alliance, Inc."
+            ],
+            [
+                "http://purl.org/dc/terms/abstract",
+                "The IDMP Change Management ontology provides metadata for data management and governance of the IDMP ontologies."
+            ]
+        ]
+    }
+]

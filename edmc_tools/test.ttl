@@ -1,0 +1,14 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+
+[] rdf:first _:N280fc5363057434cb245cd5564c9426b,
+        _:Ned0fccac34f64d069bfb593b1a6d4085 .
+
+[] rdf:first "a1" ;
+    rdf:rest _:N280fc5363057434cb245cd5564c9426b,
+        _:Ned0fccac34f64d069bfb593b1a6d4085 .
+
+[] rdf:first _:N280fc5363057434cb245cd5564c9426b ;
+    rdf:rest _:Ned0fccac34f64d069bfb593b1a6d4085 .
+
+_:N280fc5363057434cb245cd5564c9426b rdf:first "a2" .
+

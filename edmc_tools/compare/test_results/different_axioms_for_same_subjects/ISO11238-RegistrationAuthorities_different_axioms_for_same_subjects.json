@@ -1,0 +1,313 @@
+[
+    {
+        "subject": "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-RegistrationAuthorities/FoodAndDrugAdministrationRegistrationAuthority",
+        "left and not right": [
+            [
+                "https://www.omg.org/spec/Commons/RegistrationAuthorities/manages",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-RegistrationAuthorities/GlobalSubstanceRegistrySystem"
+            ]
+        ],
+        "right and not left": [
+            [
+                "https://www.omg.org/spec/Commons/RegistrationAuthorities/manages",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-RegistrationAuthorities/GlobalSubstanceRegistrationSystem"
+            ]
+        ],
+        "both right and left": [
+            [
+                "https://www.omg.org/spec/Commons/AnnotationVocabulary/abbreviation",
+                "FDA G-SRS RA"
+            ],
+            [
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                "http://www.w3.org/2002/07/owl#NamedIndividual"
+            ],
+            [
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                "https://www.omg.org/spec/Commons/RegistrationAuthorities/RegistrationAuthority"
+            ],
+            [
+                "http://www.w3.org/2000/01/rdf-schema#label",
+                "Food and Drug Administration Registration Authority"
+            ],
+            [
+                "https://www.omg.org/spec/Commons/PartiesAndSituations/isPlayedBy",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-RegistrationAuthorities/UnitedStatesFoodAndDrugAdministration"
+            ],
+            [
+                "http://www.w3.org/2004/02/skos/core#definition",
+                "Food and Drug Administration (FDA) in its role as a Registration Authority (RA), which is a function of the G-SRS for registration of substances in the FDA/USP Global Substance Registry System"
+            ],
+            [
+                "https://www.omg.org/spec/Commons/AnnotationVocabulary/adaptedFrom",
+                "ISO 11238:2018 Health informatics - Identification of medicinal products (IDMP) - Data elements and structures for the unique identification and exchange of regulated information on substances, clause A.1.5"
+            ]
+        ]
+    },
+    {
+        "subject": "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-RegistrationAuthorities/ClinicalTrialsGov",
+        "left and not right": [],
+        "right and not left": [
+            [
+                "https://www.omg.org/spec/Commons/RegistrationAuthorities/isManagedBy",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-RegistrationAuthorities/NationalLibraryOfMedicineRegistrationAuthority"
+            ]
+        ],
+        "both right and left": [
+            [
+                "http://www.w3.org/2000/01/rdf-schema#label",
+                "ClinicalTrials.gov"
+            ],
+            [
+                "https://www.omg.org/spec/Commons/AnnotationVocabulary/directSource",
+                "https://clinicaltrials.gov/"
+            ],
+            [
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                "https://www.omg.org/spec/Commons/RegistrationAuthorities/Registry"
+            ],
+            [
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                "http://www.w3.org/2002/07/owl#NamedIndividual"
+            ],
+            [
+                "http://www.w3.org/2004/02/skos/core#definition",
+                "database of privately and publicly funded clinical studies conducted around the world"
+            ],
+            [
+                "https://www.omg.org/spec/LCC/Languages/LanguageRepresentation/hasTextualName",
+                "ClinicalTrials.gov"
+            ]
+        ]
+    },
+    {
+        "subject": "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-RegistrationAuthorities/DrugBank",
+        "left and not right": [],
+        "right and not left": [
+            [
+                "https://www.omg.org/spec/Commons/RegistrationAuthorities/isManagedBy",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-RegistrationAuthorities/OMxPersonalHealthAnalyticsIncAsRegistrationAuthority"
+            ]
+        ],
+        "both right and left": [
+            [
+                "https://www.omg.org/spec/Commons/AnnotationVocabulary/directSource",
+                "https://go.drugbank.com/"
+            ],
+            [
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                "https://www.omg.org/spec/Commons/RegistrationAuthorities/Registry"
+            ],
+            [
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                "http://www.w3.org/2002/07/owl#NamedIndividual"
+            ],
+            [
+                "https://www.omg.org/spec/LCC/Languages/LanguageRepresentation/hasTextualName",
+                "Drug Bank"
+            ],
+            [
+                "http://www.w3.org/2004/02/skos/core#definition",
+                "online database containing information on drugs and drug targets"
+            ],
+            [
+                "http://www.w3.org/2000/01/rdf-schema#label",
+                "Drug Bank"
+            ]
+        ]
+    },
+    {
+        "subject": "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-RegistrationAuthorities/",
+        "left and not right": [
+            [
+                "http://www.w3.org/2002/07/owl#versionIRI",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/20220801/ISO11238-RegistrationAuthorities/"
+            ],
+            [
+                "https://spec.pistoiaalliance.org/idmp/ontology/META/ChangeManagement/hasMaturityLevel",
+                "https://spec.pistoiaalliance.org/idmp/ontology/META/ChangeManagement/Preliminary"
+            ],
+            [
+                "http://purl.org/dc/terms/abstract",
+                "The registration authorities ontology provides the set of registration authorities and related code set definitions that are needed for identification of substances and medicinal products. It is derived from the ISO 11238:2018 Health informatics - Identification of medicinal products - Data elements and structures for the unique identification and exchange of regulated information on substances standard."
+            ]
+        ],
+        "right and not left": [
+            [
+                "http://www.w3.org/2004/02/skos/core#scopeNote",
+                "Note that jurisdiction-specific counterparties and codes are specified in subordinate ontologies supporting those jurisdictions."
+            ],
+            [
+                "http://www.w3.org/2002/07/owl#versionIRI",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/20221001/ISO11238-RegistrationAuthorities/"
+            ],
+            [
+                "https://spec.pistoiaalliance.org/idmp/ontology/META/ChangeManagement/hasMaturityLevel",
+                "https://spec.pistoiaalliance.org/idmp/ontology/META/ChangeManagement/Provisional"
+            ],
+            [
+                "http://purl.org/dc/terms/abstract",
+                "The registration authorities ontology defines international registration authorities, regulatory agencies and codes required for identification of substances and medicinal products. It is derived from the ISO 11238:2018 Health informatics - Identification of medicinal products - Data elements and structures for the unique identification and exchange of regulated information on substances standard."
+            ]
+        ],
+        "both right and left": [
+            [
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                "http://www.w3.org/2002/07/owl#Ontology"
+            ],
+            [
+                "http://www.w3.org/2002/07/owl#imports",
+                "https://www.omg.org/spec/Commons/AnnotationVocabulary/"
+            ],
+            [
+                "http://www.w3.org/2002/07/owl#imports",
+                "https://www.omg.org/spec/Commons/ProductsAndServices/"
+            ],
+            [
+                "http://www.w3.org/2002/07/owl#imports",
+                "https://www.omg.org/spec/Commons/Collections/"
+            ],
+            [
+                "http://www.w3.org/2002/07/owl#imports",
+                "https://www.omg.org/spec/Commons/ContextualDesignators/"
+            ],
+            [
+                "https://www.omg.org/spec/Commons/AnnotationVocabulary/copyright",
+                "Copyright (c) 2022 EDM Council, Inc."
+            ],
+            [
+                "http://www.w3.org/2002/07/owl#imports",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/"
+            ],
+            [
+                "http://www.w3.org/2000/01/rdf-schema#label",
+                "ISO 11238 Registration Authorities Ontology"
+            ],
+            [
+                "http://www.w3.org/2002/07/owl#imports",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/"
+            ],
+            [
+                "https://www.omg.org/spec/Commons/AnnotationVocabulary/copyright",
+                "Copyright (c) 2022 Pistoia Alliance, Inc."
+            ],
+            [
+                "http://www.w3.org/2002/07/owl#imports",
+                "https://www.omg.org/spec/LCC/Countries/ISO3166-1-CountryCodes/"
+            ],
+            [
+                "http://www.w3.org/2002/07/owl#imports",
+                "https://www.omg.org/spec/Commons/PartiesAndSituations/"
+            ],
+            [
+                "http://www.w3.org/2002/07/owl#imports",
+                "https://www.omg.org/spec/LCC/Countries/CountryRepresentation/"
+            ],
+            [
+                "http://www.w3.org/2002/07/owl#imports",
+                "https://spec.pistoiaalliance.org/idmp/ontology/META/ChangeManagement/"
+            ],
+            [
+                "http://www.w3.org/2002/07/owl#imports",
+                "https://www.omg.org/spec/Commons/RegistrationAuthorities/"
+            ],
+            [
+                "http://www.w3.org/2002/07/owl#imports",
+                "https://www.omg.org/spec/LCC/Languages/LanguageRepresentation/"
+            ],
+            [
+                "http://purl.org/dc/terms/license",
+                "http://opensource.org/licenses/MIT"
+            ],
+            [
+                "http://www.w3.org/2002/07/owl#imports",
+                "https://www.omg.org/spec/Commons/RegulatoryAgencies/"
+            ],
+            [
+                "http://www.w3.org/2002/07/owl#imports",
+                "https://www.omg.org/spec/Commons/Identifiers/"
+            ]
+        ]
+    },
+    {
+        "subject": "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-RegistrationAuthorities/UniqueIngredientNumber",
+        "left and not right": [
+            [
+                "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+                [
+                    "https://www.omg.org/spec/Commons/RegistrationAuthorities/isRegisteredIn",
+                    "http://www.w3.org/2002/07/owl#hasValue",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-RegistrationAuthorities/GlobalSubstanceRegistrySystem",
+                    "http://www.w3.org/2002/07/owl#cardinality",
+                    1
+                ]
+            ]
+        ],
+        "right and not left": [
+            [
+                "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+                [
+                    "https://www.omg.org/spec/Commons/RegistrationAuthorities/isRegisteredIn",
+                    "http://www.w3.org/2002/07/owl#hasValue",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-RegistrationAuthorities/GlobalSubstanceRegistrationSystem",
+                    "http://www.w3.org/2002/07/owl#cardinality",
+                    1
+                ]
+            ]
+        ],
+        "both right and left": [
+            [
+                "http://www.w3.org/2004/02/skos/core#definition",
+                "10-character, randomly generated alpha-numeric string that is used to identify substances in medicinal products in the FDA Global Substance Registration System (G-SRS)"
+            ],
+            [
+                "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/SubstanceCode"
+            ],
+            [
+                "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+                [
+                    "https://www.omg.org/spec/Commons/RegistrationAuthorities/hasRegistrationAuthority",
+                    "http://www.w3.org/2002/07/owl#hasValue",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-RegistrationAuthorities/FoodAndDrugAdministrationRegistrationAuthority",
+                    "http://www.w3.org/2002/07/owl#cardinality",
+                    1
+                ]
+            ],
+            [
+                "http://www.w3.org/2004/02/skos/core#note",
+                "The first nine characters are randomly generated followed by a check character. The integrity check on the UNII is stronger than both the EC# and the CAS Registry Number because of the random generation from a large number of potential UNIIs and the fact that there are 36 possible check characters compared to 10 with both the EC# and CAS Registry Number."
+            ],
+            [
+                "http://www.w3.org/2004/02/skos/core#scopeNote",
+                "The UNII is freely available for use and there is a mechanism whereby a manufacturer can petition for the generation of a UNII through the FDA. The system has the capability for both public and restricted access to information, and can be adapted to produce specified substance identifiers."
+            ],
+            [
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                "http://www.w3.org/2002/07/owl#Class"
+            ],
+            [
+                "https://www.omg.org/spec/Commons/AnnotationVocabulary/abbreviation",
+                "UNII"
+            ],
+            [
+                "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+                [
+                    "https://www.omg.org/spec/Commons/Identifiers/identifies",
+                    "http://www.w3.org/2002/07/owl#someValuesFrom",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/Substance",
+                    "http://www.w3.org/2002/07/owl#cardinality",
+                    1
+                ]
+            ],
+            [
+                "http://www.w3.org/2000/01/rdf-schema#label",
+                "unique ingredient number"
+            ],
+            [
+                "https://www.omg.org/spec/Commons/AnnotationVocabulary/directSource",
+                "ISO 11238:2018 Health informatics - Identification of medicinal products (IDMP) - Data elements and structures for the unique identification and exchange of regulated information on substances, clause A.1.5"
+            ]
+        ]
+    }
+]

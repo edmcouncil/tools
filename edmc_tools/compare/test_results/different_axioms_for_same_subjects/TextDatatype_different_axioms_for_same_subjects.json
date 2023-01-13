@@ -1,0 +1,67 @@
+[
+    {
+        "subject": "https://www.omg.org/spec/Commons/TextDatatype/",
+        "left and not right": [
+            [
+                "http://www.w3.org/2002/07/owl#versionIRI",
+                "https://www.omg.org/spec/Commons/20220801/TextDatatype/"
+            ]
+        ],
+        "right and not left": [
+            [
+                "http://www.w3.org/2002/07/owl#versionIRI",
+                "https://www.omg.org/spec/Commons/20221101/TextDatatype/"
+            ]
+        ],
+        "both right and left": [
+            [
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                "http://www.w3.org/2002/07/owl#Ontology"
+            ],
+            [
+                "https://www.omg.org/spec/Commons/AnnotationVocabulary/copyright",
+                "Copyright (c) 2022 Object Management Group, Inc."
+            ],
+            [
+                "http://purl.org/dc/terms/contributor",
+                "Evren Sirin, Stardog Union"
+            ],
+            [
+                "https://www.omg.org/spec/Commons/AnnotationVocabulary/copyright",
+                "Copyright (c) 2020-2022 Thematix Partners LLC"
+            ],
+            [
+                "http://www.w3.org/2002/07/owl#imports",
+                "https://www.omg.org/spec/Commons/AnnotationVocabulary/"
+            ],
+            [
+                "http://www.w3.org/2004/02/skos/core#changeNote",
+                "The https://www.omg.org/spec/Commons/20220501/TextDatatype.rdf version of this ontology was modified to add a note to the Text datatype that makes a stronger statement about potential adverse reasoning consequences if used (COMMONS-18)."
+            ],
+            [
+                "http://purl.org/dc/terms/abstract",
+                "The text datatype ontology defines a custom datatype that combines language tagged and plain string values. This text datatype is useful in cases where it is not clear whether string values will be tagged or not, but where it is anticipated that multilingual strings might be appropriate."
+            ],
+            [
+                "http://www.w3.org/2000/01/rdf-schema#label",
+                "Commons Text Datatype Ontology"
+            ],
+            [
+                "https://www.omg.org/spec/Commons/AnnotationVocabulary/copyright",
+                "Copyright (c) 2020-2022 Stardog Union"
+            ],
+            [
+                "http://purl.org/dc/terms/license",
+                "http://opensource.org/licenses/MIT"
+            ],
+            [
+                "http://www.w3.org/2004/02/skos/core#note",
+                "Note that custom datatypes are outside the OWL 2 RL profile and so its usage in applications may need to be commented out."
+            ],
+            [
+                "http://purl.org/dc/terms/contributor",
+                "Elisa Kendall, Thematix Partners LLC"
+            ]
+        ]
+    }
+]

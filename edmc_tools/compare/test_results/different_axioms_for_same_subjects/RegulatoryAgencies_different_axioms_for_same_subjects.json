@@ -1,0 +1,191 @@
+[
+    {
+        "subject": "https://www.omg.org/spec/Commons/RegulatoryAgencies/Licensee",
+        "left and not right": [
+            [
+                "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+                [
+                    "https://www.omg.org/spec/Commons/PartiesAndSituations/isPlayedBy",
+                    "http://www.w3.org/2002/07/owl#someValuesFrom",
+                    "N3b56684b04504b56b6a772e8b86e4c9b",
+                    "http://www.w3.org/2002/07/owl#cardinality",
+                    1
+                ]
+            ]
+        ],
+        "right and not left": [
+            [
+                "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+                [
+                    "https://www.omg.org/spec/Commons/PartiesAndSituations/isPlayedBy",
+                    "http://www.w3.org/2002/07/owl#someValuesFrom",
+                    "Nb917eb90ddc5462d96a70bd7a1d694aa",
+                    "http://www.w3.org/2002/07/owl#cardinality",
+                    1
+                ]
+            ]
+        ],
+        "both right and left": [
+            [
+                "https://www.omg.org/spec/Commons/AnnotationVocabulary/adaptedFrom",
+                "Barron's Dictionary of Business and Economics Terms, Fifth Edition, 2012"
+            ],
+            [
+                "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+                "https://www.omg.org/spec/Commons/PartiesAndSituations/PartyRole"
+            ],
+            [
+                "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+                "https://www.omg.org/spec/Commons/PartiesAndSituations/Undergoer"
+            ],
+            [
+                "http://www.w3.org/2000/01/rdf-schema#label",
+                "licensee"
+            ],
+            [
+                "http://www.w3.org/2004/02/skos/core#definition",
+                "party to whom a license has been granted"
+            ],
+            [
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                "http://www.w3.org/2002/07/owl#Class"
+            ]
+        ]
+    },
+    {
+        "subject": "https://www.omg.org/spec/Commons/RegulatoryAgencies/",
+        "left and not right": [
+            [
+                "http://www.w3.org/2002/07/owl#versionIRI",
+                "https://www.omg.org/spec/Commons/20220801/RegulatoryAgencies/"
+            ]
+        ],
+        "right and not left": [
+            [
+                "http://www.w3.org/2002/07/owl#versionIRI",
+                "https://www.omg.org/spec/Commons/20221101/RegulatoryAgencies/"
+            ],
+            [
+                "http://www.w3.org/2002/07/owl#imports",
+                "https://www.omg.org/spec/Commons/Organizations/"
+            ]
+        ],
+        "both right and left": [
+            [
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                "http://www.w3.org/2002/07/owl#Ontology"
+            ],
+            [
+                "https://www.omg.org/spec/Commons/AnnotationVocabulary/copyright",
+                "Copyright (c) 2022 Object Management Group, Inc."
+            ],
+            [
+                "http://www.w3.org/2002/07/owl#imports",
+                "https://www.omg.org/spec/Commons/Documents/"
+            ],
+            [
+                "http://www.w3.org/2002/07/owl#imports",
+                "https://www.omg.org/spec/Commons/ContextualIdentifiers/"
+            ],
+            [
+                "http://www.w3.org/2000/01/rdf-schema#label",
+                "Regulatory Agencies Ontology"
+            ],
+            [
+                "http://www.w3.org/2002/07/owl#imports",
+                "https://www.omg.org/spec/Commons/AnnotationVocabulary/"
+            ],
+            [
+                "http://www.w3.org/2002/07/owl#imports",
+                "https://www.omg.org/spec/Commons/PartiesAndSituations/"
+            ],
+            [
+                "http://www.w3.org/2002/07/owl#imports",
+                "https://www.omg.org/spec/Commons/DatesAndTimes/"
+            ],
+            [
+                "http://www.w3.org/2002/07/owl#imports",
+                "https://www.omg.org/spec/Commons/ProductsAndServices/"
+            ],
+            [
+                "http://purl.org/dc/terms/license",
+                "http://opensource.org/licenses/MIT"
+            ],
+            [
+                "https://www.omg.org/spec/Commons/AnnotationVocabulary/copyright",
+                "Copyright (c) 2022 EDM Council, Inc."
+            ],
+            [
+                "http://purl.org/dc/terms/abstract",
+                "This ontology defines general purpose concepts for representation of regulatory agencies, also known as regulatory authorities or regulators. It was derived from the FIBO Regulatory Agencies, Legal Capacity, and Jurisdictions ontologies and simplified/adapted for broader use."
+            ],
+            [
+                "http://www.w3.org/2002/07/owl#imports",
+                "https://www.omg.org/spec/Commons/Identifiers/"
+            ],
+            [
+                "http://www.w3.org/2002/07/owl#imports",
+                "https://www.omg.org/spec/LCC/Countries/CountryRepresentation/"
+            ]
+        ]
+    },
+    {
+        "subject": "https://www.omg.org/spec/Commons/RegulatoryAgencies/Licensor",
+        "left and not right": [
+            [
+                "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+                [
+                    "https://www.omg.org/spec/Commons/PartiesAndSituations/isPlayedBy",
+                    "http://www.w3.org/2002/07/owl#someValuesFrom",
+                    "Nfb105a789baf413faf7da93a65dbf72b",
+                    "http://www.w3.org/2002/07/owl#cardinality",
+                    1
+                ]
+            ]
+        ],
+        "right and not left": [
+            [
+                "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+                [
+                    "https://www.omg.org/spec/Commons/PartiesAndSituations/isPlayedBy",
+                    "http://www.w3.org/2002/07/owl#someValuesFrom",
+                    "N7234b194f29c40ef9ab61d62e60c3c78",
+                    "http://www.w3.org/2002/07/owl#cardinality",
+                    1
+                ]
+            ]
+        ],
+        "both right and left": [
+            [
+                "https://www.omg.org/spec/Commons/AnnotationVocabulary/adaptedFrom",
+                "Barron's Dictionary of Business and Economics Terms, Fifth Edition, 2012"
+            ],
+            [
+                "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+                [
+                    "https://www.omg.org/spec/Commons/ProductsAndServices/issues",
+                    "http://www.w3.org/2002/07/owl#someValuesFrom",
+                    "https://www.omg.org/spec/Commons/RegulatoryAgencies/License",
+                    "http://www.w3.org/2002/07/owl#cardinality",
+                    1
+                ]
+            ],
+            [
+                "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+                "https://www.omg.org/spec/Commons/PartiesAndSituations/Actor"
+            ],
+            [
+                "http://www.w3.org/2000/01/rdf-schema#label",
+                "licensor"
+            ],
+            [
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                "http://www.w3.org/2002/07/owl#Class"
+            ],
+            [
+                "http://www.w3.org/2004/02/skos/core#definition",
+                "party that grants a license"
+            ]
+        ]
+    }
+]

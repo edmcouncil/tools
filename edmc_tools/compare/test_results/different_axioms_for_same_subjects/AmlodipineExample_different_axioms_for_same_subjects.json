@@ -1,0 +1,1258 @@
+[
+    {
+        "subject": "https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/AmlodipineExample/AmlodipineMesylateMonohydrateMolecularStructure",
+        "left and not right": [
+            [
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/hasStereochemistry",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/Stereochemistry-Racemic"
+            ],
+            [
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/hasMolecularFormulaByMoiety",
+                "C20H25ClN2O5.CH4O3S.H2O"
+            ],
+            [
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/hasMolecularFormula",
+                "C21H31ClN2O9S"
+            ],
+            [
+                "https://www.omg.org/spec/Commons/Classifiers/isClassifiedBy",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/OpticalActivity-EitherDirection"
+            ],
+            [
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/hasMolecularWeight",
+                "https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/AmlodipineExample/AmlodipineMesylateMonohydrateMolecularWeight"
+            ]
+        ],
+        "right and not left": [],
+        "both right and left": [
+            [
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                "http://www.w3.org/2002/07/owl#NamedIndividual"
+            ],
+            [
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/MolecularStructure"
+            ],
+            [
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/hasSimplifiedMolecularInputLineEntrySpecification",
+                "O.CS(O)(=O)=O.CCOC(=O)C1=C(COCCN)NC(C)=C(C1C1=C(Cl)C=CC=C1)C(=O)OC"
+            ],
+            [
+                "http://www.w3.org/2000/01/rdf-schema#label",
+                "amlodipine mesylate monohydrate molecular structure"
+            ]
+        ]
+    },
+    {
+        "subject": "https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/AmlodipineExample/AmlodipineMolecularStructure",
+        "left and not right": [
+            [
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/hasStereochemistry",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/Stereochemistry-Racemic"
+            ],
+            [
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/hasMolecularFormula",
+                "C20H25ClN2O5"
+            ],
+            [
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/hasMolecularFormulaByMoiety",
+                "C20H25ClN2O5"
+            ],
+            [
+                "https://www.omg.org/spec/Commons/Classifiers/isClassifiedBy",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/OpticalActivity-EitherDirection"
+            ],
+            [
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/hasMolecularWeight",
+                "https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/AmlodipineExample/AmlodipineMolecularWeight"
+            ]
+        ],
+        "right and not left": [],
+        "both right and left": [
+            [
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                "http://www.w3.org/2002/07/owl#NamedIndividual"
+            ],
+            [
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/MolecularStructure"
+            ],
+            [
+                "http://www.w3.org/2000/01/rdf-schema#label",
+                "amlodipine molecular structure"
+            ]
+        ]
+    },
+    {
+        "subject": "https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/AmlodipineExample/",
+        "left and not right": [
+            [
+                "http://www.w3.org/2002/07/owl#versionIRI",
+                "https://spec.pistoiaalliance.org/idmp/ontology/EXT/20220901/Examples/AmlodipineExample/"
+            ]
+        ],
+        "right and not left": [
+            [
+                "http://www.w3.org/2002/07/owl#imports",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/EuropeanJurisdiction/EuropeanRegulatoryAgencies/"
+            ],
+            [
+                "http://www.w3.org/2002/07/owl#versionIRI",
+                "https://spec.pistoiaalliance.org/idmp/ontology/EXT/20221201/Examples/AmlodipineExample/"
+            ],
+            [
+                "http://www.w3.org/2002/07/owl#imports",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/EuropeanJurisdiction/EuropeanRegistrationAuthorities/"
+            ],
+            [
+                "http://www.w3.org/2002/07/owl#imports",
+                "https://www.omg.org/spec/Commons/Organizations/"
+            ],
+            [
+                "http://www.w3.org/2002/07/owl#imports",
+                "https://www.omg.org/spec/Commons/EuropeanJurisdiction/EUGovernmentEntitiesAndJurisdictions/"
+            ]
+        ],
+        "both right and left": [
+            [
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                "http://www.w3.org/2002/07/owl#Ontology"
+            ],
+            [
+                "http://www.w3.org/2002/07/owl#imports",
+                "https://www.omg.org/spec/Commons/Documents/"
+            ],
+            [
+                "http://www.w3.org/2002/07/owl#imports",
+                "https://www.omg.org/spec/Commons/AnnotationVocabulary/"
+            ],
+            [
+                "http://www.w3.org/2002/07/owl#imports",
+                "https://www.omg.org/spec/Commons/Designators/"
+            ],
+            [
+                "http://www.w3.org/2002/07/owl#imports",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO21090-HarmonizedDatatypes/"
+            ],
+            [
+                "http://www.w3.org/2002/07/owl#imports",
+                "https://www.omg.org/spec/Commons/ProductsAndServices/"
+            ],
+            [
+                "http://www.w3.org/2002/07/owl#imports",
+                "https://www.omg.org/spec/Commons/Collections/"
+            ],
+            [
+                "http://www.w3.org/2002/07/owl#imports",
+                "https://www.omg.org/spec/Commons/ContextualDesignators/"
+            ],
+            [
+                "https://www.omg.org/spec/Commons/AnnotationVocabulary/copyright",
+                "Copyright (c) 2022 EDM Council, Inc."
+            ],
+            [
+                "http://www.w3.org/2002/07/owl#imports",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/"
+            ],
+            [
+                "http://www.w3.org/2002/07/owl#imports",
+                "https://www.omg.org/spec/Commons/QuantitiesAndUnits/"
+            ],
+            [
+                "http://www.w3.org/2002/07/owl#imports",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/"
+            ],
+            [
+                "http://www.w3.org/2002/07/owl#imports",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-RegistrationAuthorities/"
+            ],
+            [
+                "https://www.omg.org/spec/Commons/AnnotationVocabulary/copyright",
+                "Copyright (c) 2022 Pistoia Alliance, Inc."
+            ],
+            [
+                "http://www.w3.org/2002/07/owl#imports",
+                "https://www.omg.org/spec/Commons/TextDatatype/"
+            ],
+            [
+                "http://www.w3.org/2000/01/rdf-schema#label",
+                "Amlodipine Example Ontology"
+            ],
+            [
+                "http://www.w3.org/2002/07/owl#imports",
+                "https://www.omg.org/spec/LCC/Countries/ISO3166-1-CountryCodes/"
+            ],
+            [
+                "http://www.w3.org/2002/07/owl#imports",
+                "https://spec.pistoiaalliance.org/idmp/ontology/EXT/Extensions/UnifiedCodeForUnitsOfMeasure/"
+            ],
+            [
+                "https://spec.pistoiaalliance.org/idmp/ontology/META/ChangeManagement/hasMaturityLevel",
+                "https://spec.pistoiaalliance.org/idmp/ontology/META/ChangeManagement/Informative"
+            ],
+            [
+                "http://www.w3.org/2002/07/owl#imports",
+                "https://www.omg.org/spec/Commons/PartiesAndSituations/"
+            ],
+            [
+                "http://www.w3.org/2002/07/owl#imports",
+                "https://www.omg.org/spec/Commons/Classifiers/"
+            ],
+            [
+                "http://www.w3.org/2002/07/owl#imports",
+                "https://www.omg.org/spec/LCC/Countries/CountryRepresentation/"
+            ],
+            [
+                "http://www.w3.org/2002/07/owl#imports",
+                "https://spec.pistoiaalliance.org/idmp/ontology/META/ChangeManagement/"
+            ],
+            [
+                "http://www.w3.org/2002/07/owl#imports",
+                "https://www.omg.org/spec/Commons/RegistrationAuthorities/"
+            ],
+            [
+                "http://www.w3.org/2002/07/owl#imports",
+                "https://www.omg.org/spec/LCC/Languages/ISO639-1-LanguageCodes/"
+            ],
+            [
+                "http://www.w3.org/2002/07/owl#imports",
+                "https://www.omg.org/spec/LCC/Languages/LanguageRepresentation/"
+            ],
+            [
+                "http://purl.org/dc/terms/license",
+                "http://opensource.org/licenses/MIT"
+            ],
+            [
+                "http://purl.org/dc/terms/abstract",
+                "This ontology provides an example for some of the data related to the substance, amlodipine, to demonstrate substance and basis of strength representation."
+            ],
+            [
+                "http://www.w3.org/2002/07/owl#imports",
+                "https://www.omg.org/spec/Commons/RegulatoryAgencies/"
+            ],
+            [
+                "http://www.w3.org/2002/07/owl#imports",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11240-UnitsOfMeasurement/"
+            ],
+            [
+                "http://www.w3.org/2002/07/owl#imports",
+                "https://www.omg.org/spec/Commons/Identifiers/"
+            ]
+        ]
+    },
+    {
+        "subject": "https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/AmlodipineExample/AmlodipineBesylateMolecularStructure",
+        "left and not right": [
+            [
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/hasStereochemistry",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/Stereochemistry-Racemic"
+            ],
+            [
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/hasMolecularWeight",
+                "https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/AmlodipineExample/AmlodipineBesylateMolecularWeight"
+            ],
+            [
+                "https://www.omg.org/spec/Commons/Classifiers/isClassifiedBy",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/OpticalActivity-EitherDirection"
+            ],
+            [
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/hasMolecularFormula",
+                "C20H25CIN2O5.C6H6O3S"
+            ],
+            [
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/hasMolecularFormulaByMoiety",
+                "C20H25CIN2O5.C6H6O3S"
+            ]
+        ],
+        "right and not left": [],
+        "both right and left": [
+            [
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                "http://www.w3.org/2002/07/owl#NamedIndividual"
+            ],
+            [
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/MolecularStructure"
+            ],
+            [
+                "http://www.w3.org/2000/01/rdf-schema#label",
+                "amlodipine besylate molecular structure"
+            ],
+            [
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/hasSimplifiedMolecularInputLineEntrySpecification",
+                "OS(=O)(=O)C1=CC=CC=C1.CCOC(=O)C2=C(COCCN)NC(C)=C(C2C3=C(Cl)C=CC=C3)C(=O)OC"
+            ]
+        ]
+    },
+    {
+        "subject": "https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/AmlodipineExample/AmlodipineMesylateMonohydrate",
+        "left and not right": [],
+        "right and not left": [
+            [
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/hasStereochemistry",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/Stereochemistry-Racemic"
+            ],
+            [
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/hasMolecularFormulaByMoiety",
+                "C20H25ClN2O5.CH4O3S.H2O"
+            ],
+            [
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/hasMolecularFormula",
+                "C21H31ClN2O9S"
+            ],
+            [
+                "https://www.omg.org/spec/Commons/Classifiers/isClassifiedBy",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/OpticalActivity-EitherDirection"
+            ],
+            [
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/hasMolecularWeight",
+                "https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/AmlodipineExample/AmlodipineMesylateMonohydrateMolecularWeight"
+            ]
+        ],
+        "both right and left": [
+            [
+                "https://www.omg.org/spec/Commons/AnnotationVocabulary/synonym",
+                "amlodipine mesilate monohydrate"
+            ],
+            [
+                "http://www.w3.org/2000/01/rdf-schema#label",
+                "amlodipine mesylate monohydrate"
+            ],
+            [
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                "http://www.w3.org/2002/07/owl#NamedIndividual"
+            ],
+            [
+                "http://purl.org/dc/terms/source",
+                "https://go.drugbank.com/salts/DBSALT002978"
+            ],
+            [
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/hasActiveMoiety",
+                "https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/AmlodipineExample/Amlodipine"
+            ],
+            [
+                "http://purl.org/dc/terms/source",
+                "https://pubchem.ncbi.nlm.nih.gov/compound/Amlodipine-mesylate-monohydrate"
+            ],
+            [
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/hasNumberOfMoieties",
+                "3"
+            ],
+            [
+                "http://www.w3.org/2004/02/skos/core#definition",
+                "mesylate salt of amlodipine, a long-acting calcium channel blocker"
+            ],
+            [
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/ChemicalSubstance"
+            ],
+            [
+                "http://www.w3.org/2004/02/skos/core#note",
+                "Amlodipine mesylate monohydrate is chemically described as 3,5-Pyridinedicarboxylic acid, 2-((2-aminoethoxy)methyl)-4-(2-chlorophenyl)-1,4-dihydro-6-methyl-, 3-ethyl 5-methyl ester, monomethanesulfonate, monohydrate."
+            ],
+            [
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/Salt"
+            ],
+            [
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/hasStructure",
+                "https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/AmlodipineExample/AmlodipineMesylateMonohydrateMolecularStructure"
+            ]
+        ]
+    },
+    {
+        "subject": "https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/AmlodipineExample/AmlodipineEMCConstituency",
+        "left and not right": [
+            [
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/hasActiveIngredientRole",
+                "https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/AmlodipineExample/AmlodipineMesylateMonohydrateAsActiveIngredientInAmlodipineEMC"
+            ]
+        ],
+        "right and not left": [
+            [
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/hasActiveIngredient",
+                "https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/AmlodipineExample/AmlodipineMesylateMonohydrateAsActiveIngredientInAmlodipineEMC"
+            ]
+        ],
+        "both right and left": [
+            [
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/ProductConstituency"
+            ],
+            [
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                "http://www.w3.org/2002/07/owl#NamedIndividual"
+            ],
+            [
+                "https://www.omg.org/spec/Commons/Designators/defines",
+                "https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/AmlodipineExample/AmlodipineEMC"
+            ],
+            [
+                "http://www.w3.org/2000/01/rdf-schema#label",
+                "Amlodipine EMC constituency"
+            ]
+        ]
+    },
+    {
+        "subject": "https://chem.nlm.nih.gov/chemidplus/rn/440358-84-9",
+        "left and not right": [],
+        "right and not left": [
+            [
+                "https://www.omg.org/spec/Commons/RegistrationAuthorities/isRegisteredIn",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-RegistrationAuthorities/AnatomicalTherapeuticChemicalClassificationSystem"
+            ]
+        ],
+        "both right and left": [
+            [
+                "https://www.omg.org/spec/Commons/RegistrationAuthorities/isRegisteredBy",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-RegistrationAuthorities/AmericanChemicalSocietyRegistrationAuthority"
+            ],
+            [
+                "http://www.w3.org/2000/01/rdf-schema#label",
+                "440358-84-9"
+            ],
+            [
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                "http://www.w3.org/2002/07/owl#NamedIndividual"
+            ],
+            [
+                "https://www.omg.org/spec/Commons/Identifiers/identifies",
+                "https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/AmlodipineExample/AmlodipineMesylateMonohydrate"
+            ],
+            [
+                "https://www.omg.org/spec/Commons/TextDatatype/hasTextValue",
+                "440358-84-9"
+            ],
+            [
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-RegistrationAuthorities/CASRegistryNumber"
+            ]
+        ]
+    },
+    {
+        "subject": "https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/AmlodipineExample/UNII-864V2Q084H",
+        "left and not right": [],
+        "right and not left": [
+            [
+                "https://www.omg.org/spec/Commons/RegistrationAuthorities/isRegisteredIn",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-RegistrationAuthorities/GlobalSubstanceRegistrationSystem"
+            ]
+        ],
+        "both right and left": [
+            [
+                "https://www.omg.org/spec/Commons/RegistrationAuthorities/isRegisteredBy",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-RegistrationAuthorities/FoodAndDrugAdministrationRegistrationAuthority"
+            ],
+            [
+                "https://www.omg.org/spec/Commons/TextDatatype/hasTextValue",
+                "864V2Q084H"
+            ],
+            [
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                "http://www.w3.org/2002/07/owl#NamedIndividual"
+            ],
+            [
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-RegistrationAuthorities/UniqueIngredientNumber"
+            ],
+            [
+                "http://www.w3.org/2000/01/rdf-schema#label",
+                "864V2Q084H"
+            ],
+            [
+                "https://www.omg.org/spec/Commons/Identifiers/identifies",
+                "https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/AmlodipineExample/AmlodipineBesylate"
+            ],
+            [
+                "https://www.omg.org/spec/Commons/Identifiers/identifies",
+                "https://gsrs.ncats.nih.gov/api/v1/substances/864V2Q084H"
+            ],
+            [
+                "http://purl.org/dc/terms/source",
+                "https://precision.fda.gov/uniisearch/srs/unii/864V2Q084H"
+            ]
+        ]
+    },
+    {
+        "subject": "https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/AmlodipineExample/PfizerInc",
+        "left and not right": [
+            [
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                "https://www.omg.org/spec/Commons/PartiesAndSituations/Party"
+            ]
+        ],
+        "right and not left": [
+            [
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                "https://www.omg.org/spec/Commons/Organizations/LegalEntity"
+            ]
+        ],
+        "both right and left": [
+            [
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                "http://www.w3.org/2002/07/owl#NamedIndividual"
+            ],
+            [
+                "http://www.w3.org/2000/01/rdf-schema#label",
+                "Pfizer Inc."
+            ],
+            [
+                "https://www.omg.org/spec/Commons/Designators/hasDescription",
+                "American multinational pharmaceutical and biotechnology corporation headquartered on 42nd Street in Manhattan, New York City."
+            ]
+        ]
+    },
+    {
+        "subject": "https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/AmlodipineExample/AmlodipineMesylateMonohydrateOfficialName",
+        "left and not right": [
+            [
+                "https://www.omg.org/spec/Commons/RegistrationAuthorities/isRegisteredIn",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-RegistrationAuthorities/GlobalSubstanceRegistrySystem"
+            ],
+            [
+                "https://www.omg.org/spec/Commons/ContextualDesignators/isApplicableIn",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-RegistrationAuthorities/EuropeanUnionJurisdiction"
+            ],
+            [
+                "https://www.omg.org/spec/Commons/RegistrationAuthorities/isRegisteredBy",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-RegistrationAuthorities/EuropeanMedicinesAgencyRegistrationAuthority"
+            ]
+        ],
+        "right and not left": [
+            [
+                "https://www.omg.org/spec/Commons/ContextualDesignators/isApplicableIn",
+                "https://www.omg.org/spec/Commons/EuropeanJurisdiction/EUGovernmentEntitiesAndJurisdictions/EuropeanUnionJurisdiction"
+            ],
+            [
+                "https://www.omg.org/spec/Commons/RegistrationAuthorities/isRegisteredBy",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/EuropeanJurisdiction/EuropeanRegistrationAuthorities/EuropeanMedicinesAgencyRegistrationAuthority"
+            ],
+            [
+                "https://www.omg.org/spec/Commons/RegistrationAuthorities/isRegisteredIn",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-RegistrationAuthorities/GlobalSubstanceRegistrationSystem"
+            ]
+        ],
+        "both right and left": [
+            [
+                "https://www.omg.org/spec/Commons/RegistrationAuthorities/isRegisteredBy",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-RegistrationAuthorities/FoodAndDrugAdministrationRegistrationAuthority"
+            ],
+            [
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                "http://www.w3.org/2002/07/owl#NamedIndividual"
+            ],
+            [
+                "https://www.omg.org/spec/Commons/Classifiers/isClassifiedBy",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/OfficialNameStatus-Current"
+            ],
+            [
+                "https://www.omg.org/spec/Commons/Designators/isNameOf",
+                "https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/AmlodipineExample/AmlodipineMesylateMonohydrate"
+            ],
+            [
+                "https://www.omg.org/spec/Commons/RegulatoryAgencies/isApplicableInJurisdiction",
+                "https://www.omg.org/spec/LCC/Countries/ISO3166-1-CountryCodes/US"
+            ],
+            [
+                "https://www.omg.org/spec/Commons/RegistrationAuthorities/isRegisteredBy",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-RegistrationAuthorities/WorldHealthOrganizationRegistrationAuthority"
+            ],
+            [
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/hasSubstanceNameType",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/SubstanceNameClassifier-OfficialName"
+            ],
+            [
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-RegistrationAuthorities/InternationalNonproprietaryName"
+            ],
+            [
+                "http://www.w3.org/2000/01/rdf-schema#label",
+                "amlodipine mesylate monohydrate official name"
+            ],
+            [
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO21090-HarmonizedDatatypes/hasLanguageCode",
+                "https://www.omg.org/spec/LCC/Languages/ISO639-1-LanguageCodes/en"
+            ],
+            [
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/hasSubstanceNameValue",
+                "amlodipine mesylate monohydrate"
+            ],
+            [
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/OfficialName"
+            ],
+            [
+                "https://www.omg.org/spec/Commons/ContextualDesignators/isApplicableIn",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-RegistrationAuthorities/RegulatoryContext-FoodAndDrugAdministrationGeneral"
+            ]
+        ]
+    },
+    {
+        "subject": "https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/AmlodipineExample/AmlodipineBesylateOfficialName",
+        "left and not right": [
+            [
+                "https://www.omg.org/spec/Commons/ContextualDesignators/isApplicableIn",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-RegistrationAuthorities/EuropeanUnionJurisdiction"
+            ],
+            [
+                "https://www.omg.org/spec/Commons/RegistrationAuthorities/isRegisteredBy",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-RegistrationAuthorities/EuropeanMedicinesAgencyRegistrationAuthority"
+            ]
+        ],
+        "right and not left": [
+            [
+                "https://www.omg.org/spec/Commons/ContextualDesignators/isApplicableIn",
+                "https://www.omg.org/spec/Commons/EuropeanJurisdiction/EUGovernmentEntitiesAndJurisdictions/EuropeanUnionJurisdiction"
+            ],
+            [
+                "https://www.omg.org/spec/Commons/RegistrationAuthorities/isRegisteredBy",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/EuropeanJurisdiction/EuropeanRegistrationAuthorities/EuropeanMedicinesAgencyRegistrationAuthority"
+            ]
+        ],
+        "both right and left": [
+            [
+                "https://www.omg.org/spec/Commons/RegistrationAuthorities/isRegisteredBy",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-RegistrationAuthorities/FoodAndDrugAdministrationRegistrationAuthority"
+            ],
+            [
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/hasSubstanceNameValue",
+                "amlodipine besylate"
+            ],
+            [
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                "http://www.w3.org/2002/07/owl#NamedIndividual"
+            ],
+            [
+                "https://www.omg.org/spec/Commons/Classifiers/isClassifiedBy",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/OfficialNameStatus-Current"
+            ],
+            [
+                "http://www.w3.org/2000/01/rdf-schema#label",
+                "amlodipine besylate official name"
+            ],
+            [
+                "https://www.omg.org/spec/Commons/Designators/isNameOf",
+                "https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/AmlodipineExample/AmlodipineBesylate"
+            ],
+            [
+                "https://www.omg.org/spec/Commons/RegistrationAuthorities/isRegisteredBy",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-RegistrationAuthorities/WorldHealthOrganizationRegistrationAuthority"
+            ],
+            [
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/hasSubstanceNameType",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/SubstanceNameClassifier-OfficialName"
+            ],
+            [
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-RegistrationAuthorities/InternationalNonproprietaryName"
+            ],
+            [
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO21090-HarmonizedDatatypes/hasLanguageCode",
+                "https://www.omg.org/spec/LCC/Languages/ISO639-1-LanguageCodes/en"
+            ],
+            [
+                "https://www.omg.org/spec/Commons/RegulatoryAgencies/isApplicableInJurisdiction",
+                "https://www.omg.org/spec/LCC/Countries/ISO3166-1-CountryCodes/US"
+            ],
+            [
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/OfficialName"
+            ],
+            [
+                "https://www.omg.org/spec/Commons/ContextualDesignators/isApplicableIn",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-RegistrationAuthorities/RegulatoryContext-FoodAndDrugAdministrationGeneral"
+            ]
+        ]
+    },
+    {
+        "subject": "https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/AmlodipineExample/AmlodipineCommonName",
+        "left and not right": [
+            [
+                "https://www.omg.org/spec/Commons/RegistrationAuthorities/isRegisteredIn",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-RegistrationAuthorities/GlobalSubstanceRegistrySystem"
+            ],
+            [
+                "https://www.omg.org/spec/Commons/ContextualDesignators/isApplicableIn",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-RegistrationAuthorities/EuropeanUnionJurisdiction"
+            ],
+            [
+                "https://www.omg.org/spec/Commons/RegistrationAuthorities/isRegisteredBy",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-RegistrationAuthorities/EuropeanMedicinesAgencyRegistrationAuthority"
+            ]
+        ],
+        "right and not left": [
+            [
+                "https://www.omg.org/spec/Commons/ContextualDesignators/isApplicableIn",
+                "https://www.omg.org/spec/Commons/EuropeanJurisdiction/EUGovernmentEntitiesAndJurisdictions/EuropeanUnionJurisdiction"
+            ],
+            [
+                "https://www.omg.org/spec/Commons/RegistrationAuthorities/isRegisteredBy",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/EuropeanJurisdiction/EuropeanRegistrationAuthorities/EuropeanMedicinesAgencyRegistrationAuthority"
+            ],
+            [
+                "https://www.omg.org/spec/Commons/RegistrationAuthorities/isRegisteredIn",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-RegistrationAuthorities/GlobalSubstanceRegistrationSystem"
+            ]
+        ],
+        "both right and left": [
+            [
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/hasSubstanceNameValue",
+                "Amlodipine [INN:BAN]"
+            ],
+            [
+                "https://www.omg.org/spec/Commons/RegistrationAuthorities/isRegisteredBy",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-RegistrationAuthorities/FoodAndDrugAdministrationRegistrationAuthority"
+            ],
+            [
+                "https://www.omg.org/spec/Commons/Classifiers/isClassifiedBy",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/OfficialNameStatus-Alternate"
+            ],
+            [
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                "http://www.w3.org/2002/07/owl#NamedIndividual"
+            ],
+            [
+                "http://www.w3.org/2000/01/rdf-schema#label",
+                "amlodipine common name"
+            ],
+            [
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/hasSubstanceNameType",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/SubstanceNameClassifier-CommonName"
+            ],
+            [
+                "https://www.omg.org/spec/Commons/RegulatoryAgencies/isApplicableInJurisdiction",
+                "https://www.omg.org/spec/LCC/Countries/ISO3166-1-CountryCodes/US"
+            ],
+            [
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO21090-HarmonizedDatatypes/hasLanguageCode",
+                "https://www.omg.org/spec/LCC/Languages/ISO639-1-LanguageCodes/en"
+            ],
+            [
+                "https://www.omg.org/spec/Commons/Designators/isNameOf",
+                "https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/AmlodipineExample/Amlodipine"
+            ],
+            [
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-RegistrationAuthorities/InternationalNonproprietaryName"
+            ],
+            [
+                "https://www.omg.org/spec/Commons/RegistrationAuthorities/isRegisteredBy",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-RegistrationAuthorities/WorldHealthOrganizationRegistrationAuthority"
+            ],
+            [
+                "https://www.omg.org/spec/Commons/ContextualDesignators/isApplicableIn",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-RegistrationAuthorities/RegulatoryContext-FoodAndDrugAdministrationGeneral"
+            ]
+        ]
+    },
+    {
+        "subject": "https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/AmlodipineExample/AmlodipineAsActiveMoiety",
+        "left and not right": [
+            [
+                "https://www.omg.org/spec/Commons/ContextualDesignators/isApplicableIn",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-RegistrationAuthorities/EuropeanUnionJurisdiction"
+            ]
+        ],
+        "right and not left": [
+            [
+                "https://www.omg.org/spec/Commons/ContextualDesignators/isApplicableIn",
+                "https://www.omg.org/spec/Commons/EuropeanJurisdiction/EUGovernmentEntitiesAndJurisdictions/EuropeanUnionJurisdiction"
+            ]
+        ],
+        "both right and left": [
+            [
+                "http://www.w3.org/2000/01/rdf-schema#label",
+                "amlodipine as active moiety"
+            ],
+            [
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/ActiveMoietyRole"
+            ],
+            [
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                "http://www.w3.org/2002/07/owl#NamedIndividual"
+            ],
+            [
+                "https://www.omg.org/spec/Commons/PartiesAndSituations/isPlayedBy",
+                "https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/AmlodipineExample/Amlodipine"
+            ],
+            [
+                "http://www.w3.org/2004/02/skos/core#definition",
+                "amlodipine in the role of an active moiety"
+            ],
+            [
+                "https://www.omg.org/spec/Commons/ContextualDesignators/isApplicableIn",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-RegistrationAuthorities/RegulatoryContext-FoodAndDrugAdministrationGeneral"
+            ]
+        ]
+    },
+    {
+        "subject": "https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/AmlodipineExample/KentPharmaUKLtd",
+        "left and not right": [
+            [
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                "https://www.omg.org/spec/Commons/PartiesAndSituations/Party"
+            ]
+        ],
+        "right and not left": [
+            [
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                "https://www.omg.org/spec/Commons/Organizations/LegalEntity"
+            ]
+        ],
+        "both right and left": [
+            [
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                "http://www.w3.org/2002/07/owl#NamedIndividual"
+            ],
+            [
+                "https://www.omg.org/spec/Commons/Designators/hasDescription",
+                "pharmaceutical company headquartered at The Bower, 4 Roundwood Avenue, Stockley Park, Heathrow, UB11 1AF"
+            ],
+            [
+                "http://www.w3.org/2000/01/rdf-schema#label",
+                "Kent Pharma UK Ltd."
+            ]
+        ]
+    },
+    {
+        "subject": "https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/AmlodipineExample/UNII-FAS0DJC51V",
+        "left and not right": [],
+        "right and not left": [
+            [
+                "https://www.omg.org/spec/Commons/RegistrationAuthorities/isRegisteredIn",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-RegistrationAuthorities/GlobalSubstanceRegistrationSystem"
+            ]
+        ],
+        "both right and left": [
+            [
+                "https://www.omg.org/spec/Commons/RegistrationAuthorities/isRegisteredBy",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-RegistrationAuthorities/FoodAndDrugAdministrationRegistrationAuthority"
+            ],
+            [
+                "http://www.w3.org/2000/01/rdf-schema#label",
+                "FAS0DJC51V"
+            ],
+            [
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                "http://www.w3.org/2002/07/owl#NamedIndividual"
+            ],
+            [
+                "http://purl.org/dc/terms/source",
+                "https://precision.fda.gov/uniisearch/srs/unii/FAS0DJC51V"
+            ],
+            [
+                "https://www.omg.org/spec/Commons/Identifiers/identifies",
+                "https://gsrs.ncats.nih.gov/api/v1/substances/FAS0DJC51V"
+            ],
+            [
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-RegistrationAuthorities/UniqueIngredientNumber"
+            ],
+            [
+                "https://www.omg.org/spec/Commons/Identifiers/identifies",
+                "https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/AmlodipineExample/AmlodipineMesylateMonohydrate"
+            ],
+            [
+                "https://www.omg.org/spec/Commons/TextDatatype/hasTextValue",
+                "FAS0DJC51V"
+            ]
+        ]
+    },
+    {
+        "subject": "https://www.ebi.ac.uk/chebi/chebiOntology.do?chebiId=CHEBI:2668",
+        "left and not right": [
+            [
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-RegistrationAuthorities/ChemicalEntitiesOfBiologicalInterestIdentifier"
+            ],
+            [
+                "https://www.omg.org/spec/Commons/RegistrationAuthorities/isRegisteredBy",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-RegistrationAuthorities/EuropeanMolecularBiologyLaboratoryEuropeanBioinformaticsInstituteRegistrationAuthority"
+            ]
+        ],
+        "right and not left": [
+            [
+                "https://www.omg.org/spec/Commons/RegistrationAuthorities/isRegisteredIn",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/EuropeanJurisdiction/EuropeanRegistrationAuthorities/ChemicalEntitiesOfBiologicalInterest"
+            ],
+            [
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/EuropeanJurisdiction/EuropeanRegistrationAuthorities/ChemicalEntitiesOfBiologicalInterestIdentifier"
+            ],
+            [
+                "https://www.omg.org/spec/Commons/RegistrationAuthorities/isRegisteredBy",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/EuropeanJurisdiction/EuropeanRegistrationAuthorities/EuropeanMolecularBiologyLaboratoryEuropeanBioinformaticsInstituteRegistrationAuthority"
+            ]
+        ],
+        "both right and left": [
+            [
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                "http://www.w3.org/2002/07/owl#NamedIndividual"
+            ],
+            [
+                "http://www.w3.org/2000/01/rdf-schema#label",
+                "CHEBI:2668"
+            ],
+            [
+                "https://www.omg.org/spec/Commons/Identifiers/identifies",
+                "https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/AmlodipineExample/Amlodipine"
+            ],
+            [
+                "https://www.omg.org/spec/Commons/TextDatatype/hasTextValue",
+                "CHEBI:2668"
+            ]
+        ]
+    },
+    {
+        "subject": "https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/AmlodipineExample/UNII-1J444QC288",
+        "left and not right": [],
+        "right and not left": [
+            [
+                "https://www.omg.org/spec/Commons/RegistrationAuthorities/isRegisteredIn",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-RegistrationAuthorities/GlobalSubstanceRegistrationSystem"
+            ]
+        ],
+        "both right and left": [
+            [
+                "https://www.omg.org/spec/Commons/RegistrationAuthorities/isRegisteredBy",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-RegistrationAuthorities/FoodAndDrugAdministrationRegistrationAuthority"
+            ],
+            [
+                "https://www.omg.org/spec/Commons/Identifiers/identifies",
+                "https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/AmlodipineExample/Amlodipine"
+            ],
+            [
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                "http://www.w3.org/2002/07/owl#NamedIndividual"
+            ],
+            [
+                "https://www.omg.org/spec/Commons/TextDatatype/hasTextValue",
+                "1J444QC288"
+            ],
+            [
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-RegistrationAuthorities/UniqueIngredientNumber"
+            ],
+            [
+                "http://purl.org/dc/terms/source",
+                "https://precision.fda.gov/uniisearch/srs/unii/1J444QC288"
+            ],
+            [
+                "http://www.w3.org/2000/01/rdf-schema#label",
+                "1J444QC288"
+            ],
+            [
+                "https://www.omg.org/spec/Commons/Identifiers/identifies",
+                "https://gsrs.ncats.nih.gov/api/v1/substances/1J444QC288"
+            ]
+        ]
+    },
+    {
+        "subject": "https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/AmlodipineExample/EVMPD-SUB05467MIG",
+        "left and not right": [
+            [
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-RegistrationAuthorities/EudraVigilanceCode"
+            ],
+            [
+                "https://www.omg.org/spec/Commons/RegistrationAuthorities/isRegisteredBy",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-RegistrationAuthorities/EuropeanMedicinesAgencyRegistrationAuthority"
+            ]
+        ],
+        "right and not left": [
+            [
+                "https://www.omg.org/spec/Commons/RegistrationAuthorities/isRegisteredBy",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/EuropeanJurisdiction/EuropeanRegistrationAuthorities/EuropeanMedicinesAgencyRegistrationAuthority"
+            ],
+            [
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/EuropeanJurisdiction/EuropeanRegistrationAuthorities/EudraVigilanceCode"
+            ],
+            [
+                "https://www.omg.org/spec/Commons/RegistrationAuthorities/isRegisteredIn",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/EuropeanJurisdiction/EuropeanRegistrationAuthorities/ExtendedEudraVigilanceMedicinalProductDictionary"
+            ]
+        ],
+        "both right and left": [
+            [
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                "http://www.w3.org/2002/07/owl#NamedIndividual"
+            ],
+            [
+                "https://www.omg.org/spec/Commons/Identifiers/identifies",
+                "https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/AmlodipineExample/Amlodipine"
+            ],
+            [
+                "https://www.omg.org/spec/Commons/TextDatatype/hasTextValue",
+                "SUB05467MIG"
+            ],
+            [
+                "http://www.w3.org/2000/01/rdf-schema#label",
+                "SUB05467MIG"
+            ]
+        ]
+    },
+    {
+        "subject": "https://chem.nlm.nih.gov/chemidplus/rn/88150-42-9",
+        "left and not right": [],
+        "right and not left": [
+            [
+                "https://www.omg.org/spec/Commons/RegistrationAuthorities/isRegisteredIn",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-RegistrationAuthorities/AnatomicalTherapeuticChemicalClassificationSystem"
+            ]
+        ],
+        "both right and left": [
+            [
+                "https://www.omg.org/spec/Commons/TextDatatype/hasTextValue",
+                "88150-42-9"
+            ],
+            [
+                "https://www.omg.org/spec/Commons/RegistrationAuthorities/isRegisteredBy",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-RegistrationAuthorities/AmericanChemicalSocietyRegistrationAuthority"
+            ],
+            [
+                "https://www.omg.org/spec/Commons/Identifiers/identifies",
+                "https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/AmlodipineExample/Amlodipine"
+            ],
+            [
+                "http://www.w3.org/2000/01/rdf-schema#label",
+                "88150-42-9"
+            ],
+            [
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                "http://www.w3.org/2002/07/owl#NamedIndividual"
+            ],
+            [
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-RegistrationAuthorities/CASRegistryNumber"
+            ]
+        ]
+    },
+    {
+        "subject": "https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/AmlodipineExample/Amlodipine",
+        "left and not right": [],
+        "right and not left": [
+            [
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/hasStereochemistry",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/Stereochemistry-Racemic"
+            ],
+            [
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/hasMolecularFormula",
+                "C20H25ClN2O5"
+            ],
+            [
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/hasMolecularFormulaByMoiety",
+                "C20H25ClN2O5"
+            ],
+            [
+                "https://www.omg.org/spec/Commons/Classifiers/isClassifiedBy",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/OpticalActivity-EitherDirection"
+            ],
+            [
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/hasMolecularWeight",
+                "https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/AmlodipineExample/AmlodipineMolecularWeight"
+            ]
+        ],
+        "both right and left": [
+            [
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/hasNumberOfMoieties",
+                "1"
+            ],
+            [
+                "http://www.w3.org/2004/02/skos/core#note",
+                "It is a long-acting dihydropyridine calcium channel blocker effective in the treatment of angina pectoris and hypertension."
+            ],
+            [
+                "http://purl.org/dc/terms/source",
+                "https://chem.nlm.nih.gov/chemidplus/rn/88150-42-9"
+            ],
+            [
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                "http://www.w3.org/2002/07/owl#NamedIndividual"
+            ],
+            [
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/isActiveMoietyOf",
+                "https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/AmlodipineExample/AmlodipineMesylateMonohydrate"
+            ],
+            [
+                "http://www.w3.org/2000/01/rdf-schema#label",
+                "amlodipine"
+            ],
+            [
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/isActiveMoietyOf",
+                "https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/AmlodipineExample/AmlodipineBesylate"
+            ],
+            [
+                "http://purl.org/dc/terms/source",
+                "https://www.ebi.ac.uk/chebi/chebiOntology.do?chebiId=CHEBI:2668"
+            ],
+            [
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/hasStructure",
+                "https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/AmlodipineExample/AmlodipineMolecularStructure"
+            ],
+            [
+                "http://www.w3.org/2004/02/skos/core#definition",
+                "fully substituted dialkyl 1,4-dihydropyridine-3,5-dicarboxylate derivative, which is used for the treatment of hypertension, chronic stable angina and confirmed or suspected vasospastic angina"
+            ],
+            [
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/Moiety"
+            ],
+            [
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/ChemicalSubstance"
+            ]
+        ]
+    },
+    {
+        "subject": "https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/AmlodipineExample/NorvascConstituency",
+        "left and not right": [
+            [
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/hasActiveIngredientRole",
+                "https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/AmlodipineExample/AmlodipineBesylateAsActiveIngredientInNorvasc"
+            ]
+        ],
+        "right and not left": [
+            [
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/hasActiveIngredient",
+                "https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/AmlodipineExample/AmlodipineBesylateAsActiveIngredientInNorvasc"
+            ]
+        ],
+        "both right and left": [
+            [
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/ProductConstituency"
+            ],
+            [
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                "http://www.w3.org/2002/07/owl#NamedIndividual"
+            ],
+            [
+                "https://www.omg.org/spec/Commons/Designators/defines",
+                "https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/AmlodipineExample/Norvasc"
+            ],
+            [
+                "http://www.w3.org/2004/02/skos/core#definition",
+                "constituency of the pharmaceutical product that is a besylate salt of amlodipine"
+            ],
+            [
+                "http://www.w3.org/2000/01/rdf-schema#label",
+                "Norvasc constituency"
+            ],
+            [
+                "http://www.w3.org/2004/02/skos/core#note",
+                "NORVASC (amlodipine besylate) Tablets are formulated as white tablets equivalent to 2.5, 5, and 10 mg of amlodipine for oral administration. In addition to the active ingredient, amlodipine besylate, each tablet contains the following inactive ingredients: microcrystalline cellulose, dibasic calcium phosphate anhydrous, sodium starch glycolate, and magnesium stearate."
+            ]
+        ]
+    },
+    {
+        "subject": "https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/AmlodipineExample/AmlodipineBesylateConstituency",
+        "left and not right": [
+            [
+                "https://www.omg.org/spec/Commons/ContextualDesignators/isApplicableIn",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-RegistrationAuthorities/EuropeanUnionJurisdiction"
+            ]
+        ],
+        "right and not left": [
+            [
+                "https://www.omg.org/spec/Commons/ContextualDesignators/isApplicableIn",
+                "https://www.omg.org/spec/Commons/EuropeanJurisdiction/EUGovernmentEntitiesAndJurisdictions/EuropeanUnionJurisdiction"
+            ]
+        ],
+        "both right and left": [
+            [
+                "https://www.omg.org/spec/Commons/PartiesAndSituations/hasRole",
+                "https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/AmlodipineExample/AmlodipineAsActiveMoiety"
+            ],
+            [
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                "http://www.w3.org/2002/07/owl#NamedIndividual"
+            ],
+            [
+                "http://www.w3.org/2000/01/rdf-schema#label",
+                "amlodipine besylate constituency"
+            ],
+            [
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/SubstanceConstituency"
+            ],
+            [
+                "https://www.omg.org/spec/Commons/Designators/defines",
+                "https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/AmlodipineExample/AmlodipineBesylate"
+            ],
+            [
+                "https://www.omg.org/spec/Commons/ContextualDesignators/isApplicableIn",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-RegistrationAuthorities/RegulatoryContext-FoodAndDrugAdministrationGeneral"
+            ]
+        ]
+    },
+    {
+        "subject": "https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/AmlodipineExample/AmlodipineBesylate",
+        "left and not right": [],
+        "right and not left": [
+            [
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/hasStereochemistry",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/Stereochemistry-Racemic"
+            ],
+            [
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/hasMolecularWeight",
+                "https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/AmlodipineExample/AmlodipineBesylateMolecularWeight"
+            ],
+            [
+                "https://www.omg.org/spec/Commons/Classifiers/isClassifiedBy",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/OpticalActivity-EitherDirection"
+            ],
+            [
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/hasMolecularFormula",
+                "C20H25CIN2O5.C6H6O3S"
+            ],
+            [
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/hasMolecularFormulaByMoiety",
+                "C20H25CIN2O5.C6H6O3S"
+            ]
+        ],
+        "both right and left": [
+            [
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/hasStructure",
+                "https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/AmlodipineExample/AmlodipineBesylateMolecularStructure"
+            ],
+            [
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                "http://www.w3.org/2002/07/owl#NamedIndividual"
+            ],
+            [
+                "http://www.w3.org/2004/02/skos/core#note",
+                "Amlodipine besylate is chemically described as 3-Ethyl-5-methyl (\u00b1)-2-[(2-aminoethoxy)methyl]-4-(2-chlorophenyl)-1,4-dihydro-6-methyl-3,5-pyridinedicarboxylate, monobenzenesulphonate. Amlodipine besylate is a white crystalline powder with a molecular weight of 567.1. It is slightly soluble in water and sparingly soluble in ethanol."
+            ],
+            [
+                "http://www.w3.org/2000/01/rdf-schema#label",
+                "amlodipine besylate"
+            ],
+            [
+                "http://www.w3.org/2004/02/skos/core#definition",
+                "besylate salt of amlodipine, a long-acting calcium channel blocker"
+            ],
+            [
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/hasActiveMoiety",
+                "https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/AmlodipineExample/Amlodipine"
+            ],
+            [
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/hasNumberOfMoieties",
+                "2"
+            ],
+            [
+                "http://purl.org/dc/terms/source",
+                "https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=fc7d39d7-e006-4ed6-a31c-827452603002"
+            ],
+            [
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/Salt"
+            ],
+            [
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/ChemicalSubstance"
+            ]
+        ]
+    }
+]

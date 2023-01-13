@@ -1,0 +1,99 @@
+[
+    {
+        "subject": "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11240-UnitsOfMeasurement/",
+        "left and not right": [
+            [
+                "https://spec.pistoiaalliance.org/idmp/ontology/META/ChangeManagement/hasMaturityLevel",
+                "https://spec.pistoiaalliance.org/idmp/ontology/META/ChangeManagement/Provisional"
+            ],
+            [
+                "http://www.w3.org/2002/07/owl#versionIRI",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/20220801/ISO11240-UnitsOfMeasurement/"
+            ]
+        ],
+        "right and not left": [
+            [
+                "http://www.w3.org/2002/07/owl#versionIRI",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/20221001/ISO11240-UnitsOfMeasurement/"
+            ],
+            [
+                "https://spec.pistoiaalliance.org/idmp/ontology/META/ChangeManagement/hasMaturityLevel",
+                "https://spec.pistoiaalliance.org/idmp/ontology/META/ChangeManagement/Release"
+            ]
+        ],
+        "both right and left": [
+            [
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                "http://www.w3.org/2002/07/owl#Ontology"
+            ],
+            [
+                "http://www.w3.org/2002/07/owl#imports",
+                "https://spec.pistoiaalliance.org/idmp/ontology/META/ChangeManagement/"
+            ],
+            [
+                "http://www.w3.org/2002/07/owl#imports",
+                "https://www.omg.org/spec/Commons/Documents/"
+            ],
+            [
+                "http://www.w3.org/2002/07/owl#imports",
+                "https://www.omg.org/spec/Commons/AnnotationVocabulary/"
+            ],
+            [
+                "http://www.w3.org/2000/01/rdf-schema#label",
+                "ISO 11240 Units of Measurement (UOM) Ontology"
+            ],
+            [
+                "http://purl.org/dc/terms/abstract",
+                "This ontology provides a semantic model representing common definitions for exchanging units of measure and measurement concepts that are commonly encountered in healthcare environments in support of information exchange in the healthcare environment. It is derived from the ISO 11240:2012 Health informatics - Identification of medicinal products - Data elements and structures for the unique identification and exchange of units of measurement as well as from other ISO and OMG standards such as SysML."
+            ],
+            [
+                "http://www.w3.org/2002/07/owl#imports",
+                "https://www.omg.org/spec/Commons/Designators/"
+            ],
+            [
+                "http://www.w3.org/2002/07/owl#imports",
+                "https://www.omg.org/spec/LCC/Languages/LanguageRepresentation/"
+            ],
+            [
+                "http://www.w3.org/2002/07/owl#imports",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO21090-HarmonizedDatatypes/"
+            ],
+            [
+                "http://www.w3.org/2002/07/owl#imports",
+                "https://www.omg.org/spec/Commons/Collections/"
+            ],
+            [
+                "http://purl.org/dc/terms/license",
+                "http://opensource.org/licenses/MIT"
+            ],
+            [
+                "http://www.w3.org/2002/07/owl#imports",
+                "https://www.omg.org/spec/Commons/Identifiers/"
+            ],
+            [
+                "https://www.omg.org/spec/Commons/AnnotationVocabulary/copyright",
+                "Copyright (c) 2022 EDM Council, Inc."
+            ],
+            [
+                "https://www.omg.org/spec/Commons/AnnotationVocabulary/copyright",
+                "Copyright (c) 2022 Pistoia Alliance, Inc."
+            ],
+            [
+                "http://www.w3.org/2002/07/owl#imports",
+                "https://www.omg.org/spec/Commons/TextDatatype/"
+            ],
+            [
+                "http://www.w3.org/2002/07/owl#imports",
+                "https://www.omg.org/spec/Commons/QuantitiesAndUnits/"
+            ],
+            [
+                "http://www.w3.org/2002/07/owl#imports",
+                "https://www.omg.org/spec/Commons/CodesAndCodeSets/"
+            ],
+            [
+                "http://www.w3.org/2002/07/owl#imports",
+                "https://www.omg.org/spec/LCC/Countries/CountryRepresentation/"
+            ]
+        ]
+    }
+]

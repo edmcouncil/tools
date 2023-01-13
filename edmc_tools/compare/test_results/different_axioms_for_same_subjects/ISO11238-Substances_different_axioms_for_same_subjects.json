@@ -1,0 +1,1699 @@
+[
+    {
+        "subject": "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/Structure",
+        "left and not right": [],
+        "right and not left": [
+            [
+                "https://www.omg.org/spec/Commons/AnnotationVocabulary/adaptedFrom",
+                "ISO 11238:2018 Health informatics - Identification of medicinal products (IDMP) - Data elements and structures for the unique identification and exchange of regulated information on substances, clauses 3.49, 7.2.1"
+            ],
+            [
+                "https://spec.pistoiaalliance.org/idmp/ontology/META/ISOConformanceAnnotations/hasConformanceToISOLevel",
+                "https://spec.pistoiaalliance.org/idmp/ontology/META/ISOConformanceAnnotations/ConformanceToISOLevel-Extension"
+            ],
+            [
+                "https://www.omg.org/spec/Commons/AnnotationVocabulary/usageNote",
+                "Note that the term 'structure' is not explicitly defined in the standard, but molecular structure is defined using this concept, and the concept appears in various UML diagrams in the standard."
+            ]
+        ],
+        "both right and left": [
+            [
+                "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+                "https://www.omg.org/spec/Commons/Collections/Arrangement"
+            ],
+            [
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                "http://www.w3.org/2002/07/owl#Class"
+            ],
+            [
+                "http://www.w3.org/2000/01/rdf-schema#label",
+                "structure"
+            ],
+            [
+                "http://www.w3.org/2004/02/skos/core#definition",
+                "arrangement and organization of interrelated elements in a material object or system"
+            ],
+            [
+                "http://www.w3.org/2004/02/skos/core#note",
+                "Material structures include man-made objects such as buildings and machines and natural objects such as biological organisms, minerals and chemicals."
+            ]
+        ]
+    },
+    {
+        "subject": "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/hasMolecularFormula",
+        "left and not right": [
+            [
+                "http://www.w3.org/2000/01/rdf-schema#domain",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/MolecularStructure"
+            ]
+        ],
+        "right and not left": [],
+        "both right and left": [
+            [
+                "https://www.omg.org/spec/Commons/AnnotationVocabulary/adaptedFrom",
+                "ISO 11238:2018 Health informatics - Identification of medicinal products (IDMP) - Data elements and structures for the unique identification and exchange of regulated information on substances, clause 7.2.2"
+            ],
+            [
+                "http://www.w3.org/2000/01/rdf-schema#subPropertyOf",
+                "https://www.omg.org/spec/Commons/TextDatatype/hasTextValue"
+            ],
+            [
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                "http://www.w3.org/2002/07/owl#DatatypeProperty"
+            ],
+            [
+                "http://www.w3.org/2004/02/skos/core#note",
+                "The messaging requirements can dictate a specific electronic format for the molecular formula and the molecular formula by moiety."
+            ],
+            [
+                "http://purl.org/dc/terms/source",
+                "ISO/TS 19844:2018(E) Health informatics - Identification of medicinal products (IDMP) - Implementation guidelines for ISO 11238 for data elements and structures for the unique identification and exchange of regulated information on substances, clause 6.7.3"
+            ],
+            [
+                "http://www.w3.org/2000/01/rdf-schema#label",
+                "has molecular formula"
+            ],
+            [
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/hasBusinessRules",
+                "Can be implicitly derived from the structure; Validity check for identity and structural representation. Molecular formula is not mandatory in the case of a large protein (e.g. more than 10k Da), a large nucleic acid or a large polymer. For small molecules up to molecular weight of 5 000 the unit should be g/mol; above that the Da/kDa is to be used."
+            ],
+            [
+                "http://www.w3.org/2004/02/skos/core#note",
+                "Molecular formula is written as a sequence of pairs of atom symbol and stoichiometric number (see example below). This formal notation is essentially a code system. Specified according to the Hill system, i.e. first C, then H, then alphabetical."
+            ],
+            [
+                "http://www.w3.org/2004/02/skos/core#definition",
+                "relates a single substance to a formal definition for its molecular formula"
+            ],
+            [
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO21090-HarmonizedDatatypes/isEncodedAs",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO21090-HarmonizedDatatypes/DatatypeCode-ST"
+            ],
+            [
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/hasConformanceLevel",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/ConformanceLevel-Conditional"
+            ]
+        ]
+    },
+    {
+        "subject": "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/MolecularGraph",
+        "left and not right": [],
+        "right and not left": [
+            [
+                "https://spec.pistoiaalliance.org/idmp/ontology/META/ISOConformanceAnnotations/hasConformanceToISOLevel",
+                "https://spec.pistoiaalliance.org/idmp/ontology/META/ISOConformanceAnnotations/ConformanceToISOLevel-Extension"
+            ]
+        ],
+        "both right and left": [
+            [
+                "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+                [
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/hasRendering",
+                    "http://www.w3.org/2002/07/owl#onDataRange",
+                    "http://www.w3.org/2001/XMLSchema#anyURI",
+                    "http://www.w3.org/2002/07/owl#cardinality",
+                    1
+                ]
+            ],
+            [
+                "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/StructuralRepresentation"
+            ],
+            [
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                "http://www.w3.org/2002/07/owl#Class"
+            ],
+            [
+                "http://www.w3.org/2000/01/rdf-schema#label",
+                "molecular graph"
+            ],
+            [
+                "http://www.w3.org/2004/02/skos/core#definition",
+                "single chemical structure that is an unambiguous representation of the arrangement of atoms, normalized to conform with the International Union of Pure and Applied Chemistry (IUPAC) specification for drawing chemical structures to the degree possible"
+            ]
+        ]
+    },
+    {
+        "subject": "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/AdjuvantRole",
+        "left and not right": [
+            [
+                "http://www.w3.org/2000/01/rdf-schema#label",
+                "adjuvant role"
+            ],
+            [
+                "http://purl.org/dc/terms/source",
+                "ISO 11238:2018 Health informatics - Identification of medicinal products (IDMP) - Data elements and structures for the unique identification and exchange of regulated information on substances, clause 3.1"
+            ],
+            [
+                "http://www.w3.org/2004/02/skos/core#note",
+                "An adjuvant is an agent that enhances the activity or therapeutic effect of another pharmacologic substance without having much, if any, therapeutic impact by itself."
+            ],
+            [
+                "http://www.w3.org/2004/02/skos/core#definition",
+                "pharmacological role of a component that potentiates the immune response to an antigen and/or modulates it towards the desired immune response"
+            ],
+            [
+                "http://www.w3.org/2000/01/rdf-schema#seeAlso",
+                "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C2140"
+            ],
+            [
+                "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/IngredientRole"
+            ]
+        ],
+        "right and not left": [
+            [
+                "http://www.w3.org/2002/07/owl#deprecated",
+                "true"
+            ],
+            [
+                "http://www.w3.org/2002/07/owl#equivalentClass",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/Adjuvant"
+            ]
+        ],
+        "both right and left": [
+            [
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                "http://www.w3.org/2002/07/owl#Class"
+            ]
+        ]
+    },
+    {
+        "subject": "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/IngredientRole",
+        "left and not right": [
+            [
+                "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/SubstanceRole"
+            ],
+            [
+                "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+                [
+                    "https://www.omg.org/spec/Commons/PartiesAndSituations/isPlayedBy",
+                    "http://www.w3.org/2002/07/owl#onClass",
+                    "Ne87197b7f9c945128b1c7bfcb95b8e3b",
+                    "http://www.w3.org/2002/07/owl#minQualifiedCardinality",
+                    "0"
+                ]
+            ],
+            [
+                "https://www.omg.org/spec/Commons/AnnotationVocabulary/synonym",
+                "pharmacological role"
+            ],
+            [
+                "http://www.w3.org/2004/02/skos/core#definition",
+                "role played by a substance that is specifically part of or used in the preparation of some manufactured item, or pharmaceutical product, medication, or drug"
+            ],
+            [
+                "http://www.w3.org/2000/01/rdf-schema#label",
+                "ingredient role"
+            ]
+        ],
+        "right and not left": [
+            [
+                "http://www.w3.org/2002/07/owl#equivalentClass",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/Ingredient"
+            ],
+            [
+                "http://www.w3.org/2002/07/owl#deprecated",
+                "true"
+            ]
+        ],
+        "both right and left": [
+            [
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                "http://www.w3.org/2002/07/owl#Class"
+            ]
+        ]
+    },
+    {
+        "subject": "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/ActiveIngredientRole",
+        "left and not right": [
+            [
+                "https://www.omg.org/spec/Commons/AnnotationVocabulary/adaptedFrom",
+                "Inxight Drugs, Natonal Center for Advancing Translational Sciences, National Institutes of Health, derived from Definitions, available at https://drugs.ncats.io/about"
+            ],
+            [
+                "https://www.omg.org/spec/Commons/AnnotationVocabulary/synonym",
+                "active pharmacological ingredient [role]"
+            ],
+            [
+                "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/IngredientRole"
+            ],
+            [
+                "http://www.w3.org/2004/02/skos/core#definition",
+                "role of a substance present in a currently or previously marketed drug product indicating that it is or becomes pharmacologically active once delivered to patients"
+            ],
+            [
+                "http://www.w3.org/2000/01/rdf-schema#label",
+                "active ingredient role"
+            ]
+        ],
+        "right and not left": [
+            [
+                "http://www.w3.org/2002/07/owl#deprecated",
+                "true"
+            ],
+            [
+                "http://www.w3.org/2002/07/owl#equivalentClass",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/ActiveIngredient"
+            ]
+        ],
+        "both right and left": [
+            [
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                "http://www.w3.org/2002/07/owl#Class"
+            ]
+        ]
+    },
+    {
+        "subject": "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/StructuralRepresentation",
+        "left and not right": [
+            [
+                "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/Structure"
+            ]
+        ],
+        "right and not left": [
+            [
+                "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+                "https://www.omg.org/spec/Commons/Designators/Designation"
+            ]
+        ],
+        "both right and left": [
+            [
+                "http://www.w3.org/2004/02/skos/core#note",
+                "Structural representations can be in a variety of formats or even multiple formats. The commonly used formats include molfile, SMILES, InChI, and cdx. Indication of a preferred structural representation may be defined at regional level. Although most chemical substances may be represented by a single unambiguous structural representation, there are also many substances that can be represented by multiple structural representations or as a mixture of single substances."
+            ],
+            [
+                "http://www.w3.org/2004/02/skos/core#definition",
+                "representation of the arrangement of atoms for drawing chemical structures"
+            ],
+            [
+                "http://www.w3.org/2000/01/rdf-schema#label",
+                "structural representation"
+            ],
+            [
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                "http://www.w3.org/2002/07/owl#Class"
+            ],
+            [
+                "http://purl.org/dc/terms/source",
+                "ISO 11238:2018 Health informatics - Identification of medicinal products (IDMP) - Data elements and structures for the unique identification and exchange of regulated information on substances, clause 7.3"
+            ],
+            [
+                "http://www.w3.org/2004/02/skos/core#note",
+                "Structural information is an essential element for all chemical substances, polymers and for other types of substances that have structurally definable elements or modifications. The representation should contain structural information in one or more of the standardized formats as indicated. A graphical image of the molecular structure should also be provided if available. A complete representation of the structure should be provided and is usually sufficient to define chemical substances."
+            ],
+            [
+                "http://purl.org/dc/terms/source",
+                "ISO/TS 19844:2018(E) Health informatics - Identification of medicinal products (IDMP) - Implementation guidelines for ISO 11238 for data elements and structures for the unique identification and exchange of regulated information on substances, clause 6.7.6"
+            ]
+        ]
+    },
+    {
+        "subject": "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/Substance",
+        "left and not right": [
+            [
+                "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+                [
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/hasStructure",
+                    "http://www.w3.org/2002/07/owl#onClass",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/Structure",
+                    "http://www.w3.org/2002/07/owl#minQualifiedCardinality",
+                    "0"
+                ]
+            ]
+        ],
+        "right and not left": [
+            [
+                "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+                [
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/hasStructure",
+                    "http://www.w3.org/2002/07/owl#someValuesFrom",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/Structure",
+                    "http://www.w3.org/2002/07/owl#cardinality",
+                    1
+                ]
+            ],
+            [
+                "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+                [
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/hasMolecularWeight",
+                    "http://www.w3.org/2002/07/owl#onClass",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/MolecularWeight",
+                    "http://www.w3.org/2002/07/owl#minQualifiedCardinality",
+                    "0"
+                ]
+            ],
+            [
+                "https://spec.pistoiaalliance.org/idmp/ontology/META/ISOConformanceAnnotations/hasConformanceToISOLevel",
+                "https://spec.pistoiaalliance.org/idmp/ontology/META/ISOConformanceAnnotations/ConformanceToISOLevel-NameAndAnnotationConformant"
+            ],
+            [
+                "https://www.omg.org/spec/Commons/AnnotationVocabulary/explanatoryNote",
+                "Note that while the IDMP standards require a substance name for all substances, the ontology deviates from this by making the name optional in the restriction on substance. This is to enable mapping to various source repositories for substance information that do not necessarily provide names but that define a substance based on its molecular structure, which is typically more accurate."
+            ],
+            [
+                "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+                [
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/hasSubstanceName",
+                    "http://www.w3.org/2002/07/owl#onClass",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/SubstanceName",
+                    "http://www.w3.org/2002/07/owl#minQualifiedCardinality",
+                    "0"
+                ]
+            ],
+            [
+                "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/Matter"
+            ]
+        ],
+        "both right and left": [
+            [
+                "https://www.omg.org/spec/Commons/AnnotationVocabulary/directSource",
+                "ISO 11238:2018 Health informatics - Identification of medicinal products (IDMP) - Data elements and structures for the unique identification and exchange of regulated information on substances, clause 3.84"
+            ],
+            [
+                "http://www.w3.org/2004/02/skos/core#note",
+                "Discrete existence refers to the ability of a substance to exist independently of any other substance. Substances can either be well-defined entities containing definite chemical structures, synthetic (e.g. isomeric mixtures) or naturally-occurring (e.g. conjugated oestrogens) mixtures of chemicals containing definite molecular structures, or materials derived from plants, animals, microorganisms or inorganic matrices for which the chemical structure may be unknown or difficult to define."
+            ],
+            [
+                "http://www.w3.org/2004/02/skos/core#definition",
+                "matter of defined composition that has discrete existence, whose origin may be biological, mineral or chemical"
+            ],
+            [
+                "http://www.w3.org/2004/02/skos/core#note",
+                "A substance can be a moiety. A moiety is an entity within a substance that has a complete and continuous molecular structure. The strength of a pharmaceutical product is often based on what is referred to as the active moiety of the molecule, responsible for the physiological or pharmacological action of the drug substance. Chemically, the active moiety of a stoichiometric or non-stoichoimetrical substance molecule is considered that part of the molecule that is the base, free acid or ion molecular part of a salt, solvate, chelate, clathrate, molecular complex or ester."
+            ],
+            [
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                "http://www.w3.org/2002/07/owl#Class"
+            ],
+            [
+                "http://www.w3.org/2004/02/skos/core#note",
+                "Substances are further described as single substances, mixture substances or one of a group of specified substances. Single substances are defined using a minimally sufficient set of data elements divided into five types: chemical, protein, nucleic acid, polymer and structurally diverse. Substances may be salts, solvates, free acids, free bases or mixtures of related compounds that are either isolated or synthesized together. Pharmacopoeial terminology and defining characteristics will be used when available and appropriate. Defining elements are dependent on the type of substance."
+            ],
+            [
+                "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+                [
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/isRelatedSubstanceTo",
+                    "http://www.w3.org/2002/07/owl#onClass",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/Substance",
+                    "http://www.w3.org/2002/07/owl#minQualifiedCardinality",
+                    "0"
+                ]
+            ],
+            [
+                "http://www.w3.org/2000/01/rdf-schema#label",
+                "substance"
+            ]
+        ]
+    },
+    {
+        "subject": "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/SubstanceNameDomain",
+        "left and not right": [
+            [
+                "http://www.w3.org/2004/02/skos/core#note",
+                "All substance names can have at least one domain. This is useful to differentiate different names for the same substance as used for a drug active ingredient as opposed to a food co lour additive. The domain and the actual name of a domain will vary according to jurisdiction."
+            ]
+        ],
+        "right and not left": [
+            [
+                "http://www.w3.org/2004/02/skos/core#note",
+                "All substance names can have at least one domain. This is useful to differentiate different names for the same substance as used for a drug active ingredient as opposed to a food colour additive. The domain and the actual name of a domain will vary according to jurisdiction."
+            ]
+        ],
+        "both right and left": [
+            [
+                "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+                "https://www.omg.org/spec/Commons/Classifiers/Classifier"
+            ],
+            [
+                "http://purl.org/dc/terms/source",
+                "ISO/TS 19844:2018(E) Health informatics - Identification of medicinal products (IDMP) - Implementation guidelines for ISO 11238 for data elements and structures for the unique identification and exchange of regulated information on substances, clause 6.3.4"
+            ],
+            [
+                "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+                [
+                    "https://www.omg.org/spec/Commons/Classifiers/classifies",
+                    "http://www.w3.org/2002/07/owl#onClass",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/SubstanceName",
+                    "http://www.w3.org/2002/07/owl#minQualifiedCardinality",
+                    "0"
+                ]
+            ],
+            [
+                "http://www.w3.org/2000/01/rdf-schema#label",
+                "substance name domain"
+            ],
+            [
+                "http://purl.org/dc/terms/source",
+                "ISO 11238:2018 Health informatics - Identification of medicinal products (IDMP) - Data elements and structures for the unique identification and exchange of regulated information on substances, clause 6.4"
+            ],
+            [
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                "http://www.w3.org/2002/07/owl#Class"
+            ],
+            [
+                "http://www.w3.org/2004/02/skos/core#definition",
+                "classifier that specifies when and for what purpose the name is to be used"
+            ],
+            [
+                "http://www.w3.org/2004/02/skos/core#example",
+                "The terms DRUG and BIOLOGIC could be used in Japan and the US as official name domain. In the EU the term MEDICINE may cover the name of many substances that would be either DRUG or BIOLOGIC in the US and Japan."
+            ]
+        ]
+    },
+    {
+        "subject": "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/hasMolecularFormulaByMoiety",
+        "left and not right": [
+            [
+                "http://www.w3.org/2000/01/rdf-schema#domain",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/MolecularStructure"
+            ]
+        ],
+        "right and not left": [],
+        "both right and left": [
+            [
+                "https://www.omg.org/spec/Commons/AnnotationVocabulary/adaptedFrom",
+                "ISO 11238:2018 Health informatics - Identification of medicinal products (IDMP) - Data elements and structures for the unique identification and exchange of regulated information on substances, clause 7.2.2"
+            ],
+            [
+                "http://www.w3.org/2000/01/rdf-schema#subPropertyOf",
+                "https://www.omg.org/spec/Commons/TextDatatype/hasTextValue"
+            ],
+            [
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/hasBusinessRules",
+                "Can be implicitly derived from the structure; Validity check for identity and structural representation. For a salt/hydrate the molecular formula of the base or the acid and the salt/hydrate part are separated by a dot per moiety, e.g. Desmopressin Monoacetate Trihydrate: Molecular formula by moiety: C46H64N14O12S2.C2H4O2.3H2O."
+            ],
+            [
+                "http://purl.org/dc/terms/source",
+                "ISO/TS 19844:2018(E) Health informatics - Identification of medicinal products (IDMP) - Implementation guidelines for ISO 11238 for data elements and structures for the unique identification and exchange of regulated information on substances, clause 6.7.4"
+            ],
+            [
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                "http://www.w3.org/2002/07/owl#DatatypeProperty"
+            ],
+            [
+                "http://www.w3.org/2004/02/skos/core#note",
+                "The messaging requirements can dictate a specific electronic format for the molecular formula and the molecular formula by moiety."
+            ],
+            [
+                "http://www.w3.org/2000/01/rdf-schema#label",
+                "has molecular formula by moiety"
+            ],
+            [
+                "http://www.w3.org/2004/02/skos/core#note",
+                "In non-cyclic linear structures like sodium nitroprusside: Na2[Fe(CN)5(NO)].2H2O, a non-cyclic structure is constructed in the following order: a) symbol of the central atom placed on the left; b) ionic ligands with cations first then anions; c) neutral ligands."
+            ],
+            [
+                "http://www.w3.org/2004/02/skos/core#definition",
+                "way of describing of the molecular formula of a stoichiometric or non-stoichiometric substance existing of two or more moieties, the molecular formula of each moiety shall be described separated by a dot"
+            ],
+            [
+                "http://www.w3.org/2004/02/skos/core#note",
+                "The molecular formula of the chemical salt Amlodipine besilate is described as C20H25ClN2O5.C6H6O3S."
+            ],
+            [
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/hasConformanceLevel",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/ConformanceLevel-Conditional"
+            ],
+            [
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO21090-HarmonizedDatatypes/isEncodedAs",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO21090-HarmonizedDatatypes/DatatypeCode-ST"
+            ]
+        ]
+    },
+    {
+        "subject": "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/hasMolecularWeight",
+        "left and not right": [
+            [
+                "http://www.w3.org/2004/02/skos/core#definition",
+                "relates a substance or its structure to its molecular weight"
+            ]
+        ],
+        "right and not left": [
+            [
+                "http://www.w3.org/2004/02/skos/core#definition",
+                "relates a substance to its molecular weight"
+            ]
+        ],
+        "both right and left": [
+            [
+                "http://purl.org/dc/terms/source",
+                "ISO/TS 19844:2018(E) Health informatics - Identification of medicinal products (IDMP) - Implementation guidelines for ISO 11238 for data elements and structures for the unique identification and exchange of regulated information on substances, clause 6.7.5, Figure 10"
+            ],
+            [
+                "http://www.w3.org/2000/01/rdf-schema#label",
+                "has molecular weight"
+            ],
+            [
+                "http://purl.org/dc/terms/source",
+                "ISO 11238:2018 Health informatics - Identification of medicinal products (IDMP) - Data elements and structures for the unique identification and exchange of regulated information on substances, clause 7.3"
+            ],
+            [
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                "http://www.w3.org/2002/07/owl#ObjectProperty"
+            ],
+            [
+                "http://www.w3.org/2000/01/rdf-schema#subPropertyOf",
+                "https://www.omg.org/spec/Commons/QuantitiesAndUnits/hasQuantityValue"
+            ],
+            [
+                "http://www.w3.org/2000/01/rdf-schema#range",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/MolecularWeight"
+            ]
+        ]
+    },
+    {
+        "subject": "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/MolecularStructure",
+        "left and not right": [
+            [
+                "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+                [
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/hasMolecularFormulaByMoiety",
+                    "http://www.w3.org/2002/07/owl#onDataRange",
+                    "http://www.w3.org/2001/XMLSchema#string",
+                    "http://www.w3.org/2002/07/owl#maxQualifiedCardinality",
+                    "1"
+                ]
+            ],
+            [
+                "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+                [
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/hasMolecularFormula",
+                    "http://www.w3.org/2002/07/owl#onDataRange",
+                    "http://www.w3.org/2001/XMLSchema#string",
+                    "http://www.w3.org/2002/07/owl#maxQualifiedCardinality",
+                    "1"
+                ]
+            ],
+            [
+                "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+                [
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/hasMolecularWeight",
+                    "http://www.w3.org/2002/07/owl#onClass",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/MolecularWeight",
+                    "http://www.w3.org/2002/07/owl#minQualifiedCardinality",
+                    "0"
+                ]
+            ],
+            [
+                "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+                [
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/hasStereochemistry",
+                    "http://www.w3.org/2002/07/owl#onClass",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/Stereochemistry",
+                    "http://www.w3.org/2002/07/owl#maxQualifiedCardinality",
+                    "1"
+                ]
+            ],
+            [
+                "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+                [
+                    "https://www.omg.org/spec/Commons/Collections/hasArrangement",
+                    "http://www.w3.org/2002/07/owl#onClass",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/StructuralRepresentation",
+                    "http://www.w3.org/2002/07/owl#maxQualifiedCardinality",
+                    "1"
+                ]
+            ],
+            [
+                "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+                [
+                    "https://www.omg.org/spec/Commons/Classifiers/isClassifiedBy",
+                    "http://www.w3.org/2002/07/owl#onClass",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/OpticalActivity",
+                    "http://www.w3.org/2002/07/owl#maxQualifiedCardinality",
+                    "1"
+                ]
+            ]
+        ],
+        "right and not left": [
+            [
+                "https://www.omg.org/spec/Commons/AnnotationVocabulary/usageNote",
+                "While certain diagrams, such as Figure 14 in the ISO 11238:2018 show attributes such as stereochemistry, optical activity, and molecular formulas as characteristics of structure, from an ontological perspective these characteristics are actually characteristics of a moiety or chemical substance and are modeled as such herein."
+            ],
+            [
+                "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+                [
+                    "https://www.omg.org/spec/Commons/Designators/isDescribedBy",
+                    "http://www.w3.org/2002/07/owl#onClass",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/StructuralRepresentation",
+                    "http://www.w3.org/2002/07/owl#maxQualifiedCardinality",
+                    "1"
+                ]
+            ],
+            [
+                "https://spec.pistoiaalliance.org/idmp/ontology/META/ISOConformanceAnnotations/hasConformanceToISOLevel",
+                "https://spec.pistoiaalliance.org/idmp/ontology/META/ISOConformanceAnnotations/ConformanceToISOLevel-NameAndAnnotationConformant"
+            ]
+        ],
+        "both right and left": [
+            [
+                "https://www.omg.org/spec/Commons/AnnotationVocabulary/directSource",
+                "ISO 11238:2018 Health informatics - Identification of medicinal products (IDMP) - Data elements and structures for the unique identification and exchange of regulated information on substances, clauses 3.49, 7.2.1"
+            ],
+            [
+                "http://www.w3.org/2004/02/skos/core#note",
+                "For the purposes of defining substances, the three-dimensional conformations are not captured. Individual conformations or conformers of substances would only be captured in either a general sense for proteins (i.e. denatured) or when a given rotation about a single bond is restricted in such a way that the two different conformers are isolatable from each other and do not interconvert at room temperature (e.g. substituted biphenyls)."
+            ],
+            [
+                "http://www.w3.org/2004/02/skos/core#note",
+                "This representation should be generally translatable into a graphical representation."
+            ],
+            [
+                "http://www.w3.org/2004/02/skos/core#note",
+                "The structure shall contain a sufficient amount of graphical and textual information to define the underlying atoms and the connectivity between atoms as well as the composition ratio of moieties."
+            ],
+            [
+                "http://www.w3.org/2000/01/rdf-schema#label",
+                "molecular structure"
+            ],
+            [
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                "http://www.w3.org/2002/07/owl#Class"
+            ],
+            [
+                "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/Structure"
+            ],
+            [
+                "http://www.w3.org/2004/02/skos/core#note",
+                "Structural representations shall include the complete molecular structure with all known stereochemistry indicated. Molecular fragments and moieties shall also contain structural representations. The structure is a defining element for chemicals, polymers and structural modifications. It should be defined in a consistent and unambiguous manner. The Structural Representation can cover complex substances like proteins and nucleic acid by graphical representation."
+            ],
+            [
+                "http://www.w3.org/2004/02/skos/core#definition",
+                "unambiguous representation of the arrangement of atoms"
+            ],
+            [
+                "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+                [
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/hasSimplifiedMolecularInputLineEntrySpecification",
+                    "http://www.w3.org/2002/07/owl#onDataRange",
+                    "http://www.w3.org/2001/XMLSchema#string",
+                    "http://www.w3.org/2002/07/owl#maxQualifiedCardinality",
+                    "1"
+                ]
+            ]
+        ]
+    },
+    {
+        "subject": "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/MolecularStructureIdentifier",
+        "left and not right": [],
+        "right and not left": [
+            [
+                "https://spec.pistoiaalliance.org/idmp/ontology/META/ISOConformanceAnnotations/hasConformanceToISOLevel",
+                "https://spec.pistoiaalliance.org/idmp/ontology/META/ISOConformanceAnnotations/ConformanceToISOLevel-Extension"
+            ]
+        ],
+        "both right and left": [
+            [
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                "http://www.w3.org/2002/07/owl#Class"
+            ],
+            [
+                "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+                [
+                    "https://www.omg.org/spec/Commons/Identifiers/identifies",
+                    "http://www.w3.org/2002/07/owl#someValuesFrom",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/MolecularStructure",
+                    "http://www.w3.org/2002/07/owl#cardinality",
+                    1
+                ]
+            ],
+            [
+                "http://www.w3.org/2004/02/skos/core#definition",
+                "unique identifier for the unambiguous representation of the arrangement of atoms for a given substance"
+            ],
+            [
+                "http://www.w3.org/2000/01/rdf-schema#label",
+                "molecular structure identifier"
+            ],
+            [
+                "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+                "https://www.omg.org/spec/Commons/Identifiers/Identifier"
+            ]
+        ]
+    },
+    {
+        "subject": "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/InactiveIngredientRole",
+        "left and not right": [
+            [
+                "https://www.omg.org/spec/Commons/AnnotationVocabulary/adaptedFrom",
+                "Inxight Drugs, Natonal Center for Advancing Translational Sciences, National Institutes of Health, derived from Definitions, available at https://drugs.ncats.io/about"
+            ],
+            [
+                "https://www.omg.org/spec/Commons/AnnotationVocabulary/explanatoryNote",
+                "Substances are classified based on their effect on disease progression for a specific disease or condition. In this case, a condition is only related to such compound via the formulation used to affect (treat or diagnose) this condition."
+            ],
+            [
+                "http://www.w3.org/2004/02/skos/core#definition",
+                "role of an ingredient of a given formulation (most frequently, an excipient) that does not exhibit pharmacological activity"
+            ],
+            [
+                "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/IngredientRole"
+            ],
+            [
+                "http://www.w3.org/2000/01/rdf-schema#label",
+                "inactive ingredient role"
+            ]
+        ],
+        "right and not left": [
+            [
+                "http://www.w3.org/2002/07/owl#equivalentClass",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/InactiveIngredient"
+            ],
+            [
+                "http://www.w3.org/2002/07/owl#deprecated",
+                "true"
+            ]
+        ],
+        "both right and left": [
+            [
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                "http://www.w3.org/2002/07/owl#Class"
+            ]
+        ]
+    },
+    {
+        "subject": "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/Moiety",
+        "left and not right": [],
+        "right and not left": [
+            [
+                "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+                [
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/hasMolecularFormulaByMoiety",
+                    "http://www.w3.org/2002/07/owl#onDataRange",
+                    "http://www.w3.org/2001/XMLSchema#string",
+                    "http://www.w3.org/2002/07/owl#maxQualifiedCardinality",
+                    "1"
+                ]
+            ],
+            [
+                "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+                [
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/hasMolecularFormula",
+                    "http://www.w3.org/2002/07/owl#onDataRange",
+                    "http://www.w3.org/2001/XMLSchema#string",
+                    "http://www.w3.org/2002/07/owl#maxQualifiedCardinality",
+                    "1"
+                ]
+            ],
+            [
+                "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+                [
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/hasMolecularWeight",
+                    "http://www.w3.org/2002/07/owl#onClass",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/MolecularWeight",
+                    "http://www.w3.org/2002/07/owl#minQualifiedCardinality",
+                    "0"
+                ]
+            ],
+            [
+                "https://spec.pistoiaalliance.org/idmp/ontology/META/ISOConformanceAnnotations/hasConformanceToISOLevel",
+                "https://spec.pistoiaalliance.org/idmp/ontology/META/ISOConformanceAnnotations/ConformanceToISOLevel-NameAndAnnotationConformant"
+            ],
+            [
+                "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+                [
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/hasStereochemistry",
+                    "http://www.w3.org/2002/07/owl#onClass",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/Stereochemistry",
+                    "http://www.w3.org/2002/07/owl#maxQualifiedCardinality",
+                    "1"
+                ]
+            ],
+            [
+                "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+                [
+                    "https://www.omg.org/spec/Commons/Classifiers/isClassifiedBy",
+                    "http://www.w3.org/2002/07/owl#onClass",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/OpticalActivity",
+                    "http://www.w3.org/2002/07/owl#maxQualifiedCardinality",
+                    "1"
+                ]
+            ]
+        ],
+        "both right and left": [
+            [
+                "http://www.w3.org/2000/01/rdf-schema#label",
+                "moiety"
+            ],
+            [
+                "https://www.omg.org/spec/Commons/AnnotationVocabulary/directSource",
+                "ISO 11238:2018 Health informatics - Identification of medicinal products (IDMP) - Data elements and structures for the unique identification and exchange of regulated information on substances, clause 3.45"
+            ],
+            [
+                "http://www.w3.org/2004/02/skos/core#definition",
+                "entity within a substance that has a complete and continuous molecular structure"
+            ],
+            [
+                "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+                [
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/hasStructure",
+                    "http://www.w3.org/2002/07/owl#onClass",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/MolecularStructure",
+                    "http://www.w3.org/2002/07/owl#maxQualifiedCardinality",
+                    "1"
+                ]
+            ],
+            [
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                "http://www.w3.org/2002/07/owl#Class"
+            ],
+            [
+                "http://www.w3.org/2004/02/skos/core#example",
+                "The strength of a medicinal product is often based on what is referred to as the active moiety of the molecule, responsible for the physiological or pharmacological action of the drug substance. To avoid ambiguity, the free acid and/or free base should be used as the moiety upon which strength is based."
+            ],
+            [
+                "http://www.w3.org/2004/02/skos/core#note",
+                "The moiety subclause serves for the description of both the moiety and the other fragment constituting the substance. The Element Group Moiety is attached to the element class Chemical in order to describe a salt, solvate and co-crystal relationship to the active moiety in an unambiguous way with respect to the description of the molecular formula and sometimes the official names. The Element Group Amount is attached to Moiety. This will help to describe salts, solvates, hydrated substances and co-crystallising agents in a more unambiguous way with respect to the description of the molecular formula and sometimes official names. Each moiety within the chemical substance is to be identified and the composition range of the moieties when known is to be provided by means of the following data elements: If the numeric value of the element 'Number of Moieties' is equal to 1, the class Moiety should not be used; otherwise the class shall always be mandatory."
+            ],
+            [
+                "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+                [
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/isMoietyOf",
+                    "http://www.w3.org/2002/07/owl#someValuesFrom",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/Substance",
+                    "http://www.w3.org/2002/07/owl#cardinality",
+                    1
+                ]
+            ],
+            [
+                "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+                "https://www.omg.org/spec/Commons/Collections/Constituent"
+            ],
+            [
+                "http://www.w3.org/2004/02/skos/core#note",
+                "The active moiety of a stoichiometric or non-stoichiometrical substance molecule is considered that part of the molecule that is the base, free acid or ion molecular part of a salt, solvate, chelate, clathrate, molecular complex or ester."
+            ]
+        ]
+    },
+    {
+        "subject": "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/Material",
+        "left and not right": [],
+        "right and not left": [
+            [
+                "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/Matter"
+            ]
+        ],
+        "both right and left": [
+            [
+                "http://www.w3.org/2000/01/rdf-schema#label",
+                "material"
+            ],
+            [
+                "http://www.w3.org/2004/02/skos/core#definition",
+                "entity that has mass, occupies space and consists of one or more substances"
+            ],
+            [
+                "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+                [
+                    "https://www.omg.org/spec/Commons/Collections/comprises",
+                    "http://www.w3.org/2002/07/owl#onClass",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/Substance",
+                    "http://www.w3.org/2002/07/owl#minQualifiedCardinality",
+                    "0"
+                ]
+            ],
+            [
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                "http://www.w3.org/2002/07/owl#Class"
+            ],
+            [
+                "http://purl.org/dc/terms/source",
+                "ISO 11238:2018 Health informatics - Identification of medicinal products (IDMP) - Data elements and structures for the unique identification and exchange of regulated information on substances, clause 3.41"
+            ]
+        ]
+    },
+    {
+        "subject": "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/SubstanceName",
+        "left and not right": [
+            [
+                "https://www.omg.org/spec/Commons/AnnotationVocabulary/explanatoryNote",
+                "At least one name or company code should be associated with each substance. Names for a given substance and/or standardized names submitted by another party may be available in the substance terminology. Indication that a name is the preferred name or term by which a substance will be referred to in a given jurisdiction and domain may be presented in the terminology. This preferred term may vary depending on jurisdiction or domain or the state of development of a given substance."
+            ]
+        ],
+        "right and not left": [
+            [
+                "https://www.omg.org/spec/Commons/AnnotationVocabulary/explanatoryNote",
+                "Names for a given substance and/or standardized names submitted by another party may be available in the substance terminology. Indication that a name is the preferred name or term by which a substance will be referred to in a given jurisdiction and domain may be presented in the terminology. This preferred term may vary depending on jurisdiction or domain or the state of development of a given substance."
+            ]
+        ],
+        "both right and left": [
+            [
+                "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+                [
+                    "https://www.omg.org/spec/Commons/Classifiers/isClassifiedBy",
+                    "http://www.w3.org/2002/07/owl#onClass",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/SubstanceNameDomain",
+                    "http://www.w3.org/2002/07/owl#minQualifiedCardinality",
+                    "0"
+                ]
+            ],
+            [
+                "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+                [
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO21090-HarmonizedDatatypes/hasLanguageCode",
+                    "http://www.w3.org/2002/07/owl#someValuesFrom",
+                    "https://www.omg.org/spec/LCC/Languages/LanguageRepresentation/LanguageIdentifier",
+                    "http://www.w3.org/2002/07/owl#cardinality",
+                    1
+                ]
+            ],
+            [
+                "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+                [
+                    "https://www.omg.org/spec/Commons/RegulatoryAgencies/isApplicableInJurisdiction",
+                    "http://www.w3.org/2002/07/owl#someValuesFrom",
+                    "https://www.omg.org/spec/LCC/Countries/CountryRepresentation/GeographicRegionIdentifier",
+                    "http://www.w3.org/2002/07/owl#cardinality",
+                    1
+                ]
+            ],
+            [
+                "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+                [
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/hasSubstanceNameType",
+                    "http://www.w3.org/2002/07/owl#onClass",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/SubstanceNameClassifier",
+                    "http://www.w3.org/2002/07/owl#qualifiedCardinality",
+                    "1"
+                ]
+            ],
+            [
+                "http://www.w3.org/2004/02/skos/core#definition",
+                "name or company code associated with the substance"
+            ],
+            [
+                "http://purl.org/dc/terms/source",
+                "ISO 11238:2018 Health informatics - Identification of medicinal products (IDMP) - Data elements and structures for the unique identification and exchange of regulated information on substances, clause 6.4"
+            ],
+            [
+                "http://www.w3.org/2004/02/skos/core#example",
+                "During the early stages of clinical development, the preferred term for a substance can be its company code. In later stages, an INN can be associated with the substance and become the preferred term for that substance."
+            ],
+            [
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                "http://www.w3.org/2002/07/owl#Class"
+            ],
+            [
+                "http://www.w3.org/2000/01/rdf-schema#label",
+                "substance name"
+            ],
+            [
+                "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+                [
+                    "https://www.omg.org/spec/Commons/Designators/isDescribedBy",
+                    "http://www.w3.org/2002/07/owl#onClass",
+                    "https://www.omg.org/spec/Commons/Documents/Reference",
+                    "http://www.w3.org/2002/07/owl#minQualifiedCardinality",
+                    "0"
+                ]
+            ],
+            [
+                "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+                "https://www.omg.org/spec/Commons/ContextualDesignators/ContextualName"
+            ],
+            [
+                "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+                [
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/hasSubstanceNameValue",
+                    "http://www.w3.org/2002/07/owl#onDataRange",
+                    "http://www.w3.org/2001/XMLSchema#string",
+                    "http://www.w3.org/2002/07/owl#cardinality",
+                    1
+                ]
+            ],
+            [
+                "http://www.w3.org/2004/02/skos/core#note",
+                "At least one substance name or company code shall be associated with each substance. The element group 'Substance Name' consists of the following attributes: 'Substance Name', 'Substance Name Type', 'Language', 'Substance Name Domain' and 'Jurisdiction'. If the name is an official name, the naming authority used shall be identified by the 'Official Name Type' as well as the 'Official Name Status'."
+            ],
+            [
+                "https://www.omg.org/spec/Commons/AnnotationVocabulary/explanatoryNote",
+                "Although ISO 11238 does not provide any guidance on substance nomenclature, it does provide a structure for the capture of names and codes that are used to refer to a substance. For the purpose of ISO 11238 there are at the moment sixteen types of names, e.g. Official names, systematic names, other names, brand names, company codes, homeopathic names, specified homeopathic names, plasma-derived names, Specified Substance Group 1, 2 and 3 names."
+            ],
+            [
+                "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+                [
+                    "https://www.omg.org/spec/Commons/Designators/isNameOf",
+                    "http://www.w3.org/2002/07/owl#someValuesFrom",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/Substance",
+                    "http://www.w3.org/2002/07/owl#cardinality",
+                    1
+                ]
+            ],
+            [
+                "http://www.w3.org/2004/02/skos/core#note",
+                "It is anticipated that every substance will have a name in English. Synonyms can be associated with a substance. Translations of English names to other languages can also be accommodated. Language and Jurisdiction will be described using ISO standards."
+            ],
+            [
+                "http://purl.org/dc/terms/source",
+                "ISO/TS 19844:2018(E) Health informatics - Identification of medicinal products (IDMP) - Implementation guidelines for ISO 11238 for data elements and structures for the unique identification and exchange of regulated information on substances, clause 6.3"
+            ]
+        ]
+    },
+    {
+        "subject": "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/Manufacturer",
+        "left and not right": [
+            [
+                "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+                [
+                    "https://www.omg.org/spec/Commons/ProductsAndServices/produces",
+                    "http://www.w3.org/2002/07/owl#someValuesFrom",
+                    "Nde8aea047d8a4af0ae68036bfc297c40",
+                    "http://www.w3.org/2002/07/owl#cardinality",
+                    1
+                ]
+            ]
+        ],
+        "right and not left": [
+            [
+                "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+                [
+                    "https://www.omg.org/spec/Commons/ProductsAndServices/produces",
+                    "http://www.w3.org/2002/07/owl#someValuesFrom",
+                    "N8022316e0ba44e6187bb663a02a578a9",
+                    "http://www.w3.org/2002/07/owl#cardinality",
+                    1
+                ]
+            ]
+        ],
+        "both right and left": [
+            [
+                "http://www.w3.org/2004/02/skos/core#note",
+                "In the context of ISO 11238, the definition refers to a company responsible for the manufacturing of the substance."
+            ],
+            [
+                "https://www.omg.org/spec/Commons/AnnotationVocabulary/synonym",
+                "establishment"
+            ],
+            [
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                "http://www.w3.org/2002/07/owl#Class"
+            ],
+            [
+                "http://purl.org/dc/terms/source",
+                "ISO 11238:2018 Health informatics - Identification of medicinal products (IDMP) - Data elements and structures for the unique identification and exchange of regulated information on substances, clause 3.39"
+            ],
+            [
+                "http://www.w3.org/2004/02/skos/core#definition",
+                "producer that holds the authorization for the manufacturing process"
+            ],
+            [
+                "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+                "https://www.omg.org/spec/Commons/ProductsAndServices/Producer"
+            ],
+            [
+                "http://www.w3.org/2000/01/rdf-schema#label",
+                "manufacturer"
+            ]
+        ]
+    },
+    {
+        "subject": "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/ExcipientRole",
+        "left and not right": [
+            [
+                "https://www.omg.org/spec/Commons/AnnotationVocabulary/synonym",
+                "filler"
+            ],
+            [
+                "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/InactiveIngredientRole"
+            ],
+            [
+                "http://www.w3.org/2000/01/rdf-schema#label",
+                "excipient role"
+            ],
+            [
+                "http://www.w3.org/2004/02/skos/core#definition",
+                "pharmacological role of a generally pharmacologically inactive substance that is formulated with the active ingredient of a medication"
+            ],
+            [
+                "http://purl.org/dc/terms/source",
+                "Chemical Entities of Biological Interest Ontology, see http://purl.obolibrary.org/obo/CHEBI_75324"
+            ],
+            [
+                "https://www.omg.org/spec/Commons/AnnotationVocabulary/synonym",
+                "bulking agent"
+            ]
+        ],
+        "right and not left": [
+            [
+                "http://www.w3.org/2002/07/owl#equivalentClass",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/Excipient"
+            ],
+            [
+                "http://www.w3.org/2002/07/owl#deprecated",
+                "true"
+            ]
+        ],
+        "both right and left": [
+            [
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                "http://www.w3.org/2002/07/owl#Class"
+            ]
+        ]
+    },
+    {
+        "subject": "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/MolecularGraphIdentifier",
+        "left and not right": [],
+        "right and not left": [
+            [
+                "https://spec.pistoiaalliance.org/idmp/ontology/META/ISOConformanceAnnotations/hasConformanceToISOLevel",
+                "https://spec.pistoiaalliance.org/idmp/ontology/META/ISOConformanceAnnotations/ConformanceToISOLevel-Extension"
+            ]
+        ],
+        "both right and left": [
+            [
+                "http://www.w3.org/2000/01/rdf-schema#label",
+                "molecular graph identifier"
+            ],
+            [
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                "http://www.w3.org/2002/07/owl#Class"
+            ],
+            [
+                "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+                [
+                    "https://www.omg.org/spec/Commons/Identifiers/identifies",
+                    "http://www.w3.org/2002/07/owl#someValuesFrom",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/MolecularGraph",
+                    "http://www.w3.org/2002/07/owl#cardinality",
+                    1
+                ]
+            ],
+            [
+                "http://www.w3.org/2004/02/skos/core#definition",
+                "unique identifier for a molecular graph representing a single chemical structure"
+            ],
+            [
+                "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+                "https://www.omg.org/spec/Commons/Identifiers/Identifier"
+            ]
+        ]
+    },
+    {
+        "subject": "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/",
+        "left and not right": [
+            [
+                "http://www.w3.org/2002/07/owl#versionIRI",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/20220801/ISO11238-Substances/"
+            ],
+            [
+                "https://spec.pistoiaalliance.org/idmp/ontology/META/ChangeManagement/hasMaturityLevel",
+                "https://spec.pistoiaalliance.org/idmp/ontology/META/ChangeManagement/Provisional"
+            ]
+        ],
+        "right and not left": [
+            [
+                "http://www.w3.org/2004/02/skos/core#changeNote",
+                "The https://spec.pistoiaalliance.org/idmp/ontology/ISO/20221001/ISO11238-Substances.rdf version of this ontology was modified to rename 'ingredient role' to ingredient for clarification per discussion at the Pistoia Alliance Conference Workshop on 3 November 2022 (IDMP-298). It was also modified to add the concept of matter and to add a specific hasSubstanceName property rather than the more general hasName property in order to accommodate additional semantics. The relationship between a moiety or substance and some of its characteristics was also revised, including the relationship between a structure and its corresponding representation."
+            ],
+            [
+                "https://spec.pistoiaalliance.org/idmp/ontology/META/ChangeManagement/hasMaturityLevel",
+                "https://spec.pistoiaalliance.org/idmp/ontology/META/ChangeManagement/Release"
+            ],
+            [
+                "http://www.w3.org/2002/07/owl#imports",
+                "https://spec.pistoiaalliance.org/idmp/ontology/META/ISOConformanceAnnotations/"
+            ],
+            [
+                "http://www.w3.org/2002/07/owl#versionIRI",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/20221201/ISO11238-Substances/"
+            ],
+            [
+                "http://www.w3.org/2004/02/skos/core#changeNote",
+                "The https://spec.pistoiaalliance.org/idmp/ontology/ISO/20221101/ISO11238-Substances.rdf version of this ontology was modified to relax the restriction on the property isStoichiometric with respect to chemical substances to optional from required (IDMP-380), and then reversed per the SME team and to conform with the IDMP standard."
+            ]
+        ],
+        "both right and left": [
+            [
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                "http://www.w3.org/2002/07/owl#Ontology"
+            ],
+            [
+                "http://purl.org/dc/terms/abstract",
+                "The regulated information on substances ontology provides a semantic model representing the definitions for exchanging basic concepts for the unique identification and exchange of regulated information on substances. It is derived from the ISO 11238:2018 Health informatics - Identification of medicinal products - Data elements and structures for the unique identification and exchange of regulated information on substances standard."
+            ],
+            [
+                "http://www.w3.org/2002/07/owl#imports",
+                "https://www.omg.org/spec/Commons/Documents/"
+            ],
+            [
+                "http://www.w3.org/2002/07/owl#imports",
+                "https://www.omg.org/spec/Commons/AnnotationVocabulary/"
+            ],
+            [
+                "http://www.w3.org/2002/07/owl#imports",
+                "https://www.omg.org/spec/Commons/Designators/"
+            ],
+            [
+                "http://www.w3.org/2002/07/owl#imports",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO21090-HarmonizedDatatypes/"
+            ],
+            [
+                "http://www.w3.org/2002/07/owl#imports",
+                "https://www.omg.org/spec/Commons/ProductsAndServices/"
+            ],
+            [
+                "http://www.w3.org/2002/07/owl#imports",
+                "https://www.omg.org/spec/Commons/Collections/"
+            ],
+            [
+                "http://www.w3.org/2002/07/owl#imports",
+                "https://www.omg.org/spec/Commons/ContextualDesignators/"
+            ],
+            [
+                "https://www.omg.org/spec/Commons/AnnotationVocabulary/copyright",
+                "Copyright (c) 2022 EDM Council, Inc."
+            ],
+            [
+                "http://www.w3.org/2002/07/owl#imports",
+                "https://www.omg.org/spec/Commons/QuantitiesAndUnits/"
+            ],
+            [
+                "http://www.w3.org/2002/07/owl#imports",
+                "https://www.omg.org/spec/Commons/CodesAndCodeSets/"
+            ],
+            [
+                "https://www.omg.org/spec/Commons/AnnotationVocabulary/copyright",
+                "Copyright (c) 2022 Pistoia Alliance, Inc."
+            ],
+            [
+                "http://www.w3.org/2002/07/owl#imports",
+                "https://www.omg.org/spec/Commons/TextDatatype/"
+            ],
+            [
+                "http://www.w3.org/2002/07/owl#imports",
+                "https://www.omg.org/spec/Commons/PartiesAndSituations/"
+            ],
+            [
+                "http://www.w3.org/2000/01/rdf-schema#label",
+                "ISO 11238 Regulated Information on Substances Ontology"
+            ],
+            [
+                "http://www.w3.org/2002/07/owl#imports",
+                "https://www.omg.org/spec/Commons/Classifiers/"
+            ],
+            [
+                "http://www.w3.org/2002/07/owl#imports",
+                "https://www.omg.org/spec/LCC/Countries/CountryRepresentation/"
+            ],
+            [
+                "http://www.w3.org/2002/07/owl#imports",
+                "https://spec.pistoiaalliance.org/idmp/ontology/META/ChangeManagement/"
+            ],
+            [
+                "http://www.w3.org/2002/07/owl#imports",
+                "https://www.omg.org/spec/Commons/RegistrationAuthorities/"
+            ],
+            [
+                "http://www.w3.org/2002/07/owl#imports",
+                "https://www.omg.org/spec/Commons/DatesAndTimes/"
+            ],
+            [
+                "http://www.w3.org/2002/07/owl#imports",
+                "https://www.omg.org/spec/LCC/Languages/LanguageRepresentation/"
+            ],
+            [
+                "http://purl.org/dc/terms/license",
+                "http://opensource.org/licenses/MIT"
+            ],
+            [
+                "http://www.w3.org/2002/07/owl#imports",
+                "https://www.omg.org/spec/Commons/RegulatoryAgencies/"
+            ],
+            [
+                "http://www.w3.org/2002/07/owl#imports",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11240-UnitsOfMeasurement/"
+            ],
+            [
+                "http://www.w3.org/2002/07/owl#imports",
+                "https://www.omg.org/spec/Commons/Identifiers/"
+            ]
+        ]
+    },
+    {
+        "subject": "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/OfficialName",
+        "left and not right": [
+            [
+                "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+                [
+                    "https://www.omg.org/spec/Commons/RegistrationAuthorities/isRegisteredBy",
+                    "http://www.w3.org/2002/07/owl#someValuesFrom",
+                    "Ndeee532773ac40d994eea82980ef5abe",
+                    "http://www.w3.org/2002/07/owl#cardinality",
+                    1
+                ]
+            ]
+        ],
+        "right and not left": [
+            [
+                "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+                [
+                    "https://www.omg.org/spec/Commons/RegistrationAuthorities/isRegisteredBy",
+                    "http://www.w3.org/2002/07/owl#someValuesFrom",
+                    "N1193a8a931204eb9916674f000b5c263",
+                    "http://www.w3.org/2002/07/owl#cardinality",
+                    1
+                ]
+            ]
+        ],
+        "both right and left": [
+            [
+                "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+                [
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/hasSubstanceNameType",
+                    "http://www.w3.org/2002/07/owl#hasValue",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/SubstanceNameClassifier-OfficialName",
+                    "http://www.w3.org/2002/07/owl#cardinality",
+                    1
+                ]
+            ],
+            [
+                "http://purl.org/dc/terms/source",
+                "ISO/TS 19844:2018(E) Health informatics - Identification of medicinal products (IDMP) - Implementation guidelines for ISO 11238 for data elements and structures for the unique identification and exchange of regulated information on substances, clause 6.3.6.1"
+            ],
+            [
+                "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/SubstanceName"
+            ],
+            [
+                "http://www.w3.org/2000/01/rdf-schema#label",
+                "official name"
+            ],
+            [
+                "http://www.w3.org/2004/02/skos/core#note",
+                "Any authority which assigns official names shall typically do so in a publication, and as such, referencing the publication is sufficient indication for the name being 'official' and sufficient representation for the 'official name type'. When new official names are issued by official naming bodies, the naming bodies will be reflected in this terminology."
+            ],
+            [
+                "http://purl.org/dc/terms/source",
+                "ISO 11238:2018 Health informatics - Identification of medicinal products (IDMP) - Data elements and structures for the unique identification and exchange of regulated information on substances, clause 3.55"
+            ],
+            [
+                "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+                [
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/hasChangeDate",
+                    "http://www.w3.org/2002/07/owl#onDataRange",
+                    "https://www.omg.org/spec/Commons/DatesAndTimes/CombinedDateTime",
+                    "http://www.w3.org/2002/07/owl#minQualifiedCardinality",
+                    "0"
+                ]
+            ],
+            [
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                "http://www.w3.org/2002/07/owl#Class"
+            ],
+            [
+                "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+                [
+                    "https://www.omg.org/spec/Commons/Classifiers/isClassifiedBy",
+                    "http://www.w3.org/2002/07/owl#someValuesFrom",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/OfficialNameStatus",
+                    "http://www.w3.org/2002/07/owl#cardinality",
+                    1
+                ]
+            ],
+            [
+                "https://www.omg.org/spec/Commons/AnnotationVocabulary/usageNote",
+                "Rather than creating an independent code for the representation of the registration authority, the property 'is registered by' must be used to link to the authority responsible for such registration in the context of this ontology. Note that this approach allows for linking to all relevant authorities, as required by the ISO standard."
+            ],
+            [
+                "http://www.w3.org/2004/02/skos/core#definition",
+                "name given by an official registration authority/organization"
+            ]
+        ]
+    },
+    {
+        "subject": "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/ChemicalSubstance",
+        "left and not right": [],
+        "right and not left": [
+            [
+                "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+                [
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/hasMolecularFormulaByMoiety",
+                    "http://www.w3.org/2002/07/owl#onDataRange",
+                    "http://www.w3.org/2001/XMLSchema#string",
+                    "http://www.w3.org/2002/07/owl#maxQualifiedCardinality",
+                    "1"
+                ]
+            ],
+            [
+                "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+                [
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/hasMolecularFormula",
+                    "http://www.w3.org/2002/07/owl#onDataRange",
+                    "http://www.w3.org/2001/XMLSchema#string",
+                    "http://www.w3.org/2002/07/owl#maxQualifiedCardinality",
+                    "1"
+                ]
+            ],
+            [
+                "https://spec.pistoiaalliance.org/idmp/ontology/META/ISOConformanceAnnotations/hasConformanceToISOLevel",
+                "https://spec.pistoiaalliance.org/idmp/ontology/META/ISOConformanceAnnotations/ConformanceToISOLevel-NameAndAnnotationConformant"
+            ],
+            [
+                "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+                [
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/hasStereochemistry",
+                    "http://www.w3.org/2002/07/owl#onClass",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/Stereochemistry",
+                    "http://www.w3.org/2002/07/owl#maxQualifiedCardinality",
+                    "1"
+                ]
+            ],
+            [
+                "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+                [
+                    "https://www.omg.org/spec/Commons/Classifiers/isClassifiedBy",
+                    "http://www.w3.org/2002/07/owl#onClass",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/OpticalActivity",
+                    "http://www.w3.org/2002/07/owl#maxQualifiedCardinality",
+                    "1"
+                ]
+            ]
+        ],
+        "both right and left": [
+            [
+                "https://www.omg.org/spec/Commons/AnnotationVocabulary/directSource",
+                "ISO 11238:2018 Health informatics - Identification of medicinal products (IDMP) - Data elements and structures for the unique identification and exchange of regulated information on substances, clause 3.11"
+            ],
+            [
+                "http://www.w3.org/2002/07/owl#disjointWith",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/ProteinSubstance"
+            ],
+            [
+                "http://www.w3.org/2000/01/rdf-schema#label",
+                "chemical substance"
+            ],
+            [
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                "http://www.w3.org/2002/07/owl#Class"
+            ],
+            [
+                "http://www.w3.org/2004/02/skos/core#definition",
+                "single substance that can be described as a stoichiometric or non-stoichiometric single molecular entity and is not a protein, nucleic acid or polymer substance"
+            ],
+            [
+                "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+                [
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/hasNumberOfMoieties",
+                    "http://www.w3.org/2002/07/owl#onDataRange",
+                    "http://www.w3.org/2001/XMLSchema#integer",
+                    "http://www.w3.org/2002/07/owl#minQualifiedCardinality",
+                    "0"
+                ]
+            ],
+            [
+                "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+                [
+                    "https://www.omg.org/spec/Commons/Collections/hasConstituent",
+                    "http://www.w3.org/2002/07/owl#onClass",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/Moiety",
+                    "http://www.w3.org/2002/07/owl#minQualifiedCardinality",
+                    "0"
+                ]
+            ],
+            [
+                "http://www.w3.org/2002/07/owl#disjointWith",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/NucleicAcidSubstance"
+            ],
+            [
+                "http://www.w3.org/2004/02/skos/core#note",
+                "Chemical substances are generally considered 'small' molecules which have associated salts, solvates or ions and may be described using a single definitive or representative structure."
+            ],
+            [
+                "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+                [
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/isStoichiometric",
+                    "http://www.w3.org/2002/07/owl#onDataRange",
+                    "http://www.w3.org/2001/XMLSchema#boolean",
+                    "http://www.w3.org/2002/07/owl#cardinality",
+                    1
+                ]
+            ],
+            [
+                "http://www.w3.org/2002/07/owl#disjointWith",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/StructurallyDiverseSubstance"
+            ],
+            [
+                "http://www.w3.org/2002/07/owl#disjointWith",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/PolymerSubstance"
+            ],
+            [
+                "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/SingleSubstance"
+            ]
+        ]
+    },
+    {
+        "subject": "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/SubstanceConstituency",
+        "left and not right": [
+            [
+                "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+                [
+                    "https://www.omg.org/spec/Commons/PartiesAndSituations/hasRole",
+                    "http://www.w3.org/2002/07/owl#someValuesFrom",
+                    "N8bfc0c1317294113b7164d8906844713",
+                    "http://www.w3.org/2002/07/owl#cardinality",
+                    1
+                ]
+            ]
+        ],
+        "right and not left": [
+            [
+                "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+                [
+                    "https://www.omg.org/spec/Commons/PartiesAndSituations/hasRole",
+                    "http://www.w3.org/2002/07/owl#someValuesFrom",
+                    "N1d81dea97a1c4ff09dddb8bf70d40c10",
+                    "http://www.w3.org/2002/07/owl#cardinality",
+                    1
+                ]
+            ]
+        ],
+        "both right and left": [
+            [
+                "http://purl.org/dc/terms/source",
+                "ISO 11238:2018 Health informatics - Identification of medicinal products (IDMP) - Data elements and structures for the unique identification and exchange of regulated information on substances, clause 3.17"
+            ],
+            [
+                "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+                [
+                    "https://www.omg.org/spec/Commons/Designators/defines",
+                    "http://www.w3.org/2002/07/owl#someValuesFrom",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/Substance",
+                    "http://www.w3.org/2002/07/owl#cardinality",
+                    1
+                ]
+            ],
+            [
+                "http://www.w3.org/2004/02/skos/core#note",
+                "Constituent component is part of a mixture belonging to a homologous group of individual components, described as parent substances for the manufacture of an allergenic extract. In this example, the subject role would be played by the mixture, whose object role is played by multiple substances (ingredient roles)."
+            ],
+            [
+                "https://www.omg.org/spec/Commons/AnnotationVocabulary/synonym",
+                "substance relationship"
+            ],
+            [
+                "http://www.w3.org/2004/02/skos/core#definition",
+                "constituency that defines some substance based on its relationship(s) to some other substance (ingredient) or moiety, potentially in some amount, in some context"
+            ],
+            [
+                "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+                [
+                    "https://www.omg.org/spec/Commons/Designators/defines",
+                    "http://www.w3.org/2002/07/owl#allValuesFrom",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/Substance",
+                    "http://www.w3.org/2002/07/owl#cardinality",
+                    -1
+                ]
+            ],
+            [
+                "https://www.omg.org/spec/Commons/AnnotationVocabulary/usageNote",
+                "From an implementation (mapping) perspective, this substance constituency class provides the basis for a node in the relationship 'substance in the role of a subject realizes an ingredient or moiety role played by some substance or moiety', where the object may have some amount, limit on impurities, or basis of strength, for example, in a given context. Qualifiers such as the context, purity requirements or limits, basis of strength, amont substance should be added to the constituency node, rather than to the roles."
+            ],
+            [
+                "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+                "https://www.omg.org/spec/Commons/PartiesAndSituations/Constituency"
+            ],
+            [
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                "http://www.w3.org/2002/07/owl#Class"
+            ],
+            [
+                "http://www.w3.org/2004/02/skos/core#example",
+                "The substance, triamcinolone acetonide is the parent (constituent) substance of the specified substance Group 1 substance, triamcinolone acetonide, micronized. In this example, the subject role is played by 'triamcinolone acetonide, micronized' and object role by 'triamcinolone acetonide'."
+            ],
+            [
+                "http://www.w3.org/2004/02/skos/core#note",
+                "Constituents shall have an associated role and amount at the Specified Substance Group 1 information model. Constituent specifications shall be used to describe components as well as limits on impurities or related substances for a given material."
+            ],
+            [
+                "http://www.w3.org/2000/01/rdf-schema#label",
+                "substance constituency"
+            ],
+            [
+                "http://www.w3.org/2004/02/skos/core#note",
+                "Constituents can be impurities, degradants, extraction solvents, vehicles, active markers or signature substances, parent substances or single substances mixed together to form a multi-substance material."
+            ]
+        ]
+    },
+    {
+        "subject": "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/hasStereochemistry",
+        "left and not right": [
+            [
+                "http://www.w3.org/2000/01/rdf-schema#domain",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/MolecularStructure"
+            ]
+        ],
+        "right and not left": [],
+        "both right and left": [
+            [
+                "http://www.w3.org/2004/02/skos/core#definition",
+                "is classified by the relative spatial arrangement of atoms within molecules"
+            ],
+            [
+                "http://www.w3.org/2000/01/rdf-schema#subPropertyOf",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/hasStructure"
+            ],
+            [
+                "http://www.w3.org/2000/01/rdf-schema#subPropertyOf",
+                "https://www.omg.org/spec/Commons/Classifiers/isClassifiedBy"
+            ],
+            [
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/hasConformanceLevel",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/ConformanceLevel-Conditional"
+            ],
+            [
+                "http://www.w3.org/2000/01/rdf-schema#range",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/Stereochemistry"
+            ],
+            [
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                "http://www.w3.org/2002/07/owl#ObjectProperty"
+            ],
+            [
+                "http://www.w3.org/2000/01/rdf-schema#label",
+                "has stereochemistry"
+            ],
+            [
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO21090-HarmonizedDatatypes/isEncodedAs",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO21090-HarmonizedDatatypes/DatatypeCode-CD"
+            ],
+            [
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/hasBusinessRules",
+                "When the substance type, as defined in is either chemical or polymer, this class is MANDATORY; for all other cases this class is CONDITIONAL."
+            ],
+            [
+                "http://purl.org/dc/terms/source",
+                "ISO 11238:2018 Health informatics - Identification of medicinal products (IDMP) - Data elements and structures for the unique identification and exchange of regulated information on substances, clause 7.2.2 Figure 14"
+            ]
+        ]
+    }
+]

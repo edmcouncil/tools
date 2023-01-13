@@ -1,0 +1,119 @@
+[
+    {
+        "subject": "https://www.omg.org/spec/Commons/Identifiers/identifies",
+        "left and not right": [],
+        "right and not left": [
+            [
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                "http://www.w3.org/2002/07/owl#FunctionalProperty"
+            ]
+        ],
+        "both right and left": [
+            [
+                "http://www.w3.org/2000/01/rdf-schema#subPropertyOf",
+                "https://www.omg.org/spec/Commons/Designators/denotes"
+            ],
+            [
+                "http://www.w3.org/2000/01/rdf-schema#label",
+                "identifies"
+            ],
+            [
+                "http://www.w3.org/2000/01/rdf-schema#domain",
+                "https://www.omg.org/spec/Commons/Identifiers/Identifier"
+            ],
+            [
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                "http://www.w3.org/2002/07/owl#ObjectProperty"
+            ],
+            [
+                "http://www.w3.org/2004/02/skos/core#definition",
+                "recognizes or establishes identity within some context"
+            ]
+        ]
+    },
+    {
+        "subject": "https://www.omg.org/spec/Commons/Identifiers/",
+        "left and not right": [
+            [
+                "http://www.w3.org/2002/07/owl#versionIRI",
+                "https://www.omg.org/spec/Commons/20220501/Identifiers/"
+            ]
+        ],
+        "right and not left": [
+            [
+                "http://www.w3.org/2004/02/skos/core#changeNote",
+                "The https://www.omg.org/spec/Commons/20220501/Identifiers.rdf version of this ontology was modified to make the property 'identifies' functional (COMMONS-26)."
+            ],
+            [
+                "http://www.w3.org/2002/07/owl#versionIRI",
+                "https://www.omg.org/spec/Commons/20221101/Identifiers/"
+            ]
+        ],
+        "both right and left": [
+            [
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                "http://www.w3.org/2002/07/owl#Ontology"
+            ],
+            [
+                "http://purl.org/dc/terms/contributor",
+                "Pete Rivett, agnos.ai U.K. Ltd"
+            ],
+            [
+                "https://www.omg.org/spec/Commons/AnnotationVocabulary/copyright",
+                "Copyright (c) 2021-2022 EDM Council, Inc."
+            ],
+            [
+                "https://www.omg.org/spec/Commons/AnnotationVocabulary/copyright",
+                "Copyright (c) 2014-2022 Thematix Partners LLC"
+            ],
+            [
+                "http://www.w3.org/2002/07/owl#imports",
+                "https://www.omg.org/spec/Commons/AnnotationVocabulary/"
+            ],
+            [
+                "http://www.w3.org/2002/07/owl#imports",
+                "https://www.omg.org/spec/Commons/Designators/"
+            ],
+            [
+                "http://purl.org/dc/terms/contributor",
+                "Evan Wallace, U.S. National Institute of Standards and Technology (NIST)"
+            ],
+            [
+                "http://www.w3.org/2000/01/rdf-schema#label",
+                "Commons Identifiers Ontology"
+            ],
+            [
+                "http://www.w3.org/2002/07/owl#imports",
+                "https://www.omg.org/spec/Commons/Collections/"
+            ],
+            [
+                "http://purl.org/dc/terms/license",
+                "http://opensource.org/licenses/MIT"
+            ],
+            [
+                "http://purl.org/dc/terms/abstract",
+                "The identifiers ontology defines commonly used concepts for describing identifiers and the identification schemes that define them, such as various national and international identifiers for legal entities, financial instruments, and the like, derived from the patterns specified in ISO 11179-3, Metadata Registries."
+            ],
+            [
+                "http://www.w3.org/2004/02/skos/core#note",
+                "The identifiers ontology conforms with the OWL 2 DL semantics, and is outside of OWL 2 RL due to (1) imported axioms from the designations ontology, and (2) the inclusion of local some values constraints on the Identifier class. The latter could be removed as needed to support OWL RL rule-based applications that cannot be extended to support it."
+            ],
+            [
+                "https://www.omg.org/spec/Commons/AnnotationVocabulary/copyright",
+                "Copyright (c) 2021-2022 agnos.ai U.K. Ltd"
+            ],
+            [
+                "https://www.omg.org/spec/Commons/AnnotationVocabulary/copyright",
+                "Copyright (c) 2021-2022 Object Management Group, Inc."
+            ],
+            [
+                "http://purl.org/dc/terms/contributor",
+                "Elisa Kendall, Thematix Partners LLC"
+            ],
+            [
+                "http://www.w3.org/2004/02/skos/core#note",
+                "This ontology was originally designed for use in the OMG Languages, Countries and Codes (LCC) specification as part of the broader LanguageRepresentation ontology. The concepts have also been used in the Financial Industry Business Ontology (FIBO) for representing financial instrument, legal entity, and other identifiers."
+            ]
+        ]
+    }
+]

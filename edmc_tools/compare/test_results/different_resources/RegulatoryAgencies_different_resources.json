@@ -1,0 +1,39 @@
+[
+    {
+        "type": "http://www.w3.org/2002/07/owl#Class",
+        "left and not right": [],
+        "right and not left": [
+            "https://www.omg.org/spec/Commons/Organizations/LegalPerson",
+            "https://www.omg.org/spec/Commons/Organizations/LegalEntity"
+        ],
+        "both right and left": [
+            "https://www.omg.org/spec/Commons/RegulatoryAgencies/LicenseIdentifier",
+            "https://www.omg.org/spec/Commons/RegulatoryAgencies/RegulatoryAgency",
+            "https://www.omg.org/spec/Commons/RegulatoryAgencies/Licensee",
+            "https://www.omg.org/spec/Commons/RegulatoryAgencies/Jurisdiction",
+            "https://www.omg.org/spec/Commons/RegulatoryAgencies/RegulatoryReport",
+            "https://www.omg.org/spec/Commons/RegulatoryAgencies/GovernmentIssuedLicense",
+            "https://www.omg.org/spec/Commons/RegulatoryAgencies/Licensor",
+            "https://www.omg.org/spec/Commons/RegulatoryAgencies/License",
+            "https://www.omg.org/spec/Commons/RegulatoryAgencies/RegulatoryService"
+        ]
+    },
+    {
+        "type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+        "left and not right": [],
+        "right and not left": [
+            "https://www.omg.org/spec/Commons/RegulatoryAgencies/isJurisdictionOf",
+            "https://www.omg.org/spec/Commons/RegulatoryAgencies/isRecognizedIn",
+            "https://www.omg.org/spec/Commons/RegulatoryAgencies/isOrganizedIn"
+        ],
+        "both right and left": [
+            "https://www.omg.org/spec/Commons/RegulatoryAgencies/hasJurisdiction",
+            "https://www.omg.org/spec/Commons/RegulatoryAgencies/isApplicableInJurisdiction",
+            "https://www.omg.org/spec/Commons/RegulatoryAgencies/hasReach",
+            "https://www.omg.org/spec/Commons/RegulatoryAgencies/governs",
+            "https://www.omg.org/spec/Commons/RegulatoryAgencies/regulates",
+            "https://www.omg.org/spec/Commons/RegulatoryAgencies/isRegulatedBy",
+            "https://www.omg.org/spec/Commons/RegulatoryAgencies/isGovernedBy"
+        ]
+    }
+]

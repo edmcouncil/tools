@@ -1,0 +1,13 @@
+rdflib
+PyGithub
+networkx
+matplotlib
+tqdm
+spacy
+nltk
+pandas
+requests
+openpyxl
+wikibase_api
+ply
+pyshacl

@@ -1,0 +1,146 @@
+[
+    {
+        "subject": "https://www.omg.org/spec/Commons/ContextualDesignators/",
+        "left and not right": [
+            [
+                "http://www.w3.org/2002/07/owl#versionIRI",
+                "https://www.omg.org/spec/Commons/20220801/ContextualDesignators/"
+            ],
+            [
+                "http://www.w3.org/2004/02/skos/core#changeNote",
+                "https://www.omg.org/spec/Commons/20220501/ContextualDesignators.rdf version of this ontology was modified to eliminate a double space in a note on ContextualName (COMMONS-6)."
+            ]
+        ],
+        "right and not left": [
+            [
+                "http://www.w3.org/2004/02/skos/core#changeNote",
+                "https://www.omg.org/spec/Commons/20220501/ContextualDesignators.rdf version of this ontology was modified to eliminate a double space in a note on ContextualName (COMMONS-6) and to require a ContextualName to have context (COMMONS-26)."
+            ],
+            [
+                "http://www.w3.org/2002/07/owl#versionIRI",
+                "https://www.omg.org/spec/Commons/20221101/ContextualDesignators/"
+            ]
+        ],
+        "both right and left": [
+            [
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                "http://www.w3.org/2002/07/owl#Ontology"
+            ],
+            [
+                "http://purl.org/dc/terms/contributor",
+                "Pete Rivett, agnos.ai U.K. Ltd"
+            ],
+            [
+                "https://www.omg.org/spec/Commons/AnnotationVocabulary/copyright",
+                "Copyright (c) 2022 Object Management Group, Inc."
+            ],
+            [
+                "http://purl.org/dc/terms/abstract",
+                "The contextual designators ontology extends the designators ontology to incorporate applicable dates and times and facilitate the inclusion of other context that is commonly needed, derived in part from the patterns defined in ISO 11179-3, Metadata Registries."
+            ],
+            [
+                "https://www.omg.org/spec/Commons/AnnotationVocabulary/copyright",
+                "Copyright (c) 2020-2022 Thematix Partners LLC"
+            ],
+            [
+                "http://www.w3.org/2002/07/owl#imports",
+                "https://www.omg.org/spec/Commons/AnnotationVocabulary/"
+            ],
+            [
+                "http://www.w3.org/2002/07/owl#imports",
+                "https://www.omg.org/spec/Commons/DatesAndTimes/"
+            ],
+            [
+                "http://purl.org/dc/terms/contributor",
+                "Dean Allemang, Working Ontologist"
+            ],
+            [
+                "http://www.w3.org/2002/07/owl#imports",
+                "https://www.omg.org/spec/Commons/Designators/"
+            ],
+            [
+                "https://www.omg.org/spec/Commons/AnnotationVocabulary/copyright",
+                "Copyright (c) 2020-2022 Working Ontologist LLC"
+            ],
+            [
+                "http://www.w3.org/2000/01/rdf-schema#label",
+                "Commons Contextual Designators Ontology"
+            ],
+            [
+                "http://www.w3.org/2002/07/owl#imports",
+                "https://www.omg.org/spec/Commons/Collections/"
+            ],
+            [
+                "http://purl.org/dc/terms/license",
+                "http://opensource.org/licenses/MIT"
+            ],
+            [
+                "https://www.omg.org/spec/Commons/AnnotationVocabulary/copyright",
+                "Copyright (c) 2022 agnos.ai U.K. Ltd"
+            ],
+            [
+                "http://www.w3.org/2004/02/skos/core#note",
+                "The contextual designators ontology conforms with the OWL 2 DL semantics, and is outside of OWL 2 RL due to (1) imported axioms from the designations and dates and times ontologies, and (2) the inclusion of local some values and min 0 cardinality constraints. The latter could be removed as needed to support OWL RL rule-based applications that cannot be extended to support it."
+            ],
+            [
+                "http://purl.org/dc/terms/contributor",
+                "Elisa Kendall, Thematix Partners LLC"
+            ]
+        ]
+    },
+    {
+        "subject": "https://www.omg.org/spec/Commons/ContextualDesignators/ContextualName",
+        "left and not right": [
+            [
+                "http://www.w3.org/2004/02/skos/core#note",
+                "This class is designed to be extended to include provenance details regarding the source for a particular name as well as links to the various contexts in which it is used."
+            ]
+        ],
+        "right and not left": [
+            [
+                "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+                [
+                    "https://www.omg.org/spec/Commons/ContextualDesignators/isApplicableIn",
+                    "http://www.w3.org/2002/07/owl#someValuesFrom",
+                    "https://www.omg.org/spec/Commons/ContextualDesignators/Context",
+                    "http://www.w3.org/2002/07/owl#cardinality",
+                    1
+                ]
+            ],
+            [
+                "http://www.w3.org/2004/02/skos/core#scopeNote",
+                "This class is designed to be extended to include provenance details regarding the source for a particular name as well as links to the various contexts in which it is used."
+            ]
+        ],
+        "both right and left": [
+            [
+                "http://www.w3.org/2004/02/skos/core#definition",
+                "designation by which someone, some place, or something is known in some context"
+            ],
+            [
+                "http://www.w3.org/2004/02/skos/core#note",
+                "Names for people may be considered to be personally identifying information (PII), especially when other details are also available. Specifying names as string values attached directly to an individual makes name reconciliation and management, including from a privacy perspective, more challenging."
+            ],
+            [
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                "http://www.w3.org/2002/07/owl#Class"
+            ],
+            [
+                "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+                "https://www.omg.org/spec/Commons/ContextualDesignators/ContextualDesignation"
+            ],
+            [
+                "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+                "https://www.omg.org/spec/Commons/Designators/Name"
+            ],
+            [
+                "http://www.w3.org/2000/01/rdf-schema#label",
+                "contextual name"
+            ],
+            [
+                "http://www.w3.org/2004/02/skos/core#note",
+                "Names of people, places, and organizations often change over time, and may be used in a particular context, such as a DBA name for a business or legal name for a person."
+            ]
+        ]
+    }
+]

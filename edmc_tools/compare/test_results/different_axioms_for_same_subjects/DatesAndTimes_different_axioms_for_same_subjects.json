@@ -1,0 +1,75 @@
+[
+    {
+        "subject": "https://www.omg.org/spec/Commons/DatesAndTimes/",
+        "left and not right": [
+            [
+                "http://www.w3.org/2002/07/owl#versionIRI",
+                "https://www.omg.org/spec/Commons/20220801/DatesAndTimes/"
+            ]
+        ],
+        "right and not left": [
+            [
+                "http://www.w3.org/2002/07/owl#versionIRI",
+                "https://www.omg.org/spec/Commons/20221101/DatesAndTimes/"
+            ]
+        ],
+        "both right and left": [
+            [
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                "http://www.w3.org/2002/07/owl#Ontology"
+            ],
+            [
+                "http://purl.org/dc/terms/contributor",
+                "Pete Rivett, agnos.ai U.K. Ltd"
+            ],
+            [
+                "https://www.omg.org/spec/Commons/AnnotationVocabulary/copyright",
+                "Copyright (c) 2014-2022 EDM Council, Inc."
+            ],
+            [
+                "http://www.w3.org/2004/02/skos/core#note",
+                "The dates and times ontology conforms with the OWL 2 DL semantics, and is outside of OWL 2 RL due to the inclusion of exact cardinality constraints on explicit date, explicit duration and time of day. These constraints can be changed to maximum cardinality constraints if needed to support OWL RL rule-based applications that cannot be extended to support them."
+            ],
+            [
+                "https://www.omg.org/spec/Commons/AnnotationVocabulary/copyright",
+                "Copyright (c) 2014-2022 Thematix Partners LLC"
+            ],
+            [
+                "http://www.w3.org/2002/07/owl#imports",
+                "https://www.omg.org/spec/Commons/AnnotationVocabulary/"
+            ],
+            [
+                "http://www.w3.org/2004/02/skos/core#changeNote",
+                "https://www.omg.org/spec/Commons/20220501/DatesAndTimes.rdf version of this ontology was modified to eliminate a double space in the scope note on CombinedDateTime (COMMONS-6)."
+            ],
+            [
+                "http://www.w3.org/2000/01/rdf-schema#label",
+                "Commons Dates and Times Ontology"
+            ],
+            [
+                "http://purl.org/dc/terms/contributor",
+                "Mark Linehan, Thematix Partners LLC"
+            ],
+            [
+                "https://www.omg.org/spec/Commons/AnnotationVocabulary/copyright",
+                "Copyright (c) 2014-2022 Object Management Group, Inc."
+            ],
+            [
+                "http://purl.org/dc/terms/license",
+                "http://opensource.org/licenses/MIT"
+            ],
+            [
+                "http://purl.org/dc/terms/abstract",
+                "The dates and times ontology defines commonly used temporal concepts that cover those most frequently needed across domains, with a focus on terminology that is used in business applications. It is designed to be mappable to other date and time ontologies and specifications, such as the W3C Time Ontology in OWL (available at https://www.w3.org/TR/owl-time/), certain temporal elements in BFO 2020 (see https://basic-formal-ontology.org/bfo-2020.html), time concepts defined in schema.org, and the Object Management Group's Date Time Vocabulary (DTV) specification (available at https://www.omg.org/spec/DTV/), without the corresponding overhead or in some cases, issues. The concepts were originally derived from a number of date and time standards including ISO 8601:2004 Representation of Dates and Times. The ontology itself was derived from the Financial Industry Business Ontology (FIBO) Financial Dates ontology, with minor revisions to better reflect requirements for mapping to other ontologies."
+            ],
+            [
+                "https://www.omg.org/spec/Commons/AnnotationVocabulary/copyright",
+                "Copyright (c) 2021-2022 agnos.ai U.K. Ltd"
+            ],
+            [
+                "http://purl.org/dc/terms/contributor",
+                "Elisa Kendall, Thematix Partners LLC"
+            ]
+        ]
+    }
+]

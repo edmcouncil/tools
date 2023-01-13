@@ -1,0 +1,23 @@
+[
+    {
+        "type": "http://www.w3.org/2002/07/owl#NamedIndividual",
+        "left and not right": [
+            "https://spec.pistoiaalliance.org/idmp/ontology/META/ISOConformanceAnnotations/NamingConformant",
+            "https://spec.pistoiaalliance.org/idmp/ontology/META/ISOConformanceAnnotations/Conformant",
+            "https://spec.pistoiaalliance.org/idmp/ontology/META/ISOConformanceAnnotations/NonConformant",
+            "https://spec.pistoiaalliance.org/idmp/ontology/META/ISOConformanceAnnotations/ModelConformant",
+            "https://spec.pistoiaalliance.org/idmp/ontology/META/ISOConformanceAnnotations/DefinitionallyConformant"
+        ],
+        "right and not left": [
+            "https://spec.pistoiaalliance.org/idmp/ontology/META/ISOConformanceAnnotations/ConformanceToISOLevel-NamingConformant",
+            "https://spec.pistoiaalliance.org/idmp/ontology/META/ISOConformanceAnnotations/ConformanceToISOLevel-ModelConformant",
+            "https://spec.pistoiaalliance.org/idmp/ontology/META/ISOConformanceAnnotations/ConformanceToISOLevel-Extension",
+            "https://spec.pistoiaalliance.org/idmp/ontology/META/ISOConformanceAnnotations/ConformanceToISOLevel-DefinitionallyConformant",
+            "https://spec.pistoiaalliance.org/idmp/ontology/META/ISOConformanceAnnotations/ConformanceToISOLevel-NameAndAnnotationConformant",
+            "https://spec.pistoiaalliance.org/idmp/ontology/META/ISOConformanceAnnotations/ConformanceToISOLevel-Conformant",
+            "https://spec.pistoiaalliance.org/idmp/ontology/META/ISOConformanceAnnotations/ConformanceToISOLevel-NonConformant",
+            "https://spec.pistoiaalliance.org/idmp/ontology/META/ISOConformanceAnnotations/ConformanceToISOLevel-NeedsClarification"
+        ],
+        "both right and left": []
+    }
+]

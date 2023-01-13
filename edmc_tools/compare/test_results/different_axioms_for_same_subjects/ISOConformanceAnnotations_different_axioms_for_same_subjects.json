@@ -1,0 +1,71 @@
+[
+    {
+        "subject": "https://spec.pistoiaalliance.org/idmp/ontology/META/ISOConformanceAnnotations/",
+        "left and not right": [
+            [
+                "http://www.w3.org/2002/07/owl#versionIRI",
+                "https://spec.pistoiaalliance.org/idmp/ontology/META/20220801/ISOConformanceAnnotations/"
+            ],
+            [
+                "https://spec.pistoiaalliance.org/idmp/ontology/META/ChangeManagement/hasMaturityLevel",
+                "https://spec.pistoiaalliance.org/idmp/ontology/META/ChangeManagement/Provisional"
+            ]
+        ],
+        "right and not left": [
+            [
+                "http://www.w3.org/2002/07/owl#versionIRI",
+                "https://spec.pistoiaalliance.org/idmp/ontology/META/20221201/ISOConformanceAnnotations/"
+            ],
+            [
+                "http://www.w3.org/2004/02/skos/core#changeNote",
+                "The https://spec.pistoiaalliance.org/idmp/ontology/ISO/20221001/ISOConformanceAnnotations.rdf version of this ontology was modified to add a distinct conformance level for name and annotations, including the definition, in contrast with naming conformance, which means that the concept has the same name as something in an ISO standard but not the same meaning. Two additional annotations were also included, one to say that while the ontology conforms with the definition in the standard, that definition needs clarification, and a second one to identify elements that have been added as extensions that are needed to fill gaps in the standard. These additions are not necessarily non-conformant but should be considered as additions when the standard is revised. We also changed the names of the individuals to include the class name, ConformanceToISOLevel, as a prefix in the individual name to ensure uniqueness."
+            ],
+            [
+                "https://spec.pistoiaalliance.org/idmp/ontology/META/ChangeManagement/hasMaturityLevel",
+                "https://spec.pistoiaalliance.org/idmp/ontology/META/ChangeManagement/Release"
+            ]
+        ],
+        "both right and left": [
+            [
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                "http://www.w3.org/2002/07/owl#Ontology"
+            ],
+            [
+                "http://www.w3.org/2002/07/owl#imports",
+                "https://spec.pistoiaalliance.org/idmp/ontology/META/ChangeManagement/"
+            ],
+            [
+                "http://www.w3.org/2002/07/owl#imports",
+                "https://www.omg.org/spec/Commons/AnnotationVocabulary/"
+            ],
+            [
+                "http://www.w3.org/2002/07/owl#imports",
+                "https://www.omg.org/spec/Commons/Classifiers/"
+            ],
+            [
+                "http://purl.org/dc/terms/references",
+                "http://purl.org/dc/terms/"
+            ],
+            [
+                "http://www.w3.org/2000/01/rdf-schema#label",
+                "ISO Conformance Annotations Ontology"
+            ],
+            [
+                "http://purl.org/dc/terms/license",
+                "http://opensource.org/licenses/MIT"
+            ],
+            [
+                "https://www.omg.org/spec/Commons/AnnotationVocabulary/copyright",
+                "Copyright (c) 2022 EDM Council, Inc."
+            ],
+            [
+                "https://www.omg.org/spec/Commons/AnnotationVocabulary/copyright",
+                "Copyright (c) 2022 Pistoia Alliance, Inc."
+            ],
+            [
+                "http://purl.org/dc/terms/abstract",
+                "The ISO Conformance Annotations ontology provides metadata that indicates the level of conformance any class, property, or annotation used across the ISO IDMP ontologies has with respect to the relevant ISO specifications. These annotations can be used to annotate an entire ontology element or if required, annotate another annotation in the ontology to be more precise."
+            ]
+        ]
+    }
+]

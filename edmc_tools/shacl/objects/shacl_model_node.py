@@ -1,0 +1,2 @@
+class ShaclModelNode:
+    registry = dict()

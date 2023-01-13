@@ -1,0 +1,155 @@
+[
+    {
+        "subject": "https://www.omg.org/spec/Commons/PartiesAndSituations/Role",
+        "left and not right": [
+            [
+                "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+                [
+                    "https://www.omg.org/spec/Commons/PartiesAndSituations/isPlayedBy",
+                    "http://www.w3.org/2002/07/owl#someValuesFrom",
+                    "http://www.w3.org/2002/07/owl#Thing",
+                    "http://www.w3.org/2002/07/owl#cardinality",
+                    1
+                ]
+            ]
+        ],
+        "right and not left": [
+            [
+                "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+                [
+                    "https://www.omg.org/spec/Commons/PartiesAndSituations/isPlayedBy",
+                    null,
+                    null,
+                    "http://www.w3.org/2002/07/owl#minCardinality",
+                    "0"
+                ]
+            ]
+        ],
+        "both right and left": [
+            [
+                "http://www.w3.org/2000/01/rdf-schema#label",
+                "role"
+            ],
+            [
+                "http://www.w3.org/2004/02/skos/core#definition",
+                "relative concept that ties a part to something or someone that fills it"
+            ],
+            [
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                "http://www.w3.org/2002/07/owl#Class"
+            ]
+        ]
+    },
+    {
+        "subject": "https://www.omg.org/spec/Commons/PartiesAndSituations/AgentRole",
+        "left and not right": [
+            [
+                "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+                [
+                    "https://www.omg.org/spec/Commons/PartiesAndSituations/isPlayedBy",
+                    "http://www.w3.org/2002/07/owl#onClass",
+                    "https://www.omg.org/spec/Commons/PartiesAndSituations/Agent",
+                    "http://www.w3.org/2002/07/owl#qualifiedCardinality",
+                    "1"
+                ]
+            ]
+        ],
+        "right and not left": [
+            [
+                "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+                [
+                    "https://www.omg.org/spec/Commons/PartiesAndSituations/isPlayedBy",
+                    "http://www.w3.org/2002/07/owl#onClass",
+                    "https://www.omg.org/spec/Commons/PartiesAndSituations/Agent",
+                    "http://www.w3.org/2002/07/owl#minQualifiedCardinality",
+                    "0"
+                ]
+            ]
+        ],
+        "both right and left": [
+            [
+                "http://www.w3.org/2004/02/skos/core#definition",
+                "role that is played by an agent"
+            ],
+            [
+                "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+                "https://www.omg.org/spec/Commons/PartiesAndSituations/Role"
+            ],
+            [
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                "http://www.w3.org/2002/07/owl#Class"
+            ],
+            [
+                "http://www.w3.org/2000/01/rdf-schema#label",
+                "agent role"
+            ]
+        ]
+    },
+    {
+        "subject": "https://www.omg.org/spec/Commons/PartiesAndSituations/PartyRole",
+        "left and not right": [
+            [
+                "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+                [
+                    "https://www.omg.org/spec/Commons/PartiesAndSituations/isPlayedBy",
+                    "http://www.w3.org/2002/07/owl#onClass",
+                    "https://www.omg.org/spec/Commons/PartiesAndSituations/Party",
+                    "http://www.w3.org/2002/07/owl#qualifiedCardinality",
+                    "1"
+                ]
+            ]
+        ],
+        "right and not left": [
+            [
+                "http://www.w3.org/2004/02/skos/core#note",
+                "Note that there may be cases whre the identity of the party playing the role is not known, as well as cases where in some situation, such as ownership, there may be more than one party playing the role of owner."
+            ],
+            [
+                "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+                [
+                    "https://www.omg.org/spec/Commons/PartiesAndSituations/isPlayedBy",
+                    "http://www.w3.org/2002/07/owl#onClass",
+                    "https://www.omg.org/spec/Commons/PartiesAndSituations/Party",
+                    "http://www.w3.org/2002/07/owl#minQualifiedCardinality",
+                    "0"
+                ]
+            ]
+        ],
+        "both right and left": [
+            [
+                "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+                [
+                    "https://www.omg.org/spec/Commons/ContextualDesignators/hasApplicablePeriod",
+                    "http://www.w3.org/2002/07/owl#onClass",
+                    "https://www.omg.org/spec/Commons/DatesAndTimes/DatePeriod",
+                    "http://www.w3.org/2002/07/owl#minQualifiedCardinality",
+                    "0"
+                ]
+            ],
+            [
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                "http://www.w3.org/2002/07/owl#Class"
+            ],
+            [
+                "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+                "https://www.omg.org/spec/Commons/PartiesAndSituations/AgentRole"
+            ],
+            [
+                "http://www.w3.org/2000/01/rdf-schema#label",
+                "party role"
+            ],
+            [
+                "http://www.w3.org/2004/02/skos/core#example",
+                "Examples include organization member, employee, issuer, owner, partner in a partnership, shareholder, and so forth."
+            ],
+            [
+                "http://www.w3.org/2004/02/skos/core#scopeNote",
+                "The concept of a party role is used in contexts in which one would call someone a 'party to something', such as party to a contract or to a transaction, a supplier, buyer, customer, student, employee, and so forth. More specific roles such as those that are performed in the context of some activity or process are actors in that situation."
+            ],
+            [
+                "http://www.w3.org/2004/02/skos/core#definition",
+                "agent role that is played by person or organization, that typically holds for some period of time"
+            ]
+        ]
+    }
+]

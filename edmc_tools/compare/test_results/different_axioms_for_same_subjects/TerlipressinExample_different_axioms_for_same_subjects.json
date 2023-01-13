@@ -1,0 +1,1083 @@
+[
+    {
+        "subject": "https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/TerlipressinExample/UNII-4U092XZF0K",
+        "left and not right": [],
+        "right and not left": [
+            [
+                "https://www.omg.org/spec/Commons/RegistrationAuthorities/isRegisteredIn",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-RegistrationAuthorities/GlobalSubstanceRegistrationSystem"
+            ]
+        ],
+        "both right and left": [
+            [
+                "https://www.omg.org/spec/Commons/RegistrationAuthorities/isRegisteredBy",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-RegistrationAuthorities/FoodAndDrugAdministrationRegistrationAuthority"
+            ],
+            [
+                "https://www.omg.org/spec/Commons/Identifiers/identifies",
+                "https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/TerlipressinExample/TerlipressinAcetate"
+            ],
+            [
+                "https://www.omg.org/spec/Commons/TextDatatype/hasTextValue",
+                "4U092XZF0K"
+            ],
+            [
+                "http://purl.org/dc/terms/source",
+                "https://precision.fda.gov/uniisearch/srs/unii/4U092XZF0K"
+            ],
+            [
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                "http://www.w3.org/2002/07/owl#NamedIndividual"
+            ],
+            [
+                "https://www.omg.org/spec/Commons/Identifiers/identifies",
+                "https://gsrs.ncats.nih.gov/api/v1/substances/4U092XZF0K"
+            ],
+            [
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-RegistrationAuthorities/UniqueIngredientNumber"
+            ],
+            [
+                "http://www.w3.org/2000/01/rdf-schema#label",
+                "4U092XZF0K"
+            ]
+        ]
+    },
+    {
+        "subject": "https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/TerlipressinExample/UNII-7Z5X49W53P",
+        "left and not right": [],
+        "right and not left": [
+            [
+                "https://www.omg.org/spec/Commons/RegistrationAuthorities/isRegisteredIn",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-RegistrationAuthorities/GlobalSubstanceRegistrationSystem"
+            ]
+        ],
+        "both right and left": [
+            [
+                "https://www.omg.org/spec/Commons/RegistrationAuthorities/isRegisteredBy",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-RegistrationAuthorities/FoodAndDrugAdministrationRegistrationAuthority"
+            ],
+            [
+                "http://purl.org/dc/terms/source",
+                "https://precision.fda.gov/uniisearch/srs/unii/7Z5X49W53P"
+            ],
+            [
+                "http://www.w3.org/2000/01/rdf-schema#label",
+                "7Z5X49W53P"
+            ],
+            [
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                "http://www.w3.org/2002/07/owl#NamedIndividual"
+            ],
+            [
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-RegistrationAuthorities/UniqueIngredientNumber"
+            ],
+            [
+                "https://www.omg.org/spec/Commons/Identifiers/identifies",
+                "https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/TerlipressinExample/Terlipressin"
+            ],
+            [
+                "https://www.omg.org/spec/Commons/Identifiers/identifies",
+                "https://gsrs.ncats.nih.gov/api/v1/substances/7Z5X49W53P"
+            ],
+            [
+                "https://www.omg.org/spec/Commons/TextDatatype/hasTextValue",
+                "7Z5X49W53P"
+            ]
+        ]
+    },
+    {
+        "subject": "https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/TerlipressinExample/Terlipressin",
+        "left and not right": [],
+        "right and not left": [
+            [
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/hasMolecularFormulaByMoiety",
+                "C52H75O15N16S2"
+            ],
+            [
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/hasMolecularWeight",
+                "https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/TerlipressinExample/TerlipressinMolecularWeight"
+            ],
+            [
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/hasMolecularFormula",
+                "C52H75O15N16S2"
+            ]
+        ],
+        "both right and left": [
+            [
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/Moiety"
+            ],
+            [
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                "http://www.w3.org/2002/07/owl#NamedIndividual"
+            ],
+            [
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/hasStructure",
+                "https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/TerlipressinExample/TerlipressinMolecularStructure"
+            ],
+            [
+                "http://www.w3.org/2004/02/skos/core#note",
+                "Terlipressin is currently not available in the United States, or Canada, but it is available in New Zealand, Australia, much of Europe, India, Pakistan and UAE."
+            ],
+            [
+                "http://www.w3.org/2004/02/skos/core#definition",
+                "protein that is an analogue of vasopressin used as a vasoactive drug in the management of low blood pressure"
+            ],
+            [
+                "http://www.w3.org/2000/01/rdf-schema#label",
+                "terlipressin"
+            ],
+            [
+                "http://www.w3.org/2004/02/skos/core#note",
+                "It has been found to be effective when norepinephrine does not help. Indications for use include norepinephrine-resistant septic shock and hepatorenal syndrome. In addition, it is used to treat bleeding esophageal varices."
+            ],
+            [
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/isActiveMoietyOf",
+                "https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/TerlipressinExample/TerlipressinAcetate"
+            ],
+            [
+                "http://purl.org/dc/terms/source",
+                "https://chem.nlm.nih.gov/chemidplus/rn/14636-12-5"
+            ],
+            [
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/ChemicalSubstance"
+            ]
+        ]
+    },
+    {
+        "subject": "https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/TerlipressinExample/TerlipressinMolecularStructure",
+        "left and not right": [
+            [
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/hasMolecularFormulaByMoiety",
+                "C52H75O15N16S2"
+            ],
+            [
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/hasMolecularWeight",
+                "https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/TerlipressinExample/TerlipressinMolecularWeight"
+            ],
+            [
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/hasMolecularFormula",
+                "C52H75O15N16S2"
+            ]
+        ],
+        "right and not left": [],
+        "both right and left": [
+            [
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                "http://www.w3.org/2002/07/owl#NamedIndividual"
+            ],
+            [
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/MolecularStructure"
+            ],
+            [
+                "http://www.w3.org/2000/01/rdf-schema#label",
+                "terlipressin molecular structure"
+            ],
+            [
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/hasSimplifiedMolecularInputLineEntrySpecification",
+                "O=C(N)CNC(=O)[C@@H](NC(=O)[C@H]4N(C(=O)[C@H]1NC(=O)[C@@H](NC(=O)[C@@H](NC(=O)[C@@H](NC(=O)[C@@H](NC(=O)[C@@H](NC(=O)CNC(=O)CNC(=O)CN)CSSC1)Cc2ccc(O)cc2)Cc3ccccc3)CCC(=O)N)CC(=O)N)CCC4)CCCCN"
+            ]
+        ]
+    },
+    {
+        "subject": "https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/TerlipressinExample/TerlipressinCommonName",
+        "left and not right": [
+            [
+                "https://www.omg.org/spec/Commons/RegistrationAuthorities/isRegisteredIn",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-RegistrationAuthorities/GlobalSubstanceRegistrySystem"
+            ],
+            [
+                "https://www.omg.org/spec/Commons/ContextualDesignators/isApplicableIn",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-RegistrationAuthorities/EuropeanUnionJurisdiction"
+            ],
+            [
+                "https://www.omg.org/spec/Commons/RegistrationAuthorities/isRegisteredBy",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-RegistrationAuthorities/EuropeanMedicinesAgencyRegistrationAuthority"
+            ],
+            [
+                "https://www.omg.org/spec/Commons/RegistrationAuthorities/isRegisteredIn",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-RegistrationAuthorities/SummaryOfProductCharacteristics"
+            ]
+        ],
+        "right and not left": [
+            [
+                "https://www.omg.org/spec/Commons/ContextualDesignators/isApplicableIn",
+                "https://www.omg.org/spec/Commons/EuropeanJurisdiction/EUGovernmentEntitiesAndJurisdictions/EuropeanUnionJurisdiction"
+            ],
+            [
+                "https://www.omg.org/spec/Commons/RegistrationAuthorities/isRegisteredBy",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/EuropeanJurisdiction/EuropeanRegistrationAuthorities/EuropeanMedicinesAgencyRegistrationAuthority"
+            ],
+            [
+                "https://www.omg.org/spec/Commons/RegistrationAuthorities/isRegisteredIn",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/EuropeanJurisdiction/EuropeanRegistrationAuthorities/SummaryOfProductCharacteristics"
+            ],
+            [
+                "https://www.omg.org/spec/Commons/RegistrationAuthorities/isRegisteredIn",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-RegistrationAuthorities/GlobalSubstanceRegistrationSystem"
+            ]
+        ],
+        "both right and left": [
+            [
+                "http://www.w3.org/2000/01/rdf-schema#label",
+                "terlipressin common name"
+            ],
+            [
+                "https://www.omg.org/spec/Commons/RegistrationAuthorities/isRegisteredBy",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-RegistrationAuthorities/FoodAndDrugAdministrationRegistrationAuthority"
+            ],
+            [
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/hasSubstanceNameValue",
+                "Terlipressin [INN]"
+            ],
+            [
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                "http://www.w3.org/2002/07/owl#NamedIndividual"
+            ],
+            [
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/hasSubstanceNameType",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/SubstanceNameClassifier-CommonName"
+            ],
+            [
+                "https://www.omg.org/spec/Commons/Designators/isNameOf",
+                "https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/TerlipressinExample/Terlipressin"
+            ],
+            [
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-RegistrationAuthorities/InternationalNonproprietaryName"
+            ],
+            [
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO21090-HarmonizedDatatypes/hasLanguageCode",
+                "https://www.omg.org/spec/LCC/Languages/ISO639-1-LanguageCodes/en"
+            ],
+            [
+                "https://www.omg.org/spec/Commons/ContextualDesignators/isApplicableIn",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-RegistrationAuthorities/RegulatoryContext-FoodAndDrugAdministrationGeneral"
+            ]
+        ]
+    },
+    {
+        "subject": "https://chem.nlm.nih.gov/chemidplus/rn/14636-12-5",
+        "left and not right": [],
+        "right and not left": [
+            [
+                "https://www.omg.org/spec/Commons/RegistrationAuthorities/isRegisteredIn",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-RegistrationAuthorities/AnatomicalTherapeuticChemicalClassificationSystem"
+            ]
+        ],
+        "both right and left": [
+            [
+                "https://www.omg.org/spec/Commons/RegistrationAuthorities/isRegisteredBy",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-RegistrationAuthorities/AmericanChemicalSocietyRegistrationAuthority"
+            ],
+            [
+                "https://www.omg.org/spec/Commons/TextDatatype/hasTextValue",
+                "14636-12-5"
+            ],
+            [
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                "http://www.w3.org/2002/07/owl#NamedIndividual"
+            ],
+            [
+                "https://www.omg.org/spec/Commons/Identifiers/identifies",
+                "https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/TerlipressinExample/Terlipressin"
+            ],
+            [
+                "http://www.w3.org/2000/01/rdf-schema#label",
+                "14636-12-5"
+            ],
+            [
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-RegistrationAuthorities/CASRegistryNumber"
+            ]
+        ]
+    },
+    {
+        "subject": "https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/TerlipressinExample/TerlipressinAcetateConstituency",
+        "left and not right": [
+            [
+                "https://www.omg.org/spec/Commons/ContextualDesignators/isApplicableIn",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-RegistrationAuthorities/EuropeanUnionJurisdiction"
+            ]
+        ],
+        "right and not left": [
+            [
+                "https://www.omg.org/spec/Commons/ContextualDesignators/isApplicableIn",
+                "https://www.omg.org/spec/Commons/EuropeanJurisdiction/EUGovernmentEntitiesAndJurisdictions/EuropeanUnionJurisdiction"
+            ]
+        ],
+        "both right and left": [
+            [
+                "https://www.omg.org/spec/Commons/Designators/defines",
+                "https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/TerlipressinExample/TerlipressinAcetate"
+            ],
+            [
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                "http://www.w3.org/2002/07/owl#NamedIndividual"
+            ],
+            [
+                "https://www.omg.org/spec/Commons/PartiesAndSituations/hasRole",
+                "https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/TerlipressinExample/TerlipressinAsActiveMoiety"
+            ],
+            [
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/SubstanceConstituency"
+            ],
+            [
+                "http://www.w3.org/2000/01/rdf-schema#label",
+                "terlipressin acetate constituency"
+            ]
+        ]
+    },
+    {
+        "subject": "https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/TerlipressinExample/TerlipressinAcetateSUN0.12MgPerMlSolutionForInjectionConstituency",
+        "left and not right": [
+            [
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/hasIngredientRole",
+                "https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/TerlipressinExample/TerlipressinAsReferenceStrengthInTerlipressinAcetate1MgPerAmpouleSolutionForInjection"
+            ]
+        ],
+        "right and not left": [
+            [
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/hasIngredient",
+                "https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/TerlipressinExample/TerlipressinAsReferenceStrengthInTerlipressinAcetate1MgPerAmpouleSolutionForInjection"
+            ]
+        ],
+        "both right and left": [
+            [
+                "http://www.w3.org/2000/01/rdf-schema#label",
+                "terlipressin acetate SUN 0.12 mg/ml solution for injection constituency"
+            ],
+            [
+                "https://www.omg.org/spec/Commons/RegulatoryAgencies/isApplicableInJurisdiction",
+                "https://www.omg.org/spec/LCC/Countries/ISO3166-1-CountryCodes/UnitedKingdomOfGreatBritainAndNorthernIreland"
+            ],
+            [
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/ProductConstituency"
+            ],
+            [
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                "http://www.w3.org/2002/07/owl#NamedIndividual"
+            ],
+            [
+                "https://www.omg.org/spec/Commons/Designators/defines",
+                "https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/TerlipressinExample/TerlipressinAcetateSUN0.12MgPerMlSolutionForInjection"
+            ]
+        ]
+    },
+    {
+        "subject": "https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/TerlipressinExample/TerlipressinAcetateSUNConstituency",
+        "left and not right": [
+            [
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/hasActiveIngredientRole",
+                "https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/TerlipressinExample/TerlipressinAcetateAsActiveIngredientInTerlipressinAcetateSUN"
+            ]
+        ],
+        "right and not left": [
+            [
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/hasActiveIngredient",
+                "https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/TerlipressinExample/TerlipressinAcetateAsActiveIngredientInTerlipressinAcetateSUN"
+            ]
+        ],
+        "both right and left": [
+            [
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/ProductConstituency"
+            ],
+            [
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                "http://www.w3.org/2002/07/owl#NamedIndividual"
+            ],
+            [
+                "http://www.w3.org/2000/01/rdf-schema#label",
+                "terlipressin acetate SUN constituency"
+            ],
+            [
+                "https://www.omg.org/spec/Commons/Designators/defines",
+                "https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/TerlipressinExample/TerlipressinAcetateSUN"
+            ]
+        ]
+    },
+    {
+        "subject": "https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/TerlipressinExample/TerlipressinOfficialName",
+        "left and not right": [
+            [
+                "https://www.omg.org/spec/Commons/RegistrationAuthorities/isRegisteredIn",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-RegistrationAuthorities/GlobalSubstanceRegistrySystem"
+            ],
+            [
+                "https://www.omg.org/spec/Commons/ContextualDesignators/isApplicableIn",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-RegistrationAuthorities/EuropeanUnionJurisdiction"
+            ],
+            [
+                "https://www.omg.org/spec/Commons/RegistrationAuthorities/isRegisteredBy",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-RegistrationAuthorities/EuropeanMedicinesAgencyRegistrationAuthority"
+            ],
+            [
+                "https://www.omg.org/spec/Commons/RegistrationAuthorities/isRegisteredIn",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-RegistrationAuthorities/SummaryOfProductCharacteristics"
+            ]
+        ],
+        "right and not left": [
+            [
+                "https://www.omg.org/spec/Commons/ContextualDesignators/isApplicableIn",
+                "https://www.omg.org/spec/Commons/EuropeanJurisdiction/EUGovernmentEntitiesAndJurisdictions/EuropeanUnionJurisdiction"
+            ],
+            [
+                "https://www.omg.org/spec/Commons/RegistrationAuthorities/isRegisteredBy",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/EuropeanJurisdiction/EuropeanRegistrationAuthorities/EuropeanMedicinesAgencyRegistrationAuthority"
+            ],
+            [
+                "https://www.omg.org/spec/Commons/RegistrationAuthorities/isRegisteredIn",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/EuropeanJurisdiction/EuropeanRegistrationAuthorities/SummaryOfProductCharacteristics"
+            ],
+            [
+                "https://www.omg.org/spec/Commons/RegistrationAuthorities/isRegisteredIn",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-RegistrationAuthorities/GlobalSubstanceRegistrationSystem"
+            ]
+        ],
+        "both right and left": [
+            [
+                "https://www.omg.org/spec/Commons/RegistrationAuthorities/isRegisteredBy",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-RegistrationAuthorities/FoodAndDrugAdministrationRegistrationAuthority"
+            ],
+            [
+                "http://www.w3.org/2000/01/rdf-schema#label",
+                "terlipressin official name"
+            ],
+            [
+                "https://www.omg.org/spec/Commons/Classifiers/isClassifiedBy",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/OfficialNameStatus-Current"
+            ],
+            [
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                "http://www.w3.org/2002/07/owl#NamedIndividual"
+            ],
+            [
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/hasSubstanceNameValue",
+                "terlipressin"
+            ],
+            [
+                "https://www.omg.org/spec/Commons/Designators/isNameOf",
+                "https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/TerlipressinExample/Terlipressin"
+            ],
+            [
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/hasSubstanceNameType",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/SubstanceNameClassifier-OfficialName"
+            ],
+            [
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-RegistrationAuthorities/InternationalNonproprietaryName"
+            ],
+            [
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO21090-HarmonizedDatatypes/hasLanguageCode",
+                "https://www.omg.org/spec/LCC/Languages/ISO639-1-LanguageCodes/en"
+            ],
+            [
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/OfficialName"
+            ],
+            [
+                "https://www.omg.org/spec/Commons/ContextualDesignators/isApplicableIn",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-RegistrationAuthorities/RegulatoryContext-FoodAndDrugAdministrationGeneral"
+            ]
+        ]
+    },
+    {
+        "subject": "https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/TerlipressinExample/TerlipressinAcetateMolecularStructure",
+        "left and not right": [
+            [
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/hasMolecularFormulaByMoiety",
+                "C52H74N16O15S2.2C2H4O2.5H2O"
+            ],
+            [
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/hasMolecularWeight",
+                "https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/TerlipressinExample/TerlipressinAcetateMolecularWeight"
+            ],
+            [
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/hasMolecularFormula",
+                "C56H92N16O24S2"
+            ]
+        ],
+        "right and not left": [],
+        "both right and left": [
+            [
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                "http://www.w3.org/2002/07/owl#NamedIndividual"
+            ],
+            [
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/MolecularStructure"
+            ],
+            [
+                "http://www.w3.org/2000/01/rdf-schema#label",
+                "terlipressin acetate molecular structure"
+            ],
+            [
+                "http://www.w3.org/2000/01/rdf-schema#seeAlso",
+                "https://go.drugbank.com/salts/DBSALT002332"
+            ]
+        ]
+    },
+    {
+        "subject": "https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/TerlipressinExample/TerlipressinAcetateAsActiveIngredientInTerlipressinAcetateSUN",
+        "left and not right": [
+            [
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/ActiveIngredientRole"
+            ]
+        ],
+        "right and not left": [
+            [
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/ActiveIngredient"
+            ]
+        ],
+        "both right and left": [
+            [
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/hasStrength",
+                "https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/TerlipressinExample/TerlipressinAcetatePresentationStrengthInTerlipressinAcetateSUN1MgPerAmpouleSolutionForInjection"
+            ],
+            [
+                "https://www.omg.org/spec/Commons/PartiesAndSituations/isRealizedIn",
+                "https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/TerlipressinExample/TerlipressinAcetateSUNConstituency"
+            ],
+            [
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                "http://www.w3.org/2002/07/owl#NamedIndividual"
+            ],
+            [
+                "https://www.omg.org/spec/Commons/PartiesAndSituations/isPlayedBy",
+                "https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/TerlipressinExample/TerlipressinAcetate"
+            ],
+            [
+                "http://www.w3.org/2000/01/rdf-schema#label",
+                "terlipressin acetate as active ingredient in terlipressin acetate SUN"
+            ],
+            [
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/hasBasisOfStrengthAsManufactured",
+                "https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/TerlipressinExample/TerlipressinAcetateStrengthAsManufacturedInTerlipressinAcetate1MgPerAmpouleSolutionForInjection"
+            ],
+            [
+                "http://www.w3.org/2004/02/skos/core#definition",
+                "terlipressin acetate in the role of an active ingredient in terlipressin acetate SUN solution for injection"
+            ]
+        ]
+    },
+    {
+        "subject": "https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/TerlipressinExample/",
+        "left and not right": [
+            [
+                "http://www.w3.org/2002/07/owl#versionIRI",
+                "https://spec.pistoiaalliance.org/idmp/ontology/EXT/20220901/Examples/TerlipressinExample/"
+            ]
+        ],
+        "right and not left": [
+            [
+                "http://www.w3.org/2002/07/owl#versionIRI",
+                "https://spec.pistoiaalliance.org/idmp/ontology/EXT/20221201/Examples/TerlipressinExample/"
+            ],
+            [
+                "http://www.w3.org/2002/07/owl#imports",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/EuropeanJurisdiction/EuropeanRegulatoryAgencies/"
+            ],
+            [
+                "http://www.w3.org/2002/07/owl#imports",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/EuropeanJurisdiction/EuropeanRegistrationAuthorities/"
+            ],
+            [
+                "http://www.w3.org/2002/07/owl#imports",
+                "https://www.omg.org/spec/Commons/Organizations/"
+            ],
+            [
+                "http://www.w3.org/2002/07/owl#imports",
+                "https://www.omg.org/spec/Commons/EuropeanJurisdiction/EUGovernmentEntitiesAndJurisdictions/"
+            ]
+        ],
+        "both right and left": [
+            [
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                "http://www.w3.org/2002/07/owl#Ontology"
+            ],
+            [
+                "http://www.w3.org/2002/07/owl#imports",
+                "https://www.omg.org/spec/Commons/Documents/"
+            ],
+            [
+                "http://www.w3.org/2002/07/owl#imports",
+                "https://www.omg.org/spec/Commons/AnnotationVocabulary/"
+            ],
+            [
+                "http://www.w3.org/2002/07/owl#imports",
+                "https://www.omg.org/spec/Commons/Designators/"
+            ],
+            [
+                "http://www.w3.org/2002/07/owl#imports",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO21090-HarmonizedDatatypes/"
+            ],
+            [
+                "http://www.w3.org/2002/07/owl#imports",
+                "https://www.omg.org/spec/Commons/ProductsAndServices/"
+            ],
+            [
+                "http://www.w3.org/2002/07/owl#imports",
+                "https://www.omg.org/spec/Commons/Collections/"
+            ],
+            [
+                "http://www.w3.org/2002/07/owl#imports",
+                "https://www.omg.org/spec/Commons/ContextualDesignators/"
+            ],
+            [
+                "https://www.omg.org/spec/Commons/AnnotationVocabulary/copyright",
+                "Copyright (c) 2022 EDM Council, Inc."
+            ],
+            [
+                "http://www.w3.org/2002/07/owl#imports",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/"
+            ],
+            [
+                "http://www.w3.org/2002/07/owl#imports",
+                "https://www.omg.org/spec/Commons/QuantitiesAndUnits/"
+            ],
+            [
+                "http://www.w3.org/2002/07/owl#imports",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/"
+            ],
+            [
+                "http://www.w3.org/2002/07/owl#imports",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-RegistrationAuthorities/"
+            ],
+            [
+                "https://www.omg.org/spec/Commons/AnnotationVocabulary/copyright",
+                "Copyright (c) 2022 Pistoia Alliance, Inc."
+            ],
+            [
+                "http://www.w3.org/2002/07/owl#imports",
+                "https://www.omg.org/spec/Commons/TextDatatype/"
+            ],
+            [
+                "http://www.w3.org/2002/07/owl#imports",
+                "https://www.omg.org/spec/LCC/Countries/ISO3166-1-CountryCodes/"
+            ],
+            [
+                "http://www.w3.org/2002/07/owl#imports",
+                "https://spec.pistoiaalliance.org/idmp/ontology/EXT/Extensions/UnifiedCodeForUnitsOfMeasure/"
+            ],
+            [
+                "http://www.w3.org/2000/01/rdf-schema#label",
+                "Terlipressin Example Ontology"
+            ],
+            [
+                "https://spec.pistoiaalliance.org/idmp/ontology/META/ChangeManagement/hasMaturityLevel",
+                "https://spec.pistoiaalliance.org/idmp/ontology/META/ChangeManagement/Informative"
+            ],
+            [
+                "http://www.w3.org/2002/07/owl#imports",
+                "https://www.omg.org/spec/Commons/PartiesAndSituations/"
+            ],
+            [
+                "http://purl.org/dc/terms/abstract",
+                "This ontology provides an example for some of the data related to the substance, terlipressin and products that include it, to demonstrate substance and basis of strength representation with respect to jurisdiction-specific variations."
+            ],
+            [
+                "http://www.w3.org/2002/07/owl#imports",
+                "https://www.omg.org/spec/Commons/Classifiers/"
+            ],
+            [
+                "http://www.w3.org/2002/07/owl#imports",
+                "https://www.omg.org/spec/LCC/Countries/CountryRepresentation/"
+            ],
+            [
+                "http://www.w3.org/2002/07/owl#imports",
+                "https://spec.pistoiaalliance.org/idmp/ontology/META/ChangeManagement/"
+            ],
+            [
+                "http://www.w3.org/2002/07/owl#imports",
+                "https://www.omg.org/spec/Commons/RegistrationAuthorities/"
+            ],
+            [
+                "http://www.w3.org/2002/07/owl#imports",
+                "https://www.omg.org/spec/LCC/Languages/ISO639-1-LanguageCodes/"
+            ],
+            [
+                "http://www.w3.org/2002/07/owl#imports",
+                "https://www.omg.org/spec/LCC/Languages/LanguageRepresentation/"
+            ],
+            [
+                "http://purl.org/dc/terms/license",
+                "http://opensource.org/licenses/MIT"
+            ],
+            [
+                "http://www.w3.org/2002/07/owl#imports",
+                "https://www.omg.org/spec/Commons/RegulatoryAgencies/"
+            ],
+            [
+                "http://www.w3.org/2002/07/owl#imports",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11240-UnitsOfMeasurement/"
+            ],
+            [
+                "http://www.w3.org/2002/07/owl#imports",
+                "https://www.omg.org/spec/Commons/Identifiers/"
+            ]
+        ]
+    },
+    {
+        "subject": "https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/TerlipressinExample/TerlipressinAcetate",
+        "left and not right": [],
+        "right and not left": [
+            [
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/hasMolecularFormulaByMoiety",
+                "C52H74N16O15S2.2C2H4O2.5H2O"
+            ],
+            [
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/hasMolecularWeight",
+                "https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/TerlipressinExample/TerlipressinAcetateMolecularWeight"
+            ],
+            [
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/hasMolecularFormula",
+                "C56H92N16O24S2"
+            ]
+        ],
+        "both right and left": [
+            [
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/hasActiveMoiety",
+                "https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/TerlipressinExample/Terlipressin"
+            ],
+            [
+                "http://www.w3.org/2004/02/skos/core#note",
+                "Synonyms for terlipressin acetate include Gly-Gly-Gly-Cys-Tyr-Phe-Gln-Asn-Cys-Pro-Lys-Gly-Nh2 (4-9 Disulfide) Acetate, and as N-(N-(N-Glycylglycyl)Glycyl)-8-L-Lysinevasopressin Acetate."
+            ],
+            [
+                "http://www.w3.org/2004/02/skos/core#definition",
+                "analogue of vasopressin used as a vasoactive for proteomics research"
+            ],
+            [
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                "http://www.w3.org/2002/07/owl#NamedIndividual"
+            ],
+            [
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/hasStructure",
+                "https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/TerlipressinExample/TerlipressinAcetateMolecularStructure"
+            ],
+            [
+                "http://www.w3.org/2000/01/rdf-schema#label",
+                "terlipressin acetate"
+            ],
+            [
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/Salt"
+            ],
+            [
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/ChemicalSubstance"
+            ]
+        ]
+    },
+    {
+        "subject": "https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/TerlipressinExample/TerlipressinAcetateCommonName",
+        "left and not right": [
+            [
+                "https://www.omg.org/spec/Commons/RegistrationAuthorities/isRegisteredIn",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-RegistrationAuthorities/GlobalSubstanceRegistrySystem"
+            ],
+            [
+                "https://www.omg.org/spec/Commons/ContextualDesignators/isApplicableIn",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-RegistrationAuthorities/EuropeanUnionJurisdiction"
+            ],
+            [
+                "https://www.omg.org/spec/Commons/RegistrationAuthorities/isRegisteredBy",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-RegistrationAuthorities/EuropeanMedicinesAgencyRegistrationAuthority"
+            ],
+            [
+                "https://www.omg.org/spec/Commons/RegistrationAuthorities/isRegisteredIn",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-RegistrationAuthorities/SummaryOfProductCharacteristics"
+            ]
+        ],
+        "right and not left": [
+            [
+                "https://www.omg.org/spec/Commons/ContextualDesignators/isApplicableIn",
+                "https://www.omg.org/spec/Commons/EuropeanJurisdiction/EUGovernmentEntitiesAndJurisdictions/EuropeanUnionJurisdiction"
+            ],
+            [
+                "https://www.omg.org/spec/Commons/RegistrationAuthorities/isRegisteredBy",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/EuropeanJurisdiction/EuropeanRegistrationAuthorities/EuropeanMedicinesAgencyRegistrationAuthority"
+            ],
+            [
+                "https://www.omg.org/spec/Commons/RegistrationAuthorities/isRegisteredIn",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/EuropeanJurisdiction/EuropeanRegistrationAuthorities/SummaryOfProductCharacteristics"
+            ],
+            [
+                "https://www.omg.org/spec/Commons/RegistrationAuthorities/isRegisteredIn",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-RegistrationAuthorities/GlobalSubstanceRegistrationSystem"
+            ]
+        ],
+        "both right and left": [
+            [
+                "https://www.omg.org/spec/Commons/RegistrationAuthorities/isRegisteredBy",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-RegistrationAuthorities/FoodAndDrugAdministrationRegistrationAuthority"
+            ],
+            [
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                "http://www.w3.org/2002/07/owl#NamedIndividual"
+            ],
+            [
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/hasSubstanceNameType",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/SubstanceNameClassifier-CommonName"
+            ],
+            [
+                "http://www.w3.org/2000/01/rdf-schema#label",
+                "terlipressin acetate common name"
+            ],
+            [
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/hasSubstanceNameValue",
+                "terlipressin diacetate pentahydrate"
+            ],
+            [
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO21090-HarmonizedDatatypes/hasLanguageCode",
+                "https://www.omg.org/spec/LCC/Languages/ISO639-1-LanguageCodes/en"
+            ],
+            [
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-RegistrationAuthorities/InternationalNonproprietaryName"
+            ],
+            [
+                "https://www.omg.org/spec/Commons/Designators/isNameOf",
+                "https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/TerlipressinExample/TerlipressinAcetate"
+            ],
+            [
+                "https://www.omg.org/spec/Commons/ContextualDesignators/isApplicableIn",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-RegistrationAuthorities/RegulatoryContext-FoodAndDrugAdministrationGeneral"
+            ]
+        ]
+    },
+    {
+        "subject": "https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/TerlipressinExample/TerlipressinAcetatePreferredName",
+        "left and not right": [
+            [
+                "https://www.omg.org/spec/Commons/RegistrationAuthorities/isRegisteredIn",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-RegistrationAuthorities/GlobalSubstanceRegistrySystem"
+            ],
+            [
+                "https://www.omg.org/spec/Commons/ContextualDesignators/isApplicableIn",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-RegistrationAuthorities/EuropeanUnionJurisdiction"
+            ],
+            [
+                "https://www.omg.org/spec/Commons/RegistrationAuthorities/isRegisteredBy",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-RegistrationAuthorities/EuropeanMedicinesAgencyRegistrationAuthority"
+            ],
+            [
+                "https://www.omg.org/spec/Commons/RegistrationAuthorities/isRegisteredIn",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-RegistrationAuthorities/SummaryOfProductCharacteristics"
+            ]
+        ],
+        "right and not left": [
+            [
+                "https://www.omg.org/spec/Commons/ContextualDesignators/isApplicableIn",
+                "https://www.omg.org/spec/Commons/EuropeanJurisdiction/EUGovernmentEntitiesAndJurisdictions/EuropeanUnionJurisdiction"
+            ],
+            [
+                "https://www.omg.org/spec/Commons/RegistrationAuthorities/isRegisteredBy",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/EuropeanJurisdiction/EuropeanRegistrationAuthorities/EuropeanMedicinesAgencyRegistrationAuthority"
+            ],
+            [
+                "https://www.omg.org/spec/Commons/RegistrationAuthorities/isRegisteredIn",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/EuropeanJurisdiction/EuropeanRegistrationAuthorities/SummaryOfProductCharacteristics"
+            ],
+            [
+                "https://www.omg.org/spec/Commons/RegistrationAuthorities/isRegisteredIn",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-RegistrationAuthorities/GlobalSubstanceRegistrationSystem"
+            ]
+        ],
+        "both right and left": [
+            [
+                "https://www.omg.org/spec/Commons/RegistrationAuthorities/isRegisteredBy",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-RegistrationAuthorities/FoodAndDrugAdministrationRegistrationAuthority"
+            ],
+            [
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/hasSubstanceNameType",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/SubstanceNameClassifier-PreferredName"
+            ],
+            [
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                "http://www.w3.org/2002/07/owl#NamedIndividual"
+            ],
+            [
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/hasSubstanceNameValue",
+                "terlipressin acetate"
+            ],
+            [
+                "http://www.w3.org/2000/01/rdf-schema#label",
+                "terlipressin acetate preferred name"
+            ],
+            [
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO21090-HarmonizedDatatypes/hasLanguageCode",
+                "https://www.omg.org/spec/LCC/Languages/ISO639-1-LanguageCodes/en"
+            ],
+            [
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-RegistrationAuthorities/InternationalNonproprietaryName"
+            ],
+            [
+                "https://www.omg.org/spec/Commons/Designators/isNameOf",
+                "https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/TerlipressinExample/TerlipressinAcetate"
+            ],
+            [
+                "https://www.omg.org/spec/Commons/ContextualDesignators/isApplicableIn",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-RegistrationAuthorities/RegulatoryContext-FoodAndDrugAdministrationGeneral"
+            ]
+        ]
+    },
+    {
+        "subject": "https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/TerlipressinExample/TerlipressinSUN0.1MgPerMlSolutionForInjectionConstituency",
+        "left and not right": [
+            [
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/hasIngredientRole",
+                "https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/TerlipressinExample/TerlipressinAsReferenceStrengthInTerlipressinAcetate1MgPerAmpouleSolutionForInjection"
+            ]
+        ],
+        "right and not left": [
+            [
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/hasIngredient",
+                "https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/TerlipressinExample/TerlipressinAsReferenceStrengthInTerlipressinAcetate1MgPerAmpouleSolutionForInjection"
+            ]
+        ],
+        "both right and left": [
+            [
+                "http://www.w3.org/2000/01/rdf-schema#label",
+                "terlipressin SUN 0.1 mg/ml solution for injection constituency"
+            ],
+            [
+                "https://www.omg.org/spec/Commons/Designators/defines",
+                "https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/TerlipressinExample/TerlipressinSUN0.1MgPerMlSolutionForInjection"
+            ],
+            [
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/ProductConstituency"
+            ],
+            [
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                "http://www.w3.org/2002/07/owl#NamedIndividual"
+            ],
+            [
+                "https://www.omg.org/spec/Commons/RegulatoryAgencies/isApplicableInJurisdiction",
+                "https://www.omg.org/spec/LCC/Countries/ISO3166-1-CountryCodes/Netherlands"
+            ],
+            [
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/hasReferenceSubstance",
+                "https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/TerlipressinExample/Terlipressin"
+            ]
+        ]
+    },
+    {
+        "subject": "https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/TerlipressinExample/TerlipressinSUN1MgSolutionForInjectionConstituency",
+        "left and not right": [
+            [
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/hasIngredientRole",
+                "https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/TerlipressinExample/TerlipressinAsReferenceStrengthInTerlipressinAcetate1MgPerAmpouleSolutionForInjection"
+            ]
+        ],
+        "right and not left": [
+            [
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/hasIngredient",
+                "https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/TerlipressinExample/TerlipressinAsReferenceStrengthInTerlipressinAcetate1MgPerAmpouleSolutionForInjection"
+            ]
+        ],
+        "both right and left": [
+            [
+                "https://www.omg.org/spec/Commons/Designators/defines",
+                "https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/TerlipressinExample/TerlipressinSUN1MgSolutionForInjection"
+            ],
+            [
+                "http://www.w3.org/2000/01/rdf-schema#label",
+                "terlipressin SUN 1 mg solution for injection constituency"
+            ],
+            [
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/ProductConstituency"
+            ],
+            [
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                "http://www.w3.org/2002/07/owl#NamedIndividual"
+            ],
+            [
+                "https://www.omg.org/spec/Commons/RegulatoryAgencies/isApplicableInJurisdiction",
+                "https://www.omg.org/spec/LCC/Countries/ISO3166-1-CountryCodes/Sweden"
+            ]
+        ]
+    },
+    {
+        "subject": "https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/TerlipressinExample/TerlipressinAsActiveMoiety",
+        "left and not right": [
+            [
+                "https://www.omg.org/spec/Commons/ContextualDesignators/isApplicableIn",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-RegistrationAuthorities/EuropeanUnionJurisdiction"
+            ]
+        ],
+        "right and not left": [
+            [
+                "https://www.omg.org/spec/Commons/ContextualDesignators/isApplicableIn",
+                "https://www.omg.org/spec/Commons/EuropeanJurisdiction/EUGovernmentEntitiesAndJurisdictions/EuropeanUnionJurisdiction"
+            ]
+        ],
+        "both right and left": [
+            [
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/ActiveMoietyRole"
+            ],
+            [
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                "http://www.w3.org/2002/07/owl#NamedIndividual"
+            ],
+            [
+                "https://www.omg.org/spec/Commons/PartiesAndSituations/isPlayedBy",
+                "https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/TerlipressinExample/Terlipressin"
+            ],
+            [
+                "http://www.w3.org/2004/02/skos/core#definition",
+                "terlipressin in the role of an active moiety"
+            ],
+            [
+                "http://www.w3.org/2000/01/rdf-schema#label",
+                "terlipressin as active moiety"
+            ],
+            [
+                "https://www.omg.org/spec/Commons/ContextualDesignators/isApplicableIn",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-RegistrationAuthorities/RegulatoryContext-FoodAndDrugAdministrationGeneral"
+            ]
+        ]
+    },
+    {
+        "subject": "https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/TerlipressinExample/GSKplc",
+        "left and not right": [
+            [
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                "https://www.omg.org/spec/Commons/PartiesAndSituations/Party"
+            ]
+        ],
+        "right and not left": [
+            [
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                "https://www.omg.org/spec/Commons/Organizations/LegalEntity"
+            ]
+        ],
+        "both right and left": [
+            [
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                "http://www.w3.org/2002/07/owl#NamedIndividual"
+            ],
+            [
+                "https://www.omg.org/spec/Commons/Designators/hasDescription",
+                "global biopharma company with the ambition and purpose to unite science, technology and talent to get ahead of disease together whose headquarters is located in Brentford, Middlesex, United Kingdom"
+            ],
+            [
+                "http://www.w3.org/2000/01/rdf-schema#label",
+                "GSK plc."
+            ]
+        ]
+    }
+]

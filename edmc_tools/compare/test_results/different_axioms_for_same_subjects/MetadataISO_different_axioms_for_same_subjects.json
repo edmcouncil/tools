@@ -1,0 +1,180 @@
+[
+    {
+        "subject": "https://spec.pistoiaalliance.org/idmp/ontology/ISO/MetadataISO/ISOModule",
+        "left and not right": [
+            [
+                "http://purl.org/dc/terms/abstract",
+                "The IDMP ISO Ontologies Library Module includes ontologies that correspond to the six primary ISO Identification of Medicinal Products (IDMP) standards. These ontologies have been developed for the Pistoia Alliance and their members, but will be made available as open source to anyone as the project matures. Reference individuals, such as for registries and registration authorities, are included in a separate ontology to enable testing without them as appropriate."
+            ]
+        ],
+        "right and not left": [
+            [
+                "http://purl.org/dc/terms/hasPart",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/EuropeanJurisdiction/EuropeanRegulatoryAgencies/"
+            ],
+            [
+                "http://purl.org/dc/terms/hasPart",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/EuropeanJurisdiction/SubstancesProductsOrganisationsReferentials/"
+            ],
+            [
+                "http://purl.org/dc/terms/hasPart",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/EuropeanJurisdiction/EuropeanRegistrationAuthorities/"
+            ],
+            [
+                "http://purl.org/dc/terms/abstract",
+                "The IDMP ISO Ontologies Library Module includes ontologies that correspond to the six primary ISO Identification of Medicinal Products (IDMP) standards, the related implementation guides, and regulatory agencies and registration authorities cited therein. The registration authorities and regulatory agencies are modularized by region, base on the divisions of the world specified in the United Nations M49 codes. This reference data can be loaded together with the main ontologies or not, depending on testing requirements. All of the ontologies provided in the IDMP ISO library and its jurisdiction-specific sub-libraries have been developed for the Pistoia Alliance and their members, but are also available as open source to anyone who chooses to use or extend them."
+            ]
+        ],
+        "both right and left": [
+            [
+                "http://purl.org/dc/terms/hasPart",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11616-PharmaceuticalProducts/"
+            ],
+            [
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                "http://www.w3.org/2002/07/owl#NamedIndividual"
+            ],
+            [
+                "http://purl.org/dc/terms/hasPart",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO21090-HarmonizedDatatypes/"
+            ],
+            [
+                "http://purl.org/dc/terms/hasPart",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-RegistrationAuthorities/"
+            ],
+            [
+                "http://www.w3.org/2000/01/rdf-schema#label",
+                "IDMP ISO Ontologies Library"
+            ],
+            [
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                "https://spec.pistoiaalliance.org/idmp/ontology/META/ChangeManagement/Module"
+            ],
+            [
+                "http://purl.org/dc/terms/hasPart",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/"
+            ],
+            [
+                "http://purl.org/dc/terms/hasPart",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/"
+            ],
+            [
+                "http://purl.org/dc/terms/hasPart",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11240-UnitsOfMeasurement/"
+            ],
+            [
+                "http://purl.org/dc/terms/license",
+                "http://opensource.org/licenses/MIT"
+            ],
+            [
+                "https://www.omg.org/spec/Commons/AnnotationVocabulary/copyright",
+                "Copyright (c) 2022 EDM Council, Inc."
+            ],
+            [
+                "https://www.omg.org/spec/Commons/AnnotationVocabulary/copyright",
+                "Copyright (c) 2022 Pistoia Alliance, Inc."
+            ],
+            [
+                "http://purl.org/dc/terms/hasPart",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11239-PharmaceuticalDoseForms/"
+            ]
+        ]
+    },
+    {
+        "subject": "https://spec.pistoiaalliance.org/idmp/ontology/ISO/MetadataISO/",
+        "left and not right": [
+            [
+                "http://purl.org/dc/terms/issued",
+                "2022-09-01T18:00:00"
+            ],
+            [
+                "http://www.w3.org/2002/07/owl#versionIRI",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/20220901/MetadataISO/"
+            ]
+        ],
+        "right and not left": [
+            [
+                "http://www.w3.org/2002/07/owl#imports",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/"
+            ],
+            [
+                "http://www.w3.org/2002/07/owl#imports",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11239-PharmaceuticalDoseForms/"
+            ],
+            [
+                "http://www.w3.org/2002/07/owl#imports",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/EuropeanJurisdiction/EuropeanRegulatoryAgencies/"
+            ],
+            [
+                "http://www.w3.org/2002/07/owl#imports",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/EuropeanJurisdiction/SubstancesProductsOrganisationsReferentials/"
+            ],
+            [
+                "http://www.w3.org/2002/07/owl#imports",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11616-PharmaceuticalProducts/"
+            ],
+            [
+                "http://www.w3.org/2002/07/owl#imports",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/EuropeanJurisdiction/EuropeanRegistrationAuthorities/"
+            ],
+            [
+                "http://www.w3.org/2002/07/owl#imports",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO21090-HarmonizedDatatypes/"
+            ],
+            [
+                "http://www.w3.org/2002/07/owl#imports",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-RegistrationAuthorities/"
+            ],
+            [
+                "http://purl.org/dc/terms/issued",
+                "2022-12-11T18:00:00"
+            ],
+            [
+                "http://www.w3.org/2002/07/owl#imports",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11240-UnitsOfMeasurement/"
+            ],
+            [
+                "http://www.w3.org/2002/07/owl#imports",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/"
+            ],
+            [
+                "http://www.w3.org/2002/07/owl#versionIRI",
+                "https://spec.pistoiaalliance.org/idmp/ontology/ISO/20221201/MetadataISO/"
+            ]
+        ],
+        "both right and left": [
+            [
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                "http://www.w3.org/2002/07/owl#Ontology"
+            ],
+            [
+                "http://www.w3.org/2002/07/owl#imports",
+                "https://spec.pistoiaalliance.org/idmp/ontology/META/ChangeManagement/"
+            ],
+            [
+                "https://www.omg.org/spec/Commons/AnnotationVocabulary/copyright",
+                "Copyright (c) 2022 EDM Council, Inc."
+            ],
+            [
+                "http://www.w3.org/2002/07/owl#imports",
+                "https://www.omg.org/spec/Commons/AnnotationVocabulary/"
+            ],
+            [
+                "http://www.w3.org/2000/01/rdf-schema#label",
+                "IDMP ISO Ontologies Library"
+            ],
+            [
+                "http://purl.org/dc/terms/license",
+                "http://opensource.org/licenses/MIT"
+            ],
+            [
+                "http://purl.org/dc/terms/abstract",
+                "The IDMP ISO Ontologies Library Module includes ontologies that correspond to the six primary ISO Identification of Medicinal Products (IDMP) standards. These ontologies have been developed for the Pistoia Alliance and their members, but will be made available as open source to anyone as the project matures. Reference individuals, such as for registries and registration authorities, are included in a separate ontology to enable testing without them as appropriate."
+            ],
+            [
+                "https://www.omg.org/spec/Commons/AnnotationVocabulary/copyright",
+                "Copyright (c) 2022 Pistoia Alliance, Inc."
+            ]
+        ]
+    }
+]

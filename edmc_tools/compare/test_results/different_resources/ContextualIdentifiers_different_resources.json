@@ -1,0 +1,13 @@
+[
+    {
+        "type": "http://www.w3.org/2002/07/owl#Class",
+        "left and not right": [],
+        "right and not left": [
+            "https://www.omg.org/spec/Commons/ContextualIdentifiers/ContextualIdentificationScheme"
+        ],
+        "both right and left": [
+            "https://www.omg.org/spec/Commons/ContextualIdentifiers/StructuredIdentifier",
+            "https://www.omg.org/spec/Commons/ContextualIdentifiers/ContextualIdentifier"
+        ]
+    }
+]
