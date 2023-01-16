@@ -53,7 +53,6 @@ def shacl_restriction(restriction: ShaclModelRestriction, shacled_ontology: Grap
 def shacl_cardinality_restriction(restriction: ShaclModelCardinalityRestriction, shacled_ontology: Graph, constraint: BNode) -> BNode:
     if isinstance(restriction.range, ShaclModelContainerClass):
         shacl_container_class(container_class=restriction.range, shacled_ontology=shacled_ontology, parent_component=constraint)
-        # shacled_ontology.add((constraint, URIRef(str(SH) + 'class'), owl_range))
     else:
         if isinstance(restriction.range, ShaclModelRestriction):
             shacl_restriction(restriction=restriction.range,shacled_ontology=shacled_ontology, shacl_component=constraint)
@@ -86,6 +85,8 @@ def shacl_container_class(container_class: ShaclModelContainerClass, shacled_ont
         shacl_complexity_type = URIRef(str(SH)+'or')
     if container_class.complexity_type == OWL.unionOf:
         shacl_complexity_type = URIRef(str(SH)+'or')
+    if container_class.complexity_type == OWL.complementOf:
+        shacl_complexity_type = URIRef(str(SH)+'not')
     if not shacl_complexity_type:
         print('Cannot process attribute', str(container_class))
     contained_owl_classes = list()
@@ -95,13 +96,7 @@ def shacl_container_class(container_class: ShaclModelContainerClass, shacled_ont
         else:
             contained_owl_class = shacl_entity
         contained_owl_classes.append(contained_owl_class.iri)
-        # shacl_contained_component = BNode()
-        # shacled_ontology.add((shacl_containing_component,shacl_complexity_type,shacled_contained_class.iri))
-        # if shacl_entity.is_datatype:
-        #     shacled_ontology.add((shacl_contained_component, URIRef(str(SH)+'datatype'), shacled_contained_class.iri))
-        # else:
-        #     shacled_ontology.add((constraint,  URIRef(str(SH)+'class'), shacled_contained_class.iri))
-
+        
     shacl_collection_node = BNode()
     Collection(shacled_ontology, shacl_collection_node, contained_owl_classes)
     shacled_ontology.add((parent_component,shacl_complexity_type,shacl_collection_node))
