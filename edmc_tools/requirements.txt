@@ -11,3 +11,4 @@ openpyxl
 wikibase_api
 ply
 pyshacl
+owlready2

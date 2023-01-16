@@ -22,9 +22,7 @@ def shacl() -> Graph:
 def shacl_class(data_model_class: ShaclModelIdentifiedClass, shacled_ontology: Graph):
     if len(data_model_class.attributes) > 0:
         owl_class = data_model_class.iri
-        owl_class_local_name = owl_class.fragment
-        owl_class_namespace = owl_class.replace(owl_class_local_name, str())
-        shacl_string_for_shape = owl_class_namespace + '/' + owl_class_local_name + 'Shape'
+        shacl_string_for_shape = str(owl_class) + 'Shape'
         shacl_shape_iri = URIRef(shacl_string_for_shape)
         
         shacled_ontology.add((shacl_shape_iri, RDF.type, SH.NodeShape))

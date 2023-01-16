@@ -69,7 +69,7 @@ def generate_attribute_from_owl_restriction(owl_restriction: Node, ontology: Gra
         owl_range = owl_ranges_onDatatype[0]
     if len(owl_ranges_hasValue) == 1:
         owl_range = owl_ranges_hasValue[0]
-        severity = ShaclSeverity.VIOLATION
+        severity = ShaclSeverity.WARNING
         create_value_attribute = True
     if len(owl_ranges_cardinality) == 1:
         cardinality = ShaclModelCardinality(min=owl_ranges_cardinality[0], max=owl_ranges_cardinality[0])
