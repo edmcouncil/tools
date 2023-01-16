@@ -1,4 +1,4 @@
-from rdflib import RDFS, Graph, URIRef, RDF, BNode, OWL, Bag
+from rdflib import RDFS, Graph, URIRef, RDF, BNode, OWL
 from rdflib import SH
 from rdflib.collection import Collection
 from rdflib.term import Literal, Node
@@ -88,14 +88,14 @@ def shacl_container_class(container_class: ShaclModelContainerClass, shacled_ont
     if not shacl_complexity_type:
         print('Cannot process attribute', str(container_class))
     contained_owl_classes = list()
+    shacl_collection_node = BNode()
     for shacl_entity in container_class.constituting_attributes:
         if isinstance(shacl_entity, ShaclModelContainerClass):
-            contained_owl_class = shacl_container_class(container_class=shacl_entity, shacled_ontology=shacled_ontology,parent_component=shacl_containing_component)
+            contained_owl_class = shacl_container_class(container_class=shacl_entity, shacled_ontology=shacled_ontology,parent_component=shacl_collection_node)
         else:
             contained_owl_class = shacl_entity
         contained_owl_classes.append(contained_owl_class.iri)
         
-    shacl_collection_node = BNode()
     Collection(shacled_ontology, shacl_collection_node, contained_owl_classes)
     shacled_ontology.add((parent_component,shacl_complexity_type,shacl_collection_node))
     return parent_component

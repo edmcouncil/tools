@@ -12,3 +12,5 @@ wikibase_api
 ply
 pyshacl
 owlready2
+openai
+Github

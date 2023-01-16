@@ -1,4 +1,3 @@
-from pyshacl import validate
 from rdflib import Graph
 
 from shacl.data_model_generator import generate_shacl_model_from_ontology
@@ -10,7 +9,7 @@ ontology.parse('../resources/idmp_master_v0.1.0/AboutIDMPDevMerged_v0.1.0.ttl')
 generate_shacl_model_from_ontology(ontology=ontology)
 shacled_ontology = shacl()
 shacled_ontology.serialize('shacled.ttl')
-# validate_graph_with_shacl(
-#     graph=ontology,
-#     shacl=shacled_ontology,
-#     results_file_path='../resources/idmp_master_v0.1.0/AboutIDMPDevSHACLed_v0.1.0.xlsx')
+validate_graph_with_shacl(
+    graph=ontology,
+    shacl=shacled_ontology,
+    results_file_path='../resources/idmp_master_v0.1.0/AboutIDMPDevSHACLed_v0.1.0.xlsx')

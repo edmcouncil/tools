@@ -1,4 +1,3 @@
-from rdflib import URIRef
 from rdflib.term import Identifier
 
 from shacl.objects.shacl_model_individual import ShaclModelIndividual
