@@ -6,6 +6,8 @@ from rdflib.term import Literal, Node
 from shacl.objects.shacl_model_cardinality_restriction import ShaclModelCardinalityRestriction
 from shacl.objects.shacl_model_class import ShaclModelIdentifiedClass
 from shacl.objects.shacl_model_container_class import ShaclModelContainerClass
+from shacl.objects.shacl_model_literal import ShaclModelLiteral
+from shacl.objects.shacl_model_resource import ShaclModelResource
 from shacl.objects.shacl_model_restriction import ShaclModelRestriction
 from shacl.objects.shacl_model_value_attribute import ShaclModelValueRestriction
 
@@ -73,7 +75,11 @@ def shacl_cardinality_restriction(restriction: ShaclModelCardinalityRestriction,
     
     
 def shacl_value_restriction(restriction: ShaclModelValueRestriction, shacled_ontology: Graph, constraint: BNode) -> BNode:
-    shacled_ontology.add((constraint, SH.hasValue, restriction.range.iri))
+    range = restriction.range
+    if isinstance(range, ShaclModelResource):
+        shacled_ontology.add((constraint, SH.hasValue, range.iri))
+    if isinstance(range, ShaclModelLiteral):
+        shacled_ontology.add((constraint, SH.hasValue, range.value))
     return constraint
 
     
@@ -87,16 +93,19 @@ def shacl_container_class(container_class: ShaclModelContainerClass, shacled_ont
         shacl_complexity_type = URIRef(str(SH)+'not')
     if not shacl_complexity_type:
         print('Cannot process attribute', str(container_class))
-    contained_owl_classes = list()
+    contained_owl_nodes = list()
     shacl_collection_node = BNode()
     for shacl_entity in container_class.constituting_attributes:
         if isinstance(shacl_entity, ShaclModelContainerClass):
-            contained_owl_class = shacl_container_class(container_class=shacl_entity, shacled_ontology=shacled_ontology,parent_component=shacl_collection_node)
+            contained_owl_node = shacl_container_class(container_class=shacl_entity, shacled_ontology=shacled_ontology,parent_component=shacl_collection_node)
         else:
-            contained_owl_class = shacl_entity
-        contained_owl_classes.append(contained_owl_class.iri)
+            contained_owl_node = shacl_entity
+        if isinstance(range, ShaclModelResource):
+            contained_owl_nodes.append(contained_owl_node.iri)
+        if isinstance(range, ShaclModelLiteral):
+            contained_owl_nodes.append(contained_owl_node.value)
         
-    Collection(shacled_ontology, shacl_collection_node, contained_owl_classes)
+    Collection(shacled_ontology, shacl_collection_node, contained_owl_nodes)
     shacled_ontology.add((parent_component,shacl_complexity_type,shacl_collection_node))
     return parent_component
     

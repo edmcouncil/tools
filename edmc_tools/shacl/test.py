@@ -5,7 +5,7 @@ from shacl.shacler import shacl
 from shacl.validator import validate_graph_with_shacl
 
 ontology = Graph()
-ontology.parse('../resources/idmp_master_v0.1.0/AboutIDMPDevMerged_v0.1.0.ttl')
+ontology.parse('../resources/dev.fibo-quickstart.ttl')
 generate_shacl_model_from_ontology(ontology=ontology)
 shacled_ontology = shacl()
 shacled_ontology.serialize('shacled.ttl')
