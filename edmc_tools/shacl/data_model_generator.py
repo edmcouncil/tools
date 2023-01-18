@@ -1,7 +1,7 @@
 from rdflib import Graph, RDF, OWL, URIRef, RDFS
 
 from shacl.data_model_class_generator import generate_model_class_from_owl_class_with_attributes
-from shacl.objects.shacl_model_class import ShaclModelIdentifiedClass
+from shacl.objects.shacl_model_identified_class import ShaclModelIdentifiedClass
 from shacl.objects.shacl_model_individual import ShaclModelIndividual
 from shacl.objects.shacl_model_property import ShaclModelProperty
 from shacl.resource_recognizer import if_resource_is_datatype

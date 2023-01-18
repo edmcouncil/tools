@@ -4,8 +4,8 @@ from rdflib.collection import Collection
 from rdflib.term import Literal, Node
 
 from shacl.objects.shacl_model_cardinality_restriction import ShaclModelCardinalityRestriction
-from shacl.objects.shacl_model_class import ShaclModelIdentifiedClass
-from shacl.objects.shacl_model_container_class import ShaclModelContainerClass
+from shacl.objects.shacl_model_container_class import ShaclModelCollection
+from shacl.objects.shacl_model_identified_class import ShaclModelIdentifiedClass
 from shacl.objects.shacl_model_literal import ShaclModelLiteral
 from shacl.objects.shacl_model_resource import ShaclModelResource
 from shacl.objects.shacl_model_restriction import ShaclModelRestriction
@@ -51,8 +51,8 @@ def shacl_restriction(restriction: ShaclModelRestriction, shacled_ontology: Grap
     
     
 def shacl_cardinality_restriction(restriction: ShaclModelCardinalityRestriction, shacled_ontology: Graph, constraint: BNode) -> BNode:
-    if isinstance(restriction.range, ShaclModelContainerClass):
-        shacl_container_class(container_class=restriction.range, shacled_ontology=shacled_ontology, parent_component=constraint)
+    if isinstance(restriction.range, ShaclModelCollection):
+        shacl_collection(collection=restriction.range, shacled_ontology=shacled_ontology, parent_component=constraint)
     else:
         if isinstance(restriction.range, ShaclModelRestriction):
             shacl_restriction(restriction=restriction.range,shacled_ontology=shacled_ontology, shacl_component=constraint)
@@ -83,29 +83,32 @@ def shacl_value_restriction(restriction: ShaclModelValueRestriction, shacled_ont
     return constraint
 
     
-def shacl_container_class(container_class: ShaclModelContainerClass, shacled_ontology: Graph, parent_component: BNode) -> BNode:
+def shacl_collection(collection: ShaclModelCollection, shacled_ontology: Graph, parent_component: BNode) -> BNode:
     shacl_complexity_type = None
-    if container_class.complexity_type == OWL.intersectionOf:
+    if collection.complexity_type == OWL.intersectionOf:
         shacl_complexity_type = URIRef(str(SH)+'or')
-    if container_class.complexity_type == OWL.unionOf:
+    if collection.complexity_type == OWL.unionOf:
         shacl_complexity_type = URIRef(str(SH)+'or')
-    if container_class.complexity_type == OWL.complementOf:
+    if collection.complexity_type == OWL.complementOf:
         shacl_complexity_type = URIRef(str(SH)+'not')
+    if collection.complexity_type == OWL.oneOf:
+        shacl_complexity_type = URIRef(str(SH)+'in')
     if not shacl_complexity_type:
-        print('Cannot process attribute', str(container_class))
-    contained_owl_nodes = list()
+        print('Cannot process collection', str(collection))
+        return parent_component
+    collected_owl_nodes = list()
     shacl_collection_node = BNode()
-    for shacl_entity in container_class.constituting_attributes:
-        if isinstance(shacl_entity, ShaclModelContainerClass):
-            contained_owl_node = shacl_container_class(container_class=shacl_entity, shacled_ontology=shacled_ontology,parent_component=shacl_collection_node)
+    for shacl_entity in collection.collected_nodes:
+        if isinstance(shacl_entity, ShaclModelCollection):
+            collected_node = shacl_collection(collection=shacl_entity, shacled_ontology=shacled_ontology, parent_component=shacl_collection_node)
         else:
-            contained_owl_node = shacl_entity
-        if isinstance(range, ShaclModelResource):
-            contained_owl_nodes.append(contained_owl_node.iri)
-        if isinstance(range, ShaclModelLiteral):
-            contained_owl_nodes.append(contained_owl_node.value)
+            collected_node = shacl_entity
+        if isinstance(collected_node, ShaclModelResource):
+            collected_owl_nodes.append(collected_node.iri)
+        if isinstance(collected_node, ShaclModelLiteral):
+            collected_owl_nodes.append(collected_node.value)
         
-    Collection(shacled_ontology, shacl_collection_node, contained_owl_nodes)
+    Collection(shacled_ontology, shacl_collection_node, collected_owl_nodes)
     shacled_ontology.add((parent_component,shacl_complexity_type,shacl_collection_node))
     return parent_component
     

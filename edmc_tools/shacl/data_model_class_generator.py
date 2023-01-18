@@ -1,11 +1,10 @@
 from rdflib import Graph, OWL, URIRef, RDFS, RDF
-from rdflib.term import Node, BNode, Literal, Identifier
+from rdflib.term import Node, Literal, Identifier
 
-from owl_helpers.resource_identifiers import identify_collection
 from shacl.objects.shacl_model_cardinality import ShaclModelCardinality
 from shacl.objects.shacl_model_cardinality_restriction import ShaclModelCardinalityRestriction
-from shacl.objects.shacl_model_class import ShaclModelIdentifiedClass
-from shacl.objects.shacl_model_container_class import ShaclModelContainerClass
+from shacl.objects.shacl_model_container_class import ShaclModelCollection
+from shacl.objects.shacl_model_identified_class import ShaclModelIdentifiedClass
 from shacl.objects.shacl_model_literal import ShaclModelLiteral
 from shacl.objects.shacl_model_node import ShaclModelNode
 from shacl.objects.shacl_model_property import ShaclModelProperty
@@ -115,12 +114,12 @@ def generate_attribute_from_owl_restriction(owl_restriction: Node, ontology: Gra
         return ShaclModelValueRestriction(property=property, range=range, severity=severity)
     
     
-def generate_shacl_class_from_owl_collecting_class(collecting_class: BNode, ontology: Graph) -> ShaclModelContainerClass:
-    owl_unionsOf = list(ontology.objects(subject=collecting_class, predicate=OWL.unionOf))
-    owl_intersectionsOf = list(ontology.objects(subject=collecting_class, predicate=OWL.intersectionOf))
-    owl_complementsOf = list(ontology.objects(subject=collecting_class, predicate=OWL.complementOf))
-    owl_onesOf = list(ontology.objects(subject=collecting_class, predicate=OWL.oneOf))
-    owl_withRestrictions = list(ontology.objects(subject=collecting_class, predicate=OWL.withRestrictions))
+def generate_shacl_class_from_owl_collecting_node(collecting_node: Node, ontology: Graph) -> ShaclModelCollection:
+    owl_unionsOf = list(ontology.objects(subject=collecting_node, predicate=OWL.unionOf))
+    owl_intersectionsOf = list(ontology.objects(subject=collecting_node, predicate=OWL.intersectionOf))
+    owl_complementsOf = list(ontology.objects(subject=collecting_node, predicate=OWL.complementOf))
+    owl_onesOf = list(ontology.objects(subject=collecting_node, predicate=OWL.oneOf))
+    owl_withRestrictions = list(ontology.objects(subject=collecting_node, predicate=OWL.withRestrictions))
     data_model_entities = None
     owl_complexity_type = None
     if len(owl_unionsOf) > 0:
@@ -139,23 +138,19 @@ def generate_shacl_class_from_owl_collecting_class(collecting_class: BNode, onto
         data_model_entities = resolve_collecting_collections(collecting_collections=owl_withRestrictions, ontology=ontology)
         owl_complexity_type = OWL.withRestrictions
     if not data_model_entities:
-        print('Ignoring a restriction for class', collecting_class, 'whose value is too complex BNode.')
-        return ShaclModelContainerClass()
-    # data_model_entities = set()
-    # for node in identified_nodes:
-    #     data_model_entity = process_owl_node_by_type(node=node, ontology=ontology)
-    #     data_model_entities.add(data_model_entity)
+        print('Ignoring a restriction for class', collecting_node, 'whose value is too complex BNode.')
+        return ShaclModelCollection()
 
     shacl_container_class = \
-        ShaclModelContainerClass(
+        ShaclModelCollection(
             complexity_type=owl_complexity_type,
-            constituting_entities=data_model_entities)
+            collected_nodes=data_model_entities)
     
     return shacl_container_class
 
 
 def process_owl_node_by_type(
-        node: BNode,
+        node: Node,
         ontology: Graph) -> ShaclModelNode:
     if (node, RDF.type, OWL.Restriction) in ontology:
         shacl_model_attribute = generate_attribute_from_owl_restriction(owl_restriction=node, ontology=ontology)
@@ -176,8 +171,8 @@ def process_owl_node_by_type(
     owl_collection = set().union(*owl_collections)
     if len(owl_collection) > 0:
         shacl_model_attribute = \
-            generate_shacl_class_from_owl_collecting_class(
-                collecting_class=node,
+            generate_shacl_class_from_owl_collecting_node(
+                collecting_node=node,
                 ontology=ontology)
         return shacl_model_attribute
 
@@ -188,15 +183,20 @@ def process_owl_node_by_type(
     
     print('Ignoring node', str(node), 'because of its complexity')
     
+    return ShaclModelNode()
+    
     
 def resolve_collecting_collections(collecting_collections: list, ontology: Graph) -> set:
     shacle_entities = set()
     for collecting_collection in collecting_collections:
         if not isinstance(collecting_collection, list):
             items = set(ontology.items(collecting_collection))
+        else:
+            items = collecting_collections.copy()
         for item in items:
             shacl_entity = process_owl_node_by_type(node=item, ontology=ontology)
-            shacle_entities.add(shacl_entity)
+            if shacl_entity is not None:
+                shacle_entities.add(shacl_entity)
     return shacle_entities
     
     

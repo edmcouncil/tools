@@ -8,3 +8,7 @@ class ShaclModelLiteral(ShaclModelNode):
     
     def __init__(self, value: Literal):
         self.value = value
+        ShaclModelLiteral.registry[value] = self
+        
+    def __str__(self):
+        return str(self.value)

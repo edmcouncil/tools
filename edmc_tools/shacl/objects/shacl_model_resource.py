@@ -8,5 +8,10 @@ class ShaclModelResource(ShaclModelNode):
     
     def __init__(self, iri: Identifier):
         self.iri = iri
-        self.bracket_iri = '<' + str(self.iri) + '>'
         ShaclModelResource.registry[iri] = self
+    
+    def __str__(self):
+        return ' '.join([str(self.iri)])
+    
+    def __repr__(self):
+        return ' '.join([str(self.iri)])
