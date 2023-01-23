@@ -59,8 +59,8 @@ def shacl_cardinality_restriction(restriction: ShaclModelCardinalityRestriction,
             # shacled_ontology.add((constraint, URIRef(str(SH) + 'class'), owl_range))
         else:
             owl_range = restriction.range.iri
-            if owl_range == Literal:
-                shacled_ontology.add((constraint, SH.nodeKind, RDFS.Literal))
+            if owl_range == Literal or owl_range == RDFS.Literal:
+                shacled_ontology.add((constraint, SH.nodeKind, SH.Literal))
             else:
                 if restriction.range.is_datatype:
                     shacled_ontology.add((constraint, URIRef(str(SH)+'datatype'), owl_range))
@@ -96,19 +96,22 @@ def shacl_collection(collection: ShaclModelCollection, shacled_ontology: Graph, 
     if not shacl_complexity_type:
         print('Cannot process collection', str(collection))
         return parent_component
-    collected_owl_nodes = list()
+    collected_owl_constraints = list()
     shacl_collection_node = BNode()
     for shacl_entity in collection.collected_nodes:
         if isinstance(shacl_entity, ShaclModelCollection):
             collected_node = shacl_collection(collection=shacl_entity, shacled_ontology=shacled_ontology, parent_component=shacl_collection_node)
         else:
             collected_node = shacl_entity
+        collected_node_constraint = BNode()
         if isinstance(collected_node, ShaclModelResource):
-            collected_owl_nodes.append(collected_node.iri)
+            shacled_ontology.add((collected_node_constraint, URIRef(str(SH) + 'class'), collected_node.iri))
+            collected_owl_constraints.append(collected_node_constraint)
         if isinstance(collected_node, ShaclModelLiteral):
-            collected_owl_nodes.append(collected_node.value)
+            shacled_ontology.add((collected_node_constraint, URIRef(str(SH) + 'datatype'), collected_node.value))
+            collected_owl_constraints.append(collected_node_constraint)
         
-    Collection(shacled_ontology, shacl_collection_node, collected_owl_nodes)
+    Collection(shacled_ontology, shacl_collection_node, collected_owl_constraints)
     shacled_ontology.add((parent_component,shacl_complexity_type,shacl_collection_node))
     return parent_component
     

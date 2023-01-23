@@ -18,7 +18,7 @@ def parameterise_hygiene_test(parameter_pattern: str, parameter_value: str, inpu
 
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description='Parameterize all hygiene tests')
+    parser = argparse.ArgumentParser(description='Parameterize all tests tests')
     parser.add_argument('--input_folder', help='Path to input folder', metavar='IN')
     parser.add_argument('--pattern', help='Pattern parameter', metavar='PATTERN')
     parser.add_argument('--value', help='Pattern value', metavar='VALUE')

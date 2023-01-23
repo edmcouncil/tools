@@ -45,7 +45,7 @@ def collect_ontologies(
                     root=root,
                     input_ontology_path=str(object_value))
     except Exception as exception:
-        print('Exception occurred while getting imported ontology', str(exception))
+        print('Exception occurred', str(exception), 'while getting imported ontology', input_ontology_path)
         sys.exit(-1)
     if save_output:
         output_graph.serialize(output_graph_path)
@@ -72,13 +72,13 @@ def collect_ontologies(
 #
 #     output_graph.close(True)
 
-get_local_ontology_map(ontology_catalog_path='/Users/pawel.garbacz/iofoundry/catalog-v001.xml')
+get_local_ontology_map(ontology_catalog_path='/Users/pawel.garbacz/Documents/edmc/github/ontology/catalog-v001.xml')
 output_graph = Graph()
 
 collect_ontologies(
-    root='/Users/pawel.garbacz/iofoundry/',
-    input_ontology_path='/Users/pawel.garbacz/iofoundry/AboutIOFDev.rdf',
-    output_graph_path='/Users/pawel.garbacz/iofoundry/AboutIOFDevMerged.rdf',
+    root='/Users/pawel.garbacz/Documents/edmc/github/ontology/',
+    input_ontology_path='/Users/pawel.garbacz/Documents/edmc/github/ontology/AboutIOFDev.rdf',
+    output_graph_path='/Users/pawel.garbacz/Documents/edmc/github/ontology/AboutIOFDevMerged.rdf',
     save_output=True)
 
 output_graph.close(True)

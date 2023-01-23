@@ -30,8 +30,8 @@ def run_hygiene(
 
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description='Run hygiene tests')
-    parser.add_argument('--folder_with_hygiene_tests', help='Path to folder with hygiene tests', metavar='HYGIENE')
+    parser = argparse.ArgumentParser(description='Run tests tests')
+    parser.add_argument('--folder_with_hygiene_tests', help='Path to folder with tests tests', metavar='HYGIENE')
     parser.add_argument('--ontology_path', help='Path to ontology file', metavar='ONTOLOGY')
     parser.add_argument('--error_label', help='Error label', metavar='ERROR')
     parser.add_argument('--parameter_input_value', help='Hygiene test filter constant', metavar='HYGIENEPLACEHOLDER')

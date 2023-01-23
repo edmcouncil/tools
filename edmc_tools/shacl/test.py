@@ -12,4 +12,4 @@ shacled_ontology.serialize('shacled_idmp_current.ttl')
 validate_graph_with_shacl(
     graph=ontology,
     shacl=shacled_ontology,
-    results_file_path='../resources/idmp_master_v0.1.0/AboutIDMPDevSHACLed_current.xlsx')
+    results_file_path='../resources/idmp_current/AboutIDMPDevSHACLed_current.xlsx')
