@@ -1,0 +1,88 @@
+[
+    {
+        "ontology": "SupplyChainReferenceOntology",
+        "delta": []
+    },
+    {
+        "ontology": "Collections",
+        "delta": []
+    },
+    {
+        "ontology": "Identifiers",
+        "delta": []
+    },
+    {
+        "ontology": "MappingCommonsToIOF",
+        "delta": [
+            {
+                "type": "http://www.w3.org/2002/07/owl#Class",
+                "left and not right count": 0,
+                "right and not left count": 1,
+                "both right and left count": 6
+            },
+            {
+                "type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+                "left and not right count": 0,
+                "right and not left count": 1,
+                "both right and left count": 10
+            }
+        ]
+    },
+    {
+        "ontology": "core",
+        "delta": []
+    },
+    {
+        "ontology": "AboutIOFDev",
+        "delta": []
+    },
+    {
+        "ontology": "MappingAnnotationVocabularyToCommons",
+        "delta": []
+    },
+    {
+        "ontology": "mfg-planning",
+        "delta": []
+    },
+    {
+        "ontology": "TextDatatype",
+        "delta": []
+    },
+    {
+        "ontology": "Designators",
+        "delta": []
+    },
+    {
+        "ontology": "AboutIOFProd",
+        "delta": []
+    },
+    {
+        "ontology": "AboutCommons",
+        "delta": []
+    },
+    {
+        "ontology": "Core",
+        "delta": []
+    },
+    {
+        "ontology": "IOF_AnnotationsVocabulary",
+        "delta": []
+    },
+    {
+        "ontology": "AnnotationVocabulary",
+        "delta": [
+            {
+                "type": "http://www.w3.org/2002/07/owl#Class",
+                "left and not right count": 1,
+                "right and not left count": 0,
+                "both right and left count": 0
+            },
+            {
+                "type": "http://www.w3.org/2002/07/owl#NamedIndividual",
+                "left and not right count": 2,
+                "right and not left count": 0,
+                "both right and left count": 0
+            }
+        ]
+    }
+]

@@ -1,0 +1,591 @@
+[
+    {
+        "ontology": "SupplyChainReferenceOntology",
+        "delta": [
+            {
+                "subject": "https://spec.industrialontologies.org/ontology/supplychain/SupplyChainReferenceOntology/GroupOfSuppliers",
+                "left and not right count": 1,
+                "right and not left count": 1,
+                "both right and left count": 10
+            },
+            {
+                "subject": "https://spec.industrialontologies.org/ontology/supplychain/SupplyChainReferenceOntology/LogisticsService",
+                "left and not right count": 1,
+                "right and not left count": 1,
+                "both right and left count": 8
+            },
+            {
+                "subject": "https://spec.industrialontologies.org/ontology/supplychain/SupplyChainReferenceOntology/Manufacturer",
+                "left and not right count": 1,
+                "right and not left count": 1,
+                "both right and left count": 7
+            },
+            {
+                "subject": "https://spec.industrialontologies.org/ontology/supplychain/SupplyChainReferenceOntology/SupplyChainAgentRole",
+                "left and not right count": 1,
+                "right and not left count": 1,
+                "both right and left count": 5
+            },
+            {
+                "subject": "https://spec.industrialontologies.org/ontology/supplychain/SupplyChainReferenceOntology/ShipFromLocationRole",
+                "left and not right count": 1,
+                "right and not left count": 1,
+                "both right and left count": 6
+            },
+            {
+                "subject": "https://spec.industrialontologies.org/ontology/supplychain/SupplyChainReferenceOntology/SupplyChainNodeRole",
+                "left and not right count": 1,
+                "right and not left count": 1,
+                "both right and left count": 6
+            },
+            {
+                "subject": "https://spec.industrialontologies.org/ontology/supplychain/SupplyChainReferenceOntology/CargoRole",
+                "left and not right count": 1,
+                "right and not left count": 1,
+                "both right and left count": 7
+            },
+            {
+                "subject": "https://spec.industrialontologies.org/ontology/supplychain/SupplyChainReferenceOntology/ProductionCapability",
+                "left and not right count": 1,
+                "right and not left count": 1,
+                "both right and left count": 8
+            },
+            {
+                "subject": "https://spec.industrialontologies.org/ontology/supplychain/SupplyChainReferenceOntology/RetailerRole",
+                "left and not right count": 3,
+                "right and not left count": 3,
+                "both right and left count": 10
+            },
+            {
+                "subject": "https://spec.industrialontologies.org/ontology/supplychain/SupplyChainReferenceOntology/ArrivalProcess",
+                "left and not right count": 2,
+                "right and not left count": 2,
+                "both right and left count": 5
+            },
+            {
+                "subject": "https://spec.industrialontologies.org/ontology/supplychain/SupplyChainReferenceOntology/GlobalLocationNumber",
+                "left and not right count": 1,
+                "right and not left count": 1,
+                "both right and left count": 11
+            },
+            {
+                "subject": "https://spec.industrialontologies.org/ontology/supplychain/SupplyChainReferenceOntology/",
+                "left and not right count": 2,
+                "right and not left count": 2,
+                "both right and left count": 18
+            },
+            {
+                "subject": "https://spec.industrialontologies.org/ontology/supplychain/SupplyChainReferenceOntology/ConsigneeRole",
+                "left and not right count": 1,
+                "right and not left count": 1,
+                "both right and left count": 8
+            },
+            {
+                "subject": "https://spec.industrialontologies.org/ontology/supplychain/SupplyChainReferenceOntology/LogisticsServiceProvider",
+                "left and not right count": 1,
+                "right and not left count": 1,
+                "both right and left count": 8
+            },
+            {
+                "subject": "https://spec.industrialontologies.org/ontology/supplychain/SupplyChainReferenceOntology/WholesalerRole",
+                "left and not right count": 3,
+                "right and not left count": 3,
+                "both right and left count": 10
+            },
+            {
+                "subject": "https://spec.industrialontologies.org/ontology/supplychain/SupplyChainReferenceOntology/LotRole",
+                "left and not right count": 1,
+                "right and not left count": 1,
+                "both right and left count": 9
+            },
+            {
+                "subject": "https://spec.industrialontologies.org/ontology/supplychain/SupplyChainReferenceOntology/IndustrialInventoryRole",
+                "left and not right count": 1,
+                "right and not left count": 1,
+                "both right and left count": 8
+            },
+            {
+                "subject": "https://spec.industrialontologies.org/ontology/supplychain/SupplyChainReferenceOntology/ManufacturingSupplyChain",
+                "left and not right count": 1,
+                "right and not left count": 1,
+                "both right and left count": 6
+            },
+            {
+                "subject": "https://spec.industrialontologies.org/ontology/supplychain/SupplyChainReferenceOntology/StorageCapability",
+                "left and not right count": 1,
+                "right and not left count": 1,
+                "both right and left count": 8
+            },
+            {
+                "subject": "https://spec.industrialontologies.org/ontology/supplychain/SupplyChainReferenceOntology/DepartureProcess",
+                "left and not right count": 2,
+                "right and not left count": 2,
+                "both right and left count": 5
+            },
+            {
+                "subject": "https://spec.industrialontologies.org/ontology/supplychain/SupplyChainReferenceOntology/ShipmentRole",
+                "left and not right count": 1,
+                "right and not left count": 1,
+                "both right and left count": 8
+            },
+            {
+                "subject": "https://spec.industrialontologies.org/ontology/supplychain/SupplyChainReferenceOntology/DistributorRole",
+                "left and not right count": 3,
+                "right and not left count": 3,
+                "both right and left count": 10
+            },
+            {
+                "subject": "https://spec.industrialontologies.org/ontology/supplychain/SupplyChainReferenceOntology/FreightForwarderRole",
+                "left and not right count": 1,
+                "right and not left count": 1,
+                "both right and left count": 6
+            },
+            {
+                "subject": "https://spec.industrialontologies.org/ontology/supplychain/SupplyChainReferenceOntology/SupplyChainSystem",
+                "left and not right count": 1,
+                "right and not left count": 1,
+                "both right and left count": 9
+            },
+            {
+                "subject": "https://spec.industrialontologies.org/ontology/supplychain/SupplyChainReferenceOntology/LoadRole",
+                "left and not right count": 1,
+                "right and not left count": 1,
+                "both right and left count": 8
+            },
+            {
+                "subject": "https://spec.industrialontologies.org/ontology/supplychain/SupplyChainReferenceOntology/InventoryRole",
+                "left and not right count": 1,
+                "right and not left count": 1,
+                "both right and left count": 7
+            },
+            {
+                "subject": "https://spec.industrialontologies.org/ontology/supplychain/SupplyChainReferenceOntology/TravelProcess",
+                "left and not right count": 1,
+                "right and not left count": 1,
+                "both right and left count": 7
+            },
+            {
+                "subject": "https://spec.industrialontologies.org/ontology/supplychain/service/ServiceOntology/ManufacturingServiceProviderRole",
+                "left and not right count": 1,
+                "right and not left count": 1,
+                "both right and left count": 8
+            },
+            {
+                "subject": "https://spec.industrialontologies.org/ontology/supplychain/SupplyChainReferenceOntology/PackagingServiceProviderRole",
+                "left and not right count": 1,
+                "right and not left count": 1,
+                "both right and left count": 5
+            },
+            {
+                "subject": "https://spec.industrialontologies.org/ontology/supplychain/SupplyChainReferenceOntology/LocationIdentificationScheme",
+                "left and not right count": 1,
+                "right and not left count": 1,
+                "both right and left count": 6
+            },
+            {
+                "subject": "https://spec.industrialontologies.org/ontology/supplychain/SupplyChainReferenceOntology/SupplyChainProcess",
+                "left and not right count": 1,
+                "right and not left count": 1,
+                "both right and left count": 6
+            },
+            {
+                "subject": "https://spec.industrialontologies.org/ontology/supplychain/SupplyChainReferenceOntology/StorageServiceProviderRole",
+                "left and not right count": 1,
+                "right and not left count": 1,
+                "both right and left count": 5
+            },
+            {
+                "subject": "https://spec.industrialontologies.org/ontology/supplychain/SupplyChainReferenceOntology/ConsignorRole",
+                "left and not right count": 2,
+                "right and not left count": 2,
+                "both right and left count": 9
+            },
+            {
+                "subject": "https://spec.industrialontologies.org/ontology/supplychain/SupplyChainReferenceOntology/ShipToLocationRole",
+                "left and not right count": 1,
+                "right and not left count": 1,
+                "both right and left count": 7
+            },
+            {
+                "subject": "https://spec.industrialontologies.org/ontology/supplychain/SupplyChainReferenceOntology/LogisticsProcess",
+                "left and not right count": 1,
+                "right and not left count": 1,
+                "both right and left count": 6
+            },
+            {
+                "subject": "https://spec.industrialontologies.org/ontology/supplychain/SupplyChainReferenceOntology/LocationRole",
+                "left and not right count": 1,
+                "right and not left count": 1,
+                "both right and left count": 7
+            },
+            {
+                "subject": "https://spec.industrialontologies.org/ontology/supplychain/SupplyChainReferenceOntology/TransportationServiceProviderRole",
+                "left and not right count": 1,
+                "right and not left count": 1,
+                "both right and left count": 5
+            }
+        ]
+    },
+    {
+        "ontology": "Collections",
+        "delta": []
+    },
+    {
+        "ontology": "Identifiers",
+        "delta": []
+    },
+    {
+        "ontology": "MappingCommonsToIOF",
+        "delta": []
+    },
+    {
+        "ontology": "core",
+        "delta": [
+            {
+                "subject": "http://www.industrialontologies.org/ontology/core/Core/AgentiveProcess",
+                "left and not right count": 1,
+                "right and not left count": 1,
+                "both right and left count": 9
+            }
+        ]
+    },
+    {
+        "ontology": "AboutIOFDev",
+        "delta": [
+            {
+                "subject": "https://spec.industrialontologies.org/ontology/AboutIOFDev/",
+                "left and not right count": 6,
+                "right and not left count": 3,
+                "both right and left count": 8
+            }
+        ]
+    },
+    {
+        "ontology": "MappingAnnotationVocabularyToCommons",
+        "delta": []
+    },
+    {
+        "ontology": "mfg-planning",
+        "delta": [
+            {
+                "subject": "http://simpom.ohio.edu/mfg-planning/",
+                "left and not right count": 2,
+                "right and not left count": 1,
+                "both right and left count": 4
+            }
+        ]
+    },
+    {
+        "ontology": "TextDatatype",
+        "delta": []
+    },
+    {
+        "ontology": "Designators",
+        "delta": []
+    },
+    {
+        "ontology": "AboutIOFProd",
+        "delta": [
+            {
+                "subject": "https://spec.industrialontologies.org/ontology/AboutIOFProd/",
+                "left and not right count": 5,
+                "right and not left count": 1,
+                "both right and left count": 7
+            }
+        ]
+    },
+    {
+        "ontology": "AboutCommons",
+        "delta": []
+    },
+    {
+        "ontology": "Core",
+        "delta": [
+            {
+                "subject": "https://spec.industrialontologies.org/ontology/core/Core/ComputingProcess",
+                "left and not right count": 1,
+                "right and not left count": 1,
+                "both right and left count": 13
+            },
+            {
+                "subject": "https://spec.industrialontologies.org/ontology/core/Core/ProductProductionProcess",
+                "left and not right count": 1,
+                "right and not left count": 1,
+                "both right and left count": 10
+            },
+            {
+                "subject": "https://spec.industrialontologies.org/ontology/core/Core/AgentRole",
+                "left and not right count": 1,
+                "right and not left count": 1,
+                "both right and left count": 12
+            },
+            {
+                "subject": "https://spec.industrialontologies.org/ontology/core/Core/SellingBusinessProcess",
+                "left and not right count": 1,
+                "right and not left count": 1,
+                "both right and left count": 12
+            },
+            {
+                "subject": "https://spec.industrialontologies.org/ontology/core/Core/ServiceProviderRole",
+                "left and not right count": 1,
+                "right and not left count": 1,
+                "both right and left count": 10
+            },
+            {
+                "subject": "https://spec.industrialontologies.org/ontology/core/Core/MeasuredValueExpression",
+                "left and not right count": 1,
+                "right and not left count": 1,
+                "both right and left count": 10
+            },
+            {
+                "subject": "https://spec.industrialontologies.org/ontology/core/Core/RawMaterialRole",
+                "left and not right count": 2,
+                "right and not left count": 2,
+                "both right and left count": 12
+            },
+            {
+                "subject": "https://spec.industrialontologies.org/ontology/core/Core/MeasurementInformationContentEntity",
+                "left and not right count": 1,
+                "right and not left count": 1,
+                "both right and left count": 11
+            },
+            {
+                "subject": "https://spec.industrialontologies.org/ontology/core/Core/SupplierRole",
+                "left and not right count": 1,
+                "right and not left count": 1,
+                "both right and left count": 10
+            },
+            {
+                "subject": "https://spec.industrialontologies.org/ontology/core/Core/ProcuringBusinessProcess",
+                "left and not right count": 1,
+                "right and not left count": 1,
+                "both right and left count": 9
+            },
+            {
+                "subject": "https://spec.industrialontologies.org/ontology/core/Core/BuyingBusinessProcess",
+                "left and not right count": 1,
+                "right and not left count": 1,
+                "both right and left count": 12
+            },
+            {
+                "subject": "https://spec.industrialontologies.org/ontology/core/Core/EquipmentRole",
+                "left and not right count": 2,
+                "right and not left count": 2,
+                "both right and left count": 12
+            },
+            {
+                "subject": "https://spec.industrialontologies.org/ontology/core/Core/MaterialProductRole",
+                "left and not right count": 1,
+                "right and not left count": 1,
+                "both right and left count": 10
+            },
+            {
+                "subject": "https://spec.industrialontologies.org/ontology/core/Core/MeasurementProcess",
+                "left and not right count": 1,
+                "right and not left count": 1,
+                "both right and left count": 12
+            },
+            {
+                "subject": "https://spec.industrialontologies.org/ontology/core/Core/BusinessFunction",
+                "left and not right count": 1,
+                "right and not left count": 1,
+                "both right and left count": 15
+            },
+            {
+                "subject": "https://spec.industrialontologies.org/ontology/core/Core/MaterialResourceRole",
+                "left and not right count": 1,
+                "right and not left count": 1,
+                "both right and left count": 10
+            },
+            {
+                "subject": "https://spec.industrialontologies.org/ontology/core/Core/AssemblyProcess",
+                "left and not right count": 1,
+                "right and not left count": 1,
+                "both right and left count": 12
+            },
+            {
+                "subject": "https://spec.industrialontologies.org/ontology/core/Core/CustomerRole",
+                "left and not right count": 1,
+                "right and not left count": 1,
+                "both right and left count": 10
+            },
+            {
+                "subject": "https://spec.industrialontologies.org/ontology/core/Core/ManufacturingProcess",
+                "left and not right count": 2,
+                "right and not left count": 2,
+                "both right and left count": 13
+            },
+            {
+                "subject": "https://spec.industrialontologies.org/ontology/core/Core/OrganizedGroupOfAgents",
+                "left and not right count": 1,
+                "right and not left count": 1,
+                "both right and left count": 8
+            },
+            {
+                "subject": "https://spec.industrialontologies.org/ontology/core/Core/BusinessProcess",
+                "left and not right count": 2,
+                "right and not left count": 2,
+                "both right and left count": 11
+            },
+            {
+                "subject": "https://spec.industrialontologies.org/ontology/core/Core/MaterialLocationChangeProcess",
+                "left and not right count": 1,
+                "right and not left count": 1,
+                "both right and left count": 12
+            },
+            {
+                "subject": "https://spec.industrialontologies.org/ontology/core/Core/MaterialArtifact",
+                "left and not right count": 1,
+                "right and not left count": 1,
+                "both right and left count": 8
+            },
+            {
+                "subject": "https://spec.industrialontologies.org/ontology/core/Core/ManufacturerRole",
+                "left and not right count": 1,
+                "right and not left count": 1,
+                "both right and left count": 10
+            },
+            {
+                "subject": "https://spec.industrialontologies.org/ontology/core/Core/Assembly",
+                "left and not right count": 1,
+                "right and not left count": 1,
+                "both right and left count": 15
+            },
+            {
+                "subject": "https://spec.industrialontologies.org/ontology/core/Core/",
+                "left and not right count": 1,
+                "right and not left count": 1,
+                "both right and left count": 21
+            },
+            {
+                "subject": "https://spec.industrialontologies.org/ontology/core/Core/BuyerRole",
+                "left and not right count": 1,
+                "right and not left count": 1,
+                "both right and left count": 10
+            }
+        ]
+    },
+    {
+        "ontology": "IOF_AnnotationsVocabulary",
+        "delta": []
+    },
+    {
+        "ontology": "AnnotationVocabulary",
+        "delta": [
+            {
+                "subject": "http://purl.org/dc/terms/abstract",
+                "left and not right count": 4,
+                "right and not left count": 4,
+                "both right and left count": 2
+            },
+            {
+                "subject": "http://www.w3.org/2004/02/skos/core#scopeNote",
+                "left and not right count": 3,
+                "right and not left count": 3,
+                "both right and left count": 2
+            },
+            {
+                "subject": "http://purl.org/dc/terms/rights",
+                "left and not right count": 3,
+                "right and not left count": 4,
+                "both right and left count": 1
+            },
+            {
+                "subject": "http://purl.org/dc/terms/publisher",
+                "left and not right count": 4,
+                "right and not left count": 4,
+                "both right and left count": 1
+            },
+            {
+                "subject": "http://www.w3.org/2004/02/skos/core#note",
+                "left and not right count": 2,
+                "right and not left count": 2,
+                "both right and left count": 2
+            },
+            {
+                "subject": "http://purl.org/dc/terms/title",
+                "left and not right count": 4,
+                "right and not left count": 4,
+                "both right and left count": 1
+            },
+            {
+                "subject": "http://purl.org/dc/terms/license",
+                "left and not right count": 3,
+                "right and not left count": 4,
+                "both right and left count": 1
+            },
+            {
+                "subject": "http://purl.org/dc/terms/issued",
+                "left and not right count": 4,
+                "right and not left count": 4,
+                "both right and left count": 1
+            },
+            {
+                "subject": "http://purl.org/dc/terms/modified",
+                "left and not right count": 3,
+                "right and not left count": 3,
+                "both right and left count": 1
+            },
+            {
+                "subject": "http://www.w3.org/2004/02/skos/core#definition",
+                "left and not right count": 2,
+                "right and not left count": 2,
+                "both right and left count": 3
+            },
+            {
+                "subject": "http://purl.org/dc/terms/description",
+                "left and not right count": 4,
+                "right and not left count": 3,
+                "both right and left count": 2
+            },
+            {
+                "subject": "http://purl.org/dc/terms/references",
+                "left and not right count": 3,
+                "right and not left count": 3,
+                "both right and left count": 1
+            },
+            {
+                "subject": "http://www.w3.org/2004/02/skos/core#editorialNote",
+                "left and not right count": 2,
+                "right and not left count": 2,
+                "both right and left count": 3
+            },
+            {
+                "subject": "http://purl.org/dc/terms/contributor",
+                "left and not right count": 3,
+                "right and not left count": 3,
+                "both right and left count": 1
+            },
+            {
+                "subject": "http://www.w3.org/2004/02/skos/core#altLabel",
+                "left and not right count": 2,
+                "right and not left count": 2,
+                "both right and left count": 3
+            },
+            {
+                "subject": "http://purl.org/dc/terms/source",
+                "left and not right count": 4,
+                "right and not left count": 4,
+                "both right and left count": 1
+            },
+            {
+                "subject": "http://www.w3.org/2004/02/skos/core#example",
+                "left and not right count": 3,
+                "right and not left count": 2,
+                "both right and left count": 3
+            },
+            {
+                "subject": "http://www.w3.org/2004/02/skos/core#changeNote",
+                "left and not right count": 2,
+                "right and not left count": 2,
+                "both right and left count": 3
+            },
+            {
+                "subject": "http://purl.org/dc/terms/creator",
+                "left and not right count": 3,
+                "right and not left count": 3,
+                "both right and left count": 2
+            }
+        ]
+    }
+]

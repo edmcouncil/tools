@@ -1,0 +1,11 @@
+[
+    {
+        "repository": "ontology.git",
+        "left and not right": [
+            "MaintenanceReferenceOntology"
+        ],
+        "right and not left": [
+            "Maintenance"
+        ]
+    }
+]

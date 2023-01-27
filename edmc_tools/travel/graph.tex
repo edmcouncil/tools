@@ -1,0 +1,44 @@
+\documentclass{report}
+\usepackage{tikz}
+\usepackage{subcaption}
+
+\begin{document}
+\begin{figure}
+  \begin{tikzpicture}
+      \draw
+        (0.0:10) node (Substance){Substance}
+        (0.449:10) node (MolecularWeight){MolecularWeight}
+        (0.898:10) node (Structure){Structure}
+        (1.346:10) node (SubstanceName){SubstanceName}
+        (1.795:10) node (LanguageIdentifier){LanguageIdentifier}
+        (2.244:10) node (Language){Language}
+        (2.693:10) node (rdf-schemaLiteral){rdf-schemaLiteral}
+        (3.142:10) node (owlThing){owlThing}
+        (3.59:10) node (XMLSchemastring){XMLSchemastring}
+        (4.039:10) node (GeographicRegionIdentifier){GeographicRegionIdentifier}
+        (4.488:10) node (GeographicRegion){GeographicRegion}
+        (4.937:10) node (SubstanceNameDomain){SubstanceNameDomain}
+        (5.385:10) node (Reference){Reference}
+        (5.834:10) node (<class 'rdflib.term.Literal'>){<class 'rdflib.term.Literal'>};
+      \begin{scope}[->]
+        \draw (Substance) to (MolecularWeight);
+        \draw (Substance) to (Structure);
+        \draw (Substance) to (SubstanceName);
+        \draw[loop,] (Substance) to (Substance);
+        \draw (SubstanceName) to (LanguageIdentifier);
+        \draw (SubstanceName) to (Substance);
+        \draw (SubstanceName) to (GeographicRegionIdentifier);
+        \draw (SubstanceName) to (SubstanceNameDomain);
+        \draw (SubstanceName) to (Reference);
+        \draw (SubstanceName) to (<class 'rdflib.term.Literal'>);
+        \draw (LanguageIdentifier) to (Language);
+        \draw (LanguageIdentifier) to (XMLSchemastring);
+        \draw (Language) to (rdf-schemaLiteral);
+        \draw (Language) to (owlThing);
+        \draw (GeographicRegionIdentifier) to (GeographicRegion);
+        \draw (GeographicRegionIdentifier) to (XMLSchemastring);
+        \draw (SubstanceNameDomain) to (SubstanceName);
+      \end{scope}
+    \end{tikzpicture}
+\end{figure}
+\end{document}
