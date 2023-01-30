@@ -7,37 +7,55 @@ from compare.comparision_config import ComparisionConfig
 from owl_helpers.resource_identifiers import identify_resource
 
 
-def compare_ontology_revisions(ontology_revision_left_location: str, ontology_revision_right_location: str, ontology_name: str, verbose=False) -> tuple:
+def compare_ontology_revisions(
+        ontology_revision_left_location: str,
+        ontology_revision_right_location: str,
+        ontology_name: str,
+        config: ComparisionConfig) -> tuple:
     ontology_1 = Graph()
     if len(ontology_revision_left_location) > 0:
         ontology_1.parse(ontology_revision_left_location)
     ontology_2 = Graph()
     if len(ontology_revision_right_location) > 0:
         ontology_2.parse(ontology_revision_right_location)
-    config = ComparisionConfig(verbose=verbose)
     
-    diff_resources = compare_ontological_resources(ontology_name,ontology_1, ontology_2, config)
-    diff_axioms_for_same_subjects = compare_axioms_for_same_subjects(ontology_name,ontology_1, ontology_2, config)
+    diff_resources = compare_ontological_resources(ontology_name, ontology_1, ontology_2, config)
+    diff_axioms_for_same_subjects = compare_axioms_for_same_subjects(ontology_name, ontology_1, ontology_2, config)
     return diff_resources, diff_axioms_for_same_subjects
-    
-    
-def compare_ontological_resources(ontology_name: str,ontology_1: Graph, ontology_2: Graph, config: ComparisionConfig) -> dict:
+
+
+def compare_ontological_resources(ontology_name: str, ontology_1: Graph, ontology_2: Graph, config: ComparisionConfig) -> dict:
     diff_classes = compare_iris_in_type(ontology_1, ontology_2, OWL.Class, config)
     diff_object_properties = compare_iris_in_type(ontology_1, ontology_2, OWL.ObjectProperty, config)
     diff_datatype_properties = compare_iris_in_type(ontology_1, ontology_2, OWL.DatatypeProperty, config)
     diff_annotation_properties = compare_iris_in_type(ontology_1, ontology_2, OWL.DatatypeProperty, config)
     diff_individuals = compare_iris_in_type(ontology_1, ontology_2, OWL.NamedIndividual, config)
     diff_datatypes = compare_iris_in_type(ontology_1, ontology_2, RDFS.Datatype, config)
-    diff_dict_list = [diff_classes, diff_object_properties, diff_datatype_properties, diff_annotation_properties, diff_individuals, diff_datatypes]
+    
+    diff_dict_list = \
+        [
+            diff_classes,
+            diff_object_properties,
+            diff_datatype_properties,
+            diff_annotation_properties,
+            diff_individuals,
+            diff_datatypes]
+    
     non_empty_diff_dict_list = [diff_dict for diff_dict in diff_dict_list if len(diff_dict) > 0]
-    diff_dict = {ONTOLOGY_NAME_KEY: ontology_name, ONTOLOGY_DIFF_KEY: non_empty_diff_dict_list}
-    return diff_dict
+    if config.strict:
+        if len(non_empty_diff_dict_list) > 0:
+            diffs_dict = {ONTOLOGY_NAME_KEY: ontology_name, ONTOLOGY_DIFF_KEY: non_empty_diff_dict_list}
+        else:
+            diffs_dict = dict()
+    else:
+        diffs_dict = {ONTOLOGY_NAME_KEY: ontology_name, ONTOLOGY_DIFF_KEY: non_empty_diff_dict_list}
+    return diffs_dict
 
 
 def compare_axioms_for_same_subjects(ontology_name: str, ontology_1: Graph, ontology_2: Graph, config: ComparisionConfig) -> dict:
     identifiable_subjects_1 = get_subjects(ontology_1, True)
     identifiable_subjects_2 = get_subjects(ontology_2, True)
-    diffs = list()
+    diffs_dict_list = list()
     
     common_subjects = identifiable_subjects_1.intersection(identifiable_subjects_2)
     for common_identifiable_subject in common_subjects:
@@ -45,7 +63,7 @@ def compare_axioms_for_same_subjects(ontology_name: str, ontology_1: Graph, onto
         
         property_object_tuples_1 = set(ontology_1.predicate_objects(subject=common_identifiable_subject))
         property_object_tuples_2 = set(ontology_2.predicate_objects(subject=common_identifiable_subject))
-    
+        
         identifiable_property_object_tuples_1 = identify_property_object_tuples(property_object_tuples_1, ontology_1)
         identifiable_property_object_tuples_2 = identify_property_object_tuples(property_object_tuples_2, ontology_2)
         identifiable_property_object_tuples_1_and_not_2 = list(identifiable_property_object_tuples_1.difference(identifiable_property_object_tuples_2))
@@ -57,30 +75,37 @@ def compare_axioms_for_same_subjects(ontology_name: str, ontology_1: Graph, onto
         
         if not config.verbose:
             diff = diff | \
-                {
-                    'subject': common_identifiable_subject,
-                    LEFT_BUT_NOT_RIGHT_COUNT: len(identifiable_property_object_tuples_1_and_not_2),
-                    RIGHT_BUT_NOT_LEFT_COUNT: len(identifiable_property_object_tuples_2_and_not_1)
-                }
+                   {
+                       'subject': common_identifiable_subject,
+                       LEFT_BUT_NOT_RIGHT_COUNT: len(identifiable_property_object_tuples_1_and_not_2),
+                       RIGHT_BUT_NOT_LEFT_COUNT: len(identifiable_property_object_tuples_2_and_not_1)
+                   }
         else:
             diff = diff | \
-                {
-                    'subject': common_identifiable_subject,
-                    LEFT_BUT_NOT_RIGHT: identifiable_property_object_tuples_1_and_not_2,
-                    RIGHT_BUT_NOT_LEFT: identifiable_property_object_tuples_2_and_not_1,
-                }
+                   {
+                       'subject': common_identifiable_subject,
+                       LEFT_BUT_NOT_RIGHT: identifiable_property_object_tuples_1_and_not_2,
+                       RIGHT_BUT_NOT_LEFT: identifiable_property_object_tuples_2_and_not_1,
+                   }
         
         if config.show_common:
-            identifiable_property_object_tuples_1_and_2 = list(identifiable_property_object_tuples_1.intersection(identifiable_property_object_tuples_2))
+            identifiable_property_object_tuples_1_and_2 = list(
+                identifiable_property_object_tuples_1.intersection(identifiable_property_object_tuples_2))
             if not config.verbose:
                 diff = diff | {BOTH_COUNT: len(identifiable_property_object_tuples_1_and_2)}
             else:
                 diff = diff | {BOTH: identifiable_property_object_tuples_1_and_2}
-        diffs.append(diff)
-
-    diff_dict = {ONTOLOGY_NAME_KEY: ontology_name, ONTOLOGY_DIFF_KEY: diffs}
+        diffs_dict_list.append(diff)
     
-    return diff_dict
+    if config.strict:
+        if len(diffs_dict_list) > 0:
+            diffs_dict = {ONTOLOGY_NAME_KEY: ontology_name, ONTOLOGY_DIFF_KEY: diffs_dict_list}
+        else:
+            diffs_dict = dict()
+    else:
+        diffs_dict = {ONTOLOGY_NAME_KEY: ontology_name, ONTOLOGY_DIFF_KEY: diffs_dict_list}
+    
+    return diffs_dict
 
 
 def compare_iris_in_type(ontology_1: Graph, ontology_2: Graph, ontology_type, config: ComparisionConfig) -> dict:
@@ -107,7 +132,7 @@ def compare_iris_in_type(ontology_1: Graph, ontology_2: Graph, ontology_type, co
     else:
         diff_dict = \
             {
-                'type' : str(ontology_type),
+                'type': str(ontology_type),
                 LEFT_BUT_NOT_RIGHT: diff_1_minus_2,
                 RIGHT_BUT_NOT_LEFT: diff_2_minus_1
             }
@@ -129,8 +154,7 @@ def identify_property_object_tuples(property_object_tuples: set, ontology: Graph
         identifiable_triple_object = identify_resource(triple_object, ontology)
         identifiable_property_object_tuples.add(tuple([property, identifiable_triple_object]))
     return identifiable_property_object_tuples
-  
-  
+
 
 def get_subjects(ontology: Graph, only_identifiable=False) -> set:
     subjects = set()
@@ -140,26 +164,22 @@ def get_subjects(ontology: Graph, only_identifiable=False) -> set:
                 subjects.add(subject)
         else:
             subjects.add(subject)
-            
+    
     return subjects
 
-    
+
 def filter_predicate_object_tuples_to_identifiable_objects(predicate_object_tuples: set) -> set:
     identifiable_predicate_object_tuples = set()
     for predicate_object_tuple in predicate_object_tuples:
         object = predicate_object_tuple[1]
-        if isinstance(object,URIRef) or isinstance(object, Literal):
+        if isinstance(object, URIRef) or isinstance(object, Literal):
             identifiable_predicate_object_tuples.add(predicate_object_tuple)
     return identifiable_predicate_object_tuples
-    
-    
+
+
 def filter_to_iris(resources) -> set:
     iris = set()
     for resource in resources:
         if isinstance(resource, URIRef):
             iris.add(resource)
     return iris
-
-#
-# # compare_ontologies('/Users/pawel.garbacz/Desktop/ontology-autonomous-driving.ttl', '/Users/pawel.garbacz/Desktop/VehicleAutomationLevels.ttl', 'test')
-# compare_ontologies('resources/AboutIDMPDevMerged_v0.1.0.ttl', 'resources/AboutIDMPDevMerged_latest.ttl', 'test')

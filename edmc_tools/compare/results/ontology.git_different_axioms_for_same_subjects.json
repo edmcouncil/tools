@@ -1,591 +1,3254 @@
 [
-    {
-        "ontology": "SupplyChainReferenceOntology",
-        "delta": [
-            {
-                "subject": "https://spec.industrialontologies.org/ontology/supplychain/SupplyChainReferenceOntology/GroupOfSuppliers",
-                "left and not right count": 1,
-                "right and not left count": 1,
-                "both right and left count": 10
-            },
-            {
-                "subject": "https://spec.industrialontologies.org/ontology/supplychain/SupplyChainReferenceOntology/LogisticsService",
-                "left and not right count": 1,
-                "right and not left count": 1,
-                "both right and left count": 8
-            },
-            {
-                "subject": "https://spec.industrialontologies.org/ontology/supplychain/SupplyChainReferenceOntology/Manufacturer",
-                "left and not right count": 1,
-                "right and not left count": 1,
-                "both right and left count": 7
-            },
-            {
-                "subject": "https://spec.industrialontologies.org/ontology/supplychain/SupplyChainReferenceOntology/SupplyChainAgentRole",
-                "left and not right count": 1,
-                "right and not left count": 1,
-                "both right and left count": 5
-            },
-            {
-                "subject": "https://spec.industrialontologies.org/ontology/supplychain/SupplyChainReferenceOntology/ShipFromLocationRole",
-                "left and not right count": 1,
-                "right and not left count": 1,
-                "both right and left count": 6
-            },
-            {
-                "subject": "https://spec.industrialontologies.org/ontology/supplychain/SupplyChainReferenceOntology/SupplyChainNodeRole",
-                "left and not right count": 1,
-                "right and not left count": 1,
-                "both right and left count": 6
-            },
-            {
-                "subject": "https://spec.industrialontologies.org/ontology/supplychain/SupplyChainReferenceOntology/CargoRole",
-                "left and not right count": 1,
-                "right and not left count": 1,
-                "both right and left count": 7
-            },
-            {
-                "subject": "https://spec.industrialontologies.org/ontology/supplychain/SupplyChainReferenceOntology/ProductionCapability",
-                "left and not right count": 1,
-                "right and not left count": 1,
-                "both right and left count": 8
-            },
-            {
-                "subject": "https://spec.industrialontologies.org/ontology/supplychain/SupplyChainReferenceOntology/RetailerRole",
-                "left and not right count": 3,
-                "right and not left count": 3,
-                "both right and left count": 10
-            },
-            {
-                "subject": "https://spec.industrialontologies.org/ontology/supplychain/SupplyChainReferenceOntology/ArrivalProcess",
-                "left and not right count": 2,
-                "right and not left count": 2,
-                "both right and left count": 5
-            },
-            {
-                "subject": "https://spec.industrialontologies.org/ontology/supplychain/SupplyChainReferenceOntology/GlobalLocationNumber",
-                "left and not right count": 1,
-                "right and not left count": 1,
-                "both right and left count": 11
-            },
-            {
-                "subject": "https://spec.industrialontologies.org/ontology/supplychain/SupplyChainReferenceOntology/",
-                "left and not right count": 2,
-                "right and not left count": 2,
-                "both right and left count": 18
-            },
-            {
-                "subject": "https://spec.industrialontologies.org/ontology/supplychain/SupplyChainReferenceOntology/ConsigneeRole",
-                "left and not right count": 1,
-                "right and not left count": 1,
-                "both right and left count": 8
-            },
-            {
-                "subject": "https://spec.industrialontologies.org/ontology/supplychain/SupplyChainReferenceOntology/LogisticsServiceProvider",
-                "left and not right count": 1,
-                "right and not left count": 1,
-                "both right and left count": 8
-            },
-            {
-                "subject": "https://spec.industrialontologies.org/ontology/supplychain/SupplyChainReferenceOntology/WholesalerRole",
-                "left and not right count": 3,
-                "right and not left count": 3,
-                "both right and left count": 10
-            },
-            {
-                "subject": "https://spec.industrialontologies.org/ontology/supplychain/SupplyChainReferenceOntology/LotRole",
-                "left and not right count": 1,
-                "right and not left count": 1,
-                "both right and left count": 9
-            },
-            {
-                "subject": "https://spec.industrialontologies.org/ontology/supplychain/SupplyChainReferenceOntology/IndustrialInventoryRole",
-                "left and not right count": 1,
-                "right and not left count": 1,
-                "both right and left count": 8
-            },
-            {
-                "subject": "https://spec.industrialontologies.org/ontology/supplychain/SupplyChainReferenceOntology/ManufacturingSupplyChain",
-                "left and not right count": 1,
-                "right and not left count": 1,
-                "both right and left count": 6
-            },
-            {
-                "subject": "https://spec.industrialontologies.org/ontology/supplychain/SupplyChainReferenceOntology/StorageCapability",
-                "left and not right count": 1,
-                "right and not left count": 1,
-                "both right and left count": 8
-            },
-            {
-                "subject": "https://spec.industrialontologies.org/ontology/supplychain/SupplyChainReferenceOntology/DepartureProcess",
-                "left and not right count": 2,
-                "right and not left count": 2,
-                "both right and left count": 5
-            },
-            {
-                "subject": "https://spec.industrialontologies.org/ontology/supplychain/SupplyChainReferenceOntology/ShipmentRole",
-                "left and not right count": 1,
-                "right and not left count": 1,
-                "both right and left count": 8
-            },
-            {
-                "subject": "https://spec.industrialontologies.org/ontology/supplychain/SupplyChainReferenceOntology/DistributorRole",
-                "left and not right count": 3,
-                "right and not left count": 3,
-                "both right and left count": 10
-            },
-            {
-                "subject": "https://spec.industrialontologies.org/ontology/supplychain/SupplyChainReferenceOntology/FreightForwarderRole",
-                "left and not right count": 1,
-                "right and not left count": 1,
-                "both right and left count": 6
-            },
-            {
-                "subject": "https://spec.industrialontologies.org/ontology/supplychain/SupplyChainReferenceOntology/SupplyChainSystem",
-                "left and not right count": 1,
-                "right and not left count": 1,
-                "both right and left count": 9
-            },
-            {
-                "subject": "https://spec.industrialontologies.org/ontology/supplychain/SupplyChainReferenceOntology/LoadRole",
-                "left and not right count": 1,
-                "right and not left count": 1,
-                "both right and left count": 8
-            },
-            {
-                "subject": "https://spec.industrialontologies.org/ontology/supplychain/SupplyChainReferenceOntology/InventoryRole",
-                "left and not right count": 1,
-                "right and not left count": 1,
-                "both right and left count": 7
-            },
-            {
-                "subject": "https://spec.industrialontologies.org/ontology/supplychain/SupplyChainReferenceOntology/TravelProcess",
-                "left and not right count": 1,
-                "right and not left count": 1,
-                "both right and left count": 7
-            },
-            {
-                "subject": "https://spec.industrialontologies.org/ontology/supplychain/service/ServiceOntology/ManufacturingServiceProviderRole",
-                "left and not right count": 1,
-                "right and not left count": 1,
-                "both right and left count": 8
-            },
-            {
-                "subject": "https://spec.industrialontologies.org/ontology/supplychain/SupplyChainReferenceOntology/PackagingServiceProviderRole",
-                "left and not right count": 1,
-                "right and not left count": 1,
-                "both right and left count": 5
-            },
-            {
-                "subject": "https://spec.industrialontologies.org/ontology/supplychain/SupplyChainReferenceOntology/LocationIdentificationScheme",
-                "left and not right count": 1,
-                "right and not left count": 1,
-                "both right and left count": 6
-            },
-            {
-                "subject": "https://spec.industrialontologies.org/ontology/supplychain/SupplyChainReferenceOntology/SupplyChainProcess",
-                "left and not right count": 1,
-                "right and not left count": 1,
-                "both right and left count": 6
-            },
-            {
-                "subject": "https://spec.industrialontologies.org/ontology/supplychain/SupplyChainReferenceOntology/StorageServiceProviderRole",
-                "left and not right count": 1,
-                "right and not left count": 1,
-                "both right and left count": 5
-            },
-            {
-                "subject": "https://spec.industrialontologies.org/ontology/supplychain/SupplyChainReferenceOntology/ConsignorRole",
-                "left and not right count": 2,
-                "right and not left count": 2,
-                "both right and left count": 9
-            },
-            {
-                "subject": "https://spec.industrialontologies.org/ontology/supplychain/SupplyChainReferenceOntology/ShipToLocationRole",
-                "left and not right count": 1,
-                "right and not left count": 1,
-                "both right and left count": 7
-            },
-            {
-                "subject": "https://spec.industrialontologies.org/ontology/supplychain/SupplyChainReferenceOntology/LogisticsProcess",
-                "left and not right count": 1,
-                "right and not left count": 1,
-                "both right and left count": 6
-            },
-            {
-                "subject": "https://spec.industrialontologies.org/ontology/supplychain/SupplyChainReferenceOntology/LocationRole",
-                "left and not right count": 1,
-                "right and not left count": 1,
-                "both right and left count": 7
-            },
-            {
-                "subject": "https://spec.industrialontologies.org/ontology/supplychain/SupplyChainReferenceOntology/TransportationServiceProviderRole",
-                "left and not right count": 1,
-                "right and not left count": 1,
-                "both right and left count": 5
-            }
+  {
+    "ontology": "SupplyChainReferenceOntology",
+    "delta": [
+      {
+        "subject": "https://spec.industrialontologies.org/ontology/supplychain/SupplyChainReferenceOntology/SupplyChainAgentRole",
+        "left and not right": [
+          [
+            "http://www.w3.org/2002/07/owl#equivalentClass",
+            [
+              [
+                "http://www.w3.org/2002/07/owl#intersectionOf",
+                "https://spec.industrialontologies.org/ontology/core/Core/AgentRole",
+                [
+                  "http://purl.obolibrary.org/obo/BFO_0000054",
+                  "http://www.w3.org/2002/07/owl#someValuesFrom",
+                  "https://spec.industrialontologies.org/ontology/supplychain/SupplyChainReferenceOntology/SupplyChainProcess",
+                  "http://www.w3.org/2002/07/owl#cardinality",
+                  1
+                ],
+                [
+                  "https://spec.industrialontologies.org/ontology/core/Core/roleOf",
+                  "http://www.w3.org/2002/07/owl#someValuesFrom",
+                  "Nd147b3ca009d4c49aa5c6731e3c757f4",
+                  "http://www.w3.org/2002/07/owl#cardinality",
+                  1
+                ]
+              ]
+            ]
+          ]
+        ],
+        "right and not left": [
+          [
+            "http://www.w3.org/2002/07/owl#equivalentClass",
+            [
+              [
+                "http://www.w3.org/2002/07/owl#intersectionOf",
+                "https://spec.industrialontologies.org/ontology/core/Core/AgentRole",
+                [
+                  "http://purl.obolibrary.org/obo/BFO_0000054",
+                  "http://www.w3.org/2002/07/owl#someValuesFrom",
+                  "https://spec.industrialontologies.org/ontology/supplychain/SupplyChainReferenceOntology/SupplyChainProcess",
+                  "http://www.w3.org/2002/07/owl#cardinality",
+                  1
+                ],
+                [
+                  "https://spec.industrialontologies.org/ontology/core/Core/roleOf",
+                  "http://www.w3.org/2002/07/owl#someValuesFrom",
+                  "Ne5fb47ee6bb0404bbd4c1d5460b50383",
+                  "http://www.w3.org/2002/07/owl#cardinality",
+                  1
+                ]
+              ]
+            ]
+          ]
         ]
-    },
-    {
-        "ontology": "Collections",
-        "delta": []
-    },
-    {
-        "ontology": "Identifiers",
-        "delta": []
-    },
-    {
-        "ontology": "MappingCommonsToIOF",
-        "delta": []
-    },
-    {
-        "ontology": "core",
-        "delta": [
-            {
-                "subject": "http://www.industrialontologies.org/ontology/core/Core/AgentiveProcess",
-                "left and not right count": 1,
-                "right and not left count": 1,
-                "both right and left count": 9
-            }
+      },
+      {
+        "subject": "https://spec.industrialontologies.org/ontology/supplychain/SupplyChainReferenceOntology/ArrivalProcess",
+        "left and not right": [
+          [
+            "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+            [
+              "http://purl.obolibrary.org/obo/BFO_0000199",
+              "http://www.w3.org/2002/07/owl#someValuesFrom",
+              "Nd21497a6f55541d6b698ef44acdba73f",
+              "http://www.w3.org/2002/07/owl#cardinality",
+              1
+            ]
+          ],
+          [
+            "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+            [
+              "http://purl.obolibrary.org/obo/BFO_0000132",
+              "http://www.w3.org/2002/07/owl#someValuesFrom",
+              "Nc98efaeb5346462b86d6d25bffc705dd",
+              "http://www.w3.org/2002/07/owl#cardinality",
+              1
+            ]
+          ]
+        ],
+        "right and not left": [
+          [
+            "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+            [
+              "http://purl.obolibrary.org/obo/BFO_0000132",
+              "http://www.w3.org/2002/07/owl#someValuesFrom",
+              "Nc9a2e689e6a64ea8a6014d65c5753713",
+              "http://www.w3.org/2002/07/owl#cardinality",
+              1
+            ]
+          ],
+          [
+            "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+            [
+              "http://purl.obolibrary.org/obo/BFO_0000199",
+              "http://www.w3.org/2002/07/owl#someValuesFrom",
+              "N8a766be6e36649cdbc3a479a06d87d0e",
+              "http://www.w3.org/2002/07/owl#cardinality",
+              1
+            ]
+          ]
         ]
-    },
-    {
-        "ontology": "AboutIOFDev",
-        "delta": [
-            {
-                "subject": "https://spec.industrialontologies.org/ontology/AboutIOFDev/",
-                "left and not right count": 6,
-                "right and not left count": 3,
-                "both right and left count": 8
-            }
+      },
+      {
+        "subject": "https://spec.industrialontologies.org/ontology/supplychain/SupplyChainReferenceOntology/DistributorRole",
+        "left and not right": [
+          [
+            "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+            [
+              "https://spec.industrialontologies.org/ontology/core/Core/roleOf",
+              "http://www.w3.org/2002/07/owl#someValuesFrom",
+              "N9cb1f9fabf70450daf8a7da11fbbdde2",
+              "http://www.w3.org/2002/07/owl#cardinality",
+              1
+            ]
+          ],
+          [
+            "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+            [
+              "https://spec.industrialontologies.org/ontology/core/Core/roleOf",
+              "http://www.w3.org/2002/07/owl#someValuesFrom",
+              "N5a0c305c298b48ada08dc0ea9781d969",
+              "http://www.w3.org/2002/07/owl#cardinality",
+              1
+            ]
+          ],
+          [
+            "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+            [
+              "https://spec.industrialontologies.org/ontology/core/Core/roleOf",
+              "http://www.w3.org/2002/07/owl#someValuesFrom",
+              "Ne0556b16f3b7451ea87dae13e03c23db",
+              "http://www.w3.org/2002/07/owl#cardinality",
+              1
+            ]
+          ]
+        ],
+        "right and not left": [
+          [
+            "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+            [
+              "https://spec.industrialontologies.org/ontology/core/Core/roleOf",
+              "http://www.w3.org/2002/07/owl#someValuesFrom",
+              "N8983d28c27604f8f8d48f4fea429ad15",
+              "http://www.w3.org/2002/07/owl#cardinality",
+              1
+            ]
+          ],
+          [
+            "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+            [
+              "https://spec.industrialontologies.org/ontology/core/Core/roleOf",
+              "http://www.w3.org/2002/07/owl#someValuesFrom",
+              "Nee4e9919ab22455cb2e39ab38ad2c70a",
+              "http://www.w3.org/2002/07/owl#cardinality",
+              1
+            ]
+          ],
+          [
+            "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+            [
+              "https://spec.industrialontologies.org/ontology/core/Core/roleOf",
+              "http://www.w3.org/2002/07/owl#someValuesFrom",
+              "Nd5bd62384ca34cb4b4b174ef11057e6f",
+              "http://www.w3.org/2002/07/owl#cardinality",
+              1
+            ]
+          ]
         ]
-    },
-    {
-        "ontology": "MappingAnnotationVocabularyToCommons",
-        "delta": []
-    },
-    {
-        "ontology": "mfg-planning",
-        "delta": [
-            {
-                "subject": "http://simpom.ohio.edu/mfg-planning/",
-                "left and not right count": 2,
-                "right and not left count": 1,
-                "both right and left count": 4
-            }
+      },
+      {
+        "subject": "https://spec.industrialontologies.org/ontology/supplychain/SupplyChainReferenceOntology/SupplyChainNodeRole",
+        "left and not right": [
+          [
+            "http://www.w3.org/2002/07/owl#equivalentClass",
+            [
+              [
+                "http://www.w3.org/2002/07/owl#intersectionOf",
+                "https://spec.industrialontologies.org/ontology/supplychain/SupplyChainReferenceOntology/LocationRole",
+                [
+                  "https://spec.industrialontologies.org/ontology/core/Core/roleOf",
+                  "http://www.w3.org/2002/07/owl#someValuesFrom",
+                  "Nbb6e2affe7a14df9bf1c028ea38ea8af",
+                  "http://www.w3.org/2002/07/owl#cardinality",
+                  1
+                ]
+              ]
+            ]
+          ]
+        ],
+        "right and not left": [
+          [
+            "http://www.w3.org/2002/07/owl#equivalentClass",
+            [
+              [
+                "http://www.w3.org/2002/07/owl#intersectionOf",
+                "https://spec.industrialontologies.org/ontology/supplychain/SupplyChainReferenceOntology/LocationRole",
+                [
+                  "https://spec.industrialontologies.org/ontology/core/Core/roleOf",
+                  "http://www.w3.org/2002/07/owl#someValuesFrom",
+                  "N4f6770d901134621aeabf9294f0c4cec",
+                  "http://www.w3.org/2002/07/owl#cardinality",
+                  1
+                ]
+              ]
+            ]
+          ]
         ]
-    },
-    {
-        "ontology": "TextDatatype",
-        "delta": []
-    },
-    {
-        "ontology": "Designators",
-        "delta": []
-    },
-    {
-        "ontology": "AboutIOFProd",
-        "delta": [
-            {
-                "subject": "https://spec.industrialontologies.org/ontology/AboutIOFProd/",
-                "left and not right count": 5,
-                "right and not left count": 1,
-                "both right and left count": 7
-            }
+      },
+      {
+        "subject": "https://spec.industrialontologies.org/ontology/supplychain/SupplyChainReferenceOntology/IndustrialInventoryRole",
+        "left and not right": [
+          [
+            "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+            [
+              "https://spec.industrialontologies.org/ontology/core/Core/roleOf",
+              "http://www.w3.org/2002/07/owl#someValuesFrom",
+              "Ne42548b91a6b4a9b8f654a7bd264004e",
+              "http://www.w3.org/2002/07/owl#cardinality",
+              1
+            ]
+          ]
+        ],
+        "right and not left": [
+          [
+            "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+            [
+              "https://spec.industrialontologies.org/ontology/core/Core/roleOf",
+              "http://www.w3.org/2002/07/owl#someValuesFrom",
+              "Nfb0ff3b1729640a8acfc602dbdfc0099",
+              "http://www.w3.org/2002/07/owl#cardinality",
+              1
+            ]
+          ]
         ]
-    },
-    {
-        "ontology": "AboutCommons",
-        "delta": []
-    },
-    {
-        "ontology": "Core",
-        "delta": [
-            {
-                "subject": "https://spec.industrialontologies.org/ontology/core/Core/ComputingProcess",
-                "left and not right count": 1,
-                "right and not left count": 1,
-                "both right and left count": 13
-            },
-            {
-                "subject": "https://spec.industrialontologies.org/ontology/core/Core/ProductProductionProcess",
-                "left and not right count": 1,
-                "right and not left count": 1,
-                "both right and left count": 10
-            },
-            {
-                "subject": "https://spec.industrialontologies.org/ontology/core/Core/AgentRole",
-                "left and not right count": 1,
-                "right and not left count": 1,
-                "both right and left count": 12
-            },
-            {
-                "subject": "https://spec.industrialontologies.org/ontology/core/Core/SellingBusinessProcess",
-                "left and not right count": 1,
-                "right and not left count": 1,
-                "both right and left count": 12
-            },
-            {
-                "subject": "https://spec.industrialontologies.org/ontology/core/Core/ServiceProviderRole",
-                "left and not right count": 1,
-                "right and not left count": 1,
-                "both right and left count": 10
-            },
-            {
-                "subject": "https://spec.industrialontologies.org/ontology/core/Core/MeasuredValueExpression",
-                "left and not right count": 1,
-                "right and not left count": 1,
-                "both right and left count": 10
-            },
-            {
-                "subject": "https://spec.industrialontologies.org/ontology/core/Core/RawMaterialRole",
-                "left and not right count": 2,
-                "right and not left count": 2,
-                "both right and left count": 12
-            },
-            {
-                "subject": "https://spec.industrialontologies.org/ontology/core/Core/MeasurementInformationContentEntity",
-                "left and not right count": 1,
-                "right and not left count": 1,
-                "both right and left count": 11
-            },
-            {
-                "subject": "https://spec.industrialontologies.org/ontology/core/Core/SupplierRole",
-                "left and not right count": 1,
-                "right and not left count": 1,
-                "both right and left count": 10
-            },
-            {
-                "subject": "https://spec.industrialontologies.org/ontology/core/Core/ProcuringBusinessProcess",
-                "left and not right count": 1,
-                "right and not left count": 1,
-                "both right and left count": 9
-            },
-            {
-                "subject": "https://spec.industrialontologies.org/ontology/core/Core/BuyingBusinessProcess",
-                "left and not right count": 1,
-                "right and not left count": 1,
-                "both right and left count": 12
-            },
-            {
-                "subject": "https://spec.industrialontologies.org/ontology/core/Core/EquipmentRole",
-                "left and not right count": 2,
-                "right and not left count": 2,
-                "both right and left count": 12
-            },
-            {
-                "subject": "https://spec.industrialontologies.org/ontology/core/Core/MaterialProductRole",
-                "left and not right count": 1,
-                "right and not left count": 1,
-                "both right and left count": 10
-            },
-            {
-                "subject": "https://spec.industrialontologies.org/ontology/core/Core/MeasurementProcess",
-                "left and not right count": 1,
-                "right and not left count": 1,
-                "both right and left count": 12
-            },
-            {
-                "subject": "https://spec.industrialontologies.org/ontology/core/Core/BusinessFunction",
-                "left and not right count": 1,
-                "right and not left count": 1,
-                "both right and left count": 15
-            },
-            {
-                "subject": "https://spec.industrialontologies.org/ontology/core/Core/MaterialResourceRole",
-                "left and not right count": 1,
-                "right and not left count": 1,
-                "both right and left count": 10
-            },
-            {
-                "subject": "https://spec.industrialontologies.org/ontology/core/Core/AssemblyProcess",
-                "left and not right count": 1,
-                "right and not left count": 1,
-                "both right and left count": 12
-            },
-            {
-                "subject": "https://spec.industrialontologies.org/ontology/core/Core/CustomerRole",
-                "left and not right count": 1,
-                "right and not left count": 1,
-                "both right and left count": 10
-            },
-            {
-                "subject": "https://spec.industrialontologies.org/ontology/core/Core/ManufacturingProcess",
-                "left and not right count": 2,
-                "right and not left count": 2,
-                "both right and left count": 13
-            },
-            {
-                "subject": "https://spec.industrialontologies.org/ontology/core/Core/OrganizedGroupOfAgents",
-                "left and not right count": 1,
-                "right and not left count": 1,
-                "both right and left count": 8
-            },
-            {
-                "subject": "https://spec.industrialontologies.org/ontology/core/Core/BusinessProcess",
-                "left and not right count": 2,
-                "right and not left count": 2,
-                "both right and left count": 11
-            },
-            {
-                "subject": "https://spec.industrialontologies.org/ontology/core/Core/MaterialLocationChangeProcess",
-                "left and not right count": 1,
-                "right and not left count": 1,
-                "both right and left count": 12
-            },
-            {
-                "subject": "https://spec.industrialontologies.org/ontology/core/Core/MaterialArtifact",
-                "left and not right count": 1,
-                "right and not left count": 1,
-                "both right and left count": 8
-            },
-            {
-                "subject": "https://spec.industrialontologies.org/ontology/core/Core/ManufacturerRole",
-                "left and not right count": 1,
-                "right and not left count": 1,
-                "both right and left count": 10
-            },
-            {
-                "subject": "https://spec.industrialontologies.org/ontology/core/Core/Assembly",
-                "left and not right count": 1,
-                "right and not left count": 1,
-                "both right and left count": 15
-            },
-            {
-                "subject": "https://spec.industrialontologies.org/ontology/core/Core/",
-                "left and not right count": 1,
-                "right and not left count": 1,
-                "both right and left count": 21
-            },
-            {
-                "subject": "https://spec.industrialontologies.org/ontology/core/Core/BuyerRole",
-                "left and not right count": 1,
-                "right and not left count": 1,
-                "both right and left count": 10
-            }
+      },
+      {
+        "subject": "https://spec.industrialontologies.org/ontology/supplychain/SupplyChainReferenceOntology/LocationIdentificationScheme",
+        "left and not right": [
+          [
+            "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+            [
+              [
+                "http://www.w3.org/2002/07/owl#intersectionOf",
+                "https://www.omg.org/spec/Commons/Identifiers/IdentificationScheme",
+                [
+                  "https://spec.industrialontologies.org/ontology/core/Core/prescribes",
+                  "http://www.w3.org/2002/07/owl#someValuesFrom",
+                  "N2aba4e1eca4a4d0eaae86912b68a8725",
+                  "http://www.w3.org/2002/07/owl#cardinality",
+                  1
+                ]
+              ]
+            ]
+          ]
+        ],
+        "right and not left": [
+          [
+            "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+            [
+              [
+                "http://www.w3.org/2002/07/owl#intersectionOf",
+                "https://www.omg.org/spec/Commons/Identifiers/IdentificationScheme",
+                [
+                  "https://spec.industrialontologies.org/ontology/core/Core/prescribes",
+                  "http://www.w3.org/2002/07/owl#someValuesFrom",
+                  "Nd4bb96938ed84a148e8919bb57f943d1",
+                  "http://www.w3.org/2002/07/owl#cardinality",
+                  1
+                ]
+              ]
+            ]
+          ]
         ]
-    },
-    {
-        "ontology": "IOF_AnnotationsVocabulary",
-        "delta": []
-    },
-    {
-        "ontology": "AnnotationVocabulary",
-        "delta": [
-            {
-                "subject": "http://purl.org/dc/terms/abstract",
-                "left and not right count": 4,
-                "right and not left count": 4,
-                "both right and left count": 2
-            },
-            {
-                "subject": "http://www.w3.org/2004/02/skos/core#scopeNote",
-                "left and not right count": 3,
-                "right and not left count": 3,
-                "both right and left count": 2
-            },
-            {
-                "subject": "http://purl.org/dc/terms/rights",
-                "left and not right count": 3,
-                "right and not left count": 4,
-                "both right and left count": 1
-            },
-            {
-                "subject": "http://purl.org/dc/terms/publisher",
-                "left and not right count": 4,
-                "right and not left count": 4,
-                "both right and left count": 1
-            },
-            {
-                "subject": "http://www.w3.org/2004/02/skos/core#note",
-                "left and not right count": 2,
-                "right and not left count": 2,
-                "both right and left count": 2
-            },
-            {
-                "subject": "http://purl.org/dc/terms/title",
-                "left and not right count": 4,
-                "right and not left count": 4,
-                "both right and left count": 1
-            },
-            {
-                "subject": "http://purl.org/dc/terms/license",
-                "left and not right count": 3,
-                "right and not left count": 4,
-                "both right and left count": 1
-            },
-            {
-                "subject": "http://purl.org/dc/terms/issued",
-                "left and not right count": 4,
-                "right and not left count": 4,
-                "both right and left count": 1
-            },
-            {
-                "subject": "http://purl.org/dc/terms/modified",
-                "left and not right count": 3,
-                "right and not left count": 3,
-                "both right and left count": 1
-            },
-            {
-                "subject": "http://www.w3.org/2004/02/skos/core#definition",
-                "left and not right count": 2,
-                "right and not left count": 2,
-                "both right and left count": 3
-            },
-            {
-                "subject": "http://purl.org/dc/terms/description",
-                "left and not right count": 4,
-                "right and not left count": 3,
-                "both right and left count": 2
-            },
-            {
-                "subject": "http://purl.org/dc/terms/references",
-                "left and not right count": 3,
-                "right and not left count": 3,
-                "both right and left count": 1
-            },
-            {
-                "subject": "http://www.w3.org/2004/02/skos/core#editorialNote",
-                "left and not right count": 2,
-                "right and not left count": 2,
-                "both right and left count": 3
-            },
-            {
-                "subject": "http://purl.org/dc/terms/contributor",
-                "left and not right count": 3,
-                "right and not left count": 3,
-                "both right and left count": 1
-            },
-            {
-                "subject": "http://www.w3.org/2004/02/skos/core#altLabel",
-                "left and not right count": 2,
-                "right and not left count": 2,
-                "both right and left count": 3
-            },
-            {
-                "subject": "http://purl.org/dc/terms/source",
-                "left and not right count": 4,
-                "right and not left count": 4,
-                "both right and left count": 1
-            },
-            {
-                "subject": "http://www.w3.org/2004/02/skos/core#example",
-                "left and not right count": 3,
-                "right and not left count": 2,
-                "both right and left count": 3
-            },
-            {
-                "subject": "http://www.w3.org/2004/02/skos/core#changeNote",
-                "left and not right count": 2,
-                "right and not left count": 2,
-                "both right and left count": 3
-            },
-            {
-                "subject": "http://purl.org/dc/terms/creator",
-                "left and not right count": 3,
-                "right and not left count": 3,
-                "both right and left count": 2
-            }
+      },
+      {
+        "subject": "https://spec.industrialontologies.org/ontology/supplychain/SupplyChainReferenceOntology/ConsigneeRole",
+        "left and not right": [
+          [
+            "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+            [
+              [
+                "http://www.w3.org/2002/07/owl#intersectionOf",
+                [
+                  "http://purl.obolibrary.org/obo/BFO_0000056",
+                  "http://www.w3.org/2002/07/owl#someValuesFrom",
+                  "N0cf08ad273ad438b97f1bf281c7053f5",
+                  "http://www.w3.org/2002/07/owl#cardinality",
+                  1
+                ],
+                [
+                  "https://spec.industrialontologies.org/ontology/core/Core/roleOf",
+                  "http://www.w3.org/2002/07/owl#someValuesFrom",
+                  "Na6f00873d49a4fd9b7f3653b444c784a",
+                  "http://www.w3.org/2002/07/owl#cardinality",
+                  1
+                ]
+              ]
+            ]
+          ]
+        ],
+        "right and not left": [
+          [
+            "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+            [
+              [
+                "http://www.w3.org/2002/07/owl#intersectionOf",
+                [
+                  "http://purl.obolibrary.org/obo/BFO_0000056",
+                  "http://www.w3.org/2002/07/owl#someValuesFrom",
+                  "Ne3b1d2d622ab4563913eed4db9df081c",
+                  "http://www.w3.org/2002/07/owl#cardinality",
+                  1
+                ],
+                [
+                  "https://spec.industrialontologies.org/ontology/core/Core/roleOf",
+                  "http://www.w3.org/2002/07/owl#someValuesFrom",
+                  "N8903cc5d71ff468f82ecebf104d739ea",
+                  "http://www.w3.org/2002/07/owl#cardinality",
+                  1
+                ]
+              ]
+            ]
+          ]
         ]
-    }
+      },
+      {
+        "subject": "https://spec.industrialontologies.org/ontology/supplychain/SupplyChainReferenceOntology/LotRole",
+        "left and not right": [
+          [
+            "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+            [
+              "https://spec.industrialontologies.org/ontology/core/Core/roleOf",
+              "http://www.w3.org/2002/07/owl#someValuesFrom",
+              "N99b0021d720f4986a88f7ad2b963c631",
+              "http://www.w3.org/2002/07/owl#cardinality",
+              1
+            ]
+          ]
+        ],
+        "right and not left": [
+          [
+            "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+            [
+              "https://spec.industrialontologies.org/ontology/core/Core/roleOf",
+              "http://www.w3.org/2002/07/owl#someValuesFrom",
+              "N4e20f245cd4c406dbc0953ae8223c870",
+              "http://www.w3.org/2002/07/owl#cardinality",
+              1
+            ]
+          ]
+        ]
+      },
+      {
+        "subject": "https://spec.industrialontologies.org/ontology/supplychain/SupplyChainReferenceOntology/ShipToLocationRole",
+        "left and not right": [
+          [
+            "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+            [
+              "https://spec.industrialontologies.org/ontology/core/Core/roleOf",
+              "http://www.w3.org/2002/07/owl#someValuesFrom",
+              "Nc6c8f6c8e91b44dc9a6539591682987a",
+              "http://www.w3.org/2002/07/owl#cardinality",
+              1
+            ]
+          ]
+        ],
+        "right and not left": [
+          [
+            "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+            [
+              "https://spec.industrialontologies.org/ontology/core/Core/roleOf",
+              "http://www.w3.org/2002/07/owl#someValuesFrom",
+              "Nfa7725082dad491db6831a60330f624f",
+              "http://www.w3.org/2002/07/owl#cardinality",
+              1
+            ]
+          ]
+        ]
+      },
+      {
+        "subject": "https://spec.industrialontologies.org/ontology/supplychain/SupplyChainReferenceOntology/LogisticsProcess",
+        "left and not right": [
+          [
+            "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+            [
+              "http://purl.obolibrary.org/obo/BFO_0000117",
+              "http://www.w3.org/2002/07/owl#someValuesFrom",
+              "Na361225befb94c489134890bfac5e1d4",
+              "http://www.w3.org/2002/07/owl#cardinality",
+              1
+            ]
+          ]
+        ],
+        "right and not left": [
+          [
+            "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+            [
+              "http://purl.obolibrary.org/obo/BFO_0000117",
+              "http://www.w3.org/2002/07/owl#someValuesFrom",
+              "Nb6d2d5d1dad6406b90540caae4653da9",
+              "http://www.w3.org/2002/07/owl#cardinality",
+              1
+            ]
+          ]
+        ]
+      },
+      {
+        "subject": "https://spec.industrialontologies.org/ontology/supplychain/SupplyChainReferenceOntology/ManufacturingSupplyChain",
+        "left and not right": [
+          [
+            "http://www.w3.org/2002/07/owl#equivalentClass",
+            [
+              [
+                "http://www.w3.org/2002/07/owl#intersectionOf",
+                "https://spec.industrialontologies.org/ontology/supplychain/SupplyChainReferenceOntology/SupplyChainSystem",
+                [
+                  "http://purl.obolibrary.org/obo/BFO_0000056",
+                  "http://www.w3.org/2002/07/owl#someValuesFrom",
+                  "Ncf897ef04d46425abc710f0079b0983d",
+                  "http://www.w3.org/2002/07/owl#cardinality",
+                  1
+                ]
+              ]
+            ]
+          ]
+        ],
+        "right and not left": [
+          [
+            "http://www.w3.org/2002/07/owl#equivalentClass",
+            [
+              [
+                "http://www.w3.org/2002/07/owl#intersectionOf",
+                "https://spec.industrialontologies.org/ontology/supplychain/SupplyChainReferenceOntology/SupplyChainSystem",
+                [
+                  "http://purl.obolibrary.org/obo/BFO_0000056",
+                  "http://www.w3.org/2002/07/owl#someValuesFrom",
+                  "N0ae31e88d7d34dbeb9fa4bcc3cae76a3",
+                  "http://www.w3.org/2002/07/owl#cardinality",
+                  1
+                ]
+              ]
+            ]
+          ]
+        ]
+      },
+      {
+        "subject": "https://spec.industrialontologies.org/ontology/supplychain/SupplyChainReferenceOntology/ConsignorRole",
+        "left and not right": [
+          [
+            "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+            [
+              "https://spec.industrialontologies.org/ontology/core/Core/roleOf",
+              "http://www.w3.org/2002/07/owl#someValuesFrom",
+              "N0184efa3eb034a138cd2b0bbf59f5905",
+              "http://www.w3.org/2002/07/owl#cardinality",
+              1
+            ]
+          ],
+          [
+            "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+            [
+              "https://spec.industrialontologies.org/ontology/core/Core/roleOf",
+              "http://www.w3.org/2002/07/owl#someValuesFrom",
+              "Nd8815333df2a4dd09e26ddff3c11bc96",
+              "http://www.w3.org/2002/07/owl#cardinality",
+              1
+            ]
+          ]
+        ],
+        "right and not left": [
+          [
+            "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+            [
+              "https://spec.industrialontologies.org/ontology/core/Core/roleOf",
+              "http://www.w3.org/2002/07/owl#someValuesFrom",
+              "Nbaefdd3c82d74c54900f0d6ded88331c",
+              "http://www.w3.org/2002/07/owl#cardinality",
+              1
+            ]
+          ],
+          [
+            "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+            [
+              "https://spec.industrialontologies.org/ontology/core/Core/roleOf",
+              "http://www.w3.org/2002/07/owl#someValuesFrom",
+              "N54aa599f093f4f57876667873de53904",
+              "http://www.w3.org/2002/07/owl#cardinality",
+              1
+            ]
+          ]
+        ]
+      },
+      {
+        "subject": "https://spec.industrialontologies.org/ontology/supplychain/SupplyChainReferenceOntology/StorageServiceProviderRole",
+        "left and not right": [
+          [
+            "http://www.w3.org/2002/07/owl#equivalentClass",
+            [
+              [
+                "http://www.w3.org/2002/07/owl#intersectionOf",
+                "https://spec.industrialontologies.org/ontology/supplychain/SupplyChainReferenceOntology/LogisticsServiceProvider",
+                [
+                  "https://spec.industrialontologies.org/ontology/core/Core/roleOf",
+                  "http://www.w3.org/2002/07/owl#someValuesFrom",
+                  "N96b01aef22454fa19d5fbee58b7e3851",
+                  "http://www.w3.org/2002/07/owl#cardinality",
+                  1
+                ]
+              ]
+            ]
+          ]
+        ],
+        "right and not left": [
+          [
+            "http://www.w3.org/2002/07/owl#equivalentClass",
+            [
+              [
+                "http://www.w3.org/2002/07/owl#intersectionOf",
+                "https://spec.industrialontologies.org/ontology/supplychain/SupplyChainReferenceOntology/LogisticsServiceProvider",
+                [
+                  "https://spec.industrialontologies.org/ontology/core/Core/roleOf",
+                  "http://www.w3.org/2002/07/owl#someValuesFrom",
+                  "N85f28a25bed04850bb87a5bb9658aca5",
+                  "http://www.w3.org/2002/07/owl#cardinality",
+                  1
+                ]
+              ]
+            ]
+          ]
+        ]
+      },
+      {
+        "subject": "https://spec.industrialontologies.org/ontology/supplychain/SupplyChainReferenceOntology/",
+        "left and not right": [
+          [
+            "http://www.w3.org/2002/07/owl#imports",
+            "https://spec.industrialontologies.org/ontology/core/commonstocoremapping/MappingCommonsToIOF/"
+          ],
+          [
+            "http://www.w3.org/2002/07/owl#imports",
+            "https://spec.industrialontologies.org/ontology/core/Core/"
+          ]
+        ],
+        "right and not left": [
+          [
+            "http://www.w3.org/2002/07/owl#imports",
+            "https://spec.industrialontologies.org/ontology/202202/core/Core/"
+          ],
+          [
+            "http://www.w3.org/2002/07/owl#imports",
+            "https://spec.industrialontologies.org/ontology/202202/core/MappingCommonsToIOFCore/"
+          ]
+        ]
+      },
+      {
+        "subject": "https://spec.industrialontologies.org/ontology/supplychain/SupplyChainReferenceOntology/GlobalLocationNumber",
+        "left and not right": [
+          [
+            "http://www.w3.org/2002/07/owl#equivalentClass",
+            [
+              [
+                "http://www.w3.org/2002/07/owl#intersectionOf",
+                "https://spec.industrialontologies.org/ontology/supplychain/SupplyChainReferenceOntology/CodeIdentifier",
+                [
+                  [
+                    "http://www.w3.org/2002/07/owl#intersectionOf",
+                    [
+                      "https://spec.industrialontologies.org/ontology/core/Core/designates",
+                      "http://www.w3.org/2002/07/owl#someValuesFrom",
+                      "N2be8ebcf3ab0437cbbc09851609d2c3f",
+                      "http://www.w3.org/2002/07/owl#cardinality",
+                      1
+                    ],
+                    [
+                      "https://spec.industrialontologies.org/ontology/core/Core/prescribedBy",
+                      "http://www.w3.org/2002/07/owl#hasValue",
+                      "https://spec.industrialontologies.org/ontology/supplychain/SupplyChainReferenceOntology/GLN_Scheme",
+                      "http://www.w3.org/2002/07/owl#cardinality",
+                      1
+                    ]
+                  ]
+                ]
+              ]
+            ]
+          ]
+        ],
+        "right and not left": [
+          [
+            "http://www.w3.org/2002/07/owl#equivalentClass",
+            [
+              [
+                "http://www.w3.org/2002/07/owl#intersectionOf",
+                "https://spec.industrialontologies.org/ontology/supplychain/SupplyChainReferenceOntology/CodeIdentifier",
+                [
+                  [
+                    "http://www.w3.org/2002/07/owl#intersectionOf",
+                    [
+                      "https://spec.industrialontologies.org/ontology/core/Core/designates",
+                      "http://www.w3.org/2002/07/owl#someValuesFrom",
+                      "N9927882d0e40460e80b95c921f653c32",
+                      "http://www.w3.org/2002/07/owl#cardinality",
+                      1
+                    ],
+                    [
+                      "https://spec.industrialontologies.org/ontology/core/Core/prescribedBy",
+                      "http://www.w3.org/2002/07/owl#hasValue",
+                      "https://spec.industrialontologies.org/ontology/supplychain/SupplyChainReferenceOntology/GLN_Scheme",
+                      "http://www.w3.org/2002/07/owl#cardinality",
+                      1
+                    ]
+                  ]
+                ]
+              ]
+            ]
+          ]
+        ]
+      },
+      {
+        "subject": "https://spec.industrialontologies.org/ontology/supplychain/SupplyChainReferenceOntology/RetailerRole",
+        "left and not right": [
+          [
+            "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+            [
+              "https://spec.industrialontologies.org/ontology/core/Core/roleOf",
+              "http://www.w3.org/2002/07/owl#someValuesFrom",
+              "N1eeaca7e3c71490184d3c0ca3c496356",
+              "http://www.w3.org/2002/07/owl#cardinality",
+              1
+            ]
+          ],
+          [
+            "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+            [
+              "https://spec.industrialontologies.org/ontology/core/Core/roleOf",
+              "http://www.w3.org/2002/07/owl#someValuesFrom",
+              "N1c712c2118ad4fb0a0f0a03930fdc673",
+              "http://www.w3.org/2002/07/owl#cardinality",
+              1
+            ]
+          ],
+          [
+            "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+            [
+              "https://spec.industrialontologies.org/ontology/core/Core/roleOf",
+              "http://www.w3.org/2002/07/owl#someValuesFrom",
+              "Nccd433614bb94ee9aea266f4b853f28e",
+              "http://www.w3.org/2002/07/owl#cardinality",
+              1
+            ]
+          ]
+        ],
+        "right and not left": [
+          [
+            "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+            [
+              "https://spec.industrialontologies.org/ontology/core/Core/roleOf",
+              "http://www.w3.org/2002/07/owl#someValuesFrom",
+              "N1e7d4033c99f4783ad67e549bf9c6e9a",
+              "http://www.w3.org/2002/07/owl#cardinality",
+              1
+            ]
+          ],
+          [
+            "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+            [
+              "https://spec.industrialontologies.org/ontology/core/Core/roleOf",
+              "http://www.w3.org/2002/07/owl#someValuesFrom",
+              "N4fe798da6c254508a3c829449641f2f4",
+              "http://www.w3.org/2002/07/owl#cardinality",
+              1
+            ]
+          ],
+          [
+            "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+            [
+              "https://spec.industrialontologies.org/ontology/core/Core/roleOf",
+              "http://www.w3.org/2002/07/owl#someValuesFrom",
+              "N165ee3733fe343788c8110e402d29653",
+              "http://www.w3.org/2002/07/owl#cardinality",
+              1
+            ]
+          ]
+        ]
+      },
+      {
+        "subject": "https://spec.industrialontologies.org/ontology/supplychain/SupplyChainReferenceOntology/ProductionCapability",
+        "left and not right": [
+          [
+            "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+            [
+              "https://spec.industrialontologies.org/ontology/core/Core/capabilityOf",
+              "http://www.w3.org/2002/07/owl#someValuesFrom",
+              "N624be7c3497841dbaf476dca963abdda",
+              "http://www.w3.org/2002/07/owl#cardinality",
+              1
+            ]
+          ]
+        ],
+        "right and not left": [
+          [
+            "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+            [
+              "https://spec.industrialontologies.org/ontology/core/Core/capabilityOf",
+              "http://www.w3.org/2002/07/owl#someValuesFrom",
+              "N7be7f7a5c9d148199f5b1cc690bacf38",
+              "http://www.w3.org/2002/07/owl#cardinality",
+              1
+            ]
+          ]
+        ]
+      },
+      {
+        "subject": "https://spec.industrialontologies.org/ontology/supplychain/SupplyChainReferenceOntology/TransportationServiceProviderRole",
+        "left and not right": [
+          [
+            "http://www.w3.org/2002/07/owl#equivalentClass",
+            [
+              [
+                "http://www.w3.org/2002/07/owl#intersectionOf",
+                "https://spec.industrialontologies.org/ontology/supplychain/SupplyChainReferenceOntology/LogisticsServiceProvider",
+                [
+                  "https://spec.industrialontologies.org/ontology/core/Core/roleOf",
+                  "http://www.w3.org/2002/07/owl#someValuesFrom",
+                  "Nd84b922c6d794ce69415a777cbf75f02",
+                  "http://www.w3.org/2002/07/owl#cardinality",
+                  1
+                ]
+              ]
+            ]
+          ]
+        ],
+        "right and not left": [
+          [
+            "http://www.w3.org/2002/07/owl#equivalentClass",
+            [
+              [
+                "http://www.w3.org/2002/07/owl#intersectionOf",
+                "https://spec.industrialontologies.org/ontology/supplychain/SupplyChainReferenceOntology/LogisticsServiceProvider",
+                [
+                  "https://spec.industrialontologies.org/ontology/core/Core/roleOf",
+                  "http://www.w3.org/2002/07/owl#someValuesFrom",
+                  "Nc8bc84db539242d78d8fe92bcaa0c4e5",
+                  "http://www.w3.org/2002/07/owl#cardinality",
+                  1
+                ]
+              ]
+            ]
+          ]
+        ]
+      },
+      {
+        "subject": "https://spec.industrialontologies.org/ontology/supplychain/SupplyChainReferenceOntology/DepartureProcess",
+        "left and not right": [
+          [
+            "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+            [
+              "http://purl.obolibrary.org/obo/BFO_0000199",
+              "http://www.w3.org/2002/07/owl#someValuesFrom",
+              "N2b72772353a14b15a0579ead13d4c638",
+              "http://www.w3.org/2002/07/owl#cardinality",
+              1
+            ]
+          ],
+          [
+            "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+            [
+              "http://purl.obolibrary.org/obo/BFO_0000132",
+              "http://www.w3.org/2002/07/owl#someValuesFrom",
+              "N73de018942a94e17b6c9d1a6e7684368",
+              "http://www.w3.org/2002/07/owl#cardinality",
+              1
+            ]
+          ]
+        ],
+        "right and not left": [
+          [
+            "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+            [
+              "http://purl.obolibrary.org/obo/BFO_0000199",
+              "http://www.w3.org/2002/07/owl#someValuesFrom",
+              "N72270c9e78e54001a7d7a729f8187302",
+              "http://www.w3.org/2002/07/owl#cardinality",
+              1
+            ]
+          ],
+          [
+            "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+            [
+              "http://purl.obolibrary.org/obo/BFO_0000132",
+              "http://www.w3.org/2002/07/owl#someValuesFrom",
+              "Ndc132df779e54f14bd76fd1bb795336f",
+              "http://www.w3.org/2002/07/owl#cardinality",
+              1
+            ]
+          ]
+        ]
+      },
+      {
+        "subject": "https://spec.industrialontologies.org/ontology/supplychain/service/ServiceOntology/ManufacturingServiceProviderRole",
+        "left and not right": [
+          [
+            "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+            [
+              "https://spec.industrialontologies.org/ontology/core/Core/roleOf",
+              "http://www.w3.org/2002/07/owl#someValuesFrom",
+              "Ne19cdb3146944ff3922b2b257b42e711",
+              "http://www.w3.org/2002/07/owl#cardinality",
+              1
+            ]
+          ]
+        ],
+        "right and not left": [
+          [
+            "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+            [
+              "https://spec.industrialontologies.org/ontology/core/Core/roleOf",
+              "http://www.w3.org/2002/07/owl#someValuesFrom",
+              "Nc1f6599c6b0949f69f3e0f75b4c0d4f6",
+              "http://www.w3.org/2002/07/owl#cardinality",
+              1
+            ]
+          ]
+        ]
+      },
+      {
+        "subject": "https://spec.industrialontologies.org/ontology/supplychain/SupplyChainReferenceOntology/FreightForwarderRole",
+        "left and not right": [
+          [
+            "http://www.w3.org/2002/07/owl#equivalentClass",
+            [
+              [
+                "http://www.w3.org/2002/07/owl#intersectionOf",
+                "https://spec.industrialontologies.org/ontology/supplychain/SupplyChainReferenceOntology/LogisticsServiceProvider",
+                [
+                  "https://spec.industrialontologies.org/ontology/core/Core/roleOf",
+                  "http://www.w3.org/2002/07/owl#someValuesFrom",
+                  "N0d7fdeb207ac46ffaa4a738b248341f9",
+                  "http://www.w3.org/2002/07/owl#cardinality",
+                  1
+                ]
+              ]
+            ]
+          ]
+        ],
+        "right and not left": [
+          [
+            "http://www.w3.org/2002/07/owl#equivalentClass",
+            [
+              [
+                "http://www.w3.org/2002/07/owl#intersectionOf",
+                "https://spec.industrialontologies.org/ontology/supplychain/SupplyChainReferenceOntology/LogisticsServiceProvider",
+                [
+                  "https://spec.industrialontologies.org/ontology/core/Core/roleOf",
+                  "http://www.w3.org/2002/07/owl#someValuesFrom",
+                  "Na33fb376f494463689bc797e839521b8",
+                  "http://www.w3.org/2002/07/owl#cardinality",
+                  1
+                ]
+              ]
+            ]
+          ]
+        ]
+      },
+      {
+        "subject": "https://spec.industrialontologies.org/ontology/supplychain/SupplyChainReferenceOntology/InventoryRole",
+        "left and not right": [
+          [
+            "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+            [
+              "https://spec.industrialontologies.org/ontology/core/Core/roleOf",
+              "http://www.w3.org/2002/07/owl#someValuesFrom",
+              "N49348f9e12234a25b638962febe10a53",
+              "http://www.w3.org/2002/07/owl#cardinality",
+              1
+            ]
+          ]
+        ],
+        "right and not left": [
+          [
+            "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+            [
+              "https://spec.industrialontologies.org/ontology/core/Core/roleOf",
+              "http://www.w3.org/2002/07/owl#someValuesFrom",
+              "N5cca6f8862a0499fa94daece40aebe8f",
+              "http://www.w3.org/2002/07/owl#cardinality",
+              1
+            ]
+          ]
+        ]
+      },
+      {
+        "subject": "https://spec.industrialontologies.org/ontology/supplychain/SupplyChainReferenceOntology/TravelProcess",
+        "left and not right": [
+          [
+            "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+            [
+              "http://purl.obolibrary.org/obo/BFO_0000167",
+              "http://www.w3.org/2002/07/owl#someValuesFrom",
+              "N168e52df8c084c958bc65da46e381606",
+              "http://www.w3.org/2002/07/owl#cardinality",
+              1
+            ]
+          ]
+        ],
+        "right and not left": [
+          [
+            "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+            [
+              "http://purl.obolibrary.org/obo/BFO_0000167",
+              "http://www.w3.org/2002/07/owl#someValuesFrom",
+              "N9cd46b5cd8e04ec8a99705220817ce72",
+              "http://www.w3.org/2002/07/owl#cardinality",
+              1
+            ]
+          ]
+        ]
+      },
+      {
+        "subject": "https://spec.industrialontologies.org/ontology/supplychain/SupplyChainReferenceOntology/LogisticsServiceProvider",
+        "left and not right": [
+          [
+            "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+            [
+              "https://spec.industrialontologies.org/ontology/core/Core/roleOf",
+              "http://www.w3.org/2002/07/owl#someValuesFrom",
+              "N7bd565e85e7349c5ac1005857a444e0a",
+              "http://www.w3.org/2002/07/owl#cardinality",
+              1
+            ]
+          ]
+        ],
+        "right and not left": [
+          [
+            "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+            [
+              "https://spec.industrialontologies.org/ontology/core/Core/roleOf",
+              "http://www.w3.org/2002/07/owl#someValuesFrom",
+              "N91889348c2d24440a8cbdcb259274743",
+              "http://www.w3.org/2002/07/owl#cardinality",
+              1
+            ]
+          ]
+        ]
+      },
+      {
+        "subject": "https://spec.industrialontologies.org/ontology/supplychain/SupplyChainReferenceOntology/ShipmentRole",
+        "left and not right": [
+          [
+            "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+            [
+              "https://spec.industrialontologies.org/ontology/core/Core/roleOf",
+              "http://www.w3.org/2002/07/owl#someValuesFrom",
+              "Na33689941eb94ecd9261497ddb5be152",
+              "http://www.w3.org/2002/07/owl#cardinality",
+              1
+            ]
+          ]
+        ],
+        "right and not left": [
+          [
+            "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+            [
+              "https://spec.industrialontologies.org/ontology/core/Core/roleOf",
+              "http://www.w3.org/2002/07/owl#someValuesFrom",
+              "Nc5af8eb828e648f093808af03df0062f",
+              "http://www.w3.org/2002/07/owl#cardinality",
+              1
+            ]
+          ]
+        ]
+      },
+      {
+        "subject": "https://spec.industrialontologies.org/ontology/supplychain/SupplyChainReferenceOntology/ShipFromLocationRole",
+        "left and not right": [
+          [
+            "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+            [
+              "https://spec.industrialontologies.org/ontology/core/Core/roleOf",
+              "http://www.w3.org/2002/07/owl#someValuesFrom",
+              "N83e2e70490364898872cd7c170706c83",
+              "http://www.w3.org/2002/07/owl#cardinality",
+              1
+            ]
+          ]
+        ],
+        "right and not left": [
+          [
+            "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+            [
+              "https://spec.industrialontologies.org/ontology/core/Core/roleOf",
+              "http://www.w3.org/2002/07/owl#someValuesFrom",
+              "N1a4699119a2744fab61a209ad8c537a7",
+              "http://www.w3.org/2002/07/owl#cardinality",
+              1
+            ]
+          ]
+        ]
+      },
+      {
+        "subject": "https://spec.industrialontologies.org/ontology/supplychain/SupplyChainReferenceOntology/CargoRole",
+        "left and not right": [
+          [
+            "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+            [
+              "https://spec.industrialontologies.org/ontology/core/Core/roleOf",
+              "http://www.w3.org/2002/07/owl#someValuesFrom",
+              "N2e45a59b7345406fa1fd43e4672f3852",
+              "http://www.w3.org/2002/07/owl#cardinality",
+              1
+            ]
+          ]
+        ],
+        "right and not left": [
+          [
+            "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+            [
+              "https://spec.industrialontologies.org/ontology/core/Core/roleOf",
+              "http://www.w3.org/2002/07/owl#someValuesFrom",
+              "N0b40ee81a0054d2eb86c38e3c7075ef1",
+              "http://www.w3.org/2002/07/owl#cardinality",
+              1
+            ]
+          ]
+        ]
+      },
+      {
+        "subject": "https://spec.industrialontologies.org/ontology/supplychain/SupplyChainReferenceOntology/SupplyChainProcess",
+        "left and not right": [
+          [
+            "http://www.w3.org/2002/07/owl#equivalentClass",
+            [
+              [
+                "http://www.w3.org/2002/07/owl#intersectionOf",
+                "https://spec.industrialontologies.org/ontology/core/Core/BusinessProcess",
+                [
+                  "http://purl.obolibrary.org/obo/BFO_0000057",
+                  "http://www.w3.org/2002/07/owl#someValuesFrom",
+                  "https://spec.industrialontologies.org/ontology/supplychain/SupplyChainReferenceOntology/SupplyChainAgent",
+                  "http://www.w3.org/2002/07/owl#cardinality",
+                  1
+                ],
+                [
+                  "http://purl.obolibrary.org/obo/BFO_0000059",
+                  "http://www.w3.org/2002/07/owl#someValuesFrom",
+                  "N6daf8d97aa094d8db1daf4961588de39",
+                  "http://www.w3.org/2002/07/owl#cardinality",
+                  1
+                ]
+              ]
+            ]
+          ]
+        ],
+        "right and not left": [
+          [
+            "http://www.w3.org/2002/07/owl#equivalentClass",
+            [
+              [
+                "http://www.w3.org/2002/07/owl#intersectionOf",
+                "https://spec.industrialontologies.org/ontology/core/Core/BusinessProcess",
+                [
+                  "http://purl.obolibrary.org/obo/BFO_0000057",
+                  "http://www.w3.org/2002/07/owl#someValuesFrom",
+                  "https://spec.industrialontologies.org/ontology/supplychain/SupplyChainReferenceOntology/SupplyChainAgent",
+                  "http://www.w3.org/2002/07/owl#cardinality",
+                  1
+                ],
+                [
+                  "http://purl.obolibrary.org/obo/BFO_0000059",
+                  "http://www.w3.org/2002/07/owl#someValuesFrom",
+                  "Nd55996e261fb4416a01b5d01efb0ea43",
+                  "http://www.w3.org/2002/07/owl#cardinality",
+                  1
+                ]
+              ]
+            ]
+          ]
+        ]
+      },
+      {
+        "subject": "https://spec.industrialontologies.org/ontology/supplychain/SupplyChainReferenceOntology/LogisticsService",
+        "left and not right": [
+          [
+            "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+            [
+              "http://purl.obolibrary.org/obo/BFO_0000117",
+              "http://www.w3.org/2002/07/owl#someValuesFrom",
+              "N50cadda6a0134a609aa7853e5b131901",
+              "http://www.w3.org/2002/07/owl#cardinality",
+              1
+            ]
+          ]
+        ],
+        "right and not left": [
+          [
+            "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+            [
+              "http://purl.obolibrary.org/obo/BFO_0000117",
+              "http://www.w3.org/2002/07/owl#someValuesFrom",
+              "Nf2b49f51bbc3452b8c9a3ca784d4141b",
+              "http://www.w3.org/2002/07/owl#cardinality",
+              1
+            ]
+          ]
+        ]
+      },
+      {
+        "subject": "https://spec.industrialontologies.org/ontology/supplychain/SupplyChainReferenceOntology/StorageCapability",
+        "left and not right": [
+          [
+            "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+            [
+              "https://spec.industrialontologies.org/ontology/core/Core/capabilityOf",
+              "http://www.w3.org/2002/07/owl#someValuesFrom",
+              "Nbba947e22130409ea1354099df16a1c9",
+              "http://www.w3.org/2002/07/owl#cardinality",
+              1
+            ]
+          ]
+        ],
+        "right and not left": [
+          [
+            "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+            [
+              "https://spec.industrialontologies.org/ontology/core/Core/capabilityOf",
+              "http://www.w3.org/2002/07/owl#someValuesFrom",
+              "Nf1f7a837312b41329d36f270884085e2",
+              "http://www.w3.org/2002/07/owl#cardinality",
+              1
+            ]
+          ]
+        ]
+      },
+      {
+        "subject": "https://spec.industrialontologies.org/ontology/supplychain/SupplyChainReferenceOntology/GroupOfSuppliers",
+        "left and not right": [
+          [
+            "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+            [
+              "http://purl.obolibrary.org/obo/BFO_0000172",
+              "http://www.w3.org/2002/07/owl#allValuesFrom",
+              "N70239c570ad14d9c937a6c6e44a308de",
+              "http://www.w3.org/2002/07/owl#cardinality",
+              -1
+            ]
+          ]
+        ],
+        "right and not left": [
+          [
+            "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+            [
+              "http://purl.obolibrary.org/obo/BFO_0000172",
+              "http://www.w3.org/2002/07/owl#allValuesFrom",
+              "N59d8073378f24b3f8a267ec9d586b482",
+              "http://www.w3.org/2002/07/owl#cardinality",
+              -1
+            ]
+          ]
+        ]
+      },
+      {
+        "subject": "https://spec.industrialontologies.org/ontology/supplychain/SupplyChainReferenceOntology/WholesalerRole",
+        "left and not right": [
+          [
+            "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+            [
+              "https://spec.industrialontologies.org/ontology/core/Core/roleOf",
+              "http://www.w3.org/2002/07/owl#someValuesFrom",
+              "N2955a7876cb04db1950345970509acbf",
+              "http://www.w3.org/2002/07/owl#cardinality",
+              1
+            ]
+          ],
+          [
+            "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+            [
+              "https://spec.industrialontologies.org/ontology/core/Core/roleOf",
+              "http://www.w3.org/2002/07/owl#someValuesFrom",
+              "N668758b14dda4c91808b45bebb3c1390",
+              "http://www.w3.org/2002/07/owl#cardinality",
+              1
+            ]
+          ],
+          [
+            "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+            [
+              "https://spec.industrialontologies.org/ontology/core/Core/roleOf",
+              "http://www.w3.org/2002/07/owl#someValuesFrom",
+              "N0e26fcfae96c423db443518ac82e9bae",
+              "http://www.w3.org/2002/07/owl#cardinality",
+              1
+            ]
+          ]
+        ],
+        "right and not left": [
+          [
+            "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+            [
+              "https://spec.industrialontologies.org/ontology/core/Core/roleOf",
+              "http://www.w3.org/2002/07/owl#someValuesFrom",
+              "N095f94256ddb4987b80d29a434916f16",
+              "http://www.w3.org/2002/07/owl#cardinality",
+              1
+            ]
+          ],
+          [
+            "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+            [
+              "https://spec.industrialontologies.org/ontology/core/Core/roleOf",
+              "http://www.w3.org/2002/07/owl#someValuesFrom",
+              "N8ad2c718a20148bbbbc1d1ff86a385ba",
+              "http://www.w3.org/2002/07/owl#cardinality",
+              1
+            ]
+          ],
+          [
+            "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+            [
+              "https://spec.industrialontologies.org/ontology/core/Core/roleOf",
+              "http://www.w3.org/2002/07/owl#someValuesFrom",
+              "N23b770063a4d4d418a25eb4bbcbc4a7a",
+              "http://www.w3.org/2002/07/owl#cardinality",
+              1
+            ]
+          ]
+        ]
+      },
+      {
+        "subject": "https://spec.industrialontologies.org/ontology/supplychain/SupplyChainReferenceOntology/SupplyChainSystem",
+        "left and not right": [
+          [
+            "http://www.w3.org/2002/07/owl#equivalentClass",
+            [
+              [
+                "http://www.w3.org/2002/07/owl#intersectionOf",
+                "https://spec.industrialontologies.org/ontology/core/Core/EngineeredSystem",
+                [
+                  "http://purl.obolibrary.org/obo/BFO_0000056",
+                  "http://www.w3.org/2002/07/owl#someValuesFrom",
+                  "N2e7d99d118224548a87d915a94a720e0",
+                  "http://www.w3.org/2002/07/owl#cardinality",
+                  1
+                ],
+                [
+                  "http://purl.obolibrary.org/obo/BFO_0000172",
+                  "http://www.w3.org/2002/07/owl#someValuesFrom",
+                  "https://spec.industrialontologies.org/ontology/supplychain/SupplyChainReferenceOntology/GroupOfSuppliers",
+                  "http://www.w3.org/2002/07/owl#cardinality",
+                  1
+                ],
+                [
+                  "https://spec.industrialontologies.org/ontology/core/Core/prescribedBy",
+                  "http://www.w3.org/2002/07/owl#someValuesFrom",
+                  "https://spec.industrialontologies.org/ontology/supplychain/SupplyChainReferenceOntology/SupplyChainPlanSpecification",
+                  "http://www.w3.org/2002/07/owl#cardinality",
+                  1
+                ]
+              ]
+            ]
+          ]
+        ],
+        "right and not left": [
+          [
+            "http://www.w3.org/2002/07/owl#equivalentClass",
+            [
+              [
+                "http://www.w3.org/2002/07/owl#intersectionOf",
+                "https://spec.industrialontologies.org/ontology/core/Core/EngineeredSystem",
+                [
+                  "http://purl.obolibrary.org/obo/BFO_0000056",
+                  "http://www.w3.org/2002/07/owl#someValuesFrom",
+                  "Nafb8bb5d9de2446bac046f421fae64f8",
+                  "http://www.w3.org/2002/07/owl#cardinality",
+                  1
+                ],
+                [
+                  "http://purl.obolibrary.org/obo/BFO_0000172",
+                  "http://www.w3.org/2002/07/owl#someValuesFrom",
+                  "https://spec.industrialontologies.org/ontology/supplychain/SupplyChainReferenceOntology/GroupOfSuppliers",
+                  "http://www.w3.org/2002/07/owl#cardinality",
+                  1
+                ],
+                [
+                  "https://spec.industrialontologies.org/ontology/core/Core/prescribedBy",
+                  "http://www.w3.org/2002/07/owl#someValuesFrom",
+                  "https://spec.industrialontologies.org/ontology/supplychain/SupplyChainReferenceOntology/SupplyChainPlanSpecification",
+                  "http://www.w3.org/2002/07/owl#cardinality",
+                  1
+                ]
+              ]
+            ]
+          ]
+        ]
+      },
+      {
+        "subject": "https://spec.industrialontologies.org/ontology/supplychain/SupplyChainReferenceOntology/LocationRole",
+        "left and not right": [
+          [
+            "http://www.w3.org/2002/07/owl#equivalentClass",
+            [
+              [
+                "http://www.w3.org/2002/07/owl#intersectionOf",
+                "http://purl.obolibrary.org/obo/BFO_0000023",
+                [
+                  "https://spec.industrialontologies.org/ontology/core/Core/roleOf",
+                  "http://www.w3.org/2002/07/owl#someValuesFrom",
+                  "Ne35ac799d6da45908f6e6994f05615c6",
+                  "http://www.w3.org/2002/07/owl#cardinality",
+                  1
+                ]
+              ]
+            ]
+          ]
+        ],
+        "right and not left": [
+          [
+            "http://www.w3.org/2002/07/owl#equivalentClass",
+            [
+              [
+                "http://www.w3.org/2002/07/owl#intersectionOf",
+                "http://purl.obolibrary.org/obo/BFO_0000023",
+                [
+                  "https://spec.industrialontologies.org/ontology/core/Core/roleOf",
+                  "http://www.w3.org/2002/07/owl#someValuesFrom",
+                  "Ne482815ce1fa43e7be147122f0e4a147",
+                  "http://www.w3.org/2002/07/owl#cardinality",
+                  1
+                ]
+              ]
+            ]
+          ]
+        ]
+      },
+      {
+        "subject": "https://spec.industrialontologies.org/ontology/supplychain/SupplyChainReferenceOntology/Manufacturer",
+        "left and not right": [
+          [
+            "http://www.w3.org/2002/07/owl#equivalentClass",
+            [
+              [
+                "http://www.w3.org/2002/07/owl#intersectionOf",
+                [
+                  [
+                    "http://www.w3.org/2002/07/owl#unionOf",
+                    "https://spec.industrialontologies.org/ontology/core/Core/BusinessOrganization",
+                    "https://spec.industrialontologies.org/ontology/core/Core/Person"
+                  ]
+                ],
+                [
+                  "https://spec.industrialontologies.org/ontology/core/Core/hasRole",
+                  "http://www.w3.org/2002/07/owl#someValuesFrom",
+                  "N0a787af6a1224f32ade5819612369950",
+                  "http://www.w3.org/2002/07/owl#cardinality",
+                  1
+                ]
+              ]
+            ]
+          ]
+        ],
+        "right and not left": [
+          [
+            "http://www.w3.org/2002/07/owl#equivalentClass",
+            [
+              [
+                "http://www.w3.org/2002/07/owl#intersectionOf",
+                [
+                  [
+                    "http://www.w3.org/2002/07/owl#unionOf",
+                    "https://spec.industrialontologies.org/ontology/core/Core/BusinessOrganization",
+                    "https://spec.industrialontologies.org/ontology/core/Core/Person"
+                  ]
+                ],
+                [
+                  "https://spec.industrialontologies.org/ontology/core/Core/hasRole",
+                  "http://www.w3.org/2002/07/owl#someValuesFrom",
+                  "N7e96d7d0c8504b3fabdba09c3707fc2e",
+                  "http://www.w3.org/2002/07/owl#cardinality",
+                  1
+                ]
+              ]
+            ]
+          ]
+        ]
+      },
+      {
+        "subject": "https://spec.industrialontologies.org/ontology/supplychain/SupplyChainReferenceOntology/LoadRole",
+        "left and not right": [
+          [
+            "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+            [
+              "https://spec.industrialontologies.org/ontology/core/Core/roleOf",
+              "http://www.w3.org/2002/07/owl#someValuesFrom",
+              "N98da256fbbb64bf29e063d508d6a66ba",
+              "http://www.w3.org/2002/07/owl#cardinality",
+              1
+            ]
+          ]
+        ],
+        "right and not left": [
+          [
+            "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+            [
+              "https://spec.industrialontologies.org/ontology/core/Core/roleOf",
+              "http://www.w3.org/2002/07/owl#someValuesFrom",
+              "N7c52df62de2143b8bc6e276da52d991b",
+              "http://www.w3.org/2002/07/owl#cardinality",
+              1
+            ]
+          ]
+        ]
+      },
+      {
+        "subject": "https://spec.industrialontologies.org/ontology/supplychain/SupplyChainReferenceOntology/PackagingServiceProviderRole",
+        "left and not right": [
+          [
+            "http://www.w3.org/2002/07/owl#equivalentClass",
+            [
+              [
+                "http://www.w3.org/2002/07/owl#intersectionOf",
+                "https://spec.industrialontologies.org/ontology/supplychain/SupplyChainReferenceOntology/LogisticsServiceProvider",
+                [
+                  "https://spec.industrialontologies.org/ontology/core/Core/roleOf",
+                  "http://www.w3.org/2002/07/owl#someValuesFrom",
+                  "Ncf94354c863e4b0e897fca0707af023a",
+                  "http://www.w3.org/2002/07/owl#cardinality",
+                  1
+                ]
+              ]
+            ]
+          ]
+        ],
+        "right and not left": [
+          [
+            "http://www.w3.org/2002/07/owl#equivalentClass",
+            [
+              [
+                "http://www.w3.org/2002/07/owl#intersectionOf",
+                "https://spec.industrialontologies.org/ontology/supplychain/SupplyChainReferenceOntology/LogisticsServiceProvider",
+                [
+                  "https://spec.industrialontologies.org/ontology/core/Core/roleOf",
+                  "http://www.w3.org/2002/07/owl#someValuesFrom",
+                  "N15752316b2eb4c3ea385caa38ef7510f",
+                  "http://www.w3.org/2002/07/owl#cardinality",
+                  1
+                ]
+              ]
+            ]
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "ontology": "core",
+    "delta": [
+      {
+        "subject": "http://www.industrialontologies.org/ontology/core/Core/AgentiveProcess",
+        "left and not right": [
+          [
+            "http://www.w3.org/2002/07/owl#equivalentClass",
+            [
+              [
+                "http://www.w3.org/2002/07/owl#intersectionOf",
+                "http://www.industrialontologies.org/ontology/core/Core/PlannedProcess",
+                [
+                  "http://purl.obolibrary.org/obo/BFO_0000057",
+                  "http://www.w3.org/2002/07/owl#someValuesFrom",
+                  "N8888ca3793044a61b63b81773fa7f337",
+                  "http://www.w3.org/2002/07/owl#cardinality",
+                  1
+                ]
+              ]
+            ]
+          ]
+        ],
+        "right and not left": [
+          [
+            "http://www.w3.org/2002/07/owl#equivalentClass",
+            [
+              [
+                "http://www.w3.org/2002/07/owl#intersectionOf",
+                "http://www.industrialontologies.org/ontology/core/Core/PlannedProcess",
+                [
+                  "http://purl.obolibrary.org/obo/BFO_0000057",
+                  "http://www.w3.org/2002/07/owl#someValuesFrom",
+                  "N529f2f9369f842e58d8be49212e6b937",
+                  "http://www.w3.org/2002/07/owl#cardinality",
+                  1
+                ]
+              ]
+            ]
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "ontology": "AboutIOFProd",
+    "delta": [
+      {
+        "subject": "https://spec.industrialontologies.org/ontology/AboutIOFProd/",
+        "left and not right": [
+          [
+            "http://www.w3.org/2002/07/owl#versionIRI",
+            "https://spec.industrialontologies.org/ontology/20230109/AboutIOFProd/"
+          ],
+          [
+            "http://www.w3.org/2002/07/owl#imports",
+            "https://spec.industrialontologies.org/ontology/core/commonstocoremapping/MappingCommonsToIOF/"
+          ],
+          [
+            "http://www.w3.org/2002/07/owl#imports",
+            "https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/"
+          ],
+          [
+            "http://www.w3.org/2002/07/owl#imports",
+            "https://spec.industrialontologies.org/ontology/core/commonstocoremapping/meta/MappingAnnotationVocabularyToCommons/"
+          ],
+          [
+            "http://www.w3.org/2002/07/owl#imports",
+            "https://spec.industrialontologies.org/ontology/core/Core/"
+          ]
+        ],
+        "right and not left": [
+          [
+            "http://www.w3.org/2002/07/owl#versionIRI",
+            "https://spec.industrialontologies.org/ontology/20221020/AboutIOFProd/"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "ontology": "Core",
+    "delta": [
+      {
+        "subject": "https://spec.industrialontologies.org/ontology/core/Core/OrganizedGroupOfAgents",
+        "left and not right": [
+          [
+            "http://www.w3.org/2002/07/owl#equivalentClass",
+            [
+              [
+                "http://www.w3.org/2002/07/owl#intersectionOf",
+                "https://spec.industrialontologies.org/ontology/core/Core/GroupOfAgents",
+                [
+                  "http://purl.obolibrary.org/obo/BFO_0000196",
+                  "http://www.w3.org/2002/07/owl#someValuesFrom",
+                  "N031f8dd172fa4a74bdedde989a6e17e1",
+                  "http://www.w3.org/2002/07/owl#cardinality",
+                  1
+                ]
+              ]
+            ]
+          ]
+        ],
+        "right and not left": [
+          [
+            "http://www.w3.org/2002/07/owl#equivalentClass",
+            [
+              [
+                "http://www.w3.org/2002/07/owl#intersectionOf",
+                "https://spec.industrialontologies.org/ontology/core/Core/GroupOfAgents",
+                [
+                  "http://purl.obolibrary.org/obo/BFO_0000196",
+                  "http://www.w3.org/2002/07/owl#someValuesFrom",
+                  "N676dd0b4c45a4f219d026516faebd988",
+                  "http://www.w3.org/2002/07/owl#cardinality",
+                  1
+                ]
+              ]
+            ]
+          ]
+        ]
+      },
+      {
+        "subject": "https://spec.industrialontologies.org/ontology/core/Core/MeasurementProcess",
+        "left and not right": [
+          [
+            "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+            [
+              "http://purl.obolibrary.org/obo/BFO_0000057",
+              "http://www.w3.org/2002/07/owl#someValuesFrom",
+              "Nd420331a59764843b59e39f17b2a0ca1",
+              "http://www.w3.org/2002/07/owl#cardinality",
+              1
+            ]
+          ]
+        ],
+        "right and not left": [
+          [
+            "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+            [
+              "http://purl.obolibrary.org/obo/BFO_0000057",
+              "http://www.w3.org/2002/07/owl#someValuesFrom",
+              "Nbf35ad0bc71f43d89bd6c63b99c7bf89",
+              "http://www.w3.org/2002/07/owl#cardinality",
+              1
+            ]
+          ]
+        ]
+      },
+      {
+        "subject": "https://spec.industrialontologies.org/ontology/core/Core/BuyerRole",
+        "left and not right": [
+          [
+            "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+            [
+              "https://spec.industrialontologies.org/ontology/core/Core/roleOf",
+              "http://www.w3.org/2002/07/owl#someValuesFrom",
+              "N0f6bf1eaa9244b45954f3b02c17ff6ae",
+              "http://www.w3.org/2002/07/owl#cardinality",
+              1
+            ]
+          ]
+        ],
+        "right and not left": [
+          [
+            "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+            [
+              "https://spec.industrialontologies.org/ontology/core/Core/roleOf",
+              "http://www.w3.org/2002/07/owl#someValuesFrom",
+              "N95697815d8524f3a90c58bbbbf6e7339",
+              "http://www.w3.org/2002/07/owl#cardinality",
+              1
+            ]
+          ]
+        ]
+      },
+      {
+        "subject": "https://spec.industrialontologies.org/ontology/core/Core/MeasurementInformationContentEntity",
+        "left and not right": [
+          [
+            "http://www.w3.org/2002/07/owl#equivalentClass",
+            [
+              [
+                "http://www.w3.org/2002/07/owl#intersectionOf",
+                "https://spec.industrialontologies.org/ontology/core/Core/InformationContentEntity",
+                [
+                  "http://purl.obolibrary.org/obo/BFO_0000110",
+                  "http://www.w3.org/2002/07/owl#someValuesFrom",
+                  "https://spec.industrialontologies.org/ontology/core/Core/MeasuredValueExpression",
+                  "http://www.w3.org/2002/07/owl#cardinality",
+                  1
+                ],
+                [
+                  "https://spec.industrialontologies.org/ontology/core/Core/describes",
+                  "http://www.w3.org/2002/07/owl#someValuesFrom",
+                  "N1b123519e36d45f7871de6bb40033b0d",
+                  "http://www.w3.org/2002/07/owl#cardinality",
+                  1
+                ],
+                [
+                  "https://spec.industrialontologies.org/ontology/core/Core/isAbout",
+                  "http://www.w3.org/2002/07/owl#someValuesFrom",
+                  "Nec7dbc0499c14d9c94b5d8a31e609587",
+                  "http://www.w3.org/2002/07/owl#cardinality",
+                  1
+                ],
+                [
+                  "https://spec.industrialontologies.org/ontology/core/Core/isOutputOf",
+                  "http://www.w3.org/2002/07/owl#someValuesFrom",
+                  "https://spec.industrialontologies.org/ontology/core/Core/MeasurementProcess",
+                  "http://www.w3.org/2002/07/owl#cardinality",
+                  1
+                ]
+              ]
+            ]
+          ]
+        ],
+        "right and not left": [
+          [
+            "http://www.w3.org/2002/07/owl#equivalentClass",
+            [
+              [
+                "http://www.w3.org/2002/07/owl#intersectionOf",
+                "https://spec.industrialontologies.org/ontology/core/Core/InformationContentEntity",
+                [
+                  "http://purl.obolibrary.org/obo/BFO_0000110",
+                  "http://www.w3.org/2002/07/owl#someValuesFrom",
+                  "https://spec.industrialontologies.org/ontology/core/Core/MeasuredValueExpression",
+                  "http://www.w3.org/2002/07/owl#cardinality",
+                  1
+                ],
+                [
+                  "https://spec.industrialontologies.org/ontology/core/Core/describes",
+                  "http://www.w3.org/2002/07/owl#someValuesFrom",
+                  "Nfaec8a06b2c144139cf63bcb265b73a5",
+                  "http://www.w3.org/2002/07/owl#cardinality",
+                  1
+                ],
+                [
+                  "https://spec.industrialontologies.org/ontology/core/Core/isAbout",
+                  "http://www.w3.org/2002/07/owl#someValuesFrom",
+                  "N386fc7fdc18a4af0b4ba10bcfb33f4d5",
+                  "http://www.w3.org/2002/07/owl#cardinality",
+                  1
+                ],
+                [
+                  "https://spec.industrialontologies.org/ontology/core/Core/isOutputOf",
+                  "http://www.w3.org/2002/07/owl#someValuesFrom",
+                  "https://spec.industrialontologies.org/ontology/core/Core/MeasurementProcess",
+                  "http://www.w3.org/2002/07/owl#cardinality",
+                  1
+                ]
+              ]
+            ]
+          ]
+        ]
+      },
+      {
+        "subject": "https://spec.industrialontologies.org/ontology/core/Core/RawMaterialRole",
+        "left and not right": [
+          [
+            "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+            [
+              "https://spec.industrialontologies.org/ontology/core/Core/roleOf",
+              "http://www.w3.org/2002/07/owl#someValuesFrom",
+              "Nb66ad33fa1c24651ababaa4f36fee49c",
+              "http://www.w3.org/2002/07/owl#cardinality",
+              1
+            ]
+          ],
+          [
+            "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+            [
+              "http://purl.obolibrary.org/obo/BFO_0000054",
+              "http://www.w3.org/2002/07/owl#allValuesFrom",
+              "N69cb467d9f094c24a9e7d8825d245eaa",
+              "http://www.w3.org/2002/07/owl#cardinality",
+              -1
+            ]
+          ]
+        ],
+        "right and not left": [
+          [
+            "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+            [
+              "http://purl.obolibrary.org/obo/BFO_0000054",
+              "http://www.w3.org/2002/07/owl#allValuesFrom",
+              "Nf4efdb752ccc41d6ae8663c23f5a94e9",
+              "http://www.w3.org/2002/07/owl#cardinality",
+              -1
+            ]
+          ],
+          [
+            "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+            [
+              "https://spec.industrialontologies.org/ontology/core/Core/roleOf",
+              "http://www.w3.org/2002/07/owl#someValuesFrom",
+              "Nb3216f82e3684e658f2dc211327d0928",
+              "http://www.w3.org/2002/07/owl#cardinality",
+              1
+            ]
+          ]
+        ]
+      },
+      {
+        "subject": "https://spec.industrialontologies.org/ontology/core/Core/EquipmentRole",
+        "left and not right": [
+          [
+            "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+            [
+              [
+                "http://www.w3.org/2002/07/owl#unionOf",
+                [
+                  "https://spec.industrialontologies.org/ontology/core/Core/roleOf",
+                  "http://www.w3.org/2002/07/owl#someValuesFrom",
+                  "N1b21a9ca30c842cbb4880f01bf388c9b",
+                  "http://www.w3.org/2002/07/owl#cardinality",
+                  1
+                ],
+                [
+                  "https://spec.industrialontologies.org/ontology/core/Core/satisfiesRequirement",
+                  "http://www.w3.org/2002/07/owl#someValuesFrom",
+                  "N1d6ffad9e8454c999eabc3562ef9d391",
+                  "http://www.w3.org/2002/07/owl#cardinality",
+                  1
+                ]
+              ]
+            ]
+          ],
+          [
+            "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+            [
+              "http://purl.obolibrary.org/obo/BFO_0000054",
+              "http://www.w3.org/2002/07/owl#allValuesFrom",
+              "Nc7b27eccbf1346d3b7f6d17c4337ae7e",
+              "http://www.w3.org/2002/07/owl#cardinality",
+              -1
+            ]
+          ]
+        ],
+        "right and not left": [
+          [
+            "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+            [
+              [
+                "http://www.w3.org/2002/07/owl#unionOf",
+                [
+                  "https://spec.industrialontologies.org/ontology/core/Core/roleOf",
+                  "http://www.w3.org/2002/07/owl#someValuesFrom",
+                  "N05fc34404655431fb17e9d6bb442cee1",
+                  "http://www.w3.org/2002/07/owl#cardinality",
+                  1
+                ],
+                [
+                  "https://spec.industrialontologies.org/ontology/core/Core/satisfiesRequirement",
+                  "http://www.w3.org/2002/07/owl#someValuesFrom",
+                  "Nbc0231bd9ba545278ba28f00f6a5f686",
+                  "http://www.w3.org/2002/07/owl#cardinality",
+                  1
+                ]
+              ]
+            ]
+          ],
+          [
+            "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+            [
+              "http://purl.obolibrary.org/obo/BFO_0000054",
+              "http://www.w3.org/2002/07/owl#allValuesFrom",
+              "N4793d3c1aaeb4eb0acbef56dce5b21d8",
+              "http://www.w3.org/2002/07/owl#cardinality",
+              -1
+            ]
+          ]
+        ]
+      },
+      {
+        "subject": "https://spec.industrialontologies.org/ontology/core/Core/BusinessProcess",
+        "left and not right": [
+          [
+            "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+            [
+              "https://spec.industrialontologies.org/ontology/core/Core/prescribedBy",
+              "http://www.w3.org/2002/07/owl#someValuesFrom",
+              "N6c144d91b3654ee5b9884391ca4cdd68",
+              "http://www.w3.org/2002/07/owl#cardinality",
+              1
+            ]
+          ],
+          [
+            "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+            [
+              "http://purl.obolibrary.org/obo/BFO_0000057",
+              "http://www.w3.org/2002/07/owl#someValuesFrom",
+              "N685bb4654bae494c99526e04e01360a6",
+              "http://www.w3.org/2002/07/owl#cardinality",
+              1
+            ]
+          ]
+        ],
+        "right and not left": [
+          [
+            "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+            [
+              "http://purl.obolibrary.org/obo/BFO_0000057",
+              "http://www.w3.org/2002/07/owl#someValuesFrom",
+              "N12382ba59d3c42d69639d29ea9ea5aa9",
+              "http://www.w3.org/2002/07/owl#cardinality",
+              1
+            ]
+          ],
+          [
+            "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+            [
+              "https://spec.industrialontologies.org/ontology/core/Core/prescribedBy",
+              "http://www.w3.org/2002/07/owl#someValuesFrom",
+              "N7b612b6bb3cd4409b19e067e67866880",
+              "http://www.w3.org/2002/07/owl#cardinality",
+              1
+            ]
+          ]
+        ]
+      },
+      {
+        "subject": "https://spec.industrialontologies.org/ontology/core/Core/AgentRole",
+        "left and not right": [
+          [
+            "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+            [
+              "https://spec.industrialontologies.org/ontology/core/Core/roleOf",
+              "http://www.w3.org/2002/07/owl#someValuesFrom",
+              "N3bc263fb3ccd48848ede0e0ad48d1471",
+              "http://www.w3.org/2002/07/owl#cardinality",
+              1
+            ]
+          ]
+        ],
+        "right and not left": [
+          [
+            "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+            [
+              "https://spec.industrialontologies.org/ontology/core/Core/roleOf",
+              "http://www.w3.org/2002/07/owl#someValuesFrom",
+              "Nf2369520255742daa6a3f2c28d9d56c4",
+              "http://www.w3.org/2002/07/owl#cardinality",
+              1
+            ]
+          ]
+        ]
+      },
+      {
+        "subject": "https://spec.industrialontologies.org/ontology/core/Core/ProductProductionProcess",
+        "left and not right": [
+          [
+            "http://www.w3.org/2002/07/owl#equivalentClass",
+            [
+              [
+                "http://www.w3.org/2002/07/owl#intersectionOf",
+                "https://spec.industrialontologies.org/ontology/core/Core/BusinessProcess",
+                [
+                  "http://purl.obolibrary.org/obo/BFO_0000117",
+                  "http://www.w3.org/2002/07/owl#someValuesFrom",
+                  "https://spec.industrialontologies.org/ontology/core/Core/ManufacturingProcess",
+                  "http://www.w3.org/2002/07/owl#cardinality",
+                  1
+                ],
+                [
+                  "http://purl.obolibrary.org/obo/BFO_0000199",
+                  "http://www.w3.org/2002/07/owl#someValuesFrom",
+                  "Ne7b20cbf748e488e8a352ee7b6198b9f",
+                  "http://www.w3.org/2002/07/owl#cardinality",
+                  1
+                ],
+                [
+                  "https://spec.industrialontologies.org/ontology/core/Core/hasSpecifiedOutput",
+                  "http://www.w3.org/2002/07/owl#someValuesFrom",
+                  "https://spec.industrialontologies.org/ontology/core/Core/MaterialProduct",
+                  "http://www.w3.org/2002/07/owl#cardinality",
+                  1
+                ]
+              ]
+            ]
+          ]
+        ],
+        "right and not left": [
+          [
+            "http://www.w3.org/2002/07/owl#equivalentClass",
+            [
+              [
+                "http://www.w3.org/2002/07/owl#intersectionOf",
+                "https://spec.industrialontologies.org/ontology/core/Core/BusinessProcess",
+                [
+                  "http://purl.obolibrary.org/obo/BFO_0000117",
+                  "http://www.w3.org/2002/07/owl#someValuesFrom",
+                  "https://spec.industrialontologies.org/ontology/core/Core/ManufacturingProcess",
+                  "http://www.w3.org/2002/07/owl#cardinality",
+                  1
+                ],
+                [
+                  "http://purl.obolibrary.org/obo/BFO_0000199",
+                  "http://www.w3.org/2002/07/owl#someValuesFrom",
+                  "N9232fb05d25a4eafa8ce599f3a64bd3c",
+                  "http://www.w3.org/2002/07/owl#cardinality",
+                  1
+                ],
+                [
+                  "https://spec.industrialontologies.org/ontology/core/Core/hasSpecifiedOutput",
+                  "http://www.w3.org/2002/07/owl#someValuesFrom",
+                  "https://spec.industrialontologies.org/ontology/core/Core/MaterialProduct",
+                  "http://www.w3.org/2002/07/owl#cardinality",
+                  1
+                ]
+              ]
+            ]
+          ]
+        ]
+      },
+      {
+        "subject": "https://spec.industrialontologies.org/ontology/core/Core/SupplierRole",
+        "left and not right": [
+          [
+            "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+            [
+              "https://spec.industrialontologies.org/ontology/core/Core/roleOf",
+              "http://www.w3.org/2002/07/owl#someValuesFrom",
+              "Nb228170d6bee48cca77de424ea1be16c",
+              "http://www.w3.org/2002/07/owl#cardinality",
+              1
+            ]
+          ]
+        ],
+        "right and not left": [
+          [
+            "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+            [
+              "https://spec.industrialontologies.org/ontology/core/Core/roleOf",
+              "http://www.w3.org/2002/07/owl#someValuesFrom",
+              "N6a49be4721184d96ad53a73a7eeef672",
+              "http://www.w3.org/2002/07/owl#cardinality",
+              1
+            ]
+          ]
+        ]
+      },
+      {
+        "subject": "https://spec.industrialontologies.org/ontology/core/Core/CustomerRole",
+        "left and not right": [
+          [
+            "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+            [
+              "https://spec.industrialontologies.org/ontology/core/Core/roleOf",
+              "http://www.w3.org/2002/07/owl#someValuesFrom",
+              "N1b4e77960ce04eb78ccec79d10cd8ab9",
+              "http://www.w3.org/2002/07/owl#cardinality",
+              1
+            ]
+          ]
+        ],
+        "right and not left": [
+          [
+            "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+            [
+              "https://spec.industrialontologies.org/ontology/core/Core/roleOf",
+              "http://www.w3.org/2002/07/owl#someValuesFrom",
+              "N18e7bf5c83d04042aec8f9b903d32b7a",
+              "http://www.w3.org/2002/07/owl#cardinality",
+              1
+            ]
+          ]
+        ]
+      },
+      {
+        "subject": "https://spec.industrialontologies.org/ontology/core/Core/ServiceProviderRole",
+        "left and not right": [
+          [
+            "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+            [
+              "https://spec.industrialontologies.org/ontology/core/Core/roleOf",
+              "http://www.w3.org/2002/07/owl#someValuesFrom",
+              "N6a645644d6ab4826884673afda219ef8",
+              "http://www.w3.org/2002/07/owl#cardinality",
+              1
+            ]
+          ]
+        ],
+        "right and not left": [
+          [
+            "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+            [
+              "https://spec.industrialontologies.org/ontology/core/Core/roleOf",
+              "http://www.w3.org/2002/07/owl#someValuesFrom",
+              "N8e8b7602eff4415a88706cee011f17da",
+              "http://www.w3.org/2002/07/owl#cardinality",
+              1
+            ]
+          ]
+        ]
+      },
+      {
+        "subject": "https://spec.industrialontologies.org/ontology/core/Core/BuyingBusinessProcess",
+        "left and not right": [
+          [
+            "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+            [
+              "http://purl.obolibrary.org/obo/BFO_0000057",
+              "http://www.w3.org/2002/07/owl#someValuesFrom",
+              "Na8c516feafa24933aa067c7bbb23ca5d",
+              "http://www.w3.org/2002/07/owl#cardinality",
+              1
+            ]
+          ]
+        ],
+        "right and not left": [
+          [
+            "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+            [
+              "http://purl.obolibrary.org/obo/BFO_0000057",
+              "http://www.w3.org/2002/07/owl#someValuesFrom",
+              "N4fe5e86bf1d5416e93bb339806d14e3d",
+              "http://www.w3.org/2002/07/owl#cardinality",
+              1
+            ]
+          ]
+        ]
+      },
+      {
+        "subject": "https://spec.industrialontologies.org/ontology/core/Core/ManufacturerRole",
+        "left and not right": [
+          [
+            "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+            [
+              "https://spec.industrialontologies.org/ontology/core/Core/roleOf",
+              "http://www.w3.org/2002/07/owl#someValuesFrom",
+              "Na9c5114ab7614f3480d8b1cb23e1e00d",
+              "http://www.w3.org/2002/07/owl#cardinality",
+              1
+            ]
+          ]
+        ],
+        "right and not left": [
+          [
+            "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+            [
+              "https://spec.industrialontologies.org/ontology/core/Core/roleOf",
+              "http://www.w3.org/2002/07/owl#someValuesFrom",
+              "N18154e4a69f942f5b69d97b119c8a16c",
+              "http://www.w3.org/2002/07/owl#cardinality",
+              1
+            ]
+          ]
+        ]
+      },
+      {
+        "subject": "https://spec.industrialontologies.org/ontology/core/Core/Assembly",
+        "left and not right": [
+          [
+            "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+            [
+              "Nbb96737111c14a33a883d285db6bcedc",
+              "http://www.w3.org/2002/07/owl#someValuesFrom",
+              "https://spec.industrialontologies.org/ontology/core/Core/MaterialComponent",
+              "http://www.w3.org/2002/07/owl#cardinality",
+              1
+            ]
+          ]
+        ],
+        "right and not left": [
+          [
+            "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+            [
+              "Nf2fdd83c3e904bb59c2924f3eee02c3a",
+              "http://www.w3.org/2002/07/owl#someValuesFrom",
+              "https://spec.industrialontologies.org/ontology/core/Core/MaterialComponent",
+              "http://www.w3.org/2002/07/owl#cardinality",
+              1
+            ]
+          ]
+        ]
+      },
+      {
+        "subject": "https://spec.industrialontologies.org/ontology/core/Core/BusinessFunction",
+        "left and not right": [
+          [
+            "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+            [
+              "https://spec.industrialontologies.org/ontology/core/Core/prescribedBy",
+              "http://www.w3.org/2002/07/owl#someValuesFrom",
+              "Ndc8c7d1f02654c549a10b01a2a7c9497",
+              "http://www.w3.org/2002/07/owl#cardinality",
+              1
+            ]
+          ]
+        ],
+        "right and not left": [
+          [
+            "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+            [
+              "https://spec.industrialontologies.org/ontology/core/Core/prescribedBy",
+              "http://www.w3.org/2002/07/owl#someValuesFrom",
+              "N69828cd9640d4b79ba57592b2e0c8d99",
+              "http://www.w3.org/2002/07/owl#cardinality",
+              1
+            ]
+          ]
+        ]
+      },
+      {
+        "subject": "https://spec.industrialontologies.org/ontology/core/Core/MaterialProductRole",
+        "left and not right": [
+          [
+            "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+            [
+              "https://spec.industrialontologies.org/ontology/core/Core/roleOf",
+              "http://www.w3.org/2002/07/owl#someValuesFrom",
+              "Ne9bc893ba52648a6b6d48c905b0fab70",
+              "http://www.w3.org/2002/07/owl#cardinality",
+              1
+            ]
+          ]
+        ],
+        "right and not left": [
+          [
+            "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+            [
+              "https://spec.industrialontologies.org/ontology/core/Core/roleOf",
+              "http://www.w3.org/2002/07/owl#someValuesFrom",
+              "Nb95eb560c8d4481da32e316b6aa365fe",
+              "http://www.w3.org/2002/07/owl#cardinality",
+              1
+            ]
+          ]
+        ]
+      },
+      {
+        "subject": "https://spec.industrialontologies.org/ontology/core/Core/ProcuringBusinessProcess",
+        "left and not right": [
+          [
+            "http://www.w3.org/2002/07/owl#equivalentClass",
+            [
+              [
+                "http://www.w3.org/2002/07/owl#intersectionOf",
+                "https://spec.industrialontologies.org/ontology/core/Core/BusinessProcess",
+                [
+                  "http://purl.obolibrary.org/obo/BFO_0000117",
+                  "http://www.w3.org/2002/07/owl#someValuesFrom",
+                  "https://spec.industrialontologies.org/ontology/core/Core/BuyingBusinessProcess",
+                  "http://www.w3.org/2002/07/owl#cardinality",
+                  1
+                ],
+                [
+                  "http://purl.obolibrary.org/obo/BFO_0000117",
+                  "http://www.w3.org/2002/07/owl#someValuesFrom",
+                  "N8946be866aff4f6d8934a329d5ef5f93",
+                  "http://www.w3.org/2002/07/owl#cardinality",
+                  1
+                ]
+              ]
+            ]
+          ]
+        ],
+        "right and not left": [
+          [
+            "http://www.w3.org/2002/07/owl#equivalentClass",
+            [
+              [
+                "http://www.w3.org/2002/07/owl#intersectionOf",
+                "https://spec.industrialontologies.org/ontology/core/Core/BusinessProcess",
+                [
+                  "http://purl.obolibrary.org/obo/BFO_0000117",
+                  "http://www.w3.org/2002/07/owl#someValuesFrom",
+                  "https://spec.industrialontologies.org/ontology/core/Core/BuyingBusinessProcess",
+                  "http://www.w3.org/2002/07/owl#cardinality",
+                  1
+                ],
+                [
+                  "http://purl.obolibrary.org/obo/BFO_0000117",
+                  "http://www.w3.org/2002/07/owl#someValuesFrom",
+                  "N9cfb4f4beaee41588c32799129921f9b",
+                  "http://www.w3.org/2002/07/owl#cardinality",
+                  1
+                ]
+              ]
+            ]
+          ]
+        ]
+      },
+      {
+        "subject": "https://spec.industrialontologies.org/ontology/core/Core/AssemblyProcess",
+        "left and not right": [
+          [
+            "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+            [
+              "https://spec.industrialontologies.org/ontology/core/Core/hasSpecifiedOutput",
+              "http://www.w3.org/2002/07/owl#someValuesFrom",
+              "Ncd1078fb359a433da9bd1d836330ed01",
+              "http://www.w3.org/2002/07/owl#cardinality",
+              1
+            ]
+          ]
+        ],
+        "right and not left": [
+          [
+            "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+            [
+              "https://spec.industrialontologies.org/ontology/core/Core/hasSpecifiedOutput",
+              "http://www.w3.org/2002/07/owl#someValuesFrom",
+              "N3a6f8710c1ab4314a8511ad78d3ddcde",
+              "http://www.w3.org/2002/07/owl#cardinality",
+              1
+            ]
+          ]
+        ]
+      },
+      {
+        "subject": "https://spec.industrialontologies.org/ontology/core/Core/MeasuredValueExpression",
+        "left and not right": [
+          [
+            "http://www.w3.org/2002/07/owl#equivalentClass",
+            [
+              [
+                "http://www.w3.org/2002/07/owl#intersectionOf",
+                "https://spec.industrialontologies.org/ontology/core/Core/ValueExpression",
+                [
+                  "https://spec.industrialontologies.org/ontology/core/Core/isMeasuredValueOfAtSomeTime",
+                  "http://www.w3.org/2002/07/owl#someValuesFrom",
+                  "N38ff348b70ff4e44abcb252ee10aca95",
+                  "http://www.w3.org/2002/07/owl#cardinality",
+                  1
+                ]
+              ]
+            ]
+          ]
+        ],
+        "right and not left": [
+          [
+            "http://www.w3.org/2002/07/owl#equivalentClass",
+            [
+              [
+                "http://www.w3.org/2002/07/owl#intersectionOf",
+                "https://spec.industrialontologies.org/ontology/core/Core/ValueExpression",
+                [
+                  "https://spec.industrialontologies.org/ontology/core/Core/isMeasuredValueOfAtSomeTime",
+                  "http://www.w3.org/2002/07/owl#someValuesFrom",
+                  "Ne6cc43928ea945bca4ba1423bc6f4289",
+                  "http://www.w3.org/2002/07/owl#cardinality",
+                  1
+                ]
+              ]
+            ]
+          ]
+        ]
+      },
+      {
+        "subject": "https://spec.industrialontologies.org/ontology/core/Core/ComputingProcess",
+        "left and not right": [
+          [
+            "http://www.w3.org/2002/07/owl#equivalentClass",
+            [
+              [
+                "http://www.w3.org/2002/07/owl#intersectionOf",
+                "https://spec.industrialontologies.org/ontology/core/Core/PlannedProcess",
+                [
+                  [
+                    "http://www.w3.org/2002/07/owl#unionOf",
+                    [
+                      "https://spec.industrialontologies.org/ontology/core/Core/achievesAtSomeTime",
+                      "http://www.w3.org/2002/07/owl#someValuesFrom",
+                      "N9ef616cb47d94bdbb705a8f7d8704181",
+                      "http://www.w3.org/2002/07/owl#cardinality",
+                      1
+                    ],
+                    [
+                      "https://spec.industrialontologies.org/ontology/core/Core/hasSpecifiedOutput",
+                      "http://www.w3.org/2002/07/owl#someValuesFrom",
+                      "https://spec.industrialontologies.org/ontology/core/Core/InformationContentEntity",
+                      "http://www.w3.org/2002/07/owl#cardinality",
+                      1
+                    ]
+                  ]
+                ],
+                [
+                  "http://purl.obolibrary.org/obo/BFO_0000057",
+                  "http://www.w3.org/2002/07/owl#someValuesFrom",
+                  "https://spec.industrialontologies.org/ontology/core/Core/Agent",
+                  "http://www.w3.org/2002/07/owl#cardinality",
+                  1
+                ],
+                [
+                  "http://purl.obolibrary.org/obo/BFO_0000059",
+                  "http://www.w3.org/2002/07/owl#someValuesFrom",
+                  "N7333f01aa1d94422bd27f709139b33c4",
+                  "http://www.w3.org/2002/07/owl#cardinality",
+                  1
+                ]
+              ]
+            ]
+          ]
+        ],
+        "right and not left": [
+          [
+            "http://www.w3.org/2002/07/owl#equivalentClass",
+            [
+              [
+                "http://www.w3.org/2002/07/owl#intersectionOf",
+                "https://spec.industrialontologies.org/ontology/core/Core/PlannedProcess",
+                [
+                  [
+                    "http://www.w3.org/2002/07/owl#unionOf",
+                    [
+                      "https://spec.industrialontologies.org/ontology/core/Core/achievesAtSomeTime",
+                      "http://www.w3.org/2002/07/owl#someValuesFrom",
+                      "N480eb8092be5466d97e601249af530a4",
+                      "http://www.w3.org/2002/07/owl#cardinality",
+                      1
+                    ],
+                    [
+                      "https://spec.industrialontologies.org/ontology/core/Core/hasSpecifiedOutput",
+                      "http://www.w3.org/2002/07/owl#someValuesFrom",
+                      "https://spec.industrialontologies.org/ontology/core/Core/InformationContentEntity",
+                      "http://www.w3.org/2002/07/owl#cardinality",
+                      1
+                    ]
+                  ]
+                ],
+                [
+                  "http://purl.obolibrary.org/obo/BFO_0000057",
+                  "http://www.w3.org/2002/07/owl#someValuesFrom",
+                  "https://spec.industrialontologies.org/ontology/core/Core/Agent",
+                  "http://www.w3.org/2002/07/owl#cardinality",
+                  1
+                ],
+                [
+                  "http://purl.obolibrary.org/obo/BFO_0000059",
+                  "http://www.w3.org/2002/07/owl#someValuesFrom",
+                  "N2880a882c4dc4fb6ae2cdd9262a949ad",
+                  "http://www.w3.org/2002/07/owl#cardinality",
+                  1
+                ]
+              ]
+            ]
+          ]
+        ]
+      },
+      {
+        "subject": "https://spec.industrialontologies.org/ontology/core/Core/SellingBusinessProcess",
+        "left and not right": [
+          [
+            "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+            [
+              "http://purl.obolibrary.org/obo/BFO_0000057",
+              "http://www.w3.org/2002/07/owl#someValuesFrom",
+              "Ne5ef1ca859804b54bb54462542982e44",
+              "http://www.w3.org/2002/07/owl#cardinality",
+              1
+            ]
+          ]
+        ],
+        "right and not left": [
+          [
+            "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+            [
+              "http://purl.obolibrary.org/obo/BFO_0000057",
+              "http://www.w3.org/2002/07/owl#someValuesFrom",
+              "N40f0bf475da844218e6820525bf16491",
+              "http://www.w3.org/2002/07/owl#cardinality",
+              1
+            ]
+          ]
+        ]
+      },
+      {
+        "subject": "https://spec.industrialontologies.org/ontology/core/Core/",
+        "left and not right": [
+          [
+            "https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity",
+            "https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released"
+          ]
+        ],
+        "right and not left": [
+          [
+            "https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity",
+            "https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Provisional"
+          ]
+        ]
+      },
+      {
+        "subject": "https://spec.industrialontologies.org/ontology/core/Core/MaterialLocationChangeProcess",
+        "left and not right": [
+          [
+            "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+            [
+              "http://purl.obolibrary.org/obo/BFO_0000057",
+              "http://www.w3.org/2002/07/owl#someValuesFrom",
+              "Ncd01b192332a4a00943984d58f7ff5cb",
+              "http://www.w3.org/2002/07/owl#cardinality",
+              1
+            ]
+          ]
+        ],
+        "right and not left": [
+          [
+            "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+            [
+              "http://purl.obolibrary.org/obo/BFO_0000057",
+              "http://www.w3.org/2002/07/owl#someValuesFrom",
+              "N915d7b4ba4f94075a9da56baec6f3898",
+              "http://www.w3.org/2002/07/owl#cardinality",
+              1
+            ]
+          ]
+        ]
+      },
+      {
+        "subject": "https://spec.industrialontologies.org/ontology/core/Core/MaterialResourceRole",
+        "left and not right": [
+          [
+            "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+            [
+              "https://spec.industrialontologies.org/ontology/core/Core/roleOf",
+              "http://www.w3.org/2002/07/owl#someValuesFrom",
+              "N10ffbce3129548b6a8a71983a1d77db1",
+              "http://www.w3.org/2002/07/owl#cardinality",
+              1
+            ]
+          ]
+        ],
+        "right and not left": [
+          [
+            "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+            [
+              "https://spec.industrialontologies.org/ontology/core/Core/roleOf",
+              "http://www.w3.org/2002/07/owl#someValuesFrom",
+              "N78ed3cef6728469fa5113a3c75acdfae",
+              "http://www.w3.org/2002/07/owl#cardinality",
+              1
+            ]
+          ]
+        ]
+      },
+      {
+        "subject": "https://spec.industrialontologies.org/ontology/core/Core/ManufacturingProcess",
+        "left and not right": [
+          [
+            "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+            [
+              "https://spec.industrialontologies.org/ontology/core/Core/hasSpecifiedOutput",
+              "http://www.w3.org/2002/07/owl#someValuesFrom",
+              "N4970369132f3415b9849b5df92557466",
+              "http://www.w3.org/2002/07/owl#cardinality",
+              1
+            ]
+          ],
+          [
+            "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+            [
+              "http://purl.obolibrary.org/obo/BFO_0000057",
+              "http://www.w3.org/2002/07/owl#someValuesFrom",
+              "N01a1689c85cc4d95a5e05ef3fdc894d5",
+              "http://www.w3.org/2002/07/owl#cardinality",
+              1
+            ]
+          ]
+        ],
+        "right and not left": [
+          [
+            "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+            [
+              "https://spec.industrialontologies.org/ontology/core/Core/hasSpecifiedOutput",
+              "http://www.w3.org/2002/07/owl#someValuesFrom",
+              "Ne7ccce5abc89447587bb66daa6140530",
+              "http://www.w3.org/2002/07/owl#cardinality",
+              1
+            ]
+          ],
+          [
+            "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+            [
+              "http://purl.obolibrary.org/obo/BFO_0000057",
+              "http://www.w3.org/2002/07/owl#someValuesFrom",
+              "N58e41097f962422684dffc14b046b8a8",
+              "http://www.w3.org/2002/07/owl#cardinality",
+              1
+            ]
+          ]
+        ]
+      },
+      {
+        "subject": "https://spec.industrialontologies.org/ontology/core/Core/MaterialArtifact",
+        "left and not right": [
+          [
+            "http://www.w3.org/2002/07/owl#equivalentClass",
+            [
+              [
+                "http://www.w3.org/2002/07/owl#intersectionOf",
+                "http://purl.obolibrary.org/obo/BFO_0000030",
+                [
+                  "http://purl.obolibrary.org/obo/BFO_0000196",
+                  "http://www.w3.org/2002/07/owl#someValuesFrom",
+                  "Naa415635197e482198d07b33ac93dbf9",
+                  "http://www.w3.org/2002/07/owl#cardinality",
+                  1
+                ]
+              ]
+            ]
+          ]
+        ],
+        "right and not left": [
+          [
+            "http://www.w3.org/2002/07/owl#equivalentClass",
+            [
+              [
+                "http://www.w3.org/2002/07/owl#intersectionOf",
+                "http://purl.obolibrary.org/obo/BFO_0000030",
+                [
+                  "http://purl.obolibrary.org/obo/BFO_0000196",
+                  "http://www.w3.org/2002/07/owl#someValuesFrom",
+                  "Ne79ddebe761a4557a0aa822361332726",
+                  "http://www.w3.org/2002/07/owl#cardinality",
+                  1
+                ]
+              ]
+            ]
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "ontology": "AboutIOFDev",
+    "delta": [
+      {
+        "subject": "https://spec.industrialontologies.org/ontology/AboutIOFDev/",
+        "left and not right": [
+          [
+            "http://www.w3.org/2002/07/owl#imports",
+            "https://spec.industrialontologies.org/ontology/supplychain/SupplyChainReferenceOntology/"
+          ],
+          [
+            "http://www.w3.org/2002/07/owl#imports",
+            "https://spec.industrialontologies.org/ontology/core/commonstocoremapping/MappingCommonsToIOF/"
+          ],
+          [
+            "http://www.w3.org/2002/07/owl#imports",
+            "https://spec.industrialontologies.org/ontology/maintenance/MaintenanceReferenceOntology/"
+          ],
+          [
+            "http://www.w3.org/2002/07/owl#imports",
+            "https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/"
+          ],
+          [
+            "http://www.w3.org/2002/07/owl#versionIRI",
+            "https://spec.industrialontologies.org/ontology/20230109/AboutIOFDev/"
+          ],
+          [
+            "http://www.w3.org/2002/07/owl#imports",
+            "https://spec.industrialontologies.org/ontology/core/commonstocoremapping/meta/MappingAnnotationVocabularyToCommons/"
+          ]
+        ],
+        "right and not left": [
+          [
+            "http://www.w3.org/2002/07/owl#imports",
+            "https://www.industrialontologies.org/ontology/supplychain/SupplyChainReferenceOntology/"
+          ],
+          [
+            "http://www.w3.org/2002/07/owl#versionIRI",
+            "https://spec.industrialontologies.org/ontology/20221020/AboutIOFDev/"
+          ],
+          [
+            "http://www.w3.org/2002/07/owl#imports",
+            "https://spec.industrialontologies.org/ontology/maintenance/Maintenance/"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "ontology": "AnnotationVocabulary",
+    "delta": [
+      {
+        "subject": "http://purl.org/dc/terms/title",
+        "left and not right": [
+          [
+            "http://www.w3.org/2000/01/rdf-schema#isDefinedBy",
+            "http://purl.org/dc/terms/title"
+          ],
+          [
+            "http://www.w3.org/2000/01/rdf-schema#label",
+            "title"
+          ],
+          [
+            "http://www.w3.org/2004/02/skos/core#definition",
+            "name given to the resource"
+          ],
+          [
+            "https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/usageNote",
+            "Used for formal title of an artifact (but not individual elements such as classes or properties)."
+          ]
+        ],
+        "right and not left": [
+          [
+            "https://www.omg.org/spec/Commons/AnnotationVocabulary/usageNote",
+            "This annotation is typically used to describe an artifact such as a controlled vocabulary, document, ontology, or other similar resource."
+          ],
+          [
+            "http://www.w3.org/2000/01/rdf-schema#label",
+            "title"
+          ],
+          [
+            "http://www.w3.org/2004/02/skos/core#definition",
+            "formal name given to the resource (artifact, such as a controlled vocabulary or ontology)"
+          ],
+          [
+            "http://www.w3.org/2000/01/rdf-schema#isDefinedBy",
+            "http://purl.org/dc/terms/"
+          ]
+        ]
+      },
+      {
+        "subject": "http://www.w3.org/2004/02/skos/core#note",
+        "left and not right": [
+          [
+            "http://www.w3.org/2004/02/skos/core#definition",
+            "general note, for any purpose"
+          ],
+          [
+            "http://www.w3.org/2000/01/rdf-schema#label",
+            "note"
+          ]
+        ],
+        "right and not left": [
+          [
+            "http://www.w3.org/2000/01/rdf-schema#label",
+            "note"
+          ],
+          [
+            "http://www.w3.org/2004/02/skos/core#definition",
+            "general remark, for any purpose"
+          ]
+        ]
+      },
+      {
+        "subject": "http://purl.org/dc/terms/source",
+        "left and not right": [
+          [
+            "http://www.w3.org/2000/01/rdf-schema#isDefinedBy",
+            "http://purl.org/dc/terms/source"
+          ],
+          [
+            "http://www.w3.org/2004/02/skos/core#definition",
+            "related resource from which the described resource is derived"
+          ],
+          [
+            "http://www.w3.org/2000/01/rdf-schema#label",
+            "source"
+          ],
+          [
+            "https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/explanatoryNote",
+            "The intent is to provide a user with a reference as to how the thing being annotated was derived or arrived at. \n - The source can be a URL to a standard, common dictionary (e.g. Oxford), or similar reference. Or it can be a short description of where the entity being annotated was derived from.\n - The 'Source' annotation would most likely be used as an annotation on an annotation. For instance annotating a Natural Language definition annotation."
+          ]
+        ],
+        "right and not left": [
+          [
+            "http://www.w3.org/2000/01/rdf-schema#label",
+            "source"
+          ],
+          [
+            "http://www.w3.org/2004/02/skos/core#definition",
+            "related resource from which the described resource is derived"
+          ],
+          [
+            "http://www.w3.org/2000/01/rdf-schema#isDefinedBy",
+            "http://purl.org/dc/terms/"
+          ],
+          [
+            "https://www.omg.org/spec/Commons/AnnotationVocabulary/explanatoryNote",
+            "The intent is to provide a user with a reference as to how the thing being annotated was derived or arrived at. The source can be a URL to a standard, common dictionary (e.g., Collins, Merriam-Webster, Oxford), a formal reference such as an ISO standard, or similar reference. Or it can be a short description of a source from which the entity being annotated was derived."
+          ]
+        ]
+      },
+      {
+        "subject": "http://purl.org/dc/terms/publisher",
+        "left and not right": [
+          [
+            "http://www.w3.org/2000/01/rdf-schema#isDefinedBy",
+            "http://purl.org/dc/terms/publisher"
+          ],
+          [
+            "http://www.w3.org/2000/01/rdf-schema#label",
+            "publisher"
+          ],
+          [
+            "https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/usageNote",
+            "Used to document the primary agent (organization or person) responsible for the resource. This will be \"Industrial Ontology Foundry\" for IOF artifacts."
+          ],
+          [
+            "http://www.w3.org/2004/02/skos/core#definition",
+            "entity responsible for making the resource available"
+          ]
+        ],
+        "right and not left": [
+          [
+            "https://www.omg.org/spec/Commons/AnnotationVocabulary/usageNote",
+            "This annotation is typically used to describe an artifact such as a controlled vocabulary, ontology, or other similar resource."
+          ],
+          [
+            "http://www.w3.org/2000/01/rdf-schema#isDefinedBy",
+            "http://purl.org/dc/terms/"
+          ],
+          [
+            "http://www.w3.org/2004/02/skos/core#definition",
+            "primary party responsible for making the resource available"
+          ],
+          [
+            "http://www.w3.org/2000/01/rdf-schema#label",
+            "publisher"
+          ]
+        ]
+      },
+      {
+        "subject": "http://purl.org/dc/terms/contributor",
+        "left and not right": [
+          [
+            "http://www.w3.org/2004/02/skos/core#definition",
+            "entity responsible for making contributions to the resource"
+          ],
+          [
+            "http://www.w3.org/2000/01/rdf-schema#isDefinedBy",
+            "http://purl.org/dc/terms/contributor"
+          ],
+          [
+            "http://www.w3.org/2000/01/rdf-schema#label",
+            "contributor"
+          ]
+        ],
+        "right and not left": [
+          [
+            "http://www.w3.org/2000/01/rdf-schema#label",
+            "contributor"
+          ],
+          [
+            "http://www.w3.org/2004/02/skos/core#definition",
+            "party that has made contributions to the resource"
+          ],
+          [
+            "http://www.w3.org/2000/01/rdf-schema#isDefinedBy",
+            "http://purl.org/dc/terms/"
+          ]
+        ]
+      },
+      {
+        "subject": "http://purl.org/dc/terms/references",
+        "left and not right": [
+          [
+            "http://www.w3.org/2000/01/rdf-schema#label",
+            "references"
+          ],
+          [
+            "http://www.w3.org/2000/01/rdf-schema#isDefinedBy",
+            "http://purl.org/dc/terms/references"
+          ],
+          [
+            "http://www.w3.org/2004/02/skos/core#definition",
+            "related resource that is referenced, cited, or otherwise pointed to by the described resource"
+          ]
+        ],
+        "right and not left": [
+          [
+            "http://www.w3.org/2000/01/rdf-schema#isDefinedBy",
+            "http://purl.org/dc/terms/"
+          ],
+          [
+            "http://www.w3.org/2004/02/skos/core#definition",
+            "indicates a related resource that is referenced, cited, or otherwise pointed to by the described resource"
+          ],
+          [
+            "http://www.w3.org/2000/01/rdf-schema#label",
+            "references"
+          ]
+        ]
+      },
+      {
+        "subject": "http://www.w3.org/2004/02/skos/core#changeNote",
+        "left and not right": [
+          [
+            "http://www.w3.org/2000/01/rdf-schema#label",
+            "change note"
+          ],
+          [
+            "http://www.w3.org/2004/02/skos/core#definition",
+            "note about a modification to a concept"
+          ]
+        ],
+        "right and not left": [
+          [
+            "http://www.w3.org/2000/01/rdf-schema#label",
+            "change note"
+          ],
+          [
+            "http://www.w3.org/2004/02/skos/core#definition",
+            "note describing a modification to a resource"
+          ]
+        ]
+      },
+      {
+        "subject": "http://www.w3.org/2004/02/skos/core#altLabel",
+        "left and not right": [
+          [
+            "http://www.w3.org/2000/01/rdf-schema#label",
+            "alternative label"
+          ],
+          [
+            "http://www.w3.org/2004/02/skos/core#definition",
+            "alternative lexical label for a resource"
+          ]
+        ],
+        "right and not left": [
+          [
+            "http://www.w3.org/2004/02/skos/core#definition",
+            "alternative lexical tag for a resource"
+          ],
+          [
+            "http://www.w3.org/2000/01/rdf-schema#label",
+            "alternative label"
+          ]
+        ]
+      },
+      {
+        "subject": "http://www.w3.org/2004/02/skos/core#scopeNote",
+        "left and not right": [
+          [
+            "http://www.w3.org/2000/01/rdf-schema#label",
+            "scope note"
+          ],
+          [
+            "http://www.w3.org/2004/02/skos/core#definition",
+            "note that helps to clarify the meaning and/or the use of a concept"
+          ],
+          [
+            "https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/usageNote",
+            "Use of this annotation is optional, but recommended if it will help a user understand the scope and/or context for usage of the concept."
+          ]
+        ],
+        "right and not left": [
+          [
+            "http://www.w3.org/2000/01/rdf-schema#label",
+            "scope note"
+          ],
+          [
+            "http://www.w3.org/2004/02/skos/core#definition",
+            "note that helps to clarify the meaning of something within the context of the intended use of the resource"
+          ],
+          [
+            "http://www.w3.org/2000/01/rdf-schema#subPropertyOf",
+            "http://www.w3.org/2004/02/skos/core#note"
+          ]
+        ]
+      },
+      {
+        "subject": "http://purl.org/dc/terms/creator",
+        "left and not right": [
+          [
+            "http://www.w3.org/2000/01/rdf-schema#isDefinedBy",
+            "http://purl.org/dc/terms/creator"
+          ],
+          [
+            "http://www.w3.org/2004/02/skos/core#definition",
+            "entity responsible for making the resource"
+          ],
+          [
+            "http://www.w3.org/2000/01/rdf-schema#label",
+            "creator"
+          ]
+        ],
+        "right and not left": [
+          [
+            "http://www.w3.org/2000/01/rdf-schema#label",
+            "creator"
+          ],
+          [
+            "http://www.w3.org/2004/02/skos/core#definition",
+            "party that originated the resource"
+          ],
+          [
+            "http://www.w3.org/2000/01/rdf-schema#isDefinedBy",
+            "http://purl.org/dc/terms/"
+          ]
+        ]
+      },
+      {
+        "subject": "http://purl.org/dc/terms/abstract",
+        "left and not right": [
+          [
+            "http://www.w3.org/2000/01/rdf-schema#label",
+            "abstract"
+          ],
+          [
+            "http://www.w3.org/2004/02/skos/core#definition",
+            "summary of the resource"
+          ],
+          [
+            "https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/usageNote",
+            "This annotation is used to describe an artifact such as a vocabulary, ontology, or ontology module."
+          ],
+          [
+            "http://www.w3.org/2000/01/rdf-schema#isDefinedBy",
+            "http://purl.org/dc/terms/abstract"
+          ]
+        ],
+        "right and not left": [
+          [
+            "https://www.omg.org/spec/Commons/AnnotationVocabulary/usageNote",
+            "This annotation is typically used to describe an artifact such as a controlled vocabulary, ontology, or other similar resource."
+          ],
+          [
+            "http://www.w3.org/2004/02/skos/core#definition",
+            "summary of the resource"
+          ],
+          [
+            "http://www.w3.org/2000/01/rdf-schema#label",
+            "abstract"
+          ],
+          [
+            "http://www.w3.org/2000/01/rdf-schema#isDefinedBy",
+            "http://purl.org/dc/terms/"
+          ]
+        ]
+      },
+      {
+        "subject": "http://purl.org/dc/terms/license",
+        "left and not right": [
+          [
+            "http://www.w3.org/2000/01/rdf-schema#isDefinedBy",
+            "http://purl.org/dc/terms/license"
+          ],
+          [
+            "http://www.w3.org/2000/01/rdf-schema#label",
+            "license"
+          ],
+          [
+            "http://www.w3.org/2004/02/skos/core#definition",
+            "legal document giving official permission to do something with the resource"
+          ]
+        ],
+        "right and not left": [
+          [
+            "http://www.w3.org/2000/01/rdf-schema#label",
+            "license"
+          ],
+          [
+            "https://www.omg.org/spec/Commons/AnnotationVocabulary/usageNote",
+            "This annotation is typically used to describe an artifact such as a controlled vocabulary, ontology, or other similar resource."
+          ],
+          [
+            "http://www.w3.org/2004/02/skos/core#definition",
+            "legal document giving official permission to do something with the resource"
+          ],
+          [
+            "http://www.w3.org/2000/01/rdf-schema#isDefinedBy",
+            "http://purl.org/dc/terms/"
+          ]
+        ]
+      },
+      {
+        "subject": "http://purl.org/dc/terms/issued",
+        "left and not right": [
+          [
+            "http://www.w3.org/2000/01/rdf-schema#label",
+            "issued"
+          ],
+          [
+            "http://www.w3.org/2004/02/skos/core#definition",
+            "date of formal issuance of the resource"
+          ],
+          [
+            "http://www.w3.org/2000/01/rdf-schema#isDefinedBy",
+            "http://purl.org/dc/terms/issued"
+          ],
+          [
+            "https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/usageNote",
+            "This annotation is used to describe an artifact such as a vocabulary, ontology, or ontology module."
+          ]
+        ],
+        "right and not left": [
+          [
+            "https://www.omg.org/spec/Commons/AnnotationVocabulary/usageNote",
+            "This annotation is typically used to describe an artifact such as a controlled vocabulary, ontology, or other similar resource."
+          ],
+          [
+            "http://www.w3.org/2004/02/skos/core#definition",
+            "date of formal issuance of the resource"
+          ],
+          [
+            "http://www.w3.org/2000/01/rdf-schema#label",
+            "issued"
+          ],
+          [
+            "http://www.w3.org/2000/01/rdf-schema#isDefinedBy",
+            "http://purl.org/dc/terms/"
+          ]
+        ]
+      },
+      {
+        "subject": "http://purl.org/dc/terms/description",
+        "left and not right": [
+          [
+            "http://www.w3.org/2000/01/rdf-schema#isDefinedBy",
+            "http://purl.org/dc/terms/description"
+          ],
+          [
+            "http://www.w3.org/2004/02/skos/core#definition",
+            "account of the resource"
+          ],
+          [
+            "http://www.w3.org/2000/01/rdf-schema#label",
+            "description"
+          ],
+          [
+            "https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/usageNote",
+            "This annotation is used to describe an artifact such as a vocabulary, ontology, or ontology module."
+          ]
+        ],
+        "right and not left": [
+          [
+            "http://www.w3.org/2004/02/skos/core#definition",
+            "account of the resource"
+          ],
+          [
+            "http://www.w3.org/2000/01/rdf-schema#label",
+            "description"
+          ],
+          [
+            "http://www.w3.org/2000/01/rdf-schema#isDefinedBy",
+            "http://purl.org/dc/terms/"
+          ]
+        ]
+      },
+      {
+        "subject": "http://purl.org/dc/terms/rights",
+        "left and not right": [
+          [
+            "http://www.w3.org/2000/01/rdf-schema#label",
+            "rights"
+          ],
+          [
+            "http://www.w3.org/2000/01/rdf-schema#isDefinedBy",
+            "http://purl.org/dc/terms/rights"
+          ],
+          [
+            "http://www.w3.org/2004/02/skos/core#definition",
+            "information about rights held in and over the resource"
+          ]
+        ],
+        "right and not left": [
+          [
+            "https://www.omg.org/spec/Commons/AnnotationVocabulary/usageNote",
+            "This annotation is typically used to describe an artifact such as a controlled vocabulary, ontology, or other similar resource."
+          ],
+          [
+            "http://www.w3.org/2004/02/skos/core#definition",
+            "provides nformation about rights held in and over the resource"
+          ],
+          [
+            "http://www.w3.org/2000/01/rdf-schema#label",
+            "rights"
+          ],
+          [
+            "http://www.w3.org/2000/01/rdf-schema#isDefinedBy",
+            "http://purl.org/dc/terms/"
+          ]
+        ]
+      },
+      {
+        "subject": "http://www.w3.org/2004/02/skos/core#example",
+        "left and not right": [
+          [
+            "http://www.w3.org/2004/02/skos/core#definition",
+            "example of the use of a concept"
+          ],
+          [
+            "http://www.w3.org/2000/01/rdf-schema#label",
+            "example"
+          ],
+          [
+            "https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/usageNote",
+            "Use of this annotation is optional, but recommended if it will help a user understand the intended interpretation(s).\n- This annotation should use at most twice with/on a notion.\n- Additional examples or more elaborate examples should be placed in the External Documentation (using rdfs:seeAlso)."
+          ]
+        ],
+        "right and not left": [
+          [
+            "http://www.w3.org/2000/01/rdf-schema#label",
+            "example"
+          ],
+          [
+            "http://www.w3.org/2004/02/skos/core#definition",
+            "illustration of the use of some resource"
+          ]
+        ]
+      },
+      {
+        "subject": "http://www.w3.org/2004/02/skos/core#editorialNote",
+        "left and not right": [
+          [
+            "http://www.w3.org/2000/01/rdf-schema#label",
+            "editorial note"
+          ],
+          [
+            "http://www.w3.org/2004/02/skos/core#definition",
+            "note for an editor, translator, or maintainer of the vocabulary"
+          ]
+        ],
+        "right and not left": [
+          [
+            "http://www.w3.org/2000/01/rdf-schema#label",
+            "editorial note"
+          ],
+          [
+            "http://www.w3.org/2004/02/skos/core#definition",
+            "note for an editor, translator, or maintainer of the controlled vocabulary or ontology"
+          ]
+        ]
+      },
+      {
+        "subject": "http://purl.org/dc/terms/modified",
+        "left and not right": [
+          [
+            "http://www.w3.org/2000/01/rdf-schema#label",
+            "modified"
+          ],
+          [
+            "http://www.w3.org/2004/02/skos/core#definition",
+            "date on which the resource was changed"
+          ],
+          [
+            "http://www.w3.org/2000/01/rdf-schema#isDefinedBy",
+            "http://purl.org/dc/terms/modified"
+          ]
+        ],
+        "right and not left": [
+          [
+            "http://www.w3.org/2000/01/rdf-schema#label",
+            "modified"
+          ],
+          [
+            "http://www.w3.org/2004/02/skos/core#definition",
+            "date on which the resource was most recently revised"
+          ],
+          [
+            "http://www.w3.org/2000/01/rdf-schema#isDefinedBy",
+            "http://purl.org/dc/terms/"
+          ]
+        ]
+      },
+      {
+        "subject": "http://www.w3.org/2004/02/skos/core#definition",
+        "left and not right": [
+          [
+            "http://www.w3.org/2004/02/skos/core#definition",
+            "statement or formal explanation of the meaning of a concept"
+          ],
+          [
+            "http://www.w3.org/2000/01/rdf-schema#label",
+            "definition"
+          ]
+        ],
+        "right and not left": [
+          [
+            "http://www.w3.org/2004/02/skos/core#definition",
+            "formal statement of the meaning of a resource"
+          ],
+          [
+            "http://www.w3.org/2000/01/rdf-schema#label",
+            "definition"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "ontology": "mfg-planning",
+    "delta": [
+      {
+        "subject": "http://simpom.ohio.edu/mfg-planning/",
+        "left and not right": [
+          [
+            "https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity",
+            "https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Provisional"
+          ],
+          [
+            "http://www.w3.org/2002/07/owl#imports",
+            "https://spec.industrialontologies.org/ontology/core/Core/"
+          ]
+        ],
+        "right and not left": [
+          [
+            "http://www.w3.org/2002/07/owl#imports",
+            "https://spec.industrialontologies.org/ontology/core/20220506/Core/"
+          ]
+        ]
+      }
+    ]
+  }
 ]

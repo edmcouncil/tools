@@ -1,3 +1,4 @@
+import argparse
 import os.path
 import re
 import sys
@@ -51,34 +52,23 @@ def collect_ontologies(
         output_graph.serialize(output_graph_path)
 
 
-# if __name__ == "__main__":
-#     parser = argparse.ArgumentParser(description='Collects all ontologies imported from input ontology')
-#     parser.add_argument('--root', help='Path to root folder', metavar='ROOT')
-#     parser.add_argument('--input_ontology', help='Path to input ontology', metavar='IN_ONT')
-#     parser.add_argument('--ontology-mapping', help='Path to ontology mapping file', metavar='ONT_MAP')
-#     parser.add_argument('--output_ontology', help='Path to output ontology file', metavar='OUT_ONT')
-#     args = parser.parse_args()
-#
-#     get_local_ontology_map(
-#         ontology_catalog_path=args.ontology_mapping)
-#
-#     output_graph = Graph()
-#
-#     collect_ontologies(
-#         root=args.root,
-#         input_ontology_path=args.input_ontology,
-#         output_graph_path=args.output_ontology,
-#         save_output=True)
-#
-#     output_graph.close(True)
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description='Collects all ontologies imported from input ontology')
+    parser.add_argument('--root', help='Path to root folder', metavar='ROOT')
+    parser.add_argument('--input_ontology', help='Path to input ontology', metavar='IN_ONT')
+    parser.add_argument('--ontology-mapping', help='Path to ontology mapping file', metavar='ONT_MAP')
+    parser.add_argument('--output_ontology', help='Path to output ontology file', metavar='OUT_ONT')
+    args = parser.parse_args()
 
-get_local_ontology_map(ontology_catalog_path='/Users/pawel.garbacz/Documents/edmc/github/ontology/catalog-v001.xml')
-output_graph = Graph()
+    get_local_ontology_map(
+        ontology_catalog_path=args.ontology_mapping)
 
-collect_ontologies(
-    root='/Users/pawel.garbacz/Documents/edmc/github/ontology/',
-    input_ontology_path='/Users/pawel.garbacz/Documents/edmc/github/ontology/AboutIOFDev.rdf',
-    output_graph_path='/Users/pawel.garbacz/Documents/edmc/github/ontology/AboutIOFDevMerged.rdf',
-    save_output=True)
+    output_graph = Graph()
 
-output_graph.close(True)
+    collect_ontologies(
+        root=args.root,
+        input_ontology_path=args.input_ontology,
+        output_graph_path=args.output_ontology,
+        save_output=True)
+
+    output_graph.close(True)
