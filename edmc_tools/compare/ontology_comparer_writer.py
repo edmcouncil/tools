@@ -8,8 +8,7 @@ DIFF_AXIOMS_EXCEL_FILE_NAME = 'different_axioms_for_same_subjects.xlsx'
 DIFF_ONTOLOGIES_EXCEL_FILE_NAME = 'different_ontologies.xlsx'
 
 
-def save_diff_dicts(comparison_prefix: str, output_folder: str, diff_ontologies_list: list,
-                    diff_resource_dicts_list: list, diff_axioms_for_same_subjects_dicts_list: list):
+def save_diff_dicts(comparison_prefix: str, output_folder: str, diff_ontologies_list: list,diff_resource_dicts_list: list, diff_axioms_for_same_subjects_dicts_list: list):
     save_dict_as_json_file(
         dicts=diff_resource_dicts_list,
         output_folder=output_folder,
