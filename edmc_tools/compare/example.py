@@ -13,8 +13,8 @@ else:
     logging.basicConfig(format='%(levelname)s %(asctime)s %(message)s', level=logging.INFO, datefmt='%m/%d/%Y %I:%M:%S %p')
 
 compare_ontology_github_repos(
-    repo_github_url='https://github.com/iofoundry/ontology.git',
-    left_revision_commit='aa937f32d6c8eb0e61e7cf513d58d514ecb61bbb',
-    right_revision_commit='b274424dd70d8d9fc843795d53bf699c6565dc87',
-    config=ComparisionConfig(verbose=True),
+    repo_github_url='https://github.com/edmcouncil/idmp',
+    left_revision_id='master_v0.1.0',
+    right_revision_id='master_v0.2.0',
+    config=ComparisionConfig(verbose=False),
     outputs='out')

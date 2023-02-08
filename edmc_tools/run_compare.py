@@ -28,7 +28,7 @@ if __name__ == "__main__":
     
     compare_ontology_github_repos(
         repo_github_url=args.github,
-        left_revision_commit=args.left,
-        right_revision_commit=args.right,
+        left_revision_id=args.left,
+        right_revision_id=args.right,
         config=ComparisionConfig(verbose=args.verbose),
         outputs=args.outputs)

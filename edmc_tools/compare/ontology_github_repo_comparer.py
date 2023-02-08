@@ -17,8 +17,8 @@ RESULTS_FOLDER = 'results'
 
 def compare_ontology_github_repos(
         repo_github_url: str,
-        left_revision_commit: str,
-        right_revision_commit: str,
+        left_revision_id: str,
+        right_revision_id: str,
         config: ComparisionConfig,
         outputs: str):
     logging.info(msg='Cloning ' + repo_github_url + ' to local file system.')
@@ -35,28 +35,32 @@ def compare_ontology_github_repos(
     create_folder_if_not_exists(outputs_temp_right)
     create_folder_if_not_exists(outputs_results)
     
-    logging.info(msg='Cloning revision ' + left_revision_commit)
+    logging.info(msg='Cloning revision ' + left_revision_id)
     git_repo_left = Repo.clone_from(url=repo_github_url, to_path=outputs_temp_left)
-    git_repo_left.git.reset(left_revision_commit, '--hard')
+    git_repo_left.git.reset(left_revision_id, '--hard')
     
-    logging.info(msg='Cloning revision ' + right_revision_commit)
+    logging.info(msg='Cloning revision ' + right_revision_id)
     git_repo_right = Repo.clone_from(url=repo_github_url, to_path=outputs_temp_right)
-    git_repo_right.git.reset(right_revision_commit, '--hard')
+    git_repo_right.git.reset(right_revision_id, '--hard')
     
-    logging.info(msg='Comparing revision ' + left_revision_commit + ' to ' + right_revision_commit)
+    logging.info(msg='Comparing revision ' + left_revision_id + ' to ' + right_revision_id)
     
     diff_ontologies, ontologies_diff_resources, ontologies_diff_axioms_for_same_subjects = \
         compare_ontology_revisions_in_folders(
             folder_name=repo_github_name,
             left_revision_folder=outputs_temp_left,
             right_revision_folder=outputs_temp_right,
+            left_revision_id=left_revision_id,
+            right_revision_id=right_revision_id,
             config=config)
     
     logging.info(msg='Saving comparison results')
     
     save_diff_dicts(
         comparison_prefix=repo_github_name,
-        diff_ontologies_list=[diff_ontologies],
+        left_revision_id=left_revision_id,
+        right_revision_id=right_revision_id,
+        diff_ontologies_dict=diff_ontologies,
         diff_resource_dicts_list=ontologies_diff_resources,
         diff_axioms_for_same_subjects_dicts_list=ontologies_diff_axioms_for_same_subjects,
         output_folder=outputs_results)

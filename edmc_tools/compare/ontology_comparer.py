@@ -1,8 +1,7 @@
 from rdflib import Graph, OWL, RDF, RDFS
 from rdflib.term import URIRef, Literal
 
-from compare.common import ONTOLOGY_NAME_KEY, ONTOLOGY_DIFF_KEY, LEFT_BUT_NOT_RIGHT, RIGHT_BUT_NOT_LEFT, BOTH, \
-    LEFT_BUT_NOT_RIGHT_COUNT, RIGHT_BUT_NOT_LEFT_COUNT, BOTH_COUNT
+from compare.common import *
 from compare.comparision_config import ComparisionConfig
 from owl_helpers.resource_identifiers import identify_resource
 
@@ -11,6 +10,8 @@ def compare_ontology_revisions(
         ontology_revision_left_location: str,
         ontology_revision_right_location: str,
         ontology_name: str,
+        left_revision_id: str,
+        right_revision_id: str,
         config: ComparisionConfig) -> tuple:
     ontology_1 = Graph()
     if len(ontology_revision_left_location) > 0:
@@ -19,18 +20,24 @@ def compare_ontology_revisions(
     if len(ontology_revision_right_location) > 0:
         ontology_2.parse(ontology_revision_right_location)
     
-    diff_resources = compare_ontological_resources(ontology_name, ontology_1, ontology_2, config)
-    diff_axioms_for_same_subjects = compare_axioms_for_same_subjects(ontology_name, ontology_1, ontology_2, config)
+    diff_resources = compare_ontological_resources(ontology_name, ontology_1, ontology_2, config, left_revision_id, right_revision_id)
+    diff_axioms_for_same_subjects = compare_axioms_for_same_subjects(ontology_name, ontology_1, ontology_2, config, left_revision_id, right_revision_id)
     return diff_resources, diff_axioms_for_same_subjects
 
 
-def compare_ontological_resources(ontology_name: str, ontology_1: Graph, ontology_2: Graph, config: ComparisionConfig) -> dict:
-    diff_classes = compare_iris_in_type(ontology_1, ontology_2, OWL.Class, config)
-    diff_object_properties = compare_iris_in_type(ontology_1, ontology_2, OWL.ObjectProperty, config)
-    diff_datatype_properties = compare_iris_in_type(ontology_1, ontology_2, OWL.DatatypeProperty, config)
-    diff_annotation_properties = compare_iris_in_type(ontology_1, ontology_2, OWL.DatatypeProperty, config)
-    diff_individuals = compare_iris_in_type(ontology_1, ontology_2, OWL.NamedIndividual, config)
-    diff_datatypes = compare_iris_in_type(ontology_1, ontology_2, RDFS.Datatype, config)
+def compare_ontological_resources(
+        ontology_name: str,
+        ontology_1: Graph,
+        ontology_2: Graph,
+        config: ComparisionConfig,
+        left_revision_id: str,
+        right_revision_id: str) -> dict:
+    diff_classes = compare_iris_in_type(ontology_1, ontology_2, OWL.Class, config, left_revision_id, right_revision_id)
+    diff_object_properties = compare_iris_in_type(ontology_1, ontology_2, OWL.ObjectProperty, config, left_revision_id, right_revision_id)
+    diff_datatype_properties = compare_iris_in_type(ontology_1, ontology_2, OWL.DatatypeProperty, config, left_revision_id, right_revision_id)
+    diff_annotation_properties = compare_iris_in_type(ontology_1, ontology_2, OWL.DatatypeProperty, config, left_revision_id, right_revision_id)
+    diff_individuals = compare_iris_in_type(ontology_1, ontology_2, OWL.NamedIndividual, config, left_revision_id, right_revision_id)
+    diff_datatypes = compare_iris_in_type(ontology_1, ontology_2, RDFS.Datatype, config, left_revision_id, right_revision_id)
     
     diff_dict_list = \
         [
@@ -52,10 +59,27 @@ def compare_ontological_resources(ontology_name: str, ontology_1: Graph, ontolog
     return diffs_dict
 
 
-def compare_axioms_for_same_subjects(ontology_name: str, ontology_1: Graph, ontology_2: Graph, config: ComparisionConfig) -> dict:
+def compare_axioms_for_same_subjects(
+        ontology_name: str,
+        ontology_1: Graph,
+        ontology_2: Graph,
+        config: ComparisionConfig,
+        left_revision_id: str,
+        right_revision_id: str,) -> dict:
     identifiable_subjects_1 = get_subjects(ontology_1, True)
     identifiable_subjects_2 = get_subjects(ontology_2, True)
     diffs_dict_list = list()
+
+    left_but_not_right = \
+        get_specific_constant(
+            constant=AXIOMS_LEFT_BUT_NOT_RIGHT,
+            left_specific=left_revision_id,
+            right_specific=right_revision_id)
+    right_but_not_left = \
+        get_specific_constant(
+            constant=AXIOMS_RIGHT_BUT_NOT_LEFT,
+            left_specific=left_revision_id,
+            right_specific=right_revision_id)
     
     common_subjects = identifiable_subjects_1.intersection(identifiable_subjects_2)
     for common_identifiable_subject in common_subjects:
@@ -77,22 +101,22 @@ def compare_axioms_for_same_subjects(ontology_name: str, ontology_1: Graph, onto
             diff = diff | \
                    {
                        'subject': common_identifiable_subject,
-                       LEFT_BUT_NOT_RIGHT_COUNT: len(identifiable_property_object_tuples_1_and_not_2),
-                       RIGHT_BUT_NOT_LEFT_COUNT: len(identifiable_property_object_tuples_2_and_not_1)
+                       left_but_not_right: len(identifiable_property_object_tuples_1_and_not_2),
+                       right_but_not_left.replace('right', right_revision_id): len(identifiable_property_object_tuples_2_and_not_1)
                    }
         else:
             diff = diff | \
                    {
                        'subject': common_identifiable_subject,
-                       LEFT_BUT_NOT_RIGHT: identifiable_property_object_tuples_1_and_not_2,
-                       RIGHT_BUT_NOT_LEFT: identifiable_property_object_tuples_2_and_not_1,
+                       left_but_not_right: identifiable_property_object_tuples_1_and_not_2,
+                       right_but_not_left.replace('right', right_revision_id): identifiable_property_object_tuples_2_and_not_1,
                    }
         
         if config.show_common:
             identifiable_property_object_tuples_1_and_2 = list(
                 identifiable_property_object_tuples_1.intersection(identifiable_property_object_tuples_2))
             if not config.verbose:
-                diff = diff | {BOTH_COUNT: len(identifiable_property_object_tuples_1_and_2)}
+                diff = diff | {BOTH: len(identifiable_property_object_tuples_1_and_2)}
             else:
                 diff = diff | {BOTH: identifiable_property_object_tuples_1_and_2}
         diffs_dict_list.append(diff)
@@ -108,7 +132,12 @@ def compare_axioms_for_same_subjects(ontology_name: str, ontology_1: Graph, onto
     return diffs_dict
 
 
-def compare_iris_in_type(ontology_1: Graph, ontology_2: Graph, ontology_type, config: ComparisionConfig) -> dict:
+def compare_iris_in_type(
+        ontology_1: Graph,
+        ontology_2: Graph,
+        ontology_type, config: ComparisionConfig,
+        left_revision_id: str,
+        right_revision_id: str) -> dict:
     resources_1 = set(ontology_1.subjects(predicate=RDF.type, object=ontology_type))
     resources_2 = set(ontology_2.subjects(predicate=RDF.type, object=ontology_type))
     iris_1 = filter_to_iris(resources_1)
@@ -117,6 +146,17 @@ def compare_iris_in_type(ontology_1: Graph, ontology_2: Graph, ontology_type, co
     diff_1_minus_2 = list(iris_1.difference(iris_2))
     diff_2_minus_1 = list(iris_2.difference(iris_1))
     common_1_and_2 = list(iris_1.intersection(iris_2))
+
+    left_but_not_right = \
+        get_specific_constant(
+            constant=RESOURCES_LEFT_BUT_NOT_RIGHT,
+            left_specific=left_revision_id,
+            right_specific=right_revision_id)
+    right_but_not_left = \
+        get_specific_constant(
+            constant=RESOURCES_RIGHT_BUT_NOT_LEFT,
+            left_specific=left_revision_id,
+            right_specific=right_revision_id)
     
     if config.strict:
         if len(diff_1_minus_2) == 0 and len(diff_2_minus_1) == 0:
@@ -126,19 +166,19 @@ def compare_iris_in_type(ontology_1: Graph, ontology_2: Graph, ontology_type, co
         diff_dict = \
             {
                 'type': str(ontology_type),
-                LEFT_BUT_NOT_RIGHT_COUNT: len(diff_1_minus_2),
-                RIGHT_BUT_NOT_LEFT_COUNT: len(diff_2_minus_1),
+                left_but_not_right: len(diff_1_minus_2),
+                right_but_not_left: len(diff_2_minus_1),
             }
     else:
         diff_dict = \
             {
                 'type': str(ontology_type),
-                LEFT_BUT_NOT_RIGHT: diff_1_minus_2,
-                RIGHT_BUT_NOT_LEFT: diff_2_minus_1
+                left_but_not_right: diff_1_minus_2,
+                right_but_not_left: diff_2_minus_1
             }
     if config.show_common:
         if not config.verbose:
-            diff_dict = diff_dict | {BOTH_COUNT: len(common_1_and_2)}
+            diff_dict = diff_dict | {BOTH: len(common_1_and_2)}
         else:
             common_1_and_2 = list(iris_1.intersection(iris_2))
             diff_dict = diff_dict | {BOTH: common_1_and_2}

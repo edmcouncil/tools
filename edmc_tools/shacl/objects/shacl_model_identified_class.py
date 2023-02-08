@@ -7,6 +7,11 @@ from shacl.objects.shacl_model_resource import ShaclModelResource
 class ShaclModelIdentifiedClass(ShaclModelResource):
     registry = dict()
     
+    @staticmethod
+    def get_shacl_identified_class_from_owl(owl_class: Identifier):
+        if owl_class in ShaclModelIdentifiedClass.registry:
+            return ShaclModelIdentifiedClass.registry[owl_class]
+    
     def __init__(self, iri: Identifier, attributes: set, super_classes: set, is_leaf=True, is_datatype=False):
         super().__init__(iri)
         self.attributes = attributes

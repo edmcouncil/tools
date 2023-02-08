@@ -2,7 +2,7 @@ import logging
 import os
 import sys
 
-from compare.common import LEFT_BUT_NOT_RIGHT, RIGHT_BUT_NOT_LEFT, LEFT_BUT_NOT_RIGHT_COUNT, RIGHT_BUT_NOT_LEFT_COUNT
+from compare.common import *
 from compare.comparision_config import ComparisionConfig
 from compare.ontology_comparer import compare_ontology_revisions
 
@@ -13,6 +13,8 @@ def compare_ontology_revisions_in_folders(
         folder_name: str,
         left_revision_folder: str,
         right_revision_folder: str,
+        left_revision_id: str,
+        right_revision_id: str,
         config: ComparisionConfig) -> tuple:
     both_file_paths, only_left_file_paths, only_right_file_paths = \
         get_ontology_files(
@@ -24,19 +26,28 @@ def compare_ontology_revisions_in_folders(
         compare_common_ontology_revisions(
             both_file_paths=both_file_paths,
             default_ontology_file_extension=config.default_ontology_file_extension,
+            left_revision_id=left_revision_id,
+            right_revision_id=right_revision_id,
             config=config)
     
     diff_ontologies = \
-        compare_diff_ontology_revisions(
+        compare_repository_revisions(
             only_left_file_paths=only_left_file_paths,
             only_right_file_paths=only_right_file_paths,
             folder_name=folder_name,
+            left_revision_id=left_revision_id,
+            right_revision_id=right_revision_id,
             verbose=config.verbose)
     
     return diff_ontologies, ontologies_diff_resources, ontologies_diff_axioms_for_same_subjects
 
 
-def compare_common_ontology_revisions(both_file_paths: set, default_ontology_file_extension: str, config: ComparisionConfig) -> tuple:
+def compare_common_ontology_revisions(
+        both_file_paths: set,
+        default_ontology_file_extension: str,
+        config: ComparisionConfig,
+        left_revision_id: str,
+        right_revision_id: str) -> tuple:
     ontologies_diff_resources = list()
     ontologies_diff_axioms_for_same_subjects = list()
     for ontology_path in both_file_paths:
@@ -57,6 +68,8 @@ def compare_common_ontology_revisions(both_file_paths: set, default_ontology_fil
                 ontology_revision_left_location=ontology_left_location,
                 ontology_revision_right_location=ontology_right_location,
                 ontology_name=ontology_file_name,
+                left_revision_id=left_revision_id,
+                right_revision_id=right_revision_id,
                 config=config)
         if len(diff_resources_dict) > 0:
             ontologies_diff_resources.append(diff_resources_dict)
@@ -65,15 +78,32 @@ def compare_common_ontology_revisions(both_file_paths: set, default_ontology_fil
     return ontologies_diff_resources, ontologies_diff_axioms_for_same_subjects
 
 
-def compare_diff_ontology_revisions(only_left_file_paths: set, only_right_file_paths: set, folder_name: str, verbose: bool) -> dict:
+def compare_repository_revisions(
+        only_left_file_paths: set,
+        only_right_file_paths: set,
+        folder_name: str,
+        verbose: bool,
+        left_revision_id: str,
+        right_revision_id: str) -> dict:
     diff_ontologies = dict()
     diff_ontologies[FOLDER_NAME_LABEL] = folder_name
+    left_but_not_right = \
+        get_specific_constant(
+            constant=ONTOLOGIES_LEFT_BUT_NOT_RIGHT,
+            left_specific=left_revision_id,
+            right_specific=right_revision_id)
+    right_but_not_left = \
+        get_specific_constant(
+            constant=ONTOLOGIES_RIGHT_BUT_NOT_LEFT,
+            left_specific=left_revision_id,
+            right_specific=right_revision_id)
     if verbose:
-        diff_ontologies[LEFT_BUT_NOT_RIGHT_COUNT] = len(only_left_file_paths)
-        diff_ontologies[RIGHT_BUT_NOT_LEFT_COUNT] = len(only_right_file_paths)
+        diff_ontologies[left_but_not_right] = only_left_file_paths
+        diff_ontologies[right_but_not_left] = only_right_file_paths
     else:
-        diff_ontologies[LEFT_BUT_NOT_RIGHT] = only_left_file_paths
-        diff_ontologies[RIGHT_BUT_NOT_LEFT] = only_right_file_paths
+        diff_ontologies[left_but_not_right] = len(only_left_file_paths)
+        diff_ontologies[right_but_not_left] = len(only_right_file_paths)
+
     return diff_ontologies
 
 
