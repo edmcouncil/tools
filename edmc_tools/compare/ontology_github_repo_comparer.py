@@ -4,8 +4,8 @@ import shutil
 
 from git import Repo
 
-from compare.comparision_config import ComparisionConfig
-from compare.ontology_comparer_writer import save_diff_dicts
+from compare.comparison_config import ComparisonConfig
+from compare.ontology_comparer_writer import save_deltas
 from compare.ontology_folder_comparer import compare_ontology_revisions_in_folders
 from compare.utils import create_folder_if_not_exists
 
@@ -19,7 +19,7 @@ def compare_ontology_github_repos(
         repo_github_url: str,
         left_revision_id: str,
         right_revision_id: str,
-        config: ComparisionConfig,
+        config: ComparisonConfig,
         outputs: str):
     logging.info(msg='Cloning ' + repo_github_url + ' to local file system.')
     
@@ -56,13 +56,14 @@ def compare_ontology_github_repos(
     
     logging.info(msg='Saving comparison results')
     
-    save_diff_dicts(
+    save_deltas(
         comparison_prefix=repo_github_name,
         left_revision_id=left_revision_id,
         right_revision_id=right_revision_id,
         diff_ontologies_dict=diff_ontologies,
         diff_resource_dicts_list=ontologies_diff_resources,
         diff_axioms_for_same_subjects_dicts_list=ontologies_diff_axioms_for_same_subjects,
+        config=config,
         output_folder=outputs_results)
     
     git_repo_left.close()

@@ -17,3 +17,4 @@ Github
 pyjsonviewer
 gitpython
 PyYAML~=6.0
+xlsxwriter

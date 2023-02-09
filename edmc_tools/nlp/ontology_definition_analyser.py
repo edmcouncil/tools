@@ -98,11 +98,11 @@ def __get_owl_restriction_definition_overlap(definition: str, owl_restriction: B
     
 
 fibo = Graph()
-fibo.parse(r'/Users/pawel.garbacz/Documents/edmc/python/projects/edmc_tools/resources/dev.fibo-quickstart.ttl')
+fibo.parse('../resources/AboutFIBODevMerged.ttl')
 definition_analysis = analyse_definitions_in_ontology(ontology=fibo)
 for owl_class, overlap in definition_analysis.items():
     if overlap == 0:
         fibo = fibo.remove((owl_class, None, None))
         fibo = fibo.remove((None, None, owl_class))
-fibo.serialize(r'/Users/pawel.garbacz/Documents/edmc/python/projects/edmc_tools/resources/dev.fibo-quickstart_satori.ttl')
+fibo.serialize('../resources/AboutFIBODevMerged.ttl')
 fibo.close()

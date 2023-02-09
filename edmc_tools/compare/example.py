@@ -1,7 +1,7 @@
 import logging
 import time
 
-from compare.comparision_config import ComparisionConfig
+from compare.comparison_config import ComparisonConfig
 from compare.ontology_github_repo_comparer import compare_ontology_github_repos
 
 timestr = time.strftime("%Y%m%d-%H%M%S")
@@ -16,5 +16,5 @@ compare_ontology_github_repos(
     repo_github_url='https://github.com/edmcouncil/idmp',
     left_revision_id='master_v0.1.0',
     right_revision_id='master_v0.2.0',
-    config=ComparisionConfig(verbose=False),
+    config=ComparisonConfig(verbose=False),
     outputs='out')

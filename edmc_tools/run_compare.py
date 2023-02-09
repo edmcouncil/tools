@@ -5,7 +5,7 @@ import sys
 
 
 
-from compare.comparision_config import ComparisionConfig
+from compare.comparison_config import ComparisonConfig
 from compare.ontology_github_repo_comparer import compare_ontology_github_repos
 
 
@@ -30,5 +30,5 @@ if __name__ == "__main__":
         repo_github_url=args.github,
         left_revision_id=args.left,
         right_revision_id=args.right,
-        config=ComparisionConfig(verbose=args.verbose),
+        config=ComparisonConfig(verbose=args.verbose),
         outputs=args.outputs)

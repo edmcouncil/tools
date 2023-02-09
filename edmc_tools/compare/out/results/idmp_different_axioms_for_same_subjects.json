@@ -1,0 +1,932 @@
+[
+    {
+        "ontology": "MetadataCMNS",
+        "delta": [
+            {
+                "subject": "https://www.omg.org/spec/Commons/MetadataCMNS/CMNSModule",
+                "axioms in master_v0.1.0 but not in master_v0.2.0 ontology revision": 0,
+                "axioms in master_v0.2.0 but not in master_v0.1.0 ontology revision": 10
+            },
+            {
+                "subject": "https://www.omg.org/spec/Commons/MetadataCMNS/",
+                "axioms in master_v0.1.0 but not in master_v0.2.0 ontology revision": 2,
+                "axioms in master_v0.2.0 but not in master_v0.1.0 ontology revision": 2
+            }
+        ]
+    },
+    {
+        "ontology": "ChangeManagement",
+        "delta": [
+            {
+                "subject": "https://spec.pistoiaalliance.org/idmp/ontology/META/ChangeManagement/",
+                "axioms in master_v0.1.0 but not in master_v0.2.0 ontology revision": 2,
+                "axioms in master_v0.2.0 but not in master_v0.1.0 ontology revision": 2
+            }
+        ]
+    },
+    {
+        "ontology": "DatesAndTimes",
+        "delta": [
+            {
+                "subject": "https://www.omg.org/spec/Commons/DatesAndTimes/",
+                "axioms in master_v0.1.0 but not in master_v0.2.0 ontology revision": 1,
+                "axioms in master_v0.2.0 but not in master_v0.1.0 ontology revision": 1
+            }
+        ]
+    },
+    {
+        "ontology": "AboutCommons",
+        "delta": [
+            {
+                "subject": "https://www.omg.org/spec/Commons/AboutCommons/",
+                "axioms in master_v0.1.0 but not in master_v0.2.0 ontology revision": 2,
+                "axioms in master_v0.2.0 but not in master_v0.1.0 ontology revision": 5
+            }
+        ]
+    },
+    {
+        "ontology": "ProductsAndServices",
+        "delta": [
+            {
+                "subject": "https://www.omg.org/spec/Commons/ProductsAndServices/",
+                "axioms in master_v0.1.0 but not in master_v0.2.0 ontology revision": 2,
+                "axioms in master_v0.2.0 but not in master_v0.1.0 ontology revision": 11
+            },
+            {
+                "subject": "https://www.omg.org/spec/Commons/ProductsAndServices/Product",
+                "axioms in master_v0.1.0 but not in master_v0.2.0 ontology revision": 1,
+                "axioms in master_v0.2.0 but not in master_v0.1.0 ontology revision": 1
+            }
+        ]
+    },
+    {
+        "ontology": "Classifiers",
+        "delta": [
+            {
+                "subject": "https://www.omg.org/spec/Commons/Classifiers/",
+                "axioms in master_v0.1.0 but not in master_v0.2.0 ontology revision": 1,
+                "axioms in master_v0.2.0 but not in master_v0.1.0 ontology revision": 1
+            }
+        ]
+    },
+    {
+        "ontology": "EuropeanUnionClinicalTrialsRegister",
+        "delta": [
+            {
+                "subject": "https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/EuropeanUnionClinicalTrialsRegister/FendrixPharmaceuticalProduct",
+                "axioms in master_v0.1.0 but not in master_v0.2.0 ontology revision": 1,
+                "axioms in master_v0.2.0 but not in master_v0.1.0 ontology revision": 1
+            },
+            {
+                "subject": "https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/EuropeanUnionClinicalTrialsRegister/PfizerGmbHAsMarketingAuthorizationHolder",
+                "axioms in master_v0.1.0 but not in master_v0.2.0 ontology revision": 1,
+                "axioms in master_v0.2.0 but not in master_v0.1.0 ontology revision": 1
+            },
+            {
+                "subject": "https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/EuropeanUnionClinicalTrialsRegister/FendrixMarketingAuthorizationInEuropeanUnion",
+                "axioms in master_v0.1.0 but not in master_v0.2.0 ontology revision": 2,
+                "axioms in master_v0.2.0 but not in master_v0.1.0 ontology revision": 2
+            },
+            {
+                "subject": "https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/EuropeanUnionClinicalTrialsRegister/DynavaxTechnologiesCorporationAsAuthorizedParty",
+                "axioms in master_v0.1.0 but not in master_v0.2.0 ontology revision": 1,
+                "axioms in master_v0.2.0 but not in master_v0.1.0 ontology revision": 1
+            },
+            {
+                "subject": "https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/EuropeanUnionClinicalTrialsRegister/GlaxoSmithKlineBiologicalsAsMarketingAuthorizationHolder",
+                "axioms in master_v0.1.0 but not in master_v0.2.0 ontology revision": 1,
+                "axioms in master_v0.2.0 but not in master_v0.1.0 ontology revision": 1
+            },
+            {
+                "subject": "https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/EuropeanUnionClinicalTrialsRegister/MarketingAuthorizationNumber-EMEA-H-C-000550",
+                "axioms in master_v0.1.0 but not in master_v0.2.0 ontology revision": 2,
+                "axioms in master_v0.2.0 but not in master_v0.1.0 ontology revision": 2
+            },
+            {
+                "subject": "https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/EuropeanUnionClinicalTrialsRegister/EudraClinicalTrialsNumber-2014-002112-16",
+                "axioms in master_v0.1.0 but not in master_v0.2.0 ontology revision": 1,
+                "axioms in master_v0.2.0 but not in master_v0.1.0 ontology revision": 1
+            },
+            {
+                "subject": "https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/EuropeanUnionClinicalTrialsRegister/EngerixBMarketingAuthorizationInEuropeanUnion",
+                "axioms in master_v0.1.0 but not in master_v0.2.0 ontology revision": 2,
+                "axioms in master_v0.2.0 but not in master_v0.1.0 ontology revision": 2
+            },
+            {
+                "subject": "https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/EuropeanUnionClinicalTrialsRegister/DynavaxTechnologiesCorporation",
+                "axioms in master_v0.1.0 but not in master_v0.2.0 ontology revision": 1,
+                "axioms in master_v0.2.0 but not in master_v0.1.0 ontology revision": 1
+            },
+            {
+                "subject": "https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/EuropeanUnionClinicalTrialsRegister/SheffieldTeachingHospitalsNHSFoundation",
+                "axioms in master_v0.1.0 but not in master_v0.2.0 ontology revision": 1,
+                "axioms in master_v0.2.0 but not in master_v0.1.0 ontology revision": 1
+            },
+            {
+                "subject": "https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/EuropeanUnionClinicalTrialsRegister/NorvascMarketingAuthorizationInGermany",
+                "axioms in master_v0.1.0 but not in master_v0.2.0 ontology revision": 1,
+                "axioms in master_v0.2.0 but not in master_v0.1.0 ontology revision": 1
+            },
+            {
+                "subject": "https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/EuropeanUnionClinicalTrialsRegister/NovartisPharmaServicesAG",
+                "axioms in master_v0.1.0 but not in master_v0.2.0 ontology revision": 1,
+                "axioms in master_v0.2.0 but not in master_v0.1.0 ontology revision": 1
+            },
+            {
+                "subject": "https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/EuropeanUnionClinicalTrialsRegister/NovartisPharmaServicesAGAuthorizedParty",
+                "axioms in master_v0.1.0 but not in master_v0.2.0 ontology revision": 1,
+                "axioms in master_v0.2.0 but not in master_v0.1.0 ontology revision": 1
+            },
+            {
+                "subject": "https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/EuropeanUnionClinicalTrialsRegister/MarketingAuthorizationNumber-CPMP-1493-01",
+                "axioms in master_v0.1.0 but not in master_v0.2.0 ontology revision": 2,
+                "axioms in master_v0.2.0 but not in master_v0.1.0 ontology revision": 2
+            },
+            {
+                "subject": "https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/EuropeanUnionClinicalTrialsRegister/EngerixBPharmaceuticalProduct",
+                "axioms in master_v0.1.0 but not in master_v0.2.0 ontology revision": 1,
+                "axioms in master_v0.2.0 but not in master_v0.1.0 ontology revision": 1
+            },
+            {
+                "subject": "https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/EuropeanUnionClinicalTrialsRegister/ClinicalTrialAuthorization-2004-002410-11",
+                "axioms in master_v0.1.0 but not in master_v0.2.0 ontology revision": 1,
+                "axioms in master_v0.2.0 but not in master_v0.1.0 ontology revision": 1
+            },
+            {
+                "subject": "https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/EuropeanUnionClinicalTrialsRegister/SheffieldTeachingHospitalsNHSFoundationTrustAuthorizedParty",
+                "axioms in master_v0.1.0 but not in master_v0.2.0 ontology revision": 1,
+                "axioms in master_v0.2.0 but not in master_v0.1.0 ontology revision": 1
+            },
+            {
+                "subject": "https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/EuropeanUnionClinicalTrialsRegister/DynavaxTechnologiesCorporationAsMarketingAuthorizationHolder",
+                "axioms in master_v0.1.0 but not in master_v0.2.0 ontology revision": 1,
+                "axioms in master_v0.2.0 but not in master_v0.1.0 ontology revision": 1
+            },
+            {
+                "subject": "https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/EuropeanUnionClinicalTrialsRegister/EudraClinicalTrialsNumber-2010-022372-31",
+                "axioms in master_v0.1.0 but not in master_v0.2.0 ontology revision": 1,
+                "axioms in master_v0.2.0 but not in master_v0.1.0 ontology revision": 1
+            },
+            {
+                "subject": "https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/EuropeanUnionClinicalTrialsRegister/EudraClinicalTrialsNumber-2004-002410-11",
+                "axioms in master_v0.1.0 but not in master_v0.2.0 ontology revision": 1,
+                "axioms in master_v0.2.0 but not in master_v0.1.0 ontology revision": 1
+            },
+            {
+                "subject": "https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/EuropeanUnionClinicalTrialsRegister/ClinicalTrialAuthorization-2010-022372-31",
+                "axioms in master_v0.1.0 but not in master_v0.2.0 ontology revision": 1,
+                "axioms in master_v0.2.0 but not in master_v0.1.0 ontology revision": 1
+            },
+            {
+                "subject": "https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/EuropeanUnionClinicalTrialsRegister/",
+                "axioms in master_v0.1.0 but not in master_v0.2.0 ontology revision": 1,
+                "axioms in master_v0.2.0 but not in master_v0.1.0 ontology revision": 5
+            },
+            {
+                "subject": "https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/EuropeanUnionClinicalTrialsRegister/PfizerGmbH",
+                "axioms in master_v0.1.0 but not in master_v0.2.0 ontology revision": 1,
+                "axioms in master_v0.2.0 but not in master_v0.1.0 ontology revision": 1
+            },
+            {
+                "subject": "https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/EuropeanUnionClinicalTrialsRegister/MonophosphorylLipidA-1-3-O-desacyl-4'AsActiveIngredient",
+                "axioms in master_v0.1.0 but not in master_v0.2.0 ontology revision": 2,
+                "axioms in master_v0.2.0 but not in master_v0.1.0 ontology revision": 2
+            },
+            {
+                "subject": "https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/EuropeanUnionClinicalTrialsRegister/HepatitisBSurfaceAntigenAsActiveIngredient",
+                "axioms in master_v0.1.0 but not in master_v0.2.0 ontology revision": 2,
+                "axioms in master_v0.2.0 but not in master_v0.1.0 ontology revision": 2
+            },
+            {
+                "subject": "https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/EuropeanUnionClinicalTrialsRegister/ClinicalTrialAuthorization-2014-002112-16",
+                "axioms in master_v0.1.0 but not in master_v0.2.0 ontology revision": 1,
+                "axioms in master_v0.2.0 but not in master_v0.1.0 ontology revision": 1
+            },
+            {
+                "subject": "https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/EuropeanUnionClinicalTrialsRegister/GlaxoSmithKlineBiologicalsSA",
+                "axioms in master_v0.1.0 but not in master_v0.2.0 ontology revision": 1,
+                "axioms in master_v0.2.0 but not in master_v0.1.0 ontology revision": 1
+            }
+        ]
+    },
+    {
+        "ontology": "Collections",
+        "delta": [
+            {
+                "subject": "https://www.omg.org/spec/Commons/Collections/",
+                "axioms in master_v0.1.0 but not in master_v0.2.0 ontology revision": 1,
+                "axioms in master_v0.2.0 but not in master_v0.1.0 ontology revision": 1
+            }
+        ]
+    },
+    {
+        "ontology": "RegulatoryAgencies",
+        "delta": [
+            {
+                "subject": "https://www.omg.org/spec/Commons/RegulatoryAgencies/Licensor",
+                "axioms in master_v0.1.0 but not in master_v0.2.0 ontology revision": 1,
+                "axioms in master_v0.2.0 but not in master_v0.1.0 ontology revision": 1
+            },
+            {
+                "subject": "https://www.omg.org/spec/Commons/RegulatoryAgencies/Licensee",
+                "axioms in master_v0.1.0 but not in master_v0.2.0 ontology revision": 1,
+                "axioms in master_v0.2.0 but not in master_v0.1.0 ontology revision": 1
+            },
+            {
+                "subject": "https://www.omg.org/spec/Commons/RegulatoryAgencies/",
+                "axioms in master_v0.1.0 but not in master_v0.2.0 ontology revision": 1,
+                "axioms in master_v0.2.0 but not in master_v0.1.0 ontology revision": 2
+            }
+        ]
+    },
+    {
+        "ontology": "MetadataISO",
+        "delta": [
+            {
+                "subject": "https://spec.pistoiaalliance.org/idmp/ontology/ISO/MetadataISO/ISOModule",
+                "axioms in master_v0.1.0 but not in master_v0.2.0 ontology revision": 1,
+                "axioms in master_v0.2.0 but not in master_v0.1.0 ontology revision": 4
+            },
+            {
+                "subject": "https://spec.pistoiaalliance.org/idmp/ontology/ISO/MetadataISO/",
+                "axioms in master_v0.1.0 but not in master_v0.2.0 ontology revision": 2,
+                "axioms in master_v0.2.0 but not in master_v0.1.0 ontology revision": 12
+            }
+        ]
+    },
+    {
+        "ontology": "ISO11238-Substances",
+        "delta": [
+            {
+                "subject": "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/hasStereochemistry",
+                "axioms in master_v0.1.0 but not in master_v0.2.0 ontology revision": 1,
+                "axioms in master_v0.2.0 but not in master_v0.1.0 ontology revision": 0
+            },
+            {
+                "subject": "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/Structure",
+                "axioms in master_v0.1.0 but not in master_v0.2.0 ontology revision": 0,
+                "axioms in master_v0.2.0 but not in master_v0.1.0 ontology revision": 3
+            },
+            {
+                "subject": "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/AdjuvantRole",
+                "axioms in master_v0.1.0 but not in master_v0.2.0 ontology revision": 6,
+                "axioms in master_v0.2.0 but not in master_v0.1.0 ontology revision": 2
+            },
+            {
+                "subject": "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/StructuralRepresentation",
+                "axioms in master_v0.1.0 but not in master_v0.2.0 ontology revision": 1,
+                "axioms in master_v0.2.0 but not in master_v0.1.0 ontology revision": 1
+            },
+            {
+                "subject": "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/Material",
+                "axioms in master_v0.1.0 but not in master_v0.2.0 ontology revision": 0,
+                "axioms in master_v0.2.0 but not in master_v0.1.0 ontology revision": 1
+            },
+            {
+                "subject": "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/Manufacturer",
+                "axioms in master_v0.1.0 but not in master_v0.2.0 ontology revision": 1,
+                "axioms in master_v0.2.0 but not in master_v0.1.0 ontology revision": 1
+            },
+            {
+                "subject": "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/Moiety",
+                "axioms in master_v0.1.0 but not in master_v0.2.0 ontology revision": 0,
+                "axioms in master_v0.2.0 but not in master_v0.1.0 ontology revision": 6
+            },
+            {
+                "subject": "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/Substance",
+                "axioms in master_v0.1.0 but not in master_v0.2.0 ontology revision": 1,
+                "axioms in master_v0.2.0 but not in master_v0.1.0 ontology revision": 6
+            },
+            {
+                "subject": "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/InactiveIngredientRole",
+                "axioms in master_v0.1.0 but not in master_v0.2.0 ontology revision": 5,
+                "axioms in master_v0.2.0 but not in master_v0.1.0 ontology revision": 2
+            },
+            {
+                "subject": "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/",
+                "axioms in master_v0.1.0 but not in master_v0.2.0 ontology revision": 2,
+                "axioms in master_v0.2.0 but not in master_v0.1.0 ontology revision": 5
+            },
+            {
+                "subject": "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/ExcipientRole",
+                "axioms in master_v0.1.0 but not in master_v0.2.0 ontology revision": 6,
+                "axioms in master_v0.2.0 but not in master_v0.1.0 ontology revision": 2
+            },
+            {
+                "subject": "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/SubstanceNameDomain",
+                "axioms in master_v0.1.0 but not in master_v0.2.0 ontology revision": 1,
+                "axioms in master_v0.2.0 but not in master_v0.1.0 ontology revision": 1
+            },
+            {
+                "subject": "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/hasMolecularWeight",
+                "axioms in master_v0.1.0 but not in master_v0.2.0 ontology revision": 1,
+                "axioms in master_v0.2.0 but not in master_v0.1.0 ontology revision": 1
+            },
+            {
+                "subject": "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/OfficialName",
+                "axioms in master_v0.1.0 but not in master_v0.2.0 ontology revision": 1,
+                "axioms in master_v0.2.0 but not in master_v0.1.0 ontology revision": 1
+            },
+            {
+                "subject": "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/MolecularGraphIdentifier",
+                "axioms in master_v0.1.0 but not in master_v0.2.0 ontology revision": 0,
+                "axioms in master_v0.2.0 but not in master_v0.1.0 ontology revision": 1
+            },
+            {
+                "subject": "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/hasMolecularFormula",
+                "axioms in master_v0.1.0 but not in master_v0.2.0 ontology revision": 1,
+                "axioms in master_v0.2.0 but not in master_v0.1.0 ontology revision": 0
+            },
+            {
+                "subject": "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/ActiveIngredientRole",
+                "axioms in master_v0.1.0 but not in master_v0.2.0 ontology revision": 5,
+                "axioms in master_v0.2.0 but not in master_v0.1.0 ontology revision": 2
+            },
+            {
+                "subject": "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/SubstanceConstituency",
+                "axioms in master_v0.1.0 but not in master_v0.2.0 ontology revision": 1,
+                "axioms in master_v0.2.0 but not in master_v0.1.0 ontology revision": 1
+            },
+            {
+                "subject": "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/MolecularStructureIdentifier",
+                "axioms in master_v0.1.0 but not in master_v0.2.0 ontology revision": 0,
+                "axioms in master_v0.2.0 but not in master_v0.1.0 ontology revision": 1
+            },
+            {
+                "subject": "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/IngredientRole",
+                "axioms in master_v0.1.0 but not in master_v0.2.0 ontology revision": 5,
+                "axioms in master_v0.2.0 but not in master_v0.1.0 ontology revision": 2
+            },
+            {
+                "subject": "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/SubstanceName",
+                "axioms in master_v0.1.0 but not in master_v0.2.0 ontology revision": 1,
+                "axioms in master_v0.2.0 but not in master_v0.1.0 ontology revision": 1
+            },
+            {
+                "subject": "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/ChemicalSubstance",
+                "axioms in master_v0.1.0 but not in master_v0.2.0 ontology revision": 0,
+                "axioms in master_v0.2.0 but not in master_v0.1.0 ontology revision": 5
+            },
+            {
+                "subject": "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/hasMolecularFormulaByMoiety",
+                "axioms in master_v0.1.0 but not in master_v0.2.0 ontology revision": 1,
+                "axioms in master_v0.2.0 but not in master_v0.1.0 ontology revision": 0
+            },
+            {
+                "subject": "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/MolecularStructure",
+                "axioms in master_v0.1.0 but not in master_v0.2.0 ontology revision": 6,
+                "axioms in master_v0.2.0 but not in master_v0.1.0 ontology revision": 3
+            },
+            {
+                "subject": "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/MolecularGraph",
+                "axioms in master_v0.1.0 but not in master_v0.2.0 ontology revision": 0,
+                "axioms in master_v0.2.0 but not in master_v0.1.0 ontology revision": 1
+            }
+        ]
+    },
+    {
+        "ontology": "CodesAndCodeSets",
+        "delta": [
+            {
+                "subject": "https://www.omg.org/spec/Commons/CodesAndCodeSets/CodeSet",
+                "axioms in master_v0.1.0 but not in master_v0.2.0 ontology revision": 0,
+                "axioms in master_v0.2.0 but not in master_v0.1.0 ontology revision": 1
+            },
+            {
+                "subject": "https://www.omg.org/spec/Commons/CodesAndCodeSets/",
+                "axioms in master_v0.1.0 but not in master_v0.2.0 ontology revision": 2,
+                "axioms in master_v0.2.0 but not in master_v0.1.0 ontology revision": 2
+            }
+        ]
+    },
+    {
+        "ontology": "ISO11238-RegistrationAuthorities",
+        "delta": [
+            {
+                "subject": "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-RegistrationAuthorities/FoodAndDrugAdministrationRegistrationAuthority",
+                "axioms in master_v0.1.0 but not in master_v0.2.0 ontology revision": 1,
+                "axioms in master_v0.2.0 but not in master_v0.1.0 ontology revision": 1
+            },
+            {
+                "subject": "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-RegistrationAuthorities/",
+                "axioms in master_v0.1.0 but not in master_v0.2.0 ontology revision": 3,
+                "axioms in master_v0.2.0 but not in master_v0.1.0 ontology revision": 4
+            },
+            {
+                "subject": "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-RegistrationAuthorities/UniqueIngredientNumber",
+                "axioms in master_v0.1.0 but not in master_v0.2.0 ontology revision": 1,
+                "axioms in master_v0.2.0 but not in master_v0.1.0 ontology revision": 1
+            },
+            {
+                "subject": "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-RegistrationAuthorities/ClinicalTrialsGov",
+                "axioms in master_v0.1.0 but not in master_v0.2.0 ontology revision": 0,
+                "axioms in master_v0.2.0 but not in master_v0.1.0 ontology revision": 1
+            },
+            {
+                "subject": "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-RegistrationAuthorities/DrugBank",
+                "axioms in master_v0.1.0 but not in master_v0.2.0 ontology revision": 0,
+                "axioms in master_v0.2.0 but not in master_v0.1.0 ontology revision": 1
+            }
+        ]
+    },
+    {
+        "ontology": "ISO11240-UnitsOfMeasurement",
+        "delta": [
+            {
+                "subject": "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11240-UnitsOfMeasurement/",
+                "axioms in master_v0.1.0 but not in master_v0.2.0 ontology revision": 2,
+                "axioms in master_v0.2.0 but not in master_v0.1.0 ontology revision": 2
+            }
+        ]
+    },
+    {
+        "ontology": "AmlodipineExample",
+        "delta": [
+            {
+                "subject": "https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/AmlodipineExample/AmlodipineBesylateConstituency",
+                "axioms in master_v0.1.0 but not in master_v0.2.0 ontology revision": 1,
+                "axioms in master_v0.2.0 but not in master_v0.1.0 ontology revision": 1
+            },
+            {
+                "subject": "https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/AmlodipineExample/AmlodipineMesylateMonohydrateOfficialName",
+                "axioms in master_v0.1.0 but not in master_v0.2.0 ontology revision": 3,
+                "axioms in master_v0.2.0 but not in master_v0.1.0 ontology revision": 3
+            },
+            {
+                "subject": "https://www.ebi.ac.uk/chebi/chebiOntology.do?chebiId=CHEBI:2668",
+                "axioms in master_v0.1.0 but not in master_v0.2.0 ontology revision": 2,
+                "axioms in master_v0.2.0 but not in master_v0.1.0 ontology revision": 3
+            },
+            {
+                "subject": "https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/AmlodipineExample/AmlodipineBesylateOfficialName",
+                "axioms in master_v0.1.0 but not in master_v0.2.0 ontology revision": 2,
+                "axioms in master_v0.2.0 but not in master_v0.1.0 ontology revision": 2
+            },
+            {
+                "subject": "https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/AmlodipineExample/UNII-864V2Q084H",
+                "axioms in master_v0.1.0 but not in master_v0.2.0 ontology revision": 0,
+                "axioms in master_v0.2.0 but not in master_v0.1.0 ontology revision": 1
+            },
+            {
+                "subject": "https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/AmlodipineExample/AmlodipineMolecularStructure",
+                "axioms in master_v0.1.0 but not in master_v0.2.0 ontology revision": 5,
+                "axioms in master_v0.2.0 but not in master_v0.1.0 ontology revision": 0
+            },
+            {
+                "subject": "https://chem.nlm.nih.gov/chemidplus/rn/440358-84-9",
+                "axioms in master_v0.1.0 but not in master_v0.2.0 ontology revision": 0,
+                "axioms in master_v0.2.0 but not in master_v0.1.0 ontology revision": 1
+            },
+            {
+                "subject": "https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/AmlodipineExample/AmlodipineAsActiveMoiety",
+                "axioms in master_v0.1.0 but not in master_v0.2.0 ontology revision": 1,
+                "axioms in master_v0.2.0 but not in master_v0.1.0 ontology revision": 1
+            },
+            {
+                "subject": "https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/AmlodipineExample/",
+                "axioms in master_v0.1.0 but not in master_v0.2.0 ontology revision": 1,
+                "axioms in master_v0.2.0 but not in master_v0.1.0 ontology revision": 5
+            },
+            {
+                "subject": "https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/AmlodipineExample/Amlodipine",
+                "axioms in master_v0.1.0 but not in master_v0.2.0 ontology revision": 0,
+                "axioms in master_v0.2.0 but not in master_v0.1.0 ontology revision": 5
+            },
+            {
+                "subject": "https://chem.nlm.nih.gov/chemidplus/rn/88150-42-9",
+                "axioms in master_v0.1.0 but not in master_v0.2.0 ontology revision": 0,
+                "axioms in master_v0.2.0 but not in master_v0.1.0 ontology revision": 1
+            },
+            {
+                "subject": "https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/AmlodipineExample/EVMPD-SUB05467MIG",
+                "axioms in master_v0.1.0 but not in master_v0.2.0 ontology revision": 2,
+                "axioms in master_v0.2.0 but not in master_v0.1.0 ontology revision": 3
+            },
+            {
+                "subject": "https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/AmlodipineExample/UNII-1J444QC288",
+                "axioms in master_v0.1.0 but not in master_v0.2.0 ontology revision": 0,
+                "axioms in master_v0.2.0 but not in master_v0.1.0 ontology revision": 1
+            },
+            {
+                "subject": "https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/AmlodipineExample/AmlodipineBesylateMolecularStructure",
+                "axioms in master_v0.1.0 but not in master_v0.2.0 ontology revision": 5,
+                "axioms in master_v0.2.0 but not in master_v0.1.0 ontology revision": 0
+            },
+            {
+                "subject": "https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/AmlodipineExample/UNII-FAS0DJC51V",
+                "axioms in master_v0.1.0 but not in master_v0.2.0 ontology revision": 0,
+                "axioms in master_v0.2.0 but not in master_v0.1.0 ontology revision": 1
+            },
+            {
+                "subject": "https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/AmlodipineExample/PfizerInc",
+                "axioms in master_v0.1.0 but not in master_v0.2.0 ontology revision": 1,
+                "axioms in master_v0.2.0 but not in master_v0.1.0 ontology revision": 1
+            },
+            {
+                "subject": "https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/AmlodipineExample/AmlodipineCommonName",
+                "axioms in master_v0.1.0 but not in master_v0.2.0 ontology revision": 3,
+                "axioms in master_v0.2.0 but not in master_v0.1.0 ontology revision": 3
+            },
+            {
+                "subject": "https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/AmlodipineExample/KentPharmaUKLtd",
+                "axioms in master_v0.1.0 but not in master_v0.2.0 ontology revision": 1,
+                "axioms in master_v0.2.0 but not in master_v0.1.0 ontology revision": 1
+            },
+            {
+                "subject": "https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/AmlodipineExample/AmlodipineEMCConstituency",
+                "axioms in master_v0.1.0 but not in master_v0.2.0 ontology revision": 1,
+                "axioms in master_v0.2.0 but not in master_v0.1.0 ontology revision": 1
+            },
+            {
+                "subject": "https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/AmlodipineExample/AmlodipineMesylateMonohydrate",
+                "axioms in master_v0.1.0 but not in master_v0.2.0 ontology revision": 0,
+                "axioms in master_v0.2.0 but not in master_v0.1.0 ontology revision": 5
+            },
+            {
+                "subject": "https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/AmlodipineExample/AmlodipineBesylate",
+                "axioms in master_v0.1.0 but not in master_v0.2.0 ontology revision": 0,
+                "axioms in master_v0.2.0 but not in master_v0.1.0 ontology revision": 5
+            },
+            {
+                "subject": "https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/AmlodipineExample/AmlodipineMesylateMonohydrateMolecularStructure",
+                "axioms in master_v0.1.0 but not in master_v0.2.0 ontology revision": 5,
+                "axioms in master_v0.2.0 but not in master_v0.1.0 ontology revision": 0
+            },
+            {
+                "subject": "https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/AmlodipineExample/NorvascConstituency",
+                "axioms in master_v0.1.0 but not in master_v0.2.0 ontology revision": 1,
+                "axioms in master_v0.2.0 but not in master_v0.1.0 ontology revision": 1
+            }
+        ]
+    },
+    {
+        "ontology": "ISO11616-PharmaceuticalProducts",
+        "delta": [
+            {
+                "subject": "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11616-PharmaceuticalProducts/",
+                "axioms in master_v0.1.0 but not in master_v0.2.0 ontology revision": 1,
+                "axioms in master_v0.2.0 but not in master_v0.1.0 ontology revision": 2
+            }
+        ]
+    },
+    {
+        "ontology": "Designators",
+        "delta": [
+            {
+                "subject": "https://www.omg.org/spec/Commons/Designators/",
+                "axioms in master_v0.1.0 but not in master_v0.2.0 ontology revision": 2,
+                "axioms in master_v0.2.0 but not in master_v0.1.0 ontology revision": 2
+            },
+            {
+                "subject": "https://www.omg.org/spec/Commons/Designators/denotes",
+                "axioms in master_v0.1.0 but not in master_v0.2.0 ontology revision": 1,
+                "axioms in master_v0.2.0 but not in master_v0.1.0 ontology revision": 4
+            },
+            {
+                "subject": "https://www.omg.org/spec/Commons/Designators/Name",
+                "axioms in master_v0.1.0 but not in master_v0.2.0 ontology revision": 2,
+                "axioms in master_v0.2.0 but not in master_v0.1.0 ontology revision": 4
+            },
+            {
+                "subject": "https://www.omg.org/spec/Commons/Designators/Designation",
+                "axioms in master_v0.1.0 but not in master_v0.2.0 ontology revision": 2,
+                "axioms in master_v0.2.0 but not in master_v0.1.0 ontology revision": 3
+            }
+        ]
+    },
+    {
+        "ontology": "AboutIDMPProd",
+        "delta": [
+            {
+                "subject": "https://spec.pistoiaalliance.org/idmp/ontology/AboutIDMPProd/",
+                "axioms in master_v0.1.0 but not in master_v0.2.0 ontology revision": 3,
+                "axioms in master_v0.2.0 but not in master_v0.1.0 ontology revision": 8
+            }
+        ]
+    },
+    {
+        "ontology": "ISO11615-MedicinalProducts",
+        "delta": [
+            {
+                "subject": "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/hasBasisOfStrengthAsManufactured",
+                "axioms in master_v0.1.0 but not in master_v0.2.0 ontology revision": 1,
+                "axioms in master_v0.2.0 but not in master_v0.1.0 ontology revision": 1
+            },
+            {
+                "subject": "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/ProductConstituency",
+                "axioms in master_v0.1.0 but not in master_v0.2.0 ontology revision": 1,
+                "axioms in master_v0.2.0 but not in master_v0.1.0 ontology revision": 1
+            },
+            {
+                "subject": "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/hasIngredientRole",
+                "axioms in master_v0.1.0 but not in master_v0.2.0 ontology revision": 4,
+                "axioms in master_v0.2.0 but not in master_v0.1.0 ontology revision": 2
+            },
+            {
+                "subject": "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/ActiveIngredientEntireSubstanceBasisOfStrength",
+                "axioms in master_v0.1.0 but not in master_v0.2.0 ontology revision": 1,
+                "axioms in master_v0.2.0 but not in master_v0.1.0 ontology revision": 1
+            },
+            {
+                "subject": "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/MedicinalProductIdentifier",
+                "axioms in master_v0.1.0 but not in master_v0.2.0 ontology revision": 0,
+                "axioms in master_v0.2.0 but not in master_v0.1.0 ontology revision": 1
+            },
+            {
+                "subject": "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/ActiveIngredientActiveMoietyBasisOfStrength",
+                "axioms in master_v0.1.0 but not in master_v0.2.0 ontology revision": 1,
+                "axioms in master_v0.2.0 but not in master_v0.1.0 ontology revision": 1
+            },
+            {
+                "subject": "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/",
+                "axioms in master_v0.1.0 but not in master_v0.2.0 ontology revision": 1,
+                "axioms in master_v0.2.0 but not in master_v0.1.0 ontology revision": 5
+            },
+            {
+                "subject": "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/IngredientRoleCode",
+                "axioms in master_v0.1.0 but not in master_v0.2.0 ontology revision": 1,
+                "axioms in master_v0.2.0 but not in master_v0.1.0 ontology revision": 1
+            },
+            {
+                "subject": "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/ActiveIngredientWithoutBasisOfStrength",
+                "axioms in master_v0.1.0 but not in master_v0.2.0 ontology revision": 1,
+                "axioms in master_v0.2.0 but not in master_v0.1.0 ontology revision": 1
+            },
+            {
+                "subject": "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/hasActiveIngredientRole",
+                "axioms in master_v0.1.0 but not in master_v0.2.0 ontology revision": 4,
+                "axioms in master_v0.2.0 but not in master_v0.1.0 ontology revision": 2
+            },
+            {
+                "subject": "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/ActiveIngredientReferenceSubstanceBasisOfStrength",
+                "axioms in master_v0.1.0 but not in master_v0.2.0 ontology revision": 1,
+                "axioms in master_v0.2.0 but not in master_v0.1.0 ontology revision": 1
+            },
+            {
+                "subject": "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/Strength",
+                "axioms in master_v0.1.0 but not in master_v0.2.0 ontology revision": 2,
+                "axioms in master_v0.2.0 but not in master_v0.1.0 ontology revision": 2
+            },
+            {
+                "subject": "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/MarketingAuthorizationHolder",
+                "axioms in master_v0.1.0 but not in master_v0.2.0 ontology revision": 0,
+                "axioms in master_v0.2.0 but not in master_v0.1.0 ontology revision": 1
+            }
+        ]
+    },
+    {
+        "ontology": "ISOConformanceAnnotations",
+        "delta": [
+            {
+                "subject": "https://spec.pistoiaalliance.org/idmp/ontology/META/ISOConformanceAnnotations/",
+                "axioms in master_v0.1.0 but not in master_v0.2.0 ontology revision": 2,
+                "axioms in master_v0.2.0 but not in master_v0.1.0 ontology revision": 3
+            }
+        ]
+    },
+    {
+        "ontology": "TerlipressinExample",
+        "delta": [
+            {
+                "subject": "https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/TerlipressinExample/UNII-4U092XZF0K",
+                "axioms in master_v0.1.0 but not in master_v0.2.0 ontology revision": 0,
+                "axioms in master_v0.2.0 but not in master_v0.1.0 ontology revision": 1
+            },
+            {
+                "subject": "https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/TerlipressinExample/TerlipressinAcetatePreferredName",
+                "axioms in master_v0.1.0 but not in master_v0.2.0 ontology revision": 4,
+                "axioms in master_v0.2.0 but not in master_v0.1.0 ontology revision": 4
+            },
+            {
+                "subject": "https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/TerlipressinExample/TerlipressinMolecularStructure",
+                "axioms in master_v0.1.0 but not in master_v0.2.0 ontology revision": 3,
+                "axioms in master_v0.2.0 but not in master_v0.1.0 ontology revision": 0
+            },
+            {
+                "subject": "https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/TerlipressinExample/",
+                "axioms in master_v0.1.0 but not in master_v0.2.0 ontology revision": 1,
+                "axioms in master_v0.2.0 but not in master_v0.1.0 ontology revision": 5
+            },
+            {
+                "subject": "https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/TerlipressinExample/TerlipressinAcetate",
+                "axioms in master_v0.1.0 but not in master_v0.2.0 ontology revision": 0,
+                "axioms in master_v0.2.0 but not in master_v0.1.0 ontology revision": 3
+            },
+            {
+                "subject": "https://chem.nlm.nih.gov/chemidplus/rn/14636-12-5",
+                "axioms in master_v0.1.0 but not in master_v0.2.0 ontology revision": 0,
+                "axioms in master_v0.2.0 but not in master_v0.1.0 ontology revision": 1
+            },
+            {
+                "subject": "https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/TerlipressinExample/TerlipressinAcetateMolecularStructure",
+                "axioms in master_v0.1.0 but not in master_v0.2.0 ontology revision": 3,
+                "axioms in master_v0.2.0 but not in master_v0.1.0 ontology revision": 0
+            },
+            {
+                "subject": "https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/TerlipressinExample/TerlipressinAcetateConstituency",
+                "axioms in master_v0.1.0 but not in master_v0.2.0 ontology revision": 1,
+                "axioms in master_v0.2.0 but not in master_v0.1.0 ontology revision": 1
+            },
+            {
+                "subject": "https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/TerlipressinExample/TerlipressinAcetateSUNConstituency",
+                "axioms in master_v0.1.0 but not in master_v0.2.0 ontology revision": 1,
+                "axioms in master_v0.2.0 but not in master_v0.1.0 ontology revision": 1
+            },
+            {
+                "subject": "https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/TerlipressinExample/TerlipressinOfficialName",
+                "axioms in master_v0.1.0 but not in master_v0.2.0 ontology revision": 4,
+                "axioms in master_v0.2.0 but not in master_v0.1.0 ontology revision": 4
+            },
+            {
+                "subject": "https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/TerlipressinExample/TerlipressinCommonName",
+                "axioms in master_v0.1.0 but not in master_v0.2.0 ontology revision": 4,
+                "axioms in master_v0.2.0 but not in master_v0.1.0 ontology revision": 4
+            },
+            {
+                "subject": "https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/TerlipressinExample/TerlipressinAcetateCommonName",
+                "axioms in master_v0.1.0 but not in master_v0.2.0 ontology revision": 4,
+                "axioms in master_v0.2.0 but not in master_v0.1.0 ontology revision": 4
+            },
+            {
+                "subject": "https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/TerlipressinExample/TerlipressinAcetateAsActiveIngredientInTerlipressinAcetateSUN",
+                "axioms in master_v0.1.0 but not in master_v0.2.0 ontology revision": 1,
+                "axioms in master_v0.2.0 but not in master_v0.1.0 ontology revision": 1
+            },
+            {
+                "subject": "https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/TerlipressinExample/Terlipressin",
+                "axioms in master_v0.1.0 but not in master_v0.2.0 ontology revision": 0,
+                "axioms in master_v0.2.0 but not in master_v0.1.0 ontology revision": 3
+            },
+            {
+                "subject": "https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/TerlipressinExample/GSKplc",
+                "axioms in master_v0.1.0 but not in master_v0.2.0 ontology revision": 1,
+                "axioms in master_v0.2.0 but not in master_v0.1.0 ontology revision": 1
+            },
+            {
+                "subject": "https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/TerlipressinExample/TerlipressinSUN1MgSolutionForInjectionConstituency",
+                "axioms in master_v0.1.0 but not in master_v0.2.0 ontology revision": 1,
+                "axioms in master_v0.2.0 but not in master_v0.1.0 ontology revision": 1
+            },
+            {
+                "subject": "https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/TerlipressinExample/TerlipressinAcetateSUN0.12MgPerMlSolutionForInjectionConstituency",
+                "axioms in master_v0.1.0 but not in master_v0.2.0 ontology revision": 1,
+                "axioms in master_v0.2.0 but not in master_v0.1.0 ontology revision": 1
+            },
+            {
+                "subject": "https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/TerlipressinExample/TerlipressinAsActiveMoiety",
+                "axioms in master_v0.1.0 but not in master_v0.2.0 ontology revision": 1,
+                "axioms in master_v0.2.0 but not in master_v0.1.0 ontology revision": 1
+            },
+            {
+                "subject": "https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/TerlipressinExample/TerlipressinSUN0.1MgPerMlSolutionForInjectionConstituency",
+                "axioms in master_v0.1.0 but not in master_v0.2.0 ontology revision": 1,
+                "axioms in master_v0.2.0 but not in master_v0.1.0 ontology revision": 1
+            },
+            {
+                "subject": "https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/TerlipressinExample/UNII-7Z5X49W53P",
+                "axioms in master_v0.1.0 but not in master_v0.2.0 ontology revision": 0,
+                "axioms in master_v0.2.0 but not in master_v0.1.0 ontology revision": 1
+            }
+        ]
+    },
+    {
+        "ontology": "AboutIDMPDev",
+        "delta": [
+            {
+                "subject": "https://spec.pistoiaalliance.org/idmp/ontology/AboutIDMPDev/",
+                "axioms in master_v0.1.0 but not in master_v0.2.0 ontology revision": 7,
+                "axioms in master_v0.2.0 but not in master_v0.1.0 ontology revision": 8
+            }
+        ]
+    },
+    {
+        "ontology": "PartiesAndSituations",
+        "delta": [
+            {
+                "subject": "https://www.omg.org/spec/Commons/PartiesAndSituations/PartyRole",
+                "axioms in master_v0.1.0 but not in master_v0.2.0 ontology revision": 1,
+                "axioms in master_v0.2.0 but not in master_v0.1.0 ontology revision": 2
+            },
+            {
+                "subject": "https://www.omg.org/spec/Commons/PartiesAndSituations/AgentRole",
+                "axioms in master_v0.1.0 but not in master_v0.2.0 ontology revision": 1,
+                "axioms in master_v0.2.0 but not in master_v0.1.0 ontology revision": 1
+            },
+            {
+                "subject": "https://www.omg.org/spec/Commons/PartiesAndSituations/Role",
+                "axioms in master_v0.1.0 but not in master_v0.2.0 ontology revision": 1,
+                "axioms in master_v0.2.0 but not in master_v0.1.0 ontology revision": 1
+            }
+        ]
+    },
+    {
+        "ontology": "ContextualIdentifiers",
+        "delta": [
+            {
+                "subject": "https://www.omg.org/spec/Commons/ContextualIdentifiers/ContextualIdentifier",
+                "axioms in master_v0.1.0 but not in master_v0.2.0 ontology revision": 0,
+                "axioms in master_v0.2.0 but not in master_v0.1.0 ontology revision": 1
+            },
+            {
+                "subject": "https://www.omg.org/spec/Commons/ContextualIdentifiers/",
+                "axioms in master_v0.1.0 but not in master_v0.2.0 ontology revision": 1,
+                "axioms in master_v0.2.0 but not in master_v0.1.0 ontology revision": 2
+            }
+        ]
+    },
+    {
+        "ontology": "ISO21090-HarmonizedDatatypes",
+        "delta": [
+            {
+                "subject": "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO21090-HarmonizedDatatypes/",
+                "axioms in master_v0.1.0 but not in master_v0.2.0 ontology revision": 2,
+                "axioms in master_v0.2.0 but not in master_v0.1.0 ontology revision": 2
+            }
+        ]
+    },
+    {
+        "ontology": "MetadataLCC",
+        "delta": [
+            {
+                "subject": "https://www.omg.org/spec/LCC/MetadataLCC/",
+                "axioms in master_v0.1.0 but not in master_v0.2.0 ontology revision": 0,
+                "axioms in master_v0.2.0 but not in master_v0.1.0 ontology revision": 7
+            }
+        ]
+    },
+    {
+        "ontology": "TextDatatype",
+        "delta": [
+            {
+                "subject": "https://www.omg.org/spec/Commons/TextDatatype/",
+                "axioms in master_v0.1.0 but not in master_v0.2.0 ontology revision": 1,
+                "axioms in master_v0.2.0 but not in master_v0.1.0 ontology revision": 1
+            }
+        ]
+    },
+    {
+        "ontology": "ContextualDesignators",
+        "delta": [
+            {
+                "subject": "https://www.omg.org/spec/Commons/ContextualDesignators/ContextualName",
+                "axioms in master_v0.1.0 but not in master_v0.2.0 ontology revision": 1,
+                "axioms in master_v0.2.0 but not in master_v0.1.0 ontology revision": 2
+            },
+            {
+                "subject": "https://www.omg.org/spec/Commons/ContextualDesignators/",
+                "axioms in master_v0.1.0 but not in master_v0.2.0 ontology revision": 2,
+                "axioms in master_v0.2.0 but not in master_v0.1.0 ontology revision": 2
+            }
+        ]
+    },
+    {
+        "ontology": "Identifiers",
+        "delta": [
+            {
+                "subject": "https://www.omg.org/spec/Commons/Identifiers/identifies",
+                "axioms in master_v0.1.0 but not in master_v0.2.0 ontology revision": 0,
+                "axioms in master_v0.2.0 but not in master_v0.1.0 ontology revision": 1
+            },
+            {
+                "subject": "https://www.omg.org/spec/Commons/Identifiers/",
+                "axioms in master_v0.1.0 but not in master_v0.2.0 ontology revision": 1,
+                "axioms in master_v0.2.0 but not in master_v0.1.0 ontology revision": 2
+            }
+        ]
+    },
+    {
+        "ontology": "RegistrationAuthorities",
+        "delta": [
+            {
+                "subject": "https://www.omg.org/spec/Commons/RegistrationAuthorities/RegistrationService",
+                "axioms in master_v0.1.0 but not in master_v0.2.0 ontology revision": 1,
+                "axioms in master_v0.2.0 but not in master_v0.1.0 ontology revision": 1
+            },
+            {
+                "subject": "https://www.omg.org/spec/Commons/RegistrationAuthorities/Registry",
+                "axioms in master_v0.1.0 but not in master_v0.2.0 ontology revision": 1,
+                "axioms in master_v0.2.0 but not in master_v0.1.0 ontology revision": 1
+            },
+            {
+                "subject": "https://www.omg.org/spec/Commons/RegistrationAuthorities/RegisteredIdentifier",
+                "axioms in master_v0.1.0 but not in master_v0.2.0 ontology revision": 1,
+                "axioms in master_v0.2.0 but not in master_v0.1.0 ontology revision": 1
+            },
+            {
+                "subject": "https://www.omg.org/spec/Commons/RegistrationAuthorities/",
+                "axioms in master_v0.1.0 but not in master_v0.2.0 ontology revision": 1,
+                "axioms in master_v0.2.0 but not in master_v0.1.0 ontology revision": 1
+            }
+        ]
+    },
+    {
+        "ontology": "AnnotationVocabulary",
+        "delta": [
+            {
+                "subject": "https://www.omg.org/spec/Commons/AnnotationVocabulary/",
+                "axioms in master_v0.1.0 but not in master_v0.2.0 ontology revision": 1,
+                "axioms in master_v0.2.0 but not in master_v0.1.0 ontology revision": 1
+            }
+        ]
+    }
+]

@@ -3,7 +3,7 @@ import os
 import sys
 
 from compare.common import *
-from compare.comparision_config import ComparisionConfig
+from compare.comparison_config import ComparisonConfig
 from compare.ontology_comparer import compare_ontology_revisions
 
 FOLDER_NAME_LABEL = 'repository'
@@ -15,7 +15,7 @@ def compare_ontology_revisions_in_folders(
         right_revision_folder: str,
         left_revision_id: str,
         right_revision_id: str,
-        config: ComparisionConfig) -> tuple:
+        config: ComparisonConfig) -> tuple:
     both_file_paths, only_left_file_paths, only_right_file_paths = \
         get_ontology_files(
             left_folder=left_revision_folder,
@@ -45,7 +45,7 @@ def compare_ontology_revisions_in_folders(
 def compare_common_ontology_revisions(
         both_file_paths: set,
         default_ontology_file_extension: str,
-        config: ComparisionConfig,
+        config: ComparisonConfig,
         left_revision_id: str,
         right_revision_id: str) -> tuple:
     ontologies_diff_resources = list()
@@ -107,16 +107,16 @@ def compare_repository_revisions(
     return diff_ontologies
 
 
-def get_ontology_files(right_folder: str, left_folder: str, ontology_file_extension: str) -> tuple:
+def get_ontology_files(left_folder: str, right_folder: str, ontology_file_extension: str) -> tuple:
     left_files = set()
     right_files = set()
     left_file_paths = dict()
     right_file_paths = dict()
-    for root, dirs, files in os.walk(right_folder):
+    for root, dirs, files in os.walk(left_folder):
         for file in files:
             left_files.add(file)
             left_file_paths[file] = os.path.join(root, file)
-    for root, dirs, files in os.walk(left_folder):
+    for root, dirs, files in os.walk(right_folder):
         for file in files:
             right_files.add(file)
             right_file_paths[file] = os.path.join(root, file)

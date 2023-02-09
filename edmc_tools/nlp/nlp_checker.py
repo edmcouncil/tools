@@ -13,7 +13,7 @@ def check_ontology_annotations(ontology_file_path: str):
     ontology = Graph()
     nlp = spacy.load(SPACY_MODEL_NAME)
     ontology.parse(ontology_file_path)
-    class_labels = __get_phrases_from_annotation_property(ontology=ontology, annotation_property=SKOS.definition, type_uri=OWL.NamedIndividual)
+    class_labels = __get_phrases_from_annotation_property(ontology=ontology, annotation_property=SKOS.definition, type_uri=OWL.Class)
     suspicious_class_labels = __check_phrases(phrases=class_labels, acceptable_parts_of_speech=['NP', 'NOUN', 'NNP', 'PROPN', 'PRON'], nlp=nlp)
     list(suspicious_class_labels).sort()
     for suspicious_class, suspicious_class_label in suspicious_class_labels.items():
@@ -61,4 +61,4 @@ def __get_phrases_from_annotation_property(ontology: Graph, annotation_property:
     return phrases
 
 
-check_ontology_annotations('dev.fibo-quickstart.ttl')
+check_ontology_annotations('../resources/AboutFIBODevMerged.ttl')
