@@ -1,5 +1,5 @@
-from compare.common import *
-from compare.comparison_config import ComparisonConfig
+from compare.code.common import *
+from compare.code.comparison_config import ComparisonConfig
 from json_helpers.json_serialiser import save_list_of_dicts_as_json_file, \
     save_list_of_dicts_as_excel_file_with_one_sheet, \
     save_dict_as_excel_file, save_list_of_dicts_as_excel_file_with_two_sheets

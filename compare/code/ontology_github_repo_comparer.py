@@ -4,10 +4,10 @@ import shutil
 
 from git import Repo
 
-from compare.comparison_config import ComparisonConfig
-from compare.ontology_comparer_writer import save_deltas
-from compare.ontology_folder_comparer import compare_ontology_revisions_in_folders
-from compare.utils import create_folder_if_not_exists
+from compare.code.comparison_config import ComparisonConfig
+from compare.code.ontology_comparer_writer import save_deltas
+from compare.code.ontology_folder_comparer import compare_ontology_revisions_in_folders
+from compare.code.utils import create_folder_if_not_exists
 
 TEMP_FOLDER = 'temp/'
 TEMP_LEFT_SUBFOLDER = 'temp/left'
@@ -47,7 +47,7 @@ def compare_ontology_github_repos(
     
     diff_ontologies, ontologies_diff_resources, ontologies_diff_axioms_for_same_subjects = \
         compare_ontology_revisions_in_folders(
-            folder_name=repo_github_name,
+            comparison_identifier=repo_github_name,
             left_revision_folder=outputs_temp_left,
             right_revision_folder=outputs_temp_right,
             left_revision_id=left_revision_id,
@@ -57,7 +57,7 @@ def compare_ontology_github_repos(
     logging.info(msg='Saving comparison results')
     
     save_deltas(
-        comparison_prefix=repo_github_name,
+        comparison_identifier=repo_github_name,
         left_revision_id=left_revision_id,
         right_revision_id=right_revision_id,
         diff_ontologies_dict=diff_ontologies,

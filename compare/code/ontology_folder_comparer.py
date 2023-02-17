@@ -2,15 +2,15 @@ import logging
 import os
 import sys
 
-from compare.common import *
-from compare.comparison_config import ComparisonConfig
-from compare.ontology_comparer import compare_ontology_revisions
+from compare.code.common import *
+from compare.code.comparison_config import ComparisonConfig
+from compare.code.ontology_comparer import compare_ontology_revisions
 
 FOLDER_NAME_LABEL = 'repository'
 
 
 def compare_ontology_revisions_in_folders(
-        folder_name: str,
+        comparison_identifier: str,
         left_revision_folder: str,
         right_revision_folder: str,
         left_revision_id: str,
@@ -34,7 +34,7 @@ def compare_ontology_revisions_in_folders(
         compare_repository_revisions(
             only_left_file_paths=only_left_file_paths,
             only_right_file_paths=only_right_file_paths,
-            folder_name=folder_name,
+            comparison_identifier=comparison_identifier,
             left_revision_id=left_revision_id,
             right_revision_id=right_revision_id,
             verbose=config.verbose)
@@ -81,12 +81,12 @@ def compare_common_ontology_revisions(
 def compare_repository_revisions(
         only_left_file_paths: set,
         only_right_file_paths: set,
-        folder_name: str,
+        comparison_identifier: str,
         verbose: bool,
         left_revision_id: str,
         right_revision_id: str) -> dict:
     diff_ontologies = dict()
-    diff_ontologies[FOLDER_NAME_LABEL] = folder_name
+    diff_ontologies[FOLDER_NAME_LABEL] = comparison_identifier
     left_but_not_right = \
         get_specific_constant(
             constant=ONTOLOGIES_LEFT_BUT_NOT_RIGHT,

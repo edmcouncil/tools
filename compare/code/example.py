@@ -1,8 +1,8 @@
 import logging
 import time
 
-from compare.comparison_config import ComparisonConfig
-from compare.ontology_github_repo_comparer import compare_ontology_github_repos
+from compare.code.comparison_config import ComparisonConfig
+from compare.code.ontology_github_repo_comparer import compare_ontology_github_repos
 
 timestr = time.strftime("%Y%m%d-%H%M%S")
 logging_file_name = ''

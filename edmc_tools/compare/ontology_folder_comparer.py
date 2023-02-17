@@ -2,9 +2,9 @@ import logging
 import os
 import sys
 
-from compare.common import *
-from compare.comparison_config import ComparisonConfig
-from compare.ontology_comparer import compare_ontology_revisions
+from compare.code.common import *
+from compare.code.comparison_config import ComparisonConfig
+from compare.code.ontology_comparer import compare_ontology_revisions
 
 FOLDER_NAME_LABEL = 'repository'
 

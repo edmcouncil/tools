@@ -1,8 +1,8 @@
 from rdflib import Graph, OWL, RDF, RDFS
 from rdflib.term import URIRef, Literal
 
-from compare.common import *
-from compare.comparison_config import ComparisonConfig
+from compare.code.common import *
+from compare.code.comparison_config import ComparisonConfig
 from owl_helpers.resource_identifiers import identify_resource
 
 
