@@ -1,0 +1,72 @@
+Substance,Structure,hasStructure
+Substance,MolecularWeight,hasMolecularWeight
+Substance,SubstanceName,hasSubstanceName
+Structure,<class 'rdflib.term.Literal'>,hasMethod
+MolecularWeight,MeasurementUnit,hasMeasurementUnit
+MolecularWeight,XMLSchema#decimal,hasNumericValue
+MeasurementUnit,UnitOfMeasureIdentifier,isIdentifiedBy
+MeasurementUnit,XMLSchema#boolean,isSIQuantity
+MeasurementUnit,QuantityName,hasName
+MeasurementUnit,UnitPowerFactor,hasFactor
+MeasurementUnit,SystemOfUnits,isDefinedIn
+UnitOfMeasureIdentifier,UnitOfMeasureIdentificationScheme,isMemberOf
+UnitOfMeasureIdentifier,Text,hasTextValue
+UnitOfMeasureIdentifier,MeasurementUnit,identifies
+UnitOfMeasureIdentificationScheme,<class 'rdflib.term.Literal'>,hasMethod
+UnitOfMeasureIdentificationScheme,CodeSystemFullName,hasName
+UnitOfMeasureIdentificationScheme,UnitOfMeasureIdentifier,hasMember
+CodeSystemFullName,UnitOfMeasureIdentificationScheme,isNameOf
+QuantityName,Quantity,isNameOf
+QuantityName,Text,hasTextValue
+QuantityName,SystemOfQuantities,isApplicableIn
+QuantityName,Context,isApplicableIn
+QuantityName,DatePeriod,hasApplicablePeriod
+Quantity,QuantityName,hasName
+SystemOfQuantities,<class 'rdflib.term.Literal'>,hasMethod
+SystemOfQuantities,QuantityKind,defines
+QuantityKind,QuantityDimension,hasDimension
+QuantityKind,MeasurementUnit,hasMeasurementUnit
+QuantityDimension,QuantityKindPowerFactor,hasFactor
+QuantityDimension,ClassificationScheme,isDefinedIn
+QuantityKindPowerFactor,owl#rational,hasExponent
+QuantityKindPowerFactor,QuantityKind,hasQuantityKind
+UnitPowerFactor,MeasurementUnit,hasMeasurementUnit
+SystemOfUnits,<class 'rdflib.term.Literal'>,hasMethod
+SystemOfUnits,SystemOfQuantities,compliesWith
+ClassificationScheme,<class 'rdflib.term.Literal'>,hasMethod
+DatePeriod,Date,hasStartDate
+DatePeriod,Duration,hasDuration
+Date,XMLSchema#string,hasDateValue
+Duration,XMLSchema#string,hasDurationValue
+SubstanceName,Reference,isDescribedBy
+SubstanceName,Text,hasTextValue
+SubstanceName,SubstanceNameDomain,isClassifiedBy
+SubstanceName,LanguageIdentifier,hasLanguageCode
+SubstanceName,Substance,isNameOf
+SubstanceName,SubstanceNameClassifier,hasSubstanceNameType
+SubstanceName,GeographicRegionIdentifier,isApplicableInJurisdiction
+Reference,XMLSchema#boolean,isPublicDomain
+SubstanceNameDomain,<class 'rdflib.term.Literal'>,classifies
+SubstanceNameDomain,ClassificationScheme,isDefinedIn
+SubstanceNameDomain,SubstanceName,classifies
+LanguageIdentifier,XMLSchema#string,hasTag
+LanguageIdentifier,IdentificationScheme,compliesWith
+LanguageIdentifier,Language,identifies
+LanguageIdentifier,CodeSet,isMemberOf
+IdentificationScheme,<class 'rdflib.term.Literal'>,hasMethod
+Language,rdf-schema#Literal,hasFrenchName
+Language,<class 'rdflib.term.Literal'>,hasMethod
+CodeSet,<class 'rdflib.term.Literal'>,hasMethod
+CodeSet,CodeSystemName,hasName
+CodeSet,XMLSchema#string,hasVersion
+CodeSet,CodeElement,hasMember
+CodeSystemName,CodeSet,isNameOf
+CodeElement,owl#Thing,denotes
+CodeElement,CodeSet,isMemberOf
+CodeElement,Text,hasTextValue
+SubstanceNameClassifier,<class 'rdflib.term.Literal'>,classifies
+SubstanceNameClassifier,SubstanceName,classifies
+GeographicRegionIdentifier,XMLSchema#string,hasTag
+GeographicRegionIdentifier,IdentificationScheme,compliesWith
+GeographicRegionIdentifier,CodeSet,isMemberOf
+GeographicRegionIdentifier,GeographicRegion,identifies

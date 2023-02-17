@@ -1,0 +1,50 @@
+Substance,hasSubstanceName min=1,SubstanceName,hasTextValue min=1,Text
+Substance,hasSubstanceName min=1,SubstanceName,isNameOf min=1,Substance
+Substance,hasSubstanceName min=1,SubstanceName,isApplicableIn min=1,Context
+Substance,hasSubstanceName min=1,SubstanceName,hasSubstanceNameValue min=1 max=1,XMLSchema#string
+Substance,hasMolecularWeight min=1,MolecularWeight,hasNumericValue min=1 max=1,XMLSchema#decimal
+Substance,hasStructure min=1,Structure,hasMethod min=1,rdf-schema#Literal
+Substance,hasSubstanceName min=1,SubstanceName,isClassifiedBy min=1,SubstanceNameDomain,classifies min=1,rdf-schema#Literal
+Substance,hasSubstanceName min=1,SubstanceName,hasSubstanceNameType min=1 max=1,SubstanceNameClassifier,classifies min=1,rdf-schema#Literal
+Substance,hasSubstanceName min=1,SubstanceName,hasLanguageCode min=1,LanguageIdentifier,hasTextValue min=1,Text
+Substance,hasSubstanceName min=1,SubstanceName,hasLanguageCode min=1,LanguageIdentifier,hasTag min=1,XMLSchema#string
+Substance,hasSubstanceName min=1,SubstanceName,isApplicableInJurisdiction min=1,GeographicRegionIdentifier,hasTextValue min=1,Text
+Substance,hasSubstanceName min=1,SubstanceName,isApplicableInJurisdiction min=1,GeographicRegionIdentifier,hasTag min=1,XMLSchema#string
+Substance,hasSubstanceName min=1,SubstanceName,isApplicableInJurisdiction min=1,GeographicRegionIdentifier,compliesWith min=1,IdentificationScheme
+Substance,hasSubstanceName min=1,SubstanceName,isApplicableInJurisdiction min=1,GeographicRegionIdentifier,isMemberOf min=1,CodeSet
+Substance,hasSubstanceName min=1,SubstanceName,isApplicableInJurisdiction min=1,GeographicRegionIdentifier,identifies min=1,GeographicRegion
+Substance,hasSubstanceName min=1,SubstanceName,isDescribedBy min=1,Reference,isPublicDomain min=1,XMLSchema#boolean
+Substance,hasMolecularWeight min=1,MolecularWeight,hasMeasurementUnit min=1,MeasurementUnit,hasDescription min=1 max=1,Text
+Substance,hasMolecularWeight min=1,MolecularWeight,hasMeasurementUnit min=1,MeasurementUnit,isSIQuantity min=1 max=1,XMLSchema#boolean
+Substance,hasMolecularWeight min=1,MolecularWeight,expressesTheMagnitudeOf min=1,Quantity,hasQuantityKind min=1,QuantityKind
+Substance,hasMolecularWeight min=1,MolecularWeight,expressesTheMagnitudeOf min=1,Quantity,hasName min=1,QuantityName
+Substance,hasSubstanceName min=1,SubstanceName,hasLanguageCode min=1,LanguageIdentifier,compliesWith min=1,IdentificationScheme,hasMethod min=1,rdf-schema#Literal
+Substance,hasSubstanceName min=1,SubstanceName,hasLanguageCode min=1,LanguageIdentifier,identifies min=1,Language,hasGermanName min=1,rdf-schema#Literal
+Substance,hasSubstanceName min=1,SubstanceName,hasLanguageCode min=1,LanguageIdentifier,isMemberOf min=1,CodeSet,hasVersion min=1,XMLSchema#string
+Substance,hasSubstanceName min=1,SubstanceName,hasLanguageCode min=1,LanguageIdentifier,isMemberOf min=1,CodeSet,hasMethod min=1,rdf-schema#Literal
+Substance,hasMolecularWeight min=1,MolecularWeight,hasMeasurementUnit min=1,MeasurementUnit,hasName min=1,QuantityName,hasTextValue min=1,Text
+Substance,hasMolecularWeight min=1,MolecularWeight,hasMeasurementUnit min=1,MeasurementUnit,hasName min=1,QuantityName,isNameOf min=1,Quantity
+Substance,hasMolecularWeight min=1,MolecularWeight,hasMeasurementUnit min=1,MeasurementUnit,hasName min=1,QuantityName,isApplicableIn min=1,Context
+Substance,hasMolecularWeight min=1,MolecularWeight,hasMeasurementUnit min=1,MeasurementUnit,hasName min=1,QuantityName,isApplicableIn min=1,SystemOfUnits
+Substance,hasMolecularWeight min=1,MolecularWeight,hasMeasurementUnit min=1,MeasurementUnit,isDefinedIn min=1,SystemOfUnits,compliesWith min=1 max=1,SystemOfQuantities
+Substance,hasMolecularWeight min=1,MolecularWeight,hasMeasurementUnit min=1,MeasurementUnit,isDefinedIn min=1,SystemOfUnits,hasMethod min=1,rdf-schema#Literal
+Substance,hasMolecularWeight min=1,MolecularWeight,hasMeasurementUnit min=1,MeasurementUnit,isDefinedIn min=1,SystemOfUnits,defines min=1,MeasurementUnit
+Substance,hasMolecularWeight min=1,MolecularWeight,hasMeasurementUnit min=1,MeasurementUnit,hasQuantityKind min=1,QuantityKind,isDefinedIn min=1,SystemOfQuantities
+Substance,hasMolecularWeight min=1,MolecularWeight,hasMeasurementUnit min=1,MeasurementUnit,hasQuantityKind min=1,QuantityKind,classifies min=1,rdf-schema#Literal
+Substance,hasMolecularWeight min=1,MolecularWeight,hasMeasurementUnit min=1,MeasurementUnit,hasFactor min=1,UnitPowerFactor,hasExponent min=1 max=1,owl#rational
+Substance,hasMolecularWeight min=1,MolecularWeight,hasMeasurementUnit min=1,MeasurementUnit,hasFactor min=1,UnitPowerFactor,characterizes min=1,rdf-schema#Literal
+Substance,hasMolecularWeight min=1,MolecularWeight,hasMeasurementUnit min=1,MeasurementUnit,hasFactor min=1,UnitPowerFactor,hasMeasurementUnit min=1 max=1,MeasurementUnit
+Substance,hasMolecularWeight min=1,MolecularWeight,hasMeasurementUnit min=1,MeasurementUnit,isIdentifiedBy min=1,UnitOfMeasureIdentifier,hasTextValue min=1,Text
+Substance,hasMolecularWeight min=1,MolecularWeight,hasMeasurementUnit min=1,MeasurementUnit,isIdentifiedBy min=1,UnitOfMeasureIdentifier,identifies min=1,MeasurementUnit
+Substance,hasSubstanceName min=1,SubstanceName,hasLanguageCode min=1,LanguageIdentifier,isMemberOf min=1,CodeSet,hasName min=1,CodeSystemName,hasTextValue min=1,Text
+Substance,hasSubstanceName min=1,SubstanceName,hasLanguageCode min=1,LanguageIdentifier,isMemberOf min=1,CodeSet,hasName min=1,CodeSystemName,isNameOf min=1,CodeSet
+Substance,hasMolecularWeight min=1,MolecularWeight,hasMeasurementUnit min=1,MeasurementUnit,hasName min=1,QuantityName,isApplicableIn min=1,SystemOfQuantities,hasMethod min=1,rdf-schema#Literal
+Substance,hasMolecularWeight min=1,MolecularWeight,hasMeasurementUnit min=1,MeasurementUnit,hasName min=1,QuantityName,isApplicableIn min=1,SystemOfQuantities,defines min=1,QuantityKind
+Substance,hasMolecularWeight min=1,MolecularWeight,hasMeasurementUnit min=1,MeasurementUnit,hasQuantityKind min=1,QuantityKind,hasDimension min=1 max=1,QuantityDimension,classifies min=1,rdf-schema#Literal
+Substance,hasMolecularWeight min=1,MolecularWeight,hasMeasurementUnit min=1,MeasurementUnit,isIdentifiedBy min=1,UnitOfMeasureIdentifier,compliesWith min=1,UnitOfMeasureIdentificationScheme,hasDescription min=1 max=1,Text
+Substance,hasMolecularWeight min=1,MolecularWeight,hasMeasurementUnit min=1,MeasurementUnit,isIdentifiedBy min=1,UnitOfMeasureIdentifier,compliesWith min=1,UnitOfMeasureIdentificationScheme,hasVersion min=1,XMLSchema#string
+Substance,hasMolecularWeight min=1,MolecularWeight,hasMeasurementUnit min=1,MeasurementUnit,isIdentifiedBy min=1,UnitOfMeasureIdentifier,compliesWith min=1,UnitOfMeasureIdentificationScheme,hasMethod min=1,rdf-schema#Literal
+Substance,hasMolecularWeight min=1,MolecularWeight,hasMeasurementUnit min=1,MeasurementUnit,hasQuantityKind min=1,QuantityKind,hasDimension min=1 max=1,QuantityDimension,hasFactor min=1,QuantityKindPowerFactor,hasExponent min=1 max=1,owl#rational
+Substance,hasMolecularWeight min=1,MolecularWeight,hasMeasurementUnit min=1,MeasurementUnit,hasQuantityKind min=1,QuantityKind,hasDimension min=1 max=1,QuantityDimension,hasFactor min=1,QuantityKindPowerFactor,characterizes min=1,rdf-schema#Literal
+Substance,hasMolecularWeight min=1,MolecularWeight,hasMeasurementUnit min=1,MeasurementUnit,isIdentifiedBy min=1,UnitOfMeasureIdentifier,compliesWith min=1,UnitOfMeasureIdentificationScheme,hasName min=1 max=1,CodeSystemFullName,hasTextValue min=1,Text
+Substance,hasMolecularWeight min=1,MolecularWeight,hasMeasurementUnit min=1,MeasurementUnit,isIdentifiedBy min=1,UnitOfMeasureIdentifier,compliesWith min=1,UnitOfMeasureIdentificationScheme,hasName min=1 max=1,CodeSystemFullName,isNameOf min=1 max=1,UnitOfMeasureIdentificationScheme
