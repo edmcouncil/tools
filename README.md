@@ -3,7 +3,7 @@
 :warning: **Work in progress**
 
 This ia a repository that stores some utils needed for the ontology development.
-All tools assumed that if you want to use them, you need to have Python 3.* installed (3.9 is recommended.)
+All tools assumed that if you want to use them, you need to have Python 3.9 (or higher) installed.
 
 ## Ontology revision comparison
 Currently, the tool runs three comparisons:
