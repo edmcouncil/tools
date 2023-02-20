@@ -9,16 +9,19 @@ The tool can be run in two modes:
 - no-verbose where only the counts of differences are given
 - verbose where the differences are explicitly shown.
 
-We provide to scripts for ontology comparison
+We provide two scripts for ontology comparison - see below.
+Before you run them you may want to install all scripts in this repository using pip:
+
+`pip install .`
 
 ## GitHub repository compare tool
-[run_github_compare](https://github.com/edmcouncil/tools/blob/main/edmc_tools/run_github_compare.py) is a Python script that compares two snapshots of a single ontology GitHub repository.
+[github_compare](https://github.com/edmcouncil/tools/blob/main/edmc_tools/run_github_compare.py) is a Python script that compares two snapshots of a single ontology GitHub repository.
 ### How to run
 
 Example:
-In your command line/terminal run python `run_github_compare.py` with parameters - see below.
+In your command line/terminal run `github_compare` with parameters - see below.
 ```
-python run_github_compare.py --github https://github.com/iofoundry/ontology --left b7fe31cb7cc43c3ae75fbcfec3cb009872be587f --right Release_202301 --verbose False --outputs Home/ontology/compare/ 
+github_compare --github https://github.com/iofoundry/ontology --left b7fe31cb7cc43c3ae75fbcfec3cb009872be587f --right Release_202301 --verbose False --outputs Home/ontology/compare/ 
 ```
 ### Parameters
 ```
@@ -32,12 +35,12 @@ python run_github_compare.py --github https://github.com/iofoundry/ontology --le
 
 
 ## Local folders compare tool
-[run_local_compare](https://github.com/edmcouncil/tools/blob/main/edmc_tools/run_local_compare.py) is a Python script that compares two local folders with ontology files.
+[local_compare](https://github.com/edmcouncil/tools/blob/main/edmc_tools/run_local_compare.py) is a Python script that compares two local folders with ontology files.
 
 Example:
-In your command line/terminal run python `run_local_compare.py` with parameters - see below.
+In your command line/terminal run python `local_compare.py` with parameters - see below.
 ```
-python run_local_compare.py --comparision_identifier fibo --left /ontologies/fibo/Q1 --right /ontologies/fibo/Q2 --verbose False --outputs Home/ontology/compare/ 
+local_compare --comparision_identifier fibo --left /ontologies/fibo/Q1 --right /ontologies/fibo/Q2 --verbose False --outputs Home/ontology/compare/ 
 ```
 ### Parameters
 ```

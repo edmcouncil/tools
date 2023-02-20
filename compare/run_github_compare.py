@@ -1,19 +1,18 @@
 import argparse
 import logging
+import sys
 
-from compare.code.comparison_config import ComparisonConfig
-from compare.code.ontology_github_repo_comparer import compare_ontology_github_repos
+from compare.compare_code.comparison_config import ComparisonConfig
+from compare.compare_code.ontology_github_repo_comparer import compare_ontology_github_repos
 
 
-if __name__ == "__main__":
-    
-    parser = argparse.ArgumentParser(
-        description='Compares two revisions of an ontology versioned-controlled in a GitHub repository')
+def run():
+    parser = argparse.ArgumentParser(description='Compares two revisions of an ontology versioned-controlled in a GitHub repository')
     parser.add_argument('--github', help='IRI for GitHub repository')
     parser.add_argument('--left', help='Left revision commit id')
     parser.add_argument('--right', help='Right revision commit id')
     parser.add_argument('--outputs', default='outputs', help='Path to output folder')
-    parser.add_argument('--verbose', default=True, action=argparse.BooleanOptionalAction)
+    parser.add_argument('--verbose', default=True)
     parser.add_argument('--log_file', default=str())
     args = parser.parse_args()
     

@@ -1,19 +1,18 @@
 import argparse
 import logging
 
-from compare.code.comparison_config import ComparisonConfig
-from compare.code.ontology_folders_comparer import compare_ontology_folders
-from compare.code.ontology_github_repo_comparer import compare_ontology_github_repos
+from compare.compare_code.comparison_config import ComparisonConfig
+from compare.compare_code.ontology_folders_comparer import compare_ontology_folders
+from compare.compare_code.ontology_github_repo_comparer import compare_ontology_github_repos
 
 
-if __name__ == "__main__":
-    
+def run():
     parser = argparse.ArgumentParser(description='Compares folders with ontology files.')
     parser.add_argument('--left', help='Path to the left folder.')
     parser.add_argument('--right', help='Path to the right folder.')
     parser.add_argument('--comparison_identifier', default='ontology')
     parser.add_argument('--outputs', default='outputs', help='Path to output folder')
-    parser.add_argument('--verbose', default=True, action=argparse.BooleanOptionalAction)
+    parser.add_argument('--verbose', default=True)
     parser.add_argument('--log_file', default=str())
     args = parser.parse_args()
     
