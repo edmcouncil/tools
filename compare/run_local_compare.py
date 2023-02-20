@@ -3,7 +3,6 @@ import logging
 
 from compare.compare_code.comparison_config import ComparisonConfig
 from compare.compare_code.ontology_folders_comparer import compare_ontology_folders
-from compare.compare_code.ontology_github_repo_comparer import compare_ontology_github_repos
 
 
 def run():
@@ -17,9 +16,9 @@ def run():
     args = parser.parse_args()
     
     if len(args.log_file) > 0:
-        logging.basicConfig(format='%(levelname)s %(asctime)s %(message)s', level=logging.INFO,datefmt='%m/%d/%Y %I:%M:%S %p', filename=args.log_file)
+        logging.basicConfig(format='%(levelname)s %(asctime)s %(message)s', level=logging.INFO, datefmt='%m/%d/%Y %I:%M:%S %p', filename=args.log_file)
     else:
-        logging.basicConfig(format='%(levelname)s %(asctime)s %(message)s', level=logging.INFO,datefmt='%m/%d/%Y %I:%M:%S %p')
+        logging.basicConfig(format='%(levelname)s %(asctime)s %(message)s', level=logging.INFO, datefmt='%m/%d/%Y %I:%M:%S %p')
     
     compare_ontology_folders(
         comparison_identifier=args.comparison_identifier,

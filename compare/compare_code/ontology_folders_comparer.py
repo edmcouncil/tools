@@ -1,13 +1,8 @@
 import logging
-import os
-import shutil
-
-from git import Repo
 
 from compare.compare_code.comparison_config import ComparisonConfig
 from compare.compare_code.ontology_comparer_writer import save_deltas
 from compare.compare_code.ontology_folder_comparer import compare_ontology_revisions_in_folders
-from compare.compare_code.utils import create_folder_if_not_exists
 
 TEMP_FOLDER = 'temp/'
 TEMP_LEFT_SUBFOLDER = 'temp/left'

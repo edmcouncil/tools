@@ -200,12 +200,12 @@ def identify_property_object_tuples(property_object_tuples: set, ontology: Graph
 
 def get_subjects(ontology: Graph, only_identifiable=False) -> set:
     subjects = set()
-    for (subject, relation, object) in ontology:
+    for (triple_subject, triple_predicate, triple_object) in ontology:
         if only_identifiable:
-            if isinstance(subject, URIRef):
-                subjects.add(subject)
+            if isinstance(triple_subject, URIRef):
+                subjects.add(triple_subject)
         else:
-            subjects.add(subject)
+            subjects.add(triple_subject)
     
     return subjects
 
