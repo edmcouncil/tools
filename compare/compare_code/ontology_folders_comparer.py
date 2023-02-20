@@ -2,7 +2,7 @@ import logging
 
 from compare.compare_code.comparison_config import ComparisonConfig
 from compare.compare_code.ontology_comparer_writer import save_deltas
-from compare.compare_code.ontology_folder_comparer import compare_ontology_revisions_in_folders
+from compare.compare_code.ontology_revisions_comparer import compare_ontology_revisions_in_folders
 
 TEMP_FOLDER = 'temp/'
 TEMP_LEFT_SUBFOLDER = 'temp/left'

@@ -6,7 +6,7 @@ from git import Repo
 
 from compare.compare_code.comparison_config import ComparisonConfig
 from compare.compare_code.ontology_comparer_writer import save_deltas
-from compare.compare_code.ontology_folder_comparer import compare_ontology_revisions_in_folders
+from compare.compare_code.ontology_revisions_comparer import compare_ontology_revisions_in_folders
 from compare.compare_code.utils import create_folder_if_not_exists
 
 TEMP_FOLDER = 'temp/'
@@ -15,7 +15,7 @@ TEMP_RIGHT_SUBFOLDER = 'temp/right'
 RESULTS_FOLDER = 'results'
 
 
-def compare_ontology_github_repos(
+def compare_ontology_github_repo(
         repo_github_url: str,
         left_revision_id: str,
         right_revision_id: str,

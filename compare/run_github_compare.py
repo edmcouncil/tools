@@ -2,7 +2,7 @@ import argparse
 import logging
 
 from compare.compare_code.comparison_config import ComparisonConfig
-from compare.compare_code.ontology_github_repo_comparer import compare_ontology_github_repos
+from compare.compare_code.ontology_github_repo_comparer import compare_ontology_github_repo
 
 
 def run():
@@ -20,7 +20,7 @@ def run():
     else:
         logging.basicConfig(format='%(levelname)s %(asctime)s %(message)s', level=logging.INFO, datefmt='%m/%d/%Y %I:%M:%S %p')
     
-    compare_ontology_github_repos(
+    compare_ontology_github_repo(
         repo_github_url=args.github,
         left_revision_id=args.left,
         right_revision_id=args.right,

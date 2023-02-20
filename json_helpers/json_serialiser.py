@@ -52,21 +52,25 @@ def save_list_of_dicts_as_excel_file_with_two_sheets(
             first_dict_dataframes.append(first_dict_as_dataframe_normalised)
             second_dict_as_dataframe_normalised = dict_as_dataframe_normalised.explode(column=second_aspect,ignore_index=True)
             second_dict_dataframes.append(second_dict_as_dataframe_normalised)
-            
-    first_dicts_dataframe = pandas.concat(first_dict_dataframes)
-    first_dicts_dataframe.drop(columns=[second_aspect], inplace=True)
-    first_dicts_dataframe.drop_duplicates(inplace=True)
-    first_dicts_dataframe.dropna(inplace=True)
-    second_dicts_dataframe = pandas.concat(second_dict_dataframes)
-    second_dicts_dataframe.drop(columns=[first_aspect], inplace=True)
-    second_dicts_dataframe.drop_duplicates(inplace=True)
-    second_dicts_dataframe.dropna(inplace=True)
+
     excel_file_name = os.path.join(output_folder, table_file_name)
     os.makedirs(os.path.dirname(excel_file_name), exist_ok=True)
-
     writer = pandas.ExcelWriter(excel_file_name, engine='xlsxwriter')
-    first_dicts_dataframe.to_excel(writer, index=False, sheet_name='first')
-    second_dicts_dataframe.to_excel(writer, index=False, sheet_name='second')
+    
+    if len(first_dict_dataframes) > 0:
+        first_dicts_dataframe = pandas.concat(first_dict_dataframes)
+        first_dicts_dataframe.drop(columns=[second_aspect], inplace=True)
+        first_dicts_dataframe.drop_duplicates(inplace=True)
+        first_dicts_dataframe.dropna(inplace=True)
+        first_dicts_dataframe.to_excel(writer, index=False, sheet_name='first')
+
+    if len(second_dict_dataframes) > 0:
+        second_dicts_dataframe = pandas.concat(second_dict_dataframes)
+        second_dicts_dataframe.drop(columns=[first_aspect], inplace=True)
+        second_dicts_dataframe.drop_duplicates(inplace=True)
+        second_dicts_dataframe.dropna(inplace=True)
+        second_dicts_dataframe.to_excel(writer, index=False, sheet_name='second')
+    
     writer.close()
     
     
