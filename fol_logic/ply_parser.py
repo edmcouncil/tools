@@ -2,14 +2,14 @@ import re
 
 from ply import lex, yacc
 
-from logic.objects.atomic_formula import AtomicFormula
-from logic.objects.conjunction import Conjunction
-from logic.objects.disjunction import Disjunction
-from logic.objects.equivalence import Equivalence
-from logic.objects.formula import Formula
-from logic.objects.implication import Implication
-from logic.objects.negation import Negation
-from logic.objects.quantifying_formula import QuantifyingFormula, Quantifier
+from fol_logic.objects.atomic_formula import AtomicFormula
+from fol_logic.objects.conjunction import Conjunction
+from fol_logic.objects.disjunction import Disjunction
+from fol_logic.objects.equivalence import Equivalence
+from fol_logic.objects.formula import Formula
+from fol_logic.objects.implication import Implication
+from fol_logic.objects.negation import Negation
+from fol_logic.objects.quantifying_formula import QuantifyingFormula, Quantifier
 
 tokens = ['COMMA', 'LPAREN','RPAREN','VARIABLE', 'PREDICATE', 'CONJUNCTION', 'NEGATION', 'DISJUNCTION', 'IMPLICATION', 'EQUIVALENCE', 'EXISTS', 'ALL']
 

@@ -372,12 +372,7 @@ if __name__ == "__main__":
     # logging.basicConfig(format='%(levelname)s %(asctime)s %(message)s', level=logging.INFO, datefmt='%m/%d/%Y %I:%M:%S %p', filename=log_file_name)
     logging.basicConfig(format='%(levelname)s %(asctime)s %(message)s', level=logging.WARN,datefmt='%m/%d/%Y %I:%M:%S %p')
     
-    logging.info(msg='Connecting to wikidata server')
-    login_credentials = {'bot_username': 'Esg', 'bot_password': 'esgpass_2022'}
-    wikibase = Wikibase(api_url='https://spec.edmcouncil.org/esg/w/api.php', login_credentials=login_credentials)
     
-    # login_credentials = {'bot_username': 'Lhdb', 'bot_password': 'CIDOCpass_2022'}
-    # wikibase = Wikibase(api_url='https://cidoc.wiki.kul.pl/w/api.php', login_credentials=login_credentials)
     
     external_origin_property_content = \
         {

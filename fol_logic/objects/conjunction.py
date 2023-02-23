@@ -1,6 +1,6 @@
 import uuid
 
-from logic.objects.propositional_formula import PropositionalFormula
+from fol_logic.objects.propositional_formula import PropositionalFormula
 
 
 class Conjunction(PropositionalFormula):

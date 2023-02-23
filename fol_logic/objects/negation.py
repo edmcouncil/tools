@@ -1,4 +1,4 @@
-from logic.objects.propositional_formula import PropositionalFormula
+from fol_logic.objects.propositional_formula import PropositionalFormula
 
 
 class Negation(PropositionalFormula):

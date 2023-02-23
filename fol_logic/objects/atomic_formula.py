@@ -1,6 +1,6 @@
 import uuid
 
-from logic.objects.formula import Formula
+from fol_logic.objects.formula import Formula
 
 
 class AtomicFormula(Formula):
