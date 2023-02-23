@@ -1,4 +1,5 @@
 import logging
+import os
 import sys
 import time
 
@@ -371,8 +372,9 @@ if __name__ == "__main__":
     log_file_name = 'log_' + time.strftime("%Y-%m-%d %H:%M:%S") + '.txt'
     # logging.basicConfig(format='%(levelname)s %(asctime)s %(message)s', level=logging.INFO, datefmt='%m/%d/%Y %I:%M:%S %p', filename=log_file_name)
     logging.basicConfig(format='%(levelname)s %(asctime)s %(message)s', level=logging.WARN,datefmt='%m/%d/%Y %I:%M:%S %p')
-    
-    
+
+    login_credentials = {'bot_username': os.environ.get('WIKI_LOGIN'), 'bot_password': os.environ.get('WIKI_PASSWORD')}
+    wikibase = Wikibase(api_url='https://cidoc.wiki.kul.pl/w/api.php', login_credentials=login_credentials)
     
     external_origin_property_content = \
         {
@@ -390,7 +392,7 @@ if __name__ == "__main__":
     graph = Graph()
     # graph.parse('prod.idmp-quickstart.ttl', format='ttl')
     # graph.parse('CIDOC_CRM_v7.1.1.rdf')
-    graph.parse('AboutESGDevMerged.ttl', format='ttl')
+    graph.parse('https://raw.githubusercontent.com/ontohgis/ontology/master/ontohgis.ttl')
     rdf = Graph()
     rdf.parse('http://www.w3.org/1999/02/22-rdf-syntax-ns')
     rdfs = Graph()
