@@ -392,7 +392,7 @@ if __name__ == "__main__":
     graph = Graph()
     # graph.parse('prod.idmp-quickstart.ttl', format='ttl')
     # graph.parse('CIDOC_CRM_v7.1.1.rdf')
-    graph.parse('https://raw.githubusercontent.com/ontohgis/ontology/master/ontohgis.ttl')
+    graph.parse('ontohgis.ttl')
     rdf = Graph()
     rdf.parse('http://www.w3.org/1999/02/22-rdf-syntax-ns')
     rdfs = Graph()
