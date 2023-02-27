@@ -11,3 +11,6 @@ class Implication(PropositionalFormula):
         tptp_axiom = self.bracketise(' '.join([self.arguments[0].get_tptp_axiom(), '=>', self.arguments[1].get_tptp_axiom()]))
         return tptp_axiom
         
+        
+    def __repr__(self):
+        return '(' + 'if ' + self.arguments[0].__repr__() + ' then ' + self.arguments[1].__repr__() +')'

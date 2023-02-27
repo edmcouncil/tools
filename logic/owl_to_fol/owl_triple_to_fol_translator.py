@@ -73,8 +73,7 @@ def translate_rdf_triple_with_concept_to_fol(rdf_triple: tuple, owl_ontology: Gr
         antecedent = get_subformula_from_node(node=rdf_triple[0], owl_ontology=owl_ontology)
         subsequent = get_subformula_from_node(node=rdf_triple[2], owl_ontology=owl_ontology)
         if not antecedent is None and not subsequent is None:
-            QuantifyingFormula(quantified_formula=Implication(arguments=[antecedent, subsequent]),
-                               variables=[DefaultVariable()], quantifier=Quantifier.UNIVERSAL)
+            QuantifyingFormula(quantified_formula=Implication(arguments=[antecedent, subsequent]),variables=[DefaultVariable()], quantifier=Quantifier.UNIVERSAL)
         return
 
 

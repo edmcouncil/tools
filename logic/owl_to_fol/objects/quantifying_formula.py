@@ -37,4 +37,7 @@ class QuantifyingFormula(Formula):
                 free_variables.remove(variable)
         return free_variables
     
+    def __repr__(self):
+        return ' '.join([self.quantifier.value, ','.join([variable.__repr__() for variable in self.variables]), self.quantified_formula.__repr__()])
+    
     

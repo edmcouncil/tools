@@ -14,3 +14,6 @@ class AtomicFormula(Formula):
         tptp_axiom = self.predicate.origin.lower() +'(' +','.join([str(variable).upper() for variable in self.arguments]) + ')'
         return tptp_axiom
     
+    def __repr__(self):
+        return ''.join([self.predicate.__repr__(), '(', ','.join([argument.__repr__() for argument in self.arguments]), ')'])
+    
