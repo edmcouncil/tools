@@ -33,7 +33,7 @@ def identify_datatype_restriction(datatype_restriction: BNode, ontology: Graph) 
         return tuple([restricted_datatype, identified_restricting_restriction])
     resource_unions_of = list(ontology.objects(subject=datatype_restriction, predicate=OWL.unionOf))
     if len(resource_unions_of) == 1:
-        identified_resource = get_listed_items(rdf_list_object=resource_unions_of[0], ontology=ontology, rdf_list=list())
+        identified_resource = get_listed_resources(rdf_list_object=resource_unions_of[0], ontology=ontology, rdf_list=list())
         return tuple(identified_resource)
     else:
         identified_resource = identify_collection(resource_unions_of, ontology, OWL.unionOf)
@@ -93,22 +93,22 @@ def identify_resource(resource: Resource, ontology: Graph) -> object:
     if len(resource_subject_predicates) > 0:
         for resource_subject_predicate in resource_subject_predicates:
             if resource_subject_predicate[1] == OWL.propertyChainAxiom:
-                chained_properties = get_listed_items(rdf_list_object=resource, ontology=ontology, rdf_list=list())
+                chained_properties = get_listed_resources(rdf_list_object=resource, ontology=ontology, rdf_list=list())
                 identified_resource = identify_collection(chained_properties, ontology, OWL.propertyChainAxiom)
                 return identified_resource
             if resource_subject_predicate[1] == OWL.withRestrictions:
-                datatype_restrictions = get_listed_items(rdf_list_object=resource, ontology=ontology, rdf_list=list())
+                datatype_restrictions = get_listed_resources(rdf_list_object=resource, ontology=ontology, rdf_list=list())
                 identified_resource = identify_collection(datatype_restrictions, ontology, OWL.withRestrictions)
                 return identified_resource
     
     return identified_resource
 
 
-def get_listed_items(rdf_list_object: Resource, ontology: Graph, rdf_list: list) -> list:
+def get_listed_resources(rdf_list_object: Resource, ontology: Graph, rdf_list: list) -> list:
     first_items_in_rdf_list = list(ontology.objects(subject=rdf_list_object, predicate=RDF.first))
     if len(first_items_in_rdf_list) == 0:
         return rdf_list
     rdf_list.append(first_items_in_rdf_list[0])
     rest_items_in_rdf_list = list(ontology.objects(subject=rdf_list_object, predicate=RDF.rest))
-    rdf_list = get_listed_items(rdf_list_object=rest_items_in_rdf_list[0], ontology=ontology, rdf_list=rdf_list)
+    rdf_list = get_listed_resources(rdf_list_object=rest_items_in_rdf_list[0], ontology=ontology, rdf_list=rdf_list)
     return rdf_list

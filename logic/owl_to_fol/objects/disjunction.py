@@ -3,7 +3,7 @@ from logic.owl_to_fol.objects.propositional_formula import PropositionalFormula
 
 class Disjunction(PropositionalFormula):
     def __init__(self, arguments: list):
-        if not len(arguments) == 2:
+        if len(arguments) < 2:
             raise Exception('Wrong disjunction initialisation')
         super().__init__(arguments=arguments)
         
