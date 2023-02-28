@@ -3,6 +3,7 @@ from logic.owl_to_fol.objects.term import Term
 
 TPTP_DEFAULT_LETTER_1 = 'X'
 TPTP_DEFAULT_LETTER_2 = 'Y'
+TPTP_DEFAULT_LETTER_3 = 'Z'
 
 class DefaultVariable(Term):
     registry = dict()

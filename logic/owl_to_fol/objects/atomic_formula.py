@@ -10,6 +10,12 @@ class AtomicFormula(Formula):
         self.arguments = arguments
         self.free_variables = set(self.arguments)
         
+    def swap_arguments(self):
+        self.arguments.reverse()
+        
+    def replace_arguments(self, arguments: list):
+        return AtomicFormula(predicate=self.predicate, arguments=arguments,is_self_standing=self.is_self_standing)
+        
     def get_tptp_axiom(self) -> str:
         tptp_axiom = self.predicate.origin.lower() +'(' +','.join([str(variable).upper() for variable in self.arguments]) + ')'
         return tptp_axiom

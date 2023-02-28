@@ -10,3 +10,6 @@ class Negation(PropositionalFormula):
     def get_tptp_axiom(self) -> str:
         tptp_axiom = self.bracketise('~' + self.arguments[0].get_tptp_axiom())
         return tptp_axiom
+    
+    def __repr__(self):
+        return 'not' + '(' + self.arguments[0].__repr__() + ')'

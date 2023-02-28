@@ -13,3 +13,6 @@ class IdentityFormula(AtomicFormula):
         tptp_axiom = '(' + ')'
         return tptp_axiom
     
+    def __repr__(self):
+        return ''.join([self.arguments[0].__repr__(), self.predicate.__repr__(), self.arguments[1].__repr__()])
+    
