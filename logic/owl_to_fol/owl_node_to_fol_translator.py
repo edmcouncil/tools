@@ -1,4 +1,7 @@
+import logging
+
 from rdflib import Graph, OWL, RDF, RDFS
+from rdflib.resource import Resource
 from rdflib.term import Node, BNode, URIRef
 
 from logic.fol_logic.objects.atomic_formula import AtomicFormula
@@ -13,8 +16,6 @@ from logic.fol_logic.objects.predicate import Predicate
 from logic.fol_logic.objects.quantifying_formula import QuantifyingFormula, Quantifier
 from logic.fol_logic.objects.symbol import Symbol
 from logic.fol_logic.objects.term import Term
-from logic.owl_to_fol.owl_helpers import try_to_cast_bnode_as_typed_list, get_listed_resources, uri_is_property
-
 
 def get_simple_subformula_from_node(node: Node, owl_ontology: Graph, variable=DefaultVariable()) -> Formula:
     if isinstance(node, BNode):
@@ -22,10 +23,9 @@ def get_simple_subformula_from_node(node: Node, owl_ontology: Graph, variable=De
     if isinstance(node, URIRef):
        return get_subformula_from_uri(uri=node, owl_ontology=owl_ontology, variable=variable)
 
-
 def get_subformula_from_bnode(bnode: BNode, owl_ontology: Graph, variable=DefaultVariable()) -> Formula:
     if (bnode, RDF.type, OWL.Restriction) in owl_ontology:
-        formula = generate_fol_from_owl_restriction(owl_restriction=bnode, owl_ontology=owl_ontology)
+        formula = generate_fol_from_owl_restriction(owl_restriction=bnode, owl_ontology=owl_ontology, variable=variable)
         return formula
     
     if len(list(owl_ontology.objects(subject=bnode, predicate=OWL.inverseOf))) > 0:
@@ -40,21 +40,17 @@ def get_subformula_from_bnode(bnode: BNode, owl_ontology: Graph, variable=Defaul
     
     if typed_list:
         if typed_list[0] == OWL.complementOf:
-            listed_resources = [typed_list[1]]
+            formulas = [get_simple_subformula_from_node(node=typed_list[1],owl_ontology=owl_ontology)]
         else:
-            listed_resources = get_listed_resources(rdf_list_object=typed_list[1],ontology=owl_ontology,rdf_list=list())
-        formulas = list()
-        for listed_resource in listed_resources:
-            formula = get_simple_subformula_from_node(node=listed_resource, owl_ontology=owl_ontology, variable=variable)
-            formulas.append(formula)
+            formulas = get_listed_resources(rdf_list_object=typed_list[1],ontology=owl_ontology,rdf_list=list())
         if typed_list[0] == OWL.unionOf:
             return Disjunction(arguments=formulas)
         if typed_list[0] == OWL.intersectionOf:
             return Conjunction(arguments=formulas)
         if typed_list[0] == OWL.complementOf:
             return Negation(arguments=formulas)
-        
-    v=0
+    
+    logging.warning(msg='Something is wrong with the list: ' + str(typed_list))
 
 def get_subformula_from_uri(uri: URIRef, owl_ontology: Graph, variable=DefaultVariable()) -> Formula:
     if (uri, RDF.type, OWL.Class) in owl_ontology:
@@ -78,10 +74,10 @@ def get_subformula_from_uri(uri: URIRef, owl_ontology: Graph, variable=DefaultVa
         return \
             AtomicFormula(predicate=predicate, arguments=[DefaultVariable(letter=TPTP_DEFAULT_LETTER_1),DefaultVariable(letter=TPTP_DEFAULT_LETTER_2)])
     
-    v=0
+    logging.warning(msg='Cannot get formula from ' + str(uri))
     
 
-def get_fol_object_for_node(node: Node, owl_ontology: Graph, arity=1) -> Symbol:
+def get_fol_symbol_for_owl_node(node: Node, owl_ontology: Graph, arity=1) -> Symbol:
     if (node, RDF.type, OWL.NamedIndividual) in owl_ontology or (node, RDF.type, RDFS.Literal) in owl_ontology:
         if node in Term.registry:
             return Term.registry[node]
@@ -94,7 +90,7 @@ def get_fol_object_for_node(node: Node, owl_ontology: Graph, arity=1) -> Symbol:
         return Predicate(origin=node, arity=arity)
 
 
-def generate_fol_from_owl_restriction(owl_restriction: Node, owl_ontology: Graph) -> Formula:
+def generate_fol_from_owl_restriction(owl_restriction: Node, owl_ontology: Graph, variable: Term) -> Formula:
     owl_properties = list(owl_ontology.objects(subject=owl_restriction, predicate=OWL.onProperty))
     owl_property = owl_properties[0]
     owl_someValuesFrom = list(owl_ontology.objects(subject=owl_restriction, predicate=OWL.someValuesFrom))
@@ -134,9 +130,11 @@ def generate_fol_from_owl_restriction(owl_restriction: Node, owl_ontology: Graph
                     variables=[DefaultVariable(letter=TPTP_DEFAULT_LETTER_2)])
             return formula
         
-    if len(owl_onClass) > 0:
-        restricting_node = owl_onClass[0]
-        # restricting_class_formula = get_subformula_from_node(node=restricting_node, owl_ontology=owl_ontology, variable=DefaultVariable(letter=TPTP_DEFAULT_LETTER_2))
+    if len(owl_onClass) > 0 or len(owl_onDataRange) > 0:
+        if len(owl_onClass) > 0:
+            restricting_node = owl_onClass[0]
+        else:
+            restricting_node = owl_onDataRange[0]
         restricting_relation_formula = get_simple_subformula_from_node(node=owl_property, owl_ontology=owl_ontology)
         if restricting_relation_formula:
             if len(owl_qualifiedMinCardinality) > 0:
@@ -165,3 +163,46 @@ def generate_fol_from_owl_restriction(owl_restriction: Node, owl_ontology: Graph
                         quantifier=Quantifier.EXISTENTIAL,
                         variables=[DefaultVariable(letter=TPTP_DEFAULT_LETTER_2)])
                 return formula
+            
+    if len(owl_hasValue) > 0:
+        restricting_relation_symbol = get_fol_symbol_for_owl_node(node=owl_property, owl_ontology=owl_ontology)
+        restricting_individual_symbol = get_fol_symbol_for_owl_node(node=owl_hasValue[0], owl_ontology=owl_ontology)
+        formula = AtomicFormula(predicate=restricting_relation_symbol, arguments=[variable, restricting_individual_symbol])
+        return formula
+    
+    logging.warning(msg='Cannot get formula from a restriction')
+
+
+def uri_is_property(uri: Node, owl_ontology: Graph) -> bool:
+    if (uri, RDF.type, OWL.ObjectProperty) in owl_ontology:
+        return True
+    if (uri, RDF.type, OWL.DatatypeProperty) in owl_ontology:
+        return True
+    if (uri, RDF.type, RDF.Property) in owl_ontology:
+        return True
+    return False
+
+
+def try_to_cast_bnode_as_typed_list(bnode: BNode, owl_ontology: Graph) -> tuple:
+    owl_unions = list(owl_ontology.objects(subject=bnode, predicate=OWL.unionOf))
+    if len(owl_unions) > 0:
+        return OWL.unionOf, owl_unions[0]
+    
+    owl_intersections = list(owl_ontology.objects(subject=bnode, predicate=OWL.intersectionOf))
+    if len(owl_intersections) > 0:
+        return OWL.intersectionOf, owl_intersections[0]
+    
+    owl_complements = list(owl_ontology.objects(subject=bnode, predicate=OWL.complementOf))
+    if len(owl_complements) > 0:
+        return OWL.complementOf, owl_complements[0]
+
+
+def get_listed_resources(rdf_list_object: Resource, ontology: Graph, rdf_list: list) -> list:
+    first_items_in_rdf_list = list(ontology.objects(subject=rdf_list_object, predicate=RDF.first))
+    if len(first_items_in_rdf_list) == 0:
+        return rdf_list
+    resource = get_simple_subformula_from_node(node=first_items_in_rdf_list[0], owl_ontology=ontology)
+    rdf_list.append(resource)
+    rest_items_in_rdf_list = list(ontology.objects(subject=rdf_list_object, predicate=RDF.rest))
+    rdf_list = get_listed_resources(rdf_list_object=rest_items_in_rdf_list[0], ontology=ontology, rdf_list=rdf_list)
+    return rdf_list

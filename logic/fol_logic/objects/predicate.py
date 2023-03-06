@@ -17,4 +17,7 @@ class Predicate(Symbol):
                 self.letter = str(self.origin).split(sep='/')[-1]
         else:
             self.letter = str(origin)
+            
+    def to_tptp(self):
+        return self.letter.lower()
     

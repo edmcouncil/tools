@@ -4,7 +4,7 @@ from logic.fol_logic.objects.identity import Identity
 
 class IdentityFormula(AtomicFormula):
     
-    def __init__(self, arguments: list, is_self_standing=True):
+    def __init__(self, arguments: list, is_self_standing=False):
         super().__init__(predicate=Identity(), arguments=arguments, is_self_standing=is_self_standing)
         self.free_variables = set(self.arguments)
         

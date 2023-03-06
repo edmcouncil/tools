@@ -8,7 +8,7 @@ class Quantifier(Enum):
     EXISTENTIAL = 'some'
 
 class QuantifyingFormula(Formula):
-    def __init__(self, quantified_formula: Formula, variables: list, quantifier: Quantifier, is_self_standing=True):
+    def __init__(self, quantified_formula: Formula, variables: list, quantifier: Quantifier, is_self_standing=False):
         super().__init__(is_self_standing)
         self.quantified_formula = quantified_formula
         self.variables = variables

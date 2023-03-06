@@ -4,7 +4,7 @@ import uuid
 class Formula():
     registry = set()
     
-    def __init__(self, is_self_standing=True, is_fol=True):
+    def __init__(self, is_self_standing=False, is_fol=True):
         self.is_self_standing = is_self_standing
         self.is_fol = is_fol
         self.free_variables = set()
