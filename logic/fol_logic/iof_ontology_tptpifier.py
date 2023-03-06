@@ -4,6 +4,7 @@ from rdflib import Graph, URIRef
 
 from logic.fol_logic.iof_ply_parser import parse_formula_infix_notation
 
+
 def preprocess_axiom(axiom: str) -> str:
     if ':' not in axiom:
         return axiom

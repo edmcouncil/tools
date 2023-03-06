@@ -2,19 +2,18 @@ from rdflib import Graph, OWL, RDF, RDFS
 from rdflib.term import Node, BNode, URIRef
 
 from logic.fol_logic.objects.atomic_formula import AtomicFormula
-from logic.owl_to_fol.objects.conjunction import Conjunction
-from logic.owl_to_fol.objects.default_variable import DefaultVariable, TPTP_DEFAULT_LETTER_1, TPTP_DEFAULT_LETTER_2
-from logic.owl_to_fol.objects.disjunction import Disjunction
-from logic.owl_to_fol.objects.formula import Formula
-from logic.owl_to_fol.objects.identity_formula import IdentityFormula
-from logic.owl_to_fol.objects.implication import Implication
-from logic.owl_to_fol.objects.negation import Negation
-from logic.owl_to_fol.objects.predicate import Predicate
-from logic.owl_to_fol.objects.quantifying_formula import QuantifyingFormula, Quantifier
-from logic.owl_to_fol.objects.symbol import Symbol
-from logic.owl_to_fol.objects.term import Term
-from logic.owl_to_fol.owl_helpers import uri_is_property, try_to_cast_bnode_as_typed_list, get_listed_resources
-from logic.owl_to_fol.owl_to_fol_preparer import populate_default_predicates
+from logic.fol_logic.objects.conjunction import Conjunction
+from logic.fol_logic.objects.default_variable import DefaultVariable, TPTP_DEFAULT_LETTER_1, TPTP_DEFAULT_LETTER_2
+from logic.fol_logic.objects.disjunction import Disjunction
+from logic.fol_logic.objects.formula import Formula
+from logic.fol_logic.objects.identity_formula import IdentityFormula
+from logic.fol_logic.objects.implication import Implication
+from logic.fol_logic.objects.negation import Negation
+from logic.fol_logic.objects.predicate import Predicate
+from logic.fol_logic.objects.quantifying_formula import QuantifyingFormula, Quantifier
+from logic.fol_logic.objects.symbol import Symbol
+from logic.fol_logic.objects.term import Term
+from logic.owl_to_fol.owl_helpers import try_to_cast_bnode_as_typed_list, get_listed_resources, uri_is_property
 
 
 def get_simple_subformula_from_node(node: Node, owl_ontology: Graph, variable=DefaultVariable()) -> Formula:

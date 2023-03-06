@@ -1,7 +1,7 @@
 from rdflib import RDF, RDFS, OWL
 from rdflib.namespace import DefinedNamespace
 
-from logic.owl_to_fol.objects.predicate import Predicate
+from logic.fol_logic.objects.predicate import Predicate
 
 
 def populate_default_predicates():

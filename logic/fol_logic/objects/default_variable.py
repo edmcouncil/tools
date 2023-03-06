@@ -1,4 +1,3 @@
-from logic.fol_logic.objects.symbol import Symbol
 from logic.fol_logic.objects.term import Term
 
 TPTP_DEFAULT_LETTER_1 = 'X'

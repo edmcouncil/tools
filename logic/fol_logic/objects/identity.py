@@ -1,5 +1,4 @@
 from logic.fol_logic.objects.predicate import Predicate
-from logic.fol_logic.objects.symbol import Symbol
 
 
 class Identity(Predicate):
