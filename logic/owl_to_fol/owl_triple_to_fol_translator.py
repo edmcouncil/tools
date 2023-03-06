@@ -1,22 +1,17 @@
 from rdflib import Graph, OWL, RDF, RDFS
-from rdflib.term import Node, BNode
+from rdflib.term import Node
 
-from logic.owl_to_fol.objects.atomic_formula import AtomicFormula
+from logic.fol_logic.objects.atomic_formula import AtomicFormula
 from logic.owl_to_fol.objects.conjunction import Conjunction
 from logic.owl_to_fol.objects.default_variable import DefaultVariable, TPTP_DEFAULT_LETTER_1, TPTP_DEFAULT_LETTER_2, \
     TPTP_DEFAULT_LETTER_3
 from logic.owl_to_fol.objects.equivalence import Equivalence
-from logic.owl_to_fol.objects.formula import Formula
 from logic.owl_to_fol.objects.identity_formula import IdentityFormula
 from logic.owl_to_fol.objects.implication import Implication
 from logic.owl_to_fol.objects.negation import Negation
-from logic.owl_to_fol.objects.predicate import Predicate
 from logic.owl_to_fol.objects.quantifying_formula import QuantifyingFormula, Quantifier
-from logic.owl_to_fol.objects.symbol import Symbol
-from logic.owl_to_fol.objects.term import Term
 from logic.owl_to_fol.owl_helpers import uri_is_property
 from logic.owl_to_fol.owl_node_to_fol_translator import get_simple_subformula_from_node, get_fol_object_for_node
-from logic.owl_to_fol.owl_to_fol_preparer import populate_default_predicates
 
 
 def translate_rdf_triple_to_fol(rdf_triple: tuple, owl_ontology: Graph):

@@ -8,7 +8,6 @@ class Quantifier(Enum):
     EXISTENTIAL = 'some'
 
 class QuantifyingFormula(Formula):
-    
     def __init__(self, quantified_formula: Formula, variables: list, quantifier: Quantifier, is_self_standing=True):
         super().__init__(is_self_standing)
         self.quantified_formula = quantified_formula
@@ -37,5 +36,8 @@ class QuantifyingFormula(Formula):
             if variable in free_variables:
                 free_variables.remove(variable)
         return free_variables
+    
+    def __repr__(self):
+        return ' '.join([self.quantifier.value, ','.join([variable.__repr__() for variable in self.variables]), self.quantified_formula.__repr__()])
     
     

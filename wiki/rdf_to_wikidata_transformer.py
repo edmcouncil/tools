@@ -14,6 +14,7 @@ wiki_description_property = RDFS.isDefinedBy
 ignored_namespace = 'http://purl.org/dc/terms/'
 wiki_description_max_length = 250
 wiki_description_truncate_sign = '...'
+wiki_timeout = 1200
 
 
 def process_triple(triple: tuple):
@@ -445,10 +446,22 @@ if __name__ == "__main__":
     ignored_resources = set()
     
     logging.info(msg="Converting ontology's triples to wikidata")
+    start = time.time()
     for triple in tqdm(graph):
+        end = time.time()
+        if end - start > wiki_timeout:
+            wikibase.api.session.close()
+            wikibase = Wikibase(api_url='https://cidoc.wiki.kul.pl/w/api.php', login_credentials=login_credentials)
+            start = time.time()
         process_triple(triple)
 
     logging.info(msg="Converting ontology's OWL restrictions to wikidata")
+    start = time.time()
     owl_restrictions = set(graph.subjects(predicate=RDF.type, object=OWL.Restriction))
     for owl_restriction in tqdm(owl_restrictions):
+        end = time.time()
+        if end-start > wiki_timeout:
+            wikibase.api.session.close()
+            wikibase = Wikibase(api_url='https://cidoc.wiki.kul.pl/w/api.php', login_credentials=login_credentials)
+            start = time.time()
         process_owl_restriction(owl_restriction=owl_restriction)

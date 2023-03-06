@@ -1,5 +1,5 @@
-from logic.owl_to_fol.objects.symbol import Symbol
-from logic.owl_to_fol.objects.term import Term
+from logic.fol_logic.objects.symbol import Symbol
+from logic.fol_logic.objects.term import Term
 
 TPTP_DEFAULT_LETTER_1 = 'X'
 TPTP_DEFAULT_LETTER_2 = 'Y'
@@ -18,3 +18,4 @@ class DefaultVariable(Term):
     
     def __repr__(self):
         return self.letter
+    

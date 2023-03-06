@@ -4,10 +4,11 @@ import uuid
 class Formula():
     registry = set()
     
-    def __init__(self, is_self_standing=True):
+    def __init__(self, is_self_standing=True, is_fol=True):
         self.is_self_standing = is_self_standing
-        Formula.registry.add(self)
+        self.is_fol = is_fol
         self.free_variables = set()
+        Formula.registry.add(self)
     
     def to_tptp(self) -> str:
         tptp_axiom = self.get_tptp_axiom()

@@ -1,6 +1,6 @@
-from logic.owl_to_fol.objects.atomic_formula import AtomicFormula
-from logic.owl_to_fol.objects.identity import Identity
-from logic.owl_to_fol.objects.predicate import Predicate
+from logic.fol_logic.objects.atomic_formula import AtomicFormula
+from logic.fol_logic.objects.identity import Identity
+from logic.fol_logic.objects.predicate import Predicate
 
 
 class IdentityFormula(AtomicFormula):

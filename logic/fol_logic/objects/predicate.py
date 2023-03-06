@@ -1,12 +1,12 @@
 from rdflib import URIRef
 
-from logic.owl_to_fol.objects.symbol import Symbol
+from logic.fol_logic.objects.symbol import Symbol
 
 
 class Predicate(Symbol):
     registry = dict()
     
-    def __init__(self, origin, arity: int):
+    def __init__(self, arity: int, origin=str()):
         super().__init__(origin)
         self.arity = arity
         Predicate.registry[origin] = self
@@ -17,6 +17,4 @@ class Predicate(Symbol):
                 self.letter = str(self.origin).split(sep='/')[-1]
         else:
             self.letter = str(origin)
-        
-    def __repr__(self):
-        return str(self.letter)
+    

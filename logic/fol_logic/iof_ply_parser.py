@@ -9,7 +9,9 @@ from logic.fol_logic.objects.equivalence import Equivalence
 from logic.fol_logic.objects.formula import Formula
 from logic.fol_logic.objects.implication import Implication
 from logic.fol_logic.objects.negation import Negation
+from logic.fol_logic.objects.predicate import Predicate
 from logic.fol_logic.objects.quantifying_formula import QuantifyingFormula, Quantifier
+from logic.fol_logic.objects.term import Term
 
 tokens = ['COMMA', 'LPAREN','RPAREN','VARIABLE', 'PREDICATE', 'CONJUNCTION', 'NEGATION', 'DISJUNCTION', 'IMPLICATION', 'EQUIVALENCE', 'EXISTS', 'ALL']
 
@@ -117,36 +119,25 @@ def p_variable_seq(p):
             variable_seq += p[2]
         else:
             variable_seq.append(p[2])
-        p[0] = variable_seq
+        parsed_variables = list()
+        for variable in variable_seq:
+            parsed_variables.append(Term(origin=variable))
+            
+        p[0] = parsed_variables
 
     else:
-        p[0] = [p[1]]
+        p[0] = [Term(origin=p[1])]
 
 
 def p_atom(p):
     """
     atom : PREDICATE LPAREN variable_seq RPAREN
     """
-    p[0] = AtomicFormula(predicate=p[1], variables=p[3])
+    predicate = Predicate(origin=p[1],arity=len(p[3]))
+    parsed_arguments = p[3]
+    p[0] = AtomicFormula(predicate=predicate, arguments=parsed_arguments)
 
 
-# def p_quantification_seq(p):
-#     """
-#     quantification_seq  : ALL variable_seq
-#                         | EXISTS variable_seq
-#     quantification_seq : ALL variable_seq COMMA quantification_seq
-#     quantification_seq : EXISTS variable_seq COMMA quantification_seq
-#     """
-#     if len(p) == 3:
-#         quantification_seq = [p[1]]
-#         if isinstance(p[2], list):
-#             quantification_seq += p[2]
-#         else:
-#             quantification_seq.append(p[2])
-#         p[0] = quantification_seq
-#
-#     else:
-#         p[0] = [p[1]]
 
 def p_all_quantified_formula(p):
     """

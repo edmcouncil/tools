@@ -1,7 +1,7 @@
 from rdflib import Graph, OWL, RDF, RDFS
 from rdflib.term import Node, BNode, URIRef
 
-from logic.owl_to_fol.objects.atomic_formula import AtomicFormula
+from logic.fol_logic.objects.atomic_formula import AtomicFormula
 from logic.owl_to_fol.objects.conjunction import Conjunction
 from logic.owl_to_fol.objects.default_variable import DefaultVariable, TPTP_DEFAULT_LETTER_1, TPTP_DEFAULT_LETTER_2
 from logic.owl_to_fol.objects.disjunction import Disjunction

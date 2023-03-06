@@ -1,4 +1,4 @@
-from logic.owl_to_fol.objects.symbol import Symbol
+from logic.fol_logic.objects.symbol import Symbol
 
 
 class Term(Symbol):
@@ -9,4 +9,4 @@ class Term(Symbol):
         Term.registry[origin] = self
         
     def to_tptp(self):
-        return self.origin
+        return self.letter.upper()
