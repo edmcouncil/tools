@@ -2,13 +2,14 @@ import uuid
 
 
 class Formula():
-    registry = set()
+    registry = list()
     
     def __init__(self, is_self_standing=False, is_fol=True):
         self.is_self_standing = is_self_standing
         self.is_fol = is_fol
         self.free_variables = set()
-        Formula.registry.add(self)
+        if is_self_standing:
+            Formula.registry.append(self)
     
     def to_tptp(self) -> str:
         tptp_axiom = self.get_tptp_axiom()
@@ -33,5 +34,7 @@ class Formula():
     def get_tptp_axiom(self) -> str:
         pass
     
-    def bracketise(self, formula: str):
+    @staticmethod
+    def bracketise(formula: str):
         return '(' + formula + ')'
+    

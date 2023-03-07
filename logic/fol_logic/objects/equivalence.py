@@ -13,4 +13,4 @@ class Equivalence(PropositionalFormula):
         
     
     def __repr__(self):
-        return '(' + self.arguments[0].__repr__() + ' iff ' + self.arguments[1].__repr__() + ')'
+        return Equivalence.bracketise(self.arguments[0].__repr__() + ' iff ' + self.arguments[1].__repr__())

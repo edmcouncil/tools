@@ -6,7 +6,8 @@ from rdflib.term import Node, BNode, URIRef
 
 from logic.fol_logic.objects.atomic_formula import AtomicFormula
 from logic.fol_logic.objects.conjunction import Conjunction
-from logic.fol_logic.objects.default_variable import DefaultVariable, TPTP_DEFAULT_LETTER_1, TPTP_DEFAULT_LETTER_2
+from logic.fol_logic.objects.variable import Variable, TPTP_DEFAULT_LETTER_1, TPTP_DEFAULT_LETTER_2, \
+    TPTP_DEFAULT_LETTER_3
 from logic.fol_logic.objects.disjunction import Disjunction
 from logic.fol_logic.objects.formula import Formula
 from logic.fol_logic.objects.identity_formula import IdentityFormula
@@ -17,24 +18,68 @@ from logic.fol_logic.objects.quantifying_formula import QuantifyingFormula, Quan
 from logic.fol_logic.objects.symbol import Symbol
 from logic.fol_logic.objects.term import Term
 
-def get_simple_subformula_from_node(node: Node, owl_ontology: Graph, variable=DefaultVariable()) -> Formula:
+def get_simple_subformula_from_node(node: Node, owl_ontology: Graph, variable=Variable()) -> Formula:
     if isinstance(node, BNode):
         return get_subformula_from_bnode(bnode=node, owl_ontology=owl_ontology, variable=variable)
     if isinstance(node, URIRef):
        return get_subformula_from_uri(uri=node, owl_ontology=owl_ontology, variable=variable)
 
-def get_subformula_from_bnode(bnode: BNode, owl_ontology: Graph, variable=DefaultVariable()) -> Formula:
+
+def get_subformula_from_bnode(bnode: BNode, owl_ontology: Graph, variable=Variable()) -> Formula:
     if (bnode, RDF.type, OWL.Restriction) in owl_ontology:
         formula = generate_fol_from_owl_restriction(owl_restriction=bnode, owl_ontology=owl_ontology, variable=variable)
         return formula
     
     if len(list(owl_ontology.objects(subject=bnode, predicate=OWL.inverseOf))) > 0:
-        if bnode in Predicate.registry:
-            predicate = Predicate.registry[bnode]
+        inversed_properties = list(owl_ontology.objects(subject=bnode, predicate=OWL.inverseOf))
+        inversed_property_formula = get_simple_subformula_from_node(node=inversed_properties[0], owl_ontology=owl_ontology)
+        formula = inversed_property_formula.swap_arguments(inplace=False)
+        return formula
+    
+    if len(list(owl_ontology.subjects(object=bnode, predicate=OWL.propertyChainAxiom))) > 0:
+        chained_formulas = list()
+        variables = [Variable(letter=TPTP_DEFAULT_LETTER_1), Variable(letter=TPTP_DEFAULT_LETTER_2)]
+        formulas = get_listed_resources(rdf_list_object=bnode, ontology=owl_ontology, rdf_list=list())
+        first_formula = formulas[0]
+        if first_formula.arguments[0] == TPTP_DEFAULT_LETTER_1:
+            replacement_index = 1
         else:
-            predicate = Predicate(origin=bnode, arity=2)
-        return \
-            AtomicFormula(predicate=predicate, arguments=[DefaultVariable(letter=TPTP_DEFAULT_LETTER_2),DefaultVariable(letter=TPTP_DEFAULT_LETTER_1)])
+            replacement_index = 0
+        last_index = 1
+        initial_variable = Variable(letter=TPTP_DEFAULT_LETTER_3+str(last_index))
+        chained_formula = first_formula.replace_argument(argument=initial_variable,index=replacement_index)
+        chained_formulas.append(chained_formula)
+        variables.append(initial_variable)
+        
+        for index in range(1,len(formulas)-1):
+            formula = formulas[index]
+            first_variable = Variable(TPTP_DEFAULT_LETTER_3 + str(last_index))
+            second_variable = Variable(TPTP_DEFAULT_LETTER_3 + str(last_index + 1))
+            if formula.arguments[0].letter == TPTP_DEFAULT_LETTER_1:
+                first_replacement_index = 0
+                second_replacement_index = 1
+            else:
+                first_replacement_index = 1
+                second_replacement_index = 0
+            chained_formula = formula.replace_argument(argument=first_variable, index=first_replacement_index)
+            chained_formula = chained_formula.replace_argument(argument=second_variable,index=second_replacement_index)
+            chained_formulas.append(chained_formula)
+            variables.append(first_variable)
+            variables.append(second_variable)
+            last_index += 1
+
+        last_formula = formulas[-1]
+        if last_formula.arguments[0] == TPTP_DEFAULT_LETTER_1:
+            replacement_index = 0
+        else:
+            replacement_index = 1
+        final_variable = Variable(letter=TPTP_DEFAULT_LETTER_3 + str(last_index))
+        chained_formula = last_formula.replace_argument(argument=final_variable,index=replacement_index)
+        chained_formulas.append(chained_formula)
+        variables.append(final_variable)
+        
+        chain = QuantifyingFormula(quantified_formula=Conjunction(arguments=chained_formulas), quantifier=Quantifier.EXISTENTIAL,variables=variables)
+        return chain
 
     typed_list = try_to_cast_bnode_as_typed_list(bnode=bnode, owl_ontology=owl_ontology)
     
@@ -52,7 +97,7 @@ def get_subformula_from_bnode(bnode: BNode, owl_ontology: Graph, variable=Defaul
     
     logging.warning(msg='Something is wrong with the list: ' + str(typed_list))
 
-def get_subformula_from_uri(uri: URIRef, owl_ontology: Graph, variable=DefaultVariable()) -> Formula:
+def get_subformula_from_uri(uri: URIRef, owl_ontology: Graph, variable=Variable()) -> Formula:
     if (uri, RDF.type, OWL.Class) in owl_ontology:
         if uri in Predicate.registry:
             predicate = Predicate.registry[uri]
@@ -72,7 +117,7 @@ def get_subformula_from_uri(uri: URIRef, owl_ontology: Graph, variable=DefaultVa
         else:
             predicate = Predicate(origin=uri, arity=2)
         return \
-            AtomicFormula(predicate=predicate, arguments=[DefaultVariable(letter=TPTP_DEFAULT_LETTER_1),DefaultVariable(letter=TPTP_DEFAULT_LETTER_2)])
+            AtomicFormula(predicate=predicate, arguments=[Variable(letter=TPTP_DEFAULT_LETTER_1), Variable(letter=TPTP_DEFAULT_LETTER_2)])
     
     logging.warning(msg='Cannot get formula from ' + str(uri))
     
@@ -108,26 +153,26 @@ def generate_fol_from_owl_restriction(owl_restriction: Node, owl_ontology: Graph
     
     if len(owl_someValuesFrom) > 0:
         restricting_node = owl_someValuesFrom[0]
-        restricting_class_formula = get_simple_subformula_from_node(node=restricting_node, owl_ontology=owl_ontology, variable=DefaultVariable(letter=TPTP_DEFAULT_LETTER_2))
+        restricting_class_formula = get_simple_subformula_from_node(node=restricting_node, owl_ontology=owl_ontology, variable=Variable(letter=TPTP_DEFAULT_LETTER_2))
         restricting_relation_formula = get_simple_subformula_from_node(node=owl_property, owl_ontology=owl_ontology)
         if restricting_class_formula and restricting_relation_formula:
             formula = \
                 QuantifyingFormula(
                     quantified_formula=Conjunction(arguments=[restricting_relation_formula, restricting_class_formula]),
                     quantifier=Quantifier.EXISTENTIAL,
-                    variables=[DefaultVariable(letter=TPTP_DEFAULT_LETTER_2)])
+                    variables=[Variable(letter=TPTP_DEFAULT_LETTER_2)])
             return formula
     
     if len(owl_allValuesFrom) > 0:
         restricting_node = owl_allValuesFrom[0]
-        restricting_class_formula = get_simple_subformula_from_node(node=restricting_node, owl_ontology=owl_ontology, variable=DefaultVariable(letter=TPTP_DEFAULT_LETTER_2))
+        restricting_class_formula = get_simple_subformula_from_node(node=restricting_node, owl_ontology=owl_ontology, variable=Variable(letter=TPTP_DEFAULT_LETTER_2))
         restricting_relation_formula = get_simple_subformula_from_node(node=owl_property, owl_ontology=owl_ontology)
         if restricting_class_formula and restricting_relation_formula:
             formula = \
                 QuantifyingFormula(
                     quantified_formula=Implication(arguments=[restricting_relation_formula, restricting_class_formula]),
                     quantifier=Quantifier.UNIVERSAL,
-                    variables=[DefaultVariable(letter=TPTP_DEFAULT_LETTER_2)])
+                    variables=[Variable(letter=TPTP_DEFAULT_LETTER_2)])
             return formula
         
     if len(owl_onClass) > 0 or len(owl_onDataRange) > 0:
@@ -145,7 +190,7 @@ def generate_fol_from_owl_restriction(owl_restriction: Node, owl_ontology: Graph
                 variables = list()
                 index = 1
                 while index <= minCardinality + 1:
-                    variable = DefaultVariable(letter=TPTP_DEFAULT_LETTER_2 + str(index))
+                    variable = Variable(letter=TPTP_DEFAULT_LETTER_2 + str(index))
                     restricting_class_formula = get_simple_subformula_from_node(node=restricting_node, owl_ontology=owl_ontology, variable=variable)
                     
                     # restricting_relation_formula = get_subformula_from_node(node=owl_property,owl_ontology=owl_ontology,variable=DefaultVariable(letter=TPTP_DEFAULT_LETTER_1 + str(index)))
@@ -161,7 +206,7 @@ def generate_fol_from_owl_restriction(owl_restriction: Node, owl_ontology: Graph
                     QuantifyingFormula(
                         quantified_formula=Conjunction(arguments=[restricting_relation_formula, conjunction]),
                         quantifier=Quantifier.EXISTENTIAL,
-                        variables=[DefaultVariable(letter=TPTP_DEFAULT_LETTER_2)])
+                        variables=[Variable(letter=TPTP_DEFAULT_LETTER_2)])
                 return formula
             
     if len(owl_hasValue) > 0:
@@ -195,6 +240,10 @@ def try_to_cast_bnode_as_typed_list(bnode: BNode, owl_ontology: Graph) -> tuple:
     owl_complements = list(owl_ontology.objects(subject=bnode, predicate=OWL.complementOf))
     if len(owl_complements) > 0:
         return OWL.complementOf, owl_complements[0]
+    
+    # return \
+    #     OWL.propertyChainAxiom, list(owl_ontology.objects(subject=bnode, predicate=OWL.propertyChainAxiom))
+    # v=0
 
 
 def get_listed_resources(rdf_list_object: Resource, ontology: Graph, rdf_list: list) -> list:

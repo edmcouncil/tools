@@ -1,11 +1,20 @@
+from rdflib import URIRef
+
+
 class Symbol:
     def __init__(self, origin):
         self.origin = origin
-        self.letter = origin
+        if isinstance(origin, URIRef):
+            if '#' in str(self.origin):
+                self.letter = origin.fragment
+            else:
+                self.letter = str(self.origin).split(sep='/')[-1]
+        else:
+            self.letter = str(origin)
         
     def to_tptp(self):
         pass
-    
+        
     def __repr__(self):
         return self.letter
     

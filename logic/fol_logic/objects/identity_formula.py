@@ -9,7 +9,7 @@ class IdentityFormula(AtomicFormula):
         self.free_variables = set(self.arguments)
         
     def get_tptp_axiom(self) -> str:
-        tptp_axiom = '(' + ')'
+        tptp_axiom = self.bracketise(formula=''.join([self.arguments[0].to_tptp(), self.predicate.to_tptp(), self.arguments[1].to_tptp()]))
         return tptp_axiom
     
     def __repr__(self):

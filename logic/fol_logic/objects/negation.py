@@ -12,4 +12,4 @@ class Negation(PropositionalFormula):
         return tptp_axiom
     
     def __repr__(self):
-        return 'not' + '(' + self.arguments[0].__repr__() + ')'
+        return 'not' + Negation.bracketise(self.arguments[0].__repr__())
