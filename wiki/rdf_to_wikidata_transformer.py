@@ -1,3 +1,4 @@
+import json
 import logging
 import os
 import sys
@@ -82,6 +83,7 @@ def process_triple(triple: tuple):
         return
     
     if isinstance(object, Literal):
+        is_object_literal = True
         wiki_value = str(object.value)
         wiki_value = wiki_value.replace('\n', '')
         wiki_value = wiki_value.replace('\r', '')
@@ -91,22 +93,17 @@ def process_triple(triple: tuple):
             logging.info(msg='I will ignore a triple because its object is a literal of 0 length.')
             ignored_resources.add(object)
             return
-        is_object_literal = True
     else:
         is_object_literal = False
-        
         object_wiki = get_or_create_wiki_from_resource(resource=object)
         if object_wiki is None:
-            # logging.warning(msg='I will ignore a triple because its object cannot be found in wiki: ' + str(object))
-            ignored_resources.add(object)
-            return
-        if object_wiki == object:
+            wiki_value = str(object)
+        elif object_wiki == object:
             wiki_value = str(object)
             is_object_literal = True
         else:
-            wiki_value = \
-                get_wiki_value(object_wiki=object_wiki)
-    
+            wiki_value = get_wiki_value(object_wiki=object_wiki)
+
     if not is_object_literal:
         if predicate not in item_wiki_properties:
             wiki_value = str(object)
@@ -116,14 +113,23 @@ def process_triple(triple: tuple):
             entity_id=subject_wiki,
             property_id=predicate_wiki,
             value=wiki_value)
+        
     except Exception as exception:
-        logging.warning(msg='I could not process triple: ' + ' '.join(triple) + ' because ' + str(exception))
-        return
-    
-    if not response['success']:
-        logging.warning(msg='I could not process triple: ' + ' '.join(triple) + ' because ' + str(response))
+        logging.warning(msg='ERR: process_triple:wikibase.claim.add(' + '|'.join(triple) + ')(' + str(subject_wiki) + '|' + str(predicate_wiki) + '|' + str(wiki_value) + '): ' + str(exception))
         return
 
+    if not response['success']:
+        logging.warning(msg='WARN: wikibase.claim.add(' + '|'.join(triple) + '): ' + str(response))
+        return
+
+    if is_object_literal:
+        if object.language:
+            claim_id = response['claim']['id']
+            try:
+                wikibase.qualifier.add(claim_id=claim_id,property_id=language_property_wiki,value=object.language)
+            except Exception as exception:
+                logging.warning(msg='ERR: wikibase.qualifier.add(' + str(exception))
+                return
 
 def get_wiki_value(object_wiki: object) -> str:
     if str(object_wiki).startswith('Q'):
@@ -147,7 +153,7 @@ def create_wiki_for_resource(resource: Identifier) -> object:
             try:
                 response = wikibase.entity.add(entity_type=entity_type, content=annotations)
             except Exception as exception:
-                logging.warning(msg='I could not process: ' + str(resource) + ' because ' + str(exception))
+                logging.warning(msg='ERR: wikibase.entity.add(' + str(resource) + '): ' + str(exception))
                 return None
         elif resource in rdf_resources_as_wiki_properties:
             entity_type = 'property'
@@ -159,14 +165,14 @@ def create_wiki_for_resource(resource: Identifier) -> object:
             try:
                 response = wikibase.entity.add(entity_type=entity_type, content=annotations)
             except Exception as exception:
-                logging.warning(msg='I could not process: ' + str(resource) + ' because ' + str(exception) + ' I will ignore it (and all triples where it occurs).')
+                logging.warning(msg='ERR: wikibase.entity.add(' + str(resource) + '): ' + str(exception) + ' I will ignore it (and all triples where it occurs).')
                 return None
         else:
-            logging.warning(msg='I was not able to classify: ' + str(resource) + '. I will ignore it (all triples where it occurs).')
+            logging.info(msg='I was not able to classify: ' + str(resource) + '.')
             return None
         
         if not response['success']:
-            logging.warning(msg='I could not process: ' + str(resource) + ' because ' + str(response))
+            logging.warning(msg='WARN: wikibase.entity.add(' + str(resource) + '): ' + str(response))
             return None
         
         wiki_id = response['entity']['id']
@@ -182,7 +188,7 @@ def create_wiki_for_resource(resource: Identifier) -> object:
                 value=resource)
         except Exception as exception:
             logging.warning(
-                msg='I could not link resource: ' + ' '.join(triple) + ' to the external source because ' + str(
+                msg='ERR: wikibase.claim.add(' + '|'.join(triple) + '), external source="' + str(external_origin_property_wiki) + '": ' + str(
                     exception))
             return
         
@@ -277,6 +283,10 @@ def get_or_create_wiki_from_resource(resource: Identifier) -> object:
 
 def get_wiki_datatype(property: URIRef) -> str:
     property_ranges = set(graph.objects(subject=property, predicate=RDFS.range))
+    if len(property_ranges) == 0:
+        super_properties = graph.transitive_objects(subject=property, predicate=RDFS.subPropertyOf)
+        for super_property in super_properties:
+            property_ranges = property_ranges.union(set(graph.objects(subject=super_property, predicate=RDFS.range)))
     if OWL.Class in property_ranges:
         return 'wikibase-item'
     if OWL.ObjectProperty in property_ranges:
@@ -300,6 +310,10 @@ def get_wiki_datatype(property: URIRef) -> str:
         property_range_types = set(graph.objects(subject=property_range, predicate=RDF.type))
         if OWL.Class in property_range_types or RDFS.Class in property_range_types:
             return 'wikibase-item'
+        # for property_range_type in property_range_types:
+        #     property_range_supertypes = set(graph.transitive_objects(subject=property_range_type, predicate=RDFS.subClassOf))
+        #     if OWL.Class in property_range_supertypes or RDFS.Class in property_range_supertypes:
+        #         return 'wikibase-item'
             
     if property in annotation_properties:
         return 'string'
@@ -357,7 +371,7 @@ def process_owl_restriction(owl_restriction: Node):
                     value=wiki_value,
                     snak_type='value')
             except Exception as exception:
-                logging.warning(msg='I could not process an OWL restriction because ' + str(exception))
+                logging.warning(msg='ERR: process_owl_restriction:wikibase.claim.add(' + str(wiki_value) + '): ' + str(exception))
                 continue
             else:
                 logging.info(msg='OWL restriction was successfully transferred to wiki.')
@@ -370,12 +384,16 @@ def process_owl_restriction(owl_restriction: Node):
 
 
 if __name__ == "__main__":
-    log_file_name = 'log_' + time.strftime("%Y-%m-%d %H:%M:%S") + '.txt'
+    # log_file_name = 'log_' + time.strftime("%Y-%m-%d %H:%M:%S") + '.txt'
     # logging.basicConfig(format='%(levelname)s %(asctime)s %(message)s', level=logging.INFO, datefmt='%m/%d/%Y %I:%M:%S %p', filename=log_file_name)
-    logging.basicConfig(format='%(levelname)s %(asctime)s %(message)s', level=logging.WARN,datefmt='%m/%d/%Y %I:%M:%S %p')
+    logging.basicConfig(format='%(levelname)s %(asctime)s %(message)s', level=logging.INFO,datefmt='%Y%m%d_%H:%M:%S')
 
+    logging.warning(msg='DBG: auth')
+    #oauth_credentials = {'consumer_key': os.environ.get('consumerKey'), 'consumer_secret': os.environ.get('consumerSecret')}
+    #wikibase = Wikibase(api_url='https://cidoc.wiki.kul.pl/w/api.php', oauth_credentials=oauth_credentials)
     login_credentials = {'bot_username': os.environ.get('WIKI_LOGIN'), 'bot_password': os.environ.get('WIKI_PASSWORD')}
     wikibase = Wikibase(api_url='https://cidoc.wiki.kul.pl/w/api.php', login_credentials=login_credentials)
+
     
     external_origin_property_content = \
         {
@@ -388,6 +406,15 @@ if __name__ == "__main__":
         }
     response = wikibase.entity.add(entity_type='property', content=external_origin_property_content)
     external_origin_property_wiki = response['entity']['id']
+
+    language_property_content = \
+        {
+            "labels":
+                {"en": {"language": "en", "value": "language"}},
+            "datatype": "string"
+        }
+    response = wikibase.entity.add(entity_type='property', content=language_property_content)
+    language_property_wiki = response['entity']['id']
     
     logging.info(msg='Uploading ontology')
     graph = Graph()
@@ -451,6 +478,9 @@ if __name__ == "__main__":
         end = time.time()
         if end - start > wiki_timeout:
             wikibase.api.session.close()
+            del wikibase
+            logging.warning(msg='DBG: auth')
+            #wikibase = Wikibase(api_url='https://cidoc.wiki.kul.pl/w/api.php', oauth_credentials=oauth_credentials)
             wikibase = Wikibase(api_url='https://cidoc.wiki.kul.pl/w/api.php', login_credentials=login_credentials)
             start = time.time()
         process_triple(triple)
@@ -462,6 +492,9 @@ if __name__ == "__main__":
         end = time.time()
         if end-start > wiki_timeout:
             wikibase.api.session.close()
+            del wikibase
+            logging.warning(msg='DBG: auth')
+            #wikibase = Wikibase(api_url='https://cidoc.wiki.kul.pl/w/api.php', oauth_credentials=oauth_credentials)
             wikibase = Wikibase(api_url='https://cidoc.wiki.kul.pl/w/api.php', login_credentials=login_credentials)
             start = time.time()
         process_owl_restriction(owl_restriction=owl_restriction)

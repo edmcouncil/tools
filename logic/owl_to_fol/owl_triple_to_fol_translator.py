@@ -163,6 +163,41 @@ def translate_rdf_triple_about_class_to_fol(rdf_triple: tuple, owl_ontology: Gra
  
     
 def translate_rdf_triple_about_property_to_fol(rdf_triple: tuple, owl_ontology: Graph):
+    if rdf_triple[1] == RDF.type:
+        if rdf_triple[2] == OWL.TransitiveProperty:
+            property_formula_1 = get_simple_subformula_from_node(node=rdf_triple[0], owl_ontology=owl_ontology)
+            property_formula_2 = property_formula_1.replace_arguments(arguments=[Variable(letter=TPTP_DEFAULT_LETTER_2), Variable(letter=TPTP_DEFAULT_LETTER_3)])
+            property_formula_3 = property_formula_1.replace_arguments(arguments=[Variable(letter=TPTP_DEFAULT_LETTER_1), Variable(letter=TPTP_DEFAULT_LETTER_3)])
+            quantifying_variables = [Variable(letter=TPTP_DEFAULT_LETTER_1), Variable(letter=TPTP_DEFAULT_LETTER_2), Variable(letter=TPTP_DEFAULT_LETTER_3)]
+            QuantifyingFormula(
+                quantified_formula=Implication(arguments=[Conjunction(arguments=[property_formula_1, property_formula_2]), property_formula_3]),
+                variables=quantifying_variables,
+                quantifier=Quantifier.UNIVERSAL,
+                is_self_standing=True)
+            return
+        if rdf_triple[2] == OWL.FunctionalProperty:
+            property_formula_1 = get_simple_subformula_from_node(node=rdf_triple[0], owl_ontology=owl_ontology)
+            property_formula_2 = property_formula_1.replace_arguments(arguments=[Variable(letter=TPTP_DEFAULT_LETTER_1), Variable(letter=TPTP_DEFAULT_LETTER_3)])
+            identity_formula = IdentityFormula(arguments=[Variable(letter=TPTP_DEFAULT_LETTER_2), Variable(letter=TPTP_DEFAULT_LETTER_3)])
+            quantifying_variables = [Variable(letter=TPTP_DEFAULT_LETTER_1), Variable(letter=TPTP_DEFAULT_LETTER_2), Variable(letter=TPTP_DEFAULT_LETTER_3)]
+            QuantifyingFormula(
+                quantified_formula=Implication(arguments=[Conjunction(arguments=[property_formula_1, property_formula_2]), identity_formula]),
+                variables=quantifying_variables,
+                quantifier=Quantifier.UNIVERSAL,
+                is_self_standing=True)
+            return
+        if rdf_triple[2] == OWL.InverseFunctionalProperty:
+            property_formula_1 = get_simple_subformula_from_node(node=rdf_triple[0], owl_ontology=owl_ontology)
+            property_formula_2 = property_formula_1.replace_arguments(arguments=[Variable(letter=TPTP_DEFAULT_LETTER_3), Variable(letter=TPTP_DEFAULT_LETTER_2)])
+            identity_formula = IdentityFormula(arguments=[Variable(letter=TPTP_DEFAULT_LETTER_1), Variable(letter=TPTP_DEFAULT_LETTER_3)])
+            quantifying_variables = [Variable(letter=TPTP_DEFAULT_LETTER_1), Variable(letter=TPTP_DEFAULT_LETTER_2), Variable(letter=TPTP_DEFAULT_LETTER_3)]
+            QuantifyingFormula(
+                quantified_formula=Implication(arguments=[Conjunction(arguments=[property_formula_1, property_formula_2]), identity_formula]),
+                variables=quantifying_variables,
+                quantifier=Quantifier.UNIVERSAL,
+                is_self_standing=True)
+            return
+    
     antecedent = get_simple_subformula_from_node(node=rdf_triple[0], owl_ontology=owl_ontology)
     subsequent = get_simple_subformula_from_node(node=rdf_triple[2], owl_ontology=owl_ontology)
     if not antecedent:
@@ -235,39 +270,6 @@ def translate_rdf_triple_about_property_to_fol(rdf_triple: tuple, owl_ontology: 
             logging.warning(msg='Cannot process inverse property statement: ' + str(rdf_triple))
         return
     
-    if rdf_triple[1] == RDF.type:
-        if rdf_triple[2] == OWL.TransitiveProperty:
-            property_formula_1 = get_simple_subformula_from_node(node=rdf_triple[0], owl_ontology=owl_ontology)
-            property_formula_2 = property_formula_1.replace_arguments(arguments=[Variable(letter=TPTP_DEFAULT_LETTER_2), Variable(letter=TPTP_DEFAULT_LETTER_3)])
-            property_formula_3 = property_formula_1.replace_arguments(arguments=[Variable(letter=TPTP_DEFAULT_LETTER_1), Variable(letter=TPTP_DEFAULT_LETTER_3)])
-            quantifying_variables = [Variable(letter=TPTP_DEFAULT_LETTER_1), Variable(letter=TPTP_DEFAULT_LETTER_2), Variable(letter=TPTP_DEFAULT_LETTER_3)]
-            QuantifyingFormula(
-                quantified_formula=Implication(arguments=[Conjunction(arguments=[property_formula_1, property_formula_2]), property_formula_3]),
-                variables=quantifying_variables,
-                quantifier=Quantifier.UNIVERSAL,
-                is_self_standing=True)
-            return
-        if rdf_triple[2] == OWL.FunctionalProperty:
-            property_formula_1 = get_simple_subformula_from_node(node=rdf_triple[0], owl_ontology=owl_ontology)
-            property_formula_2 = property_formula_1.replace_arguments(arguments=[Variable(letter=TPTP_DEFAULT_LETTER_1), Variable(letter=TPTP_DEFAULT_LETTER_3)])
-            identity_formula = IdentityFormula(arguments=[Variable(letter=TPTP_DEFAULT_LETTER_2), Variable(letter=TPTP_DEFAULT_LETTER_3)])
-            quantifying_variables = [Variable(letter=TPTP_DEFAULT_LETTER_1), Variable(letter=TPTP_DEFAULT_LETTER_2), Variable(letter=TPTP_DEFAULT_LETTER_3)]
-            QuantifyingFormula(
-                quantified_formula=Implication(arguments=[Conjunction(arguments=[property_formula_1, property_formula_2]), identity_formula]),
-                variables=quantifying_variables,
-                quantifier=Quantifier.UNIVERSAL,
-                is_self_standing=True)
-            return
-        if rdf_triple[2] == OWL.InverseFunctionalProperty:
-            property_formula_1 = get_simple_subformula_from_node(node=rdf_triple[0], owl_ontology=owl_ontology)
-            property_formula_2 = property_formula_1.replace_arguments(arguments=[Variable(letter=TPTP_DEFAULT_LETTER_3), Variable(letter=TPTP_DEFAULT_LETTER_2)])
-            identity_formula = IdentityFormula(arguments=[Variable(letter=TPTP_DEFAULT_LETTER_1), Variable(letter=TPTP_DEFAULT_LETTER_3)])
-            quantifying_variables = [Variable(letter=TPTP_DEFAULT_LETTER_1), Variable(letter=TPTP_DEFAULT_LETTER_2), Variable(letter=TPTP_DEFAULT_LETTER_3)]
-            QuantifyingFormula(
-                quantified_formula=Implication(arguments=[Conjunction(arguments=[property_formula_1, property_formula_2]), identity_formula]),
-                variables=quantifying_variables,
-                quantifier=Quantifier.UNIVERSAL,
-                is_self_standing=True)
-            return
+    
 
     logging.warning(msg='Cannot process property statement: ' + str(rdf_triple))
