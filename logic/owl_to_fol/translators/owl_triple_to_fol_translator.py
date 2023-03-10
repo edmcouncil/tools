@@ -12,8 +12,8 @@ from logic.fol_logic.objects.identity_formula import IdentityFormula
 from logic.fol_logic.objects.implication import Implication
 from logic.fol_logic.objects.negation import Negation
 from logic.fol_logic.objects.quantifying_formula import QuantifyingFormula, Quantifier
-from logic.owl_to_fol.owl_node_to_fol_translator import get_simple_subformula_from_node, get_fol_symbol_for_owl_node, \
-    uri_is_property
+from logic.owl_to_fol.translators.owl_node_to_fol_translator import get_simple_subformula_from_node
+from logic.owl_to_fol.translators.translator_helpers import get_fol_symbol_for_owl_node, uri_is_property
 
 
 def translate_rdf_triple_to_fol(rdf_triple: tuple, owl_ontology: Graph):

@@ -13,7 +13,7 @@ class AtomicFormula(Formula):
         self.arguments = arguments
         self.free_variables = set(self.arguments)
         
-    def swap_arguments(self, inplace=True):
+    def swap_arguments(self, inplace=False):
         if inplace:
             self.arguments.reverse()
         else:

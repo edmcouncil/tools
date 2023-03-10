@@ -3,7 +3,7 @@ import logging
 from rdflib import Graph
 
 from logic.owl_to_fol.owl_to_fol_preparer import populate_default_predicates
-from logic.owl_to_fol.owl_triple_to_fol_translator import translate_rdf_triple_to_fol
+from logic.owl_to_fol.translators.owl_triple_to_fol_translator import translate_rdf_triple_to_fol
 
 
 def translate_owl_ontology_to_fol_theory(owl_ontology:Graph):
