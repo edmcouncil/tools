@@ -9,4 +9,8 @@ class Term(Symbol):
         Term.registry[origin] = self
         
     def to_tptp(self):
-        return self.letter.lower().replace('-', '_')
+        tptp_term = self.letter.lower()
+        tptp_term = tptp_term.replace('-', '_')
+        tptp_term = tptp_term.replace('.', '_')
+        tptp_term = tptp_term.replace('/', '_')
+        return tptp_term

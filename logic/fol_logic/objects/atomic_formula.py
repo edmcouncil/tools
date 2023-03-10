@@ -7,11 +7,14 @@ from logic.fol_logic.objects.term import Term
 
 class AtomicFormula(Formula):
     
-    def __init__(self, predicate: Predicate, arguments: list, is_self_standing=False):
+    def __init__(self, predicate: Predicate, arguments: list, is_self_standing=False, are_arguments_variables=False):
         super().__init__(is_self_standing)
         self.predicate = predicate
         self.arguments = arguments
-        self.free_variables = set(self.arguments)
+        if are_arguments_variables:
+            self.free_variables = set(self.arguments)
+        else:
+            self.free_variables = set()
         
     def swap_arguments(self, inplace=False):
         if inplace:

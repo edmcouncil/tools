@@ -8,7 +8,13 @@ class Symbol:
             if '#' in str(self.origin):
                 self.letter = origin.fragment
             else:
-                self.letter = str(self.origin).split(sep='/')[-1]
+                # self.letter = str(self.origin).split(sep='/')[-1]
+                origin_fragments = str(self.origin).split(sep='/')
+                origin_fragments.reverse()
+                for origin_fragment in origin_fragments:
+                    if len(origin_fragment) > 0:
+                        self.letter = origin_fragment
+                        return
         else:
             self.letter = str(origin)
         
