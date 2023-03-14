@@ -87,9 +87,9 @@ def get_subformula_from_bnode(bnode: BNode, owl_ontology: Graph, variable=Variab
     
     if typed_list:
         if typed_list[0] == OWL.complementOf:
-            formulas = [get_simple_subformula_from_node(node=typed_list[1],owl_ontology=owl_ontology)]
+            formulas = [get_simple_subformula_from_node(node=typed_list[1],owl_ontology=owl_ontology, variable=variable)]
         else:
-            formulas = get_listed_resources(rdf_list_object=typed_list[1],ontology=owl_ontology,rdf_list=list())
+            formulas = get_listed_resources(rdf_list_object=typed_list[1],ontology=owl_ontology,rdf_list=list(),variable=variable)
         if typed_list[0] == OWL.unionOf:
             return Disjunction(arguments=formulas)
         if typed_list[0] == OWL.intersectionOf:
@@ -216,14 +216,14 @@ def generate_fol_from_owl_restriction(owl_restriction: Node, owl_ontology: Graph
     logging.warning(msg='Cannot get formula from a restriction')
 
 
-def get_listed_resources(rdf_list_object: Resource, ontology: Graph, rdf_list: list) -> list:
+def get_listed_resources(rdf_list_object: Resource, ontology: Graph, rdf_list: list, variable=Variable(letter=TPTP_DEFAULT_LETTER_1)) -> list:
     first_items_in_rdf_list = list(ontology.objects(subject=rdf_list_object, predicate=RDF.first))
     if len(first_items_in_rdf_list) == 0:
         return rdf_list
-    resource = get_simple_subformula_from_node(node=first_items_in_rdf_list[0], owl_ontology=ontology)
+    resource = get_simple_subformula_from_node(node=first_items_in_rdf_list[0], owl_ontology=ontology, variable=variable)
     rdf_list.append(resource)
     rest_items_in_rdf_list = list(ontology.objects(subject=rdf_list_object, predicate=RDF.rest))
-    rdf_list = get_listed_resources(rdf_list_object=rest_items_in_rdf_list[0], ontology=ontology, rdf_list=rdf_list)
+    rdf_list = get_listed_resources(rdf_list_object=rest_items_in_rdf_list[0], ontology=ontology, rdf_list=rdf_list, variable=variable)
     return rdf_list
 
 
@@ -246,8 +246,7 @@ def __generate_fol_from_owl_min_qualified_restriction(owl_property: Node, restri
                         variable=variable)
                 if not conjunction:
                     conjunction = Conjunction(
-                        arguments=[restricting_relation_formula.replace_argument(argument=variable, index=1),
-                                   restricting_class_formula])
+                        arguments=[restricting_relation_formula.replace_argument(argument=variable, index=1),restricting_class_formula])
                 else:
                     conjunction = Conjunction(arguments=[conjunction, restricting_class_formula])
                     for backward_index in range(1, index):
@@ -311,7 +310,7 @@ def __generate_fol_from_owl_max_qualified_restriction(owl_property: Node, restri
                 if not conjunction:
                     conjunction = Conjunction(arguments=[restricting_relation_formula.replace_argument(argument=variable, index=1),restricting_class_formula])
                 else:
-                    conjunction = Conjunction(arguments=[conjunction, restricting_class_formula])
+                    conjunction = Conjunction(arguments=[conjunction, restricting_relation_formula.replace_argument(argument=variable, index=1), restricting_class_formula])
                     for backward_index in range(1, index):
                         if not disjunction:
                             disjunction = IdentityFormula(arguments=[variables[-1], variable])

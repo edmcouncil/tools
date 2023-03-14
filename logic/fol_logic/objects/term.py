@@ -13,4 +13,14 @@ class Term(Symbol):
         tptp_term = tptp_term.replace('-', '_')
         tptp_term = tptp_term.replace('.', '_')
         tptp_term = tptp_term.replace('/', '_')
+        tptp_term = tptp_term.replace(':', '_')
+        tptp_term = tptp_term.replace('?', '_')
+        tptp_term = tptp_term.replace('=', '_')
+        tptp_term = tptp_term.replace('%', '_')
+        tptp_term = tptp_term.replace('&', '_')
+        tptp_term = tptp_term.replace('|', '_')
+        tptp_term = tptp_term.replace("'", '_')
+        tptp_term = tptp_term.replace('"', '_')
+        if tptp_term[0].isdigit():
+            tptp_term = 'node_' + tptp_term
         return tptp_term

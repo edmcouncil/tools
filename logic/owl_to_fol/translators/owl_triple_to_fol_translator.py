@@ -5,6 +5,7 @@ from rdflib.term import Node, Literal
 
 from logic.fol_logic.objects.atomic_formula import AtomicFormula
 from logic.fol_logic.objects.conjunction import Conjunction
+from logic.fol_logic.objects.predicate import Predicate
 from logic.fol_logic.objects.variable import Variable, TPTP_DEFAULT_LETTER_1, TPTP_DEFAULT_LETTER_2, \
     TPTP_DEFAULT_LETTER_3
 from logic.fol_logic.objects.equivalence import Equivalence
@@ -250,6 +251,7 @@ def translate_rdf_triple_about_property_to_fol(rdf_triple: tuple, owl_ontology: 
         return
     
     if rdf_triple[1] == RDFS.range:
+        subsequent = get_simple_subformula_from_node(node=rdf_triple[2], owl_ontology=owl_ontology, variable=Variable(letter=TPTP_DEFAULT_LETTER_2))
         QuantifyingFormula(
             quantified_formula=Implication(arguments=[antecedent, subsequent]),
             variables=[Variable(letter=TPTP_DEFAULT_LETTER_1), Variable(letter=TPTP_DEFAULT_LETTER_2)],
@@ -260,7 +262,7 @@ def translate_rdf_triple_about_property_to_fol(rdf_triple: tuple, owl_ontology: 
     if rdf_triple[1] == OWL.inverseOf:
         subsequent = get_simple_subformula_from_node(node=rdf_triple[2], owl_ontology=owl_ontology, variable=Variable(letter=TPTP_DEFAULT_LETTER_2))
         if not antecedent is None and not subsequent is None:
-            subsequent.swap_arguments()
+            subsequent.swap_arguments(inplace=True)
             QuantifyingFormula(
                 quantified_formula=Equivalence(arguments=[antecedent, subsequent]),
                 variables=[Variable(letter=TPTP_DEFAULT_LETTER_1), Variable(letter=TPTP_DEFAULT_LETTER_2)],

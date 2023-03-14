@@ -42,6 +42,18 @@ def get_fol_symbol_for_owl_node(node: Node, owl_ontology: Graph, arity=1) -> Sym
             return Term.registry[node]
         else:
             return Term(origin=node)
+        
+    if (node, RDF.type, OWL.Class) in owl_ontology:
+        if node in Predicate.registry:
+            return Predicate.registry[node]
+        else:
+            return Predicate(origin=node, arity=arity)
+    
+    if len(set(owl_ontology.objects(subject=node, predicate=RDF.type))) == 0:
+        if node in Term.registry:
+            return Term.registry[node]
+        else:
+            return Term(origin=node)
     
     if node in Predicate.registry:
         return Predicate.registry[node]
