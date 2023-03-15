@@ -1,11 +1,9 @@
 import logging
 
 from rdflib import Graph, OWL, RDF, RDFS
-from rdflib.term import Node, Literal
 
 from logic.fol_logic.objects.atomic_formula import AtomicFormula
 from logic.fol_logic.objects.conjunction import Conjunction
-from logic.fol_logic.objects.predicate import Predicate
 from logic.fol_logic.objects.variable import Variable, TPTP_DEFAULT_LETTER_1, TPTP_DEFAULT_LETTER_2, \
     TPTP_DEFAULT_LETTER_3
 from logic.fol_logic.objects.equivalence import Equivalence
@@ -13,8 +11,9 @@ from logic.fol_logic.objects.identity_formula import IdentityFormula
 from logic.fol_logic.objects.implication import Implication
 from logic.fol_logic.objects.negation import Negation
 from logic.fol_logic.objects.quantifying_formula import QuantifyingFormula, Quantifier
+from logic.owl_to_fol.filterers.translation_filterer import node_is_out_of_scope, triple_is_of_of_scope
 from logic.owl_to_fol.translators.owl_node_to_fol_translator import get_simple_subformula_from_node
-from logic.owl_to_fol.translators.translator_helpers import get_fol_symbol_for_owl_node, uri_is_property
+from logic.owl_to_fol.translators.translator_helpers import get_fol_symbol_for_owl_node, __can_uri_be_cast_to_binary_predicate
 
 
 def translate_rdf_triple_to_fol(rdf_triple: tuple, owl_ontology: Graph):
@@ -52,43 +51,9 @@ def translate_rdf_triple_to_fol(rdf_triple: tuple, owl_ontology: Graph):
         translate_rdf_triple_about_class_to_fol(rdf_triple=rdf_triple, owl_ontology=owl_ontology)
         return
         
-    if uri_is_property(uri=rdf_triple_subject, owl_ontology=owl_ontology):
+    if __can_uri_be_cast_to_binary_predicate(uri=rdf_triple_subject, owl_ontology=owl_ontology):
         translate_rdf_triple_about_property_to_fol(rdf_triple=rdf_triple, owl_ontology=owl_ontology)
         return
-
-
-def node_is_out_of_scope(node: Node, owl_ontology: Graph) -> bool:
-    if (node, RDF.type, OWL.Ontology) in owl_ontology:
-        return True
-    if (node, RDF.type, OWL.AnnotationProperty) in owl_ontology:
-        return True
-    if isinstance(node, Literal):
-        return True
-    return False
-
-
-def triple_is_of_of_scope(rdf_triple: tuple) -> bool:
-    if rdf_triple[0] in RDF:
-        return True
-    if rdf_triple[0] in RDFS:
-        return True
-    if rdf_triple[0] in OWL:
-        return True
-    
-    if rdf_triple[1] == RDF.type and rdf_triple[2] == OWL.Class:
-        return True
-    if rdf_triple[1] == RDF.type and rdf_triple[2] == OWL.Restriction:
-        return True
-    if rdf_triple[1] == RDF.type and rdf_triple[2] == OWL.ObjectProperty:
-        return True
-    if rdf_triple[1] == RDF.type and rdf_triple[2] == OWL.DatatypeProperty:
-        return True
-    if rdf_triple[1] == RDF.type and rdf_triple[2] == RDF.Property:
-        return True
-    if rdf_triple[1] == OWL.imports:
-        return True
-    
-    return False
 
 
 def translate_rdf_triple_about_individual_subject_to_fol(rdf_triple: tuple, owl_ontology: Graph):
@@ -198,6 +163,16 @@ def translate_rdf_triple_about_property_to_fol(rdf_triple: tuple, owl_ontology: 
                 quantifier=Quantifier.UNIVERSAL,
                 is_self_standing=True)
             return
+        if rdf_triple[2] == OWL.SymmetricProperty:
+            property_formula_1 = get_simple_subformula_from_node(node=rdf_triple[0], owl_ontology=owl_ontology)
+            property_formula_2 = property_formula_1.replace_arguments(arguments=[Variable(letter=TPTP_DEFAULT_LETTER_2), Variable(letter=TPTP_DEFAULT_LETTER_1)])
+            quantifying_variables = [Variable(letter=TPTP_DEFAULT_LETTER_1), Variable(letter=TPTP_DEFAULT_LETTER_2)]
+            QuantifyingFormula(
+                quantified_formula=Implication(arguments=[property_formula_1, property_formula_2]),
+                variables=quantifying_variables,
+                quantifier=Quantifier.UNIVERSAL,
+                is_self_standing=True)
+            return
     
     antecedent = get_simple_subformula_from_node(node=rdf_triple[0], owl_ontology=owl_ontology)
     subsequent = get_simple_subformula_from_node(node=rdf_triple[2], owl_ontology=owl_ontology)
@@ -272,6 +247,4 @@ def translate_rdf_triple_about_property_to_fol(rdf_triple: tuple, owl_ontology: 
             logging.warning(msg='Cannot process inverse property statement: ' + str(rdf_triple))
         return
     
-    
-
     logging.warning(msg='Cannot process property statement: ' + str(rdf_triple))

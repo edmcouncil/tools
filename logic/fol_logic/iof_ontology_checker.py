@@ -21,11 +21,9 @@ def check_axioms_in_annotations(axiom_annotatation_properties: set, ontology: Gr
             resource = str(logical_annotation[0])
             if not preprocessed_axiom.count('(') == preprocessed_axiom.count(')'):
                 logging.warning(msg='|'.join(['unbalanced brackets', resource, one_line_axiom]))
-                # print('Axiom', axiom, 'for resource', resource, 'has unbalanced brackets.')
                 continue
             parsed_axiom = parse_formula_infix_notation(text=preprocessed_axiom)
             if parsed_axiom == None:
-                # print('There is a ill-formed axiom', axiom, 'for resource', logical_annotation[0])
                 logging.warning(msg='|'.join(['ill-formed', resource, one_line_axiom]))
             
 iof_ontology = Graph()

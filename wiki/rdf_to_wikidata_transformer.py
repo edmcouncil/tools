@@ -310,10 +310,6 @@ def get_wiki_datatype(property: URIRef) -> str:
         property_range_types = set(graph.objects(subject=property_range, predicate=RDF.type))
         if OWL.Class in property_range_types or RDFS.Class in property_range_types:
             return 'wikibase-item'
-        # for property_range_type in property_range_types:
-        #     property_range_supertypes = set(graph.transitive_objects(subject=property_range_type, predicate=RDFS.subClassOf))
-        #     if OWL.Class in property_range_supertypes or RDFS.Class in property_range_supertypes:
-        #         return 'wikibase-item'
             
     if property in annotation_properties:
         return 'string'
@@ -329,33 +325,41 @@ def process_owl_restriction(owl_restriction: Node):
     restricting_properties = list(graph.objects(subject=owl_restriction, predicate=OWL.onProperty))
     if len(list(restricting_properties)) > 1:
         logging.exception(msg='Something is very wrong - I got an OWL restriction with multiple restricting properties.')
-        sys.exit(-1)
+        return
     restricting_property = restricting_properties[0]
     if restricting_property not in rdf_to_wiki_map:
         logging.warning(msg='I could not process an OWL restriction because is restricting property is not found in wiki.')
         return
     restricting_property_wiki = rdf_to_wiki_map[restricting_property]
     
-    restricting_classes = list(graph.objects(subject=owl_restriction, predicate=OWL.onClass))
-    if len(list(restricting_classes)) > 1:
-        logging.exception(msg='Something is very wrong - I got an OWL restriction with multiple restricting classes.')
-        sys.exit(-1)
-    
-    restricting_classes = list(graph.objects(subject=owl_restriction, predicate=OWL.someValuesFrom))
-    if len(list(restricting_properties)) > 1:
+    onClass_classes = list(graph.objects(subject=owl_restriction, predicate=OWL.onClass))
+    if len(list(onClass_classes)) > 1:
         logging.exception(msg='Something is very wrong - I got an OWL restriction with multiple restricting classes.')
         return
-    if len(list(restricting_classes)) == 0:
-        logging.info(msg='Ignoring an OWL restriction because it is out-of-scope.')
+    someValuesFrom_classes = list(graph.objects(subject=owl_restriction, predicate=OWL.someValuesFrom))
+    if len(list(someValuesFrom_classes)) > 1:
+        logging.exception(msg='Something is very wrong - I got an OWL restriction with multiple restricting classes.')
         return
-    restricting_class = restricting_classes[0]
-    if not isinstance(restricting_class, URIRef):
+    hasValue_classes = list(graph.objects(subject=owl_restriction, predicate=OWL.hasValue))
+    if len(list(hasValue_classes)) > 1:
+        logging.exception(msg='Something is very wrong - I got an OWL restriction with multiple restricting classes.')
+        return
+
+    restricting_resource = None
+    if len(onClass_classes) == 1:
+        restricting_resource = onClass_classes[0]
+    if len(someValuesFrom_classes) == 1:
+        restricting_resource = someValuesFrom_classes[0]
+    if len(hasValue_classes) == 1:
+        restricting_resource = hasValue_classes[0]
+
+    if not isinstance(restricting_resource, URIRef):
         logging.info(msg='Ignoring an OWL restriction because its restricting class is not an IRI.')
         return
-    if restricting_class not in rdf_to_wiki_map:
+    if restricting_resource not in rdf_to_wiki_map:
         logging.warning(msg='I could not process an OWL restriction because is restricting class is not found in wiki.')
         return
-    restricting_class_wiki = rdf_to_wiki_map[restricting_class]
+    restricting_class_wiki = rdf_to_wiki_map[restricting_resource]
     
     restricted_classes = list(graph.subjects(object=owl_restriction, predicate=RDFS.subClassOf))
     for restricted_class in restricted_classes:
@@ -376,7 +380,7 @@ def process_owl_restriction(owl_restriction: Node):
             else:
                 logging.info(msg='OWL restriction was successfully transferred to wiki.')
         else:
-            logging.info(msg='I could not process a statement that a subclass an OWL restriction because the former is not an IRI.')
+            logging.warning(msg='I could not process a an OWL restriction because the the resticted class is not an IRI.')
             return
     else:
         logging.info(msg='I ignore an OWL restriction because its type is out-of scope.')
@@ -384,13 +388,10 @@ def process_owl_restriction(owl_restriction: Node):
 
 
 if __name__ == "__main__":
-    # log_file_name = 'log_' + time.strftime("%Y-%m-%d %H:%M:%S") + '.txt'
-    # logging.basicConfig(format='%(levelname)s %(asctime)s %(message)s', level=logging.INFO, datefmt='%m/%d/%Y %I:%M:%S %p', filename=log_file_name)
     logging.basicConfig(format='%(levelname)s %(asctime)s %(message)s', level=logging.INFO,datefmt='%Y%m%d_%H:%M:%S')
 
-    logging.warning(msg='DBG: auth')
-    #oauth_credentials = {'consumer_key': os.environ.get('consumerKey'), 'consumer_secret': os.environ.get('consumerSecret')}
-    #wikibase = Wikibase(api_url='https://cidoc.wiki.kul.pl/w/api.php', oauth_credentials=oauth_credentials)
+    logging.info(msg='Authenticating access to wikidata')
+    logging.info(msg='DBG: auth')
     login_credentials = {'bot_username': os.environ.get('WIKI_LOGIN'), 'bot_password': os.environ.get('WIKI_PASSWORD')}
     wikibase = Wikibase(api_url='https://cidoc.wiki.kul.pl/w/api.php', login_credentials=login_credentials)
 
@@ -418,8 +419,6 @@ if __name__ == "__main__":
     
     logging.info(msg='Uploading ontology')
     graph = Graph()
-    # graph.parse('prod.idmp-quickstart.ttl', format='ttl')
-    # graph.parse('CIDOC_CRM_v7.1.1.rdf')
     graph.parse('ontohgis.ttl')
     rdf = Graph()
     rdf.parse('http://www.w3.org/1999/02/22-rdf-syntax-ns')
@@ -435,7 +434,6 @@ if __name__ == "__main__":
     dce.parse('https://www.dublincore.org/specifications/dublin-core/dcmi-terms/dublin_core_elements.rdf')
     
     graph = graph + rdf + rdfs + owl + skos + dct + dce
-    # graph = graph + rdf + rdfs + owl
     
     rdf_to_wiki_map = dict()
     wiki_to_rdf_map = dict()
@@ -479,8 +477,7 @@ if __name__ == "__main__":
         if end - start > wiki_timeout:
             wikibase.api.session.close()
             del wikibase
-            logging.warning(msg='DBG: auth')
-            #wikibase = Wikibase(api_url='https://cidoc.wiki.kul.pl/w/api.php', oauth_credentials=oauth_credentials)
+            logging.info(msg='DBG: auth')
             wikibase = Wikibase(api_url='https://cidoc.wiki.kul.pl/w/api.php', login_credentials=login_credentials)
             start = time.time()
         process_triple(triple)
@@ -493,8 +490,7 @@ if __name__ == "__main__":
         if end-start > wiki_timeout:
             wikibase.api.session.close()
             del wikibase
-            logging.warning(msg='DBG: auth')
-            #wikibase = Wikibase(api_url='https://cidoc.wiki.kul.pl/w/api.php', oauth_credentials=oauth_credentials)
+            logging.info(msg='DBG: auth')
             wikibase = Wikibase(api_url='https://cidoc.wiki.kul.pl/w/api.php', login_credentials=login_credentials)
             start = time.time()
         process_owl_restriction(owl_restriction=owl_restriction)

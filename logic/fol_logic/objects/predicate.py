@@ -1,3 +1,5 @@
+import re
+
 from rdflib import URIRef
 
 from logic.fol_logic.objects.symbol import Symbol
@@ -13,5 +15,9 @@ class Predicate(Symbol):
         
             
     def to_tptp(self):
-        return self.letter.lower().replace('-','_')
+        tptp_predicate = self.letter.lower()
+        tptp_predicate = tptp_predicate.replace('-','_')
+        tptp_predicate = tptp_predicate.replace('.', '_')
+        tptp_predicate = re.sub(r'[^\x00-\x7F]+', '_', tptp_predicate)
+        return tptp_predicate
     
