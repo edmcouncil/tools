@@ -8,7 +8,7 @@ from logic.fol_logic.objects.formula import Formula
 from logic.fol_logic.objects.predicate import Predicate
 from logic.fol_logic.objects.symbol import Symbol
 from logic.fol_logic.objects.term import Term
-from logic.fol_logic.objects.variable import Variable, DEFAULT_LETTER_1, DEFAULT_LETTER_2
+from logic.fol_logic.objects.variable import Variable
 
 
 def get_subformula_from_uri(uri: URIRef, owl_ontology: Graph, variable=Variable()) -> Formula:
@@ -26,7 +26,7 @@ def get_subformula_from_uri(uri: URIRef, owl_ontology: Graph, variable=Variable(
         else:
             predicate = Predicate(origin=uri, arity=2)
         return \
-            AtomicFormula(predicate=predicate, arguments=[Variable(letter=DEFAULT_LETTER_1), Variable(letter=DEFAULT_LETTER_2)])
+            AtomicFormula(predicate=predicate, arguments=[variable, Variable(letter=Variable.get_next_variable_letter())])
     
     if __can_uri_be_cast_to_term(uri=uri, owl_ontology=owl_ontology):
         if uri in Term.registry:

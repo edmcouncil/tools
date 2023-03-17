@@ -1,5 +1,3 @@
-import re
-
 from logic.fol_logic.objects.symbol import Symbol
 
 

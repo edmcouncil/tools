@@ -1,7 +1,3 @@
-import re
-
-from rdflib import URIRef
-
 from logic.fol_logic.objects.symbol import Symbol
 
 
