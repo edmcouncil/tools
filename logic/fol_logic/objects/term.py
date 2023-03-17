@@ -12,18 +12,7 @@ class Term(Symbol):
         
     def to_tptp(self):
         tptp_term = self.letter.lower()
-        tptp_term = tptp_term.replace('-', '_')
-        tptp_term = tptp_term.replace('.', '_')
-        tptp_term = tptp_term.replace('/', '_')
-        tptp_term = tptp_term.replace(':', '_')
-        tptp_term = tptp_term.replace('?', '_')
-        tptp_term = tptp_term.replace('=', '_')
-        tptp_term = tptp_term.replace('%', '_')
-        tptp_term = tptp_term.replace('&', '_')
-        tptp_term = tptp_term.replace('|', '_')
-        tptp_term = tptp_term.replace("'", '_')
-        tptp_term = tptp_term.replace('"', '_')
-        tptp_term = re.sub(r'[^\x00-\x7F]+', '_', tptp_term)
+        tptp_term = Symbol.escape_tptp_chars(text=tptp_term)
         if tptp_term[0].isdigit():
             tptp_term = 'node_' + tptp_term
         return tptp_term

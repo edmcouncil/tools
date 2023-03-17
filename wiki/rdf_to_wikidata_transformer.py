@@ -388,7 +388,7 @@ def process_owl_restriction(owl_restriction: Node):
 
 
 if __name__ == "__main__":
-    logging.basicConfig(format='%(levelname)s %(asctime)s %(message)s', level=logging.INFO,datefmt='%Y%m%d_%H:%M:%S')
+    logging.basicConfig(format='%(levelname)s %(asctime)s %(message)s', level=logging.WARN,datefmt='%Y%m%d_%H:%M:%S')
 
     logging.info(msg='Authenticating access to wikidata')
     logging.info(msg='DBG: auth')

@@ -16,8 +16,6 @@ class Predicate(Symbol):
             
     def to_tptp(self):
         tptp_predicate = self.letter.lower()
-        tptp_predicate = tptp_predicate.replace('-','_')
-        tptp_predicate = tptp_predicate.replace('.', '_')
-        tptp_predicate = re.sub(r'[^\x00-\x7F]+', '_', tptp_predicate)
+        tptp_predicate = Symbol.escape_tptp_chars(text=tptp_predicate)
         return tptp_predicate
     

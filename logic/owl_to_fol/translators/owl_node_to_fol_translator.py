@@ -7,8 +7,8 @@ from rdflib.term import Node, BNode, URIRef
 
 from logic.fol_logic.objects.atomic_formula import AtomicFormula
 from logic.fol_logic.objects.conjunction import Conjunction
-from logic.fol_logic.objects.variable import Variable, TPTP_DEFAULT_LETTER_1, TPTP_DEFAULT_LETTER_2, \
-    TPTP_DEFAULT_LETTER_3
+from logic.fol_logic.objects.variable import Variable, DEFAULT_LETTER_1, DEFAULT_LETTER_2, \
+    DEFAULT_LETTER_3
 from logic.fol_logic.objects.disjunction import Disjunction
 from logic.fol_logic.objects.formula import Formula
 from logic.fol_logic.objects.identity_formula import IdentityFormula
@@ -79,26 +79,26 @@ def generate_fol_from_owl_restriction(owl_restriction: Node, owl_ontology: Graph
     
     if len(owl_someValuesFrom) > 0:
         restricting_node = owl_someValuesFrom[0]
-        restricting_class_formula = get_simple_subformula_from_node(node=restricting_node, owl_ontology=owl_ontology, variable=Variable(letter=TPTP_DEFAULT_LETTER_2))
+        restricting_class_formula = get_simple_subformula_from_node(node=restricting_node, owl_ontology=owl_ontology, variable=Variable(letter=DEFAULT_LETTER_2))
         restricting_relation_formula = get_simple_subformula_from_node(node=owl_property, owl_ontology=owl_ontology)
         if restricting_class_formula and restricting_relation_formula:
             formula = \
                 QuantifyingFormula(
                     quantified_formula=Conjunction(arguments=[restricting_relation_formula, restricting_class_formula]),
                     quantifier=Quantifier.EXISTENTIAL,
-                    variables=[Variable(letter=TPTP_DEFAULT_LETTER_2)])
+                    variables=[Variable(letter=DEFAULT_LETTER_2)])
             return formula
         
     if len(owl_allValuesFrom) > 0:
         restricting_node = owl_allValuesFrom[0]
-        restricting_class_formula = get_simple_subformula_from_node(node=restricting_node, owl_ontology=owl_ontology, variable=Variable(letter=TPTP_DEFAULT_LETTER_2))
+        restricting_class_formula = get_simple_subformula_from_node(node=restricting_node, owl_ontology=owl_ontology, variable=Variable(letter=DEFAULT_LETTER_2))
         restricting_relation_formula = get_simple_subformula_from_node(node=owl_property, owl_ontology=owl_ontology)
         if restricting_class_formula and restricting_relation_formula:
             formula = \
                 QuantifyingFormula(
                     quantified_formula=Implication(arguments=[restricting_relation_formula, restricting_class_formula]),
                     quantifier=Quantifier.UNIVERSAL,
-                    variables=[Variable(letter=TPTP_DEFAULT_LETTER_2)])
+                    variables=[Variable(letter=DEFAULT_LETTER_2)])
             return formula
 
     formula = None
@@ -180,7 +180,7 @@ def generate_fol_from_owl_restriction(owl_restriction: Node, owl_ontology: Graph
     logging.warning(msg='Cannot get formula from a restriction')
 
 
-def get_listed_resources(rdf_list_object: Resource, ontology: Graph, rdf_list=list(), variable=Variable(letter=TPTP_DEFAULT_LETTER_1)) -> list:
+def get_listed_resources(rdf_list_object: Resource, ontology: Graph, rdf_list=list(), variable=Variable(letter=DEFAULT_LETTER_1)) -> list:
     first_items_in_rdf_list = list(ontology.objects(subject=rdf_list_object, predicate=RDF.first))
     if len(first_items_in_rdf_list) == 0:
         return rdf_list
@@ -202,7 +202,7 @@ def __generate_fol_from_owl_min_qualified_restriction(owl_property: Node, restri
             variables = list()
             index = 1
             while index <= minCardinality:
-                variable = Variable(letter=TPTP_DEFAULT_LETTER_2 + str(index))
+                variable = Variable(letter=DEFAULT_LETTER_2 + str(index))
                 restricting_class_formula = \
                     get_simple_subformula_from_node(
                         node=restricting_node,
@@ -236,7 +236,7 @@ def __generate_fol_from_owl_min_unqualified_restriction(owl_property: Node, owl_
             variables = list()
             index = 1
             while index <= minCardinality:
-                variable = Variable(letter=TPTP_DEFAULT_LETTER_2 + str(index))
+                variable = Variable(letter=DEFAULT_LETTER_2 + str(index))
                 if not conjunction:
                     conjunction = restricting_relation_formula.replace_argument(argument=variable, index=1)
                 else:
@@ -263,19 +263,19 @@ def __generate_fol_from_owl_max_qualified_restriction(owl_property: Node, restri
                     get_simple_subformula_from_node(
                         node=restricting_node,
                         owl_ontology=owl_ontology,
-                        variable=Variable(letter=TPTP_DEFAULT_LETTER_2))
-                conjunction = Conjunction(arguments=[restricting_relation_formula.replace_argument(argument=Variable(letter=TPTP_DEFAULT_LETTER_2), index=1),restricting_class_formula])
+                        variable=Variable(letter=DEFAULT_LETTER_2))
+                conjunction = Conjunction(arguments=[restricting_relation_formula.replace_argument(argument=Variable(letter=DEFAULT_LETTER_2), index=1), restricting_class_formula])
                 formula = \
                     QuantifyingFormula(
                         quantified_formula=Negation(arguments=[conjunction]),
                         quantifier=Quantifier.UNIVERSAL,
-                        variables=[Variable(letter=TPTP_DEFAULT_LETTER_2)])
+                        variables=[Variable(letter=DEFAULT_LETTER_2)])
                 return formula
             disjunction = None
             variables = list()
             index = 1
             while index <= maxCardinality + 1:
-                variable = Variable(letter=TPTP_DEFAULT_LETTER_2 + str(index))
+                variable = Variable(letter=DEFAULT_LETTER_2 + str(index))
                 restricting_class_formula = \
                     get_simple_subformula_from_node(
                         node=restricting_node,
@@ -308,19 +308,20 @@ def __generate_fol_from_owl_max_unqualified_restriction(owl_property: Node, owl_
             if maxCardinality == 0:
                 formula = \
                     QuantifyingFormula(
-                        quantified_formula=Negation(arguments=[restricting_relation_formula.replace_argument(argument=Variable(letter=TPTP_DEFAULT_LETTER_2), index=1)]),
+                        quantified_formula=Negation(arguments=[restricting_relation_formula.replace_argument(argument=Variable(letter=DEFAULT_LETTER_2), index=1)]),
                         quantifier=Quantifier.UNIVERSAL,
-                        variables=[Variable(letter=TPTP_DEFAULT_LETTER_2)])
+                        variables=[Variable(letter=DEFAULT_LETTER_2)])
                 return formula
             conjunction = None
             disjunction = None
             variables = list()
             index = 1
             while index <= maxCardinality + 1:
-                variable = Variable(letter=TPTP_DEFAULT_LETTER_2 + str(index))
+                variable = Variable(letter=DEFAULT_LETTER_2 + str(index))
                 if not conjunction:
                     conjunction = restricting_relation_formula.replace_argument(argument=variable, index=1)
                 else:
+                    conjunction = Conjunction(arguments=[conjunction, restricting_relation_formula.replace_argument(argument=variable, index=1)])
                     for backward_index in range(1, index):
                         if not disjunction:
                             disjunction = IdentityFormula(arguments=[variables[-1], variable])
@@ -337,24 +338,24 @@ def __generate_fol_from_owl_max_unqualified_restriction(owl_property: Node, owl_
         
 def __get_subformula_from_property_chain(bnode: BNode, owl_ontology: Graph) -> Formula:
     chained_formulas = list()
-    variables = [Variable(letter=TPTP_DEFAULT_LETTER_1), Variable(letter=TPTP_DEFAULT_LETTER_2)]
+    variables = [Variable(letter=DEFAULT_LETTER_1), Variable(letter=DEFAULT_LETTER_2)]
     formulas = get_listed_resources(rdf_list_object=bnode, ontology=owl_ontology, rdf_list=list())
     first_formula = formulas[0]
-    if first_formula.arguments[0] == TPTP_DEFAULT_LETTER_1:
+    if first_formula.arguments[0] == DEFAULT_LETTER_1:
         replacement_index = 1
     else:
         replacement_index = 0
     last_index = 1
-    initial_variable = Variable(letter=TPTP_DEFAULT_LETTER_3 + str(last_index))
+    initial_variable = Variable(letter=DEFAULT_LETTER_3 + str(last_index))
     chained_formula = first_formula.replace_argument(argument=initial_variable, index=replacement_index)
     chained_formulas.append(chained_formula)
     variables.append(initial_variable)
     
     for index in range(1, len(formulas) - 1):
         formula = formulas[index]
-        first_variable = Variable(TPTP_DEFAULT_LETTER_3 + str(last_index))
-        second_variable = Variable(TPTP_DEFAULT_LETTER_3 + str(last_index + 1))
-        if formula.arguments[0].letter == TPTP_DEFAULT_LETTER_1:
+        first_variable = Variable(DEFAULT_LETTER_3 + str(last_index))
+        second_variable = Variable(DEFAULT_LETTER_3 + str(last_index + 1))
+        if formula.arguments[0].letter == DEFAULT_LETTER_1:
             first_replacement_index = 0
             second_replacement_index = 1
         else:
@@ -368,11 +369,11 @@ def __get_subformula_from_property_chain(bnode: BNode, owl_ontology: Graph) -> F
         last_index += 1
     
     last_formula = formulas[-1]
-    if last_formula.arguments[0] == TPTP_DEFAULT_LETTER_1:
+    if last_formula.arguments[0] == DEFAULT_LETTER_1:
         replacement_index = 0
     else:
         replacement_index = 1
-    final_variable = Variable(letter=TPTP_DEFAULT_LETTER_3 + str(last_index))
+    final_variable = Variable(letter=DEFAULT_LETTER_3 + str(last_index))
     chained_formula = last_formula.replace_argument(argument=final_variable, index=replacement_index)
     chained_formulas.append(chained_formula)
     variables.append(final_variable)
