@@ -60,11 +60,12 @@ def translate_rdf_triple_to_fol(rdf_triple: tuple, owl_ontology: Graph):
 
 
 def translate_rdf_triple_about_individual_subject_to_fol(rdf_triple: tuple, owl_ontology: Graph):
+    Variable.clear_used_variable_letters()
     triple_subject = get_fol_symbol_for_owl_node(node=rdf_triple[0], owl_ontology=owl_ontology)
     triple_predicate = get_fol_symbol_for_owl_node(node=rdf_triple[1], owl_ontology=owl_ontology, arity=2)
     triple_object = get_fol_symbol_for_owl_node(node=rdf_triple[2], owl_ontology=owl_ontology)
     if rdf_triple[1] == RDF.type:
-        get_simple_subformula_from_node(node=rdf_triple[2], variable=triple_subject, owl_ontology=owl_ontology)
+        get_simple_subformula_from_node(node=rdf_triple[2], variables=[triple_subject], owl_ontology=owl_ontology)
         return
     if rdf_triple[1] == OWL.sameAs:
         IdentityFormula(arguments=[triple_subject, triple_object])
@@ -76,8 +77,11 @@ def translate_rdf_triple_about_individual_subject_to_fol(rdf_triple: tuple, owl_
 
 
 def translate_rdf_triple_about_class_to_fol(rdf_triple: tuple, owl_ontology: Graph):
-    left_class = get_simple_subformula_from_node(node=rdf_triple[0], owl_ontology=owl_ontology)
-    right_class = get_simple_subformula_from_node(node=rdf_triple[2], owl_ontology=owl_ontology)
+    Variable.clear_used_variable_letters()
+    variable = Variable(letter=Variable.get_next_variable_letter())
+    # second_variable = Variable(letter=Variable.get_next_variable_letter())
+    left_class = get_simple_subformula_from_node(node=rdf_triple[0], owl_ontology=owl_ontology, variables=[variable])
+    right_class = get_simple_subformula_from_node(node=rdf_triple[2], owl_ontology=owl_ontology, variables=[variable])
     if not left_class:
         logging.warning(msg='Cannot process class statement: ' + str(rdf_triple))
         return
@@ -132,15 +136,16 @@ def translate_rdf_triple_about_class_to_fol(rdf_triple: tuple, owl_ontology: Gra
  
     
 def translate_rdf_triple_about_property_to_fol(rdf_triple: tuple, owl_ontology: Graph):
-    first_variable_letter = Variable.get_next_variable_letter()
-    second_variable_letter = Variable.get_next_variable_letter()
-    third_variable_letter = Variable.get_next_variable_letter()
+    Variable.clear_used_variable_letters()
+    first_variable = Variable(letter=Variable.get_next_variable_letter())
+    second_variable = Variable(letter=Variable.get_next_variable_letter())
+    third_variable = Variable(letter=Variable.get_next_variable_letter())
     if rdf_triple[1] == RDF.type:
         if rdf_triple[2] == OWL.TransitiveProperty:
-            property_formula_1 = get_simple_subformula_from_node(node=rdf_triple[0], owl_ontology=owl_ontology)
-            property_formula_2 = property_formula_1.replace_arguments(arguments=[Variable(second_variable_letter), Variable(third_variable_letter)])
-            property_formula_3 = property_formula_1.replace_arguments(arguments=[Variable(first_variable_letter), Variable(third_variable_letter)])
-            quantifying_variables = [Variable(first_variable_letter), Variable(second_variable_letter), Variable(third_variable_letter)]
+            property_formula_1 = get_simple_subformula_from_node(node=rdf_triple[0], owl_ontology=owl_ontology, variables=[first_variable, second_variable])
+            property_formula_2 = property_formula_1.replace_arguments(arguments=[second_variable, third_variable])
+            property_formula_3 = property_formula_1.replace_arguments(arguments=[first_variable, third_variable])
+            quantifying_variables = [first_variable, second_variable, third_variable]
             QuantifyingFormula(
                 quantified_formula=Implication(arguments=[Conjunction(arguments=[property_formula_1, property_formula_2]), property_formula_3]),
                 variables=quantifying_variables,
@@ -148,10 +153,10 @@ def translate_rdf_triple_about_property_to_fol(rdf_triple: tuple, owl_ontology: 
                 is_self_standing=True)
             return
         if rdf_triple[2] == OWL.FunctionalProperty:
-            property_formula_1 = get_simple_subformula_from_node(node=rdf_triple[0], owl_ontology=owl_ontology)
-            property_formula_2 = property_formula_1.replace_arguments(arguments=[Variable(first_variable_letter), Variable(third_variable_letter)])
-            identity_formula = IdentityFormula(arguments=[Variable(letter=second_variable_letter), Variable(letter=third_variable_letter)])
-            quantifying_variables = [Variable(letter=first_variable_letter), Variable(letter=second_variable_letter), Variable(letter=third_variable_letter)]
+            property_formula_1 = get_simple_subformula_from_node(node=rdf_triple[0], owl_ontology=owl_ontology, variables=[first_variable, second_variable])
+            property_formula_2 = property_formula_1.replace_arguments(arguments=[first_variable, third_variable])
+            identity_formula = IdentityFormula(arguments=[second_variable, third_variable])
+            quantifying_variables = [first_variable, second_variable, third_variable]
             QuantifyingFormula(
                 quantified_formula=Implication(arguments=[Conjunction(arguments=[property_formula_1, property_formula_2]), identity_formula]),
                 variables=quantifying_variables,
@@ -159,10 +164,10 @@ def translate_rdf_triple_about_property_to_fol(rdf_triple: tuple, owl_ontology: 
                 is_self_standing=True)
             return
         if rdf_triple[2] == OWL.InverseFunctionalProperty:
-            property_formula_1 = get_simple_subformula_from_node(node=rdf_triple[0], owl_ontology=owl_ontology)
-            property_formula_2 = property_formula_1.replace_arguments(arguments=[Variable(letter=third_variable_letter), Variable(letter=second_variable_letter)])
-            identity_formula = IdentityFormula(arguments=[Variable(letter=first_variable_letter), Variable(letter=third_variable_letter)])
-            quantifying_variables = [Variable(letter=first_variable_letter), Variable(letter=second_variable_letter), Variable(letter=third_variable_letter)]
+            property_formula_1 = get_simple_subformula_from_node(node=rdf_triple[0], owl_ontology=owl_ontology, variables=[first_variable, second_variable])
+            property_formula_2 = property_formula_1.replace_arguments(arguments=[third_variable, second_variable])
+            identity_formula = IdentityFormula(arguments=[first_variable, third_variable])
+            quantifying_variables = [first_variable, second_variable, third_variable]
             QuantifyingFormula(
                 quantified_formula=Implication(arguments=[Conjunction(arguments=[property_formula_1, property_formula_2]), identity_formula]),
                 variables=quantifying_variables,
@@ -170,18 +175,17 @@ def translate_rdf_triple_about_property_to_fol(rdf_triple: tuple, owl_ontology: 
                 is_self_standing=True)
             return
         if rdf_triple[2] == OWL.SymmetricProperty:
-            property_formula_1 = get_simple_subformula_from_node(node=rdf_triple[0], owl_ontology=owl_ontology)
-            property_formula_2 = property_formula_1.replace_arguments(arguments=[Variable(letter=second_variable_letter), Variable(letter=first_variable_letter)])
-            quantifying_variables = [Variable(letter=first_variable_letter), Variable(letter=second_variable_letter)]
+            property_formula_1 = get_simple_subformula_from_node(node=rdf_triple[0], owl_ontology=owl_ontology, variables=[first_variable, second_variable])
+            property_formula_2 = property_formula_1.replace_arguments(arguments=[second_variable, first_variable])
+            quantifying_variables = [first_variable, second_variable]
             QuantifyingFormula(
                 quantified_formula=Implication(arguments=[property_formula_1, property_formula_2]),
                 variables=quantifying_variables,
                 quantifier=Quantifier.UNIVERSAL,
                 is_self_standing=True)
             return
-    
-    antecedent = get_simple_subformula_from_node(node=rdf_triple[0], owl_ontology=owl_ontology)
-    subsequent = get_simple_subformula_from_node(node=rdf_triple[2], owl_ontology=owl_ontology)
+    antecedent = get_simple_subformula_from_node(node=rdf_triple[0], owl_ontology=owl_ontology, variables=[first_variable, second_variable])
+    subsequent = get_simple_subformula_from_node(node=rdf_triple[2], owl_ontology=owl_ontology, variables=[first_variable, second_variable])
     if not antecedent:
         logging.warning(msg='Cannot process property statement: ' + str(rdf_triple) + ' because of antecedent')
         return
@@ -192,7 +196,7 @@ def translate_rdf_triple_about_property_to_fol(rdf_triple: tuple, owl_ontology: 
     if rdf_triple[1] == RDFS.subPropertyOf:
         QuantifyingFormula(
             quantified_formula=Implication(arguments=[antecedent, subsequent]),
-            variables=[Variable(letter=first_variable_letter), Variable(letter=second_variable_letter)],
+            variables=[first_variable, second_variable],
             quantifier=Quantifier.UNIVERSAL,
             is_self_standing=True)
         return
@@ -200,7 +204,7 @@ def translate_rdf_triple_about_property_to_fol(rdf_triple: tuple, owl_ontology: 
     if rdf_triple[1] == OWL.equivalentProperty:
         QuantifyingFormula(
             quantified_formula=Equivalence(arguments=[antecedent, subsequent]),
-            variables=[Variable(letter=first_variable_letter), Variable(letter=second_variable_letter)],
+            variables=[first_variable, second_variable],
             quantifier=Quantifier.UNIVERSAL,
             is_self_standing=True)
         return
@@ -209,7 +213,7 @@ def translate_rdf_triple_about_property_to_fol(rdf_triple: tuple, owl_ontology: 
         overlap_formula = \
             QuantifyingFormula(
                 quantified_formula=Conjunction(arguments=[antecedent, subsequent]),
-                variables=[Variable(letter=first_variable_letter), Variable(letter=second_variable_letter)],
+                variables=[first_variable, second_variable],
                 quantifier=Quantifier.EXISTENTIAL)
         Negation(arguments=[overlap_formula], is_self_standing=True)
         
@@ -218,7 +222,7 @@ def translate_rdf_triple_about_property_to_fol(rdf_triple: tuple, owl_ontology: 
     if rdf_triple[1] == OWL.propertyChainAxiom:
         QuantifyingFormula(
             quantified_formula=Implication(arguments=[subsequent, antecedent]),
-            variables=[Variable(letter=first_variable_letter), Variable(letter=second_variable_letter)],
+            variables=[first_variable, second_variable],
             quantifier=Quantifier.UNIVERSAL,
             is_self_standing=True)
         return
@@ -226,27 +230,27 @@ def translate_rdf_triple_about_property_to_fol(rdf_triple: tuple, owl_ontology: 
     if rdf_triple[1] == RDFS.domain:
         QuantifyingFormula(
             quantified_formula=Implication(arguments=[antecedent, subsequent]),
-            variables=[Variable(letter=first_variable_letter), Variable(letter=second_variable_letter)],
+            variables=[first_variable, second_variable],
             quantifier=Quantifier.UNIVERSAL,
             is_self_standing=True)
         return
     
     if rdf_triple[1] == RDFS.range:
-        subsequent = get_simple_subformula_from_node(node=rdf_triple[2], owl_ontology=owl_ontology, variable=Variable(letter=second_variable_letter))
+        subsequent = get_simple_subformula_from_node(node=rdf_triple[2], owl_ontology=owl_ontology, variables=[second_variable])
         QuantifyingFormula(
             quantified_formula=Implication(arguments=[antecedent, subsequent]),
-            variables=[Variable(letter=first_variable_letter), Variable(letter=second_variable_letter)],
+            variables=[first_variable, second_variable],
             quantifier=Quantifier.UNIVERSAL,
             is_self_standing=True)
         return
     
     if rdf_triple[1] == OWL.inverseOf:
-        subsequent = get_simple_subformula_from_node(node=rdf_triple[2], owl_ontology=owl_ontology, variable=Variable(letter=second_variable_letter))
+        subsequent = get_simple_subformula_from_node(node=rdf_triple[2], owl_ontology=owl_ontology, variables=[first_variable, second_variable])
         if not antecedent is None and not subsequent is None:
             subsequent.swap_arguments(inplace=True)
             QuantifyingFormula(
                 quantified_formula=Equivalence(arguments=[antecedent, subsequent]),
-                variables=[Variable(letter=first_variable_letter), Variable(letter=second_variable_letter)],
+                variables=[first_variable, second_variable],
                 quantifier=Quantifier.UNIVERSAL,
                 is_self_standing=True)
         else:

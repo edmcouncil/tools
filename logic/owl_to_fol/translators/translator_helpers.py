@@ -11,14 +11,14 @@ from logic.fol_logic.objects.term import Term
 from logic.fol_logic.objects.variable import Variable
 
 
-def get_subformula_from_uri(uri: URIRef, owl_ontology: Graph, variable=Variable()) -> Formula:
+def get_subformula_from_uri(uri: URIRef, owl_ontology: Graph, variables: list) -> Formula:
     if __can_uri_be_cast_to_unary_predicate(uri=uri, owl_ontology=owl_ontology):
         if uri in Predicate.registry:
             predicate = Predicate.registry[uri]
         else:
             predicate = Predicate(origin=uri, arity=1)
         return \
-            AtomicFormula(predicate=predicate, arguments=[variable])
+            AtomicFormula(predicate=predicate, arguments=variables[:1])
     
     if __can_uri_be_cast_to_binary_predicate(uri=uri, owl_ontology=owl_ontology):
         if uri in Predicate.registry:
@@ -26,7 +26,7 @@ def get_subformula_from_uri(uri: URIRef, owl_ontology: Graph, variable=Variable(
         else:
             predicate = Predicate(origin=uri, arity=2)
         return \
-            AtomicFormula(predicate=predicate, arguments=[variable, Variable(letter=Variable.get_next_variable_letter())])
+            AtomicFormula(predicate=predicate, arguments=variables)
     
     if __can_uri_be_cast_to_term(uri=uri, owl_ontology=owl_ontology):
         if uri in Term.registry:
