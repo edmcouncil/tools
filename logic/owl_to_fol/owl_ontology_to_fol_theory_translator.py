@@ -8,13 +8,13 @@ from logic.owl_to_fol.translators.owl_triple_to_fol_translator import translate_
 
 def translate_owl_ontology_to_fol_theory(owl_ontology:Graph):
     logging.info(msg='Importing W3C ontologies')
-    rdf = Graph()
-    rdf.parse('http://www.w3.org/1999/02/22-rdf-syntax-ns')
-    rdfs = Graph()
-    rdfs.parse('http://www.w3.org/2000/01/rdf-schema')
-    owl = Graph()
-    owl.parse('http://www.w3.org/2002/07/owl')
-    owl_ontology = owl_ontology + rdf + rdfs + owl
+    # rdf = Graph()
+    # rdf.parse('http://www.w3.org/1999/02/22-rdf-syntax-ns')
+    # rdfs = Graph()
+    # rdfs.parse('http://www.w3.org/2000/01/rdf-schema')
+    # owl = Graph()
+    # owl.parse('http://www.w3.org/2002/07/owl')
+    # owl_ontology = owl_ontology + rdf + rdfs + owl
     populate_default_predicates()
     print(len(owl_ontology))
     for rdf_triple in owl_ontology:

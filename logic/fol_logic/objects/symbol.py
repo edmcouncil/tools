@@ -41,6 +41,11 @@ class Symbol:
         text = text.replace("'", '_')
         text = text.replace('"', '_')
         text = text.replace(' ', '_')
+        text = text.replace('(', '_')
+        text = text.replace(')', '_')
+        text = text.replace('>', '_')
+        text = text.replace('~', '_')
+        text = text.replace('#', '_')
         text = re.sub(r'[^\x00-\x7F]+', '_', text)
         
         return text
