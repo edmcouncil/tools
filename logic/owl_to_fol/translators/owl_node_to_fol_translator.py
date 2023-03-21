@@ -1,7 +1,6 @@
 import logging
 
 from rdflib import Graph, OWL, RDF
-from rdflib.resource import Resource
 from rdflib.term import Node, BNode, URIRef
 
 from logic.fol_logic.objects.atomic_formula import AtomicFormula
@@ -33,6 +32,8 @@ def get_subformula_from_bnode(bnode: BNode, owl_ontology: Graph, variables: list
     if len(list(owl_ontology.objects(subject=bnode, predicate=OWL.inverseOf))) > 0:
         inversed_properties = list(owl_ontology.objects(subject=bnode, predicate=OWL.inverseOf))
         inversed_property_formula = get_simple_subformula_from_node(node=inversed_properties[0], owl_ontology=owl_ontology, variables=variables)
+        if not isinstance(inversed_property_formula, AtomicFormula):
+            return None
         formula = inversed_property_formula.swap_arguments(inplace=False)
         return formula
     
@@ -74,12 +75,13 @@ def generate_fol_from_owl_restriction(owl_restriction: Node, owl_ontology: Graph
     owl_maxCardinality = list(owl_ontology.objects(subject=owl_restriction, predicate=OWL.maxCardinality))
     owl_qualifiedMinCardinality = list(owl_ontology.objects(subject=owl_restriction, predicate=OWL.minQualifiedCardinality))
     owl_qualifiedMaxCardinality = list(owl_ontology.objects(subject=owl_restriction, predicate=OWL.maxQualifiedCardinality))
-    variable_letter = Variable.get_next_variable_letter()
+    
+    restricted_variable = Variable(letter=Variable.get_next_variable_letter())
+    restricting_relation_formula = get_simple_subformula_from_node(node=owl_property, owl_ontology=owl_ontology, variables=variables + [restricted_variable])
+
     if len(owl_someValuesFrom) > 0:
         restricting_node = owl_someValuesFrom[0]
-        restricted_variable = Variable(letter=Variable.get_next_variable_letter())
         restricting_class_formula = get_simple_subformula_from_node(node=restricting_node, owl_ontology=owl_ontology, variables=[restricted_variable])
-        restricting_relation_formula = get_simple_subformula_from_node(node=owl_property, owl_ontology=owl_ontology, variables=variables + [restricted_variable])
         if restricting_class_formula and restricting_relation_formula:
             formula = \
                 QuantifyingFormula(
@@ -92,7 +94,6 @@ def generate_fol_from_owl_restriction(owl_restriction: Node, owl_ontology: Graph
         restricting_node = owl_allValuesFrom[0]
         restricted_variable = Variable(letter=Variable.get_next_variable_letter())
         restricting_class_formula = get_simple_subformula_from_node(node=restricting_node, owl_ontology=owl_ontology, variables=[restricted_variable])
-        restricting_relation_formula = get_simple_subformula_from_node(node=owl_property, owl_ontology=owl_ontology, variables=variables + [restricted_variable])
         if restricting_class_formula and restricting_relation_formula:
             formula = \
                 QuantifyingFormula(
@@ -113,67 +114,59 @@ def generate_fol_from_owl_restriction(owl_restriction: Node, owl_ontology: Graph
     if len(owl_qualifiedMinCardinality) > 0:
         formula = \
             __generate_fol_from_owl_min_qualified_restriction(
-                owl_property=owl_property,
                 restricting_node=restricting_node,
+                restricting_relation_formula=restricting_relation_formula,
+                restricted_variable=restricted_variable,
                 owl_qualifiedMinCardinality=owl_qualifiedMinCardinality,
-                owl_ontology=owl_ontology,
-                variables=variables)
+                owl_ontology=owl_ontology)
     if len(owl_minCardinality) > 0:
         formula = \
             __generate_fol_from_owl_min_unqualified_restriction(
-                owl_property=owl_property,
-                owl_minCardinality=owl_minCardinality,
-                owl_ontology=owl_ontology,
-                variables=variables)
+                restricting_relation_formula=restricting_relation_formula,
+                owl_minCardinality=owl_minCardinality)
     if len(owl_qualifiedMaxCardinality) > 0:
         formula = \
             __generate_fol_from_owl_max_qualified_restriction(
-                owl_property=owl_property,
                 restricting_node=restricting_node,
+                restricting_relation_formula=restricting_relation_formula,
+                restricted_variable=restricted_variable,
                 owl_qualifiedMaxCardinality=owl_qualifiedMaxCardinality,
-                owl_ontology=owl_ontology,
-                variables=variables)
+                owl_ontology=owl_ontology)
     if len(owl_maxCardinality) > 0:
         formula = \
             __generate_fol_from_owl_max_unqualified_restriction(
-                owl_property=owl_property,
-                owl_maxCardinality=owl_maxCardinality,
-                owl_ontology=owl_ontology,
-                variables=variables)
+                restricting_relation_formula=restricting_relation_formula,
+                owl_maxCardinality=owl_maxCardinality)
         
     if len(owl_qualifiedCardinality) > 0:
         max_formula = \
             __generate_fol_from_owl_max_qualified_restriction(
-                owl_property=owl_property,
                 restricting_node=restricting_node,
+                restricting_relation_formula=restricting_relation_formula,
+                restricted_variable=restricted_variable,
                 owl_qualifiedMaxCardinality=owl_qualifiedCardinality,
-                owl_ontology=owl_ontology,
-                variables=variables)
+                owl_ontology=owl_ontology)
 
         min_formula = \
             __generate_fol_from_owl_min_qualified_restriction(
-                owl_property=owl_property,
                 restricting_node=restricting_node,
+                restricting_relation_formula=restricting_relation_formula,
+                restricted_variable=restricted_variable,
                 owl_qualifiedMinCardinality=owl_qualifiedCardinality,
-                owl_ontology=owl_ontology,
-                variables=variables)
+                owl_ontology=owl_ontology)
         
         formula = Conjunction(arguments=[max_formula, min_formula])
 
     if len(owl_cardinality) > 0:
         max_formula = \
             __generate_fol_from_owl_max_unqualified_restriction(
-                owl_property=owl_property,
-                owl_maxCardinality=owl_cardinality,
-                owl_ontology=owl_ontology,
-                variables=variables)
+                restricting_relation_formula=restricting_relation_formula,
+                owl_maxCardinality=owl_cardinality)
 
         min_formula = \
             __generate_fol_from_owl_min_unqualified_restriction(
-                owl_property=owl_property,
-                owl_minCardinality=owl_cardinality,
-                owl_ontology=owl_ontology,
-                variables=variables)
+                restricting_relation_formula=restricting_relation_formula,
+                owl_minCardinality=owl_cardinality)
 
         formula = Conjunction(arguments=[max_formula, min_formula])
         
@@ -188,7 +181,7 @@ def generate_fol_from_owl_restriction(owl_restriction: Node, owl_ontology: Graph
     logging.warning(msg='Cannot get formula from a restriction')
 
 
-def get_listed_resources(rdf_list_object: Resource, ontology: Graph, variables: list, rdf_list=list()) -> list:
+def get_listed_resources(rdf_list_object: Node, ontology: Graph, variables: list, rdf_list=list()) -> list:
     first_items_in_rdf_list = list(ontology.objects(subject=rdf_list_object, predicate=RDF.first))
     if len(first_items_in_rdf_list) == 0:
         return rdf_list
@@ -199,9 +192,12 @@ def get_listed_resources(rdf_list_object: Resource, ontology: Graph, variables: 
     return rdf_list
 
 
-def __generate_fol_from_owl_min_qualified_restriction(owl_property: Node, restricting_node, owl_qualifiedMinCardinality: list, owl_ontology: Graph, variables: list) -> Formula:
-    restricted_variable = Variable(letter=Variable.get_next_variable_letter())
-    restricting_relation_formula = get_simple_subformula_from_node(node=owl_property, owl_ontology=owl_ontology, variables=variables + [restricted_variable])
+def __generate_fol_from_owl_min_qualified_restriction(
+        restricting_node: Node,
+        restricting_relation_formula: Formula,
+        restricted_variable: Variable,
+        owl_qualifiedMinCardinality: list,
+        owl_ontology: Graph) -> Formula:
     if restricting_relation_formula:
         if len(owl_qualifiedMinCardinality) > 0:
             minCardinality = int(owl_qualifiedMinCardinality[0])
@@ -234,9 +230,9 @@ def __generate_fol_from_owl_min_qualified_restriction(owl_property: Node, restri
             return formula
         
 
-def __generate_fol_from_owl_min_unqualified_restriction(owl_property: Node, owl_minCardinality: list, owl_ontology: Graph, variables: list) -> Formula:
-    restricted_variable_letter = Variable.get_next_variable_letter()
-    restricting_relation_formula = get_simple_subformula_from_node(node=owl_property, owl_ontology=owl_ontology, variables=variables + [restricted_variable_letter])
+def __generate_fol_from_owl_min_unqualified_restriction(
+        restricting_relation_formula: Formula,
+        owl_minCardinality: list) -> Formula:
     if restricting_relation_formula:
         if len(owl_minCardinality) > 0:
             minCardinality = int(owl_minCardinality[0])
@@ -262,13 +258,12 @@ def __generate_fol_from_owl_min_unqualified_restriction(owl_property: Node, owl_
             return formula
         
         
-def __generate_fol_from_owl_max_qualified_restriction(owl_property: Node, restricting_node, owl_qualifiedMaxCardinality: list, owl_ontology: Graph, variables: list) -> Formula:
-    restricted_variable_letter = Variable.get_next_variable_letter()
-    restricting_relation_formula = \
-        get_simple_subformula_from_node(
-            node=owl_property,
-            owl_ontology=owl_ontology,
-            variables=variables + [Variable(letter=restricted_variable_letter)])
+def __generate_fol_from_owl_max_qualified_restriction(
+        restricting_node: Node,
+        restricting_relation_formula: Formula,
+        restricted_variable: Variable,
+        owl_qualifiedMaxCardinality: list,
+        owl_ontology: Graph) -> Formula:
     if restricting_relation_formula:
         if len(owl_qualifiedMaxCardinality) > 0:
             maxCardinality = int(owl_qualifiedMaxCardinality[0])
@@ -278,13 +273,13 @@ def __generate_fol_from_owl_max_qualified_restriction(owl_property: Node, restri
                     get_simple_subformula_from_node(
                         node=restricting_node,
                         owl_ontology=owl_ontology,
-                        variables=[Variable(letter=restricted_variable_letter)])
-                conjunction = Conjunction(arguments=[restricting_relation_formula.replace_argument(argument=Variable(letter=restricted_variable_letter), index=1), restricting_class_formula])
+                        variables=[restricted_variable])
+                conjunction = Conjunction(arguments=[restricting_relation_formula.replace_argument(argument=restricted_variable, index=1), restricting_class_formula])
                 formula = \
                     QuantifyingFormula(
                         quantified_formula=Negation(arguments=[conjunction]),
                         quantifier=Quantifier.UNIVERSAL,
-                        variables=[Variable(letter=restricted_variable_letter)])
+                        variables=[restricted_variable])
                 return formula
             disjunction = None
             restricting_variables = list()
@@ -316,9 +311,9 @@ def __generate_fol_from_owl_max_qualified_restriction(owl_property: Node, restri
             return formula
         
         
-def __generate_fol_from_owl_max_unqualified_restriction(owl_property: Node, owl_maxCardinality: list, owl_ontology: Graph, variables: list) -> Formula:
-    restricted_variable_letter = Variable.get_next_variable_letter()
-    restricting_relation_formula = get_simple_subformula_from_node(node=owl_property, owl_ontology=owl_ontology, variables=variables + [Variable(letter=restricted_variable_letter)])
+def __generate_fol_from_owl_max_unqualified_restriction(
+        restricting_relation_formula: Formula,
+        owl_maxCardinality: list) -> Formula:
     if restricting_relation_formula:
         if len(owl_maxCardinality) > 0:
             maxCardinality = int(owl_maxCardinality[0])

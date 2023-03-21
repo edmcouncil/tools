@@ -12,7 +12,7 @@ def populate_default_predicates():
     populate_default_predicates_from_namespace(namespace=RDFS, context='rdfs')
     populate_default_predicates_from_namespace(namespace=OWL, context='owl')
     
-def populate_default_predicates_from_namespace(namespace: DefinedNamespace, context: str):
+def populate_default_predicates_from_namespace(namespace: type, context: str):
     resources = namespace.as_jsonld_context(context)
     resources_in_context = resources['@context']
     for resource_in_context in resources_in_context.values():
