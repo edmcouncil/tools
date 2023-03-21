@@ -73,6 +73,38 @@ def __can_uri_be_cast_to_binary_predicate(uri: Node, owl_ontology: Graph) -> boo
     return False
 
 
+def __can_uri_be_cast_to_unary_predicate(uri: URIRef, owl_ontology: Graph) -> bool:
+    if uri in XSD:
+        return True
+    
+    if (uri, RDF.type, RDFS.Datatype) in owl_ontology:
+        return True
+    if (uri, RDF.type, RDFS.Class) in owl_ontology:
+        return True
+    
+    if (uri, RDF.type, OWL.Class) in owl_ontology:
+        return True
+    if (uri, RDF.type, OWL.DataRange) in owl_ontology:
+        return True
+    if (uri, RDF.type, OWL.Restriction) in owl_ontology:
+        return True
+    if (uri, RDF.type, OWL.AllDisjointClasses) in owl_ontology:
+        return True
+    
+    if uri == RDFS.Literal:
+        return True
+    if uri == OWL.rational:
+        return True
+    if uri == OWL.real:
+        return True
+    if uri == OWL.NamedIndividual:
+        return True
+    
+    return \
+        False
+
+
+
 def try_to_cast_bnode_as_typed_list(bnode: BNode, owl_ontology: Graph) -> tuple:
     owl_unions = list(owl_ontology.objects(subject=bnode, predicate=OWL.unionOf))
     if len(owl_unions) > 0:
@@ -91,25 +123,6 @@ def try_to_cast_bnode_as_typed_list(bnode: BNode, owl_ontology: Graph) -> tuple:
         return OWL.oneOf, owl_oneOfs[0]
     
     
-def __can_uri_be_cast_to_unary_predicate(uri: URIRef, owl_ontology: Graph) -> bool:
-    if uri in XSD:
-        return True
-    if (uri, RDF.type, RDFS.Datatype) in owl_ontology:
-        return True
-    if (uri, RDF.type, OWL.Class) in owl_ontology:
-        return True
-    if (uri, RDF.type, OWL.DataRange) in owl_ontology:
-        return True
-    if uri == RDFS.Literal:
-        return True
-    if uri == OWL.rational:
-        return True
-    if uri == OWL.real:
-        return True
-    if uri == OWL.NamedIndividual:
-        return True
-    return \
-        False
 
 
 def __can_uri_be_cast_to_term(uri: URIRef, owl_ontology: Graph) -> bool:

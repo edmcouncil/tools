@@ -16,5 +16,6 @@ def translate_owl_ontology_to_fol_theory(owl_ontology:Graph):
     owl.parse('http://www.w3.org/2002/07/owl')
     owl_ontology = owl_ontology + rdf + rdfs + owl
     populate_default_predicates()
+    print(len(owl_ontology))
     for rdf_triple in owl_ontology:
         translate_rdf_triple_to_fol(rdf_triple=rdf_triple, owl_ontology=owl_ontology)

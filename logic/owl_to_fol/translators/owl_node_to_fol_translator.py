@@ -384,10 +384,27 @@ def __get_one_of_formula(formulas: list) -> Formula:
     return one_of_disjunction
 
 
-def translate_all_different_triple(differents_node: Node, owl_ontology:Graph):
-    different_nodes = get_listed_resources(rdf_list_object=differents_node, ontology=owl_ontology, variables=list(), rdf_list=list())
-    for index1 in range(len(different_nodes)-1):
-        node1 = different_nodes[index1]
-        for index2 in range(index1+1, len(different_nodes)):
-            node2 = different_nodes[index2]
+def translate_all_different_individuals_triple(all_differents_node: Node, owl_ontology:Graph):
+    different_individuals = get_listed_resources(rdf_list_object=all_differents_node, ontology=owl_ontology, variables=list(), rdf_list=list())
+    for index1 in range(len(different_individuals)-1):
+        node1 = different_individuals[index1]
+        for index2 in range(index1+1, len(different_individuals)):
+            node2 = different_individuals[index2]
             Negation(arguments=[IdentityFormula(arguments=[node1, node2])], is_self_standing=True)
+            
+            
+def translate_all_disjoint_classes_triple(all_disjoint_classes_node: Node, owl_ontology:Graph, variable: Variable):
+    all_disjoint_classess = list(owl_ontology.objects(subject=all_disjoint_classes_node, predicate=OWL.members))[0]
+    different_classes = get_listed_resources(rdf_list_object=all_disjoint_classess, ontology=owl_ontology, variables=[variable], rdf_list=list())
+    for index1 in range(len(different_classes)-1):
+        class1 = different_classes[index1]
+        for index2 in range(index1+1, len(different_classes)):
+            class2 = different_classes[index2]
+            overlap_formula = \
+                QuantifyingFormula(
+                    quantified_formula=Conjunction(arguments=[class1, class2]),
+                    variables=[variable],
+                    quantifier=Quantifier.EXISTENTIAL)
+            Negation(arguments=[overlap_formula], is_self_standing=True)
+            
+    

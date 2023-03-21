@@ -7,7 +7,9 @@ from logic.owl_to_fol.owl_ontology_to_fol_theory_translator import translate_owl
 
 logging.basicConfig(format='%(message)s', level=logging.WARN, datefmt='%m/%d/%Y %I:%M:%S %p', filename='iof_axioms.log')
 fibo = Graph()
-fibo.parse('/Users/pawel.garbacz/Documents/edmc/github/edmc/tools/resources/fibo/AboutFIBODevMerged.ttl')
+fibo.parse('/Users/pawel.garbacz/Documents/edmc/github/edmc/tools/resources/idmp_current/AboutIDMPDev-ReferenceIndividualsMerged.ttl')
+# fibo.parse('/Users/pawel.garbacz/Documents/edmc/github/edmc/tools/resources/fibo/AboutFIBODevMerged.ttl')
+#fibo.parse('/Users/pawel.garbacz/Documents/edmc/github/edmc/tools/resources/iof/dev.iof-quickstart.ttl')
 
 translate_owl_ontology_to_fol_theory(owl_ontology=fibo)
 f = open('axioms.tptp', mode='w')

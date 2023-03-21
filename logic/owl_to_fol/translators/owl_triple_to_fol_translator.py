@@ -6,9 +6,10 @@ from logic.fol_logic.objects.variable import Variable
 from logic.owl_to_fol.filterers.translation_filterer import node_is_out_of_scope, triple_is_of_of_scope
 from logic.owl_to_fol.translators.owl_class_like_translator import translate_rdf_triple_about_class_like_to_fol
 from logic.owl_to_fol.translators.owl_individual_translator import translate_rdf_triple_about_individual_subject_to_fol
-from logic.owl_to_fol.translators.owl_node_to_fol_translator import translate_all_different_triple
+from logic.owl_to_fol.translators.owl_node_to_fol_translator import translate_all_different_individuals_triple
 from logic.owl_to_fol.translators.owl_property_translator import translate_rdf_triple_about_property_to_fol
-from logic.owl_to_fol.translators.translator_helpers import __can_uri_be_cast_to_binary_predicate
+from logic.owl_to_fol.translators.translator_helpers import __can_uri_be_cast_to_binary_predicate, \
+    __can_uri_be_cast_to_unary_predicate
 
 
 def translate_rdf_triple_to_fol(rdf_triple: tuple, owl_ontology: Graph):
@@ -42,17 +43,17 @@ def translate_rdf_triple_to_fol(rdf_triple: tuple, owl_ontology: Graph):
         translate_rdf_triple_about_individual_subject_to_fol(rdf_triple=rdf_triple, owl_ontology=owl_ontology)
         return
     
-    if (rdf_triple_subject, RDF.type, OWL.Class) in owl_ontology or (rdf_triple_subject, RDF.type, OWL.Restriction) in owl_ontology or (rdf_triple_subject, RDF.type, RDFS.Datatype) in owl_ontology:
-        translate_rdf_triple_about_class_like_to_fol(rdf_triple=rdf_triple, owl_ontology=owl_ontology)
-        return
-        
     if rdf_triple_predicate == OWL.distinctMembers:
-        translate_all_different_triple(differents_node=rdf_triple_object, owl_ontology=owl_ontology)
+        translate_all_different_individuals_triple(all_differents_node=rdf_triple_object, owl_ontology=owl_ontology)
         return
-        
-    if __can_uri_be_cast_to_binary_predicate(uri=rdf_triple_subject, owl_ontology=owl_ontology):
+    
+    if __can_uri_be_cast_to_binary_predicate(uri=rdf_triple_subject, owl_ontology=owl_ontology) or __can_uri_be_cast_to_binary_predicate(uri=rdf_triple_object, owl_ontology=owl_ontology):
         translate_rdf_triple_about_property_to_fol(rdf_triple=rdf_triple, owl_ontology=owl_ontology)
         return
     
+    if __can_uri_be_cast_to_unary_predicate(uri=rdf_triple_subject, owl_ontology=owl_ontology) or __can_uri_be_cast_to_unary_predicate(uri=rdf_triple_object, owl_ontology=owl_ontology):
+        translate_rdf_triple_about_class_like_to_fol(rdf_triple=rdf_triple, owl_ontology=owl_ontology)
+        return
+        
     logging.warning(msg='Cannot migrate ' + str(rdf_triple))
 
