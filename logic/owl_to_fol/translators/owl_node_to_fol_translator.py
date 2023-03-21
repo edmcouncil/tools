@@ -92,7 +92,6 @@ def generate_fol_from_owl_restriction(owl_restriction: Node, owl_ontology: Graph
         
     if len(owl_allValuesFrom) > 0:
         restricting_node = owl_allValuesFrom[0]
-        restricted_variable = Variable(letter=Variable.get_next_variable_letter())
         restricting_class_formula = get_simple_subformula_from_node(node=restricting_node, owl_ontology=owl_ontology, variables=[restricted_variable])
         if restricting_class_formula and restricting_relation_formula:
             formula = \
@@ -181,7 +180,7 @@ def generate_fol_from_owl_restriction(owl_restriction: Node, owl_ontology: Graph
     logging.warning(msg='Cannot get formula from a restriction')
 
 
-def get_listed_resources(rdf_list_object: Node, ontology: Graph, variables: list, rdf_list=list()) -> list:
+def get_listed_resources(rdf_list_object: Node, ontology: Graph, variables: list, rdf_list: list) -> list:
     first_items_in_rdf_list = list(ontology.objects(subject=rdf_list_object, predicate=RDF.first))
     if len(first_items_in_rdf_list) == 0:
         return rdf_list
@@ -383,3 +382,12 @@ def __get_one_of_formula(formulas: list) -> Formula:
         disjuncts.append(disjunct)
     one_of_disjunction = Disjunction(arguments=disjuncts)
     return one_of_disjunction
+
+
+def translate_all_different_triple(differents_node: Node, owl_ontology:Graph):
+    different_nodes = get_listed_resources(rdf_list_object=differents_node, ontology=owl_ontology, variables=list(), rdf_list=list())
+    for index1 in range(len(different_nodes)-1):
+        node1 = different_nodes[index1]
+        for index2 in range(index1+1, len(different_nodes)):
+            node2 = different_nodes[index2]
+            Negation(arguments=[IdentityFormula(arguments=[node1, node2])], is_self_standing=True)
