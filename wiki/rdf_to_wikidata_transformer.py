@@ -122,14 +122,32 @@ def process_triple(triple: tuple):
         logging.warning(msg='WARN: wikibase.claim.add(' + '|'.join(triple) + '): ' + str(response))
         return
 
+    claim_id = response['claim']['id']
+    
     if is_object_literal:
         if object.language:
-            claim_id = response['claim']['id']
             try:
                 wikibase.qualifier.add(claim_id=claim_id,property_id=language_property_wiki,value=object.language)
             except Exception as exception:
                 logging.warning(msg='ERR: wikibase.qualifier.add(' + str(exception))
                 return
+    
+    if (subject, predicate, object) in annotation_map:
+        annotating_property = annotation_map[(subject, predicate, object)][0]
+        annotating_value = annotation_map[(subject, predicate, object)][1]
+        
+        annotating_property_wiki = get_or_create_wiki_from_resource(resource=annotating_property)
+        if isinstance(annotating_value, Literal):
+            annotating_value_wiki = annotating_value
+        else:
+            annotating_value_wiki = get_or_create_wiki_from_resource(resource=annotating_value)
+
+        try:
+            wikibase.qualifier.add(claim_id=claim_id, property_id=annotating_property_wiki, value=annotating_value_wiki)
+        except Exception as exception:
+            logging.warning(msg='ERR: wikibase.qualifier.add(' + str(exception))
+            return
+    
 
 def get_wiki_value(object_wiki: object) -> str:
     if str(object_wiki).startswith('Q'):
@@ -451,6 +469,24 @@ if __name__ == "__main__":
     annotation_properties = set(graph.subjects(predicate=RDF.type, object=OWL.AnnotationProperty))
     ontology_properties = set(graph.subjects(predicate=RDF.type, object=OWL.OntologyProperty))
     rdf_properties = set(graph.subjects(predicate=RDF.type, object=RDF.Property))
+    owl_axioms = set(graph.subjects(predicate=RDF.type, object=OWL.Axiom))
+    annotation_map = dict()
+    for owl_axiom in owl_axioms:
+        source = list(graph.objects(subject=owl_axiom, predicate=OWL.annotatedSource))[0]
+        property = list(graph.objects(subject=owl_axiom, predicate=OWL.annotatedProperty))[0]
+        target = list(graph.objects(subject=owl_axiom, predicate=OWL.annotatedTarget))[0]
+        properties = list(graph.predicate_objects(subject=owl_axiom))
+        annotated_property = None
+        for property in properties:
+            if property == OWL.annotatedSource:
+                continue
+            if property == OWL.annotatedProperty:
+                continue
+            if property == OWL.annotatedTarget:
+                continue
+            annotated_property = property[0]
+            annotated_value = property[1]
+        annotation_map[(source, property, target)] = (annotated_property, annotated_value)
 
     rdf_resources_as_wiki_properties = rdf_properties.union(object_properties).union(data_properties).union(annotation_properties).union(ontology_properties)
     # all_nodes_except_for_rdf_resources_as_wiki_properties = all_nodes.difference(rdf_resources_as_wiki_properties)

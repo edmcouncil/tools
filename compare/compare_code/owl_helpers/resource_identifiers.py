@@ -3,7 +3,8 @@ from importlib.resources import Resource
 
 from rdflib import BNode, Graph, OWL, URIRef, Literal, RDF, RDFS
 
-from owl_helpers.restriction_classifier import get_restricting_property, get_restricting_type_and_class, \
+from compare.compare_code.owl_helpers.restriction_classifier import get_restricting_property, \
+    get_restricting_type_and_class, \
     get_restriction_modality_and_cardinality_value
 
 RestrictionTuple = namedtuple('OntologicalType', 'restricting_property restriction_type restricted_class restriction_modality restricted_cardinality')
@@ -59,6 +60,7 @@ def identify_resource(resource: Resource, ontology: Graph) -> object:
     
     if isinstance(resource, URIRef) or isinstance(resource, Literal):
         return resource
+    
     resource_types = set(ontology.objects(subject=resource, predicate=RDF.type))
     
     if OWL.Restriction in resource_types:
@@ -94,8 +96,7 @@ def identify_resource(resource: Resource, ontology: Graph) -> object:
         for resource_subject_predicate in resource_subject_predicates:
             if resource_subject_predicate[1] == OWL.propertyChainAxiom:
                 chained_properties = get_listed_resources(rdf_list_object=resource, ontology=ontology, rdf_list=list())
-                identified_resource = identify_collection(chained_properties, ontology, OWL.propertyChainAxiom)
-                return identified_resource
+                return chained_properties
             if resource_subject_predicate[1] == OWL.withRestrictions:
                 datatype_restrictions = get_listed_resources(rdf_list_object=resource, ontology=ontology, rdf_list=list())
                 identified_resource = identify_collection(datatype_restrictions, ontology, OWL.withRestrictions)

@@ -2,8 +2,9 @@
 Currently, the tool runs three comparisons:
 - with respect to the deleted and created **ontologies** (i.e., ontology files) in the repository's revisions
   - only the .rdf extension files are processed
-- with respect to the deleted and created **resources** in ontologies in both revisions
-- with respect to the changes in **axioms**, where the resources from both revisions are subjects.
+- with respect to the deleted and created **IRIs** in ontologies in both revisions
+- with respect to the changes in **axioms**, where the resources from both revisions are axioms' subjects provided that thay are **IRIs**.
+
 
 The tool can be run in two modes:
 - no-verbose where only the counts of differences are given
