@@ -22,7 +22,11 @@ def get_sparql_query(config: dict, root_folder: str) -> str:
         file.close()
     sparql_query = sparql_template
     for sparql_parameter in sparql_parameters:
-        sparql_query = sparql_query.replace(sparql_parameter, '"' + config['parameters'][sparql_parameter] + '"')
+        sparql_parameter_value = config['parameters'][sparql_parameter]
+        if config['parameters'][sparql_parameter].startswith('<') and config['parameters'][sparql_parameter].endswith('>'):
+            sparql_query = sparql_query.replace(sparql_parameter, sparql_parameter_value)
+        else:
+            sparql_query = sparql_query.replace(sparql_parameter, '"' + sparql_parameter_value + '"')
     return sparql_query
 
 
@@ -45,7 +49,7 @@ def run_unit_test(ontology_location: str, root_folder: str, unit_test_config_fil
     return cq_tests_passed
 
 run_unit_test(
-    ontology_location='/Users/pawel.garbacz/Documents/edmc/github/edmc/tools/resources/idmp_current/AboutIDMPDev-ReferenceIndividualsMerged.ttl',
+    ontology_location='/Users/pawel.garbacz/Documents/edmc/github/edmc/tools/resources/idmp_current/dev.idmp-quickstart.ttl',
     root_folder='',
     unit_test_config_file_path='configs/unit_tests_config.yaml')
 

@@ -13,8 +13,8 @@ else:
     logging.basicConfig(format='%(levelname)s %(asctime)s %(message)s', level=logging.INFO, datefmt='%m/%d/%Y %I:%M:%S %p')
 
 compare_ontology_github_repo(
-    repo_github_url='https://github.com/edmcouncil/idmp',
-    left_revision_id='master_v0.2.0',
-    right_revision_id='master',
+    repo_github_url='https://github.com/edmcouncil/fibo',
+    left_revision_id='master_2022Q4',
+    right_revision_id='master_2023Q1',
     config=ComparisonConfig(verbose=True),
     outputs='out')

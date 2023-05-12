@@ -1,10 +1,12 @@
 import json
 import logging
 import os
+import re
 import sys
 import time
 
-from rdflib import Graph, RDFS, URIRef, OWL, RDF
+import wikibase_api.api
+from rdflib import Graph, RDFS, URIRef, OWL, RDF, XSD
 from rdflib.term import Identifier, Literal, BNode, Node
 from tqdm import tqdm
 from wikibase_api import Wikibase
@@ -143,24 +145,28 @@ def process_triple(triple: tuple):
             annotating_value_wiki = get_or_create_wiki_from_resource(resource=annotating_value)
 
         try:
-            wikibase.qualifier.add(claim_id=claim_id, property_id=annotating_property_wiki, value=annotating_value_wiki)
+            wikibase.qualifier.add(claim_id=claim_id, property_id=annotating_property_wiki, value=get_wiki_value(annotating_value_wiki))
         except Exception as exception:
             logging.warning(msg='ERR: wikibase.qualifier.add(' + str(exception))
             return
     
 
-def get_wiki_value(object_wiki: object) -> str:
-    if str(object_wiki).startswith('Q'):
-        numeric_wiki_id_str = str(object_wiki).replace('Q', '')
-        numeric_wiki_id = int(numeric_wiki_id_str)
-        wiki_value = {"entity-type": "item", "numeric-id": numeric_wiki_id}
-    
-    if str(object_wiki).startswith('P'):
-        numeric_wiki_id_str = str(object_wiki).replace('P', '')
-        numeric_wiki_id = int(numeric_wiki_id_str)
-        wiki_value = {"entity-type": "property", "numeric-id": numeric_wiki_id}
+def get_wiki_value(object_wiki: str) -> str:
+    is_object_wiki = re.search(pattern=re.compile(r'[A-Z]\d+'), string=object_wiki)
+    if is_object_wiki is not None:
+        if str(object_wiki).startswith('Q'):
+            numeric_wiki_id_str = str(object_wiki).replace('Q', '')
+            numeric_wiki_id = int(numeric_wiki_id_str)
+            wiki_value = {"entity-type": "item", "numeric-id": numeric_wiki_id}
+            return wiki_value
         
-    return wiki_value
+        if str(object_wiki).startswith('P'):
+            numeric_wiki_id_str = str(object_wiki).replace('P', '')
+            numeric_wiki_id = int(numeric_wiki_id_str)
+            wiki_value = {"entity-type": "property", "numeric-id": numeric_wiki_id}
+            return wiki_value
+        
+    return object_wiki
 
 def create_wiki_for_resource(resource: Identifier) -> object:
     if isinstance(resource, URIRef):
@@ -323,6 +329,8 @@ def get_wiki_datatype(property: URIRef) -> str:
         return 'wikibase-property'
     if RDF.List in property_ranges:
         return 'wikibase-property'
+    if XSD.anyURI in property_ranges:
+        return 'wikibase-item'
     
     for property_range in property_ranges:
         property_range_types = set(graph.objects(subject=property_range, predicate=RDF.type))
@@ -473,20 +481,23 @@ if __name__ == "__main__":
     annotation_map = dict()
     for owl_axiom in owl_axioms:
         source = list(graph.objects(subject=owl_axiom, predicate=OWL.annotatedSource))[0]
-        property = list(graph.objects(subject=owl_axiom, predicate=OWL.annotatedProperty))[0]
+        axiom_property = list(graph.objects(subject=owl_axiom, predicate=OWL.annotatedProperty))[0]
         target = list(graph.objects(subject=owl_axiom, predicate=OWL.annotatedTarget))[0]
         properties = list(graph.predicate_objects(subject=owl_axiom))
         annotated_property = None
         for property in properties:
-            if property == OWL.annotatedSource:
+            if property[0] == OWL.annotatedSource:
                 continue
-            if property == OWL.annotatedProperty:
+            if property[0] == OWL.annotatedProperty:
                 continue
-            if property == OWL.annotatedTarget:
+            if property[0] == OWL.annotatedTarget:
+                continue
+            if property[0] == RDF.type:
                 continue
             annotated_property = property[0]
             annotated_value = property[1]
-        annotation_map[(source, property, target)] = (annotated_property, annotated_value)
+            break
+        annotation_map[(source, axiom_property, target)] = (annotated_property, annotated_value)
 
     rdf_resources_as_wiki_properties = rdf_properties.union(object_properties).union(data_properties).union(annotation_properties).union(ontology_properties)
     # all_nodes_except_for_rdf_resources_as_wiki_properties = all_nodes.difference(rdf_resources_as_wiki_properties)

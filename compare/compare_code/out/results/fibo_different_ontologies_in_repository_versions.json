@@ -1,0 +1,9 @@
+[
+    {
+        "repository": "fibo",
+        "ontologies in master_2022Q4 but not in master_2023Q1 repository version": [],
+        "ontologies in master_2023Q1 and not in master_2022Q4 repository version": [
+            "USNationalInformationCenterControlledVocabularies"
+        ]
+    }
+]
