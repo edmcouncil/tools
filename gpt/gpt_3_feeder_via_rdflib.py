@@ -2,7 +2,7 @@ import json
 
 from rdflib import Graph, RDFS, SKOS, URIRef, RDF, OWL, Namespace
 
-from constants import IS, IS_A
+from constants import IS_COPULA, IS_A_COPULA
 
 graph = Graph()
 graph.bind("owl", OWL)
@@ -20,9 +20,9 @@ for resource, predicate, object in graph:
         examples = list(graph.objects(subject=resource, predicate=SKOS.example))
         if len(labels) > 0 and len(definitions) > 0 and (len(explanatoryNotes) > 0 and len(examples) > 0):
             if definitions[0].startswith('a ') or definitions[0].startswith('an ') or definitions[0].startswith('the '):
-                copula = IS
+                copula = IS_COPULA
             else:
-                copula = IS_A
+                copula = IS_A_COPULA
             human_readable_text = labels[0].capitalize() + copula + definitions[0] + '.'
             human_readable_text += ' ' + ' '.join(explanatoryNotes)
             human_readable_text += ' ' + ' '.join(examples)

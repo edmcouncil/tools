@@ -1,10 +1,11 @@
 import json
 import os
-import re
 
 from rdflib import Graph
 
-from constants import IS, IS_A, PREFIX_DECLARATION, COMMON_PREFIX_DECLARATIONS
+from constants import IS_COPULA, IS_A_COPULA, PREFIX_DECLARATION, COMMON_PREFIX_DECLARATIONS
+from gpt.sw_regexes import owl_class_prefix_desc_regex, label_regex, def_regex, ex_regex, notes_regex, prefix_regex, \
+    isDefinedBy_regex, isDefinedIn_regex
 
 
 def __is_syntactically_correct(owl_description: str) -> bool:
@@ -25,21 +26,12 @@ def __is_syntactically_correct(owl_description: str) -> bool:
     return True
 
 
-owl_class_desc_regex = re.compile(pattern=r'[a-z\-]+:\w+\s*a\s+owl:Class.+?\.\n', flags=re.DOTALL)
-label_regex = re.compile(pattern=r'rdfs:label\s+"(.+?)"')
-def_regex = re.compile(pattern=r'skos:definition\s+"(.+?)"')
-ex_regex = re.compile(pattern=r'skos:example\s+(.+?)"', flags=re.DOTALL)
-notes_regex = re.compile(pattern=r'fibo-fnd-utl-av:explanatoryNote.+?"(.+?)"', flags=re.DOTALL)
-prefix_regex = re.compile(pattern=r'[a-z\-]+:')
-isDefinedBy_regex = re.compile(pattern=r'rdfs:isDefinedBy\s+[a-z\-]+:\s+;', flags=re.DOTALL)
-isDefinedIn_regex = re.compile(pattern=r'fibo-fnd-rel-rel:isDefinedIn\s+.+?;', flags=re.DOTALL)
-
 ontology_file = open(file=r'/Users/pawel.garbacz/Documents/edmc/python/projects/edmc_tools/resources/dev.fibo-quickstart.ttl',mode='r')
 json_text = str()
 
 ontology_doc = ontology_file.read()
 count=0
-owl_class_descriptions = owl_class_desc_regex.findall(string=ontology_doc)
+owl_class_descriptions = owl_class_prefix_desc_regex.findall(string=ontology_doc)
 for owl_class_description in owl_class_descriptions:
     owl_class_labels = label_regex.findall(string=owl_class_description)
     owl_class_definitions = def_regex.findall(string=owl_class_description)
@@ -50,9 +42,9 @@ for owl_class_description in owl_class_descriptions:
         owl_class_definition = owl_class_definitions[0].replace('"', str()).strip()
         
         if owl_class_definition.startswith('a ') or owl_class_definition.startswith('an ') or owl_class_definition.startswith('the '):
-            copula = IS
+            copula = IS_COPULA
         else:
-            copula = IS_A
+            copula = IS_A_COPULA
         human_readable_text = owl_class_label.capitalize() + copula + owl_class_definition + '.'
         human_readable_text += ' ' + ' '.join(owl_class_notes).strip()
         human_readable_text += ' ' + ' '.join(owl_class_examples).strip()

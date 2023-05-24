@@ -13,7 +13,7 @@ from wikibase_api import Wikibase
 
 wiki_label_property = RDFS.label
 wiki_main_language = 'en'
-wiki_description_property = RDFS.isDefinedBy
+wiki_description_property = URIRef('https://onto.kul.pl/ontohgis/isDefinedByLiteral')
 ignored_namespace = 'http://purl.org/dc/terms/'
 wiki_description_max_length = 250
 wiki_description_truncate_sign = '...'
@@ -471,7 +471,9 @@ if __name__ == "__main__":
     rdfs_classes = set(graph.subjects(predicate=RDF.type, object=RDFS.Class))
     classes = owl_classes.union(rdfs_classes)
     individuals = set(graph.subjects(predicate=RDF.type, object=OWL.NamedIndividual))
-    datatypes = set(graph.subjects(predicate=RDF.type, object=RDFS.Datatype))
+    rdfs_datatypes = set(graph.subjects(predicate=RDF.type, object=RDFS.Datatype))
+    xml_datatypes = set([xsd for xsd in dir(XSD)])
+    datatypes = rdfs_datatypes.union(xml_datatypes)
     object_properties = set(graph.subjects(predicate=RDF.type, object=OWL.ObjectProperty))
     data_properties = set(graph.subjects(predicate=RDF.type, object=OWL.DatatypeProperty))
     annotation_properties = set(graph.subjects(predicate=RDF.type, object=OWL.AnnotationProperty))

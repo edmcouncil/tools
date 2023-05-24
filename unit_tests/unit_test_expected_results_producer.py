@@ -48,7 +48,7 @@ produce_unit_test_expected_results(
 
 
 # if __name__ == "__main__":
-#     parser = argparse.ArgumentParser(description='Run unit tests')
+#     parser = argparse.ArgumentParser(description='Run unit hygiene_tests')
 #     parser.add_argument('--ontology_location', help='Path to ontology location')
 #     parser.add_argument('--root_folder', help='Path to the root folder')
 #     parser.add_argument('--cq_source', help='Path to the sources of cq templates')
