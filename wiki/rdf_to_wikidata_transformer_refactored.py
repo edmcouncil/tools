@@ -168,7 +168,7 @@ def process_triple(triple: tuple, scope: TransformationScope):
         if predicate not in scope.properties:
             wiki_value = str(object)
 
-    if not scope.config.dry_run:
+    if scope.config.dry_run:
         return
 
     try:
@@ -494,7 +494,7 @@ def add_wiki_infrastructure_properties(config: TransformationConfiguration):
                 "en": {"language": "en", "value": "indicates the external source of a wikibase entity (if any)"}},
             "datatype": "url"
         }
-    response = scope.config.wikibase.entity.add(entity_type='property', content=external_origin_property_content)
+    response = config.wikibase.entity.add(entity_type='property', content=external_origin_property_content)
     config.external_origin_property_wiki = response['entity']['id']
 
     language_property_content = \
@@ -503,7 +503,7 @@ def add_wiki_infrastructure_properties(config: TransformationConfiguration):
                 {"en": {"language": "en", "value": "language"}},
             "datatype": "string"
         }
-    response = scope.config.wikibase.entity.add(entity_type='property', content=language_property_content)
+    response = config.wikibase.entity.add(entity_type='property', content=language_property_content)
     config.language_property_wiki = response['entity']['id']
     
 
@@ -588,6 +588,7 @@ def collect_all_rdf_resources(config: TransformationConfiguration, graph_iri: st
         
     return scope
 
+
 def process_all_rdf_triples(scope: TransformationScope):
     logging.info(msg="Converting ontology's triples to wikidata")
     start = time.time()
@@ -623,7 +624,7 @@ if __name__ == "__main__":
     logging.basicConfig(format='%(levelname)s %(asctime)s %(message)s', level=logging.WARN,datefmt='%Y%m%d_%H:%M:%S')
     
     config = TransformationConfiguration()
-    config.dry_run = True
+    # config.dry_run = True
     
     if not config.dry_run:
         establish_wiki_connection(config)
