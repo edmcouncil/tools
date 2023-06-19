@@ -49,6 +49,7 @@ class TransformationConfiguration:
                 OWL.ObjectProperty: WIKIBASE_PROPERTY_TYPE,
                 OWL.DatatypeProperty: WIKIBASE_STRING_TYPE,
                 OWL.AnnotationProperty: WIKIBASE_STRING_TYPE,
+                OWL.Thing: WIKIBASE_ITEM_TYPE
             }
         
         
@@ -237,7 +238,7 @@ def create_wiki_for_resource(resource: Identifier, scope: TransformationScope) -
             entity_type = 'item'
         elif resource in scope.getwikiable_properties():
             entity_type = 'property'
-            wiki_datatype = get_wiki_datatype(property=resource, scope=scope)
+            wiki_datatype = get_wiki_datatype_for_property(property=resource, scope=scope)
             annotations['datatype'] = wiki_datatype
         else:
             logging.info(msg='I was not able to classify: ' + str(resource) + '.')
@@ -363,7 +364,7 @@ def get_or_create_wiki_from_resource(resource: Identifier, scope: Transformation
     return wiki_entity
 
 
-def get_wiki_datatype(property: URIRef, scope: TransformationScope) -> str:
+def get_wiki_datatype_for_property(property: URIRef, scope: TransformationScope) -> str:
     property_ranges = set(scope.graph.objects(subject=property, predicate=RDFS.range))
     if len(property_ranges) == 0:
         super_properties = scope.graph.transitive_objects(subject=property, predicate=RDFS.subPropertyOf)
