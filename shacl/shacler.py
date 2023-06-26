@@ -2,6 +2,7 @@ import argparse
 import logging
 
 from rdflib import Graph, RDF, OWL, RDFS, SH, Namespace, XSD
+from rdflib.collection import Collection
 from rdflib.term import Node, BNode, URIRef, Literal
 
 
@@ -126,6 +127,17 @@ class OWLSHACLRestriction(RDFSHACLResource):
     
     def __hash__(self):
         return str(self.__get_hashable_attributes()).__hash__()
+    
+    def get_inverse_restriction_if_exists(self):
+        if self.restriction_type == OWL.someValuesFrom:
+            inverse_properties_for_restricting_properties = set(
+                self.ontology_graph.objects(subject=self.restricting_property.iri, predicate=OWL.inverseOf))
+            for owl_shacl_restriction in self.restriction_registry.values():
+                if owl_shacl_restriction.restriction_type == OWL.someValuesFrom:
+                    counterpart_restricting_property_iri = owl_shacl_restriction.restricting_property.iri
+                    if counterpart_restricting_property_iri in inverse_properties_for_restricting_properties:
+                        return owl_shacl_restriction
+        return None
 
 
 class SHACLShape:
@@ -152,6 +164,7 @@ class SHACLShape:
 
 class SHACLPropertyShape(SHACLShape):
     serialisation_register = dict()
+    inverse_serialisation_register = dict()
     
     def __init__(self, owl_shacl_restriction: OWLSHACLRestriction):
         super().__init__(rdf_shacl_resource=owl_shacl_restriction)
@@ -167,18 +180,49 @@ class SHACLPropertyShape(SHACLShape):
         shacl_shape = URIRef(shacl_shape_id)
         
         self.shacl_graph.add((shacl_shape, RDF.type, SH.PropertyShape))
+        if self.rdf_shacl_resource.restriction_type == OWL.someValuesFrom:
+            self.__serialise_someValuesFrom(shacl_shape=shacl_shape)
+            SHACLPropertyShape.serialisation_register[self] = shacl_shape
+            
+            owl_shacl_inverse_restricton = self.owl_shacl_restriction.get_inverse_restriction_if_exists()
+            if owl_shacl_inverse_restricton:
+                inverse_shacl_shape = URIRef(shacl_shape_id + 'Inverse')
+                self.__serialise_someValuesFrom_with_inverse(shacl_shape=inverse_shacl_shape,owl_shacl_inverse_restricton=owl_shacl_inverse_restricton)
+                SHACLPropertyShape.inverse_serialisation_register[self] = inverse_shacl_shape
+        # self.shacl_graph.add((shacl_shape, SH.path, self.owl_shacl_restriction.restricting_property.iri))
+        # if isinstance(self.owl_shacl_restriction.restricting_class, OWLSHACLClass):
+        #     self.shacl_graph.add((shacl_shape, URIRef('http://www.w3.org/ns/shacl#class'), self.owl_shacl_restriction.restricting_class.iri))
+        # if isinstance(self.owl_shacl_restriction.restricting_class, OWLSHACLDatatype):
+        #     self.shacl_graph.add((shacl_shape, SH.datatype, self.owl_shacl_restriction.restricting_class.iri))
+        # if isinstance(self.owl_shacl_restriction.restricting_class, OWLSHACLLiteral):
+        #     self.shacl_graph.add((shacl_shape, SH.nodeKind, SH.Literal))
+        # if self.owl_shacl_restriction.restriction_type == OWL.someValuesFrom:
+        #     self.shacl_graph.add(
+        #         (shacl_shape, SH.minCount, Literal(self.owl_shacl_restriction.restricting_cardinality)))
+    
+    def __serialise_someValuesFrom_with_inverse(self, shacl_shape: URIRef,owl_shacl_inverse_restricton: OWLSHACLRestriction):
+        self.shacl_graph.add((shacl_shape, SH.path, owl_shacl_inverse_restricton.restricting_property.iri))
+        if isinstance(owl_shacl_inverse_restricton.restricting_class, OWLSHACLClass):
+            self.shacl_graph.add((shacl_shape, URIRef('http://www.w3.org/ns/shacl#class'),
+                                  owl_shacl_inverse_restricton.restricting_class.iri))
+        if isinstance(owl_shacl_inverse_restricton.restricting_class, OWLSHACLDatatype):
+            self.shacl_graph.add((shacl_shape, SH.datatype, owl_shacl_inverse_restricton.restricting_class.iri))
+        if isinstance(owl_shacl_inverse_restricton.restricting_class, OWLSHACLLiteral):
+            self.shacl_graph.add((shacl_shape, SH.nodeKind, SH.Literal))
+        self.shacl_graph.add((shacl_shape, SH.minCount, Literal(owl_shacl_inverse_restricton.restricting_cardinality)))
+        SHACLPropertyShape.inverse_serialisation_register[self] = shacl_shape
+    
+    def __serialise_someValuesFrom(self, shacl_shape: URIRef):
         self.shacl_graph.add((shacl_shape, SH.path, self.owl_shacl_restriction.restricting_property.iri))
         if isinstance(self.owl_shacl_restriction.restricting_class, OWLSHACLClass):
-            self.shacl_graph.add((shacl_shape, SH.targetClass, self.owl_shacl_restriction.restricting_class.iri))
+            self.shacl_graph.add((shacl_shape, URIRef('http://www.w3.org/ns/shacl#class'),
+                                  self.owl_shacl_restriction.restricting_class.iri))
         if isinstance(self.owl_shacl_restriction.restricting_class, OWLSHACLDatatype):
             self.shacl_graph.add((shacl_shape, SH.datatype, self.owl_shacl_restriction.restricting_class.iri))
         if isinstance(self.owl_shacl_restriction.restricting_class, OWLSHACLLiteral):
             self.shacl_graph.add((shacl_shape, SH.nodeKind, SH.Literal))
-        if self.owl_shacl_restriction.restriction_type == OWL.someValuesFrom:
-            self.shacl_graph.add(
-                (shacl_shape, SH.minCount, Literal(self.owl_shacl_restriction.restricting_cardinality)))
+        self.shacl_graph.add( (shacl_shape, SH.minCount, Literal(self.owl_shacl_restriction.restricting_cardinality)))
         
-        SHACLPropertyShape.serialisation_register[self] = shacl_shape
 
 
 class SHACLNodeShape(SHACLShape):
@@ -186,6 +230,8 @@ class SHACLNodeShape(SHACLShape):
         super().__init__(rdf_shacl_resource=owl_shacl_class)
     
     def serialise(self):
+        shacl_graph = self.shacl_graph
+        
         relevant_shacl_property_shapes = self.__get_relevant_property_shapes()
         if len(relevant_shacl_property_shapes) == 0:
             return
@@ -197,8 +243,25 @@ class SHACLNodeShape(SHACLShape):
         self.shacl_graph.add((shacl_shape, SH.targetClass, self.rdf_shacl_resource.iri))
         
         for relevant_restriction in relevant_shacl_property_shapes:
-            self.shacl_graph.add(
-                (shacl_shape, SH.property, SHACLPropertyShape.serialisation_register[relevant_restriction]))
+            if self.__use_inverse_restriction(relevant_restriction):
+                straight_property_shape = SHACLPropertyShape.serialisation_register[relevant_restriction]
+                inverse_straight_property_shape = SHACLPropertyShape.inverse_serialisation_register[
+                    relevant_restriction]
+                alternative_paths_bnode = BNode()
+                listItem1 = BNode()
+                shacl_graph.add((alternative_paths_bnode, RDF.first, straight_property_shape))
+                shacl_graph.add((alternative_paths_bnode, RDF.rest, listItem1))
+                shacl_graph.add((listItem1, RDF.first, inverse_straight_property_shape))
+                shacl_graph.add((listItem1, RDF.rest, RDF.nil))
+                # print(shacl_graph.serialize())
+                shacl_graph.add((shacl_shape, URIRef(str(SH) + 'or'), alternative_paths_bnode))
+                # print(shacl_graph.serialize())
+            else:
+                self.shacl_graph.add(
+                    (shacl_shape, SH.property, SHACLPropertyShape.serialisation_register[relevant_restriction]))
+    
+    def __use_inverse_restriction(self, relevant_restriction) -> bool:
+        return relevant_restriction in  SHACLPropertyShape.inverse_serialisation_register
     
     def __get_relevant_property_shapes(self) -> set:
         relevant_shacl_property_shapes = set()
@@ -243,8 +306,6 @@ class SHACLNodeShape(SHACLShape):
             return filtered_out_restrictions
         
         return SHACLNodeShape.filter_out_owl_restrictions(unfiltered_restrictions=filtered_out_restrictions)
-        
-        
     
     def __str__(self):
         return self.rdf_shacl_resource.__str__()
@@ -258,7 +319,6 @@ def __process_node(node: Node, ontology_graph: Graph) -> RDFSHACLResource:
         return __process_bnode(bnode=node, ontology_graph=ontology_graph)
     if isinstance(node, URIRef):
         return __process_iri(iri=node, ontology_graph=ontology_graph)
-    v = 0
 
 
 def __process_bnode(bnode: BNode, ontology_graph: Graph) -> RDFSHACLResource:
@@ -467,12 +527,12 @@ def shacl(input_owl_path: str, output_shacl_path: str):
 
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description='Collects all ontologies imported from input ontology')
-    parser.add_argument('--input_owl', help='Path to input ontology', metavar='IN_ONT')
-    parser.add_argument('--output_shacl', help='Path to ontology mapping file', metavar='OUT_SHACL')
-    args = parser.parse_args()
-
-    shacl(input_owl_path=args.input_owl, output_shacl_path=args.output_shacl)
+    # parser = argparse.ArgumentParser(description='Collects all ontologies imported from input ontology')
+    # parser.add_argument('--input_owl', help='Path to input ontology', metavar='IN_ONT')
+    # parser.add_argument('--output_shacl', help='Path to ontology mapping file', metavar='OUT_SHACL')
+    # args = parser.parse_args()
+    #
+    # shacl(input_owl_path=args.input_owl, output_shacl_path=args.output_shacl)
     
-    # shacl(input_owl_path='../resources/idmp/ISO/ISO11238-Substances-Merged.ttl',
-    #       output_shacl_path='/Users/pawel.garbacz/Documents/edmc/github/edmc/tools/shacl/ISO11238-Substances_SHACL.ttl')
+    shacl(input_owl_path='../resources/idmp/ISO/ISO11238-Substances-Merged.ttl',
+          output_shacl_path='/Users/pawel.garbacz/Documents/edmc/github/edmc/tools/shacl/ISO11238-Substances_SHACL.ttl')
