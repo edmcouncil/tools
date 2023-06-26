@@ -11,8 +11,8 @@ from tqdm import tqdm
 from wikibase_api import Wikibase
 
 WIKIBASE_ITEM_TYPE = 'wikibase-item'
-WIKIBASE_PROPERTY_TYPE = 'wikibase-item'
-WIKIBASE_URL_TYPE = 'wikibase-url'
+WIKIBASE_PROPERTY_TYPE = 'wikibase-property'
+WIKIBASE_URL_TYPE = 'url'
 WIKIBASE_STRING_TYPE = 'string'
 
 
@@ -35,20 +35,20 @@ class TransformationConfiguration:
         self.rdf_types_to_wiki_datatypes_map = \
             {
                 XSD.anyURI: WIKIBASE_URL_TYPE,
-                RDF.List: WIKIBASE_PROPERTY_TYPE,
-                RDF.Bag: WIKIBASE_PROPERTY_TYPE,
-                RDF.Alt: WIKIBASE_PROPERTY_TYPE,
+                # RDF.List: WIKIBASE_PROPERTY_TYPE,
+                # RDF.Bag: WIKIBASE_PROPERTY_TYPE,
+                # RDF.Alt: WIKIBASE_PROPERTY_TYPE,
                 RDF.Property: WIKIBASE_PROPERTY_TYPE,
                 RDFS.Class: WIKIBASE_ITEM_TYPE,
                 RDFS.Literal: WIKIBASE_STRING_TYPE,
-                RDFS.Container: WIKIBASE_PROPERTY_TYPE,
+                # RDFS.Container: WIKIBASE_PROPERTY_TYPE,
                 RDFS.Resource: WIKIBASE_STRING_TYPE,
                 RDFS.Datatype: WIKIBASE_STRING_TYPE,
                 OWL.Ontology: WIKIBASE_ITEM_TYPE,
                 OWL.Class: WIKIBASE_ITEM_TYPE,
                 OWL.ObjectProperty: WIKIBASE_PROPERTY_TYPE,
-                OWL.DatatypeProperty: WIKIBASE_STRING_TYPE,
-                OWL.AnnotationProperty: WIKIBASE_STRING_TYPE,
+                OWL.DatatypeProperty: WIKIBASE_PROPERTY_TYPE,
+                OWL.AnnotationProperty: WIKIBASE_PROPERTY_TYPE,
                 OWL.Thing: WIKIBASE_ITEM_TYPE
             }
         
@@ -384,7 +384,7 @@ def get_wiki_datatype_for_property(property: URIRef, scope: TransformationScope)
         return wiki_datatype
     
     if property in scope.object_properties:
-        return scope.config.rdf_types_to_wiki_datatypes_map[OWL.ObjectProperty]
+        return WIKIBASE_ITEM_TYPE
 
     return WIKIBASE_STRING_TYPE
 
@@ -403,6 +403,14 @@ def try_to_get_wiki_datatype_from_rdf_types(rdf_types: set) -> str:
         return list(wiki_datatype_candidates)[0]
     
     return str()
+
+
+# def try_to_get_wiki_datatype_from_rdf(rdf_resources: set) -> str:
+#     for property_range in rdf_resources:
+#         if property_range in scope.config.rdf_types_to_wiki_datatypes_map:
+#             return WIKIBASE_ITEM_TYPE
+#
+#     return str()
 
 
 def process_owl_restriction(owl_restriction: Node, scope: TransformationScope):

@@ -24,4 +24,4 @@ def check_catalog_file(ontology_location: str):
             print('UNREFERENCED', relative_file)
     
     
-check_catalog_file('/Users/pawel.garbacz/Documents/edmc/github/edmc/fibo')
+check_catalog_file('/Users/pawel.garbacz/idmp')
