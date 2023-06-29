@@ -80,7 +80,7 @@ terms:abstract
 	a owl:AnnotationProperty ;
 	rdfs:subPropertyOf terms:description ;
 	rdfs:label "abstract" ;
-	rdfs:isDefinedBy terms:abstract ;
+	rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
 	skos:definition "summary of the resource" ;
 	AnnotationVocabulary:usageNote "This annotation is typically used to describe an artifact such as a controlled vocabulary, ontology, or other similar resource." ;
 	.
@@ -88,7 +88,7 @@ terms:abstract
 terms:contributor
 	a owl:AnnotationProperty ;
 	rdfs:label "contributor" ;
-	rdfs:isDefinedBy terms:contributor ;
+	rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
 	skos:definition "party that has made contributions to the resource" ;
 	.
 
@@ -96,7 +96,7 @@ terms:creator
 	a owl:AnnotationProperty ;
 	rdfs:subPropertyOf terms:contributor ;
 	rdfs:label "creator" ;
-	rdfs:isDefinedBy terms:creator ;
+	rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
 	skos:definition "party that originated the resource" ;
 	.
 
@@ -104,14 +104,14 @@ terms:description
 	a owl:AnnotationProperty ;
 	rdfs:subPropertyOf skos:note ;
 	rdfs:label "description" ;
-	rdfs:isDefinedBy terms:description ;
+	rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
 	skos:definition "account of the resource" ;
 	.
 
 terms:issued
 	a owl:AnnotationProperty ;
 	rdfs:label "issued" ;
-	rdfs:isDefinedBy terms:issued ;
+	rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
 	skos:definition "date of formal issuance of the resource" ;
 	AnnotationVocabulary:usageNote "This annotation is typically used to describe an artifact such as a controlled vocabulary, ontology, or other similar resource." ;
 	.
@@ -119,7 +119,7 @@ terms:issued
 terms:license
 	a owl:AnnotationProperty ;
 	rdfs:label "license" ;
-	rdfs:isDefinedBy terms:license ;
+	rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
 	skos:definition "legal document giving official permission to do something with the resource" ;
 	AnnotationVocabulary:usageNote "This annotation is typically used to describe an artifact such as a controlled vocabulary, ontology, or other similar resource." ;
 	.
@@ -127,14 +127,14 @@ terms:license
 terms:modified
 	a owl:AnnotationProperty ;
 	rdfs:label "modified" ;
-	rdfs:isDefinedBy terms:modified ;
+	rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
 	skos:definition "date on which the resource was most recently revised" ;
 	.
 
 terms:publisher
 	a owl:AnnotationProperty ;
 	rdfs:label "publisher" ;
-	rdfs:isDefinedBy terms:publisher ;
+	rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
 	skos:definition "primary party responsible for making the resource available" ;
 	AnnotationVocabulary:usageNote "This annotation is typically used to describe an artifact such as a controlled vocabulary, ontology, or other similar resource." ;
 	.
@@ -142,14 +142,14 @@ terms:publisher
 terms:references
 	a owl:AnnotationProperty ;
 	rdfs:label "references" ;
-	rdfs:isDefinedBy terms:references ;
+	rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
 	skos:definition "indicates a related resource that is referenced, cited, or otherwise pointed to by the described resource" ;
 	.
 
 terms:rights
 	a owl:AnnotationProperty ;
 	rdfs:label "rights" ;
-	rdfs:isDefinedBy terms:rights ;
+	rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
 	skos:definition "provides nformation about rights held in and over the resource" ;
 	AnnotationVocabulary:usageNote "This annotation is typically used to describe an artifact such as a controlled vocabulary, ontology, or other similar resource." ;
 	.
@@ -157,7 +157,7 @@ terms:rights
 terms:source
 	a owl:AnnotationProperty ;
 	rdfs:label "source" ;
-	rdfs:isDefinedBy terms:source ;
+	rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
 	skos:definition "related resource from which the described resource is derived" ;
 	AnnotationVocabulary:explanatoryNote "The intent is to provide a user with a reference as to how the thing being annotated was derived or arrived at. The source can be a URL to a standard, common dictionary (e.g., Collins, Merriam-Webster, Oxford), a formal reference such as an ISO standard, or similar reference. Or it can be a short description of a source from which the entity being annotated was derived." ;
 	.
@@ -165,7 +165,7 @@ terms:source
 terms:title
 	a owl:AnnotationProperty ;
 	rdfs:label "title" ;
-	rdfs:isDefinedBy terms:title ;
+	rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
 	skos:definition "formal name given to the resource (artifact, such as a controlled vocabulary or ontology)" ;
 	AnnotationVocabulary:usageNote "This annotation is typically used to describe an artifact such as a controlled vocabulary, document, ontology, or other similar resource." ;
 	.
@@ -185,15 +185,7 @@ rdf:langString
 	skos:note "This datatype declaration is included to support language-tagged strings, as defined in RDF 1.1. The rdf:langString datatype has not been incorporated directly in OWL 2 to date, and so it must be declared in order to enable its inclusion in the declaration of the Text datatype. Language-tagged strings must be well-formed according to section 2.2.9 of [BCP47]." ;
 	.
 
-rdf:nodeId
-	a owl:AnnotationProperty ;
-	.
-
 rdfs:altLabel
-	a owl:AnnotationProperty ;
-	.
-
-owl:maxQualifiedCardinality
 	a owl:AnnotationProperty ;
 	.
 
@@ -1630,7 +1622,9 @@ skos:scopeNote
 		;
 	rdfs:isDefinedBy <https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/AmlodipineExample/> ;
 	ISO11615-MedicinalProducts:hasMedicalCondition [
-		rdf:nodeId "MedDRAAnginaPectorisId" ;
+		a <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-RegistrationAuthorities/MedDRAMedicalConditionIdentifier> ;
+		rdfs:label "MedDRA id for angina pectoris" ;
+		TextDatatype:hasTextValue "10002383" ;
 	] ;
 	ISO11615-MedicinalProducts:hasTherapeuticIndicationText "indicated for the treatment of stable angina" ;
 	ISO11615-MedicinalProducts:isTherapeuticIndicationFor <https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/AmlodipineExample/AmlodipineEMCMedicinalProduct> ;
@@ -1643,7 +1637,9 @@ skos:scopeNote
 		;
 	rdfs:isDefinedBy <https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/AmlodipineExample/> ;
 	ISO11615-MedicinalProducts:hasMedicalCondition [
-		rdf:nodeId "MedDRAHypertensionId" ;
+		a <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-RegistrationAuthorities/MedDRAMedicalConditionIdentifier> ;
+		rdfs:label "MedDRA id for hypertension" ;
+		TextDatatype:hasTextValue "10020772" ;
 	] ;
 	ISO11615-MedicinalProducts:hasTherapeuticIndicationText "indicated for the treatment of hypertension" ;
 	ISO11615-MedicinalProducts:isTherapeuticIndicationFor <https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/AmlodipineExample/AmlodipineEMCMedicinalProduct> ;
@@ -2015,42 +2011,6 @@ skos:scopeNote
 	Identifiers:identifies <https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/AmlodipineExample/NorvascMarketingAuthorizationInGermany> ;
 	RegistrationAuthorities:isRegisteredBy <https://spec.pistoiaalliance.org/idmp/ontology/ISO/EuropeanJurisdiction/EuropeanRegulatoryAgencies/EuropeanMedicinesAgencyAsMedicinesRegulatoryAgency> ;
 	TextDatatype:hasTextValue "EMEA/H/A-30/1288" ;
-	.
-
-<https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/AmlodipineExample/MedDRA-AnginaPectoris>
-	a
-		owl:NamedIndividual ,
-		owl:Class
-		;
-	rdfs:label "Angina pectoris" ;
-	rdfs:isDefinedBy <https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/AmlodipineExample/> ;
-	skos:definition "MedDRA concept of angina pectoris medical condition" ;
-	Identifiers:isIdentifiedBy [
-		a <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-RegistrationAuthorities/MedDRAMedicalConditionIdentifier> ;
-		rdfs:label "10002383" ;
-		rdf:nodeId "MedDRAAnginaPectorisId" ;
-		skos:definition "MedDRA identifier for angina pectoris medical condition" ;
-		RegistrationAuthorities:isRegisteredIn <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-RegistrationAuthorities/MedicalDictionaryForRegulatoryActivities> ;
-		TextDatatype:hasTextValue "10002383" ;
-	] ;
-	.
-
-<https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/AmlodipineExample/MedDRA-Hypertension>
-	a
-		owl:NamedIndividual ,
-		owl:Class
-		;
-	rdfs:label "Hypertension" ;
-	rdfs:isDefinedBy <https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/AmlodipineExample/> ;
-	skos:definition "MedDRA concept of hypertension medical condition" ;
-	Identifiers:isIdentifiedBy [
-		a <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-RegistrationAuthorities/MedDRAMedicalConditionIdentifier> ;
-		rdfs:label "10020772" ;
-		rdf:nodeId "MedDRAHypertensionId" ;
-		skos:definition "MedDRA identifier for hypertension medical condition" ;
-		RegistrationAuthorities:isRegisteredIn <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-RegistrationAuthorities/MedicalDictionaryForRegulatoryActivities> ;
-		TextDatatype:hasTextValue "10020772" ;
-	] ;
 	.
 
 <https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/AmlodipineExample/Norvasc-ManufacturedItem>
@@ -6136,7 +6096,6 @@ ISO11238-Substances:AdjuvantRole
 ISO11238-Substances:AgentModificationMethod
 	a owl:Class ;
 	rdfs:subClassOf
-		<http://org.semanticweb.owlapi/error#Error4> ,
 		ISO11238-Substances:ModificationMethod ,
 		[
 			a owl:Restriction ;
@@ -6148,6 +6107,12 @@ ISO11238-Substances:AgentModificationMethod
 			owl:onProperty ISO11238-Substances:hasAmount ;
 			owl:onClass ISO11238-Substances:Amount ;
 			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+		] ,
+		[
+			a owl:Restriction ;
+			owl:onProperty Collections:hasMethod ;
+			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:onDataRange xsd:string ;
 		] ,
 		[
 			a owl:Restriction ;
@@ -6450,6 +6415,10 @@ ISO11238-Substances:ChemicalSubstance
 	skos:note "Chemical substances are generally considered 'small' molecules which have associated salts, solvates or ions and may be described using a single definitive or representative structure." ;
 	ISOConformanceAnnotations:hasConformanceToISOLevel ISOConformanceAnnotations:ConformanceToISOLevel-NameAndAnnotationConformant ;
 	AnnotationVocabulary:directSource "ISO 11238:2018 Health informatics - Identification of medicinal products (IDMP) - Data elements and structures for the unique identification and exchange of regulated information on substances, clause 3.11" ;
+	AnnotationVocabulary:synonym
+		"simple chemical" ,
+		"simple chemical substance"
+		;
 	.
 
 ISO11238-Substances:ColorIngredient
@@ -6635,6 +6604,229 @@ ISO11238-Substances:FlavorIngredient
 	skos:prefLabel "flavor ingredient"@en-US ;
 	.
 
+ISO11238-Substances:Gene
+	a owl:Class ;
+	rdfs:subClassOf
+		Documents:Specification ,
+		[
+			a owl:Restriction ;
+			owl:onProperty Identifiers:isIdentifiedBy ;
+			owl:onClass ISO11238-Substances:GeneIdentifier ;
+			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+		] ,
+		[
+			a owl:Restriction ;
+			owl:onProperty Designators:hasName ;
+			owl:onClass ISO11238-Substances:GeneName ;
+			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+		] ,
+		[
+			a owl:Restriction ;
+			owl:onProperty Designators:hasName ;
+			owl:onClass ISO11238-Substances:GeneSequenceOrigin ;
+			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+		] ,
+		[
+			a owl:Restriction ;
+			owl:onProperty Designators:isDescribedBy ;
+			owl:onClass ISO11238-Substances:ReferenceSource ;
+			owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
+		]
+		;
+	rdfs:label "gene" ;
+	rdfs:isDefinedBy <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/> ;
+	rdfs:seeAlso <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C16612> ;
+	skos:definition "functional unit of heredity which occupies a specific position on a particular chromosome and serves as the template for a product that contributes to a phenotype or a biological function" ;
+	skos:note "Gene information should only be captured for proteins and nucleic acids. It does not apply for chemicals, polymers or structurally diverse substances. It is only used as reference information and refers to the gene that is the origin of the substance (typically a protein). Genes may also be substances and would be described as nucleic acids." ;
+	ISO11238-Substances:hasConformanceLevel ISO11238-Substances:ConformanceLevel-Conditional ;
+	AnnotationVocabulary:adaptedFrom
+		"ISO 11238:2018 Health informatics - Identification of medicinal products (IDMP) - Data elements and structures for the unique identification and exchange of regulated information on substances, Figure 16" ,
+		"ISO/TS 19844:2018(E) Health informatics - Identification of medicinal products (IDMP) - Implementation guidelines for ISO 11238 for data elements and structures for the unique identification and exchange of regulated information on substances, clause 6.6.5 and Figure 8"
+		;
+	.
+
+ISO11238-Substances:GeneElement
+	a owl:Class ;
+	rdfs:subClassOf
+		Documents:Specification ,
+		[
+			a owl:Restriction ;
+			owl:onProperty Identifiers:isIdentifiedBy ;
+			owl:onClass ISO11238-Substances:GeneElementIdentifier ;
+			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+		] ,
+		[
+			a owl:Restriction ;
+			owl:onProperty Designators:hasName ;
+			owl:onClass ISO11238-Substances:GeneElementName ;
+			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+		] ,
+		[
+			a owl:Restriction ;
+			owl:onProperty Classifiers:isClassifiedBy ;
+			owl:onClass ISO11238-Substances:GeneElementType ;
+			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+		] ,
+		[
+			a owl:Restriction ;
+			owl:onProperty Designators:isDescribedBy ;
+			owl:onClass ISO11238-Substances:ReferenceSource ;
+			owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
+		]
+		;
+	rdfs:label "gene element" ;
+	rdfs:isDefinedBy <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/> ;
+	skos:definition "something that is an element of or related to a gene" ;
+	skos:note "Gene elements should be captured for genes that are used in gene therapy." ;
+	ISO11238-Substances:hasConformanceLevel ISO11238-Substances:ConformanceLevel-Conditional ;
+	AnnotationVocabulary:adaptedFrom
+		"ISO 11238:2018 Health informatics - Identification of medicinal products (IDMP) - Data elements and structures for the unique identification and exchange of regulated information on substances, Figure 16" ,
+		"ISO/TS 19844:2018(E) Health informatics - Identification of medicinal products (IDMP) - Implementation guidelines for ISO 11238 for data elements and structures for the unique identification and exchange of regulated information on substances, clause 6.6.6 and Figure 8"
+		;
+	.
+
+ISO11238-Substances:GeneElementIdentifier
+	a owl:Class ;
+	rdfs:subClassOf
+		Identifiers:Identifier ,
+		[
+			a owl:Restriction ;
+			owl:onProperty Identifiers:identifies ;
+			owl:someValuesFrom ISO11238-Substances:GeneElement ;
+		]
+		;
+	rdfs:label "gene element identifier" ;
+	rdfs:isDefinedBy <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/> ;
+	skos:definition "unique identifier for the gene element" ;
+	ISO11238-Substances:hasConformanceLevel ISO11238-Substances:ConformanceLevel-Conditional ;
+	ISO11238-Substances:hasValuesAllowed "A unique identifier will be associated with each gene element." ;
+	ISO21090-HarmonizedDatatypes:isEncodedAs ISO21090-HarmonizedDatatypes:DatatypeCode-II ;
+	AnnotationVocabulary:adaptedFrom
+		"ISO 11238:2018 Health informatics - Identification of medicinal products (IDMP) - Data elements and structures for the unique identification and exchange of regulated information on substances, Figure 16" ,
+		"ISO/TS 19844:2018(E) Health informatics - Identification of medicinal products (IDMP) - Implementation guidelines for ISO 11238 for data elements and structures for the unique identification and exchange of regulated information on substances, clause 6.6.5.2 and Figure 8"
+		;
+	.
+
+ISO11238-Substances:GeneElementName
+	a owl:Class ;
+	rdfs:subClassOf
+		ContextualDesignators:ContextualName ,
+		[
+			a owl:Restriction ;
+			owl:onProperty Designators:isNameOf ;
+			owl:someValuesFrom ISO11238-Substances:GeneElement ;
+		]
+		;
+	rdfs:label "gene element name" ;
+	rdfs:isDefinedBy <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/> ;
+	skos:definition "specific name given for a gene element" ;
+	skos:example "SV40 Enhancer" ;
+	ISO11238-Substances:hasBusinessRules "Implicit from the Gene Element ID from the applicable Gene element controlled vocabulary." ;
+	ISO11238-Substances:hasConformanceLevel ISO11238-Substances:ConformanceLevel-Conditional ;
+	ISO11238-Substances:hasValuesAllowed "A unique name will be associated with each gene element." ;
+	ISO21090-HarmonizedDatatypes:isEncodedAs ISO21090-HarmonizedDatatypes:DatatypeCode-ST ;
+	AnnotationVocabulary:adaptedFrom
+		"ISO 11238:2018 Health informatics - Identification of medicinal products (IDMP) - Data elements and structures for the unique identification and exchange of regulated information on substances, Figure 16" ,
+		"ISO/TS 19844:2018(E) Health informatics - Identification of medicinal products (IDMP) - Implementation guidelines for ISO 11238 for data elements and structures for the unique identification and exchange of regulated information on substances, clause 6.6.5.3 and Figure 8"
+		;
+	.
+
+ISO11238-Substances:GeneElementType
+	a owl:Class ;
+	rdfs:subClassOf
+		Classifiers:Classifier ,
+		<https://www.omg.org/spec/Commons/CodesAndCodeSets/CodeElement> ,
+		[
+			a owl:Restriction ;
+			owl:onProperty Identifiers:classifies ;
+			owl:someValuesFrom ISO11238-Substances:GeneElement ;
+		]
+		;
+	rdfs:label "gene element type" ;
+	rdfs:isDefinedBy <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/> ;
+	skos:definition "classifier for the gene element" ;
+	skos:example "enhancer, promoter, silencer, terminator, repressor, epimerase, polymerase linker, transferase, capsule transporter, synthase, synthetase" ;
+	skos:note "This should be captured for all genes that are transduced into cells and are intended to be expressed." ;
+	ISO11238-Substances:hasConformanceLevel ISO11238-Substances:ConformanceLevel-Conditional ;
+	ISO21090-HarmonizedDatatypes:isEncodedAs ISO21090-HarmonizedDatatypes:DatatypeCode-CD ;
+	AnnotationVocabulary:adaptedFrom
+		"ISO 11238:2018 Health informatics - Identification of medicinal products (IDMP) - Data elements and structures for the unique identification and exchange of regulated information on substances, Figure 16" ,
+		"ISO/TS 19844:2018(E) Health informatics - Identification of medicinal products (IDMP) - Implementation guidelines for ISO 11238 for data elements and structures for the unique identification and exchange of regulated information on substances, clause 6.6.5.2 and Figure 8"
+		;
+	.
+
+ISO11238-Substances:GeneIdentifier
+	a owl:Class ;
+	rdfs:subClassOf
+		Identifiers:Identifier ,
+		[
+			a owl:Restriction ;
+			owl:onProperty Identifiers:identifies ;
+			owl:someValuesFrom ISO11238-Substances:Gene ;
+		]
+		;
+	rdfs:label "gene identifier" ;
+	rdfs:isDefinedBy <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/> ;
+	skos:definition "unique identifier associated with the gene of origin" ;
+	skos:example "YP_299723.1" ;
+	ISO11238-Substances:hasConformanceLevel ISO11238-Substances:ConformanceLevel-Conditional ;
+	ISO11238-Substances:hasValuesAllowed "Typically, from the NCBI Gene database." ;
+	ISO21090-HarmonizedDatatypes:isEncodedAs ISO21090-HarmonizedDatatypes:DatatypeCode-CD ;
+	AnnotationVocabulary:adaptedFrom
+		"ISO 11238:2018 Health informatics - Identification of medicinal products (IDMP) - Data elements and structures for the unique identification and exchange of regulated information on substances, Figure 16" ,
+		"ISO/TS 19844:2018(E) Health informatics - Identification of medicinal products (IDMP) - Implementation guidelines for ISO 11238 for data elements and structures for the unique identification and exchange of regulated information on substances, clause 6.6.5.2 and Figure 8"
+		;
+	.
+
+ISO11238-Substances:GeneName
+	a owl:Class ;
+	rdfs:subClassOf
+		ContextualDesignators:ContextualName ,
+		[
+			a owl:Restriction ;
+			owl:onProperty Designators:isNameOf ;
+			owl:someValuesFrom ISO11238-Substances:Gene ;
+		]
+		;
+	rdfs:label "gene name" ;
+	rdfs:isDefinedBy <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/> ;
+	skos:definition "complete name given for a gene" ;
+	skos:example "hIL-10 gene" ;
+	skos:note "Every gene which has an ID should also have a name." ;
+	ISO11238-Substances:hasBusinessRules "Implicit from the Gene ID from the applicable Gene database." ;
+	ISO11238-Substances:hasConformanceLevel ISO11238-Substances:ConformanceLevel-Conditional ;
+	ISO21090-HarmonizedDatatypes:isEncodedAs ISO21090-HarmonizedDatatypes:DatatypeCode-ST ;
+	AnnotationVocabulary:adaptedFrom
+		"ISO 11238:2018 Health informatics - Identification of medicinal products (IDMP) - Data elements and structures for the unique identification and exchange of regulated information on substances, Figure 16" ,
+		"ISO/TS 19844:2018(E) Health informatics - Identification of medicinal products (IDMP) - Implementation guidelines for ISO 11238 for data elements and structures for the unique identification and exchange of regulated information on substances, clause 6.6.5.3 and Figure 8"
+		;
+	.
+
+ISO11238-Substances:GeneSequenceOrigin
+	a owl:Class ;
+	rdfs:subClassOf
+		ContextualDesignators:ContextualName ,
+		[
+			a owl:Restriction ;
+			owl:onProperty Designators:isNameOf ;
+			owl:someValuesFrom ISO11238-Substances:Gene ;
+		]
+		;
+	rdfs:label "gene sequence origin" ;
+	rdfs:isDefinedBy <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/> ;
+	skos:definition "common name for the organism from which the final gene sequence originated" ;
+	skos:example "Human, Bovine, Human, Humanized, Mouse-Human Chimeric, Mouse, Bacterial, Viral, Plant, Arachnid" ;
+	skos:note "For monoclonal antibodies, the gene sequence origin should be used to capture species from which the antibody was derived." ;
+	ISO11238-Substances:hasBusinessRules "The provision of a Gene Sequence Origin applies primarily to proteins." ;
+	ISO11238-Substances:hasConformanceLevel ISO11238-Substances:ConformanceLevel-Conditional ;
+	ISO11238-Substances:hasValuesAllowed "Typically, from the NCBI Gene database." ;
+	ISO21090-HarmonizedDatatypes:isEncodedAs ISO21090-HarmonizedDatatypes:DatatypeCode-CD ;
+	AnnotationVocabulary:adaptedFrom
+		"ISO 11238:2018 Health informatics - Identification of medicinal products (IDMP) - Data elements and structures for the unique identification and exchange of regulated information on substances, Figure 16" ,
+		"ISO/TS 19844:2018(E) Health informatics - Identification of medicinal products (IDMP) - Implementation guidelines for ISO 11238 for data elements and structures for the unique identification and exchange of regulated information on substances, clause 6.6.5.3 and Figure 8"
+		;
+	.
+
 ISO11238-Substances:Hydrate
 	a owl:Class ;
 	rdfs:subClassOf ISO11238-Substances:Substance ;
@@ -6652,7 +6844,7 @@ ISO11238-Substances:ISO11238-ClassificationScheme
 	rdfs:label "ISO 11238 classification scheme" ;
 	rdfs:isDefinedBy <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/> ;
 	rdfs:seeAlso "https://www.iso.org/standard/71965.html"^^xsd:anyURI ;
-	skos:definition "system for classifying substances and substance-related information specified in the ISO 11238 specification" ;
+	skos:definition "system for classifying substances and substance-related information that is directly specified in the ISO 11238 specification" ;
 	.
 
 ISO11238-Substances:ISO19844-CodeSet
@@ -6663,7 +6855,7 @@ ISO11238-Substances:ISO19844-CodeSet
 	rdfs:label "ISO 19844 code set" ;
 	rdfs:isDefinedBy <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/> ;
 	rdfs:seeAlso "https://www.iso.org/standard/71965.html"^^xsd:anyURI ;
-	skos:definition "set of controlled vocabularies and codes for reporting of substance-related information specified in the ISO/TS 19844 guidelines" ;
+	skos:definition "set of controlled vocabularies and codes for reporting of substance-related information that are directly specified in the ISO/TS 19844 guidelines" ;
 	.
 
 ISO11238-Substances:InactiveIngredient
@@ -6759,6 +6951,31 @@ ISO11238-Substances:Ingredient
 ISO11238-Substances:IngredientRole
 	a owl:Class ;
 	owl:deprecated "true"^^xsd:boolean ;
+	.
+
+ISO11238-Substances:InteractionType
+	a owl:Class ;
+	rdfs:subClassOf
+		Classifiers:Classifier ,
+		<https://www.omg.org/spec/Commons/CodesAndCodeSets/CodeElement> ,
+		[
+			a owl:Restriction ;
+			owl:onProperty Classifiers:classifies ;
+			owl:onClass ISO11238-Substances:SubstrateTargetInteraction ;
+			owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
+		]
+		;
+	rdfs:label "interaction type" ;
+	rdfs:isDefinedBy <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/> ;
+	skos:definition "classifier for the kind(s) of interactions that may occur between a substance and its target" ;
+	skos:example "AGONIST, INDUCER, INHIBITOR, PARTIAL ANTAGONIST, SUBSTRATE, PRODUCT" ;
+	skos:note "A controlled vocabulary should be developed to capture these types of interactions. The interaction type should be captured for all substrate-target interactions. A substance can have multiple types of interactions." ;
+	ISO11238-Substances:hasConformanceLevel ISO11238-Substances:ConformanceLevel-Conditional ;
+	ISO21090-HarmonizedDatatypes:isEncodedAs ISO21090-HarmonizedDatatypes:DatatypeCode-CD ;
+	AnnotationVocabulary:adaptedFrom
+		"ISO 11238:2018 Health informatics - Identification of medicinal products (IDMP) - Data elements and structures for the unique identification and exchange of regulated information on substances, Figure 16" ,
+		"ISO/TS 19844:2018(E) Health informatics - Identification of medicinal products (IDMP) - Implementation guidelines for ISO 11238 for data elements and structures for the unique identification and exchange of regulated information on substances, clause 6.6.4.3"
+		;
 	.
 
 ISO11238-Substances:Isotope
@@ -7253,7 +7470,8 @@ ISO11238-Substances:ModificationMethodType
 ISO11238-Substances:ModificationMethodType-Agent
 	a
 		owl:NamedIndividual ,
-		ISO11238-Substances:ModificationMethodType
+		ISO11238-Substances:ModificationMethodType ,
+		<https://www.omg.org/spec/Commons/CodesAndCodeSets/CodeElement>
 		;
 	rdfs:label "modification method type - agent" ;
 	terms:source
@@ -7269,10 +7487,9 @@ ISO11238-Substances:ModificationMethodType-Agent
 ISO11238-Substances:ModificationMethodType-Physical
 	a
 		owl:NamedIndividual ,
-		owl:Class ,
-		ISO11238-Substances:ModificationMethodType
+		ISO11238-Substances:ModificationMethodType ,
+		<https://www.omg.org/spec/Commons/CodesAndCodeSets/CodeElement>
 		;
-	rdfs:subClassOf <https://www.omg.org/spec/Commons/CodesAndCodeSets/CodeElement> ;
 	rdfs:label "modification method type - physical" ;
 	terms:source
 		"ISO 11238:2018 Health informatics - Identification of medicinal products (IDMP) - Data elements and structures for the unique identification and exchange of regulated information on substances, clause 7.2.3" ,
@@ -7287,10 +7504,9 @@ ISO11238-Substances:ModificationMethodType-Physical
 ISO11238-Substances:ModificationMethodType-Structural
 	a
 		owl:NamedIndividual ,
-		owl:Class ,
-		ISO11238-Substances:ModificationMethodType
+		ISO11238-Substances:ModificationMethodType ,
+		<https://www.omg.org/spec/Commons/CodesAndCodeSets/CodeElement>
 		;
-	rdfs:subClassOf <https://www.omg.org/spec/Commons/CodesAndCodeSets/CodeElement> ;
 	rdfs:label "modification method type - structural" ;
 	terms:source
 		"ISO 11238:2018 Health informatics - Identification of medicinal products (IDMP) - Data elements and structures for the unique identification and exchange of regulated information on substances, clause 7.2.3" ,
@@ -7397,6 +7613,12 @@ ISO11238-Substances:Moiety
 			a owl:Restriction ;
 			owl:onProperty ISO11238-Substances:hasDefiningStereochemistry ;
 			owl:allValuesFrom ISO11238-Substances:Stereochemistry ;
+		] ,
+		[
+			a owl:Restriction ;
+			owl:onProperty ISO11238-Substances:hasReferenceInformation ;
+			owl:onClass ISO11238-Substances:ReferenceInformation ;
+			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
 		] ,
 		[
 			a owl:Restriction ;
@@ -8218,7 +8440,7 @@ ISO11238-Substances:Parameter
 		"ISO/TS 19844:2018(E) Health informatics - Identification of medicinal products (IDMP) - Implementation guidelines for ISO 11238 for data elements and structures for the unique identification and exchange of regulated information on substances, clause 6.10.6.3, 7.6.4.3, 8.1.7.7 and figures 20, 34, 35, 37"
 		;
 	rdfs:isDefinedBy <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/> ;
-	skos:definition "a named expression of a numeric, textual or amount value or range that is input to some method or function, or states metadata or qualifiers about some characteristic" ;
+	skos:definition "named expression of a numeric, textual or amount value or range that is input to some method or function, or states metadata or qualifiers about some characteristic" ;
 	.
 
 ISO11238-Substances:ParameterName
@@ -8349,6 +8571,7 @@ ISO11238-Substances:PhysicalModificationMethod
 		;
 	rdfs:isDefinedBy <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/> ;
 	skos:definition "method of modification where no new covalent bonds are formed" ;
+	ISOConformanceAnnotations:hasConformanceToISOLevel ISOConformanceAnnotations:ConformanceToISOLevel-Extension ;
 	.
 
 ISO11238-Substances:PhysicalSubstance
@@ -8359,6 +8582,12 @@ ISO11238-Substances:PhysicalSubstance
 			a owl:Restriction ;
 			owl:onProperty ISO11238-Substances:hasOpticalActivity ;
 			owl:onClass ISO11238-Substances:OpticalActivity ;
+			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+		] ,
+		[
+			a owl:Restriction ;
+			owl:onProperty ISO11238-Substances:hasReferenceInformation ;
+			owl:onClass ISO11238-Substances:ReferenceInformation ;
 			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
 		] ,
 		[
@@ -8578,6 +8807,74 @@ ISO11238-Substances:Radionuclide
 	AnnotationVocabulary:adaptedFrom "ISO 11238:2018 Health informatics - Identification of medicinal products (IDMP) - Data elements and structures for the unique identification and exchange of regulated information on substances, section 7.2.2 and figure 14" ;
 	.
 
+ISO11238-Substances:ReferenceInformation
+	a owl:Class ;
+	rdfs:subClassOf
+		Collections:StructuredCollection ,
+		Documents:Reference ,
+		[
+			a owl:Restriction ;
+			owl:onProperty ISO11238-Substances:hasComment ;
+			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:onDataRange xsd:string ;
+		] ,
+		[
+			a owl:Restriction ;
+			owl:onProperty Collections:comprises ;
+			owl:onClass ISO11238-Substances:Gene ;
+			owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
+		] ,
+		[
+			a owl:Restriction ;
+			owl:onProperty Collections:comprises ;
+			owl:onClass ISO11238-Substances:GeneElement ;
+			owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
+		] ,
+		[
+			a owl:Restriction ;
+			owl:onProperty Collections:comprises ;
+			owl:onClass ISO11238-Substances:SubstanceClassifier ;
+			owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
+		] ,
+		[
+			a owl:Restriction ;
+			owl:onProperty Collections:comprises ;
+			owl:onClass ISO11238-Substances:SubstanceRelationship ;
+			owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
+		] ,
+		[
+			a owl:Restriction ;
+			owl:onProperty Collections:comprises ;
+			owl:onClass ISO11238-Substances:Target ;
+			owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
+		] ,
+		[
+			a owl:Restriction ;
+			owl:onProperty ISO11238-Substances:isReferenceInformationFor ;
+			owl:someValuesFrom [
+				a owl:Class ;
+				owl:unionOf (
+					ISO11238-Substances:Moiety
+					ISO11238-Substances:PhysicalSubstance
+					ISO11238-Substances:Substance
+				) ;
+			] ;
+		]
+		;
+	rdfs:label "reference information" ;
+	rdfs:isDefinedBy <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/> ;
+	skos:definition "informative reference details for a substance that may include classification, additional relationships and target information (for active substances)" ;
+	skos:note
+		"Genes from which proteins are derived, target information and codes from code systems also constitute reference information for which the ISO 11238 specification provides a consistent structure to capture and link to a substance. Classification systems such as the WHO ATC and the United States Veterans Administration NDF-RT, which code classification information for substances, are particularly important. Target information is important for monoclonal and polyclonal antibodies and small molecules directed against specific molecular targets." ,
+		"Reference information shall be captured for all types of substances and specified substance group 1." ,
+		"The ISO 11238 standard does not provide any guidance on the classification of pharmacological effects or the determination of the putative targets for any substance or specified substance. It does allow for the capture of such information if available and provided. This information shall not affect the generation of a new unique identifier, i.e. it is not defining."
+		;
+	AnnotationVocabulary:adaptedFrom
+		"ISO 11238:2018 Health informatics - Identification of medicinal products (IDMP) - Data elements and structures for the unique identification and exchange of regulated information on substances, clause 7.2.4 and Figure 16" ,
+		"ISO/TS 19844:2018(E) Health informatics - Identification of medicinal products (IDMP) - Implementation guidelines for ISO 11238 for data elements and structures for the unique identification and exchange of regulated information on substances, clause 6.6 and Figure 8"
+		;
+	.
+
 ISO11238-Substances:ReferenceSource
 	a owl:Class ;
 	rdfs:subClassOf
@@ -8758,8 +9055,7 @@ ISO11238-Substances:ReferenceSourceClass-Web
 ISO11238-Substances:ReferenceSourceDocument
 	a owl:Class ;
 	rdfs:subClassOf
-		Documents:Document ,
-		Documents:Reference ,
+		Documents:ReferenceDocument ,
 		[
 			a owl:Restriction ;
 			owl:onProperty Identifiers:isIdentifiedBy ;
@@ -8927,7 +9223,7 @@ ISO11238-Substances:RegulatoryContext
 ISO11238-Substances:ResidueModified
 	a owl:Class ;
 	rdfs:subClassOf
-		ContextualDesignators:Aspect ,
+		Classifiers:Aspect ,
 		[
 			a owl:Restriction ;
 			owl:onProperty TextDatatype:hasTextValue ;
@@ -9032,10 +9328,7 @@ ISO11238-Substances:ScientificContext
 	.
 
 ISO11238-Substances:SimplifiedMolecularInputLineEntry
-	a
-		owl:AnnotationProperty ,
-		owl:Class
-		;
+	a owl:Class ;
 	rdfs:subClassOf
 		ISO11238-Substances:StructuralRepresentation ,
 		[
@@ -9046,7 +9339,6 @@ ISO11238-Substances:SimplifiedMolecularInputLineEntry
 		;
 	rdfs:label "simplified molecular input line entry" ;
 	terms:source "ISO/TS 19844:2018(E) Health informatics - Identification of medicinal products (IDMP) - Implementation guidelines for ISO 11238 for data elements and structures for the unique identification and exchange of regulated information on substances, clause A.2.3" ;
-	rdfs:domain ISO11238-Substances:MolecularStructure ;
 	rdfs:isDefinedBy <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/> ;
 	skos:definition "specification for an unambiguous linear representation of chemical or molecular structures using ASCII characters" ;
 	skos:note
@@ -9276,7 +9568,7 @@ ISO11238-Substances:SpecifiedSubstanceGroup1
 		"In addition, extended information regarding plasma-derived substances sourced from a specific Cryopoor plasma or Cryoprecipitate flow will be defined as part of Specified Substance Group 1 based on the tests and acceptance criteria of the plasma sourced from a selection of the countries." ,
 		"Solvents used in the preparation of herbal or allergenic extracts, specific marker or signature substances present in materials derived from biological matrices, the physical form of a substance when relevant, fraction information and any properties captured as characteristic attributes essential to the description of the material. Elements of micro-heterogeneity for proteins such as details of glycosylation and other post-translational modifications can also be captured at the Specified Substance Group 1 level as modifications." ,
 		"The 'Constituent' element group shall consist of substances that are components of a multi-substance material, marker or signature substances present in botanical-, animal- or human-derived material and constituent substance(s) with the substance role of parent. In contrast to mixture substances, the amount of the above substances shall be captured." ,
-		"There are two other element groups which are used to capture additional information about substances. The element group 'Characteristic Attribute' is used to capture various information depending on the Substance Type and the element group 'Attribute Parameter' is used to capture information of specific conditions on which the instance of the Characteristic Attribute is measured in combination with the element group 'Amount'."
+		"There are two other element groups which are used to capture additional information about substances. The element group 'Characteristic Attribute' is used to capture various information depending on the substance type and the element group 'Attribute Parameter' is used to capture information of specific conditions on which the instance of the Characteristic Attribute is measured in combination with the element group 'Amount'."
 		;
 	AnnotationVocabulary:adaptedFrom "ISO 11238:2018 Health informatics - Identification of medicinal products (IDMP) - Data elements and structures for the unique identification and exchange of regulated information on substances, clause 8.2" ;
 	.
@@ -9883,6 +10175,12 @@ ISO11238-Substances:Substance
 		] ,
 		[
 			a owl:Restriction ;
+			owl:onProperty ISO11238-Substances:hasReferenceInformation ;
+			owl:onClass ISO11238-Substances:ReferenceInformation ;
+			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+		] ,
+		[
+			a owl:Restriction ;
 			owl:onProperty Documents:specifies ;
 			owl:onClass ISO11238-Substances:PhysicalSubstance ;
 			owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
@@ -9933,6 +10231,190 @@ ISO11238-Substances:Substance
 		"ISO/TS 19844:2018(E) Health informatics - Identification of medicinal products (IDMP) - Implementation guidelines for ISO 11238 for data elements and structures for the unique identification and exchange of regulated information on substances, clause 6.2"
 		;
 	AnnotationVocabulary:explanatoryNote "Note that while the IDMP standards require a substance name for all substances, the ontology deviates from this by making the name optional in the restriction on substance classifier. This is to enable mapping to various source repositories for substance information that do not necessarily provide names but whose defining characteristics include the molecular structure, which is typically more accurate." ;
+	.
+
+ISO11238-Substances:SubstanceClassificationSubtype
+	a owl:Class ;
+	rdfs:subClassOf
+		Classifiers:Classifier ,
+		[
+			a owl:Restriction ;
+			owl:onProperty Classifiers:classifies ;
+			owl:onClass ISO11238-Substances:SubstanceClassifier ;
+			owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
+		]
+		;
+	rdfs:label "substance classification subtype" ;
+	rdfs:isDefinedBy <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/> ;
+	skos:definition "classifier for the substance classifier indicating a subordinate level of the classification scheme" ;
+	skos:example "NDF-RT Mechanism of Action (MOA) or Physiological Effect" ;
+	skos:note "Many classification systems will have multiple subtypes of classification. This field will attempt to capture this information." ;
+	ISO11238-Substances:hasConformanceLevel ISO11238-Substances:ConformanceLevel-Optional ;
+	ISO21090-HarmonizedDatatypes:isEncodedAs ISO21090-HarmonizedDatatypes:DatatypeCode-CD ;
+	AnnotationVocabulary:adaptedFrom
+		"ISO 11238:2018 Health informatics - Identification of medicinal products (IDMP) - Data elements and structures for the unique identification and exchange of regulated information on substances, Figure 16, clause 7.2.4.2" ,
+		"ISO/TS 19844:2018(E) Health informatics - Identification of medicinal products (IDMP) - Implementation guidelines for ISO 11238 for data elements and structures for the unique identification and exchange of regulated information on substances, clause 6.6.2.5"
+		;
+	.
+
+ISO11238-Substances:SubstanceClassificationSystem
+	a owl:Class ;
+	rdfs:subClassOf Classifiers:ClassificationScheme ;
+	rdfs:label "substance classification system" ;
+	rdfs:isDefinedBy <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/> ;
+	skos:definition "system for classifying substances based on their characteristics" ;
+	skos:example "ATC, NDF-RT (National Drug File – Reference Terminology), NCI, AHPA, MESH; Therapeutic Category of Drugs in Japan" ;
+	skos:note
+		"Classification systems are typically based on molecular structure, chemical properties, pharmacological effects, mechanism of action, therapeutic targets or indication. Although most classification will be associated with an external classification system, ad-hoc classification of substances may be developed within this terminology as needed." ,
+		"Classification systems such as the WHO ATC and NDF-RT, which code classification information to substances, are particularly important." ,
+		"Substance classification terms should be based on a controlled vocabulary that is controlled by the system or type of substance classification. The system [ontology, or system that implements it] should be capable of capturing a variety of classification systems and each system should be identified. All active ingredients are typically classified in multiple systems. Ad hoc classification may be created as necessary." ,
+		"There are a number of systems that classify substances based on chemical structure, pharmacological effect, organ system affected, mechanism of action or molecular targets. These classification systems are useful and this information, if available, should be provided and maintained as applicable."
+		;
+	ISO11238-Substances:hasConformanceLevel ISO11238-Substances:ConformanceLevel-Optional ;
+	AnnotationVocabulary:adaptedFrom
+		"ISO 11238:2018 Health informatics - Identification of medicinal products (IDMP) - Data elements and structures for the unique identification and exchange of regulated information on substances, Figure 16, clause 7.2.4.2" ,
+		"ISO/TS 19844:2018(E) Health informatics - Identification of medicinal products (IDMP) - Implementation guidelines for ISO 11238 for data elements and structures for the unique identification and exchange of regulated information on substances, clause 6.6.2"
+		;
+	.
+
+ISO11238-Substances:SubstanceClassificationType
+	a owl:Class ;
+	rdfs:subClassOf
+		Classifiers:Classifier ,
+		[
+			a owl:Restriction ;
+			owl:onProperty Classifiers:classifies ;
+			owl:onClass ISO11238-Substances:SubstanceClassifier ;
+			owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
+		]
+		;
+	rdfs:label "substance classification type" ;
+	rdfs:isDefinedBy <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/> ;
+	skos:definition "classifier for the substance classifier indicating the highest level of the classification scheme" ;
+	skos:example "'lower' level in ATC" ;
+	skos:note "Nearly all classification systems contain multiple levels. Type is the highest level or the initial level of the classification system." ;
+	ISO11238-Substances:hasBusinessRules "The value is IMPLICIT and can be derived by the 'Substance Classification — Subtype' if available. Jurisdictional requirements should further define the appropriate level within a code system that should be used." ;
+	ISO11238-Substances:hasConformanceLevel ISO11238-Substances:ConformanceLevel-Optional ;
+	ISO21090-HarmonizedDatatypes:isEncodedAs ISO21090-HarmonizedDatatypes:DatatypeCode-ST ;
+	AnnotationVocabulary:adaptedFrom
+		"ISO 11238:2018 Health informatics - Identification of medicinal products (IDMP) - Data elements and structures for the unique identification and exchange of regulated information on substances, Figure 16, clause 7.2.4.2" ,
+		"ISO/TS 19844:2018(E) Health informatics - Identification of medicinal products (IDMP) - Implementation guidelines for ISO 11238 for data elements and structures for the unique identification and exchange of regulated information on substances, clause 6.6.2.4"
+		;
+	.
+
+ISO11238-Substances:SubstanceClassifier
+	a owl:Class ;
+	rdfs:subClassOf
+		Classifiers:Classifier ,
+		[
+			a owl:Restriction ;
+			owl:onProperty Classifiers:classifies ;
+			owl:allValuesFrom [
+				a owl:Class ;
+				owl:unionOf (
+					ISO11238-Substances:Moiety
+					ISO11238-Substances:PhysicalSubstance
+					ISO11238-Substances:Substance
+				) ;
+			] ;
+		] ,
+		[
+			a owl:Restriction ;
+			owl:onProperty Designators:isDefinedIn ;
+			owl:onClass ISO11238-Substances:SubstanceClassificationSystem ;
+			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+		] ,
+		[
+			a owl:Restriction ;
+			owl:onProperty ISO11238-Substances:hasSubstanceClassificationType ;
+			owl:onClass ISO11238-Substances:SubstanceClassificationType ;
+			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+		] ,
+		[
+			a owl:Restriction ;
+			owl:onProperty Designators:isSignifiedBy ;
+			owl:onClass ISO11238-Substances:SubstanceClassifierCode ;
+			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+		] ,
+		[
+			a owl:Restriction ;
+			owl:onProperty ISO11238-Substances:hasSubstanceClassifierDomain ;
+			owl:onClass ISO11238-Substances:SubstanceClassifierDomain ;
+			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+		] ,
+		[
+			a owl:Restriction ;
+			owl:onProperty Designators:isDescribedBy ;
+			owl:onClass ISO11238-Substances:ReferenceSource ;
+			owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
+		] ,
+		[
+			a owl:Restriction ;
+			owl:onProperty ISO11238-Substances:hasSubstanceClassificationSubtype ;
+			owl:onClass ISO11238-Substances:SubstanceClassificationSubtype ;
+			owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
+		]
+		;
+	rdfs:label "substance classifier" ;
+	rdfs:isDefinedBy <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/> ;
+	skos:definition "classifier for substances based on their characteristics" ;
+	ISO11238-Substances:hasConformanceLevel ISO11238-Substances:ConformanceLevel-Conditional ;
+	ISOConformanceAnnotations:hasConformanceToISOLevel ISOConformanceAnnotations:ConformanceToISOLevel-DefinitionallyConformant ;
+	AnnotationVocabulary:adaptedFrom
+		"ISO 11238:2018 Health informatics - Identification of medicinal products (IDMP) - Data elements and structures for the unique identification and exchange of regulated information on substances, Figure 16, clause 7.2.4.2" ,
+		"ISO/TS 19844:2018(E) Health informatics - Identification of medicinal products (IDMP) - Implementation guidelines for ISO 11238 for data elements and structures for the unique identification and exchange of regulated information on substances, clause 6.6.2"
+		;
+	AnnotationVocabulary:synonym "substance classification" ;
+	.
+
+ISO11238-Substances:SubstanceClassifierCode
+	a owl:Class ;
+	rdfs:subClassOf
+		<https://www.omg.org/spec/Commons/CodesAndCodeSets/CodeElement> ,
+		[
+			a owl:Restriction ;
+			owl:onProperty Designators:denotes ;
+			owl:onClass ISO11238-Substances:SubstanceClassifier ;
+			owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
+		]
+		;
+	rdfs:label "substance classifier code" ;
+	rdfs:isDefinedBy <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/> ;
+	skos:definition "code that denotes the substance classifier from the classifying code system" ;
+	skos:example "N0000175684 NDF-RT code for Oxycodone that maps to the mechanism of action classification. N02AA05 ATC code that maps to Oxycodone." ;
+	skos:note "The code should be tied to the substance." ;
+	ISO11238-Substances:hasBusinessRules "The classification code shall be part of an internationally recognized classification system." ;
+	ISO11238-Substances:hasConformanceLevel ISO11238-Substances:ConformanceLevel-Optional ;
+	ISO21090-HarmonizedDatatypes:isEncodedAs ISO21090-HarmonizedDatatypes:DatatypeCode-CD ;
+	ISOConformanceAnnotations:hasConformanceToISOLevel ISOConformanceAnnotations:ConformanceToISOLevel-DefinitionallyConformant ;
+	AnnotationVocabulary:adaptedFrom
+		"ISO 11238:2018 Health informatics - Identification of medicinal products (IDMP) - Data elements and structures for the unique identification and exchange of regulated information on substances, Figure 16, clause 7.2.4.2" ,
+		"ISO/TS 19844:2018(E) Health informatics - Identification of medicinal products (IDMP) - Implementation guidelines for ISO 11238 for data elements and structures for the unique identification and exchange of regulated information on substances, clause 6.6.2"
+		;
+	.
+
+ISO11238-Substances:SubstanceClassifierDomain
+	a owl:Class ;
+	rdfs:subClassOf
+		Classifiers:Classifier ,
+		[
+			a owl:Restriction ;
+			owl:onProperty Classifiers:classifies ;
+			owl:onClass ISO11238-Substances:SubstanceClassifier ;
+			owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
+		]
+		;
+	rdfs:label "substance classifier domain" ;
+	rdfs:isDefinedBy <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/> ;
+	skos:definition "classifier and code that specifies the domain associated with the substance classifier" ;
+	skos:example "Human pharmaceutical, human vaccine, animal drug, animal vaccine, food, food additive, colourant, pesticide, tobacco additive, flavour, excipient" ;
+	ISO11238-Substances:hasConformanceLevel ISO11238-Substances:ConformanceLevel-Optional ;
+	ISO21090-HarmonizedDatatypes:isEncodedAs ISO21090-HarmonizedDatatypes:DatatypeCode-CD ;
+	ISOConformanceAnnotations:hasConformanceToISOLevel ISOConformanceAnnotations:ConformanceToISOLevel-DefinitionallyConformant ;
+	AnnotationVocabulary:adaptedFrom
+		"ISO 11238:2018 Health informatics - Identification of medicinal products (IDMP) - Data elements and structures for the unique identification and exchange of regulated information on substances, Figure 16, clause 7.2.4.2" ,
+		"ISO/TS 19844:2018(E) Health informatics - Identification of medicinal products (IDMP) - Implementation guidelines for ISO 11238 for data elements and structures for the unique identification and exchange of regulated information on substances, clause 6.6.2"
+		;
 	.
 
 ISO11238-Substances:SubstanceCode
@@ -10077,7 +10559,7 @@ ISO11238-Substances:SubstanceName
 		] ,
 		[
 			a owl:Restriction ;
-			owl:onProperty Classifiers:isClassifiedBy ;
+			owl:onProperty ISO11238-Substances:hasSubstanceNameDomain ;
 			owl:onClass ISO11238-Substances:SubstanceNameDomain ;
 			owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
 		] ,
@@ -10322,7 +10804,7 @@ ISO11238-Substances:SubstanceNameClassifier-PreferredName
 		"ISO/TS 19844:2018(E) Health informatics - Identification of medicinal products (IDMP) - Implementation guidelines for ISO 11238 for data elements and structures for the unique identification and exchange of regulated information on substances, clause 6.3.2"
 		;
 	rdfs:isDefinedBy <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/> ;
-	skos:definition "substance name classifier for a name that ..." ;
+	skos:definition "substance name classifier for a name that is considered to be the best choice in some context" ;
 	Collections:isMemberOf ISO11238-Substances:ISO19844-CodeSet ;
 	Designators:isDefinedIn ISO11238-Substances:ISO11238-ClassificationScheme ;
 	TextDatatype:hasTextValue "Preferred Name" ;
@@ -10455,6 +10937,146 @@ ISO11238-Substances:SubstanceNameDomain
 	skos:note "All substance names can have at least one domain. This is useful to differentiate different names for the same substance as used for a drug active ingredient as opposed to a food colour additive. The domain and the actual name of a domain will vary according to jurisdiction." ;
 	.
 
+ISO11238-Substances:SubstanceRelationship
+	a owl:Class ;
+	rdfs:subClassOf
+		Classifiers:Aspect ,
+		[
+			a owl:Restriction ;
+			owl:onProperty ISO11238-Substances:hasRelatedSubstanceName ;
+			owl:allValuesFrom ISO11238-Substances:SubstanceName ;
+		] ,
+		[
+			a owl:Restriction ;
+			owl:onProperty ISO11238-Substances:hasRelatedSubstanceIdentifier ;
+			owl:allValuesFrom [
+				a owl:Class ;
+				owl:unionOf (
+					ISO11238-Substances:SubstanceCode
+					ISO11238-Substances:SubstanceIdentifier
+				) ;
+			] ;
+		] ,
+		[
+			a owl:Restriction ;
+			owl:onProperty ISO11238-Substances:hasAmount ;
+			owl:onClass ISO11238-Substances:Amount ;
+			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+		] ,
+		[
+			a owl:Restriction ;
+			owl:onProperty Designators:isSignifiedBy ;
+			owl:onClass ISO11238-Substances:SubstanceRelationshipCode ;
+			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+		] ,
+		[
+			a owl:Restriction ;
+			owl:onProperty Classifiers:isClassifiedBy ;
+			owl:onClass ISO11238-Substances:SubstanceRelationshipType ;
+			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+		] ,
+		[
+			a owl:Restriction ;
+			owl:onProperty ISO11238-Substances:hasRelatedSubstance ;
+			owl:onClass [
+				a owl:Class ;
+				owl:unionOf (
+					ISO11238-Substances:Moiety
+					ISO11238-Substances:PhysicalSubstance
+					ISO11238-Substances:Substance
+				) ;
+			] ;
+			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+		] ,
+		[
+			a owl:Restriction ;
+			owl:onProperty Designators:isDescribedBy ;
+			owl:onClass ISO11238-Substances:ReferenceSource ;
+			owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
+		] ,
+		[
+			a owl:Restriction ;
+			owl:onProperty ISO11238-Substances:isDefiningSubstanceRelationship ;
+			owl:onDataRange xsd:boolean ;
+			owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+		] ,
+		[
+			a owl:Restriction ;
+			owl:onProperty ISO11238-Substances:hasSubjectSubstance ;
+			owl:someValuesFrom [
+				a owl:Class ;
+				owl:unionOf (
+					ISO11238-Substances:Moiety
+					ISO11238-Substances:PhysicalSubstance
+					ISO11238-Substances:Substance
+				) ;
+			] ;
+		]
+		;
+	rdfs:label "substance relationship" ;
+	rdfs:isDefinedBy <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/> ;
+	skos:definition "reified relationship from a given substance (or physical substance or moiety) to another substance (or physical substance or moiety) based on their characteristics and/or predefined rules" ;
+	skos:example "Example: the active moiety of the salt amlodipine besilate hydrate (1:1:1) is the related substance amlodipine. The salt amlodipine besilate hydrate contains 69.8 % w/w of amlodipine. Therefore, the equivalence factor is 0,698, meaning 10 mg amlodipine besilate hydrate salt corresponds to 6,98 (approx to 7 mg) amlodipine active moiety." ;
+	skos:note
+		"Relationships between substances such as the relationship between a salt form and its active moiety or parent substance should be captured. These relationships are often essential to the description of medicinal products, the basis of strength and the classification of substances. These relationships are often obvious and rules will be developed for specifying substances involved in each type of relationship. For example, the active moiety of all sodium salts would be the free acid, conversely the active moiety of a hydrochloride salt would be a free base." ,
+		"The Equivalence Factor is captured by the element group Amount in combination with the element group Substance Relationship as Amount Text."
+		;
+	ISO11238-Substances:hasBusinessRules "The Equivalence Factor shall be ≤1,00. It is formed by dividing the molecular weight of the (parent) substance (active moiety)/molecular weight of the corresponding salt or salt hydrate or hydrate." ;
+	ISO11238-Substances:hasConformanceLevel ISO11238-Substances:ConformanceLevel-Conditional ;
+	AnnotationVocabulary:adaptedFrom
+		"ISO 11238:2018 Health informatics - Identification of medicinal products (IDMP) - Data elements and structures for the unique identification and exchange of regulated information on substances, Figure 16" ,
+		"ISO/TS 19844:2018(E) Health informatics - Identification of medicinal products (IDMP) - Implementation guidelines for ISO 11238 for data elements and structures for the unique identification and exchange of regulated information on substances, clause 6.6.3 and Figure 8"
+		;
+	.
+
+ISO11238-Substances:SubstanceRelationshipCode
+	a owl:Class ;
+	rdfs:subClassOf
+		<https://www.omg.org/spec/Commons/CodesAndCodeSets/CodeElement> ,
+		[
+			a owl:Restriction ;
+			owl:onProperty Designators:denotes ;
+			owl:onClass ISO11238-Substances:SubstanceRelationship ;
+			owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
+		]
+		;
+	rdfs:label "substance relationship code" ;
+	rdfs:isDefinedBy <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/> ;
+	skos:definition "code that denotes the actual connection between the two substances which may be different for different kinds of relationships" ;
+	skos:example "parent, active moiety, salt, parent molecule to salt/solvate, parent molecule to co-crystal, salt to parent, hydrate to parent, parent substance to salt-hydrate, radiolabelled, prodrug, metabolite, impurity, enantiomer, starting material, processing material, resultant material, polymer to polymer, protein to polymer, polymer to protein, protein to protein, parent polymer to polymer" ;
+	skos:note "There are a variety of different relationships that are possible but for the identification of medicinal products the most important relationships are between a substance, its active moieties, the basis of strength and constituents in herbal and other complex substances. Parent and salt-solvate relationships and relationship of drug substance to its metabolites and impurities are also important although not essential for the description of a medicinal product. If there are known relationships between substances the relationships should be provided and maintained. The parent-active moiety relationship may be essential in describing medicinal products." ;
+	ISO11238-Substances:hasConformanceLevel ISO11238-Substances:ConformanceLevel-Conditional ;
+	ISO21090-HarmonizedDatatypes:isEncodedAs ISO21090-HarmonizedDatatypes:DatatypeCode-CD ;
+	AnnotationVocabulary:adaptedFrom
+		"ISO 11238:2018 Health informatics - Identification of medicinal products (IDMP) - Data elements and structures for the unique identification and exchange of regulated information on substances, Figure 16" ,
+		"ISO/TS 19844:2018(E) Health informatics - Identification of medicinal products (IDMP) - Implementation guidelines for ISO 11238 for data elements and structures for the unique identification and exchange of regulated information on substances, clause 6.6.3.3"
+		;
+	.
+
+ISO11238-Substances:SubstanceRelationshipType
+	a owl:Class ;
+	rdfs:subClassOf
+		Classifiers:Classifier ,
+		<https://www.omg.org/spec/Commons/CodesAndCodeSets/CodeElement> ,
+		[
+			a owl:Restriction ;
+			owl:onProperty Classifiers:classifies ;
+			owl:onClass ISO11238-Substances:SubstanceRelationship ;
+			owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
+		]
+		;
+	rdfs:label "substance relationship type" ;
+	rdfs:isDefinedBy <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/> ;
+	skos:definition "code that classifies the connection between the two substances based on the interaction between them" ;
+	skos:example "ionic, Van der Waals interaction, adjuvant absorption agent, sized polymer, hydrolysis, covalent attachment" ;
+	ISO11238-Substances:hasConformanceLevel ISO11238-Substances:ConformanceLevel-Optional ;
+	ISO21090-HarmonizedDatatypes:isEncodedAs ISO21090-HarmonizedDatatypes:DatatypeCode-CD ;
+	AnnotationVocabulary:adaptedFrom
+		"ISO 11238:2018 Health informatics - Identification of medicinal products (IDMP) - Data elements and structures for the unique identification and exchange of regulated information on substances, Figure 16" ,
+		"ISO/TS 19844:2018(E) Health informatics - Identification of medicinal products (IDMP) - Implementation guidelines for ISO 11238 for data elements and structures for the unique identification and exchange of regulated information on substances, clause 6.6.3.4"
+		;
+	.
+
 ISO11238-Substances:SubstanceRole
 	a owl:Class ;
 	rdfs:subClassOf
@@ -10485,7 +11107,7 @@ ISO11238-Substances:SubstanceTypeClassifier
 	rdfs:label "substance type classifier" ;
 	terms:source
 		"ISO 11238:2018 Health informatics - Identification of medicinal products (IDMP) - Data elements and structures for the unique identification and exchange of regulated information on substances, clause 6.2" ,
-		"ISO/TS 19844:2018(E) Health informatics - Identification of medicinal products (IDMP) - Implementation guidelines for ISO 11238 for data elements and structures for the unique identification and exchange of regulated information on substances, clause 6.2.1, Table 2"
+		"ISO/TS 19844:2018(E) Health informatics - Identification of medicinal products (IDMP) - Implementation guidelines for ISO 11238 for data elements and structures for the unique identification and exchange of regulated information on substances, clause 6.2.1, Figure 5 and Table 2"
 		;
 	rdfs:isDefinedBy <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/> ;
 	skos:definition "classifier that describes the nature of the substance from a pre-defined ISO 19844 code set" ;
@@ -10675,6 +11297,130 @@ ISO11238-Substances:SubstanceTypeClassifier-StructurallyDiverse
 	TextDatatype:hasTextValue "Structurally Diverse" ;
 	.
 
+ISO11238-Substances:SubstrateTargetInteraction
+	a owl:Class ;
+	rdfs:subClassOf
+		PartiesAndSituations:Situation ,
+		[
+			a owl:Restriction ;
+			owl:onProperty Classifiers:isClassifiedBy ;
+			owl:onClass ISO11238-Substances:InteractionType ;
+			owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
+		] ,
+		[
+			a owl:Restriction ;
+			owl:onProperty PartiesAndSituations:hasObjectRole ;
+			owl:someValuesFrom [
+				a owl:Restriction ;
+				owl:onProperty PartiesAndSituations:isPlayedBy ;
+				owl:someValuesFrom ISO11238-Substances:Target ;
+			] ;
+		] ,
+		[
+			a owl:Restriction ;
+			owl:onProperty PartiesAndSituations:hasSubjectRole ;
+			owl:someValuesFrom <http://org.semanticweb.owlapi/error#Error4> ;
+		]
+		;
+	rdfs:label "substrate target interaction" ;
+	rdfs:isDefinedBy <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/> ;
+	skos:definition "interaction that may occur between a substance and its target" ;
+	skos:example "AGONIST, INDUCER, INHIBITOR, PARTIAL ANTAGONIST, SUBSTRATE, PRODUCT" ;
+	skos:note "A controlled vocabulary should be developed to capture these types of interactions. The interaction type should be captured for all substrate-target interactions. A substance can have multiple types of interactions." ;
+	AnnotationVocabulary:adaptedFrom
+		"ISO 11238:2018 Health informatics - Identification of medicinal products (IDMP) - Data elements and structures for the unique identification and exchange of regulated information on substances, Figure 16" ,
+		"ISO/TS 19844:2018(E) Health informatics - Identification of medicinal products (IDMP) - Implementation guidelines for ISO 11238 for data elements and structures for the unique identification and exchange of regulated information on substances, clause 6.6.4.3"
+		;
+	.
+
+ISO11238-Substances:Target
+	a owl:Class ;
+	rdfs:subClassOf
+		Documents:Specification ,
+		[
+			a owl:Restriction ;
+			owl:onProperty ISO11238-Substances:hasInteractionType ;
+			owl:allValuesFrom ISO11238-Substances:InteractionType ;
+		] ,
+		[
+			a owl:Restriction ;
+			owl:onProperty ISO11238-Substances:hasAmount ;
+			owl:onClass ISO11238-Substances:Amount ;
+			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+		] ,
+		[
+			a owl:Restriction ;
+			owl:onProperty ISO11238-Substances:hasTargetName ;
+			owl:onClass ISO11238-Substances:SubstanceName ;
+			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+		] ,
+		[
+			a owl:Restriction ;
+			owl:onProperty ISO11238-Substances:hasTargetIdentifier ;
+			owl:onClass [
+				a owl:Class ;
+				owl:unionOf (
+					ISO11238-Substances:SubstanceCode
+					ISO11238-Substances:SubstanceIdentifier
+				) ;
+			] ;
+			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+		] ,
+		[
+			a owl:Restriction ;
+			owl:onProperty Designators:isDescribedBy ;
+			owl:onClass ISO11238-Substances:ReferenceSource ;
+			owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
+		] ,
+		[
+			a owl:Restriction ;
+			owl:onProperty ISO11238-Substances:hasTargetType ;
+			owl:onClass ISO11238-Substances:TargetClassifier ;
+			owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
+		]
+		;
+	rdfs:label "target" ;
+	rdfs:isDefinedBy <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/> ;
+	skos:definition "something that a substance is known to interact with and the interaction results in a biological effect or transformation" ;
+	skos:note
+		"For monoclonal antibodies, the target shall always be provided. For other types substances, the target may be provided if known. Ideally the target is a substance with its own Substance ID. However, in specific circumstances, the target may be handled as a relationship between two substances." ,
+		"These targets can be therapeutic, metabolic, interactions postulated to result in toxicity or interactions of unknown effect. Targets are typically proteins, or complexes of proteins. The target may be a substance in its own right and ID shall be assigned and/or existing ID of a known system used (i.e. GenBank, UniProt) to refer to a target."
+		;
+	ISO11238-Substances:hasConformanceLevel ISO11238-Substances:ConformanceLevel-Conditional ;
+	AnnotationVocabulary:adaptedFrom
+		"ISO 11238:2018 Health informatics - Identification of medicinal products (IDMP) - Data elements and structures for the unique identification and exchange of regulated information on substances, Figure 16" ,
+		"ISO/TS 19844:2018(E) Health informatics - Identification of medicinal products (IDMP) - Implementation guidelines for ISO 11238 for data elements and structures for the unique identification and exchange of regulated information on substances, clause 6.6.4 and Figure 8"
+		;
+	.
+
+ISO11238-Substances:TargetClassifier
+	a owl:Class ;
+	rdfs:subClassOf
+		Classifiers:Classifier ,
+		[
+			a owl:Restriction ;
+			owl:onProperty Classifiers:classifies ;
+			owl:onClass ISO11238-Substances:Target ;
+			owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
+		]
+		;
+	rdfs:label "target classifier" ;
+	rdfs:isDefinedBy <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/> ;
+	skos:definition "classifier associated with a target of an active substance" ;
+	skos:example
+		"The therapeutic target would be HIV-1 protease when ritonavir is used in HIV-related therapy. The metabolic target is Cyp 3A4 and ritonavir is an inhibitor of this target. Ritonavir is also an inhibitor of P-glycoprotein, a drug transporter. In many combination products ritonavir is used strictly to inhibit Cyp 3A4/5 and transporter enzymes." ,
+		"therapeutic, metabolic, toxic, transporter"
+		;
+	skos:note "The type is dependent on the substance and also to some extent the use of the substance. A given target-substance interaction can be of more than one type." ;
+	ISO11238-Substances:hasBusinessRules "Each target should be associated with a target type when the target can be classified." ;
+	ISO11238-Substances:hasConformanceLevel ISO11238-Substances:ConformanceLevel-Optional ;
+	ISO21090-HarmonizedDatatypes:isEncodedAs ISO21090-HarmonizedDatatypes:DatatypeCode-CD ;
+	AnnotationVocabulary:adaptedFrom
+		"ISO 11238:2018 Health informatics - Identification of medicinal products (IDMP) - Data elements and structures for the unique identification and exchange of regulated information on substances, Figure 16" ,
+		"ISO/TS 19844:2018(E) Health informatics - Identification of medicinal products (IDMP) - Implementation guidelines for ISO 11238 for data elements and structures for the unique identification and exchange of regulated information on substances, clause 6.6.4.6 and Figure 8"
+		;
+	.
+
 ISO11238-Substances:hasActiveMoiety
 	a owl:ObjectProperty ;
 	rdfs:subPropertyOf ISO11238-Substances:hasMoiety ;
@@ -10788,8 +11534,13 @@ ISO11238-Substances:hasComment
 	rdfs:label "has comment" ;
 	rdfs:isDefinedBy <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/> ;
 	skos:definition "indicates a remark" ;
+	skos:note "Any comment can be provided in this field, if necessary." ;
+	ISO11238-Substances:hasConformanceLevel ISO11238-Substances:ConformanceLevel-Optional ;
 	ISO21090-HarmonizedDatatypes:isEncodedAs ISO21090-HarmonizedDatatypes:DatatypeCode-ST ;
-	AnnotationVocabulary:adaptedFrom "ISO 11238:2018 Health informatics - Identification of medicinal products (IDMP) - Data elements and structures for the unique identification and exchange of regulated information on substances, clause 7.2.8" ;
+	AnnotationVocabulary:adaptedFrom
+		"ISO 11238:2018 Health informatics - Identification of medicinal products (IDMP) - Data elements and structures for the unique identification and exchange of regulated information on substances, Figures 16, 18, and 19-23" ,
+		"ISO/TS 19844:2018(E) Health informatics - Identification of medicinal products (IDMP) - Implementation guidelines for ISO 11238 for data elements and structures for the unique identification and exchange of regulated information on substances, clause 6.6.1 and Figure 8"
+		;
 	.
 
 ISO11238-Substances:hasConformanceLevel
@@ -11000,6 +11751,25 @@ ISO11238-Substances:hasIngredient
 	owl:equivalentProperty ISO11615-MedicinalProducts:hasIngredientRole ;
 	skos:definition "relates a substance or product composition to an ingredient of that composition" ;
 	AnnotationVocabulary:usageNote "This property should be used primarily in a manufacturing context where differentiation of substances or pharmaceutical products in a product from other elements that play roles in the manufacturing context is important." ;
+	.
+
+ISO11238-Substances:hasInteractionType
+	a owl:ObjectProperty ;
+	rdfs:label "has interaction type" ;
+	rdfs:isDefinedBy <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/> ;
+	owl:propertyChainAxiom (
+		PartiesAndSituations:isObjectRoleIn
+		Classifiers:isClassifiedBy
+	) ;
+	skos:definition "relates a target to a kind of interaction it has with a given substance" ;
+	skos:example "AGONIST, INDUCER, INHIBITOR, PARTIAL ANTAGONIST, SUBSTRATE, PRODUCT" ;
+	skos:note "A controlled vocabulary should be developed to capture these types of interactions. The interaction type should be captured for all substrate-target interactions. A substance can have multiple types of interactions." ;
+	ISO11238-Substances:hasConformanceLevel ISO11238-Substances:ConformanceLevel-Conditional ;
+	ISO21090-HarmonizedDatatypes:isEncodedAs ISO21090-HarmonizedDatatypes:DatatypeCode-CD ;
+	AnnotationVocabulary:adaptedFrom
+		"ISO 11238:2018 Health informatics - Identification of medicinal products (IDMP) - Data elements and structures for the unique identification and exchange of regulated information on substances, Figure 16" ,
+		"ISO/TS 19844:2018(E) Health informatics - Identification of medicinal products (IDMP) - Implementation guidelines for ISO 11238 for data elements and structures for the unique identification and exchange of regulated information on substances, clause 6.6.4.3"
+		;
 	.
 
 ISO11238-Substances:hasIsotopeSubstitutionType
@@ -11385,6 +12155,33 @@ ISO11238-Substances:hasPhysicalModificationRole
 	skos:example "Micronization of animal part" ;
 	.
 
+ISO11238-Substances:hasReferenceInformation
+	a owl:ObjectProperty ;
+	rdfs:subPropertyOf Designators:isDescribedBy ;
+	rdfs:label "has reference information" ;
+	rdfs:domain [
+		a owl:Class ;
+		owl:unionOf (
+			ISO11238-Substances:Moiety
+			ISO11238-Substances:PhysicalSubstance
+			ISO11238-Substances:Substance
+		) ;
+	] ;
+	rdfs:isDefinedBy <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/> ;
+	rdfs:range ISO11238-Substances:ReferenceInformation ;
+	skos:definition "specifies informative reference details that may include classification, additional relationships and target information (for active substances)" ;
+	skos:note
+		"Genes from which proteins are derived, target information and codes from code systems also constitute reference information for which the ISO 11238 specification provides a consistent structure to capture and link to a substance. Classification systems such as the WHO ATC and the United States Veterans Administration NDF-RT, which code classification information for substances, are particularly important. Target information is important for monoclonal and polyclonal antibodies and small molecules directed against specific molecular targets." ,
+		"Reference information shall be captured for all types of substances and specified substance group 1." ,
+		"The ISO 11238 standard does not provide any guidance on the classification of pharmacological effects or the determination of the putative targets for any substance or specified substance. It does allow for the capture of such information if available and provided. This information shall not affect the generation of a new unique identifier, i.e. it is not defining."
+		;
+	ISO11238-Substances:hasConformanceLevel ISO11238-Substances:ConformanceLevel-Conditional ;
+	AnnotationVocabulary:adaptedFrom
+		"ISO 11238:2018 Health informatics - Identification of medicinal products (IDMP) - Data elements and structures for the unique identification and exchange of regulated information on substances, clause 7.2.4 and Figure 16" ,
+		"ISO/TS 19844:2018(E) Health informatics - Identification of medicinal products (IDMP) - Implementation guidelines for ISO 11238 for data elements and structures for the unique identification and exchange of regulated information on substances, clause 6.6 and Figure 8"
+		;
+	.
+
 ISO11238-Substances:hasReferenceQuantityValueRange
 	a owl:ObjectProperty ;
 	rdfs:subPropertyOf QuantitiesAndUnits:hasQuantityValueRange ;
@@ -11444,6 +12241,64 @@ ISO11238-Substances:hasReferenceSourceURL
 	AnnotationVocabulary:adaptedFrom
 		"ISO 11238:2018 Health informatics - Identification of medicinal products (IDMP) - Data elements and structures for the unique identification and exchange of regulated information on substances, Figures 13, 14, 16-23, 25-26, 28-29, and 31-32" ,
 		"ISO/TS 19844:2018(E) Health informatics - Identification of medicinal products (IDMP) - Implementation guidelines for ISO 11238 for data elements and structures for the unique identification and exchange of regulated information on substances, clause 6.4.6"
+		;
+	.
+
+ISO11238-Substances:hasRelatedSubstance
+	a owl:ObjectProperty ;
+	rdfs:subPropertyOf RegistrationAuthorities:isRelatedTo ;
+	rdfs:label "has related substance" ;
+	rdfs:isDefinedBy <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/> ;
+	rdfs:range [
+		a owl:Class ;
+		owl:unionOf (
+			ISO11238-Substances:Moiety
+			ISO11238-Substances:PhysicalSubstance
+			ISO11238-Substances:Substance
+		) ;
+	] ;
+	skos:definition "relates a substance relationship to the substance, moiety, or physical substance that is the target of the relationship" ;
+	ISO11238-Substances:hasConformanceLevel ISO11238-Substances:ConformanceLevel-Conditional ;
+	AnnotationVocabulary:adaptedFrom
+		"ISO 11238:2018 Health informatics - Identification of medicinal products (IDMP) - Data elements and structures for the unique identification and exchange of regulated information on substances, clause 7.2.4 and Figure 16" ,
+		"ISO/TS 19844:2018(E) Health informatics - Identification of medicinal products (IDMP) - Implementation guidelines for ISO 11238 for data elements and structures for the unique identification and exchange of regulated information on substances, clause 6.6 and Figure 8"
+		;
+	.
+
+ISO11238-Substances:hasRelatedSubstanceIdentifier
+	a owl:ObjectProperty ;
+	rdfs:label "has related substance identifier" ;
+	rdfs:isDefinedBy <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/> ;
+	owl:propertyChainAxiom (
+		ISO11238-Substances:hasRelatedSubstance
+		Identifiers:isIdentifiedBy
+	) ;
+	skos:definition "relates a substance that is the target in a substance relationship relationship to an identifier for that substance, moiety, or physical substance" ;
+	ISO11238-Substances:hasConformanceLevel ISO11238-Substances:ConformanceLevel-Conditional ;
+	ISO11238-Substances:hasValuesAllowed "ISO 11238 Substance ID" ;
+	ISO21090-HarmonizedDatatypes:isEncodedAs ISO21090-HarmonizedDatatypes:DatatypeCode-II ;
+	AnnotationVocabulary:adaptedFrom
+		"ISO 11238:2018 Health informatics - Identification of medicinal products (IDMP) - Data elements and structures for the unique identification and exchange of regulated information on substances, clause 7.2.4 and Figure 16" ,
+		"ISO/TS 19844:2018(E) Health informatics - Identification of medicinal products (IDMP) - Implementation guidelines for ISO 11238 for data elements and structures for the unique identification and exchange of regulated information on substances, clause 6.6, 6.6.3.1 and Figure 8"
+		;
+	.
+
+ISO11238-Substances:hasRelatedSubstanceName
+	a owl:ObjectProperty ;
+	rdfs:label "has related substance name" ;
+	rdfs:isDefinedBy <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/> ;
+	owl:propertyChainAxiom (
+		ISO11238-Substances:hasRelatedSubstance
+		ISO11238-Substances:hasSubstanceName
+	) ;
+	skos:definition "relates a substance that is the target in a substance relationship relationship to a preferred term or primary name for that substance, moiety, or physical substance" ;
+	ISO11238-Substances:hasBusinessRules "The preferred term of the related substance is captured; this information is required when there is a 'Substance Relationship'; The substance name is implicit and derived from the Substance ID." ;
+	ISO11238-Substances:hasConformanceLevel ISO11238-Substances:ConformanceLevel-Conditional ;
+	ISO11238-Substances:hasValuesAllowed "Based on ISO 11238 substance name" ;
+	ISO21090-HarmonizedDatatypes:isEncodedAs ISO21090-HarmonizedDatatypes:DatatypeCode-ST ;
+	AnnotationVocabulary:adaptedFrom
+		"ISO 11238:2018 Health informatics - Identification of medicinal products (IDMP) - Data elements and structures for the unique identification and exchange of regulated information on substances, clause 7.2.4 and Figure 16" ,
+		"ISO/TS 19844:2018(E) Health informatics - Identification of medicinal products (IDMP) - Implementation guidelines for ISO 11238 for data elements and structures for the unique identification and exchange of regulated information on substances, clause 6.6, 6.6.3.2 and Figure 8"
 		;
 	.
 
@@ -11541,6 +12396,75 @@ ISO11238-Substances:hasStructure
 	skos:definition "indicates any arrangement and/or organization of interrelated elements in an actual substance" ;
 	.
 
+ISO11238-Substances:hasSubjectSubstance
+	a owl:ObjectProperty ;
+	rdfs:label "has subject substance" ;
+	rdfs:isDefinedBy <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/> ;
+	owl:propertyChainAxiom (
+		Collections:isIncludedIn
+		ISO11238-Substances:isReferenceInformationFor
+	) ;
+	skos:definition "relates a substance relationship to the substance, moiety, or physical substance that the relevant reference information is about" ;
+	AnnotationVocabulary:adaptedFrom
+		"ISO 11238:2018 Health informatics - Identification of medicinal products (IDMP) - Data elements and structures for the unique identification and exchange of regulated information on substances, clause 7.2.4 and Figure 16" ,
+		"ISO/TS 19844:2018(E) Health informatics - Identification of medicinal products (IDMP) - Implementation guidelines for ISO 11238 for data elements and structures for the unique identification and exchange of regulated information on substances, clause 6.6 and Figure 8"
+		;
+	.
+
+ISO11238-Substances:hasSubstanceClassificationSubtype
+	a owl:ObjectProperty ;
+	rdfs:subPropertyOf Classifiers:isClassifiedBy ;
+	rdfs:label "has substance classification subtype" ;
+	rdfs:domain ISO11238-Substances:SubstanceClassifier ;
+	rdfs:isDefinedBy <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/> ;
+	rdfs:range ISO11238-Substances:SubstanceClassificationSubtype ;
+	skos:definition "links a substance classifier to an element indicating a subordinate level of the classification scheme" ;
+	skos:example "NDF-RT Mechanism of Action (MOA) or Physiological Effect" ;
+	skos:note "Many classification systems will have multiple subtypes of classification. This field will attempt to capture this information." ;
+	ISO11238-Substances:hasConformanceLevel ISO11238-Substances:ConformanceLevel-Optional ;
+	ISO21090-HarmonizedDatatypes:isEncodedAs ISO21090-HarmonizedDatatypes:DatatypeCode-CD ;
+	AnnotationVocabulary:adaptedFrom
+		"ISO 11238:2018 Health informatics - Identification of medicinal products (IDMP) - Data elements and structures for the unique identification and exchange of regulated information on substances, Figure 16, clause 7.2.4.2" ,
+		"ISO/TS 19844:2018(E) Health informatics - Identification of medicinal products (IDMP) - Implementation guidelines for ISO 11238 for data elements and structures for the unique identification and exchange of regulated information on substances, clause 6.6.2.5"
+		;
+	.
+
+ISO11238-Substances:hasSubstanceClassificationType
+	a owl:ObjectProperty ;
+	rdfs:subPropertyOf Classifiers:isClassifiedBy ;
+	rdfs:label "has substance classification type" ;
+	rdfs:domain ISO11238-Substances:SubstanceClassifier ;
+	rdfs:isDefinedBy <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/> ;
+	rdfs:range ISO11238-Substances:SubstanceClassificationType ;
+	skos:definition "links a substance classifier to an element indicating the highest level of the classification scheme" ;
+	skos:example "'lower' level in ATC" ;
+	skos:note "Nearly all classification systems contain multiple levels. Type is the highest level or the initial level of the classification system." ;
+	ISO11238-Substances:hasBusinessRules "The value is IMPLICIT and can be derived by the 'Substance Classification — Subtype' if available. Jurisdictional requirements should further define the appropriate level within a code system that should be used." ;
+	ISO11238-Substances:hasConformanceLevel ISO11238-Substances:ConformanceLevel-Optional ;
+	ISO21090-HarmonizedDatatypes:isEncodedAs ISO21090-HarmonizedDatatypes:DatatypeCode-ST ;
+	AnnotationVocabulary:adaptedFrom
+		"ISO 11238:2018 Health informatics - Identification of medicinal products (IDMP) - Data elements and structures for the unique identification and exchange of regulated information on substances, Figure 16, clause 7.2.4.2" ,
+		"ISO/TS 19844:2018(E) Health informatics - Identification of medicinal products (IDMP) - Implementation guidelines for ISO 11238 for data elements and structures for the unique identification and exchange of regulated information on substances, clause 6.6.2.4"
+		;
+	.
+
+ISO11238-Substances:hasSubstanceClassifierDomain
+	a owl:ObjectProperty ;
+	rdfs:subPropertyOf Classifiers:isClassifiedBy ;
+	rdfs:label "has substance classifier domain" ;
+	rdfs:domain ISO11238-Substances:SubstanceClassifier ;
+	rdfs:isDefinedBy <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/> ;
+	rdfs:range ISO11238-Substances:SubstanceClassifierDomain ;
+	skos:definition "links a substance classifier to a classifier and code that specifies the domain associated with the substance classifier" ;
+	skos:example "Human pharmaceutical, human vaccine, animal drug, animal vaccine, food, food additive, colourant, pesticide, tobacco additive, flavour, excipient" ;
+	ISO11238-Substances:hasConformanceLevel ISO11238-Substances:ConformanceLevel-Optional ;
+	ISO21090-HarmonizedDatatypes:isEncodedAs ISO21090-HarmonizedDatatypes:DatatypeCode-CD ;
+	AnnotationVocabulary:adaptedFrom
+		"ISO 11238:2018 Health informatics - Identification of medicinal products (IDMP) - Data elements and structures for the unique identification and exchange of regulated information on substances, Figure 16, clause 7.2.4.2" ,
+		"ISO/TS 19844:2018(E) Health informatics - Identification of medicinal products (IDMP) - Implementation guidelines for ISO 11238 for data elements and structures for the unique identification and exchange of regulated information on substances, clause 6.6.2.1"
+		;
+	.
+
 ISO11238-Substances:hasSubstanceName
 	a owl:ObjectProperty ;
 	rdfs:subPropertyOf Designators:hasName ;
@@ -11549,13 +12473,6 @@ ISO11238-Substances:hasSubstanceName
 		"ISO 11238:2018 Health informatics - Identification of medicinal products (IDMP) - Data elements and structures for the unique identification and exchange of regulated information on substances, clause 6.4" ,
 		"ISO/TS 19844:2018(E) Health informatics - Identification of medicinal products (IDMP) - Implementation guidelines for ISO 11238 for data elements and structures for the unique identification and exchange of regulated information on substances, clause 6.3, Annex L"
 		;
-	rdfs:domain [
-		a owl:Class ;
-		owl:unionOf (
-			ISO11238-Substances:PhysicalSubstance
-			ISO11238-Substances:Substance
-		) ;
-	] ;
 	rdfs:isDefinedBy <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/> ;
 	rdfs:range ISO11238-Substances:SubstanceName ;
 	skos:definition "links a name or company code to the substance it denotes" ;
@@ -11566,6 +12483,28 @@ ISO11238-Substances:hasSubstanceName
 	ISO11238-Substances:hasValuesAllowed "Free text, multiple names allowed, each in its own element." ;
 	ISOConformanceAnnotations:hasConformanceToISOLevel ISOConformanceAnnotations:ConformanceToISOLevel-NameAndAnnotationConformant ;
 	AnnotationVocabulary:explanatoryNote "Note that while the IDMP standards require a substance name for all substances, the ontology deviates from this by making the name optional in the restriction on substance. This is to enable mapping to various source repositories for substance information that do not necessarily provide names but that define a substance based on its molecular structure, which is typically more accurate." ;
+	.
+
+ISO11238-Substances:hasSubstanceNameDomain
+	a owl:ObjectProperty ;
+	rdfs:subPropertyOf Classifiers:isClassifiedBy ;
+	rdfs:label "has substance name domain" ;
+	terms:source
+		"ISO 11238:2018 Health informatics - Identification of medicinal products (IDMP) - Data elements and structures for the unique identification and exchange of regulated information on substances, clause 6.4" ,
+		"ISO/TS 19844:2018(E) Health informatics - Identification of medicinal products (IDMP) - Implementation guidelines for ISO 11238 for data elements and structures for the unique identification and exchange of regulated information on substances, clause 6.3.4"
+		;
+	rdfs:domain ISO11238-Substances:SubstanceName ;
+	rdfs:isDefinedBy <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/> ;
+	rdfs:range ISO11238-Substances:SubstanceNameDomain ;
+	skos:definition "links a substance name to a classifier that specifies when and for what purpose the name is to be used" ;
+	skos:example
+		"Biologic, cosmetic, drug, food, medicine, dietary supplement, homeopathic, mineral, zoological, allergen, botanical, vegetable oil, bacterial" ,
+		"The terms DRUG and BIOLOGIC could be used in Japan and the US as official name domain. In the EU the term MEDICINE may cover the name of many substances that would be either DRUG or BIOLOGIC in the US and Japan."
+		;
+	skos:note "All substance names can have at least one domain. This is useful to differentiate different names for the same substance as used for a drug active ingredient as opposed to a food colour additive. The domain and the actual name of a domain will vary according to jurisdiction." ;
+	ISO11238-Substances:hasBusinessRules "Used if different names exist that are not appropriate to be used across all domains." ;
+	ISO11238-Substances:hasConformanceLevel ISO11238-Substances:ConformanceLevel-Conditional ;
+	ISO21090-HarmonizedDatatypes:isEncodedAs ISO21090-HarmonizedDatatypes:DatatypeCode-CD ;
 	.
 
 ISO11238-Substances:hasSubstanceNameType
@@ -11617,12 +12556,12 @@ ISO11238-Substances:hasSubstanceType
 	rdfs:label "has substance type" ;
 	terms:source
 		"ISO 11238:2018 Health informatics - Identification of medicinal products (IDMP) - Data elements and structures for the unique identification and exchange of regulated information on substances, clause 6.2" ,
-		"ISO/TS 19844:2018(E) Health informatics - Identification of medicinal products (IDMP) - Implementation guidelines for ISO 11238 for data elements and structures for the unique identification and exchange of regulated information on substances, clause 6.2.1, Table 2"
+		"ISO/TS 19844:2018(E) Health informatics - Identification of medicinal products (IDMP) - Implementation guidelines for ISO 11238 for data elements and structures for the unique identification and exchange of regulated information on substances, clause 6.2.1, Figure 5 and Table 2"
 		;
 	rdfs:domain ISO11238-Substances:Substance ;
 	rdfs:isDefinedBy <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/> ;
 	rdfs:range ISO11238-Substances:SubstanceTypeClassifier ;
-	skos:definition "links a substance to a classifier that describes the nature of the substance from a pre-defined ISO 19844 code set" ;
+	skos:definition "links a substance to a classifier that describes the nature of the substance as described in and in accordance with ISO 11238 definitions" ;
 	ISO11238-Substances:hasBusinessRules """For each substance type, a qualification is possible, e.g. Structuraly Diverse (Plasma-derived), Structurally Diverse (Herbal Substance), Structurally Diverse (Herbal Drug), Structurally Diverse (Allergen Substance), Polymer (Biopolymer), Protein (Recombinant), Protein (Naturally-derived), Protein (Allergen, Naturally-derived), Chemical (Mineral, naturally occurring substance), Mixture (Homologous Group of Allergen Source Material), etc. In these cases, the qualifier shall also be captured at the Substance Name Type attribute described in and shall always coupled with the substance name.
 Example:
 Substance Type: Structurally Diverse
@@ -11632,6 +12571,70 @@ In all these cases, a new ID shall be issued, that is, 'Human Albumin, Plasma-de
 	ISO11238-Substances:hasConformanceLevel ISO11238-Substances:ConformanceLevel-Mandatory ;
 	ISO11238-Substances:hasValuesAllowed "Chemical, Protein, Nucleic Acid, Polymer, Structurally Diverse, Mixture, Specified Substance Group 1, Specified Substance Group 2, Specified Substance Group 3, Specified Substance Group 4" ;
 	ISO21090-HarmonizedDatatypes:isEncodedAs ISO21090-HarmonizedDatatypes:DatatypeCode-CD ;
+	.
+
+ISO11238-Substances:hasTargetIdentifier
+	a owl:ObjectProperty ;
+	rdfs:subPropertyOf Identifiers:isIdentifiedBy ;
+	rdfs:label "has target identifier" ;
+	rdfs:isDefinedBy <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/> ;
+	rdfs:range [
+		a owl:Class ;
+		owl:unionOf (
+			ISO11238-Substances:SubstanceCode
+			ISO11238-Substances:SubstanceIdentifier
+		) ;
+	] ;
+	skos:definition "indicates the identifier for the target relation molecular entity upon which the substance acts" ;
+	skos:note "One Target ID should be specified. The target should be a molecular entity or a family of molecular entities. The target is usually a protein entity that the drug actually interacts with. Both therapeutic and metabolic targets and targets associated with toxicity should be captured." ;
+	ISO11238-Substances:hasBusinessRules "The ISO 11238 Substance ID shall be referenced." ;
+	ISO11238-Substances:hasConformanceLevel ISO11238-Substances:ConformanceLevel-Conditional ;
+	ISO11238-Substances:hasValuesAllowed "ISO 11238 Substance ID" ;
+	ISO21090-HarmonizedDatatypes:isEncodedAs ISO21090-HarmonizedDatatypes:DatatypeCode-II ;
+	AnnotationVocabulary:adaptedFrom
+		"ISO 11238:2018 Health informatics - Identification of medicinal products (IDMP) - Data elements and structures for the unique identification and exchange of regulated information on substances, clause 7.2.4 and Figure 16" ,
+		"ISO/TS 19844:2018(E) Health informatics - Identification of medicinal products (IDMP) - Implementation guidelines for ISO 11238 for data elements and structures for the unique identification and exchange of regulated information on substances, clause 6.6, 6.6.4.1 and Figure 8"
+		;
+	.
+
+ISO11238-Substances:hasTargetName
+	a owl:ObjectProperty ;
+	rdfs:subPropertyOf ISO11238-Substances:hasSubstanceName ;
+	rdfs:label "has target name" ;
+	rdfs:isDefinedBy <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/> ;
+	rdfs:range ISO11238-Substances:SubstanceName ;
+	skos:definition "specifies the name of the target molecular entity upon which the substance acts" ;
+	skos:note "At least one name of the target shall be provided when target information is submitted. Target names will not be handled any differently than other substance names. If an active ingredient targets more than one target each target should be listed. In addition to names a list of codes associated with the target may also be used. GenBank and UniProt codes can be particularly useful for identifying and tracking targets." ;
+	ISO11238-Substances:hasBusinessRules "ISO 11238 substance name implicitly derived from Target ID. A variety of names can be captured. A single name will be a preferred name and associated with the Target ID. At least one name of the target should be provided when target information is submitted." ;
+	ISO11238-Substances:hasConformanceLevel ISO11238-Substances:ConformanceLevel-Conditional ;
+	ISO11238-Substances:hasValuesAllowed "ISO 11238 substance name" ;
+	ISO21090-HarmonizedDatatypes:isEncodedAs ISO21090-HarmonizedDatatypes:DatatypeCode-ST ;
+	AnnotationVocabulary:adaptedFrom
+		"ISO 11238:2018 Health informatics - Identification of medicinal products (IDMP) - Data elements and structures for the unique identification and exchange of regulated information on substances, clause 7.2.4 and Figure 16" ,
+		"ISO/TS 19844:2018(E) Health informatics - Identification of medicinal products (IDMP) - Implementation guidelines for ISO 11238 for data elements and structures for the unique identification and exchange of regulated information on substances, clause 6.6, 6.6.4.2 and Figure 8"
+		;
+	.
+
+ISO11238-Substances:hasTargetType
+	a owl:ObjectProperty ;
+	rdfs:subPropertyOf Classifiers:isClassifiedBy ;
+	rdfs:label "has target type" ;
+	rdfs:domain ISO11238-Substances:Target ;
+	rdfs:isDefinedBy <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/> ;
+	rdfs:range ISO11238-Substances:TargetClassifier ;
+	skos:definition "links a target to a classifier associated with that target of an active substance" ;
+	skos:example
+		"The therapeutic target would be HIV-1 protease when ritonavir is used in HIV-related therapy. The metabolic target is Cyp 3A4 and ritonavir is an inhibitor of this target. Ritonavir is also an inhibitor of P-glycoprotein, a drug transporter. In many combination products ritonavir is used strictly to inhibit Cyp 3A4/5 and transporter enzymes." ,
+		"therapeutic, metabolic, toxic, transporter"
+		;
+	skos:note "The type is dependent on the substance and also to some extent the use of the substance. A given target-substance interaction can be of more than one type." ;
+	ISO11238-Substances:hasBusinessRules "Each target should be associated with a target type when the target can be classified." ;
+	ISO11238-Substances:hasConformanceLevel ISO11238-Substances:ConformanceLevel-Optional ;
+	ISO21090-HarmonizedDatatypes:isEncodedAs ISO21090-HarmonizedDatatypes:DatatypeCode-CD ;
+	AnnotationVocabulary:adaptedFrom
+		"ISO 11238:2018 Health informatics - Identification of medicinal products (IDMP) - Data elements and structures for the unique identification and exchange of regulated information on substances, Figure 16" ,
+		"ISO/TS 19844:2018(E) Health informatics - Identification of medicinal products (IDMP) - Implementation guidelines for ISO 11238 for data elements and structures for the unique identification and exchange of regulated information on substances, clause 6.6.4.6 and Figure 8"
+		;
 	.
 
 ISO11238-Substances:hasValuesAllowed
@@ -11652,6 +12655,30 @@ ISO11238-Substances:isActiveMoietyOf
 	rdfs:isDefinedBy <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/> ;
 	rdfs:range ISO11238-Substances:Substance ;
 	skos:definition "relates a moiety to a substance for which it is the essential aspect, responsible for its pharmacological activity" ;
+	.
+
+ISO11238-Substances:isDefiningSubstanceRelationship
+	a
+		owl:DatatypeProperty ,
+		owl:FunctionalProperty
+		;
+	rdfs:subPropertyOf ISO21090-HarmonizedDatatypes:hasBooleanValue ;
+	rdfs:label "is defining substance relationship" ;
+	rdfs:isDefinedBy <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/> ;
+	rdfs:range xsd:boolean ;
+	skos:definition "indicates whether the substance relationship is a defining element for the substance's pharmacodynamic action" ;
+	skos:example
+		"For example, if an enzyme has a strong binding with Substance A, then the relationship of Substance A with the enzyme (Related Substance) is defining information." ,
+		"Yes, No"
+		;
+	skos:note "There are cases that the substance relationship is a defining element for the substance's pharmacodynamic action. For example, if an enzyme has a strong binding with Substance A, then the relationship of Substance A with the enzyme (Related Substance) is defining information." ;
+	ISO11238-Substances:hasBusinessRules "The preferred term of the related substance is captured; this information is required when there is a 'Substance Relationship'; The substance name is implicit and derived from the Substance ID." ;
+	ISO11238-Substances:hasConformanceLevel ISO11238-Substances:ConformanceLevel-Mandatory ;
+	ISO21090-HarmonizedDatatypes:isEncodedAs ISO21090-HarmonizedDatatypes:DatatypeCode-BL ;
+	AnnotationVocabulary:adaptedFrom
+		"ISO 11238:2018 Health informatics - Identification of medicinal products (IDMP) - Data elements and structures for the unique identification and exchange of regulated information on substances, clause 7.2.4 and Figure 16" ,
+		"ISO/TS 19844:2018(E) Health informatics - Identification of medicinal products (IDMP) - Implementation guidelines for ISO 11238 for data elements and structures for the unique identification and exchange of regulated information on substances, clause 6.6, 6.6.3.5 and Figure 8"
+		;
 	.
 
 ISO11238-Substances:isGranularMolecularPartOf
@@ -11742,6 +12769,29 @@ ISO11238-Substances:isPublic
 	AnnotationVocabulary:explanatoryNote "Particular care is advised in the release of company codes. Although the company codes are frequently mentioned in the public domain the release of a company code associated with a Substance ID and the defining information should only be made if all of the defining elements are associated with the company code in a single source in the public domain. For chemicals, the chemical structure should be associated with the company code in the public domain. For proteins, such as monoclonal antibodies, names or company codes could be released to the public only if the target of the antibody is mentioned in the same public source as the name or code. A separate determination will be made as to whether the protein sequence is in the public domain." ;
 	.
 
+ISO11238-Substances:isReferenceInformationFor
+	a owl:ObjectProperty ;
+	rdfs:subPropertyOf Designators:describes ;
+	rdfs:label "is reference information for" ;
+	rdfs:domain ISO11238-Substances:ReferenceInformation ;
+	rdfs:isDefinedBy <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/> ;
+	rdfs:range [
+		a owl:Class ;
+		owl:unionOf (
+			ISO11238-Substances:Moiety
+			ISO11238-Substances:PhysicalSubstance
+			ISO11238-Substances:Substance
+		) ;
+	] ;
+	owl:inverseOf ISO11238-Substances:hasReferenceInformation ;
+	skos:definition "links informative reference details that may include classification, additional relationships and target information (for active substances) to a substance (specification), moiety, or physical substance it describes" ;
+	ISO11238-Substances:hasConformanceLevel ISO11238-Substances:ConformanceLevel-Conditional ;
+	AnnotationVocabulary:adaptedFrom
+		"ISO 11238:2018 Health informatics - Identification of medicinal products (IDMP) - Data elements and structures for the unique identification and exchange of regulated information on substances, clause 7.2.4 and Figure 16" ,
+		"ISO/TS 19844:2018(E) Health informatics - Identification of medicinal products (IDMP) - Implementation guidelines for ISO 11238 for data elements and structures for the unique identification and exchange of regulated information on substances, clause 6.6 and Figure 8"
+		;
+	.
+
 ISO11238-Substances:isRelatedSubstanceTo
 	a owl:ObjectProperty ;
 	rdfs:subPropertyOf RegistrationAuthorities:isRelatedTo ;
@@ -11772,6 +12822,22 @@ ISO11238-Substances:isStoichiometric
 	skos:note "Stoichiometry describes if a substance can be represented as single covalent structural moiety or a salt or solvate with a defined and constant ratio of ions or molecules and solvents. In the case of a substance consisting of one moiety (e.g. base, acid, ester) there is (per definition) one compound. In this case only one moiety shall be provided." ;
 	ISO11238-Substances:hasConformanceLevel ISO11238-Substances:ConformanceLevel-Mandatory ;
 	ISO21090-HarmonizedDatatypes:isEncodedAs ISO21090-HarmonizedDatatypes:DatatypeCode-BL ;
+	.
+
+ISO11238-Substances:isSubjectSubstanceFor
+	a owl:ObjectProperty ;
+	rdfs:label "is subject substance for" ;
+	rdfs:isDefinedBy <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/> ;
+	owl:inverseOf ISO11238-Substances:hasSubjectSubstance ;
+	owl:propertyChainAxiom (
+		ISO11238-Substances:hasReferenceInformation
+		Collections:comprises
+	) ;
+	skos:definition "links a substance, moiety, or physical substance to a substance relationship that it is the subject of" ;
+	AnnotationVocabulary:adaptedFrom
+		"ISO 11238:2018 Health informatics - Identification of medicinal products (IDMP) - Data elements and structures for the unique identification and exchange of regulated information on substances, clause 7.2.4 and Figure 16" ,
+		"ISO/TS 19844:2018(E) Health informatics - Identification of medicinal products (IDMP) - Implementation guidelines for ISO 11238 for data elements and structures for the unique identification and exchange of regulated information on substances, clause 6.6 and Figure 8"
+		;
 	.
 
 <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11239-PharmaceuticalDoseForms/AdministrationMethod>
@@ -13169,7 +14235,10 @@ ISO11615-MedicinalProducts:MarketingAuthorization
 			owl:someValuesFrom CountryRepresentation:GeographicRegion ;
 		]
 		;
-	rdfs:label "marketing authorization" ;
+	rdfs:label
+		"marketing authorisation"@en-GB ,
+		"marketing authorization"@en-US
+		;
 	rdfs:isDefinedBy <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/> ;
 	skos:definition "authorization issued from a medicines regulatory agency that allows a medicinal product to be placed on the market" ;
 	AnnotationVocabulary:directSource "ISO 11615:2017 Health informatics - Identification of medicinal products (IDMP) - Data elements and structures for the unique identification and exchange of regulated information on substances, clause 3.1.40" ;
@@ -13186,11 +14255,13 @@ ISO11615-MedicinalProducts:MarketingAuthorizationHolder
 			owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
 		]
 		;
-	rdfs:label "marketing authorization holder" ;
+	rdfs:label
+		"marketing authorisation holder"@en-GB ,
+		"marketing authorization holder"@en-US
+		;
 	rdfs:isDefinedBy <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/> ;
-	skos:definition "organisation that holds the authorization for marketing a medicinal product in a region" ;
-	ISOConformanceAnnotations:hasConformanceToISOLevel ISOConformanceAnnotations:ConformanceToISOLevel-Extension ;
-	AnnotationVocabulary:directSource "ISO 11615:2017 Health informatics - Identification of medicinal products (IDMP) - Data elements and structures for the unique identification and exchange of regulated information on substances, clause 3.1.41" ;
+	skos:definition "authorized party role of a legal entity (organization) that holds the authorization for marketing a medicinal product in a region" ;
+	AnnotationVocabulary:adaptedFrom "ISO 11615:2017 Health informatics - Identification of medicinal products (IDMP) - Data elements and structures for the unique identification and exchange of regulated information on substances, clause 3.1.41" ;
 	.
 
 ISO11615-MedicinalProducts:MarketingAuthorizationHolderIdentifier
@@ -13205,10 +14276,13 @@ ISO11615-MedicinalProducts:MarketingAuthorizationHolderIdentifier
 			owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
 		]
 		;
-	rdfs:label "marketing authorization holder identifier" ;
+	rdfs:label
+		"marketing authorisation holder identifier"@en-GB ,
+		"marketing authorization holder identifier"@en-US
+		;
 	rdfs:isDefinedBy <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/> ;
-	skos:definition "unique identifier of the marketing authorisation holder (organisation) of the medicinal product" ;
-	AnnotationVocabulary:directSource "ISO 11615:2017 Health informatics - Identification of medicinal products (IDMP) - Data elements and structures for the unique identification and exchange of regulated information on substances, clause 8.2.2.3" ;
+	skos:definition "unique identifier for the marketing authorisation holder (organization) for the medicinal product" ;
+	AnnotationVocabulary:adaptedFrom "ISO 11615:2017 Health informatics - Identification of medicinal products (IDMP) - Data elements and structures for the unique identification and exchange of regulated information on substances, clause 8.2.2.3" ;
 	AnnotationVocabulary:explanatoryNote "An international coding system for unique marketing authorisation holders (organisations) identifiers can be applied, if available." ;
 	.
 
@@ -13230,7 +14304,10 @@ ISO11615-MedicinalProducts:MarketingAuthorizationNumber
 			owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
 		]
 		;
-	rdfs:label "marketing authorization number" ;
+	rdfs:label
+		"marketing authorisation number"@en-GB ,
+		"marketing authorization number"@en-US
+		;
 	rdfs:isDefinedBy <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/> ;
 	skos:definition "identifier assigned by a medicines regulatory agency to a medicinal product" ;
 	AnnotationVocabulary:directSource "ISO 11615:2017 Health informatics - Identification of medicinal products (IDMP) - Data elements and structures for the unique identification and exchange of regulated information on substances, clause 3.1.42" ;
@@ -18779,7 +19856,7 @@ Classifiers:ClassificationScheme
 	rdfs:label "classification scheme" ;
 	terms:source "ISO/IEC 11179-3 Information technology - Metadata registries (MDR) - Part 3: Registry metamodel and basic attributes, Third edition, 2013-02-15" ;
 	skos:definition "system for allocating classifiers to things" ;
-	skos:note "ISO 11179-3 defines a classification scheme as descriptive information for an arrangement or division of objects into groups based on criteria such as characteristics, which the objects have in common.  A classification scheme may be a taxonomy, a network, an ontology, or any other terminological system. Such classification schemes are intended to permit the classification of arbitrary objects into hierarchies, or partial orders, as appropriate. The classification may also be just a list of controlled vocabulary of property words (or terms). The list might be taken from the 'leaf level' of a taxonomy." ;
+	skos:note "ISO 11179-3 defines a classification scheme as descriptive information for an arrangement or division of objects into groups based on criteria such as characteristics, which the objects have in common. A classification scheme may be a taxonomy, a network, an ontology, or any other terminological system. Such classification schemes are intended to permit the classification of arbitrary objects into hierarchies, or partial orders, as appropriate. The classification may also be just a list of controlled vocabulary of property words (or terms). The list might be taken from the 'leaf level' of a taxonomy." ;
 	.
 
 Classifiers:Classifier
@@ -18794,7 +19871,7 @@ Classifiers:Classifier
 		[
 			a owl:Restriction ;
 			owl:onProperty Classifiers:classifies ;
-			owl:someValuesFrom owl:Thing ;
+			owl:minCardinality "0"^^xsd:nonNegativeInteger ;
 		]
 		;
 	rdfs:label "classifier" ;
@@ -18834,6 +19911,15 @@ Classifiers:isClassifiedBy
 	skos:definition "is systematically grouped based on characteristics by" ;
 	.
 
+Classifiers:isExclusive
+	a owl:DatatypeProperty ;
+	rdfs:label "is exclusive" ;
+	rdfs:domain Classifiers:ClassificationScheme ;
+	rdfs:range xsd:boolean ;
+	skos:definition "indicates that the classifiers in the scheme are all disjoint and that only one classifier may be used to classify something" ;
+	AnnotationVocabulary:usageNote "This does not exclude classification by other classifiers from other schemes. It is simply a hint to users that whatever is classified by a classifier in this scheme should be classified by at most one of the classifiers in the scheme." ;
+	.
+
 <https://www.omg.org/spec/Commons/CodesAndCodeSets/CodeElement>
 	a owl:Class ;
 	rdfs:subClassOf
@@ -18859,6 +19945,7 @@ Classifiers:isClassifiedBy
 <https://www.omg.org/spec/Commons/CodesAndCodeSets/CodeSet>
 	a owl:Class ;
 	rdfs:subClassOf
+		Collections:Arrangement ,
 		Collections:Collection ,
 		[
 			a owl:Restriction ;
@@ -18885,7 +19972,10 @@ Classifiers:isClassifiedBy
 		;
 	skos:definition "system of alpha-numeric symbols, or combinations of symbols, that stand for specified values in some context" ;
 	skos:example "ICD-9, LOINC and SNOMED" ;
-	skos:note "They are often described as collections of uniquely identifiable concepts with associated representations, designations, associations and meanings." ;
+	skos:note
+		"Note that a given code set will typically include a finite and known list of codes. Code sets may also be versioned. ICD-9 and ICD-10 are examples of code sets that specify, in some cases, the same codes, but across different versions of those code sets." ,
+		"They are often described as collections of uniquely identifiable concepts with associated representations, designations, associations and meanings."
+		;
 	AnnotationVocabulary:explanatoryNote "A code system is a managed collection of concept identifiers, usually codes, but sometimes more complex sets of rules and references." ;
 	AnnotationVocabulary:synonym
 		"code system" ,
@@ -18895,6 +19985,11 @@ Classifiers:isClassifiedBy
 
 Collections:Arrangement
 	a owl:Class ;
+	rdfs:subClassOf [
+		a owl:Restriction ;
+		owl:onProperty Collections:hasMethod ;
+		owl:minCardinality "0"^^xsd:nonNegativeInteger ;
+	] ;
 	rdfs:label "arrangement" ;
 	skos:definition "systematic plan, manner, or method for making, doing, achieving, or organizing something" ;
 	skos:example "Examples include designs, schema, models, methodologies, alphabetical or numeric ordering, and the like." ;
@@ -18904,17 +19999,14 @@ Collections:Collection
 	a owl:Class ;
 	rdfs:label "collection" ;
 	skos:definition "grouping of things (may be zero) that have some shared significance" ;
+	AnnotationVocabulary:usageNote "Users should use either comprises or hasPart, or one of their respective subproperties, to include things in a collection." ;
 	.
 
 Collections:Constituent
 	a owl:Class ;
-	rdfs:subClassOf [
-		a owl:Restriction ;
-		owl:onProperty Collections:isConstituentOf ;
-		owl:someValuesFrom owl:Thing ;
-	] ;
 	rdfs:label "constituent" ;
-	skos:definition "component of a substance, collection or combination of things" ;
+	skos:definition "component of a collection or combination of things" ;
+	AnnotationVocabulary:usageNote "Users should use either isIncludedIn or isPartOf, or one of their respective subproperties, to include a constituent in a collection." ;
 	.
 
 Collections:StructuredCollection
@@ -18929,11 +20021,13 @@ Collections:StructuredCollection
 		;
 	rdfs:label "structured collection" ;
 	skos:definition "collection that has a clearly defined structure or organization" ;
-	skos:example "Examples include collections organized thematically, alphabetically, by method used do develop them, according to time and/or version, or based on encoding schemes such as the Dewey Decimal System or Library of Congress Subject Headings." ;
+	skos:example "Examples include collections organized thematically, alphabetically, by method used to develop them, according to time and/or version, or based on encoding schemes such as the Dewey Decimal System or Library of Congress Subject Headings." ;
+	AnnotationVocabulary:usageNote "Users should use the hasMethod property on arrangement to describe the methodology for structuring the collection." ;
 	.
 
 Collections:compliesWith
 	a owl:ObjectProperty ;
+	rdfs:subPropertyOf Collections:hasArrangement ;
 	rdfs:label "complies with" ;
 	rdfs:range Collections:Arrangement ;
 	skos:definition "adheres to policies or rules specified in" ;
@@ -18941,10 +20035,9 @@ Collections:compliesWith
 
 Collections:comprises
 	a owl:ObjectProperty ;
-	rdfs:subPropertyOf Collections:isRelatedTo ;
 	rdfs:label "comprises" ;
 	skos:definition "includes, consists of, or contains, especially within a particular scope" ;
-	skos:note "Note that something can be comprised of something(s) that may or may not be understood as separable parts. In other words, comprises does not imply countability or uniqueness." ;
+	skos:note "Note that something can be comprised of something(s) that may or may not be understood as separable parts. In other words, comprises does not imply countability or uniqueness. Whole-part relations are transitive, whereas comprises is not defined to be transitive, so this property is useful in cases where cardinality constraints are needed. comprises and hasPart are not explicitly declared as disjoint to avoid reasoning issues, but should be considered as such." ;
 	.
 
 Collections:hasArrangement
@@ -18958,12 +20051,17 @@ Collections:hasConstituent
 	a owl:ObjectProperty ;
 	rdfs:subPropertyOf Collections:comprises ;
 	rdfs:label "has constituent" ;
+	owl:propertyDisjointWith Collections:hasMember ;
 	skos:definition "consists of or contains" ;
-	AnnotationVocabulary:usageNote "Being a constituent of something does not necessarily mean parthood. Whole-part relations are transitive, whereas constituency is not necessarily transitive and so this property is useful in cases where transitivity is not necessarily desirable or appropriate." ;
+	AnnotationVocabulary:usageNote "This property is disjoint with hasMember, and should be used in cases where the constituents of something are not considered discrete elements of whatever they are included in, such as a substance or composite." ;
 	.
 
 Collections:hasDirectPart
 	a owl:ObjectProperty ;
+	rdfs:subPropertyOf Collections:hasPart ;
+	rdfs:label "has direct part" ;
+	skos:definition "indicates an immediate 'child' part of something" ;
+	AnnotationVocabulary:usageNote "This property is useful in cases where one is interested in the direct relationships between parts of things, for example to build a tree view." ;
 	.
 
 Collections:hasMember
@@ -18972,6 +20070,14 @@ Collections:hasMember
 	rdfs:label "has member" ;
 	skos:definition "includes, as a discrete element" ;
 	skos:note "Note that the domain of hasMember should be some sort of collection, aggregate, or group. In the Financial Industry Business Ontology (FIBO), hasMember is used in the case of parties (people and organizations), whereas comprises can have anything in its range." ;
+	.
+
+Collections:hasMethod
+	a owl:DatatypeProperty ;
+	rdfs:subPropertyOf TextDatatype:hasTextValue ;
+	rdfs:label "has method" ;
+	skos:definition "provides a text description of an approach or method used to accomplish something" ;
+	skos:example "This property can be used to describe an arrangement or ordering applied to a collection." ;
 	.
 
 Collections:hasPart
@@ -18990,20 +20096,25 @@ Collections:isConstituentOf
 	rdfs:subPropertyOf Collections:isIncludedIn ;
 	rdfs:label "is constituent of" ;
 	owl:inverseOf Collections:hasConstituent ;
+	owl:propertyDisjointWith Collections:isMemberOf ;
 	skos:definition "is a component of something else" ;
-	skos:note "A constituent may be an independently identifiable, discrete element or may be an indistinguishable element once it is combined with the target, such as a part of a substance." ;
 	.
 
 Collections:isDirectPartOf
 	a owl:ObjectProperty ;
+	rdfs:subPropertyOf Collections:isPartOf ;
+	rdfs:label "is direct part of" ;
+	owl:inverseOf Collections:hasDirectPart ;
+	skos:definition "indicates an immediate 'parent' of this part" ;
+	AnnotationVocabulary:usageNote "This property is useful in cases where one is interested in the direct relationships between parts of things, for example to build a tree view." ;
 	.
 
 Collections:isIncludedIn
 	a owl:ObjectProperty ;
-	rdfs:subPropertyOf Collections:isRelatedTo ;
 	rdfs:label "is included in" ;
 	owl:inverseOf Collections:comprises ;
 	skos:definition "is contained in or an element of" ;
+	skos:note "Something that is included in something else may be an independently identifiable, discrete element or may be an indistinguishable element once it is combined with the target." ;
 	.
 
 Collections:isMemberOf
@@ -19024,16 +20135,6 @@ Collections:isPartOf
 	owl:inverseOf Collections:hasPart ;
 	skos:definition "relates something to another thing that it is some component or portion of, regardless of how that whole-part relationship is manifested" ;
 	skos:note "Note that 'is part of' is not a subproperty of 'isIncludedIn' in order to enable transitivity for whole-part relationships without limiting the use of cardinality constraints on inclusion and membership." ;
-	.
-
-Collections:isRelatedTo
-	a owl:ObjectProperty ;
-	rdfs:label "is related to" ;
-	skos:definition "links something or someone to something or someone else" ;
-	.
-
-ContextualDesignators:Aspect
-	a owl:Class ;
 	.
 
 ContextualDesignators:Context
@@ -19075,15 +20176,20 @@ ContextualDesignators:ContextualName
 	a owl:Class ;
 	rdfs:subClassOf
 		ContextualDesignators:ContextualDesignation ,
-		Designators:Name
+		Designators:Name ,
+		[
+			a owl:Restriction ;
+			owl:onProperty ContextualDesignators:isApplicableIn ;
+			owl:someValuesFrom ContextualDesignators:Context ;
+		]
 		;
 	rdfs:label "contextual name" ;
 	skos:definition "designation by which someone, some place, or something is known in some context" ;
 	skos:note
-		"Names for people may be considered to be personally identifying information (PII), especially when other details are also available.  Specifying names as string values attached directly to an individual makes name reconciliation and management, including from a privacy perspective, more challenging." ,
-		"Names of people, places, and organizations often change over time, and may be used in a particular context, such as a DBA name for a business or legal name for a person." ,
-		"This class is designed to be extended to include provenance details regarding the source for a particular name as well as links to the various contexts in which it is used."
+		"Names for people may be considered to be personally identifying information (PII), especially when other details are also available. Specifying names as string values attached directly to an individual makes name reconciliation and management, including from a privacy perspective, more challenging." ,
+		"Names of people, places, and organizations often change over time, and may be used in a particular context, such as a DBA name for a business or legal name for a person."
 		;
+	skos:scopeNote "This class is designed to be extended to include provenance details regarding the source for a particular name as well as links to the various contexts in which it is used." ;
 	.
 
 ContextualDesignators:appliesTo
@@ -19123,11 +20229,30 @@ ContextualDesignators:uses
 	skos:definition "employs as a means of accomplishing some task or achieving some result" ;
 	.
 
+<https://www.omg.org/spec/Commons/ContextualIdentifiers/ContextualIdentificationScheme>
+	a owl:Class ;
+	rdfs:subClassOf
+		Identifiers:IdentificationScheme ,
+		[
+			a owl:Restriction ;
+			owl:onProperty ContextualDesignators:isApplicableIn ;
+			owl:someValuesFrom ContextualDesignators:Context ;
+		]
+		;
+	rdfs:label "contextual identification scheme" ;
+	skos:definition "identification scheme that applies within one or more contexts" ;
+	.
+
 <https://www.omg.org/spec/Commons/ContextualIdentifiers/ContextualIdentifier>
 	a owl:Class ;
 	rdfs:subClassOf
 		ContextualDesignators:ContextualDesignation ,
-		Identifiers:Identifier
+		Identifiers:Identifier ,
+		[
+			a owl:Restriction ;
+			owl:onProperty ContextualDesignators:isApplicableIn ;
+			owl:someValuesFrom ContextualDesignators:Context ;
+		]
 		;
 	rdfs:label "contextual identifier" ;
 	skos:definition "sequence of characters uniquely identifying that with which it is associated, within a specified context" ;
@@ -19173,7 +20298,7 @@ DatesAndTimes:CombinedDateTime
 	] ;
 	skos:definition "datatype that maps to several base types for dates and times" ;
 	skos:note "Valid values must use the ISO 8601 representation for a date, or the corresponding XML Schema Datatypes representation for a date and time, or date and time including the time zone." ;
-	skos:scopeNote "There are many cases where the representation of a date may or may not include a time, and where the underlying data representation varies.  This composite datatype should only be used in cases where a standard representation using one of the options in the union for date or date and time value specification does not work." ;
+	skos:scopeNote "There are many cases where the representation of a date may or may not include a time, and where the underlying data representation varies. This composite datatype should only be used in cases where a standard representation using one of the options in the union for date or date and time value specification does not work." ;
 	.
 
 DatesAndTimes:Date
@@ -19562,12 +20687,15 @@ Designators:Designation
 		]
 		;
 	rdfs:label "designation" ;
-	terms:source "ISO 1087 Terminology work and terminology science - Vocabulary, Second edition, 2019-09, clause 3.4.1" ;
-	skos:definition "representation for someone or something by a sign that denotes it" ;
+	skos:definition "representation for something, or for a conceptualization thereof, that denotes it in a domain or subject" ;
 	skos:note
 		"A designation can be a term including appellations, a proper name, or a symbol." ,
 		"A designation can be linguistic or non-linguistic. It can consist of various types of characters, but also punctuation marks such as hyphens and parentheses, governed by domain-, subject-, or language-specific conventions." ,
-		"Note that the use of the min 0 cardinality restriction in the definition of this class is provided as a reminder that designators are expected, in many cases, to have a text value associated with them. There are cases where this is not true, however, including symbols.  And, there may be cases where the value is not known. Additionally, not all tools support rdf:langString, thus its use in the definition of the Text datatype may cause errors, for example in value and some number restrictions. Min 0 cardinality constraints are ignored by reasoners and other processors, so this allows us to say that the possible values for this property are likely either xsd:string or rdf:langString, but does not require it depending on the environment in which the ontology is deployed."
+		"Note that the use of the min 0 cardinality restriction in the definition of this class is provided as a reminder that designators are expected, in many cases, to have a text value associated with them. There are cases where this is not true, however, including symbols. And, there may be cases where the value is not known. Additionally, not all tools support rdf:langString, thus its use in the definition of the Text datatype may cause errors, for example in value and some number restrictions. Min 0 cardinality constraints are ignored by reasoners and other processors, so this allows us to say that the possible values for this property are likely either xsd:string or rdf:langString, but does not require it depending on the environment in which the ontology is deployed."
+		;
+	AnnotationVocabulary:adaptedFrom
+		"ISO 1087 Terminology work and terminology science - Vocabulary, Second edition, 2019-09, clause 3.4.1" ,
+		"ISO 704 Terminology work - Principles and methods, Fourth edition, 2022-07, Figure 1"
 		;
 	AnnotationVocabulary:synonym "designator" ;
 	.
@@ -19583,9 +20711,11 @@ Designators:Name
 		]
 		;
 	rdfs:label "name" ;
-	terms:source "ISO/IEC 11179-3 Information technology - Metadata registries (MDR) - Registry metamodel and basic attributes, Third edition, 2013-02-15" ;
 	owl:disjointWith Identifiers:Identifier ;
-	skos:definition "distinctive designation for an individual (person, organization or thing)" ;
+	skos:definition "designation for something by a linguistic expression" ;
+	skos:note "In ISO 1087, a name may be an appellation and is defined as a term that is applied to a group of objects whose relevant properties are identical, whereas a proper name is a designation that represents an individual object." ;
+	AnnotationVocabulary:adaptedFrom "ISO/IEC 11179-3 Information technology - Metadata registries (MDR) - Registry metamodel and basic attributes, Third edition, 2013-02-15, clause 3.2.83" ;
+	AnnotationVocabulary:explanatoryNote "Note that unlike symbols and other designations, a name is explicitly not linguistically neutral." ;
 	.
 
 Designators:defines
@@ -19605,8 +20735,13 @@ Designators:denotes
 		<http://www.ontologydesignpatterns.org/cp/owl/semiotics.owl#> ,
 		<https://www.w3.org/2016/05/ontolex/>
 		;
-	skos:definition "serves as a sign for something" ;
+	skos:definition "serves as a sign for something, or for a conceptualization thereof" ;
 	skos:note "Note that in some references, such as the semiotics ontology from Ontology Design Patterns,'denotes' can be used to talk about e.g. entities denoted by proper nouns: the proper noun 'Leonardo da Vinci' denotes the person Leonardo da Vinci; as well as to talk about sets of entities that can be described by a common noun: the common noun 'person' denotes the collection of all persons in a domain of discourse. Other references that may be useful for interpreting 'denotes' include OntoLex. The interpretation of 'denotes' in this context is more general, but intended to reflect its usage in the semiotic triangle." ;
+	skos:scopeNote "This property could be specialized to differentiate the notion of referring to something, i.e., a referent, from the notion of evoking a concept. Consider that in OntoLex, the term denotes is used to designate the sign referent relationship specifically, which in ISO 704:2022 is called 'refers to' in Figure 1. This definition is also meant to cover the OntoLex notion of evokes, which in ISO 704:2022 is called designates or represents." ;
+	AnnotationVocabulary:adaptedFrom
+		"ISO 1087 Terminology work and terminology science - Vocabulary, Second edition, 2019-09, clause 3.4.1" ,
+		"ISO 704 Terminology work - Principles and methods, Fourth edition, 2022-07, Figure 1"
+		;
 	.
 
 Designators:describes
@@ -19661,10 +20796,6 @@ Designators:isSignifiedBy
 	rdfs:range Designators:Designation ;
 	owl:inverseOf Designators:denotes ;
 	skos:definition "has representation, denotation or sign of" ;
-	.
-
-Documents:Document
-	a owl:Class ;
 	.
 
 Documents:Reference
@@ -19765,8 +20896,15 @@ Identifiers:Identifier
 	skos:note "Note that some identifiers may be reused, or may be components of other identifiers, thus the restriction on what an identifier identifies is a 'some values' restriction rather than an exact cardinality. Examples of reusable identifiers include ticker symbols, and in the United States, vehicle license numbers, such as vanity plates that can be reassigned and moved from one car to another. Narrower constraints can be added to specific kinds of identifiers that are not reassignable and that identify exactly one thing, such as many national identifiers for people including passport numbers and, in the United States, social security numbers. Also, not all identifiers are explicitly defined in formal schemes, although they may be created or generated according to some formula." ;
 	.
 
-Identifiers:identifies
+Identifiers:classifies
 	a owl:ObjectProperty ;
+	.
+
+Identifiers:identifies
+	a
+		owl:ObjectProperty ,
+		owl:FunctionalProperty
+		;
 	rdfs:subPropertyOf Designators:denotes ;
 	rdfs:label "identifies" ;
 	rdfs:domain Identifiers:Identifier ;
@@ -19843,6 +20981,10 @@ PartiesAndSituations:hasObjectRole
 	.
 
 PartiesAndSituations:hasRole
+	a owl:ObjectProperty ;
+	.
+
+PartiesAndSituations:hasSubjectRole
 	a owl:ObjectProperty ;
 	.
 
@@ -20154,6 +21296,7 @@ TextDatatype:Text
 		"There are cases where the representation of certain features of something, such as a name, which might be multilingual or might not, defaults to rdfs:Literal when left unspecified, although it should be limited to plain strings or language-typed strings (i.e., exclude numbers, binary types, and so forth). There is no combined datatype available in RDF or OWL, however, which is the role that this datatype is intended to fulfill."
 		;
 	skos:scopeNote "This composite datatype should be used in cases where a standard representation using one of the options in the union for string values does not work. Note that certain tools may not support rdf:langString, including, but not limited to some versions of Protege, and that custom datatypes are not supported in OWL 2 RL so it may need to be ignored or commented out in OWL 2 RL applications." ;
+	AnnotationVocabulary:usageNote "Commons users that depend on tools that lack support for rdf:langString may not want to use this datatype in their applications. Testing with specific reasoners, for example, is advised." ;
 	.
 
 TextDatatype:hasTextValue
@@ -59898,7 +61041,7 @@ LanguageRepresentation:isMemberOf
 	.
 
 []
-	owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+	owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
 	.
 
 []

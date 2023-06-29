@@ -1,0 +1,1593 @@
+@prefix : <https://spec.pistoiaalliance.org/idmp/ontology/QuickIDMPDev/> .
+@prefix Classifiers: <https://www.omg.org/spec/Commons/Classifiers/> .
+@prefix Collections: <https://www.omg.org/spec/Commons/Collections/> .
+@prefix ContextualDesignators: <https://www.omg.org/spec/Commons/ContextualDesignators/> .
+@prefix CountryRepresentation: <https://www.omg.org/spec/LCC/Countries/CountryRepresentation/> .
+@prefix DatesAndTimes: <https://www.omg.org/spec/Commons/DatesAndTimes/> .
+@prefix Designators: <https://www.omg.org/spec/Commons/Designators/> .
+@prefix Documents: <https://www.omg.org/spec/Commons/Documents/> .
+@prefix ISO11238-Substances: <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/> .
+@prefix ISO11240-UnitsOfMeasurement: <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11240-UnitsOfMeasurement/> .
+@prefix ISO11615-MedicinalProducts: <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/> .
+@prefix ISO21090-HarmonizedDatatypes: <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO21090-HarmonizedDatatypes/> .
+@prefix Identifiers: <https://www.omg.org/spec/Commons/Identifiers/> .
+@prefix LanguageRepresentation: <https://www.omg.org/spec/LCC/Languages/LanguageRepresentation/> .
+@prefix PartiesAndSituations: <https://www.omg.org/spec/Commons/PartiesAndSituations/> .
+@prefix ProductsAndServices: <https://www.omg.org/spec/Commons/ProductsAndServices/> .
+@prefix QuantitiesAndUnits: <https://www.omg.org/spec/Commons/QuantitiesAndUnits/> .
+@prefix RegistrationAuthorities: <https://www.omg.org/spec/Commons/RegistrationAuthorities/> .
+@prefix RegulatoryAgencies: <https://www.omg.org/spec/Commons/RegulatoryAgencies/> .
+@prefix SubstancesProductsOrganisationsReferentials: <https://spec.pistoiaalliance.org/idmp/ontology/ISO/EuropeanJurisdiction/SubstancesProductsOrganisationsReferentials/> .
+@prefix TextDatatype: <https://www.omg.org/spec/Commons/TextDatatype/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://spec.pistoiaalliance.org/idmp/ontology/ISO/EuropeanJurisdiction/EuropeanRegistrationAuthorities/ChemicalEntitiesOfBiologicalInterestEntryNodeShape> a sh:NodeShape ;
+    sh:targetClass <https://spec.pistoiaalliance.org/idmp/ontology/ISO/EuropeanJurisdiction/EuropeanRegistrationAuthorities/ChemicalEntitiesOfBiologicalInterestEntry> .
+
+<https://spec.pistoiaalliance.org/idmp/ontology/ISO/EuropeanJurisdiction/EuropeanRegistrationAuthorities/ChemicalEntitiesOfBiologicalInterestIdentifierNodeShape> a sh:NodeShape ;
+    sh:targetClass <https://spec.pistoiaalliance.org/idmp/ontology/ISO/EuropeanJurisdiction/EuropeanRegistrationAuthorities/ChemicalEntitiesOfBiologicalInterestIdentifier> .
+
+<https://spec.pistoiaalliance.org/idmp/ontology/ISO/EuropeanJurisdiction/EuropeanRegistrationAuthorities/EudraClinicalTrialsNumberNodeShape> a sh:NodeShape ;
+    sh:targetClass <https://spec.pistoiaalliance.org/idmp/ontology/ISO/EuropeanJurisdiction/EuropeanRegistrationAuthorities/EudraClinicalTrialsNumber> .
+
+<https://spec.pistoiaalliance.org/idmp/ontology/ISO/EuropeanJurisdiction/EuropeanRegistrationAuthorities/EudraVigilanceCodeNodeShape> a sh:NodeShape ;
+    sh:targetClass <https://spec.pistoiaalliance.org/idmp/ontology/ISO/EuropeanJurisdiction/EuropeanRegistrationAuthorities/EudraVigilanceCode> .
+
+<https://spec.pistoiaalliance.org/idmp/ontology/ISO/EuropeanJurisdiction/EuropeanRegistrationAuthorities/EuropeanCommunityNumberNodeShape> a sh:NodeShape ;
+    sh:targetClass <https://spec.pistoiaalliance.org/idmp/ontology/ISO/EuropeanJurisdiction/EuropeanRegistrationAuthorities/EuropeanCommunityNumber> .
+
+<https://spec.pistoiaalliance.org/idmp/ontology/ISO/EuropeanJurisdiction/EuropeanRegistrationAuthorities/EuropeanInventoryOfExistingCommercialChemicalSubstancesEntryNodeShape> a sh:NodeShape ;
+    sh:targetClass <https://spec.pistoiaalliance.org/idmp/ontology/ISO/EuropeanJurisdiction/EuropeanRegistrationAuthorities/EuropeanInventoryOfExistingCommercialChemicalSubstancesEntry> .
+
+<https://spec.pistoiaalliance.org/idmp/ontology/ISO/EuropeanJurisdiction/EuropeanRegistrationAuthorities/ExtendedEudraVigilanceMedicinalProductDictionaryEntryNodeShape> a sh:NodeShape ;
+    sh:targetClass <https://spec.pistoiaalliance.org/idmp/ontology/ISO/EuropeanJurisdiction/EuropeanRegistrationAuthorities/ExtendedEudraVigilanceMedicinalProductDictionaryEntry> .
+
+SubstancesProductsOrganisationsReferentials:ReferentialsManagementServicesControlledVocabularyTermNodeShape a sh:NodeShape ;
+    sh:targetClass SubstancesProductsOrganisationsReferentials:ReferentialsManagementServicesControlledVocabularyTerm .
+
+SubstancesProductsOrganisationsReferentials:SPOR-DataClassificationNodeShape a sh:NodeShape ;
+    sh:targetClass SubstancesProductsOrganisationsReferentials:SPOR-DataClassification .
+
+SubstancesProductsOrganisationsReferentials:SPOR-DomainNodeShape a sh:NodeShape ;
+    sh:targetClass SubstancesProductsOrganisationsReferentials:SPOR-Domain .
+
+SubstancesProductsOrganisationsReferentials:SPOR-MarketingStatusClassifierNodeShape a sh:NodeShape ;
+    sh:targetClass SubstancesProductsOrganisationsReferentials:SPOR-MarketingStatusClassifier .
+
+<https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-RegistrationAuthorities/AustralianPlantNameIndexEntryNodeShape> a sh:NodeShape ;
+    sh:targetClass <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-RegistrationAuthorities/AustralianPlantNameIndexEntry> .
+
+<https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-RegistrationAuthorities/AustralianPlantNameIndexIdentifierNodeShape> a sh:NodeShape ;
+    sh:targetClass <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-RegistrationAuthorities/AustralianPlantNameIndexIdentifier> .
+
+<https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-RegistrationAuthorities/CASRegistryNumberNodeShape> a sh:NodeShape ;
+    sh:targetClass <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-RegistrationAuthorities/CASRegistryNumber> .
+
+<https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-RegistrationAuthorities/ChemicalAbstractsServiceChemicalRegistrySystemEntryNodeShape> a sh:NodeShape ;
+    sh:targetClass <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-RegistrationAuthorities/ChemicalAbstractsServiceChemicalRegistrySystemEntry> .
+
+<https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-RegistrationAuthorities/GlobalSubstanceRegistrationSystemEntryNodeShape> a sh:NodeShape ;
+    sh:targetClass <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-RegistrationAuthorities/GlobalSubstanceRegistrationSystemEntry> .
+
+<https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-RegistrationAuthorities/IntegratedTaxonomicInformationSystemEntryNodeShape> a sh:NodeShape ;
+    sh:targetClass <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-RegistrationAuthorities/IntegratedTaxonomicInformationSystemEntry> .
+
+<https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-RegistrationAuthorities/IntegratedTaxonomicInformationSystemTaxonomicSerialNumberNodeShape> a sh:NodeShape ;
+    sh:targetClass <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-RegistrationAuthorities/IntegratedTaxonomicInformationSystemTaxonomicSerialNumber> .
+
+<https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-RegistrationAuthorities/InternationalNonproprietaryNameNodeShape> a sh:NodeShape ;
+    sh:targetClass <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-RegistrationAuthorities/InternationalNonproprietaryName> .
+
+<https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-RegistrationAuthorities/MedDRAMedicalConditionIdentifierNodeShape> a sh:NodeShape ;
+    sh:targetClass <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-RegistrationAuthorities/MedDRAMedicalConditionIdentifier> .
+
+<https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-RegistrationAuthorities/MedicalSubjectHeadingsEntryNodeShape> a sh:NodeShape ;
+    sh:targetClass <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-RegistrationAuthorities/MedicalSubjectHeadingsEntry> .
+
+<https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-RegistrationAuthorities/MedicalSubjectHeadingsUniqueIdentifierNodeShape> a sh:NodeShape ;
+    sh:targetClass <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-RegistrationAuthorities/MedicalSubjectHeadingsUniqueIdentifier> .
+
+<https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-RegistrationAuthorities/NationalCancerInstituteThesaurusCodeNodeShape> a sh:NodeShape ;
+    sh:targetClass <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-RegistrationAuthorities/NationalCancerInstituteThesaurusCode> .
+
+<https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-RegistrationAuthorities/NationalCancerInstituteThesaurusEntryNodeShape> a sh:NodeShape ;
+    sh:targetClass <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-RegistrationAuthorities/NationalCancerInstituteThesaurusEntry> .
+
+<https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-RegistrationAuthorities/NationalCenterForBiotechnologyInformationTaxonomyDatabaseEntryNodeShape> a sh:NodeShape ;
+    sh:targetClass <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-RegistrationAuthorities/NationalCenterForBiotechnologyInformationTaxonomyDatabaseEntry> .
+
+<https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-RegistrationAuthorities/NationalCenterForBiotechnologyInformationTaxonomyIdentifierNodeShape> a sh:NodeShape ;
+    sh:targetClass <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-RegistrationAuthorities/NationalCenterForBiotechnologyInformationTaxonomyIdentifier> .
+
+<https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-RegistrationAuthorities/PlantListOfAcceptedNomenclatureTaxonomyAndSymbolsEntryNodeShape> a sh:NodeShape ;
+    sh:targetClass <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-RegistrationAuthorities/PlantListOfAcceptedNomenclatureTaxonomyAndSymbolsEntry> .
+
+<https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-RegistrationAuthorities/PlantListOfAcceptedNomenclatureTaxonomySymbolsSymbolNodeShape> a sh:NodeShape ;
+    sh:targetClass <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-RegistrationAuthorities/PlantListOfAcceptedNomenclatureTaxonomySymbolsSymbol> .
+
+<https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-RegistrationAuthorities/UniqueIngredientNumberNodeShape> a sh:NodeShape ;
+    sh:targetClass <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-RegistrationAuthorities/UniqueIngredientNumber> .
+
+ISO11238-Substances:AcidNodeShape a sh:NodeShape ;
+    sh:targetClass ISO11238-Substances:Acid .
+
+ISO11238-Substances:ActiveIngredientNodeShape a sh:NodeShape ;
+    sh:targetClass ISO11238-Substances:ActiveIngredient .
+
+ISO11238-Substances:ActiveMoietyRoleNodeShape a sh:NodeShape ;
+    sh:targetClass ISO11238-Substances:ActiveMoietyRole .
+
+ISO11238-Substances:AdditiveIngredientNodeShape a sh:NodeShape ;
+    sh:targetClass ISO11238-Substances:AdditiveIngredient .
+
+ISO11238-Substances:AdjuvantNodeShape a sh:NodeShape ;
+    sh:targetClass ISO11238-Substances:Adjuvant .
+
+ISO11238-Substances:AgentModificationMethodNodeShape a sh:NodeShape ;
+    sh:targetClass ISO11238-Substances:AgentModificationMethod .
+
+ISO11238-Substances:AgentModificationTypeNodeShape a sh:NodeShape ;
+    sh:targetClass ISO11238-Substances:AgentModificationType .
+
+ISO11238-Substances:AmountTypeNodeShape a sh:NodeShape ;
+    sh:targetClass ISO11238-Substances:AmountType .
+
+ISO11238-Substances:AnalyticalMethodNodeShape a sh:NodeShape ;
+    sh:targetClass ISO11238-Substances:AnalyticalMethod .
+
+ISO11238-Substances:BaseIngredientNodeShape a sh:NodeShape ;
+    sh:targetClass ISO11238-Substances:BaseIngredient .
+
+ISO11238-Substances:BaseNodeShape a sh:NodeShape ;
+    sh:targetClass ISO11238-Substances:Base .
+
+ISO11238-Substances:ChemicalElementNodeShape a sh:NodeShape ;
+    sh:targetClass ISO11238-Substances:ChemicalElement .
+
+ISO11238-Substances:ChemicalSubstanceNodeShape a sh:NodeShape ;
+    sh:targetClass ISO11238-Substances:ChemicalSubstance .
+
+ISO11238-Substances:ColorIngredientNodeShape a sh:NodeShape ;
+    sh:targetClass ISO11238-Substances:ColorIngredient .
+
+ISO11238-Substances:ConformanceLevelNodeShape a sh:NodeShape ;
+    sh:targetClass ISO11238-Substances:ConformanceLevel .
+
+ISO11238-Substances:ContaminantIngredientNodeShape a sh:NodeShape ;
+    sh:targetClass ISO11238-Substances:ContaminantIngredient .
+
+ISO11238-Substances:ElementGroupNodeShape a sh:NodeShape ;
+    sh:targetClass ISO11238-Substances:ElementGroup .
+
+ISO11238-Substances:EsterNodeShape a sh:NodeShape ;
+    sh:targetClass ISO11238-Substances:Ester .
+
+ISO11238-Substances:ExcipientNodeShape a sh:NodeShape ;
+    sh:targetClass ISO11238-Substances:Excipient .
+
+ISO11238-Substances:FlavorIngredientNodeShape a sh:NodeShape ;
+    sh:targetClass ISO11238-Substances:FlavorIngredient .
+
+ISO11238-Substances:GeneElementIdentifierNodeShape a sh:NodeShape ;
+    sh:targetClass ISO11238-Substances:GeneElementIdentifier .
+
+ISO11238-Substances:GeneElementNameNodeShape a sh:NodeShape ;
+    sh:targetClass ISO11238-Substances:GeneElementName .
+
+ISO11238-Substances:GeneElementTypeNodeShape a sh:NodeShape ;
+    sh:targetClass ISO11238-Substances:GeneElementType .
+
+ISO11238-Substances:GeneIdentifierNodeShape a sh:NodeShape ;
+    sh:targetClass ISO11238-Substances:GeneIdentifier .
+
+ISO11238-Substances:GeneNameNodeShape a sh:NodeShape ;
+    sh:targetClass ISO11238-Substances:GeneName .
+
+ISO11238-Substances:GeneSequenceOriginNodeShape a sh:NodeShape ;
+    sh:targetClass ISO11238-Substances:GeneSequenceOrigin .
+
+ISO11238-Substances:HydrateNodeShape a sh:NodeShape ;
+    sh:targetClass ISO11238-Substances:Hydrate .
+
+ISO11238-Substances:InactiveIngredientNodeShape a sh:NodeShape ;
+    sh:targetClass ISO11238-Substances:InactiveIngredient .
+
+ISO11238-Substances:InactiveMoietyRoleNodeShape a sh:NodeShape ;
+    sh:targetClass ISO11238-Substances:InactiveMoietyRole .
+
+ISO11238-Substances:IngredientNodeShape a sh:NodeShape ;
+    sh:targetClass ISO11238-Substances:Ingredient .
+
+ISO11238-Substances:InteractionTypeNodeShape a sh:NodeShape ;
+    sh:targetClass ISO11238-Substances:InteractionType .
+
+ISO11238-Substances:IsotopeCompositionNodeShape a sh:NodeShape ;
+    sh:targetClass ISO11238-Substances:IsotopeComposition .
+
+ISO11238-Substances:IsotopeNodeShape a sh:NodeShape ;
+    sh:targetClass ISO11238-Substances:Isotope .
+
+ISO11238-Substances:IsotopicSubstitutionClassifierNodeShape a sh:NodeShape ;
+    sh:targetClass ISO11238-Substances:IsotopicSubstitutionClassifier .
+
+ISO11238-Substances:ManufacturedItemNodeShape a sh:NodeShape ;
+    sh:targetClass ISO11238-Substances:ManufacturedItem .
+
+ISO11238-Substances:MaterialClassifierNodeShape a sh:NodeShape ;
+    sh:targetClass ISO11238-Substances:MaterialClassifier .
+
+ISO11238-Substances:MaterialRoleNodeShape a sh:NodeShape ;
+    sh:targetClass ISO11238-Substances:MaterialRole .
+
+ISO11238-Substances:MaterialSpecificationNodeShape a sh:NodeShape ;
+    sh:targetClass ISO11238-Substances:MaterialSpecification .
+
+ISO11238-Substances:MechanicalIngredientNodeShape a sh:NodeShape ;
+    sh:targetClass ISO11238-Substances:MechanicalIngredient .
+
+ISO11238-Substances:MixtureNodeShape a sh:NodeShape ;
+    sh:targetClass ISO11238-Substances:Mixture .
+
+ISO11238-Substances:ModificationAgentNodeShape a sh:NodeShape ;
+    sh:targetClass ISO11238-Substances:ModificationAgent .
+
+ISO11238-Substances:ModificationMethodNodeShape a sh:NodeShape ;
+    sh:targetClass ISO11238-Substances:ModificationMethod .
+
+ISO11238-Substances:ModificationMethodTypeNodeShape a sh:NodeShape ;
+    sh:targetClass ISO11238-Substances:ModificationMethodType .
+
+ISO11238-Substances:ModificationRoleCodeNodeShape a sh:NodeShape ;
+    sh:targetClass ISO11238-Substances:ModificationRoleCode .
+
+ISO11238-Substances:ModificationRoleNodeShape a sh:NodeShape ;
+    sh:targetClass ISO11238-Substances:ModificationRole .
+
+ISO11238-Substances:MoietyIdentifierNodeShape a sh:NodeShape ;
+    sh:targetClass ISO11238-Substances:MoietyIdentifier .
+
+ISO11238-Substances:MoietyNameNodeShape a sh:NodeShape ;
+    sh:targetClass ISO11238-Substances:MoietyName .
+
+ISO11238-Substances:MoietyNodeShape a sh:NodeShape ;
+    sh:targetClass ISO11238-Substances:Moiety .
+
+ISO11238-Substances:MoietyRoleNodeShape a sh:NodeShape ;
+    sh:targetClass ISO11238-Substances:MoietyRole .
+
+ISO11238-Substances:MolecularCompositionNodeShape a sh:NodeShape ;
+    sh:targetClass ISO11238-Substances:MolecularComposition .
+
+ISO11238-Substances:MolecularConstituentNodeShape a sh:NodeShape ;
+    sh:targetClass ISO11238-Substances:MolecularConstituent .
+
+ISO11238-Substances:MolecularFormulaByMoietyNodeShape a sh:NodeShape ;
+    sh:targetClass ISO11238-Substances:MolecularFormulaByMoiety .
+
+ISO11238-Substances:MolecularFormulaNodeShape a sh:NodeShape ;
+    sh:targetClass ISO11238-Substances:MolecularFormula .
+
+ISO11238-Substances:MolecularFragmentIdentifierNodeShape a sh:NodeShape ;
+    sh:targetClass ISO11238-Substances:MolecularFragmentIdentifier .
+
+ISO11238-Substances:MolecularFragmentNameNodeShape a sh:NodeShape ;
+    sh:targetClass ISO11238-Substances:MolecularFragmentName .
+
+ISO11238-Substances:MolecularFragmentNodeShape a sh:NodeShape ;
+    sh:targetClass ISO11238-Substances:MolecularFragment .
+
+ISO11238-Substances:MolecularFragmentRoleNodeShape a sh:NodeShape ;
+    sh:targetClass ISO11238-Substances:MolecularFragmentRole .
+
+ISO11238-Substances:MolecularGraphIdentifierNodeShape a sh:NodeShape ;
+    sh:targetClass ISO11238-Substances:MolecularGraphIdentifier .
+
+ISO11238-Substances:MolecularGroupNodeShape a sh:NodeShape ;
+    sh:targetClass ISO11238-Substances:MolecularGroup .
+
+ISO11238-Substances:MolecularStructureIdentifierNodeShape a sh:NodeShape ;
+    sh:targetClass ISO11238-Substances:MolecularStructureIdentifier .
+
+ISO11238-Substances:MolecularStructureNodeShape a sh:NodeShape ;
+    sh:targetClass ISO11238-Substances:MolecularStructure .
+
+ISO11238-Substances:MoleculeNodeShape a sh:NodeShape ;
+    sh:targetClass ISO11238-Substances:Molecule .
+
+ISO11238-Substances:MonodisperseSubstanceNodeShape a sh:NodeShape ;
+    sh:targetClass ISO11238-Substances:MonodisperseSubstance .
+
+ISO11238-Substances:NucleicAcidSubstanceNodeShape a sh:NodeShape ;
+    sh:targetClass ISO11238-Substances:NucleicAcidSubstance .
+
+ISO11238-Substances:NuclideIdentifierNodeShape a sh:NodeShape ;
+    sh:targetClass ISO11238-Substances:NuclideIdentifier .
+
+ISO11238-Substances:NuclideNameNodeShape a sh:NodeShape ;
+    sh:targetClass ISO11238-Substances:NuclideName .
+
+ISO11238-Substances:OfficialNameNodeShape a sh:NodeShape ;
+    sh:targetClass ISO11238-Substances:OfficialName .
+
+ISO11238-Substances:OpticalActivityNodeShape a sh:NodeShape ;
+    sh:targetClass ISO11238-Substances:OpticalActivity .
+
+ISO11238-Substances:ParameterNameNodeShape a sh:NodeShape ;
+    sh:targetClass ISO11238-Substances:ParameterName .
+
+ISO11238-Substances:ParameterNodeShape a sh:NodeShape ;
+    sh:targetClass ISO11238-Substances:Parameter .
+
+ISO11238-Substances:PharmacopoeialGradeClassifierNodeShape a sh:NodeShape ;
+    sh:targetClass ISO11238-Substances:PharmacopoeialGradeClassifier .
+
+ISO11238-Substances:PharmacopoeialGradeNameNodeShape a sh:NodeShape ;
+    sh:targetClass ISO11238-Substances:PharmacopoeialGradeName .
+
+ISO11238-Substances:PhysicalManufacturedItemNodeShape a sh:NodeShape ;
+    sh:targetClass ISO11238-Substances:PhysicalManufacturedItem .
+
+ISO11238-Substances:PhysicalModificationMethodNodeShape a sh:NodeShape ;
+    sh:targetClass ISO11238-Substances:PhysicalModificationMethod .
+
+ISO11238-Substances:PhysicalSubstanceNodeShape a sh:NodeShape ;
+    sh:targetClass ISO11238-Substances:PhysicalSubstance .
+
+ISO11238-Substances:PolydisperseSubstanceNodeShape a sh:NodeShape ;
+    sh:targetClass ISO11238-Substances:PolydisperseSubstance .
+
+ISO11238-Substances:PolymerSubstanceNodeShape a sh:NodeShape ;
+    sh:targetClass ISO11238-Substances:PolymerSubstance .
+
+ISO11238-Substances:PreservativeIngredientNodeShape a sh:NodeShape ;
+    sh:targetClass ISO11238-Substances:PreservativeIngredient .
+
+ISO11238-Substances:ProcessingMaterialRoleNodeShape a sh:NodeShape ;
+    sh:targetClass ISO11238-Substances:ProcessingMaterialRole .
+
+ISO11238-Substances:ProteinSubstanceNodeShape a sh:NodeShape ;
+    sh:targetClass ISO11238-Substances:ProteinSubstance .
+
+ISO11238-Substances:RadioactiveDecayNodeShape a sh:NodeShape ;
+    sh:targetClass ISO11238-Substances:RadioactiveDecay .
+
+ISO11238-Substances:RadionuclideNodeShape a sh:NodeShape ;
+    sh:targetClass ISO11238-Substances:Radionuclide .
+
+ISO11238-Substances:ReferenceSourceCitationNodeShape a sh:NodeShape ;
+    sh:targetClass ISO11238-Substances:ReferenceSourceCitation .
+
+ISO11238-Substances:ReferenceSourceDocumentIdentifierNodeShape a sh:NodeShape ;
+    sh:targetClass ISO11238-Substances:ReferenceSourceDocumentIdentifier .
+
+ISO11238-Substances:ReferenceSourceIdentifierNodeShape a sh:NodeShape ;
+    sh:targetClass ISO11238-Substances:ReferenceSourceIdentifier .
+
+ISO11238-Substances:ReferenceSourceNodeShape a sh:NodeShape ;
+    sh:targetClass ISO11238-Substances:ReferenceSource .
+
+ISO11238-Substances:ResultantMaterialRoleNodeShape a sh:NodeShape ;
+    sh:targetClass ISO11238-Substances:ResultantMaterialRole .
+
+ISO11238-Substances:SaltNodeShape a sh:NodeShape ;
+    sh:targetClass ISO11238-Substances:Salt .
+
+ISO11238-Substances:SimplifiedMolecularInputLineEntryNodeShape a sh:NodeShape ;
+    sh:targetClass ISO11238-Substances:SimplifiedMolecularInputLineEntry .
+
+ISO11238-Substances:SingleSubstanceNodeShape a sh:NodeShape ;
+    sh:targetClass ISO11238-Substances:SingleSubstance .
+
+ISO11238-Substances:SourceMaterialClassifierCodeNodeShape a sh:NodeShape ;
+    sh:targetClass ISO11238-Substances:SourceMaterialClassifierCode .
+
+ISO11238-Substances:SourceMaterialClassifierNodeShape a sh:NodeShape ;
+    sh:targetClass ISO11238-Substances:SourceMaterialClassifier .
+
+ISO11238-Substances:SourceMaterialRoleNodeShape a sh:NodeShape ;
+    sh:targetClass ISO11238-Substances:SourceMaterialRole .
+
+ISO11238-Substances:SpecifiedItemCountNodeShape a sh:NodeShape ;
+    sh:targetClass ISO11238-Substances:SpecifiedItemCount .
+
+ISO11238-Substances:SpecifiedSubstanceGroup1NodeShape a sh:NodeShape ;
+    sh:targetClass ISO11238-Substances:SpecifiedSubstanceGroup1 .
+
+ISO11238-Substances:SpecifiedSubstanceGroup2NodeShape a sh:NodeShape ;
+    sh:targetClass ISO11238-Substances:SpecifiedSubstanceGroup2 .
+
+ISO11238-Substances:SpecifiedSubstanceGroup3NodeShape a sh:NodeShape ;
+    sh:targetClass ISO11238-Substances:SpecifiedSubstanceGroup3 .
+
+ISO11238-Substances:SpecifiedSubstanceGroup4NodeShape a sh:NodeShape ;
+    sh:targetClass ISO11238-Substances:SpecifiedSubstanceGroup4 .
+
+ISO11238-Substances:SpecifiedSubstanceGroupNodeShape a sh:NodeShape ;
+    sh:targetClass ISO11238-Substances:SpecifiedSubstanceGroup .
+
+ISO11238-Substances:SpecifiedSubstanceNodeShape a sh:NodeShape ;
+    sh:targetClass ISO11238-Substances:SpecifiedSubstance .
+
+ISO11238-Substances:StabilizerIngredientNodeShape a sh:NodeShape ;
+    sh:targetClass ISO11238-Substances:StabilizerIngredient .
+
+ISO11238-Substances:StartingMaterialRoleNodeShape a sh:NodeShape ;
+    sh:targetClass ISO11238-Substances:StartingMaterialRole .
+
+ISO11238-Substances:StructuralModificationMethodNodeShape a sh:NodeShape ;
+    sh:targetClass ISO11238-Substances:StructuralModificationMethod .
+
+ISO11238-Substances:StructuralModificationTypeNodeShape a sh:NodeShape ;
+    sh:targetClass ISO11238-Substances:StructuralModificationType .
+
+ISO11238-Substances:StructurallyDiverseSubstanceNodeShape a sh:NodeShape ;
+    sh:targetClass ISO11238-Substances:StructurallyDiverseSubstance .
+
+ISO11238-Substances:SubstanceClassifierCodeNodeShape a sh:NodeShape ;
+    sh:targetClass ISO11238-Substances:SubstanceClassifierCode .
+
+ISO11238-Substances:SubstanceCodeNodeShape a sh:NodeShape ;
+    sh:targetClass ISO11238-Substances:SubstanceCode .
+
+ISO11238-Substances:SubstanceCompositionNodeShape a sh:NodeShape ;
+    sh:targetClass ISO11238-Substances:SubstanceComposition .
+
+ISO11238-Substances:SubstanceIdentifierNodeShape a sh:NodeShape ;
+    sh:targetClass ISO11238-Substances:SubstanceIdentifier .
+
+ISO11238-Substances:SubstanceNameNodeShape a sh:NodeShape ;
+    sh:targetClass ISO11238-Substances:SubstanceName .
+
+ISO11238-Substances:SubstanceNodeShape a sh:NodeShape ;
+    sh:targetClass ISO11238-Substances:Substance .
+
+ISO11238-Substances:SubstanceRelationshipCodeNodeShape a sh:NodeShape ;
+    sh:targetClass ISO11238-Substances:SubstanceRelationshipCode .
+
+ISO11238-Substances:SubstanceRelationshipTypeNodeShape a sh:NodeShape ;
+    sh:targetClass ISO11238-Substances:SubstanceRelationshipType .
+
+ISO11238-Substances:SubstanceRoleNodeShape a sh:NodeShape ;
+    sh:targetClass ISO11238-Substances:SubstanceRole .
+
+ISO11238-Substances:SubstrateTargetInteractionNodeShape a sh:NodeShape ;
+    sh:targetClass ISO11238-Substances:SubstrateTargetInteraction .
+
+<https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11239-PharmaceuticalDoseForms/BasicDoseFormNodeShape> a sh:NodeShape ;
+    sh:targetClass <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11239-PharmaceuticalDoseForms/BasicDoseForm> .
+
+ISO11240-UnitsOfMeasurement:CodeSystemIdentifierNodeShape a sh:NodeShape ;
+    sh:targetClass ISO11240-UnitsOfMeasurement:CodeSystemIdentifier .
+
+ISO11240-UnitsOfMeasurement:ISO11240LexiconCodeEntryNodeShape a sh:NodeShape ;
+    sh:or ( :someValuesFromidentifiesMeasurementUnitPropertyShape :someValuesFrominverseOfisIdentifiedByUnitOfMeasureIdentifierPropertyShape ) ;
+    sh:targetClass ISO11240-UnitsOfMeasurement:ISO11240LexiconCodeEntry .
+
+ISO11240-UnitsOfMeasurement:UnitOfMeasureIdentifierNodeShape a sh:NodeShape ;
+    sh:or ( :someValuesFromidentifiesMeasurementUnitPropertyShape :someValuesFrominverseOfisIdentifiedByUnitOfMeasureIdentifierPropertyShape ) ;
+    sh:targetClass ISO11240-UnitsOfMeasurement:UnitOfMeasureIdentifier .
+
+ISO11240-UnitsOfMeasurement:UnitOfPresentationNodeShape a sh:NodeShape ;
+    sh:or ( :someValuesFromisIdentifiedByUnitOfMeasureIdentifierPropertyShape :someValuesFrominverseOfidentifiesMeasurementUnitPropertyShape ) ;
+    sh:targetClass ISO11240-UnitsOfMeasurement:UnitOfPresentation .
+
+ISO11615-MedicinalProducts:ActiveIngredientActiveMoietyBasisOfStrengthNodeShape a sh:NodeShape ;
+    sh:targetClass ISO11615-MedicinalProducts:ActiveIngredientActiveMoietyBasisOfStrength .
+
+ISO11615-MedicinalProducts:ActiveIngredientEntireSubstanceBasisOfStrengthNodeShape a sh:NodeShape ;
+    sh:targetClass ISO11615-MedicinalProducts:ActiveIngredientEntireSubstanceBasisOfStrength .
+
+ISO11615-MedicinalProducts:ActiveIngredientReferenceSubstanceBasisOfStrengthNodeShape a sh:NodeShape ;
+    sh:targetClass ISO11615-MedicinalProducts:ActiveIngredientReferenceSubstanceBasisOfStrength .
+
+ISO11615-MedicinalProducts:ActiveIngredientWithoutBasisOfStrengthNodeShape a sh:NodeShape ;
+    sh:targetClass ISO11615-MedicinalProducts:ActiveIngredientWithoutBasisOfStrength .
+
+ISO11615-MedicinalProducts:ActivityBasedStrengthNodeShape a sh:NodeShape ;
+    sh:targetClass ISO11615-MedicinalProducts:ActivityBasedStrength .
+
+ISO11615-MedicinalProducts:AdministrableDoseFormNodeShape a sh:NodeShape ;
+    sh:targetClass ISO11615-MedicinalProducts:AdministrableDoseForm .
+
+ISO11615-MedicinalProducts:AuthorizationNodeShape a sh:NodeShape ;
+    sh:or ( :someValuesFromhasAuthorizingPartyAuthorizingPartyPropertyShape :someValuesFrominverseOfauthorizesThroughAuthorizationPropertyShape ),
+        ( :someValuesFromhasAuthorizedPartyAuthorizedPartyPropertyShape :someValuesFrominverseOfisAuthorizedThroughAuthorizationPropertyShape ) ;
+    sh:targetClass ISO11615-MedicinalProducts:Authorization .
+
+ISO11615-MedicinalProducts:AuthorizedMedicinalProductNodeShape a sh:NodeShape ;
+    sh:targetClass ISO11615-MedicinalProducts:AuthorizedMedicinalProduct .
+
+ISO11615-MedicinalProducts:AuthorizedPartyNodeShape a sh:NodeShape ;
+    sh:or ( :someValuesFromisAuthorizedThroughAuthorizationPropertyShape :someValuesFrominverseOfhasAuthorizedPartyAuthorizedPartyPropertyShape ) ;
+    sh:targetClass ISO11615-MedicinalProducts:AuthorizedParty .
+
+ISO11615-MedicinalProducts:AuthorizingPartyNodeShape a sh:NodeShape ;
+    sh:or ( :someValuesFromauthorizesThroughAuthorizationPropertyShape :someValuesFrominverseOfhasAuthorizingPartyAuthorizingPartyPropertyShape ) ;
+    sh:targetClass ISO11615-MedicinalProducts:AuthorizingParty .
+
+ISO11615-MedicinalProducts:BatchNodeShape a sh:NodeShape ;
+    sh:targetClass ISO11615-MedicinalProducts:Batch .
+
+ISO11615-MedicinalProducts:BatchNumberNodeShape a sh:NodeShape ;
+    sh:targetClass ISO11615-MedicinalProducts:BatchNumber .
+
+ISO11615-MedicinalProducts:ClinicalTrialAuthorizationNodeShape a sh:NodeShape ;
+    sh:or ( :someValuesFromhasAuthorizingPartyAuthorizingPartyPropertyShape :someValuesFrominverseOfauthorizesThroughAuthorizationPropertyShape ),
+        ( :someValuesFromhasAuthorizedPartyAuthorizedPartyPropertyShape :someValuesFrominverseOfisAuthorizedThroughAuthorizationPropertyShape ) ;
+    sh:targetClass ISO11615-MedicinalProducts:ClinicalTrialAuthorization .
+
+ISO11615-MedicinalProducts:ClinicalTrialIdentifierNodeShape a sh:NodeShape ;
+    sh:targetClass ISO11615-MedicinalProducts:ClinicalTrialIdentifier .
+
+ISO11615-MedicinalProducts:ClinicalTrialNodeShape a sh:NodeShape ;
+    sh:or ( :someValuesFromhasSponsorSponsorPropertyShape :someValuesFrominverseOfsponsorsClinicalTrialPropertyShape ) ;
+    sh:targetClass ISO11615-MedicinalProducts:ClinicalTrial .
+
+ISO11615-MedicinalProducts:CombinedPharmaceuticalDoseFormNodeShape a sh:NodeShape ;
+    sh:targetClass ISO11615-MedicinalProducts:CombinedPharmaceuticalDoseForm .
+
+ISO11615-MedicinalProducts:ComorbidityNodeShape a sh:NodeShape ;
+    sh:targetClass ISO11615-MedicinalProducts:Comorbidity .
+
+ISO11615-MedicinalProducts:ConcentrationNodeShape a sh:NodeShape ;
+    sh:targetClass ISO11615-MedicinalProducts:Concentration .
+
+ISO11615-MedicinalProducts:ContainerConstituencyNodeShape a sh:NodeShape ;
+    sh:targetClass ISO11615-MedicinalProducts:ContainerConstituency .
+
+ISO11615-MedicinalProducts:ContainerSpecificationNodeShape a sh:NodeShape ;
+    sh:targetClass ISO11615-MedicinalProducts:ContainerSpecification .
+
+ISO11615-MedicinalProducts:ContraindicationNodeShape a sh:NodeShape ;
+    sh:targetClass ISO11615-MedicinalProducts:Contraindication .
+
+ISO11615-MedicinalProducts:DiseaseStatusNodeShape a sh:NodeShape ;
+    sh:targetClass ISO11615-MedicinalProducts:DiseaseStatus .
+
+ISO11615-MedicinalProducts:ImmediateContainerNodeShape a sh:NodeShape ;
+    sh:targetClass ISO11615-MedicinalProducts:ImmediateContainer .
+
+ISO11615-MedicinalProducts:IngredientRoleCodeNodeShape a sh:NodeShape ;
+    sh:targetClass ISO11615-MedicinalProducts:IngredientRoleCode .
+
+ISO11615-MedicinalProducts:IntendedEffectNodeShape a sh:NodeShape ;
+    sh:targetClass ISO11615-MedicinalProducts:IntendedEffect .
+
+ISO11615-MedicinalProducts:IntermediatePackagingNodeShape a sh:NodeShape ;
+    sh:targetClass ISO11615-MedicinalProducts:IntermediatePackaging .
+
+ISO11615-MedicinalProducts:InvestigationalMedicinalProductIdentifierNodeShape a sh:NodeShape ;
+    sh:targetClass ISO11615-MedicinalProducts:InvestigationalMedicinalProductIdentifier .
+
+ISO11615-MedicinalProducts:InvestigationalMedicinalProductNodeShape a sh:NodeShape ;
+    sh:targetClass ISO11615-MedicinalProducts:InvestigationalMedicinalProduct .
+
+ISO11615-MedicinalProducts:LotNodeShape a sh:NodeShape ;
+    sh:targetClass ISO11615-MedicinalProducts:Lot .
+
+ISO11615-MedicinalProducts:LotNumberNodeShape a sh:NodeShape ;
+    sh:targetClass ISO11615-MedicinalProducts:LotNumber .
+
+ISO11615-MedicinalProducts:ManufacturedDoseFormNodeShape a sh:NodeShape ;
+    sh:targetClass ISO11615-MedicinalProducts:ManufacturedDoseForm .
+
+ISO11615-MedicinalProducts:ManufacturingAuthorizationNodeShape a sh:NodeShape ;
+    sh:or ( :someValuesFromhasAuthorizedPartyAuthorizedPartyPropertyShape :someValuesFrominverseOfisAuthorizedThroughAuthorizationPropertyShape ),
+        ( :someValuesFromhasAuthorizingPartyAuthorizingPartyPropertyShape :someValuesFrominverseOfauthorizesThroughAuthorizationPropertyShape ) ;
+    sh:targetClass ISO11615-MedicinalProducts:ManufacturingAuthorization .
+
+ISO11615-MedicinalProducts:MarketingAuthorizationHolderIdentifierNodeShape a sh:NodeShape ;
+    sh:targetClass ISO11615-MedicinalProducts:MarketingAuthorizationHolderIdentifier .
+
+ISO11615-MedicinalProducts:MarketingAuthorizationHolderNodeShape a sh:NodeShape ;
+    sh:or ( :someValuesFromisAuthorizedThroughAuthorizationPropertyShape :someValuesFrominverseOfhasAuthorizedPartyAuthorizedPartyPropertyShape ) ;
+    sh:targetClass ISO11615-MedicinalProducts:MarketingAuthorizationHolder .
+
+ISO11615-MedicinalProducts:MarketingAuthorizationNodeShape a sh:NodeShape ;
+    sh:or ( :someValuesFromhasAuthorizedPartyAuthorizedPartyPropertyShape :someValuesFrominverseOfisAuthorizedThroughAuthorizationPropertyShape ),
+        ( :someValuesFromhasAuthorizingPartyAuthorizingPartyPropertyShape :someValuesFrominverseOfauthorizesThroughAuthorizationPropertyShape ) ;
+    sh:targetClass ISO11615-MedicinalProducts:MarketingAuthorization .
+
+ISO11615-MedicinalProducts:MarketingAuthorizationNumberNodeShape a sh:NodeShape ;
+    sh:targetClass ISO11615-MedicinalProducts:MarketingAuthorizationNumber .
+
+ISO11615-MedicinalProducts:MassBasedStrengthNodeShape a sh:NodeShape ;
+    sh:targetClass ISO11615-MedicinalProducts:MassBasedStrength .
+
+ISO11615-MedicinalProducts:MedicalConditionClassifierNodeShape a sh:NodeShape ;
+    sh:targetClass ISO11615-MedicinalProducts:MedicalConditionClassifier .
+
+ISO11615-MedicinalProducts:MedicinalProductBatchIdentifierForImmediatePackagingNodeShape a sh:NodeShape ;
+    sh:targetClass ISO11615-MedicinalProducts:MedicinalProductBatchIdentifierForImmediatePackaging .
+
+ISO11615-MedicinalProducts:MedicinalProductBatchIdentifierForOuterPackagingNodeShape a sh:NodeShape ;
+    sh:targetClass ISO11615-MedicinalProducts:MedicinalProductBatchIdentifierForOuterPackaging .
+
+ISO11615-MedicinalProducts:MedicinalProductCodeSegmentNodeShape a sh:NodeShape ;
+    sh:targetClass ISO11615-MedicinalProducts:MedicinalProductCodeSegment .
+
+ISO11615-MedicinalProducts:MedicinalProductContainerNodeShape a sh:NodeShape ;
+    sh:targetClass ISO11615-MedicinalProducts:MedicinalProductContainer .
+
+ISO11615-MedicinalProducts:MedicinalProductIdentifierNodeShape a sh:NodeShape ;
+    sh:targetClass ISO11615-MedicinalProducts:MedicinalProductIdentifier .
+
+ISO11615-MedicinalProducts:MedicinalProductNameNodeShape a sh:NodeShape ;
+    sh:targetClass ISO11615-MedicinalProducts:MedicinalProductName .
+
+ISO11615-MedicinalProducts:MedicinesRegulatoryAgencyNodeShape a sh:NodeShape ;
+    sh:or ( :someValuesFromauthorizesThroughAuthorizationPropertyShape :someValuesFrominverseOfhasAuthorizingPartyAuthorizingPartyPropertyShape ) ;
+    sh:targetClass ISO11615-MedicinalProducts:MedicinesRegulatoryAgency .
+
+ISO11615-MedicinalProducts:OuterPackagingNodeShape a sh:NodeShape ;
+    sh:targetClass ISO11615-MedicinalProducts:OuterPackaging .
+
+ISO11615-MedicinalProducts:PackageDescriptionCodeSegmentNodeShape a sh:NodeShape ;
+    sh:targetClass ISO11615-MedicinalProducts:PackageDescriptionCodeSegment .
+
+ISO11615-MedicinalProducts:PackageIdentifierNodeShape a sh:NodeShape ;
+    sh:targetClass ISO11615-MedicinalProducts:PackageIdentifier .
+
+ISO11615-MedicinalProducts:PackageItemNodeShape a sh:NodeShape ;
+    sh:targetClass ISO11615-MedicinalProducts:PackageItem .
+
+ISO11615-MedicinalProducts:PackagedMedicinalProductNodeShape a sh:NodeShape ;
+    sh:targetClass ISO11615-MedicinalProducts:PackagedMedicinalProduct .
+
+ISO11615-MedicinalProducts:PharmaceuticalDoseFormNodeShape a sh:NodeShape ;
+    sh:targetClass ISO11615-MedicinalProducts:PharmaceuticalDoseForm .
+
+ISO11615-MedicinalProducts:PharmaceuticalProductBatchNodeShape a sh:NodeShape ;
+    sh:targetClass ISO11615-MedicinalProducts:PharmaceuticalProductBatch .
+
+ISO11615-MedicinalProducts:PharmaceuticalProductBatchNumberNodeShape a sh:NodeShape ;
+    sh:targetClass ISO11615-MedicinalProducts:PharmaceuticalProductBatchNumber .
+
+ISO11615-MedicinalProducts:PharmaceuticalProductNodeShape a sh:NodeShape ;
+    sh:targetClass ISO11615-MedicinalProducts:PharmaceuticalProduct .
+
+ISO11615-MedicinalProducts:PhysicalMedicinalProductContainerNodeShape a sh:NodeShape ;
+    sh:targetClass ISO11615-MedicinalProducts:PhysicalMedicinalProductContainer .
+
+ISO11615-MedicinalProducts:PhysicalMedicinalProductNodeShape a sh:NodeShape ;
+    sh:targetClass ISO11615-MedicinalProducts:PhysicalMedicinalProduct .
+
+ISO11615-MedicinalProducts:PlaceboNodeShape a sh:NodeShape ;
+    sh:targetClass ISO11615-MedicinalProducts:Placebo .
+
+ISO11615-MedicinalProducts:PopulationCharacteristicNodeShape a sh:NodeShape ;
+    sh:targetClass ISO11615-MedicinalProducts:PopulationCharacteristic .
+
+ISO11615-MedicinalProducts:PresentationStrengthNodeShape a sh:NodeShape ;
+    sh:targetClass ISO11615-MedicinalProducts:PresentationStrength .
+
+ISO11615-MedicinalProducts:ProcessIdentifierNodeShape a sh:NodeShape ;
+    sh:targetClass ISO11615-MedicinalProducts:ProcessIdentifier .
+
+ISO11615-MedicinalProducts:ProcessStepIdentifierNodeShape a sh:NodeShape ;
+    sh:targetClass ISO11615-MedicinalProducts:ProcessStepIdentifier .
+
+ISO11615-MedicinalProducts:ProcessStepNodeShape a sh:NodeShape ;
+    sh:targetClass ISO11615-MedicinalProducts:ProcessStep .
+
+ISO11615-MedicinalProducts:ProductCompositionNodeShape a sh:NodeShape ;
+    sh:targetClass ISO11615-MedicinalProducts:ProductComposition .
+
+ISO11615-MedicinalProducts:ProductRoleNodeShape a sh:NodeShape ;
+    sh:targetClass ISO11615-MedicinalProducts:ProductRole .
+
+ISO11615-MedicinalProducts:QualitativeCompositionNodeShape a sh:NodeShape ;
+    sh:targetClass ISO11615-MedicinalProducts:QualitativeComposition .
+
+ISO11615-MedicinalProducts:QuantitativeCompositionNodeShape a sh:NodeShape ;
+    sh:targetClass ISO11615-MedicinalProducts:QuantitativeComposition .
+
+ISO11615-MedicinalProducts:ReferenceStrengthNodeShape a sh:NodeShape ;
+    sh:targetClass ISO11615-MedicinalProducts:ReferenceStrength .
+
+ISO11615-MedicinalProducts:RegistrationNumberNodeShape a sh:NodeShape ;
+    sh:targetClass ISO11615-MedicinalProducts:RegistrationNumber .
+
+ISO11615-MedicinalProducts:SponsorNodeShape a sh:NodeShape ;
+    sh:or ( :someValuesFromsponsorsClinicalTrialPropertyShape :someValuesFrominverseOfhasSponsorSponsorPropertyShape ) ;
+    sh:targetClass ISO11615-MedicinalProducts:Sponsor .
+
+ISO11615-MedicinalProducts:StrengthNodeShape a sh:NodeShape ;
+    sh:targetClass ISO11615-MedicinalProducts:Strength .
+
+ISO11615-MedicinalProducts:TherapeuticIndicationNodeShape a sh:NodeShape ;
+    sh:targetClass ISO11615-MedicinalProducts:TherapeuticIndication .
+
+ISO21090-HarmonizedDatatypes:CodingRationaleNodeShape a sh:NodeShape ;
+    sh:targetClass ISO21090-HarmonizedDatatypes:CodingRationale .
+
+ISO21090-HarmonizedDatatypes:CompressionAlgorithmNodeShape a sh:NodeShape ;
+    sh:targetClass ISO21090-HarmonizedDatatypes:CompressionAlgorithm .
+
+ISO21090-HarmonizedDatatypes:DatatypeFlavorNodeShape a sh:NodeShape ;
+    sh:targetClass ISO21090-HarmonizedDatatypes:DatatypeFlavor .
+
+ISO21090-HarmonizedDatatypes:ISO21090-BooleanNonNullDatatypeNodeShape a sh:NodeShape ;
+    sh:targetClass ISO21090-HarmonizedDatatypes:ISO21090-BooleanNonNullDatatype .
+
+ISO21090-HarmonizedDatatypes:ISO21090-ConceptDescriptorNodeShape a sh:NodeShape ;
+    sh:targetClass ISO21090-HarmonizedDatatypes:ISO21090-ConceptDescriptor .
+
+ISO21090-HarmonizedDatatypes:ISO21090-EntityNameNodeShape a sh:NodeShape ;
+    sh:targetClass ISO21090-HarmonizedDatatypes:ISO21090-EntityName .
+
+ISO21090-HarmonizedDatatypes:IntegrityCheckAlgorithmNodeShape a sh:NodeShape ;
+    sh:targetClass ISO21090-HarmonizedDatatypes:IntegrityCheckAlgorithm .
+
+ISO21090-HarmonizedDatatypes:NullFlavorNodeShape a sh:NodeShape ;
+    sh:targetClass ISO21090-HarmonizedDatatypes:NullFlavor .
+
+ISO21090-HarmonizedDatatypes:UpdateModeNodeShape a sh:NodeShape ;
+    sh:targetClass ISO21090-HarmonizedDatatypes:UpdateMode .
+
+ISO21090-HarmonizedDatatypes:ValueDomainIdentifierNodeShape a sh:NodeShape ;
+    sh:targetClass ISO21090-HarmonizedDatatypes:ValueDomainIdentifier .
+
+:someValuesFromappliesToClinicalTrialPropertyShape a sh:PropertyShape ;
+    sh:class ISO11615-MedicinalProducts:ClinicalTrial ;
+    sh:minCount 1 ;
+    sh:path ContextualDesignators:appliesTo .
+
+:someValuesFromappliesToMedicinalProductPropertyShape a sh:PropertyShape ;
+    sh:class ISO11615-MedicinalProducts:MedicinalProduct ;
+    sh:minCount 1 ;
+    sh:path ContextualDesignators:appliesTo .
+
+:someValuesFromappliesToSubstancePropertyShape a sh:PropertyShape ;
+    sh:class ISO11238-Substances:Substance ;
+    sh:minCount 1 ;
+    sh:path ContextualDesignators:appliesTo .
+
+:someValuesFromclassifiesAgentModificationMethodPropertyShape a sh:PropertyShape ;
+    sh:class ISO11238-Substances:AgentModificationMethod ;
+    sh:minCount 1 ;
+    sh:path Classifiers:classifies .
+
+:someValuesFromclassifiesGeneElementPropertyShape a sh:PropertyShape ;
+    sh:class ISO11238-Substances:GeneElement ;
+    sh:minCount 1 ;
+    sh:path Identifiers:classifies .
+
+:someValuesFromclassifiesIsotopicSubstitutionPropertyShape a sh:PropertyShape ;
+    sh:class ISO11238-Substances:IsotopicSubstitution ;
+    sh:minCount 1 ;
+    sh:path Classifiers:classifies .
+
+:someValuesFromclassifiesMaterialPropertyShape a sh:PropertyShape ;
+    sh:class ISO11238-Substances:Material ;
+    sh:minCount 1 ;
+    sh:path Classifiers:classifies .
+
+:someValuesFromclassifiesMedicalConditionPropertyShape a sh:PropertyShape ;
+    sh:class ISO11615-MedicinalProducts:MedicalCondition ;
+    sh:minCount 1 ;
+    sh:path Classifiers:classifies .
+
+:someValuesFromclassifiesNuclidePropertyShape a sh:PropertyShape ;
+    sh:class ISO11238-Substances:Nuclide ;
+    sh:minCount 1 ;
+    sh:path Classifiers:classifies .
+
+:someValuesFromclassifiesPharmacopoeialGradePropertyShape a sh:PropertyShape ;
+    sh:class ISO11238-Substances:PharmacopoeialGrade ;
+    sh:minCount 1 ;
+    sh:path Classifiers:classifies .
+
+:someValuesFromclassifiesStructuralModificationMethodPropertyShape a sh:PropertyShape ;
+    sh:class ISO11238-Substances:StructuralModificationMethod ;
+    sh:minCount 1 ;
+    sh:path Classifiers:classifies .
+
+:someValuesFromclassifiesTargetPopulationPropertyShape a sh:PropertyShape ;
+    sh:class ISO11615-MedicinalProducts:TargetPopulation ;
+    sh:minCount 1 ;
+    sh:path Classifiers:classifies .
+
+:someValuesFromcompliesWithUnitOfMeasureIdentificationSchemePropertyShape a sh:PropertyShape ;
+    sh:class ISO11240-UnitsOfMeasurement:UnitOfMeasureIdentificationScheme ;
+    sh:minCount 1 ;
+    sh:path Collections:compliesWith .
+
+:someValuesFromcomprisesAlpha2RegionCodePropertyShape a sh:PropertyShape ;
+    sh:class CountryRepresentation:Alpha2RegionCode ;
+    sh:minCount 1 ;
+    sh:path Collections:comprises .
+
+:someValuesFromcomprisesAtomPropertyShape a sh:PropertyShape ;
+    sh:class ISO11238-Substances:Atom ;
+    sh:minCount 1 ;
+    sh:path Collections:comprises .
+
+:someValuesFromcomprisesAustralianPlantNameIndexIdentifierPropertyShape a sh:PropertyShape ;
+    sh:class <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-RegistrationAuthorities/AustralianPlantNameIndexIdentifier> ;
+    sh:minCount 1 ;
+    sh:path Collections:comprises .
+
+:someValuesFromcomprisesCASRegistryNumberPropertyShape a sh:PropertyShape ;
+    sh:class <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-RegistrationAuthorities/CASRegistryNumber> ;
+    sh:minCount 1 ;
+    sh:path Collections:comprises .
+
+:someValuesFromcomprisesChemicalEntitiesOfBiologicalInterestIdentifierPropertyShape a sh:PropertyShape ;
+    sh:class <https://spec.pistoiaalliance.org/idmp/ontology/ISO/EuropeanJurisdiction/EuropeanRegistrationAuthorities/ChemicalEntitiesOfBiologicalInterestIdentifier> ;
+    sh:minCount 1 ;
+    sh:path Collections:comprises .
+
+:someValuesFromcomprisesEudraVigilanceCodePropertyShape a sh:PropertyShape ;
+    sh:class <https://spec.pistoiaalliance.org/idmp/ontology/ISO/EuropeanJurisdiction/EuropeanRegistrationAuthorities/EudraVigilanceCode> ;
+    sh:minCount 1 ;
+    sh:path Collections:comprises .
+
+:someValuesFromcomprisesEuropeanCommunityNumberPropertyShape a sh:PropertyShape ;
+    sh:class <https://spec.pistoiaalliance.org/idmp/ontology/ISO/EuropeanJurisdiction/EuropeanRegistrationAuthorities/EuropeanCommunityNumber> ;
+    sh:minCount 1 ;
+    sh:path Collections:comprises .
+
+:someValuesFromcomprisesExplicitDatePropertyShape a sh:PropertyShape ;
+    sh:class DatesAndTimes:ExplicitDate ;
+    sh:minCount 1 ;
+    sh:path Collections:comprises .
+
+:someValuesFromcomprisesIntegratedTaxonomicInformationSystemTaxonomicSerialNumberPropertyShape a sh:PropertyShape ;
+    sh:class <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-RegistrationAuthorities/IntegratedTaxonomicInformationSystemTaxonomicSerialNumber> ;
+    sh:minCount 1 ;
+    sh:path Collections:comprises .
+
+:someValuesFromcomprisesMarketingAuthorizationHolderIdentifierPropertyShape a sh:PropertyShape ;
+    sh:class ISO11615-MedicinalProducts:MarketingAuthorizationHolderIdentifier ;
+    sh:minCount 1 ;
+    sh:path Collections:comprises .
+
+:someValuesFromcomprisesMatterPropertyShape a sh:PropertyShape ;
+    sh:class ISO11238-Substances:Matter ;
+    sh:minCount 1 ;
+    sh:path Collections:comprises .
+
+:someValuesFromcomprisesMedicalSubjectHeadingsUniqueIdentifierPropertyShape a sh:PropertyShape ;
+    sh:class <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-RegistrationAuthorities/MedicalSubjectHeadingsUniqueIdentifier> ;
+    sh:minCount 1 ;
+    sh:path Collections:comprises .
+
+:someValuesFromcomprisesMedicinalProductCodeSegmentPropertyShape a sh:PropertyShape ;
+    sh:class ISO11615-MedicinalProducts:MedicinalProductCodeSegment ;
+    sh:minCount 1 ;
+    sh:path Collections:comprises .
+
+:someValuesFromcomprisesMedicinalProductIdentifierPropertyShape a sh:PropertyShape ;
+    sh:class ISO11615-MedicinalProducts:MedicinalProductIdentifier ;
+    sh:minCount 1 ;
+    sh:path Collections:comprises .
+
+:someValuesFromcomprisesNationalCenterForBiotechnologyInformationTaxonomyIdentifierPropertyShape a sh:PropertyShape ;
+    sh:class <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-RegistrationAuthorities/NationalCenterForBiotechnologyInformationTaxonomyIdentifier> ;
+    sh:minCount 1 ;
+    sh:path Collections:comprises .
+
+:someValuesFromcomprisesPackageDescriptionCodeSegmentPropertyShape a sh:PropertyShape ;
+    sh:class ISO11615-MedicinalProducts:PackageDescriptionCodeSegment ;
+    sh:minCount 1 ;
+    sh:path Collections:comprises .
+
+:someValuesFromcomprisesPharmaceuticalProductBatchNumberPropertyShape a sh:PropertyShape ;
+    sh:class ISO11615-MedicinalProducts:PharmaceuticalProductBatchNumber ;
+    sh:minCount 1 ;
+    sh:path Collections:comprises .
+
+:someValuesFromcomprisesSubstancePropertyShape a sh:PropertyShape ;
+    sh:class ISO11238-Substances:Substance ;
+    sh:minCount 1 ;
+    sh:path Collections:comprises .
+
+:someValuesFromcomprisesUniqueIngredientNumberPropertyShape a sh:PropertyShape ;
+    sh:class <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-RegistrationAuthorities/UniqueIngredientNumber> ;
+    sh:minCount 1 ;
+    sh:path Collections:comprises .
+
+:someValuesFromcontainsPackageItemPropertyShape a sh:PropertyShape ;
+    sh:class ISO11615-MedicinalProducts:PackageItem ;
+    sh:minCount 1 ;
+    sh:path ISO11615-MedicinalProducts:contains .
+
+:someValuesFromdefinesMedicinalProductPropertyShape a sh:PropertyShape ;
+    sh:class ISO11615-MedicinalProducts:MedicinalProduct ;
+    sh:minCount 1 ;
+    sh:path Designators:defines .
+
+:someValuesFromdefinesSubstancePropertyShape a sh:PropertyShape ;
+    sh:class ISO11238-Substances:Substance ;
+    sh:minCount 1 ;
+    sh:path Designators:defines .
+
+:someValuesFromdenotesBatchPropertyShape a sh:PropertyShape ;
+    sh:class ISO11615-MedicinalProducts:Batch ;
+    sh:minCount 1 ;
+    sh:path Designators:denotes .
+
+:someValuesFromdenotesLotPropertyShape a sh:PropertyShape ;
+    sh:class ISO11615-MedicinalProducts:Lot ;
+    sh:minCount 1 ;
+    sh:path Designators:denotes .
+
+:someValuesFromdenotesPharmaceuticalProductBatchPropertyShape a sh:PropertyShape ;
+    sh:class ISO11615-MedicinalProducts:PharmaceuticalProductBatch ;
+    sh:minCount 1 ;
+    sh:path Designators:denotes .
+
+:someValuesFromdenotesProcessPropertyShape a sh:PropertyShape ;
+    sh:class ISO11615-MedicinalProducts:Process ;
+    sh:minCount 1 ;
+    sh:path Designators:denotes .
+
+:someValuesFromdenotesProcessStepPropertyShape a sh:PropertyShape ;
+    sh:class ISO11615-MedicinalProducts:ProcessStep ;
+    sh:minCount 1 ;
+    sh:path Designators:denotes .
+
+:someValuesFromdescribesReferenceSourcePropertyShape a sh:PropertyShape ;
+    sh:class ISO11238-Substances:ReferenceSource ;
+    sh:minCount 1 ;
+    sh:path Designators:describes .
+
+:someValuesFromevaluatesInvestigationalMedicinalProductPropertyShape a sh:PropertyShape ;
+    sh:class ISO11615-MedicinalProducts:InvestigationalMedicinalProduct ;
+    sh:minCount 1 ;
+    sh:path ISO11615-MedicinalProducts:evaluates .
+
+:someValuesFromhasAdministrationMethodAdministrationMethodPropertyShape a sh:PropertyShape ;
+    sh:class <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11239-PharmaceuticalDoseForms/AdministrationMethod> ;
+    sh:minCount 1 ;
+    sh:path <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11239-PharmaceuticalDoseForms/hasAdministrationMethod> .
+
+:someValuesFromhasAuthorizationAuthorizationPropertyShape a sh:PropertyShape ;
+    sh:class ISO11615-MedicinalProducts:Authorization ;
+    sh:minCount 1 ;
+    sh:path ISO11615-MedicinalProducts:hasAuthorization .
+
+:someValuesFromhasAuthorizedPartyManufacturerPropertyShape a sh:PropertyShape ;
+    sh:class ISO11238-Substances:Manufacturer ;
+    sh:minCount 1 ;
+    sh:path ISO11615-MedicinalProducts:hasAuthorizedParty .
+
+:someValuesFromhasAuthorizedPartyMarketingAuthorizationHolderPropertyShape a sh:PropertyShape ;
+    sh:class ISO11615-MedicinalProducts:MarketingAuthorizationHolder ;
+    sh:minCount 1 ;
+    sh:path ISO11615-MedicinalProducts:hasAuthorizedParty .
+
+:someValuesFromhasAuthorizingPartyMedicinesRegulatoryAgencyPropertyShape a sh:PropertyShape ;
+    sh:class ISO11615-MedicinalProducts:MedicinesRegulatoryAgency ;
+    sh:minCount 1 ;
+    sh:path ISO11615-MedicinalProducts:hasAuthorizingParty .
+
+:someValuesFromhasBooleanValuebooleanPropertyShape a sh:PropertyShape ;
+    sh:datatype xsd:boolean ;
+    sh:minCount 1 ;
+    sh:path ISO21090-HarmonizedDatatypes:hasBooleanValue .
+
+:someValuesFromhasConstituentContainerConstituentPropertyShape a sh:PropertyShape ;
+    sh:class ISO11615-MedicinalProducts:ContainerConstituent ;
+    sh:minCount 1 ;
+    sh:path Collections:hasConstituent .
+
+:someValuesFromhasDefiningStructureMolecularStructurePropertyShape a sh:PropertyShape ;
+    sh:class ISO11238-Substances:MolecularStructure ;
+    sh:minCount 1 ;
+    sh:path ISO11238-Substances:hasDefiningStructure .
+
+:someValuesFromhasExpirationDateExplicitDatePropertyShape a sh:PropertyShape ;
+    sh:class DatesAndTimes:ExplicitDate ;
+    sh:minCount 1 ;
+    sh:path Documents:hasExpirationDate .
+
+:someValuesFromhasGranularMolecularPartMolecularEntityPropertyShape a sh:PropertyShape ;
+    sh:class ISO11238-Substances:MolecularEntity ;
+    sh:minCount 1 ;
+    sh:path ISO11238-Substances:hasGranularMolecularPart .
+
+:someValuesFromhasGranularMolecularPartMolecularGroupPropertyShape a sh:PropertyShape ;
+    sh:class ISO11238-Substances:MolecularGroup ;
+    sh:minCount 1 ;
+    sh:path ISO11238-Substances:hasGranularMolecularPart .
+
+:someValuesFromhasIngredientIngredientPropertyShape a sh:PropertyShape ;
+    sh:class ISO11238-Substances:Ingredient ;
+    sh:minCount 1 ;
+    sh:path ISO11238-Substances:hasIngredient .
+
+:someValuesFromhasIntegerValueintegerPropertyShape a sh:PropertyShape ;
+    sh:datatype xsd:integer ;
+    sh:minCount 1 ;
+    sh:path ISO21090-HarmonizedDatatypes:hasIntegerValue .
+
+:someValuesFromhasIntendedSiteIntendedSitePropertyShape a sh:PropertyShape ;
+    sh:class <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11239-PharmaceuticalDoseForms/IntendedSite> ;
+    sh:minCount 1 ;
+    sh:path <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11239-PharmaceuticalDoseForms/hasIntendedSite> .
+
+:someValuesFromhasLanguageCodeLanguageIdentifierPropertyShape a sh:PropertyShape ;
+    sh:class LanguageRepresentation:LanguageIdentifier ;
+    sh:minCount 1 ;
+    sh:path ISO21090-HarmonizedDatatypes:hasLanguageCode .
+
+:someValuesFromhasLevelInHierarchynonNegativeIntegerPropertyShape a sh:PropertyShape ;
+    sh:datatype xsd:nonNegativeInteger ;
+    sh:minCount 1 ;
+    sh:path ISO21090-HarmonizedDatatypes:hasLevelInHierarchy .
+
+:someValuesFromhasManufacturedItemQuantityQuantityValuePropertyShape a sh:PropertyShape ;
+    sh:class QuantitiesAndUnits:QuantityValue ;
+    sh:minCount 1 ;
+    sh:path ISO11615-MedicinalProducts:hasManufacturedItemQuantity .
+
+:someValuesFromhasMemberAspectPropertyShape a sh:PropertyShape ;
+    sh:class Classifiers:Aspect ;
+    sh:minCount 1 ;
+    sh:path Collections:hasMember .
+
+:someValuesFromhasModificationAgentModificationAgentPropertyShape a sh:PropertyShape ;
+    sh:class ISO11238-Substances:ModificationAgent ;
+    sh:minCount 1 ;
+    sh:path ISO11238-Substances:hasModificationAgent .
+
+:someValuesFromhasNameNamePropertyShape a sh:PropertyShape ;
+    sh:class Designators:Name ;
+    sh:minCount 1 ;
+    sh:path Designators:hasName .
+
+:someValuesFromhasNameParameterNamePropertyShape a sh:PropertyShape ;
+    sh:class ISO11238-Substances:ParameterName ;
+    sh:minCount 1 ;
+    sh:path Designators:hasName .
+
+:someValuesFromhasOrthographyPropertyShape a sh:PropertyShape ;
+    sh:class LanguageRepresentation:Orthography ;
+    sh:minCount 1 ;
+    sh:path LanguageRepresentation:has .
+
+:someValuesFromhasQuantityValueQuantityValuePropertyShape a sh:PropertyShape ;
+    sh:class QuantitiesAndUnits:QuantityValue ;
+    sh:minCount 1 ;
+    sh:path QuantitiesAndUnits:hasQuantityValue .
+
+:someValuesFromhasReferenceSourceTypeReferenceSourceTypePropertyShape a sh:PropertyShape ;
+    sh:class ISO11238-Substances:ReferenceSourceType ;
+    sh:minCount 1 ;
+    sh:path ISO11238-Substances:hasReferenceSourceType .
+
+:someValuesFromhasReferenceStrengthReferenceStrengthPropertyShape a sh:PropertyShape ;
+    sh:class ISO11615-MedicinalProducts:ReferenceStrength ;
+    sh:minCount 1 ;
+    sh:path ISO11615-MedicinalProducts:hasReferenceStrength .
+
+:someValuesFromhasReferenceSubstanceSubstancePropertyShape a sh:PropertyShape ;
+    sh:class ISO11238-Substances:Substance ;
+    sh:minCount 1 ;
+    sh:path ISO11615-MedicinalProducts:hasReferenceSubstance .
+
+:someValuesFromhasRegionCodeGeographicRegionIdentifierPropertyShape a sh:PropertyShape ;
+    sh:class CountryRepresentation:GeographicRegionIdentifier ;
+    sh:minCount 1 ;
+    sh:path ISO11240-UnitsOfMeasurement:hasRegionCode .
+
+:someValuesFromhasScriptPropertyShape a sh:PropertyShape ;
+    sh:class LanguageRepresentation:Script ;
+    sh:minCount 1 ;
+    sh:path LanguageRepresentation:has .
+
+:someValuesFromhasStrengthStrengthPropertyShape a sh:PropertyShape ;
+    sh:class ISO11615-MedicinalProducts:Strength ;
+    sh:minCount 1 ;
+    sh:path ISO11615-MedicinalProducts:hasStrength .
+
+:someValuesFromhasStructuralModificationTypeStructuralModificationTypePropertyShape a sh:PropertyShape ;
+    sh:class ISO11238-Substances:StructuralModificationType ;
+    sh:minCount 1 ;
+    sh:path ISO11238-Substances:hasStructuralModificationType .
+
+:someValuesFromhasStructureMolecularStructurePropertyShape a sh:PropertyShape ;
+    sh:class ISO11238-Substances:MolecularStructure ;
+    sh:minCount 1 ;
+    sh:path ISO11238-Substances:hasStructure .
+
+:someValuesFromhasSubjectRoleError4PropertyShape a sh:PropertyShape ;
+    sh:class <http://org.semanticweb.owlapi/error#Error4> ;
+    sh:minCount 1 ;
+    sh:path PartiesAndSituations:hasSubjectRole .
+
+:someValuesFromhasSubstanceNameSubstanceNamePropertyShape a sh:PropertyShape ;
+    sh:class ISO11238-Substances:SubstanceName ;
+    sh:minCount 1 ;
+    sh:path ISO11238-Substances:hasSubstanceName .
+
+:someValuesFromhasSubstanceTypeSubstanceTypeClassifierPropertyShape a sh:PropertyShape ;
+    sh:class ISO11238-Substances:SubstanceTypeClassifier ;
+    sh:minCount 1 ;
+    sh:path ISO11238-Substances:hasSubstanceType .
+
+:someValuesFromhasTagstringPropertyShape a sh:PropertyShape ;
+    sh:datatype xsd:string ;
+    sh:minCount 1 ;
+    sh:path LanguageRepresentation:hasTag .
+
+:someValuesFromhasTargetPopulationTargetPopulationPropertyShape a sh:PropertyShape ;
+    sh:class ISO11615-MedicinalProducts:TargetPopulation ;
+    sh:minCount 1 ;
+    sh:path ISO11615-MedicinalProducts:hasTargetPopulation .
+
+:someValuesFromhasTextValuestringPropertyShape a sh:PropertyShape ;
+    sh:datatype xsd:string ;
+    sh:minCount 1 ;
+    sh:path TextDatatype:hasTextValue .
+
+:someValuesFromidentifiesCodeSetPropertyShape a sh:PropertyShape ;
+    sh:class <https://www.omg.org/spec/Commons/CodesAndCodeSets/CodeSet> ;
+    sh:minCount 1 ;
+    sh:path Identifiers:identifies .
+
+:someValuesFromidentifiesGeneElementPropertyShape a sh:PropertyShape ;
+    sh:class ISO11238-Substances:GeneElement ;
+    sh:minCount 1 ;
+    sh:path Identifiers:identifies .
+
+:someValuesFromidentifiesGenePropertyShape a sh:PropertyShape ;
+    sh:class ISO11238-Substances:Gene ;
+    sh:minCount 1 ;
+    sh:path Identifiers:identifies .
+
+:someValuesFromidentifiesIsotopePropertyShape a sh:PropertyShape ;
+    sh:class ISO11238-Substances:Isotope ;
+    sh:minCount 1 ;
+    sh:path Identifiers:identifies .
+
+:someValuesFromidentifiesMoietyPropertyShape a sh:PropertyShape ;
+    sh:class ISO11238-Substances:Moiety ;
+    sh:minCount 1 ;
+    sh:path Identifiers:identifies .
+
+:someValuesFromidentifiesMolecularFragmentPropertyShape a sh:PropertyShape ;
+    sh:class ISO11238-Substances:MolecularFragment ;
+    sh:minCount 1 ;
+    sh:path Identifiers:identifies .
+
+:someValuesFromidentifiesMolecularGraphPropertyShape a sh:PropertyShape ;
+    sh:class ISO11238-Substances:MolecularGraph ;
+    sh:minCount 1 ;
+    sh:path Identifiers:identifies .
+
+:someValuesFromidentifiesMolecularStructurePropertyShape a sh:PropertyShape ;
+    sh:class ISO11238-Substances:MolecularStructure ;
+    sh:minCount 1 ;
+    sh:path Identifiers:identifies .
+
+:someValuesFromidentifiesPackagedMedicinalProductPropertyShape a sh:PropertyShape ;
+    sh:class ISO11615-MedicinalProducts:PackagedMedicinalProduct ;
+    sh:minCount 1 ;
+    sh:path Identifiers:identifies .
+
+:someValuesFromidentifiesReferenceSourceDocumentPropertyShape a sh:PropertyShape ;
+    sh:class ISO11238-Substances:ReferenceSourceDocument ;
+    sh:minCount 1 ;
+    sh:path Identifiers:identifies .
+
+:someValuesFromidentifiesReferenceSourcePropertyShape a sh:PropertyShape ;
+    sh:class ISO11238-Substances:ReferenceSource ;
+    sh:minCount 1 ;
+    sh:path Identifiers:identifies .
+
+:someValuesFromidentifiesSubstancePropertyShape a sh:PropertyShape ;
+    sh:class ISO11238-Substances:Substance ;
+    sh:minCount 1 ;
+    sh:path Identifiers:identifies .
+
+:someValuesFromidentifiesValueDomainPropertyShape a sh:PropertyShape ;
+    sh:class ISO21090-HarmonizedDatatypes:ValueDomain ;
+    sh:minCount 1 ;
+    sh:path Identifiers:identifies .
+
+:someValuesFromisApplicableInContextPropertyShape a sh:PropertyShape ;
+    sh:class ContextualDesignators:Context ;
+    sh:minCount 1 ;
+    sh:path ContextualDesignators:isApplicableIn .
+
+:someValuesFromisApplicableInGeographicRegionPropertyShape a sh:PropertyShape ;
+    sh:class CountryRepresentation:GeographicRegion ;
+    sh:minCount 1 ;
+    sh:path ContextualDesignators:isApplicableIn .
+
+:someValuesFromisApplicableInJurisdictionGeographicRegionIdentifierPropertyShape a sh:PropertyShape ;
+    sh:class CountryRepresentation:GeographicRegionIdentifier ;
+    sh:minCount 1 ;
+    sh:path RegulatoryAgencies:isApplicableInJurisdiction .
+
+:someValuesFromisApplicableInJurisdictionGeographicRegionPropertyShape a sh:PropertyShape ;
+    sh:class CountryRepresentation:GeographicRegion ;
+    sh:minCount 1 ;
+    sh:path RegulatoryAgencies:isApplicableInJurisdiction .
+
+:someValuesFromisApplicableInPackagedMedicinalProductPropertyShape a sh:PropertyShape ;
+    sh:class ISO11615-MedicinalProducts:PackagedMedicinalProduct ;
+    sh:minCount 1 ;
+    sh:path ContextualDesignators:isApplicableIn .
+
+:someValuesFromisApplicableInRegulatoryContextPropertyShape a sh:PropertyShape ;
+    sh:class ISO11238-Substances:RegulatoryContext ;
+    sh:minCount 1 ;
+    sh:path ContextualDesignators:isApplicableIn .
+
+:someValuesFromisClassifiedByGeographicRegionKindPropertyShape a sh:PropertyShape ;
+    sh:class CountryRepresentation:GeographicRegionKind ;
+    sh:minCount 1 ;
+    sh:path CountryRepresentation:isClassifiedBy .
+
+:someValuesFromisClassifiedByOfficialNameStatusPropertyShape a sh:PropertyShape ;
+    sh:class ISO11238-Substances:OfficialNameStatus ;
+    sh:minCount 1 ;
+    sh:path Classifiers:isClassifiedBy .
+
+:someValuesFromisConstituentOfMolecularCompositionPropertyShape a sh:PropertyShape ;
+    sh:class ISO11238-Substances:MolecularComposition ;
+    sh:minCount 1 ;
+    sh:path Collections:isConstituentOf .
+
+:someValuesFromisConstituentOfPhysicalPharmaceuticalProductPropertyShape a sh:PropertyShape ;
+    sh:class ISO11615-MedicinalProducts:PhysicalPharmaceuticalProduct ;
+    sh:minCount 1 ;
+    sh:path Collections:isConstituentOf .
+
+:someValuesFromisConstituentOfProductPropertyShape a sh:PropertyShape ;
+    sh:class ProductsAndServices:Product ;
+    sh:minCount 1 ;
+    sh:path Collections:isConstituentOf .
+
+:someValuesFromisContraindicationForMedicinalProductPropertyShape a sh:PropertyShape ;
+    sh:class ISO11615-MedicinalProducts:MedicinalProduct ;
+    sh:minCount 1 ;
+    sh:path ISO11615-MedicinalProducts:isContraindicationFor .
+
+:someValuesFromisDefinedInProductCompositionPropertyShape a sh:PropertyShape ;
+    sh:class ISO11615-MedicinalProducts:ProductComposition ;
+    sh:minCount 1 ;
+    sh:path Designators:isDefinedIn .
+
+:someValuesFromisDescribedByStructuralRepresentationPropertyShape a sh:PropertyShape ;
+    sh:class ISO11238-Substances:StructuralRepresentation ;
+    sh:minCount 1 ;
+    sh:path Designators:isDescribedBy .
+
+:someValuesFromisExperiencedByRadionuclidePropertyShape a sh:PropertyShape ;
+    sh:class ISO11238-Substances:Radionuclide ;
+    sh:minCount 1 ;
+    sh:path PartiesAndSituations:isExperiencedBy .
+
+:someValuesFromisIncludedInSpecifiedSubstanceGroupPropertyShape a sh:PropertyShape ;
+    sh:class ISO11238-Substances:SpecifiedSubstanceGroup ;
+    sh:minCount 1 ;
+    sh:path Collections:isIncludedIn .
+
+:someValuesFromisIncludedInSpecifiedSubstancePropertyShape a sh:PropertyShape ;
+    sh:class ISO11238-Substances:SpecifiedSubstance ;
+    sh:minCount 1 ;
+    sh:path Collections:isIncludedIn .
+
+:someValuesFromisManifestedInManufacturedItemPropertyShape a sh:PropertyShape ;
+    sh:class ISO11238-Substances:ManufacturedItem ;
+    sh:minCount 1 ;
+    sh:path PartiesAndSituations:isManifestedIn .
+
+:someValuesFromisManifestedInModificationPropertyShape a sh:PropertyShape ;
+    sh:class ISO11238-Substances:Modification ;
+    sh:minCount 1 ;
+    sh:path PartiesAndSituations:isManifestedIn .
+
+:someValuesFromisMemberOfCodeSetPropertyShape a sh:PropertyShape ;
+    sh:class <https://www.omg.org/spec/Commons/CodesAndCodeSets/CodeSet> ;
+    sh:minCount 1 ;
+    sh:path Collections:isMemberOf .
+
+:someValuesFromisMemberOfUnitOfMeasureIdentificationSchemePropertyShape a sh:PropertyShape ;
+    sh:class ISO11240-UnitsOfMeasurement:UnitOfMeasureIdentificationScheme ;
+    sh:minCount 1 ;
+    sh:path Collections:isMemberOf .
+
+:someValuesFromisMoietyOfSubstancePropertyShape a sh:PropertyShape ;
+    sh:class ISO11238-Substances:Substance ;
+    sh:minCount 1 ;
+    sh:path ISO11238-Substances:isMoietyOf .
+
+:someValuesFromisNameOfGeneElementPropertyShape a sh:PropertyShape ;
+    sh:class ISO11238-Substances:GeneElement ;
+    sh:minCount 1 ;
+    sh:path Designators:isNameOf .
+
+:someValuesFromisNameOfGenePropertyShape a sh:PropertyShape ;
+    sh:class ISO11238-Substances:Gene ;
+    sh:minCount 1 ;
+    sh:path Designators:isNameOf .
+
+:someValuesFromisNameOfMedicinalProductPropertyShape a sh:PropertyShape ;
+    sh:class ISO11615-MedicinalProducts:MedicinalProduct ;
+    sh:minCount 1 ;
+    sh:path Designators:isNameOf .
+
+:someValuesFromisNameOfMoietyPropertyShape a sh:PropertyShape ;
+    sh:class ISO11238-Substances:Moiety ;
+    sh:minCount 1 ;
+    sh:path Designators:isNameOf .
+
+:someValuesFromisNameOfNuclidePropertyShape a sh:PropertyShape ;
+    sh:class ISO11238-Substances:Nuclide ;
+    sh:minCount 1 ;
+    sh:path Designators:isNameOf .
+
+:someValuesFromisOutputOfBatchManufacturingProcessPropertyShape a sh:PropertyShape ;
+    sh:class ISO11615-MedicinalProducts:BatchManufacturingProcess ;
+    sh:minCount 1 ;
+    sh:path ISO11615-MedicinalProducts:isOutputOf .
+
+:someValuesFromisPartOfMedicinalProductPropertyShape a sh:PropertyShape ;
+    sh:class ISO11615-MedicinalProducts:MedicinalProduct ;
+    sh:minCount 1 ;
+    sh:path Collections:isPartOf .
+
+:someValuesFromisPartOfMolecularEntityPropertyShape a sh:PropertyShape ;
+    sh:class ISO11238-Substances:MolecularEntity ;
+    sh:minCount 1 ;
+    sh:path Collections:isPartOf .
+
+:someValuesFromisPartOfPhysicalMedicinalProductPropertyShape a sh:PropertyShape ;
+    sh:class ISO11615-MedicinalProducts:PhysicalMedicinalProduct ;
+    sh:minCount 1 ;
+    sh:path Collections:isPartOf .
+
+:someValuesFromisPartOfProcessPropertyShape a sh:PropertyShape ;
+    sh:class ISO11615-MedicinalProducts:Process ;
+    sh:minCount 1 ;
+    sh:path Collections:isPartOf .
+
+:someValuesFromisPlayedByMaterialPropertyShape a sh:PropertyShape ;
+    sh:class ISO11238-Substances:Material ;
+    sh:minCount 1 ;
+    sh:path PartiesAndSituations:isPlayedBy .
+
+:someValuesFromisPlayedByMedicinalProductContainerPropertyShape a sh:PropertyShape ;
+    sh:class ISO11615-MedicinalProducts:MedicinalProductContainer ;
+    sh:minCount 1 ;
+    sh:path PartiesAndSituations:isPlayedBy .
+
+:someValuesFromisPlayedByMolecularFragmentPropertyShape a sh:PropertyShape ;
+    sh:class ISO11238-Substances:MolecularFragment ;
+    sh:minCount 1 ;
+    sh:path PartiesAndSituations:isPlayedBy .
+
+:someValuesFromisPlayedByProductPropertyShape a sh:PropertyShape ;
+    sh:class ProductsAndServices:Product ;
+    sh:minCount 1 ;
+    sh:path PartiesAndSituations:isPlayedBy .
+
+:someValuesFromisPlayedBySubstancePropertyShape a sh:PropertyShape ;
+    sh:class ISO11238-Substances:Substance ;
+    sh:minCount 1 ;
+    sh:path PartiesAndSituations:isPlayedBy .
+
+:someValuesFromisPlayedByTargetPropertyShape a sh:PropertyShape ;
+    sh:class ISO11238-Substances:Target ;
+    sh:minCount 1 ;
+    sh:path PartiesAndSituations:isPlayedBy .
+
+:someValuesFromisProducedByManufacturerPropertyShape a sh:PropertyShape ;
+    sh:class ISO11238-Substances:Manufacturer ;
+    sh:minCount 1 ;
+    sh:path ProductsAndServices:isProducedBy .
+
+:someValuesFromisRegisteredByMedicinesRegulatoryAgencyPropertyShape a sh:PropertyShape ;
+    sh:class ISO11615-MedicinalProducts:MedicinesRegulatoryAgency ;
+    sh:minCount 1 ;
+    sh:path RegistrationAuthorities:isRegisteredBy .
+
+:someValuesFromisRoleInContainerConstituencyPropertyShape a sh:PropertyShape ;
+    sh:class ISO11615-MedicinalProducts:ContainerConstituency ;
+    sh:minCount 1 ;
+    sh:path PartiesAndSituations:isRoleIn .
+
+:someValuesFromisSpecifiedBySubstancePropertyShape a sh:PropertyShape ;
+    sh:class ISO11238-Substances:Substance ;
+    sh:minCount 1 ;
+    sh:path Documents:isSpecifiedBy .
+
+:someValuesFromisTherapeuticIndicationForMedicinalProductPropertyShape a sh:PropertyShape ;
+    sh:class ISO11615-MedicinalProducts:MedicinalProduct ;
+    sh:minCount 1 ;
+    sh:path ISO11615-MedicinalProducts:isTherapeuticIndicationFor .
+
+:someValuesFrommanagesAdministrationOfInvestigationalMedicinalProductPropertyShape a sh:PropertyShape ;
+    sh:class ISO11615-MedicinalProducts:InvestigationalMedicinalProduct ;
+    sh:minCount 1 ;
+    sh:path ISO11615-MedicinalProducts:managesAdministrationOf .
+
+:someValuesFromrefersToSubstancePropertyShape a sh:PropertyShape ;
+    sh:class ISO11238-Substances:Substance ;
+    sh:minCount 1 ;
+    sh:path Documents:refersTo .
+
+:someValuesFromspecifiesAnalysisPropertyShape a sh:PropertyShape ;
+    sh:class ISO11238-Substances:Analysis ;
+    sh:minCount 1 ;
+    sh:path Documents:specifies .
+
+:someValuesFromspecifiesContainerPropertyShape a sh:PropertyShape ;
+    sh:class ISO11615-MedicinalProducts:Container ;
+    sh:minCount 1 ;
+    sh:path Documents:specifies .
+
+:someValuesFromspecifiesMaterialPropertyShape a sh:PropertyShape ;
+    sh:class ISO11238-Substances:Material ;
+    sh:minCount 1 ;
+    sh:path Documents:specifies .
+
+:someValuesFromspecifiesModificationPropertyShape a sh:PropertyShape ;
+    sh:class ISO11238-Substances:Modification ;
+    sh:minCount 1 ;
+    sh:path Documents:specifies .
+
+:someValuesFromspecifiesOpticalRotationPropertyShape a sh:PropertyShape ;
+    sh:class ISO11238-Substances:OpticalRotation ;
+    sh:minCount 1 ;
+    sh:path Documents:specifies .
+
+:someValuesFromundergoesModificationPropertyShape a sh:PropertyShape ;
+    sh:class ISO11238-Substances:Modification ;
+    sh:minCount 1 ;
+    sh:path PartiesAndSituations:undergoes .
+
+:someValuesFromundergoesRadioactiveDecayPropertyShape a sh:PropertyShape ;
+    sh:class ISO11238-Substances:RadioactiveDecay ;
+    sh:minCount 1 ;
+    sh:path PartiesAndSituations:undergoes .
+
+<https://www.omg.org/spec/Commons/CodesAndCodeSets/CodeElementNodeShape> a sh:NodeShape ;
+    sh:targetClass <https://www.omg.org/spec/Commons/CodesAndCodeSets/CodeElement> .
+
+ContextualDesignators:ContextualNameNodeShape a sh:NodeShape ;
+    sh:targetClass ContextualDesignators:ContextualName .
+
+<https://www.omg.org/spec/Commons/ContextualIdentifiers/ContextualIdentificationSchemeNodeShape> a sh:NodeShape ;
+    sh:targetClass <https://www.omg.org/spec/Commons/ContextualIdentifiers/ContextualIdentificationScheme> .
+
+<https://www.omg.org/spec/Commons/ContextualIdentifiers/ContextualIdentifierNodeShape> a sh:NodeShape ;
+    sh:targetClass <https://www.omg.org/spec/Commons/ContextualIdentifiers/ContextualIdentifier> .
+
+QuantitiesAndUnits:MeasurementUnitNodeShape a sh:NodeShape ;
+    sh:or ( :someValuesFromisIdentifiedByUnitOfMeasureIdentifierPropertyShape :someValuesFrominverseOfidentifiesMeasurementUnitPropertyShape ) ;
+    sh:targetClass QuantitiesAndUnits:MeasurementUnit .
+
+CountryRepresentation:Alpha2CodeNodeShape a sh:NodeShape ;
+    sh:targetClass CountryRepresentation:Alpha2Code .
+
+CountryRepresentation:Alpha3CodeNodeShape a sh:NodeShape ;
+    sh:targetClass CountryRepresentation:Alpha3Code .
+
+CountryRepresentation:CountrySubdivisionNodeShape a sh:NodeShape ;
+    sh:targetClass CountryRepresentation:CountrySubdivision .
+
+CountryRepresentation:GeographicRegionIdentifierNodeShape a sh:NodeShape ;
+    sh:targetClass CountryRepresentation:GeographicRegionIdentifier .
+
+LanguageRepresentation:Alpha2CodeNodeShape a sh:NodeShape ;
+    sh:targetClass LanguageRepresentation:Alpha2Code .
+
+LanguageRepresentation:Alpha3CodeNodeShape a sh:NodeShape ;
+    sh:targetClass LanguageRepresentation:Alpha3Code .
+
+LanguageRepresentation:BibliographicCodeNodeShape a sh:NodeShape ;
+    sh:targetClass LanguageRepresentation:BibliographicCode .
+
+LanguageRepresentation:CollectiveLanguageCodeNodeShape a sh:NodeShape ;
+    sh:targetClass LanguageRepresentation:CollectiveLanguageCode .
+
+LanguageRepresentation:IdentifierNodeShape a sh:NodeShape ;
+    sh:targetClass LanguageRepresentation:Identifier .
+
+LanguageRepresentation:IndividualLanguageIdentifierNodeShape a sh:NodeShape ;
+    sh:targetClass LanguageRepresentation:IndividualLanguageIdentifier .
+
+LanguageRepresentation:LanguageIdentifierNodeShape a sh:NodeShape ;
+    sh:targetClass LanguageRepresentation:LanguageIdentifier .
+
+LanguageRepresentation:MacrolanguageIdentifierNodeShape a sh:NodeShape ;
+    sh:targetClass LanguageRepresentation:MacrolanguageIdentifier .
+
+LanguageRepresentation:SpecialPurposeCodeNodeShape a sh:NodeShape ;
+    sh:targetClass LanguageRepresentation:SpecialPurposeCode .
+
+LanguageRepresentation:TerminologyCodeNodeShape a sh:NodeShape ;
+    sh:targetClass LanguageRepresentation:TerminologyCode .
+
+LanguageRepresentation:WritingSystemNodeShape a sh:NodeShape ;
+    sh:targetClass LanguageRepresentation:WritingSystem .
+
+:someValuesFromhasSponsorSponsorPropertyShape a sh:PropertyShape ;
+    sh:class ISO11615-MedicinalProducts:Sponsor ;
+    sh:minCount 1 ;
+    sh:path ISO11615-MedicinalProducts:hasSponsor .
+
+:someValuesFrominverseOfhasSponsorSponsorPropertyShape a sh:PropertyShape ;
+    sh:class ISO11615-MedicinalProducts:ClinicalTrial ;
+    sh:minCount 1 ;
+    sh:path [ sh:inversePath ISO11615-MedicinalProducts:hasSponsor ] .
+
+:someValuesFrominverseOfsponsorsClinicalTrialPropertyShape a sh:PropertyShape ;
+    sh:class ISO11615-MedicinalProducts:Sponsor ;
+    sh:minCount 1 ;
+    sh:path [ sh:inversePath ISO11615-MedicinalProducts:sponsors ] .
+
+:someValuesFromsponsorsClinicalTrialPropertyShape a sh:PropertyShape ;
+    sh:class ISO11615-MedicinalProducts:ClinicalTrial ;
+    sh:minCount 1 ;
+    sh:path ISO11615-MedicinalProducts:sponsors .
+
+:someValuesFromauthorizesThroughAuthorizationPropertyShape a sh:PropertyShape ;
+    sh:class ISO11615-MedicinalProducts:Authorization ;
+    sh:minCount 1 ;
+    sh:path ISO11615-MedicinalProducts:authorizesThrough .
+
+:someValuesFromidentifiesMeasurementUnitPropertyShape a sh:PropertyShape ;
+    sh:class QuantitiesAndUnits:MeasurementUnit ;
+    sh:minCount 1 ;
+    sh:path Identifiers:identifies .
+
+:someValuesFrominverseOfhasAuthorizedPartyAuthorizedPartyPropertyShape a sh:PropertyShape ;
+    sh:class ISO11615-MedicinalProducts:Authorization ;
+    sh:minCount 1 ;
+    sh:path [ sh:inversePath ISO11615-MedicinalProducts:hasAuthorizedParty ] .
+
+:someValuesFrominverseOfhasAuthorizingPartyAuthorizingPartyPropertyShape a sh:PropertyShape ;
+    sh:class ISO11615-MedicinalProducts:Authorization ;
+    sh:minCount 1 ;
+    sh:path [ sh:inversePath ISO11615-MedicinalProducts:hasAuthorizingParty ] .
+
+:someValuesFrominverseOfidentifiesMeasurementUnitPropertyShape a sh:PropertyShape ;
+    sh:class ISO11240-UnitsOfMeasurement:UnitOfMeasureIdentifier ;
+    sh:minCount 1 ;
+    sh:path [ sh:inversePath Identifiers:identifies ] .
+
+:someValuesFrominverseOfisIdentifiedByUnitOfMeasureIdentifierPropertyShape a sh:PropertyShape ;
+    sh:class QuantitiesAndUnits:MeasurementUnit ;
+    sh:minCount 1 ;
+    sh:path [ sh:inversePath Identifiers:isIdentifiedBy ] .
+
+:someValuesFromisAuthorizedThroughAuthorizationPropertyShape a sh:PropertyShape ;
+    sh:class ISO11615-MedicinalProducts:Authorization ;
+    sh:minCount 1 ;
+    sh:path ISO11615-MedicinalProducts:isAuthorizedThrough .
+
+:someValuesFromisIdentifiedByUnitOfMeasureIdentifierPropertyShape a sh:PropertyShape ;
+    sh:class ISO11240-UnitsOfMeasurement:UnitOfMeasureIdentifier ;
+    sh:minCount 1 ;
+    sh:path Identifiers:isIdentifiedBy .
+
+:someValuesFromhasAuthorizedPartyAuthorizedPartyPropertyShape a sh:PropertyShape ;
+    sh:class ISO11615-MedicinalProducts:AuthorizedParty ;
+    sh:minCount 1 ;
+    sh:path ISO11615-MedicinalProducts:hasAuthorizedParty .
+
+:someValuesFromhasAuthorizingPartyAuthorizingPartyPropertyShape a sh:PropertyShape ;
+    sh:class ISO11615-MedicinalProducts:AuthorizingParty ;
+    sh:minCount 1 ;
+    sh:path ISO11615-MedicinalProducts:hasAuthorizingParty .
+
+:someValuesFrominverseOfauthorizesThroughAuthorizationPropertyShape a sh:PropertyShape ;
+    sh:class ISO11615-MedicinalProducts:AuthorizingParty ;
+    sh:minCount 1 ;
+    sh:path [ sh:inversePath ISO11615-MedicinalProducts:authorizesThrough ] .
+
+:someValuesFrominverseOfisAuthorizedThroughAuthorizationPropertyShape a sh:PropertyShape ;
+    sh:class ISO11615-MedicinalProducts:AuthorizedParty ;
+    sh:minCount 1 ;
+    sh:path [ sh:inversePath ISO11615-MedicinalProducts:isAuthorizedThrough ] .
+

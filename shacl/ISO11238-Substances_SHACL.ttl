@@ -23,926 +23,355 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 idmp-sub:AcidNodeShape a sh:NodeShape ;
-    sh:property idmp-sub:someValuesFromhasSubstanceNameSubstanceNamePropertyShape,
-        idmp-sub:someValuesFromhasSubstanceTypeSubstanceTypeClassifierPropertyShape ;
     sh:targetClass idmp-sub:Acid .
 
 idmp-sub:ActiveIngredientNodeShape a sh:NodeShape ;
-    sh:property idmp-sub:someValuesFromisPlayedBySubstancePropertyShape ;
     sh:targetClass idmp-sub:ActiveIngredient .
 
 idmp-sub:ActiveMoietyRoleNodeShape a sh:NodeShape ;
-    sh:property idmp-sub:someValuesFromisApplicableInRegulatoryContextPropertyShape ;
     sh:targetClass idmp-sub:ActiveMoietyRole .
 
 idmp-sub:AdditiveIngredientNodeShape a sh:NodeShape ;
-    sh:property idmp-sub:someValuesFromisPlayedBySubstancePropertyShape ;
     sh:targetClass idmp-sub:AdditiveIngredient .
 
 idmp-sub:AdjuvantNodeShape a sh:NodeShape ;
-    sh:property idmp-sub:someValuesFromisPlayedBySubstancePropertyShape ;
     sh:targetClass idmp-sub:Adjuvant .
 
 idmp-sub:AgentModificationMethodNodeShape a sh:NodeShape ;
-    sh:property idmp-sub:someValuesFromhasModificationAgentModificationAgentPropertyShape,
-        idmp-sub:someValuesFromspecifiesModificationPropertyShape ;
     sh:targetClass idmp-sub:AgentModificationMethod .
 
 idmp-sub:AgentModificationTypeNodeShape a sh:NodeShape ;
-    sh:or ( idmp-sub:someValuesFromisMemberOfCodeSetPropertyShape idmp-sub:someValuesFromisMemberOfCodeSetPropertyShapeInverse ) ;
-    sh:property idmp-sub:someValuesFromclassifiesAgentModificationMethodPropertyShape ;
     sh:targetClass idmp-sub:AgentModificationType .
 
 idmp-sub:AmountTypeNodeShape a sh:NodeShape ;
-    sh:or ( idmp-sub:someValuesFromisMemberOfCodeSetPropertyShape idmp-sub:someValuesFromisMemberOfCodeSetPropertyShapeInverse ) ;
     sh:targetClass idmp-sub:AmountType .
 
 idmp-sub:AnalyticalMethodNodeShape a sh:NodeShape ;
-    sh:property idmp-sub:someValuesFromspecifiesAnalysisPropertyShape ;
     sh:targetClass idmp-sub:AnalyticalMethod .
 
 idmp-sub:BaseIngredientNodeShape a sh:NodeShape ;
-    sh:property idmp-sub:someValuesFromisPlayedBySubstancePropertyShape ;
     sh:targetClass idmp-sub:BaseIngredient .
 
 idmp-sub:BaseNodeShape a sh:NodeShape ;
-    sh:property idmp-sub:someValuesFromhasSubstanceNameSubstanceNamePropertyShape,
-        idmp-sub:someValuesFromhasSubstanceTypeSubstanceTypeClassifierPropertyShape ;
     sh:targetClass idmp-sub:Base .
 
 idmp-sub:ChemicalElementNodeShape a sh:NodeShape ;
-    sh:property idmp-sub:someValuesFromhasDefiningStructureMolecularStructurePropertyShape,
-        idmp-sub:someValuesFromhasSubstanceNameSubstanceNamePropertyShape,
-        idmp-sub:someValuesFromhasSubstanceTypeSubstanceTypeClassifierPropertyShape ;
     sh:targetClass idmp-sub:ChemicalElement .
 
 idmp-sub:ChemicalSubstanceNodeShape a sh:NodeShape ;
-    sh:property idmp-sub:someValuesFromhasDefiningStructureMolecularStructurePropertyShape,
-        idmp-sub:someValuesFromhasSubstanceNameSubstanceNamePropertyShape,
-        idmp-sub:someValuesFromhasSubstanceTypeSubstanceTypeClassifierPropertyShape ;
     sh:targetClass idmp-sub:ChemicalSubstance .
 
 idmp-sub:ColorIngredientNodeShape a sh:NodeShape ;
-    sh:property idmp-sub:someValuesFromisPlayedBySubstancePropertyShape ;
     sh:targetClass idmp-sub:ColorIngredient .
 
 idmp-sub:ConformanceLevelNodeShape a sh:NodeShape ;
-    sh:or ( idmp-sub:someValuesFromisMemberOfCodeSetPropertyShape idmp-sub:someValuesFromisMemberOfCodeSetPropertyShapeInverse ) ;
     sh:targetClass idmp-sub:ConformanceLevel .
 
 idmp-sub:ContaminantIngredientNodeShape a sh:NodeShape ;
-    sh:property idmp-sub:someValuesFromisPlayedBySubstancePropertyShape ;
     sh:targetClass idmp-sub:ContaminantIngredient .
 
 idmp-sub:ElementGroupNodeShape a sh:NodeShape ;
-    sh:or ( idmp-sub:someValuesFromhasNameNamePropertyShape idmp-sub:someValuesFromhasNameNamePropertyShapeInverse ),
-        ( idmp-sub:someValuesFromisIncludedInSpecifiedSubstanceGroupPropertyShape idmp-sub:someValuesFromisIncludedInSpecifiedSubstanceGroupPropertyShapeInverse ) ;
     sh:targetClass idmp-sub:ElementGroup .
 
 idmp-sub:EsterNodeShape a sh:NodeShape ;
-    sh:property idmp-sub:someValuesFromhasSubstanceNameSubstanceNamePropertyShape,
-        idmp-sub:someValuesFromhasSubstanceTypeSubstanceTypeClassifierPropertyShape ;
     sh:targetClass idmp-sub:Ester .
 
 idmp-sub:ExcipientNodeShape a sh:NodeShape ;
-    sh:property idmp-sub:someValuesFromisPlayedBySubstancePropertyShape ;
     sh:targetClass idmp-sub:Excipient .
 
 idmp-sub:FlavorIngredientNodeShape a sh:NodeShape ;
-    sh:property idmp-sub:someValuesFromisPlayedBySubstancePropertyShape ;
     sh:targetClass idmp-sub:FlavorIngredient .
 
 idmp-sub:GeneElementIdentifierNodeShape a sh:NodeShape ;
-    sh:property idmp-sub:someValuesFromidentifiesGeneElementPropertyShape ;
     sh:targetClass idmp-sub:GeneElementIdentifier .
 
 idmp-sub:GeneElementNameNodeShape a sh:NodeShape ;
-    sh:property idmp-sub:someValuesFromisApplicableInContextPropertyShape,
-        idmp-sub:someValuesFromisNameOfGeneElementPropertyShape ;
     sh:targetClass idmp-sub:GeneElementName .
 
 idmp-sub:GeneElementTypeNodeShape a sh:NodeShape ;
-    sh:or ( idmp-sub:someValuesFromisMemberOfCodeSetPropertyShape idmp-sub:someValuesFromisMemberOfCodeSetPropertyShapeInverse ) ;
     sh:targetClass idmp-sub:GeneElementType .
 
 idmp-sub:GeneIdentifierNodeShape a sh:NodeShape ;
-    sh:property idmp-sub:someValuesFromidentifiesGenePropertyShape ;
     sh:targetClass idmp-sub:GeneIdentifier .
 
 idmp-sub:GeneNameNodeShape a sh:NodeShape ;
-    sh:property idmp-sub:someValuesFromisApplicableInContextPropertyShape,
-        idmp-sub:someValuesFromisNameOfGenePropertyShape ;
     sh:targetClass idmp-sub:GeneName .
 
 idmp-sub:GeneSequenceOriginNodeShape a sh:NodeShape ;
-    sh:property idmp-sub:someValuesFromisApplicableInContextPropertyShape,
-        idmp-sub:someValuesFromisNameOfGenePropertyShape ;
     sh:targetClass idmp-sub:GeneSequenceOrigin .
 
 idmp-sub:HydrateNodeShape a sh:NodeShape ;
-    sh:property idmp-sub:someValuesFromhasSubstanceNameSubstanceNamePropertyShape,
-        idmp-sub:someValuesFromhasSubstanceTypeSubstanceTypeClassifierPropertyShape ;
     sh:targetClass idmp-sub:Hydrate .
 
 idmp-sub:InactiveIngredientNodeShape a sh:NodeShape ;
-    sh:property idmp-sub:someValuesFromisPlayedBySubstancePropertyShape ;
     sh:targetClass idmp-sub:InactiveIngredient .
 
 idmp-sub:InactiveMoietyRoleNodeShape a sh:NodeShape ;
-    sh:property idmp-sub:someValuesFromisApplicableInRegulatoryContextPropertyShape ;
     sh:targetClass idmp-sub:InactiveMoietyRole .
 
 idmp-sub:InteractionTypeNodeShape a sh:NodeShape ;
-    sh:or ( idmp-sub:someValuesFromisMemberOfCodeSetPropertyShape idmp-sub:someValuesFromisMemberOfCodeSetPropertyShapeInverse ) ;
     sh:targetClass idmp-sub:InteractionType .
 
 idmp-sub:IsotopeCompositionNodeShape a sh:NodeShape ;
-    sh:or ( idmp-sub:someValuesFromdefinesSubstancePropertyShape idmp-sub:someValuesFromdefinesSubstancePropertyShapeInverse ) ;
     sh:targetClass idmp-sub:IsotopeComposition .
 
 idmp-sub:IsotopeNodeShape a sh:NodeShape ;
-    sh:property idmp-sub:someValuesFromhasDefiningStructureMolecularStructurePropertyShape,
-        idmp-sub:someValuesFromhasSubstanceNameSubstanceNamePropertyShape,
-        idmp-sub:someValuesFromhasSubstanceTypeSubstanceTypeClassifierPropertyShape ;
     sh:targetClass idmp-sub:Isotope .
 
 idmp-sub:IsotopicSubstitutionClassifierNodeShape a sh:NodeShape ;
-    sh:property idmp-sub:someValuesFromclassifiesIsotopicSubstitutionPropertyShape ;
     sh:targetClass idmp-sub:IsotopicSubstitutionClassifier .
 
 idmp-sub:ManufacturedItemNodeShape a sh:NodeShape ;
-    sh:or ( idmp-sub:someValuesFromisProducedByManufacturerPropertyShape idmp-sub:someValuesFromisProducedByManufacturerPropertyShapeInverse ) ;
     sh:targetClass idmp-sub:ManufacturedItem .
 
 idmp-sub:ManufacturerNodeShape a sh:NodeShape ;
-    sh:property idmp-sub:someValuesFromproducesGoodPropertyShape ;
     sh:targetClass idmp-sub:Manufacturer .
 
 idmp-sub:MaterialClassifierNodeShape a sh:NodeShape ;
-    sh:property idmp-sub:someValuesFromclassifiesMaterialPropertyShape ;
     sh:targetClass idmp-sub:MaterialClassifier .
 
 idmp-sub:MaterialRoleNodeShape a sh:NodeShape ;
-    sh:property idmp-sub:someValuesFromisPlayedByMaterialPropertyShape ;
     sh:targetClass idmp-sub:MaterialRole .
 
 idmp-sub:MaterialSpecificationNodeShape a sh:NodeShape ;
-    sh:property idmp-sub:someValuesFromspecifiesMaterialPropertyShape ;
     sh:targetClass idmp-sub:MaterialSpecification .
 
 idmp-sub:MechanicalIngredientNodeShape a sh:NodeShape ;
-    sh:property idmp-sub:someValuesFromisPlayedBySubstancePropertyShape ;
     sh:targetClass idmp-sub:MechanicalIngredient .
 
 idmp-sub:MixtureNodeShape a sh:NodeShape ;
-    sh:property idmp-sub:someValuesFromhasSubstanceNameSubstanceNamePropertyShape,
-        idmp-sub:someValuesFromhasSubstanceTypeSubstanceTypeClassifierPropertyShape ;
     sh:targetClass idmp-sub:Mixture .
 
 idmp-sub:ModificationAgentNodeShape a sh:NodeShape ;
-    sh:property idmp-sub:someValuesFromisManifestedInModificationPropertyShape ;
     sh:targetClass idmp-sub:ModificationAgent .
 
 idmp-sub:ModificationMethodNodeShape a sh:NodeShape ;
-    sh:property idmp-sub:someValuesFromspecifiesModificationPropertyShape ;
     sh:targetClass idmp-sub:ModificationMethod .
 
 idmp-sub:ModificationMethodTypeNodeShape a sh:NodeShape ;
-    sh:or ( idmp-sub:someValuesFromisMemberOfCodeSetPropertyShape idmp-sub:someValuesFromisMemberOfCodeSetPropertyShapeInverse ) ;
     sh:targetClass idmp-sub:ModificationMethodType .
 
 idmp-sub:ModificationRoleCodeNodeShape a sh:NodeShape ;
-    sh:or ( idmp-sub:someValuesFromisMemberOfCodeSetPropertyShape idmp-sub:someValuesFromisMemberOfCodeSetPropertyShapeInverse ) ;
     sh:targetClass idmp-sub:ModificationRoleCode .
 
 idmp-sub:ModificationRoleNodeShape a sh:NodeShape ;
-    sh:property idmp-sub:someValuesFromisManifestedInModificationPropertyShape ;
     sh:targetClass idmp-sub:ModificationRole .
 
 idmp-sub:MoietyIdentifierNodeShape a sh:NodeShape ;
-    sh:property idmp-sub:someValuesFromidentifiesMoietyPropertyShape ;
     sh:targetClass idmp-sub:MoietyIdentifier .
 
 idmp-sub:MoietyNameNodeShape a sh:NodeShape ;
-    sh:property idmp-sub:someValuesFromisApplicableInContextPropertyShape,
-        idmp-sub:someValuesFromisNameOfMoietyPropertyShape ;
     sh:targetClass idmp-sub:MoietyName .
 
 idmp-sub:MoietyNodeShape a sh:NodeShape ;
-    sh:property idmp-sub:someValuesFromhasGranularMolecularPartMolecularEntityPropertyShape,
-        idmp-sub:someValuesFromisConstituentOfMolecularCompositionPropertyShape,
-        idmp-sub:someValuesFromisMoietyOfSubstancePropertyShape ;
     sh:targetClass idmp-sub:Moiety .
 
 idmp-sub:MoietyRoleNodeShape a sh:NodeShape ;
-    sh:property idmp-sub:someValuesFromisApplicableInRegulatoryContextPropertyShape ;
     sh:targetClass idmp-sub:MoietyRole .
 
 idmp-sub:MolecularCompositionNodeShape a sh:NodeShape ;
-    sh:or ( idmp-sub:someValuesFromdefinesSubstancePropertyShape idmp-sub:someValuesFromdefinesSubstancePropertyShapeInverse ) ;
     sh:targetClass idmp-sub:MolecularComposition .
 
 idmp-sub:MolecularConstituentNodeShape a sh:NodeShape ;
-    sh:property idmp-sub:someValuesFromhasGranularMolecularPartMolecularEntityPropertyShape,
-        idmp-sub:someValuesFromisConstituentOfMolecularCompositionPropertyShape ;
     sh:targetClass idmp-sub:MolecularConstituent .
 
 idmp-sub:MolecularFormulaByMoietyNodeShape a sh:NodeShape ;
-    sh:property idmp-sub:someValuesFromhasTextValuestringPropertyShape ;
     sh:targetClass idmp-sub:MolecularFormulaByMoiety .
 
 idmp-sub:MolecularFormulaNodeShape a sh:NodeShape ;
-    sh:property idmp-sub:someValuesFromhasTextValuestringPropertyShape ;
     sh:targetClass idmp-sub:MolecularFormula .
 
 idmp-sub:MolecularFragmentIdentifierNodeShape a sh:NodeShape ;
-    sh:or ( idmp-sub:someValuesFromisMemberOfCodeSetPropertyShape idmp-sub:someValuesFromisMemberOfCodeSetPropertyShapeInverse ) ;
-    sh:property idmp-sub:someValuesFromidentifiesMolecularFragmentPropertyShape,
-        idmp-sub:someValuesFromisRegisteredInRegistryPropertyShape ;
     sh:targetClass idmp-sub:MolecularFragmentIdentifier .
 
 idmp-sub:MolecularFragmentNameNodeShape a sh:NodeShape ;
-    sh:property idmp-sub:someValuesFromisApplicableInContextPropertyShape ;
     sh:targetClass idmp-sub:MolecularFragmentName .
 
 idmp-sub:MolecularFragmentNodeShape a sh:NodeShape ;
-    sh:property idmp-sub:someValuesFromhasGranularMolecularPartMolecularEntityPropertyShape,
-        idmp-sub:someValuesFromisConstituentOfMolecularCompositionPropertyShape ;
     sh:targetClass idmp-sub:MolecularFragment .
 
 idmp-sub:MolecularFragmentRoleNodeShape a sh:NodeShape ;
-    sh:property idmp-sub:someValuesFromisPlayedByMolecularFragmentPropertyShape,
-        idmp-sub:someValuesFromundergoesModificationPropertyShape ;
     sh:targetClass idmp-sub:MolecularFragmentRole .
 
 idmp-sub:MolecularGraphIdentifierNodeShape a sh:NodeShape ;
-    sh:property idmp-sub:someValuesFromidentifiesMolecularGraphPropertyShape ;
     sh:targetClass idmp-sub:MolecularGraphIdentifier .
 
 idmp-sub:MolecularGroupNodeShape a sh:NodeShape ;
-    sh:property idmp-sub:someValuesFromcomprisesAtomPropertyShape,
-        idmp-sub:someValuesFromisPartOfMolecularEntityPropertyShape ;
     sh:targetClass idmp-sub:MolecularGroup .
 
 idmp-sub:MolecularStructureIdentifierNodeShape a sh:NodeShape ;
-    sh:property idmp-sub:someValuesFromidentifiesMolecularStructurePropertyShape ;
     sh:targetClass idmp-sub:MolecularStructureIdentifier .
 
 idmp-sub:MolecularStructureNodeShape a sh:NodeShape ;
-    sh:property idmp-sub:someValuesFromisDescribedByStructuralRepresentationPropertyShape ;
     sh:targetClass idmp-sub:MolecularStructure .
 
 idmp-sub:MolecularWeightNodeShape a sh:NodeShape ;
-    sh:property idmp-sub:someValuesFromhasMeasurementUnitMeasurementUnitPropertyShape ;
     sh:targetClass idmp-sub:MolecularWeight .
 
 idmp-sub:MoleculeNodeShape a sh:NodeShape ;
-    sh:property idmp-sub:someValuesFromhasStructureMolecularStructurePropertyShape ;
     sh:targetClass idmp-sub:Molecule .
 
 idmp-sub:MonodisperseSubstanceNodeShape a sh:NodeShape ;
-    sh:property idmp-sub:someValuesFromhasSubstanceNameSubstanceNamePropertyShape,
-        idmp-sub:someValuesFromhasSubstanceTypeSubstanceTypeClassifierPropertyShape ;
     sh:targetClass idmp-sub:MonodisperseSubstance .
 
 idmp-sub:NucleicAcidSubstanceNodeShape a sh:NodeShape ;
-    sh:property idmp-sub:someValuesFromhasSubstanceNameSubstanceNamePropertyShape,
-        idmp-sub:someValuesFromhasSubstanceTypeSubstanceTypeClassifierPropertyShape ;
     sh:targetClass idmp-sub:NucleicAcidSubstance .
 
 idmp-sub:NuclideIdentifierNodeShape a sh:NodeShape ;
-    sh:or ( idmp-sub:someValuesFromisMemberOfCodeSetPropertyShape idmp-sub:someValuesFromisMemberOfCodeSetPropertyShapeInverse ) ;
-    sh:property idmp-sub:someValuesFromclassifiesNuclidePropertyShape,
-        idmp-sub:someValuesFromidentifiesIsotopePropertyShape,
-        idmp-sub:someValuesFromisRegisteredInRegistryPropertyShape ;
     sh:targetClass idmp-sub:NuclideIdentifier .
 
 idmp-sub:NuclideNameNodeShape a sh:NodeShape ;
-    sh:property idmp-sub:someValuesFromisApplicableInContextPropertyShape,
-        idmp-sub:someValuesFromisNameOfNuclidePropertyShape ;
     sh:targetClass idmp-sub:NuclideName .
 
 idmp-sub:OfficialNameNodeShape a sh:NodeShape ;
-    sh:or ( idmp-sub:someValuesFromisClassifiedByOfficialNameStatusPropertyShape idmp-sub:someValuesFromisClassifiedByOfficialNameStatusPropertyShapeInverse ) ;
-    sh:property idmp-sub:someValuesFromhasLanguageCodeLanguageIdentifierPropertyShape,
-        idmp-sub:someValuesFromisApplicableInContextPropertyShape,
-        idmp-sub:someValuesFromisApplicableInJurisdictionGeographicRegionIdentifierPropertyShape ;
     sh:targetClass idmp-sub:OfficialName .
 
 idmp-sub:OpticalActivityNodeShape a sh:NodeShape ;
-    sh:property idmp-sub:someValuesFromspecifiesOpticalRotationPropertyShape ;
     sh:targetClass idmp-sub:OpticalActivity .
 
 idmp-sub:OpticalRotationNodeShape a sh:NodeShape ;
-    sh:property idmp-sub:someValuesFromhasMeasurementUnitMeasurementUnitPropertyShape ;
     sh:targetClass idmp-sub:OpticalRotation .
 
 idmp-sub:ParameterNameNodeShape a sh:NodeShape ;
-    sh:property idmp-sub:someValuesFromisApplicableInContextPropertyShape ;
     sh:targetClass idmp-sub:ParameterName .
 
 idmp-sub:ParameterNodeShape a sh:NodeShape ;
-    sh:or ( idmp-sub:someValuesFromhasNameParameterNamePropertyShape idmp-sub:someValuesFromhasNameParameterNamePropertyShapeInverse ) ;
     sh:targetClass idmp-sub:Parameter .
 
 idmp-sub:PharmacopoeialGradeClassifierNodeShape a sh:NodeShape ;
-    sh:property idmp-sub:someValuesFromclassifiesPharmacopoeialGradePropertyShape ;
     sh:targetClass idmp-sub:PharmacopoeialGradeClassifier .
 
 idmp-sub:PharmacopoeialGradeNameNodeShape a sh:NodeShape ;
-    sh:property idmp-sub:someValuesFromisApplicableInContextPropertyShape ;
     sh:targetClass idmp-sub:PharmacopoeialGradeName .
 
 idmp-sub:PhysicalManufacturedItemNodeShape a sh:NodeShape ;
-    sh:or ( idmp-sub:someValuesFromisProducedByManufacturerPropertyShape idmp-sub:someValuesFromisProducedByManufacturerPropertyShapeInverse ) ;
     sh:targetClass idmp-sub:PhysicalManufacturedItem .
 
 idmp-sub:PhysicalModificationMethodNodeShape a sh:NodeShape ;
-    sh:property idmp-sub:someValuesFromspecifiesModificationPropertyShape ;
     sh:targetClass idmp-sub:PhysicalModificationMethod .
 
 idmp-sub:PhysicalSubstanceNodeShape a sh:NodeShape ;
-    sh:or ( idmp-sub:someValuesFromisSpecifiedBySubstancePropertyShape idmp-sub:someValuesFromisSpecifiedBySubstancePropertyShapeInverse ) ;
     sh:targetClass idmp-sub:PhysicalSubstance .
 
 idmp-sub:PolydisperseSubstanceNodeShape a sh:NodeShape ;
-    sh:property idmp-sub:someValuesFromhasSubstanceNameSubstanceNamePropertyShape,
-        idmp-sub:someValuesFromhasSubstanceTypeSubstanceTypeClassifierPropertyShape ;
     sh:targetClass idmp-sub:PolydisperseSubstance .
 
 idmp-sub:PolymerSubstanceNodeShape a sh:NodeShape ;
-    sh:property idmp-sub:someValuesFromhasSubstanceNameSubstanceNamePropertyShape,
-        idmp-sub:someValuesFromhasSubstanceTypeSubstanceTypeClassifierPropertyShape ;
     sh:targetClass idmp-sub:PolymerSubstance .
 
 idmp-sub:PreservativeIngredientNodeShape a sh:NodeShape ;
-    sh:property idmp-sub:someValuesFromisPlayedBySubstancePropertyShape ;
     sh:targetClass idmp-sub:PreservativeIngredient .
 
 idmp-sub:ProcessingMaterialRoleNodeShape a sh:NodeShape ;
-    sh:property idmp-sub:someValuesFromisPlayedByMaterialPropertyShape ;
     sh:targetClass idmp-sub:ProcessingMaterialRole .
 
 idmp-sub:ProteinSubstanceNodeShape a sh:NodeShape ;
-    sh:property idmp-sub:someValuesFromhasSubstanceNameSubstanceNamePropertyShape,
-        idmp-sub:someValuesFromhasSubstanceTypeSubstanceTypeClassifierPropertyShape ;
     sh:targetClass idmp-sub:ProteinSubstance .
 
 idmp-sub:RadioactiveDecayNodeShape a sh:NodeShape ;
-    sh:property idmp-sub:someValuesFromisExperiencedByRadionuclidePropertyShape ;
     sh:targetClass idmp-sub:RadioactiveDecay .
 
 idmp-sub:RadionuclideNodeShape a sh:NodeShape ;
-    sh:property idmp-sub:someValuesFromundergoesRadioactiveDecayPropertyShape ;
     sh:targetClass idmp-sub:Radionuclide .
 
 idmp-sub:ReferenceSourceCitationNodeShape a sh:NodeShape ;
-    sh:or ( idmp-sub:someValuesFromdescribesReferenceSourcePropertyShape idmp-sub:someValuesFromdescribesReferenceSourcePropertyShapeInverse ) ;
-    sh:property idmp-sub:someValuesFromhasTextValuestringPropertyShape ;
     sh:targetClass idmp-sub:ReferenceSourceCitation .
 
 idmp-sub:ReferenceSourceDocumentIdentifierNodeShape a sh:NodeShape ;
-    sh:property idmp-sub:someValuesFromidentifiesReferenceSourceDocumentPropertyShape ;
     sh:targetClass idmp-sub:ReferenceSourceDocumentIdentifier .
 
 idmp-sub:ReferenceSourceIdentifierNodeShape a sh:NodeShape ;
-    sh:property idmp-sub:someValuesFromidentifiesReferenceSourcePropertyShape ;
     sh:targetClass idmp-sub:ReferenceSourceIdentifier .
 
 idmp-sub:ReferenceSourceNodeShape a sh:NodeShape ;
-    sh:property idmp-sub:someValuesFromhasReferenceSourceTypeReferenceSourceTypePropertyShape ;
     sh:targetClass idmp-sub:ReferenceSource .
 
 idmp-sub:ResultantMaterialRoleNodeShape a sh:NodeShape ;
-    sh:property idmp-sub:someValuesFromisPlayedByMaterialPropertyShape ;
     sh:targetClass idmp-sub:ResultantMaterialRole .
 
 idmp-sub:SaltNodeShape a sh:NodeShape ;
-    sh:property idmp-sub:someValuesFromhasSubstanceNameSubstanceNamePropertyShape,
-        idmp-sub:someValuesFromhasSubstanceTypeSubstanceTypeClassifierPropertyShape ;
     sh:targetClass idmp-sub:Salt .
 
 idmp-sub:SimplifiedMolecularInputLineEntryNodeShape a sh:NodeShape ;
-    sh:property idmp-sub:someValuesFromhasTextValuestringPropertyShape ;
     sh:targetClass idmp-sub:SimplifiedMolecularInputLineEntry .
 
 idmp-sub:SingleSubstanceNodeShape a sh:NodeShape ;
-    sh:property idmp-sub:someValuesFromhasSubstanceNameSubstanceNamePropertyShape,
-        idmp-sub:someValuesFromhasSubstanceTypeSubstanceTypeClassifierPropertyShape ;
     sh:targetClass idmp-sub:SingleSubstance .
 
 idmp-sub:SourceMaterialClassifierCodeNodeShape a sh:NodeShape ;
-    sh:or ( idmp-sub:someValuesFromisMemberOfCodeSetPropertyShape idmp-sub:someValuesFromisMemberOfCodeSetPropertyShapeInverse ) ;
     sh:targetClass idmp-sub:SourceMaterialClassifierCode .
 
 idmp-sub:SourceMaterialClassifierNodeShape a sh:NodeShape ;
-    sh:property idmp-sub:someValuesFromclassifiesMaterialPropertyShape ;
     sh:targetClass idmp-sub:SourceMaterialClassifier .
 
 idmp-sub:SourceMaterialRoleNodeShape a sh:NodeShape ;
-    sh:property idmp-sub:someValuesFromisPlayedByMaterialPropertyShape ;
     sh:targetClass idmp-sub:SourceMaterialRole .
 
 idmp-sub:SpecifiedItemCountNodeShape a sh:NodeShape ;
-    sh:property idmp-sub:someValuesFromhasIntegerValueintegerPropertyShape ;
     sh:targetClass idmp-sub:SpecifiedItemCount .
 
 idmp-sub:SpecifiedSubstanceGroup1NodeShape a sh:NodeShape ;
-    sh:or ( idmp-sub:someValuesFromisIncludedInSpecifiedSubstancePropertyShape idmp-sub:someValuesFromisIncludedInSpecifiedSubstancePropertyShapeInverse ) ;
-    sh:property idmp-sub:someValuesFromhasMemberAspectPropertyShape ;
     sh:targetClass idmp-sub:SpecifiedSubstanceGroup1 .
 
 idmp-sub:SpecifiedSubstanceGroup2NodeShape a sh:NodeShape ;
-    sh:or ( idmp-sub:someValuesFromisIncludedInSpecifiedSubstancePropertyShape idmp-sub:someValuesFromisIncludedInSpecifiedSubstancePropertyShapeInverse ) ;
-    sh:property idmp-sub:someValuesFromhasMemberAspectPropertyShape ;
     sh:targetClass idmp-sub:SpecifiedSubstanceGroup2 .
 
 idmp-sub:SpecifiedSubstanceGroup3NodeShape a sh:NodeShape ;
-    sh:or ( idmp-sub:someValuesFromisIncludedInSpecifiedSubstancePropertyShape idmp-sub:someValuesFromisIncludedInSpecifiedSubstancePropertyShapeInverse ) ;
-    sh:property idmp-sub:someValuesFromhasMemberAspectPropertyShape ;
     sh:targetClass idmp-sub:SpecifiedSubstanceGroup3 .
 
 idmp-sub:SpecifiedSubstanceGroup4NodeShape a sh:NodeShape ;
-    sh:or ( idmp-sub:someValuesFromisIncludedInSpecifiedSubstancePropertyShape idmp-sub:someValuesFromisIncludedInSpecifiedSubstancePropertyShapeInverse ) ;
-    sh:property idmp-sub:someValuesFromhasMemberAspectPropertyShape ;
     sh:targetClass idmp-sub:SpecifiedSubstanceGroup4 .
 
 idmp-sub:SpecifiedSubstanceGroupNodeShape a sh:NodeShape ;
-    sh:or ( idmp-sub:someValuesFromisIncludedInSpecifiedSubstancePropertyShape idmp-sub:someValuesFromisIncludedInSpecifiedSubstancePropertyShapeInverse ) ;
-    sh:property idmp-sub:someValuesFromhasMemberAspectPropertyShape ;
     sh:targetClass idmp-sub:SpecifiedSubstanceGroup .
 
 idmp-sub:SpecifiedSubstanceNodeShape a sh:NodeShape ;
-    sh:property idmp-sub:someValuesFromhasSubstanceNameSubstanceNamePropertyShape,
-        idmp-sub:someValuesFromhasSubstanceTypeSubstanceTypeClassifierPropertyShape,
-        idmp-sub:someValuesFromspecializesSubstancePropertyShape ;
     sh:targetClass idmp-sub:SpecifiedSubstance .
 
 idmp-sub:StabilizerIngredientNodeShape a sh:NodeShape ;
-    sh:property idmp-sub:someValuesFromisPlayedBySubstancePropertyShape ;
     sh:targetClass idmp-sub:StabilizerIngredient .
 
 idmp-sub:StartingMaterialRoleNodeShape a sh:NodeShape ;
-    sh:property idmp-sub:someValuesFromisPlayedByMaterialPropertyShape ;
     sh:targetClass idmp-sub:StartingMaterialRole .
 
 idmp-sub:StructuralModificationMethodNodeShape a sh:NodeShape ;
-    sh:property idmp-sub:someValuesFromhasStructuralModificationTypeStructuralModificationTypePropertyShape,
-        idmp-sub:someValuesFromspecifiesModificationPropertyShape ;
     sh:targetClass idmp-sub:StructuralModificationMethod .
 
 idmp-sub:StructuralModificationTypeNodeShape a sh:NodeShape ;
-    sh:property idmp-sub:someValuesFromclassifiesStructuralModificationMethodPropertyShape ;
     sh:targetClass idmp-sub:StructuralModificationType .
 
 idmp-sub:StructurallyDiverseSubstanceNodeShape a sh:NodeShape ;
-    sh:property idmp-sub:someValuesFromhasSubstanceNameSubstanceNamePropertyShape,
-        idmp-sub:someValuesFromhasSubstanceTypeSubstanceTypeClassifierPropertyShape ;
     sh:targetClass idmp-sub:StructurallyDiverseSubstance .
 
 idmp-sub:SubstanceClassifierCodeNodeShape a sh:NodeShape ;
-    sh:or ( idmp-sub:someValuesFromisMemberOfCodeSetPropertyShape idmp-sub:someValuesFromisMemberOfCodeSetPropertyShapeInverse ) ;
     sh:targetClass idmp-sub:SubstanceClassifierCode .
 
 idmp-sub:SubstanceCodeNodeShape a sh:NodeShape ;
-    sh:or ( idmp-sub:someValuesFromisMemberOfCodeSetPropertyShape idmp-sub:someValuesFromisMemberOfCodeSetPropertyShapeInverse ) ;
-    sh:property idmp-sub:someValuesFromisRegisteredInRegistryPropertyShape ;
     sh:targetClass idmp-sub:SubstanceCode .
 
 idmp-sub:SubstanceCompositionNodeShape a sh:NodeShape ;
-    sh:or ( idmp-sub:someValuesFromdefinesSubstancePropertyShape idmp-sub:someValuesFromdefinesSubstancePropertyShapeInverse ) ;
     sh:targetClass idmp-sub:SubstanceComposition .
 
 idmp-sub:SubstanceIdentifierNodeShape a sh:NodeShape ;
-    sh:or ( idmp-sub:someValuesFromisMemberOfCodeSetPropertyShape idmp-sub:someValuesFromisMemberOfCodeSetPropertyShapeInverse ) ;
-    sh:property idmp-sub:someValuesFromisRegisteredInRegistryPropertyShape ;
     sh:targetClass idmp-sub:SubstanceIdentifier .
 
 idmp-sub:SubstanceNameNodeShape a sh:NodeShape ;
-    sh:property idmp-sub:someValuesFromhasLanguageCodeLanguageIdentifierPropertyShape,
-        idmp-sub:someValuesFromisApplicableInContextPropertyShape,
-        idmp-sub:someValuesFromisApplicableInJurisdictionGeographicRegionIdentifierPropertyShape ;
     sh:targetClass idmp-sub:SubstanceName .
 
 idmp-sub:SubstanceNodeShape a sh:NodeShape ;
-    sh:property idmp-sub:someValuesFromhasSubstanceNameSubstanceNamePropertyShape,
-        idmp-sub:someValuesFromhasSubstanceTypeSubstanceTypeClassifierPropertyShape ;
     sh:targetClass idmp-sub:Substance .
 
 idmp-sub:SubstanceRelationshipCodeNodeShape a sh:NodeShape ;
-    sh:or ( idmp-sub:someValuesFromisMemberOfCodeSetPropertyShape idmp-sub:someValuesFromisMemberOfCodeSetPropertyShapeInverse ) ;
     sh:targetClass idmp-sub:SubstanceRelationshipCode .
 
 idmp-sub:SubstanceRelationshipTypeNodeShape a sh:NodeShape ;
-    sh:or ( idmp-sub:someValuesFromisMemberOfCodeSetPropertyShape idmp-sub:someValuesFromisMemberOfCodeSetPropertyShapeInverse ) ;
     sh:targetClass idmp-sub:SubstanceRelationshipType .
 
 idmp-sub:SubstanceRoleNodeShape a sh:NodeShape ;
-    sh:property idmp-sub:someValuesFromisPlayedBySubstancePropertyShape ;
     sh:targetClass idmp-sub:SubstanceRole .
 
 idmp-sub:SubstrateTargetInteractionNodeShape a sh:NodeShape ;
-    sh:property idmp-sub:someValuesFromhasSubjectRoleRolePropertyShape ;
     sh:targetClass idmp-sub:SubstrateTargetInteraction .
-
-idmp-sub:someValuesFromhasGranularMolecularPartMolecularGroupPropertyShape a sh:PropertyShape ;
-    sh:class idmp-sub:MolecularGroup ;
-    sh:minCount 1 ;
-    sh:path idmp-sub:hasGranularMolecularPart .
-
-idmp-sub:someValuesFromisAPartyToLicensePropertyShape a sh:PropertyShape ;
-    sh:class cmns-rga:License ;
-    sh:minCount 1 ;
-    sh:path cmns-pts:isAPartyTo .
-
-idmp-sub:someValuesFromisMemberOfUnitOfMeasureIdentificationSchemePropertyShape a sh:PropertyShape ;
-    sh:class idmp-uom:UnitOfMeasureIdentificationScheme ;
-    sh:minCount 1 ;
-    sh:path cmns-col:isMemberOf .
-
-idmp-sub:someValuesFromisMemberOfUnitOfMeasureIdentificationSchemePropertyShapeInverse sh:class cmns-cls:Aspect ;
-    sh:minCount 1 ;
-    sh:path cmns-col:hasMember .
-
-idmp-sub:someValuesFromisPlayedByTargetPropertyShape a sh:PropertyShape ;
-    sh:class idmp-sub:Target ;
-    sh:minCount 1 ;
-    sh:path cmns-pts:isPlayedBy .
-
-idmp-sub:someValuesFromisProvidedByRegulatoryAgencyPropertyShape a sh:PropertyShape ;
-    sh:class cmns-rga:RegulatoryAgency ;
-    sh:minCount 1 ;
-    sh:path cmns-prd:isProvidedBy .
-
-idmp-sub:someValuesFromisProvidedByRegulatoryAgencyPropertyShapeInverse sh:class cmns-prd:Service ;
-    sh:minCount 1 ;
-    sh:path cmns-prd:provides .
-
-idmp-sub:someValuesFromprovidesRegistrationServicePropertyShape a sh:PropertyShape ;
-    sh:class cmns-ra:RegistrationService ;
-    sh:minCount 1 ;
-    sh:path cmns-prd:provides .
-
-idmp-uom:CodeSystemIdentifierNodeShape a sh:NodeShape ;
-    sh:property idmp-sub:someValuesFromidentifiesCodeSetPropertyShape ;
-    sh:targetClass idmp-uom:CodeSystemIdentifier .
-
-idmp-uom:ISO11240LexiconCodeEntryNodeShape a sh:NodeShape ;
-    sh:or ( idmp-sub:someValuesFromisMemberOfCodeSetPropertyShape idmp-sub:someValuesFromisMemberOfCodeSetPropertyShapeInverse ) ;
-    sh:property idmp-sub:someValuesFromcompliesWithUnitOfMeasureIdentificationSchemePropertyShape,
-        idmp-sub:someValuesFromhasLanguageCodeLanguageIdentifierPropertyShape,
-        idmp-sub:someValuesFromhasRegionCodeGeographicRegionIdentifierPropertyShape,
-        idmp-sub:someValuesFromidentifiesMeasurementUnitPropertyShape ;
-    sh:targetClass idmp-uom:ISO11240LexiconCodeEntry .
-
-idmp-uom:UnitOfMeasureIdentifierNodeShape a sh:NodeShape ;
-    sh:or ( idmp-sub:someValuesFromisMemberOfCodeSetPropertyShape idmp-sub:someValuesFromisMemberOfCodeSetPropertyShapeInverse ) ;
-    sh:property idmp-sub:someValuesFromcompliesWithUnitOfMeasureIdentificationSchemePropertyShape,
-        idmp-sub:someValuesFromidentifiesMeasurementUnitPropertyShape ;
-    sh:targetClass idmp-uom:UnitOfMeasureIdentifier .
-
-idmp-uom:UnitOfPresentationNodeShape a sh:NodeShape ;
-    sh:or ( idmp-sub:someValuesFromisIdentifiedByUnitOfMeasureIdentifierPropertyShape idmp-sub:someValuesFromisIdentifiedByUnitOfMeasureIdentifierPropertyShapeInverse ) ;
-    sh:property idmp-sub:someValuesFromhasQuantityKindQuantityKindPropertyShape ;
-    sh:targetClass idmp-uom:UnitOfPresentation .
-
-idmp-dtp:CodingRationaleNodeShape a sh:NodeShape ;
-    sh:or ( idmp-sub:someValuesFromisMemberOfCodeSetPropertyShape idmp-sub:someValuesFromisMemberOfCodeSetPropertyShapeInverse ) ;
-    sh:property idmp-sub:someValuesFromhasLevelInHierarchynonNegativeIntegerPropertyShape ;
-    sh:targetClass idmp-dtp:CodingRationale .
-
-idmp-dtp:CompressionAlgorithmNodeShape a sh:NodeShape ;
-    sh:or ( idmp-sub:someValuesFromisMemberOfCodeSetPropertyShape idmp-sub:someValuesFromisMemberOfCodeSetPropertyShapeInverse ) ;
-    sh:property idmp-sub:someValuesFromhasLevelInHierarchynonNegativeIntegerPropertyShape ;
-    sh:targetClass idmp-dtp:CompressionAlgorithm .
-
-idmp-dtp:DatatypeFlavorNodeShape a sh:NodeShape ;
-    sh:or ( idmp-sub:someValuesFromisMemberOfCodeSetPropertyShape idmp-sub:someValuesFromisMemberOfCodeSetPropertyShapeInverse ) ;
-    sh:property idmp-sub:someValuesFromhasLevelInHierarchynonNegativeIntegerPropertyShape ;
-    sh:targetClass idmp-dtp:DatatypeFlavor .
-
-idmp-dtp:ISO21090-BooleanNonNullDatatypeNodeShape a sh:NodeShape ;
-    sh:property idmp-sub:someValuesFromhasBooleanValuebooleanPropertyShape ;
-    sh:targetClass idmp-dtp:ISO21090-BooleanNonNullDatatype .
-
-idmp-dtp:ISO21090-ConceptDescriptorNodeShape a sh:NodeShape ;
-    sh:or ( idmp-sub:someValuesFromisMemberOfCodeSetPropertyShape idmp-sub:someValuesFromisMemberOfCodeSetPropertyShapeInverse ) ;
-    sh:targetClass idmp-dtp:ISO21090-ConceptDescriptor .
-
-idmp-dtp:ISO21090-EntityNameNodeShape a sh:NodeShape ;
-    sh:property idmp-sub:someValuesFromisApplicableInContextPropertyShape ;
-    sh:targetClass idmp-dtp:ISO21090-EntityName .
-
-idmp-dtp:IntegrityCheckAlgorithmNodeShape a sh:NodeShape ;
-    sh:or ( idmp-sub:someValuesFromisMemberOfCodeSetPropertyShape idmp-sub:someValuesFromisMemberOfCodeSetPropertyShapeInverse ) ;
-    sh:property idmp-sub:someValuesFromhasLevelInHierarchynonNegativeIntegerPropertyShape ;
-    sh:targetClass idmp-dtp:IntegrityCheckAlgorithm .
-
-idmp-dtp:NullFlavorNodeShape a sh:NodeShape ;
-    sh:or ( idmp-sub:someValuesFromisMemberOfCodeSetPropertyShape idmp-sub:someValuesFromisMemberOfCodeSetPropertyShapeInverse ) ;
-    sh:property idmp-sub:someValuesFromhasLevelInHierarchynonNegativeIntegerPropertyShape ;
-    sh:targetClass idmp-dtp:NullFlavor .
-
-idmp-dtp:UpdateModeNodeShape a sh:NodeShape ;
-    sh:or ( idmp-sub:someValuesFromisMemberOfCodeSetPropertyShape idmp-sub:someValuesFromisMemberOfCodeSetPropertyShapeInverse ) ;
-    sh:property idmp-sub:someValuesFromhasLevelInHierarchynonNegativeIntegerPropertyShape ;
-    sh:targetClass idmp-dtp:UpdateMode .
-
-idmp-dtp:ValueDomainIdentifierNodeShape a sh:NodeShape ;
-    sh:property idmp-sub:someValuesFromidentifiesValueDomainPropertyShape ;
-    sh:targetClass idmp-dtp:ValueDomainIdentifier .
-
-cmns-cds:CodeElementNodeShape a sh:NodeShape ;
-    sh:or ( idmp-sub:someValuesFromisMemberOfCodeSetPropertyShape idmp-sub:someValuesFromisMemberOfCodeSetPropertyShapeInverse ) ;
-    sh:targetClass cmns-cds:CodeElement .
-
-cmns-cxtdsg:ContextualNameNodeShape a sh:NodeShape ;
-    sh:property idmp-sub:someValuesFromisApplicableInContextPropertyShape ;
-    sh:targetClass cmns-cxtdsg:ContextualName .
-
-cmns-doc:ReportNodeShape a sh:NodeShape ;
-    sh:property idmp-sub:someValuesFromisReportedByReportingPartyPropertyShape,
-        idmp-sub:someValuesFromisReportedToPartyRolePropertyShape ;
-    sh:targetClass cmns-doc:Report .
-
-cmns-doc:ReportingPartyNodeShape a sh:NodeShape ;
-    sh:property idmp-sub:someValuesFromauthorsReportPropertyShape ;
-    sh:targetClass cmns-doc:ReportingParty .
-
-cmns-loc:CountyNodeShape a sh:NodeShape ;
-    sh:property idmp-sub:someValuesFromisClassifiedByGeographicRegionKindPropertyShape ;
-    sh:targetClass cmns-loc:County .
-
-cmns-loc:FederalStateNodeShape a sh:NodeShape ;
-    sh:property idmp-sub:someValuesFromisClassifiedByGeographicRegionKindPropertyShape ;
-    sh:targetClass cmns-loc:FederalState .
-
-cmns-pts:SituationNodeShape a sh:NodeShape ;
-    sh:property idmp-sub:someValuesFromhasSubjectRoleRolePropertyShape ;
-    sh:targetClass cmns-pts:Situation .
-
-cmns-prd:GS1CompanyPrefixIssuerNodeShape a sh:NodeShape ;
-    sh:or ( idmp-sub:someValuesFromissuesGS1CompanyPrefixPropertyShape idmp-sub:someValuesFromissuesGS1CompanyPrefixPropertyShapeInverse ) ;
-    sh:property idmp-sub:someValuesFromprovidesServicePropertyShape ;
-    sh:targetClass cmns-prd:GS1CompanyPrefixIssuer .
-
-cmns-prd:GS1UserNodeShape a sh:NodeShape ;
-    sh:property idmp-sub:someValuesFromisPlayedByLegalEntityPropertyShape ;
-    sh:targetClass cmns-prd:GS1User .
-
-cmns-prd:GlobalTradeItemNumberNodeShape a sh:NodeShape ;
-    sh:property idmp-sub:someValuesFromclassifiesTradeItemPropertyShape,
-        idmp-sub:someValuesFromdenotesTradeItemPropertyShape ;
-    sh:targetClass cmns-prd:GlobalTradeItemNumber .
-
-cmns-prd:ProducerNodeShape a sh:NodeShape ;
-    sh:property idmp-sub:someValuesFromproducesGoodPropertyShape ;
-    sh:targetClass cmns-prd:Producer .
-
-cmns-prd:ServiceNodeShape a sh:NodeShape ;
-    sh:or ( idmp-sub:someValuesFromisProvidedByServiceProviderPropertyShape idmp-sub:someValuesFromisProvidedByServiceProviderPropertyShapeInverse ) ;
-    sh:targetClass cmns-prd:Service .
-
-cmns-prd:ServiceProviderNodeShape a sh:NodeShape ;
-    sh:property idmp-sub:someValuesFromprovidesServicePropertyShape ;
-    sh:targetClass cmns-prd:ServiceProvider .
-
-cmns-prd:StockKeepingUnitNodeShape a sh:NodeShape ;
-    sh:property idmp-sub:someValuesFromclassifiesTradeItemPropertyShape,
-        idmp-sub:someValuesFromdenotesTradeItemPropertyShape ;
-    sh:targetClass cmns-prd:StockKeepingUnit .
-
-cmns-prd:UniformProductCodeNodeShape a sh:NodeShape ;
-    sh:property idmp-sub:someValuesFromclassifiesTradeItemPropertyShape,
-        idmp-sub:someValuesFromdenotesTradeItemPropertyShape ;
-    sh:targetClass cmns-prd:UniformProductCode .
-
-cmns-qtu:ArbitraryUnitNodeShape a sh:NodeShape ;
-    sh:or ( idmp-sub:someValuesFromisIdentifiedByUnitOfMeasureIdentifierPropertyShape idmp-sub:someValuesFromisIdentifiedByUnitOfMeasureIdentifierPropertyShapeInverse ) ;
-    sh:property idmp-sub:someValuesFromhasQuantityKindQuantityKindPropertyShape ;
-    sh:targetClass cmns-qtu:ArbitraryUnit .
-
-cmns-qtu:BaseUnitNodeShape a sh:NodeShape ;
-    sh:or ( idmp-sub:someValuesFromisIdentifiedByUnitOfMeasureIdentifierPropertyShape idmp-sub:someValuesFromisIdentifiedByUnitOfMeasureIdentifierPropertyShapeInverse ) ;
-    sh:property idmp-sub:someValuesFromhasQuantityKindQuantityKindPropertyShape,
-        idmp-sub:someValuesFromisDefinedInSystemOfUnitsPropertyShape ;
-    sh:targetClass cmns-qtu:BaseUnit .
-
-cmns-qtu:CoherentDerivedUnitNodeShape a sh:NodeShape ;
-    sh:or ( idmp-sub:someValuesFromisIdentifiedByUnitOfMeasureIdentifierPropertyShape idmp-sub:someValuesFromisIdentifiedByUnitOfMeasureIdentifierPropertyShapeInverse ) ;
-    sh:property idmp-sub:someValuesFromhasQuantityKindQuantityKindPropertyShape,
-        idmp-sub:someValuesFromisDefinedInSystemOfUnitsPropertyShape,
-        idmp-sub:someValuesFromisDerivedFromBaseUnitPropertyShape ;
-    sh:targetClass cmns-qtu:CoherentDerivedUnit .
-
-cmns-qtu:ConstantNodeShape a sh:NodeShape ;
-    sh:property idmp-sub:someValuesFromhasMeasurementUnitMeasurementUnitPropertyShape ;
-    sh:targetClass cmns-qtu:Constant .
-
-cmns-qtu:ConversionBasedUnitNodeShape a sh:NodeShape ;
-    sh:or ( idmp-sub:someValuesFromisIdentifiedByUnitOfMeasureIdentifierPropertyShape idmp-sub:someValuesFromisIdentifiedByUnitOfMeasureIdentifierPropertyShapeInverse ) ;
-    sh:property idmp-sub:someValuesFromhasQuantityKindQuantityKindPropertyShape,
-        idmp-sub:someValuesFromisDefinedInSystemOfUnitsPropertyShape,
-        idmp-sub:someValuesFromisDerivedFromBaseUnitPropertyShape ;
-    sh:targetClass cmns-qtu:ConversionBasedUnit .
-
-cmns-qtu:DerivedQuantityKindNodeShape a sh:NodeShape ;
-    sh:property idmp-sub:someValuesFromisDerivedFromQuantityKindPropertyShape ;
-    sh:targetClass cmns-qtu:DerivedQuantityKind .
-
-cmns-qtu:DerivedUnitNodeShape a sh:NodeShape ;
-    sh:or ( idmp-sub:someValuesFromisIdentifiedByUnitOfMeasureIdentifierPropertyShape idmp-sub:someValuesFromisIdentifiedByUnitOfMeasureIdentifierPropertyShapeInverse ) ;
-    sh:property idmp-sub:someValuesFromhasQuantityKindQuantityKindPropertyShape,
-        idmp-sub:someValuesFromisDefinedInSystemOfUnitsPropertyShape,
-        idmp-sub:someValuesFromisDerivedFromBaseUnitPropertyShape ;
-    sh:targetClass cmns-qtu:DerivedUnit .
-
-cmns-qtu:IntervalScaleNodeShape a sh:NodeShape ;
-    sh:property idmp-sub:someValuesFromclassifiesMeasurementUnitPropertyShape ;
-    sh:targetClass cmns-qtu:IntervalScale .
-
-cmns-qtu:LogarithmicScaleNodeShape a sh:NodeShape ;
-    sh:property idmp-sub:someValuesFromclassifiesMeasurementUnitPropertyShape ;
-    sh:targetClass cmns-qtu:LogarithmicScale .
-
-cmns-qtu:MeasurementScaleNodeShape a sh:NodeShape ;
-    sh:property idmp-sub:someValuesFromclassifiesMeasurementUnitPropertyShape ;
-    sh:targetClass cmns-qtu:MeasurementScale .
-
-cmns-qtu:MeasurementUnitNodeShape a sh:NodeShape ;
-    sh:or ( idmp-sub:someValuesFromisIdentifiedByUnitOfMeasureIdentifierPropertyShape idmp-sub:someValuesFromisIdentifiedByUnitOfMeasureIdentifierPropertyShapeInverse ) ;
-    sh:property idmp-sub:someValuesFromhasQuantityKindQuantityKindPropertyShape ;
-    sh:targetClass cmns-qtu:MeasurementUnit .
-
-cmns-qtu:NominalScaleNodeShape a sh:NodeShape ;
-    sh:property idmp-sub:someValuesFromclassifiesMeasurementUnitPropertyShape ;
-    sh:targetClass cmns-qtu:NominalScale .
-
-cmns-qtu:OrdinalScaleNodeShape a sh:NodeShape ;
-    sh:property idmp-sub:someValuesFromclassifiesMeasurementUnitPropertyShape ;
-    sh:targetClass cmns-qtu:OrdinalScale .
-
-cmns-qtu:PhysicalUnitNodeShape a sh:NodeShape ;
-    sh:or ( idmp-sub:someValuesFromisIdentifiedByUnitOfMeasureIdentifierPropertyShape idmp-sub:someValuesFromisIdentifiedByUnitOfMeasureIdentifierPropertyShapeInverse ) ;
-    sh:property idmp-sub:someValuesFromhasQuantityKindQuantityKindPropertyShape,
-        idmp-sub:someValuesFromisDefinedInSystemOfUnitsPropertyShape ;
-    sh:targetClass cmns-qtu:PhysicalUnit .
-
-cmns-qtu:PrefixedUnitNodeShape a sh:NodeShape ;
-    sh:or ( idmp-sub:someValuesFromisIdentifiedByUnitOfMeasureIdentifierPropertyShape idmp-sub:someValuesFromisIdentifiedByUnitOfMeasureIdentifierPropertyShapeInverse ) ;
-    sh:property idmp-sub:someValuesFromhasFactorPrefixPropertyShape,
-        idmp-sub:someValuesFromhasQuantityKindQuantityKindPropertyShape,
-        idmp-sub:someValuesFromisDefinedInSystemOfUnitsPropertyShape,
-        idmp-sub:someValuesFromisDerivedFromBaseUnitPropertyShape ;
-    sh:targetClass cmns-qtu:PrefixedUnit .
-
-cmns-qtu:QuantityKindPowerFactorNodeShape a sh:NodeShape ;
-    sh:property idmp-sub:someValuesFromhasQuantityKindQuantityKindPropertyShape ;
-    sh:targetClass cmns-qtu:QuantityKindPowerFactor .
-
-cmns-qtu:QuantityNameNodeShape a sh:NodeShape ;
-    sh:property idmp-sub:someValuesFromisApplicableInContextPropertyShape,
-        idmp-sub:someValuesFromisNameOfQuantityPropertyShape ;
-    sh:targetClass cmns-qtu:QuantityName .
-
-cmns-qtu:QuantityNodeShape a sh:NodeShape ;
-    sh:property idmp-sub:someValuesFromhasQuantityKindQuantityKindPropertyShape ;
-    sh:targetClass cmns-qtu:Quantity .
-
-cmns-qtu:QuantityValueNodeShape a sh:NodeShape ;
-    sh:property idmp-sub:someValuesFromhasMeasurementUnitMeasurementUnitPropertyShape ;
-    sh:targetClass cmns-qtu:QuantityValue .
-
-cmns-qtu:RatioScaleNodeShape a sh:NodeShape ;
-    sh:property idmp-sub:someValuesFromclassifiesMeasurementUnitPropertyShape ;
-    sh:targetClass cmns-qtu:RatioScale .
-
-cmns-qtu:SystemOfQuantitiesNodeShape a sh:NodeShape ;
-    sh:or ( idmp-sub:someValuesFromdefinesQuantityKindPropertyShape idmp-sub:someValuesFromdefinesQuantityKindPropertyShapeInverse ) ;
-    sh:targetClass cmns-qtu:SystemOfQuantities .
-
-cmns-qtu:SystemOfUnitsNodeShape a sh:NodeShape ;
-    sh:or ( idmp-sub:someValuesFromdefinesMeasurementUnitPropertyShape idmp-sub:someValuesFromdefinesMeasurementUnitPropertyShapeInverse ) ;
-    sh:targetClass cmns-qtu:SystemOfUnits .
-
-cmns-qtu:VariableNodeShape a sh:NodeShape ;
-    sh:property idmp-sub:someValuesFromhasMeasurementUnitMeasurementUnitPropertyShape ;
-    sh:targetClass cmns-qtu:Variable .
-
-cmns-ra:RegisteredIdentifierNodeShape a sh:NodeShape ;
-    sh:property idmp-sub:someValuesFromisRegisteredInRegistryPropertyShape ;
-    sh:targetClass cmns-ra:RegisteredIdentifier .
-
-cmns-ra:RegistrarNodeShape a sh:NodeShape ;
-    sh:property idmp-sub:someValuesFromisDesignatedByRegistrationAuthorityPropertyShape,
-        idmp-sub:someValuesFromprovidesServicePropertyShape ;
-    sh:targetClass cmns-ra:Registrar .
-
-cmns-ra:RegistrationAuthorityNodeShape a sh:NodeShape ;
-    sh:property idmp-sub:someValuesFromprovidesServicePropertyShape ;
-    sh:targetClass cmns-ra:RegistrationAuthority .
-
-cmns-ra:RegistrationServiceNodeShape a sh:NodeShape ;
-    sh:or ( idmp-sub:someValuesFromisProvidedByServiceProviderPropertyShape idmp-sub:someValuesFromisProvidedByServiceProviderPropertyShapeInverse ) ;
-    sh:targetClass cmns-ra:RegistrationService .
-
-cmns-ra:RegistryEntryNodeShape a sh:NodeShape ;
-    sh:property idmp-sub:someValuesFromcomprisesRegisteredIdentifierPropertyShape ;
-    sh:targetClass cmns-ra:RegistryEntry .
-
-cmns-rga:GovernmentIssuedLicenseNodeShape a sh:NodeShape ;
-    sh:property idmp-sub:someValuesFromhasPartyRoleLicenseePropertyShape,
-        idmp-sub:someValuesFromisIssuedByLicensorPropertyShape,
-        idmp-sub:someValuesFromisIssuedByRegulatoryAgencyPropertyShape ;
-    sh:targetClass cmns-rga:GovernmentIssuedLicense .
-
-cmns-rga:JurisdictionNodeShape a sh:NodeShape ;
-    sh:property idmp-sub:someValuesFromhasReachGeographicRegionPropertyShape ;
-    sh:targetClass cmns-rga:Jurisdiction .
-
-cmns-rga:LicenseNodeShape a sh:NodeShape ;
-    sh:property idmp-sub:someValuesFromhasPartyRoleLicenseePropertyShape,
-        idmp-sub:someValuesFromisIssuedByLicensorPropertyShape ;
-    sh:targetClass cmns-rga:License .
-
-cmns-rga:LicensorNodeShape a sh:NodeShape ;
-    sh:or ( idmp-sub:someValuesFromissuesLicensePropertyShape idmp-sub:someValuesFromissuesLicensePropertyShapeInverse ) ;
-    sh:targetClass cmns-rga:Licensor .
-
-cmns-rga:RegulatoryAgencyNodeShape a sh:NodeShape ;
-    sh:property idmp-sub:someValuesFromhasJurisdictionJurisdictionPropertyShape,
-        idmp-sub:someValuesFromprovidesServicePropertyShape ;
-    sh:targetClass cmns-rga:RegulatoryAgency .
-
-cmns-rga:RegulatoryReportNodeShape a sh:NodeShape ;
-    sh:property idmp-sub:someValuesFromisReportedByReportingPartyPropertyShape,
-        idmp-sub:someValuesFromisReportedToPartyRolePropertyShape ;
-    sh:targetClass cmns-rga:RegulatoryReport .
-
-cmns-rga:RegulatoryServiceNodeShape a sh:NodeShape ;
-    sh:or ( idmp-sub:someValuesFromisProvidedByServiceProviderPropertyShape idmp-sub:someValuesFromisProvidedByServiceProviderPropertyShapeInverse ) ;
-    sh:targetClass cmns-rga:RegulatoryService .
-
-lcc-cr:Alpha2CodeNodeShape a sh:NodeShape ;
-    sh:property idmp-sub:someValuesFromhasTagstringPropertyShape ;
-    sh:targetClass lcc-cr:Alpha2Code .
-
-lcc-cr:Alpha3CodeNodeShape a sh:NodeShape ;
-    sh:property idmp-sub:someValuesFromhasTagstringPropertyShape ;
-    sh:targetClass lcc-cr:Alpha3Code .
-
-lcc-cr:CountrySubdivisionNodeShape a sh:NodeShape ;
-    sh:property idmp-sub:someValuesFromisClassifiedByGeographicRegionKindPropertyShape ;
-    sh:targetClass lcc-cr:CountrySubdivision .
-
-lcc-cr:GeographicRegionIdentifierNodeShape a sh:NodeShape ;
-    sh:property idmp-sub:someValuesFromhasTagstringPropertyShape ;
-    sh:targetClass lcc-cr:GeographicRegionIdentifier .
-
-lcc-lr:Alpha2CodeNodeShape a sh:NodeShape ;
-    sh:property idmp-sub:someValuesFromhasTagstringPropertyShape ;
-    sh:targetClass lcc-lr:Alpha2Code .
-
-lcc-lr:Alpha3CodeNodeShape a sh:NodeShape ;
-    sh:property idmp-sub:someValuesFromhasTagstringPropertyShape ;
-    sh:targetClass lcc-lr:Alpha3Code .
-
-lcc-lr:BibliographicCodeNodeShape a sh:NodeShape ;
-    sh:property idmp-sub:someValuesFromhasTagstringPropertyShape ;
-    sh:targetClass lcc-lr:BibliographicCode .
-
-lcc-lr:CollectiveLanguageCodeNodeShape a sh:NodeShape ;
-    sh:property idmp-sub:someValuesFromhasTagstringPropertyShape ;
-    sh:targetClass lcc-lr:CollectiveLanguageCode .
-
-lcc-lr:IdentifierNodeShape a sh:NodeShape ;
-    sh:property idmp-sub:someValuesFromhasTagstringPropertyShape ;
-    sh:targetClass lcc-lr:Identifier .
-
-lcc-lr:IndividualLanguageIdentifierNodeShape a sh:NodeShape ;
-    sh:property idmp-sub:someValuesFromhasTagstringPropertyShape ;
-    sh:targetClass lcc-lr:IndividualLanguageIdentifier .
-
-lcc-lr:LanguageIdentifierNodeShape a sh:NodeShape ;
-    sh:property idmp-sub:someValuesFromhasTagstringPropertyShape ;
-    sh:targetClass lcc-lr:LanguageIdentifier .
-
-lcc-lr:MacrolanguageIdentifierNodeShape a sh:NodeShape ;
-    sh:property idmp-sub:someValuesFromhasTagstringPropertyShape ;
-    sh:targetClass lcc-lr:MacrolanguageIdentifier .
-
-lcc-lr:SpecialPurposeCodeNodeShape a sh:NodeShape ;
-    sh:property idmp-sub:someValuesFromhasTagstringPropertyShape ;
-    sh:targetClass lcc-lr:SpecialPurposeCode .
-
-lcc-lr:TerminologyCodeNodeShape a sh:NodeShape ;
-    sh:property idmp-sub:someValuesFromhasTagstringPropertyShape ;
-    sh:targetClass lcc-lr:TerminologyCode .
-
-lcc-lr:WritingSystemNodeShape a sh:NodeShape ;
-    sh:property idmp-sub:someValuesFromhasOrthographyPropertyShape,
-        idmp-sub:someValuesFromhasScriptPropertyShape ;
-    sh:targetClass lcc-lr:WritingSystem .
 
 idmp-sub:someValuesFromauthorsReportPropertyShape a sh:PropertyShape ;
     sh:class cmns-doc:Report ;
@@ -956,6 +385,16 @@ idmp-sub:someValuesFromclassifiesAgentModificationMethodPropertyShape a sh:Prope
 
 idmp-sub:someValuesFromclassifiesIsotopicSubstitutionPropertyShape a sh:PropertyShape ;
     sh:class idmp-sub:IsotopicSubstitution ;
+    sh:minCount 1 ;
+    sh:path cmns-cls:classifies .
+
+idmp-sub:someValuesFromclassifiesMaterialPropertyShape a sh:PropertyShape ;
+    sh:class idmp-sub:Material ;
+    sh:minCount 1 ;
+    sh:path cmns-cls:classifies .
+
+idmp-sub:someValuesFromclassifiesMeasurementUnitPropertyShape a sh:PropertyShape ;
+    sh:class cmns-qtu:MeasurementUnit ;
     sh:minCount 1 ;
     sh:path cmns-cls:classifies .
 
@@ -974,6 +413,16 @@ idmp-sub:someValuesFromclassifiesStructuralModificationMethodPropertyShape a sh:
     sh:minCount 1 ;
     sh:path cmns-cls:classifies .
 
+idmp-sub:someValuesFromclassifiesTradeItemPropertyShape a sh:PropertyShape ;
+    sh:class cmns-prd:TradeItem ;
+    sh:minCount 1 ;
+    sh:path cmns-cls:classifies .
+
+idmp-sub:someValuesFromcompliesWithUnitOfMeasureIdentificationSchemePropertyShape a sh:PropertyShape ;
+    sh:class idmp-uom:UnitOfMeasureIdentificationScheme ;
+    sh:minCount 1 ;
+    sh:path cmns-col:compliesWith .
+
 idmp-sub:someValuesFromcomprisesAtomPropertyShape a sh:PropertyShape ;
     sh:class idmp-sub:Atom ;
     sh:minCount 1 ;
@@ -989,37 +438,50 @@ idmp-sub:someValuesFromdefinesMeasurementUnitPropertyShape a sh:PropertyShape ;
     sh:minCount 1 ;
     sh:path cmns-dsg:defines .
 
-idmp-sub:someValuesFromdefinesMeasurementUnitPropertyShapeInverse sh:class cmns-qtu:SystemOfUnits ;
-    sh:minCount 1 ;
-    sh:path cmns-dsg:isDefinedIn .
-
 idmp-sub:someValuesFromdefinesQuantityKindPropertyShape a sh:PropertyShape ;
     sh:class cmns-qtu:QuantityKind ;
     sh:minCount 1 ;
     sh:path cmns-dsg:defines .
 
-idmp-sub:someValuesFromdefinesQuantityKindPropertyShapeInverse sh:class cmns-qtu:SystemOfUnits ;
+idmp-sub:someValuesFromdefinesSubstancePropertyShape a sh:PropertyShape ;
+    sh:class idmp-sub:Substance ;
     sh:minCount 1 ;
-    sh:path cmns-dsg:isDefinedIn .
+    sh:path cmns-dsg:defines .
+
+idmp-sub:someValuesFromdenotesTradeItemPropertyShape a sh:PropertyShape ;
+    sh:class cmns-prd:TradeItem ;
+    sh:minCount 1 ;
+    sh:path cmns-dsg:denotes .
 
 idmp-sub:someValuesFromdescribesReferenceSourcePropertyShape a sh:PropertyShape ;
     sh:class idmp-sub:ReferenceSource ;
     sh:minCount 1 ;
     sh:path cmns-dsg:describes .
 
-idmp-sub:someValuesFromdescribesReferenceSourcePropertyShapeInverse sh:class idmp-sub:StructuralRepresentation ;
-    sh:minCount 1 ;
-    sh:path cmns-dsg:isDescribedBy .
-
 idmp-sub:someValuesFromhasBooleanValuebooleanPropertyShape a sh:PropertyShape ;
     sh:datatype xsd:boolean ;
     sh:minCount 1 ;
     sh:path idmp-dtp:hasBooleanValue .
 
+idmp-sub:someValuesFromhasDefiningStructureMolecularStructurePropertyShape a sh:PropertyShape ;
+    sh:class idmp-sub:MolecularStructure ;
+    sh:minCount 1 ;
+    sh:path idmp-sub:hasDefiningStructure .
+
 idmp-sub:someValuesFromhasFactorPrefixPropertyShape a sh:PropertyShape ;
     sh:class cmns-qtu:Prefix ;
     sh:minCount 1 ;
     sh:path cmns-qtu:hasFactor .
+
+idmp-sub:someValuesFromhasGranularMolecularPartMolecularEntityPropertyShape a sh:PropertyShape ;
+    sh:class idmp-sub:MolecularEntity ;
+    sh:minCount 1 ;
+    sh:path idmp-sub:hasGranularMolecularPart .
+
+idmp-sub:someValuesFromhasGranularMolecularPartMolecularGroupPropertyShape a sh:PropertyShape ;
+    sh:class idmp-sub:MolecularGroup ;
+    sh:minCount 1 ;
+    sh:path idmp-sub:hasGranularMolecularPart .
 
 idmp-sub:someValuesFromhasIntegerValueintegerPropertyShape a sh:PropertyShape ;
     sh:datatype xsd:integer ;
@@ -1031,6 +493,26 @@ idmp-sub:someValuesFromhasJurisdictionJurisdictionPropertyShape a sh:PropertySha
     sh:minCount 1 ;
     sh:path cmns-rga:hasJurisdiction .
 
+idmp-sub:someValuesFromhasLanguageCodeLanguageIdentifierPropertyShape a sh:PropertyShape ;
+    sh:class lcc-lr:LanguageIdentifier ;
+    sh:minCount 1 ;
+    sh:path idmp-dtp:hasLanguageCode .
+
+idmp-sub:someValuesFromhasLevelInHierarchynonNegativeIntegerPropertyShape a sh:PropertyShape ;
+    sh:datatype xsd:nonNegativeInteger ;
+    sh:minCount 1 ;
+    sh:path idmp-dtp:hasLevelInHierarchy .
+
+idmp-sub:someValuesFromhasMeasurementUnitMeasurementUnitPropertyShape a sh:PropertyShape ;
+    sh:class cmns-qtu:MeasurementUnit ;
+    sh:minCount 1 ;
+    sh:path cmns-qtu:hasMeasurementUnit .
+
+idmp-sub:someValuesFromhasMemberAspectPropertyShape a sh:PropertyShape ;
+    sh:class cmns-cls:Aspect ;
+    sh:minCount 1 ;
+    sh:path cmns-col:hasMember .
+
 idmp-sub:someValuesFromhasModificationAgentModificationAgentPropertyShape a sh:PropertyShape ;
     sh:class idmp-sub:ModificationAgent ;
     sh:minCount 1 ;
@@ -1041,23 +523,25 @@ idmp-sub:someValuesFromhasNameNamePropertyShape a sh:PropertyShape ;
     sh:minCount 1 ;
     sh:path cmns-dsg:hasName .
 
-idmp-sub:someValuesFromhasNameNamePropertyShapeInverse sh:class idmp-sub:GeneElement ;
-    sh:minCount 1 ;
-    sh:path cmns-dsg:isNameOf .
-
 idmp-sub:someValuesFromhasNameParameterNamePropertyShape a sh:PropertyShape ;
     sh:class idmp-sub:ParameterName ;
     sh:minCount 1 ;
     sh:path cmns-dsg:hasName .
 
-idmp-sub:someValuesFromhasNameParameterNamePropertyShapeInverse sh:class idmp-sub:GeneElement ;
-    sh:minCount 1 ;
-    sh:path cmns-dsg:isNameOf .
-
 idmp-sub:someValuesFromhasOrthographyPropertyShape a sh:PropertyShape ;
     sh:class lcc-lr:Orthography ;
     sh:minCount 1 ;
     sh:path lcc-lr:has .
+
+idmp-sub:someValuesFromhasPartyRoleLicenseePropertyShape a sh:PropertyShape ;
+    sh:class cmns-rga:Licensee ;
+    sh:minCount 1 ;
+    sh:path cmns-pts:hasPartyRole .
+
+idmp-sub:someValuesFromhasQuantityKindQuantityKindPropertyShape a sh:PropertyShape ;
+    sh:class cmns-qtu:QuantityKind ;
+    sh:minCount 1 ;
+    sh:path cmns-qtu:hasQuantityKind .
 
 idmp-sub:someValuesFromhasReachGeographicRegionPropertyShape a sh:PropertyShape ;
     sh:class lcc-cr:GeographicRegion ;
@@ -1088,6 +572,31 @@ idmp-sub:someValuesFromhasStructureMolecularStructurePropertyShape a sh:Property
     sh:class idmp-sub:MolecularStructure ;
     sh:minCount 1 ;
     sh:path idmp-sub:hasStructure .
+
+idmp-sub:someValuesFromhasSubjectRoleRolePropertyShape a sh:PropertyShape ;
+    sh:class cmns-pts:Role ;
+    sh:minCount 1 ;
+    sh:path cmns-pts:hasSubjectRole .
+
+idmp-sub:someValuesFromhasSubstanceNameSubstanceNamePropertyShape a sh:PropertyShape ;
+    sh:class idmp-sub:SubstanceName ;
+    sh:minCount 1 ;
+    sh:path idmp-sub:hasSubstanceName .
+
+idmp-sub:someValuesFromhasSubstanceTypeSubstanceTypeClassifierPropertyShape a sh:PropertyShape ;
+    sh:class idmp-sub:SubstanceTypeClassifier ;
+    sh:minCount 1 ;
+    sh:path idmp-sub:hasSubstanceType .
+
+idmp-sub:someValuesFromhasTagstringPropertyShape a sh:PropertyShape ;
+    sh:datatype xsd:string ;
+    sh:minCount 1 ;
+    sh:path lcc-lr:hasTag .
+
+idmp-sub:someValuesFromhasTextValuestringPropertyShape a sh:PropertyShape ;
+    sh:datatype xsd:string ;
+    sh:minCount 1 ;
+    sh:path cmns-txt:hasTextValue .
 
 idmp-sub:someValuesFromidentifiesCodeSetPropertyShape a sh:PropertyShape ;
     sh:class cmns-cds:CodeSet ;
@@ -1144,14 +653,50 @@ idmp-sub:someValuesFromidentifiesValueDomainPropertyShape a sh:PropertyShape ;
     sh:minCount 1 ;
     sh:path cmns-id:identifies .
 
+idmp-sub:someValuesFromisAPartyToLicensePropertyShape a sh:PropertyShape ;
+    sh:class cmns-rga:License ;
+    sh:minCount 1 ;
+    sh:path cmns-pts:isAPartyTo .
+
+idmp-sub:someValuesFromisApplicableInContextPropertyShape a sh:PropertyShape ;
+    sh:class cmns-cxtdsg:Context ;
+    sh:minCount 1 ;
+    sh:path cmns-cxtdsg:isApplicableIn .
+
+idmp-sub:someValuesFromisApplicableInJurisdictionGeographicRegionIdentifierPropertyShape a sh:PropertyShape ;
+    sh:class lcc-cr:GeographicRegionIdentifier ;
+    sh:minCount 1 ;
+    sh:path cmns-rga:isApplicableInJurisdiction .
+
+idmp-sub:someValuesFromisApplicableInRegulatoryContextPropertyShape a sh:PropertyShape ;
+    sh:class idmp-sub:RegulatoryContext ;
+    sh:minCount 1 ;
+    sh:path cmns-cxtdsg:isApplicableIn .
+
+idmp-sub:someValuesFromisClassifiedByGeographicRegionKindPropertyShape a sh:PropertyShape ;
+    sh:class lcc-cr:GeographicRegionKind ;
+    sh:minCount 1 ;
+    sh:path lcc-cr:isClassifiedBy .
+
 idmp-sub:someValuesFromisClassifiedByOfficialNameStatusPropertyShape a sh:PropertyShape ;
     sh:class idmp-sub:OfficialNameStatus ;
     sh:minCount 1 ;
     sh:path cmns-cls:isClassifiedBy .
 
-idmp-sub:someValuesFromisClassifiedByOfficialNameStatusPropertyShapeInverse sh:class idmp-sub:Material ;
+idmp-sub:someValuesFromisConstituentOfMolecularCompositionPropertyShape a sh:PropertyShape ;
+    sh:class idmp-sub:MolecularComposition ;
     sh:minCount 1 ;
-    sh:path cmns-cls:classifies .
+    sh:path cmns-col:isConstituentOf .
+
+idmp-sub:someValuesFromisDefinedInSystemOfUnitsPropertyShape a sh:PropertyShape ;
+    sh:class cmns-qtu:SystemOfUnits ;
+    sh:minCount 1 ;
+    sh:path cmns-dsg:isDefinedIn .
+
+idmp-sub:someValuesFromisDerivedFromBaseUnitPropertyShape a sh:PropertyShape ;
+    sh:class cmns-qtu:BaseUnit ;
+    sh:minCount 1 ;
+    sh:path cmns-qtu:isDerivedFrom .
 
 idmp-sub:someValuesFromisDerivedFromQuantityKindPropertyShape a sh:PropertyShape ;
     sh:class cmns-qtu:QuantityKind ;
@@ -1178,14 +723,30 @@ idmp-sub:someValuesFromisIncludedInSpecifiedSubstanceGroupPropertyShape a sh:Pro
     sh:minCount 1 ;
     sh:path cmns-col:isIncludedIn .
 
-idmp-sub:someValuesFromisIncludedInSpecifiedSubstanceGroupPropertyShapeInverse sh:class idmp-sub:Atom ;
+idmp-sub:someValuesFromisIncludedInSpecifiedSubstancePropertyShape a sh:PropertyShape ;
+    sh:class idmp-sub:SpecifiedSubstance ;
     sh:minCount 1 ;
-    sh:path cmns-col:comprises .
+    sh:path cmns-col:isIncludedIn .
 
 idmp-sub:someValuesFromisIssuedByRegulatoryAgencyPropertyShape a sh:PropertyShape ;
     sh:class cmns-rga:RegulatoryAgency ;
     sh:minCount 1 ;
     sh:path cmns-prd:isIssuedBy .
+
+idmp-sub:someValuesFromisManifestedInModificationPropertyShape a sh:PropertyShape ;
+    sh:class idmp-sub:Modification ;
+    sh:minCount 1 ;
+    sh:path cmns-pts:isManifestedIn .
+
+idmp-sub:someValuesFromisMemberOfCodeSetPropertyShape a sh:PropertyShape ;
+    sh:class cmns-cds:CodeSet ;
+    sh:minCount 1 ;
+    sh:path cmns-col:isMemberOf .
+
+idmp-sub:someValuesFromisMemberOfUnitOfMeasureIdentificationSchemePropertyShape a sh:PropertyShape ;
+    sh:class idmp-uom:UnitOfMeasureIdentificationScheme ;
+    sh:minCount 1 ;
+    sh:path cmns-col:isMemberOf .
 
 idmp-sub:someValuesFromisMoietyOfSubstancePropertyShape a sh:PropertyShape ;
     sh:class idmp-sub:Substance ;
@@ -1194,6 +755,11 @@ idmp-sub:someValuesFromisMoietyOfSubstancePropertyShape a sh:PropertyShape ;
 
 idmp-sub:someValuesFromisNameOfGeneElementPropertyShape a sh:PropertyShape ;
     sh:class idmp-sub:GeneElement ;
+    sh:minCount 1 ;
+    sh:path cmns-dsg:isNameOf .
+
+idmp-sub:someValuesFromisNameOfGenePropertyShape a sh:PropertyShape ;
+    sh:class idmp-sub:Gene ;
     sh:minCount 1 ;
     sh:path cmns-dsg:isNameOf .
 
@@ -1222,37 +788,70 @@ idmp-sub:someValuesFromisPlayedByLegalEntityPropertyShape a sh:PropertyShape ;
     sh:minCount 1 ;
     sh:path cmns-pts:isPlayedBy .
 
+idmp-sub:someValuesFromisPlayedByMaterialPropertyShape a sh:PropertyShape ;
+    sh:class idmp-sub:Material ;
+    sh:minCount 1 ;
+    sh:path cmns-pts:isPlayedBy .
+
 idmp-sub:someValuesFromisPlayedByMolecularFragmentPropertyShape a sh:PropertyShape ;
     sh:class idmp-sub:MolecularFragment ;
     sh:minCount 1 ;
     sh:path cmns-pts:isPlayedBy .
+
+idmp-sub:someValuesFromisPlayedBySubstancePropertyShape a sh:PropertyShape ;
+    sh:class idmp-sub:Substance ;
+    sh:minCount 1 ;
+    sh:path cmns-pts:isPlayedBy .
+
+idmp-sub:someValuesFromisPlayedByTargetPropertyShape a sh:PropertyShape ;
+    sh:class idmp-sub:Target ;
+    sh:minCount 1 ;
+    sh:path cmns-pts:isPlayedBy .
+
+idmp-sub:someValuesFromisProducedByManufacturerPropertyShape a sh:PropertyShape ;
+    sh:class idmp-sub:Manufacturer ;
+    sh:minCount 1 ;
+    sh:path cmns-prd:isProducedBy .
+
+idmp-sub:someValuesFromisProvidedByRegulatoryAgencyPropertyShape a sh:PropertyShape ;
+    sh:class cmns-rga:RegulatoryAgency ;
+    sh:minCount 1 ;
+    sh:path cmns-prd:isProvidedBy .
+
+idmp-sub:someValuesFromisRegisteredInRegistryPropertyShape a sh:PropertyShape ;
+    sh:class cmns-ra:Registry ;
+    sh:minCount 1 ;
+    sh:path cmns-ra:isRegisteredIn .
+
+idmp-sub:someValuesFromisReportedByReportingPartyPropertyShape a sh:PropertyShape ;
+    sh:class cmns-doc:ReportingParty ;
+    sh:minCount 1 ;
+    sh:path cmns-doc:isReportedBy .
+
+idmp-sub:someValuesFromisReportedToPartyRolePropertyShape a sh:PropertyShape ;
+    sh:class cmns-pts:PartyRole ;
+    sh:minCount 1 ;
+    sh:path cmns-doc:isReportedTo .
 
 idmp-sub:someValuesFromisSpecifiedBySubstancePropertyShape a sh:PropertyShape ;
     sh:class idmp-sub:Substance ;
     sh:minCount 1 ;
     sh:path cmns-doc:isSpecifiedBy .
 
-idmp-sub:someValuesFromisSpecifiedBySubstancePropertyShapeInverse sh:class idmp-sub:Material ;
-    sh:minCount 1 ;
-    sh:path cmns-doc:specifies .
-
 idmp-sub:someValuesFromissuesGS1CompanyPrefixPropertyShape a sh:PropertyShape ;
     sh:class cmns-prd:GS1CompanyPrefix ;
     sh:minCount 1 ;
     sh:path cmns-prd:issues .
 
-idmp-sub:someValuesFromissuesGS1CompanyPrefixPropertyShapeInverse sh:class cmns-rga:RegulatoryAgency ;
+idmp-sub:someValuesFromproducesGoodPropertyShape a sh:PropertyShape ;
+    sh:class cmns-prd:Good ;
     sh:minCount 1 ;
-    sh:path cmns-prd:isIssuedBy .
+    sh:path cmns-prd:produces .
 
-idmp-sub:someValuesFromissuesLicensePropertyShape a sh:PropertyShape ;
-    sh:class cmns-rga:License ;
+idmp-sub:someValuesFromprovidesRegistrationServicePropertyShape a sh:PropertyShape ;
+    sh:class cmns-ra:RegistrationService ;
     sh:minCount 1 ;
-    sh:path cmns-prd:issues .
-
-idmp-sub:someValuesFromissuesLicensePropertyShapeInverse sh:class cmns-rga:RegulatoryAgency ;
-    sh:minCount 1 ;
-    sh:path cmns-prd:isIssuedBy .
+    sh:path cmns-prd:provides .
 
 idmp-sub:someValuesFromspecializesSubstancePropertyShape a sh:PropertyShape ;
     sh:class idmp-sub:Substance ;
@@ -1266,6 +865,11 @@ idmp-sub:someValuesFromspecifiesAnalysisPropertyShape a sh:PropertyShape ;
 
 idmp-sub:someValuesFromspecifiesMaterialPropertyShape a sh:PropertyShape ;
     sh:class idmp-sub:Material ;
+    sh:minCount 1 ;
+    sh:path cmns-doc:specifies .
+
+idmp-sub:someValuesFromspecifiesModificationPropertyShape a sh:PropertyShape ;
+    sh:class idmp-sub:Modification ;
     sh:minCount 1 ;
     sh:path cmns-doc:specifies .
 
@@ -1284,242 +888,322 @@ idmp-sub:someValuesFromundergoesRadioactiveDecayPropertyShape a sh:PropertyShape
     sh:minCount 1 ;
     sh:path cmns-pts:undergoes .
 
-idmp-sub:someValuesFromclassifiesMaterialPropertyShape a sh:PropertyShape ;
-    sh:class idmp-sub:Material ;
-    sh:minCount 1 ;
-    sh:path cmns-cls:classifies .
+idmp-uom:CodeSystemIdentifierNodeShape a sh:NodeShape ;
+    sh:targetClass idmp-uom:CodeSystemIdentifier .
 
-idmp-sub:someValuesFromcompliesWithUnitOfMeasureIdentificationSchemePropertyShape a sh:PropertyShape ;
-    sh:class idmp-uom:UnitOfMeasureIdentificationScheme ;
-    sh:minCount 1 ;
-    sh:path cmns-col:compliesWith .
+idmp-uom:ISO11240LexiconCodeEntryNodeShape a sh:NodeShape ;
+    sh:or ( idmp-sub:someValuesFromidentifiesMeasurementUnitPropertyShape idmp-sub:someValuesFrominverseOfisIdentifiedByUnitOfMeasureIdentifierPropertyShape ) ;
+    sh:targetClass idmp-uom:ISO11240LexiconCodeEntry .
 
-idmp-sub:someValuesFromhasPartyRoleLicenseePropertyShape a sh:PropertyShape ;
-    sh:class cmns-rga:Licensee ;
-    sh:minCount 1 ;
-    sh:path cmns-pts:hasPartyRole .
+idmp-uom:UnitOfMeasureIdentifierNodeShape a sh:NodeShape ;
+    sh:or ( idmp-sub:someValuesFromidentifiesMeasurementUnitPropertyShape idmp-sub:someValuesFrominverseOfisIdentifiedByUnitOfMeasureIdentifierPropertyShape ) ;
+    sh:targetClass idmp-uom:UnitOfMeasureIdentifier .
 
-idmp-sub:someValuesFromhasSubjectRoleRolePropertyShape a sh:PropertyShape ;
-    sh:class cmns-pts:Role ;
+idmp-uom:UnitOfPresentationNodeShape a sh:NodeShape ;
+    sh:or ( idmp-sub:someValuesFromisIdentifiedByUnitOfMeasureIdentifierPropertyShape idmp-sub:someValuesFrominverseOfidentifiesMeasurementUnitPropertyShape ) ;
+    sh:targetClass idmp-uom:UnitOfPresentation .
+
+idmp-dtp:CodingRationaleNodeShape a sh:NodeShape ;
+    sh:targetClass idmp-dtp:CodingRationale .
+
+idmp-dtp:CompressionAlgorithmNodeShape a sh:NodeShape ;
+    sh:targetClass idmp-dtp:CompressionAlgorithm .
+
+idmp-dtp:DatatypeFlavorNodeShape a sh:NodeShape ;
+    sh:targetClass idmp-dtp:DatatypeFlavor .
+
+idmp-dtp:ISO21090-BooleanNonNullDatatypeNodeShape a sh:NodeShape ;
+    sh:targetClass idmp-dtp:ISO21090-BooleanNonNullDatatype .
+
+idmp-dtp:ISO21090-ConceptDescriptorNodeShape a sh:NodeShape ;
+    sh:targetClass idmp-dtp:ISO21090-ConceptDescriptor .
+
+idmp-dtp:ISO21090-EntityNameNodeShape a sh:NodeShape ;
+    sh:targetClass idmp-dtp:ISO21090-EntityName .
+
+idmp-dtp:IntegrityCheckAlgorithmNodeShape a sh:NodeShape ;
+    sh:targetClass idmp-dtp:IntegrityCheckAlgorithm .
+
+idmp-dtp:NullFlavorNodeShape a sh:NodeShape ;
+    sh:targetClass idmp-dtp:NullFlavor .
+
+idmp-dtp:UpdateModeNodeShape a sh:NodeShape ;
+    sh:targetClass idmp-dtp:UpdateMode .
+
+idmp-dtp:ValueDomainIdentifierNodeShape a sh:NodeShape ;
+    sh:targetClass idmp-dtp:ValueDomainIdentifier .
+
+cmns-cds:CodeElementNodeShape a sh:NodeShape ;
+    sh:targetClass cmns-cds:CodeElement .
+
+cmns-cxtdsg:ContextualNameNodeShape a sh:NodeShape ;
+    sh:targetClass cmns-cxtdsg:ContextualName .
+
+cmns-doc:ReportNodeShape a sh:NodeShape ;
+    sh:targetClass cmns-doc:Report .
+
+cmns-doc:ReportingPartyNodeShape a sh:NodeShape ;
+    sh:targetClass cmns-doc:ReportingParty .
+
+cmns-loc:CountyNodeShape a sh:NodeShape ;
+    sh:targetClass cmns-loc:County .
+
+cmns-loc:FederalStateNodeShape a sh:NodeShape ;
+    sh:targetClass cmns-loc:FederalState .
+
+cmns-pts:SituationNodeShape a sh:NodeShape ;
+    sh:targetClass cmns-pts:Situation .
+
+cmns-prd:GS1CompanyPrefixIssuerNodeShape a sh:NodeShape ;
+    sh:or ( idmp-sub:someValuesFromprovidesServicePropertyShape idmp-sub:someValuesFrominverseOfisProvidedByServiceProviderPropertyShape ) ;
+    sh:targetClass cmns-prd:GS1CompanyPrefixIssuer .
+
+cmns-prd:GS1UserNodeShape a sh:NodeShape ;
+    sh:targetClass cmns-prd:GS1User .
+
+cmns-prd:GlobalTradeItemNumberNodeShape a sh:NodeShape ;
+    sh:targetClass cmns-prd:GlobalTradeItemNumber .
+
+cmns-prd:ProducerNodeShape a sh:NodeShape ;
+    sh:targetClass cmns-prd:Producer .
+
+cmns-prd:ServiceNodeShape a sh:NodeShape ;
+    sh:or ( idmp-sub:someValuesFromisProvidedByServiceProviderPropertyShape idmp-sub:someValuesFrominverseOfprovidesServicePropertyShape ) ;
+    sh:targetClass cmns-prd:Service .
+
+cmns-prd:ServiceProviderNodeShape a sh:NodeShape ;
+    sh:or ( idmp-sub:someValuesFromprovidesServicePropertyShape idmp-sub:someValuesFrominverseOfisProvidedByServiceProviderPropertyShape ) ;
+    sh:targetClass cmns-prd:ServiceProvider .
+
+cmns-prd:StockKeepingUnitNodeShape a sh:NodeShape ;
+    sh:targetClass cmns-prd:StockKeepingUnit .
+
+cmns-prd:UniformProductCodeNodeShape a sh:NodeShape ;
+    sh:targetClass cmns-prd:UniformProductCode .
+
+cmns-qtu:ArbitraryUnitNodeShape a sh:NodeShape ;
+    sh:or ( idmp-sub:someValuesFromisIdentifiedByUnitOfMeasureIdentifierPropertyShape idmp-sub:someValuesFrominverseOfidentifiesMeasurementUnitPropertyShape ) ;
+    sh:targetClass cmns-qtu:ArbitraryUnit .
+
+cmns-qtu:BaseUnitNodeShape a sh:NodeShape ;
+    sh:or ( idmp-sub:someValuesFromisIdentifiedByUnitOfMeasureIdentifierPropertyShape idmp-sub:someValuesFrominverseOfidentifiesMeasurementUnitPropertyShape ) ;
+    sh:targetClass cmns-qtu:BaseUnit .
+
+cmns-qtu:CoherentDerivedUnitNodeShape a sh:NodeShape ;
+    sh:or ( idmp-sub:someValuesFromisIdentifiedByUnitOfMeasureIdentifierPropertyShape idmp-sub:someValuesFrominverseOfidentifiesMeasurementUnitPropertyShape ) ;
+    sh:targetClass cmns-qtu:CoherentDerivedUnit .
+
+cmns-qtu:ConstantNodeShape a sh:NodeShape ;
+    sh:targetClass cmns-qtu:Constant .
+
+cmns-qtu:ConversionBasedUnitNodeShape a sh:NodeShape ;
+    sh:or ( idmp-sub:someValuesFromisIdentifiedByUnitOfMeasureIdentifierPropertyShape idmp-sub:someValuesFrominverseOfidentifiesMeasurementUnitPropertyShape ) ;
+    sh:targetClass cmns-qtu:ConversionBasedUnit .
+
+cmns-qtu:DerivedQuantityKindNodeShape a sh:NodeShape ;
+    sh:targetClass cmns-qtu:DerivedQuantityKind .
+
+cmns-qtu:DerivedUnitNodeShape a sh:NodeShape ;
+    sh:or ( idmp-sub:someValuesFromisIdentifiedByUnitOfMeasureIdentifierPropertyShape idmp-sub:someValuesFrominverseOfidentifiesMeasurementUnitPropertyShape ) ;
+    sh:targetClass cmns-qtu:DerivedUnit .
+
+cmns-qtu:IntervalScaleNodeShape a sh:NodeShape ;
+    sh:targetClass cmns-qtu:IntervalScale .
+
+cmns-qtu:LogarithmicScaleNodeShape a sh:NodeShape ;
+    sh:targetClass cmns-qtu:LogarithmicScale .
+
+cmns-qtu:MeasurementScaleNodeShape a sh:NodeShape ;
+    sh:targetClass cmns-qtu:MeasurementScale .
+
+cmns-qtu:MeasurementUnitNodeShape a sh:NodeShape ;
+    sh:or ( idmp-sub:someValuesFromisIdentifiedByUnitOfMeasureIdentifierPropertyShape idmp-sub:someValuesFrominverseOfidentifiesMeasurementUnitPropertyShape ) ;
+    sh:targetClass cmns-qtu:MeasurementUnit .
+
+cmns-qtu:NominalScaleNodeShape a sh:NodeShape ;
+    sh:targetClass cmns-qtu:NominalScale .
+
+cmns-qtu:OrdinalScaleNodeShape a sh:NodeShape ;
+    sh:targetClass cmns-qtu:OrdinalScale .
+
+cmns-qtu:PhysicalUnitNodeShape a sh:NodeShape ;
+    sh:or ( idmp-sub:someValuesFromisIdentifiedByUnitOfMeasureIdentifierPropertyShape idmp-sub:someValuesFrominverseOfidentifiesMeasurementUnitPropertyShape ) ;
+    sh:targetClass cmns-qtu:PhysicalUnit .
+
+cmns-qtu:PrefixedUnitNodeShape a sh:NodeShape ;
+    sh:or ( idmp-sub:someValuesFromisIdentifiedByUnitOfMeasureIdentifierPropertyShape idmp-sub:someValuesFrominverseOfidentifiesMeasurementUnitPropertyShape ) ;
+    sh:targetClass cmns-qtu:PrefixedUnit .
+
+cmns-qtu:QuantityKindPowerFactorNodeShape a sh:NodeShape ;
+    sh:targetClass cmns-qtu:QuantityKindPowerFactor .
+
+cmns-qtu:QuantityNameNodeShape a sh:NodeShape ;
+    sh:targetClass cmns-qtu:QuantityName .
+
+cmns-qtu:QuantityNodeShape a sh:NodeShape ;
+    sh:targetClass cmns-qtu:Quantity .
+
+cmns-qtu:QuantityValueNodeShape a sh:NodeShape ;
+    sh:targetClass cmns-qtu:QuantityValue .
+
+cmns-qtu:RatioScaleNodeShape a sh:NodeShape ;
+    sh:targetClass cmns-qtu:RatioScale .
+
+cmns-qtu:SystemOfQuantitiesNodeShape a sh:NodeShape ;
+    sh:targetClass cmns-qtu:SystemOfQuantities .
+
+cmns-qtu:SystemOfUnitsNodeShape a sh:NodeShape ;
+    sh:targetClass cmns-qtu:SystemOfUnits .
+
+cmns-qtu:VariableNodeShape a sh:NodeShape ;
+    sh:targetClass cmns-qtu:Variable .
+
+cmns-ra:RegisteredIdentifierNodeShape a sh:NodeShape ;
+    sh:targetClass cmns-ra:RegisteredIdentifier .
+
+cmns-ra:RegistrarNodeShape a sh:NodeShape ;
+    sh:or ( idmp-sub:someValuesFromprovidesServicePropertyShape idmp-sub:someValuesFrominverseOfisProvidedByServiceProviderPropertyShape ) ;
+    sh:targetClass cmns-ra:Registrar .
+
+cmns-ra:RegistrationAuthorityNodeShape a sh:NodeShape ;
+    sh:or ( idmp-sub:someValuesFromprovidesServicePropertyShape idmp-sub:someValuesFrominverseOfisProvidedByServiceProviderPropertyShape ) ;
+    sh:targetClass cmns-ra:RegistrationAuthority .
+
+cmns-ra:RegistrationServiceNodeShape a sh:NodeShape ;
+    sh:or ( idmp-sub:someValuesFromisProvidedByServiceProviderPropertyShape idmp-sub:someValuesFrominverseOfprovidesServicePropertyShape ) ;
+    sh:targetClass cmns-ra:RegistrationService .
+
+cmns-ra:RegistryEntryNodeShape a sh:NodeShape ;
+    sh:targetClass cmns-ra:RegistryEntry .
+
+cmns-rga:GovernmentIssuedLicenseNodeShape a sh:NodeShape ;
+    sh:or ( idmp-sub:someValuesFromisIssuedByLicensorPropertyShape idmp-sub:someValuesFrominverseOfissuesLicensePropertyShape ) ;
+    sh:targetClass cmns-rga:GovernmentIssuedLicense .
+
+cmns-rga:JurisdictionNodeShape a sh:NodeShape ;
+    sh:targetClass cmns-rga:Jurisdiction .
+
+cmns-rga:LicenseNodeShape a sh:NodeShape ;
+    sh:or ( idmp-sub:someValuesFromisIssuedByLicensorPropertyShape idmp-sub:someValuesFrominverseOfissuesLicensePropertyShape ) ;
+    sh:targetClass cmns-rga:License .
+
+cmns-rga:LicensorNodeShape a sh:NodeShape ;
+    sh:or ( idmp-sub:someValuesFromissuesLicensePropertyShape idmp-sub:someValuesFrominverseOfisIssuedByLicensorPropertyShape ) ;
+    sh:targetClass cmns-rga:Licensor .
+
+cmns-rga:RegulatoryAgencyNodeShape a sh:NodeShape ;
+    sh:or ( idmp-sub:someValuesFromprovidesServicePropertyShape idmp-sub:someValuesFrominverseOfisProvidedByServiceProviderPropertyShape ) ;
+    sh:targetClass cmns-rga:RegulatoryAgency .
+
+cmns-rga:RegulatoryReportNodeShape a sh:NodeShape ;
+    sh:targetClass cmns-rga:RegulatoryReport .
+
+cmns-rga:RegulatoryServiceNodeShape a sh:NodeShape ;
+    sh:or ( idmp-sub:someValuesFromisProvidedByServiceProviderPropertyShape idmp-sub:someValuesFrominverseOfprovidesServicePropertyShape ) ;
+    sh:targetClass cmns-rga:RegulatoryService .
+
+lcc-cr:Alpha2CodeNodeShape a sh:NodeShape ;
+    sh:targetClass lcc-cr:Alpha2Code .
+
+lcc-cr:Alpha3CodeNodeShape a sh:NodeShape ;
+    sh:targetClass lcc-cr:Alpha3Code .
+
+lcc-cr:CountrySubdivisionNodeShape a sh:NodeShape ;
+    sh:targetClass lcc-cr:CountrySubdivision .
+
+lcc-cr:GeographicRegionIdentifierNodeShape a sh:NodeShape ;
+    sh:targetClass lcc-cr:GeographicRegionIdentifier .
+
+lcc-lr:Alpha2CodeNodeShape a sh:NodeShape ;
+    sh:targetClass lcc-lr:Alpha2Code .
+
+lcc-lr:Alpha3CodeNodeShape a sh:NodeShape ;
+    sh:targetClass lcc-lr:Alpha3Code .
+
+lcc-lr:BibliographicCodeNodeShape a sh:NodeShape ;
+    sh:targetClass lcc-lr:BibliographicCode .
+
+lcc-lr:CollectiveLanguageCodeNodeShape a sh:NodeShape ;
+    sh:targetClass lcc-lr:CollectiveLanguageCode .
+
+lcc-lr:IdentifierNodeShape a sh:NodeShape ;
+    sh:targetClass lcc-lr:Identifier .
+
+lcc-lr:IndividualLanguageIdentifierNodeShape a sh:NodeShape ;
+    sh:targetClass lcc-lr:IndividualLanguageIdentifier .
+
+lcc-lr:LanguageIdentifierNodeShape a sh:NodeShape ;
+    sh:targetClass lcc-lr:LanguageIdentifier .
+
+lcc-lr:MacrolanguageIdentifierNodeShape a sh:NodeShape ;
+    sh:targetClass lcc-lr:MacrolanguageIdentifier .
+
+lcc-lr:SpecialPurposeCodeNodeShape a sh:NodeShape ;
+    sh:targetClass lcc-lr:SpecialPurposeCode .
+
+lcc-lr:TerminologyCodeNodeShape a sh:NodeShape ;
+    sh:targetClass lcc-lr:TerminologyCode .
+
+lcc-lr:WritingSystemNodeShape a sh:NodeShape ;
+    sh:targetClass lcc-lr:WritingSystem .
+
+idmp-sub:someValuesFrominverseOfisIssuedByLicensorPropertyShape a sh:PropertyShape ;
+    sh:class cmns-rga:License ;
     sh:minCount 1 ;
-    sh:path cmns-pts:hasSubjectRole .
+    sh:path [ sh:inversePath cmns-prd:isIssuedBy ] .
+
+idmp-sub:someValuesFromissuesLicensePropertyShape a sh:PropertyShape ;
+    sh:class cmns-rga:License ;
+    sh:minCount 1 ;
+    sh:path cmns-prd:issues .
 
 idmp-sub:someValuesFromidentifiesMeasurementUnitPropertyShape a sh:PropertyShape ;
     sh:class cmns-qtu:MeasurementUnit ;
     sh:minCount 1 ;
     sh:path cmns-id:identifies .
 
-idmp-sub:someValuesFromisApplicableInJurisdictionGeographicRegionIdentifierPropertyShape a sh:PropertyShape ;
-    sh:class lcc-cr:GeographicRegionIdentifier ;
+idmp-sub:someValuesFrominverseOfisIdentifiedByUnitOfMeasureIdentifierPropertyShape a sh:PropertyShape ;
+    sh:class cmns-qtu:MeasurementUnit ;
     sh:minCount 1 ;
-    sh:path cmns-rga:isApplicableInJurisdiction .
+    sh:path [ sh:inversePath cmns-id:isIdentifiedBy ] .
+
+idmp-sub:someValuesFrominverseOfissuesLicensePropertyShape a sh:PropertyShape ;
+    sh:class cmns-rga:Licensor ;
+    sh:minCount 1 ;
+    sh:path [ sh:inversePath cmns-prd:issues ] .
 
 idmp-sub:someValuesFromisIssuedByLicensorPropertyShape a sh:PropertyShape ;
     sh:class cmns-rga:Licensor ;
     sh:minCount 1 ;
     sh:path cmns-prd:isIssuedBy .
 
-idmp-sub:someValuesFromisManifestedInModificationPropertyShape a sh:PropertyShape ;
-    sh:class idmp-sub:Modification ;
+idmp-sub:someValuesFrominverseOfprovidesServicePropertyShape a sh:PropertyShape ;
+    sh:class cmns-prd:ServiceProvider ;
     sh:minCount 1 ;
-    sh:path cmns-pts:isManifestedIn .
-
-idmp-sub:someValuesFromisNameOfGenePropertyShape a sh:PropertyShape ;
-    sh:class idmp-sub:Gene ;
-    sh:minCount 1 ;
-    sh:path cmns-dsg:isNameOf .
-
-idmp-sub:someValuesFromisProducedByManufacturerPropertyShape a sh:PropertyShape ;
-    sh:class idmp-sub:Manufacturer ;
-    sh:minCount 1 ;
-    sh:path cmns-prd:isProducedBy .
-
-idmp-sub:someValuesFromisProducedByManufacturerPropertyShapeInverse sh:class cmns-prd:Good ;
-    sh:minCount 1 ;
-    sh:path cmns-prd:produces .
-
-idmp-sub:someValuesFromisReportedByReportingPartyPropertyShape a sh:PropertyShape ;
-    sh:class cmns-doc:ReportingParty ;
-    sh:minCount 1 ;
-    sh:path cmns-doc:isReportedBy .
-
-idmp-sub:someValuesFromisReportedToPartyRolePropertyShape a sh:PropertyShape ;
-    sh:class cmns-pts:PartyRole ;
-    sh:minCount 1 ;
-    sh:path cmns-doc:isReportedTo .
-
-idmp-sub:someValuesFromproducesGoodPropertyShape a sh:PropertyShape ;
-    sh:class cmns-prd:Good ;
-    sh:minCount 1 ;
-    sh:path cmns-prd:produces .
-
-idmp-sub:someValuesFromclassifiesTradeItemPropertyShape a sh:PropertyShape ;
-    sh:class cmns-prd:TradeItem ;
-    sh:minCount 1 ;
-    sh:path cmns-cls:classifies .
-
-idmp-sub:someValuesFromdefinesSubstancePropertyShape a sh:PropertyShape ;
-    sh:class idmp-sub:Substance ;
-    sh:minCount 1 ;
-    sh:path cmns-dsg:defines .
-
-idmp-sub:someValuesFromdefinesSubstancePropertyShapeInverse sh:class cmns-qtu:SystemOfUnits ;
-    sh:minCount 1 ;
-    sh:path cmns-dsg:isDefinedIn .
-
-idmp-sub:someValuesFromdenotesTradeItemPropertyShape a sh:PropertyShape ;
-    sh:class cmns-prd:TradeItem ;
-    sh:minCount 1 ;
-    sh:path cmns-dsg:denotes .
-
-idmp-sub:someValuesFromhasDefiningStructureMolecularStructurePropertyShape a sh:PropertyShape ;
-    sh:class idmp-sub:MolecularStructure ;
-    sh:minCount 1 ;
-    sh:path idmp-sub:hasDefiningStructure .
-
-idmp-sub:someValuesFromhasGranularMolecularPartMolecularEntityPropertyShape a sh:PropertyShape ;
-    sh:class idmp-sub:MolecularEntity ;
-    sh:minCount 1 ;
-    sh:path idmp-sub:hasGranularMolecularPart .
-
-idmp-sub:someValuesFromhasLanguageCodeLanguageIdentifierPropertyShape a sh:PropertyShape ;
-    sh:class lcc-lr:LanguageIdentifier ;
-    sh:minCount 1 ;
-    sh:path idmp-dtp:hasLanguageCode .
-
-idmp-sub:someValuesFromisApplicableInRegulatoryContextPropertyShape a sh:PropertyShape ;
-    sh:class idmp-sub:RegulatoryContext ;
-    sh:minCount 1 ;
-    sh:path cmns-cxtdsg:isApplicableIn .
-
-idmp-sub:someValuesFromisClassifiedByGeographicRegionKindPropertyShape a sh:PropertyShape ;
-    sh:class lcc-cr:GeographicRegionKind ;
-    sh:minCount 1 ;
-    sh:path lcc-cr:isClassifiedBy .
-
-idmp-sub:someValuesFromisConstituentOfMolecularCompositionPropertyShape a sh:PropertyShape ;
-    sh:class idmp-sub:MolecularComposition ;
-    sh:minCount 1 ;
-    sh:path cmns-col:isConstituentOf .
+    sh:path [ sh:inversePath cmns-prd:provides ] .
 
 idmp-sub:someValuesFromisProvidedByServiceProviderPropertyShape a sh:PropertyShape ;
     sh:class cmns-prd:ServiceProvider ;
     sh:minCount 1 ;
     sh:path cmns-prd:isProvidedBy .
 
-idmp-sub:someValuesFromisProvidedByServiceProviderPropertyShapeInverse sh:class cmns-prd:Service ;
+idmp-sub:someValuesFrominverseOfisProvidedByServiceProviderPropertyShape a sh:PropertyShape ;
+    sh:class cmns-prd:Service ;
     sh:minCount 1 ;
-    sh:path cmns-prd:provides .
-
-idmp-sub:someValuesFromhasTextValuestringPropertyShape a sh:PropertyShape ;
-    sh:datatype xsd:string ;
-    sh:minCount 1 ;
-    sh:path cmns-txt:hasTextValue .
-
-idmp-sub:someValuesFromisDerivedFromBaseUnitPropertyShape a sh:PropertyShape ;
-    sh:class cmns-qtu:BaseUnit ;
-    sh:minCount 1 ;
-    sh:path cmns-qtu:isDerivedFrom .
-
-idmp-sub:someValuesFromspecifiesModificationPropertyShape a sh:PropertyShape ;
-    sh:class idmp-sub:Modification ;
-    sh:minCount 1 ;
-    sh:path cmns-doc:specifies .
-
-idmp-sub:someValuesFromhasMeasurementUnitMeasurementUnitPropertyShape a sh:PropertyShape ;
-    sh:class cmns-qtu:MeasurementUnit ;
-    sh:minCount 1 ;
-    sh:path cmns-qtu:hasMeasurementUnit .
-
-idmp-sub:someValuesFromhasMemberAspectPropertyShape a sh:PropertyShape ;
-    sh:class cmns-cls:Aspect ;
-    sh:minCount 1 ;
-    sh:path cmns-col:hasMember .
-
-idmp-sub:someValuesFromisIncludedInSpecifiedSubstancePropertyShape a sh:PropertyShape ;
-    sh:class idmp-sub:SpecifiedSubstance ;
-    sh:minCount 1 ;
-    sh:path cmns-col:isIncludedIn .
-
-idmp-sub:someValuesFromisIncludedInSpecifiedSubstancePropertyShapeInverse sh:class idmp-sub:Atom ;
-    sh:minCount 1 ;
-    sh:path cmns-col:comprises .
-
-idmp-sub:someValuesFromisPlayedByMaterialPropertyShape a sh:PropertyShape ;
-    sh:class idmp-sub:Material ;
-    sh:minCount 1 ;
-    sh:path cmns-pts:isPlayedBy .
-
-idmp-sub:someValuesFromisRegisteredInRegistryPropertyShape a sh:PropertyShape ;
-    sh:class cmns-ra:Registry ;
-    sh:minCount 1 ;
-    sh:path cmns-ra:isRegisteredIn .
+    sh:path [ sh:inversePath cmns-prd:isProvidedBy ] .
 
 idmp-sub:someValuesFromprovidesServicePropertyShape a sh:PropertyShape ;
     sh:class cmns-prd:Service ;
     sh:minCount 1 ;
     sh:path cmns-prd:provides .
 
-idmp-sub:someValuesFromclassifiesMeasurementUnitPropertyShape a sh:PropertyShape ;
-    sh:class cmns-qtu:MeasurementUnit ;
+idmp-sub:someValuesFrominverseOfidentifiesMeasurementUnitPropertyShape a sh:PropertyShape ;
+    sh:class idmp-uom:UnitOfMeasureIdentifier ;
     sh:minCount 1 ;
-    sh:path cmns-cls:classifies .
-
-idmp-sub:someValuesFromhasLevelInHierarchynonNegativeIntegerPropertyShape a sh:PropertyShape ;
-    sh:datatype xsd:nonNegativeInteger ;
-    sh:minCount 1 ;
-    sh:path idmp-dtp:hasLevelInHierarchy .
-
-idmp-sub:someValuesFromisDefinedInSystemOfUnitsPropertyShape a sh:PropertyShape ;
-    sh:class cmns-qtu:SystemOfUnits ;
-    sh:minCount 1 ;
-    sh:path cmns-dsg:isDefinedIn .
+    sh:path [ sh:inversePath cmns-id:identifies ] .
 
 idmp-sub:someValuesFromisIdentifiedByUnitOfMeasureIdentifierPropertyShape a sh:PropertyShape ;
     sh:class idmp-uom:UnitOfMeasureIdentifier ;
     sh:minCount 1 ;
     sh:path cmns-id:isIdentifiedBy .
-
-idmp-sub:someValuesFromisIdentifiedByUnitOfMeasureIdentifierPropertyShapeInverse sh:class idmp-sub:MolecularGraph ;
-    sh:minCount 1 ;
-    sh:path cmns-id:identifies .
-
-idmp-sub:someValuesFromhasQuantityKindQuantityKindPropertyShape a sh:PropertyShape ;
-    sh:class cmns-qtu:QuantityKind ;
-    sh:minCount 1 ;
-    sh:path cmns-qtu:hasQuantityKind .
-
-idmp-sub:someValuesFromhasTagstringPropertyShape a sh:PropertyShape ;
-    sh:datatype xsd:string ;
-    sh:minCount 1 ;
-    sh:path lcc-lr:hasTag .
-
-idmp-sub:someValuesFromisApplicableInContextPropertyShape a sh:PropertyShape ;
-    sh:class cmns-cxtdsg:Context ;
-    sh:minCount 1 ;
-    sh:path cmns-cxtdsg:isApplicableIn .
-
-idmp-sub:someValuesFromisPlayedBySubstancePropertyShape a sh:PropertyShape ;
-    sh:class idmp-sub:Substance ;
-    sh:minCount 1 ;
-    sh:path cmns-pts:isPlayedBy .
-
-idmp-sub:someValuesFromhasSubstanceNameSubstanceNamePropertyShape a sh:PropertyShape ;
-    sh:class idmp-sub:SubstanceName ;
-    sh:minCount 1 ;
-    sh:path idmp-sub:hasSubstanceName .
-
-idmp-sub:someValuesFromhasSubstanceTypeSubstanceTypeClassifierPropertyShape a sh:PropertyShape ;
-    sh:class idmp-sub:SubstanceTypeClassifier ;
-    sh:minCount 1 ;
-    sh:path idmp-sub:hasSubstanceType .
-
-idmp-sub:someValuesFromisMemberOfCodeSetPropertyShape a sh:PropertyShape ;
-    sh:class cmns-cds:CodeSet ;
-    sh:minCount 1 ;
-    sh:path cmns-col:isMemberOf .
-
-idmp-sub:someValuesFromisMemberOfCodeSetPropertyShapeInverse sh:class cmns-cls:Aspect ;
-    sh:minCount 1 ;
-    sh:path cmns-col:hasMember .
 
