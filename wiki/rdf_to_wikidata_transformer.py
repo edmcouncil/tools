@@ -376,7 +376,7 @@ def get_wiki_datatype_for_property(property: URIRef, scope: TransformationScope)
         for super_property in super_properties:
             property_ranges = property_ranges.union(set(scope.graph.objects(subject=super_property, predicate=RDFS.range)))
             
-    wiki_datatype = try_to_get_wiki_datatype_from_rdf_types(rdf_types=property_ranges)
+    wiki_datatype = try_to_get_wiki_datatype_from_rdf_types(rdf_types=property_ranges, scope=scope)
     if len(wiki_datatype) > 0:
         return wiki_datatype
     
@@ -384,17 +384,20 @@ def get_wiki_datatype_for_property(property: URIRef, scope: TransformationScope)
     for property_range in property_ranges:
         property_range_types = property_range_types.union(set(scope.graph.objects(subject=property_range, predicate=RDF.type)))
     
-    wiki_datatype = try_to_get_wiki_datatype_from_rdf_types(rdf_types=property_range_types)
+    wiki_datatype = try_to_get_wiki_datatype_from_rdf_types(rdf_types=property_range_types, scope=scope)
     if len(wiki_datatype) > 0:
         return wiki_datatype
     
     if property in scope.object_properties:
         return WIKIBASE_ITEM_TYPE
+    
+    if len(property_ranges.intersection(scope.datatypes)) > 0:
+        return WIKIBASE_ITEM_TYPE
 
     return WIKIBASE_STRING_TYPE
 
 
-def try_to_get_wiki_datatype_from_rdf_types(rdf_types: set) -> str:
+def try_to_get_wiki_datatype_from_rdf_types(rdf_types: set, scope: TransformationScope) -> str:
     wiki_datatype_candidates = set()
     for property_range in rdf_types:
         if property_range in scope.config.rdf_types_to_wiki_datatypes_map:
@@ -439,8 +442,8 @@ def process_owl_restriction(owl_restriction: Node, scope: TransformationScope):
     restricting_resource = None
     is_optional_restriction = False
     if len(onClass_classes) == 1:
-        if restricting_cardinality:
-            if restricting_cardinality == 0:
+        if restricting_cardinality is not None:
+            if restricting_cardinality.value == 0:
                 is_optional_restriction = True
             restricting_resource = onClass_classes[0]
     if len(someValuesFrom_classes) == 1:
@@ -449,7 +452,7 @@ def process_owl_restriction(owl_restriction: Node, scope: TransformationScope):
         restricting_resource = hasValue_classes[0]
 
     if not isinstance(restricting_resource, URIRef):
-        logging.info(msg='Ignoring an OWL restriction because its restricting class is not an IRI.')
+        logging.info(msg='Ignoring an OWL restriction because its restricting class is not an IRI in scope.')
         return
     if restricting_resource not in scope.rdf_to_wiki_map:
         logging.warning(msg='I could not process an OWL restriction because is restricting class is not found in wiki.')
@@ -619,6 +622,9 @@ def collect_all_rdf_resources(config: TransformationConfiguration, graph_iri: st
         
     return scope
 
+def process_needed_resources(scope: TransformationScope):
+    for datatype in scope.datatypes:
+        get_or_create_wiki_from_resource(resource=datatype,scope=scope)
 
 def process_all_rdf_triples(scope: TransformationScope):
     logging.info(msg="Converting ontology's triples to wikidata")
@@ -661,6 +667,7 @@ if __name__ == "__main__":
         establish_wiki_connection(config)
         add_wiki_infrastructure_properties(config=config)
     scope = collect_all_rdf_resources(config=config, graph_iri='ontohgis.ttl')
+    process_needed_resources(scope=scope)
     process_all_rdf_triples(scope=scope)
     process_all_owl_restrictions(scope=scope)
     

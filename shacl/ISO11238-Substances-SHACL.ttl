@@ -1,0 +1,313 @@
+@prefix cmns-doc: <https://www.omg.org/spec/Commons/Documents/> .
+@prefix cmns-id: <https://www.omg.org/spec/Commons/Identifiers/> .
+@prefix cmns-prd: <https://www.omg.org/spec/Commons/ProductsAndServices/> .
+@prefix cmns-pts: <https://www.omg.org/spec/Commons/PartiesAndSituations/> .
+@prefix idmp-sub: <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/> .
+@prefix iso11238-s-shacl: <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances-SHACL/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+iso11238-s-shacl:AcidNodeShape a sh:NodeShape ;
+    sh:targetClass idmp-sub:Acid .
+
+iso11238-s-shacl:ActiveIngredientNodeShape a sh:NodeShape ;
+    sh:targetClass idmp-sub:ActiveIngredient .
+
+iso11238-s-shacl:AdditiveIngredientNodeShape a sh:NodeShape ;
+    sh:targetClass idmp-sub:AdditiveIngredient .
+
+iso11238-s-shacl:AdjuvantNodeShape a sh:NodeShape ;
+    sh:targetClass idmp-sub:Adjuvant .
+
+iso11238-s-shacl:AgentModificationMethodNodeShape a sh:NodeShape ;
+    sh:targetClass idmp-sub:AgentModificationMethod .
+
+iso11238-s-shacl:AnalyticalMethodNodeShape a sh:NodeShape ;
+    sh:targetClass idmp-sub:AnalyticalMethod .
+
+iso11238-s-shacl:BaseIngredientNodeShape a sh:NodeShape ;
+    sh:targetClass idmp-sub:BaseIngredient .
+
+iso11238-s-shacl:BaseNodeShape a sh:NodeShape ;
+    sh:targetClass idmp-sub:Base .
+
+iso11238-s-shacl:ChemicalElementNodeShape a sh:NodeShape ;
+    sh:targetClass idmp-sub:ChemicalElement .
+
+iso11238-s-shacl:ChemicalSubstanceNodeShape a sh:NodeShape ;
+    sh:targetClass idmp-sub:ChemicalSubstance .
+
+iso11238-s-shacl:ColorIngredientNodeShape a sh:NodeShape ;
+    sh:targetClass idmp-sub:ColorIngredient .
+
+iso11238-s-shacl:ContaminantIngredientNodeShape a sh:NodeShape ;
+    sh:targetClass idmp-sub:ContaminantIngredient .
+
+iso11238-s-shacl:EsterNodeShape a sh:NodeShape ;
+    sh:targetClass idmp-sub:Ester .
+
+iso11238-s-shacl:ExcipientNodeShape a sh:NodeShape ;
+    sh:targetClass idmp-sub:Excipient .
+
+iso11238-s-shacl:FlavorIngredientNodeShape a sh:NodeShape ;
+    sh:targetClass idmp-sub:FlavorIngredient .
+
+iso11238-s-shacl:GeneElementTypeNodeShape a sh:NodeShape ;
+    sh:targetClass idmp-sub:GeneElementType .
+
+iso11238-s-shacl:HydrateNodeShape a sh:NodeShape ;
+    sh:targetClass idmp-sub:Hydrate .
+
+iso11238-s-shacl:InactiveIngredientNodeShape a sh:NodeShape ;
+    sh:targetClass idmp-sub:InactiveIngredient .
+
+iso11238-s-shacl:IsotopeNodeShape a sh:NodeShape ;
+    sh:targetClass idmp-sub:Isotope .
+
+iso11238-s-shacl:ManufacturedItemNodeShape a sh:NodeShape ;
+    sh:targetClass idmp-sub:ManufacturedItem .
+
+iso11238-s-shacl:MaterialRoleNodeShape a sh:NodeShape ;
+    sh:targetClass idmp-sub:MaterialRole .
+
+iso11238-s-shacl:MaterialSpecificationNodeShape a sh:NodeShape ;
+    sh:targetClass idmp-sub:MaterialSpecification .
+
+iso11238-s-shacl:MechanicalIngredientNodeShape a sh:NodeShape ;
+    sh:targetClass idmp-sub:MechanicalIngredient .
+
+iso11238-s-shacl:MixtureNodeShape a sh:NodeShape ;
+    sh:targetClass idmp-sub:Mixture .
+
+iso11238-s-shacl:ModificationAgentNodeShape a sh:NodeShape ;
+    sh:targetClass idmp-sub:ModificationAgent .
+
+iso11238-s-shacl:ModificationMethodNodeShape a sh:NodeShape ;
+    sh:targetClass idmp-sub:ModificationMethod .
+
+iso11238-s-shacl:ModificationRoleNodeShape a sh:NodeShape ;
+    sh:targetClass idmp-sub:ModificationRole .
+
+iso11238-s-shacl:MoietyNodeShape a sh:NodeShape ;
+    sh:targetClass idmp-sub:Moiety .
+
+iso11238-s-shacl:MolecularConstituentNodeShape a sh:NodeShape ;
+    sh:targetClass idmp-sub:MolecularConstituent .
+
+iso11238-s-shacl:MolecularFragmentNodeShape a sh:NodeShape ;
+    sh:targetClass idmp-sub:MolecularFragment .
+
+iso11238-s-shacl:MolecularFragmentRoleNodeShape a sh:NodeShape ;
+    sh:targetClass idmp-sub:MolecularFragmentRole .
+
+iso11238-s-shacl:MoleculeNodeShape a sh:NodeShape ;
+    sh:targetClass idmp-sub:Molecule .
+
+iso11238-s-shacl:MonodisperseSubstanceNodeShape a sh:NodeShape ;
+    sh:targetClass idmp-sub:MonodisperseSubstance .
+
+iso11238-s-shacl:NucleicAcidSubstanceNodeShape a sh:NodeShape ;
+    sh:targetClass idmp-sub:NucleicAcidSubstance .
+
+iso11238-s-shacl:OpticalActivityNodeShape a sh:NodeShape ;
+    sh:targetClass idmp-sub:OpticalActivity .
+
+iso11238-s-shacl:PhysicalManufacturedItemNodeShape a sh:NodeShape ;
+    sh:targetClass idmp-sub:PhysicalManufacturedItem .
+
+iso11238-s-shacl:PhysicalModificationMethodNodeShape a sh:NodeShape ;
+    sh:targetClass idmp-sub:PhysicalModificationMethod .
+
+iso11238-s-shacl:PhysicalSubstanceNodeShape a sh:NodeShape ;
+    sh:targetClass idmp-sub:PhysicalSubstance .
+
+iso11238-s-shacl:PolydisperseSubstanceNodeShape a sh:NodeShape ;
+    sh:targetClass idmp-sub:PolydisperseSubstance .
+
+iso11238-s-shacl:PolymerSubstanceNodeShape a sh:NodeShape ;
+    sh:targetClass idmp-sub:PolymerSubstance .
+
+iso11238-s-shacl:PreservativeIngredientNodeShape a sh:NodeShape ;
+    sh:targetClass idmp-sub:PreservativeIngredient .
+
+iso11238-s-shacl:ProcessingMaterialRoleNodeShape a sh:NodeShape ;
+    sh:targetClass idmp-sub:ProcessingMaterialRole .
+
+iso11238-s-shacl:ProteinSubstanceNodeShape a sh:NodeShape ;
+    sh:targetClass idmp-sub:ProteinSubstance .
+
+iso11238-s-shacl:RadioactiveDecayNodeShape a sh:NodeShape ;
+    sh:targetClass idmp-sub:RadioactiveDecay .
+
+iso11238-s-shacl:RadionuclideNodeShape a sh:NodeShape ;
+    sh:targetClass idmp-sub:Radionuclide .
+
+iso11238-s-shacl:ReferenceSourceNodeShape a sh:NodeShape ;
+    sh:targetClass idmp-sub:ReferenceSource .
+
+iso11238-s-shacl:ResultantMaterialRoleNodeShape a sh:NodeShape ;
+    sh:targetClass idmp-sub:ResultantMaterialRole .
+
+iso11238-s-shacl:SaltNodeShape a sh:NodeShape ;
+    sh:targetClass idmp-sub:Salt .
+
+iso11238-s-shacl:SingleSubstanceNodeShape a sh:NodeShape ;
+    sh:targetClass idmp-sub:SingleSubstance .
+
+iso11238-s-shacl:SourceMaterialRoleNodeShape a sh:NodeShape ;
+    sh:targetClass idmp-sub:SourceMaterialRole .
+
+iso11238-s-shacl:SpecifiedSubstanceNodeShape a sh:NodeShape ;
+    sh:targetClass idmp-sub:SpecifiedSubstance .
+
+iso11238-s-shacl:StabilizerIngredientNodeShape a sh:NodeShape ;
+    sh:targetClass idmp-sub:StabilizerIngredient .
+
+iso11238-s-shacl:StartingMaterialRoleNodeShape a sh:NodeShape ;
+    sh:targetClass idmp-sub:StartingMaterialRole .
+
+iso11238-s-shacl:StructuralModificationMethodNodeShape a sh:NodeShape ;
+    sh:targetClass idmp-sub:StructuralModificationMethod .
+
+iso11238-s-shacl:StructurallyDiverseSubstanceNodeShape a sh:NodeShape ;
+    sh:targetClass idmp-sub:StructurallyDiverseSubstance .
+
+iso11238-s-shacl:SubstanceNodeShape a sh:NodeShape ;
+    sh:targetClass idmp-sub:Substance .
+
+iso11238-s-shacl:SubstanceRoleNodeShape a sh:NodeShape ;
+    sh:targetClass idmp-sub:SubstanceRole .
+
+iso11238-s-shacl:SubstrateTargetInteractionNodeShape a sh:NodeShape ;
+    sh:targetClass idmp-sub:SubstrateTargetInteraction .
+
+iso11238-s-shacl:someValuesFromclassifiesGeneElementPropertyShape a sh:PropertyShape ;
+    sh:class idmp-sub:GeneElement ;
+    sh:minCount 1 ;
+    sh:path cmns-id:classifies .
+
+iso11238-s-shacl:someValuesFromhasDefiningStructureMolecularStructurePropertyShape a sh:PropertyShape ;
+    sh:class idmp-sub:MolecularStructure ;
+    sh:minCount 1 ;
+    sh:path idmp-sub:hasDefiningStructure .
+
+iso11238-s-shacl:someValuesFromhasGranularMolecularPartMolecularEntityPropertyShape a sh:PropertyShape ;
+    sh:class idmp-sub:MolecularEntity ;
+    sh:minCount 1 ;
+    sh:path idmp-sub:hasGranularMolecularPart .
+
+iso11238-s-shacl:someValuesFromhasGranularMolecularPartMolecularGroupPropertyShape a sh:PropertyShape ;
+    sh:class idmp-sub:MolecularGroup ;
+    sh:minCount 1 ;
+    sh:path idmp-sub:hasGranularMolecularPart .
+
+iso11238-s-shacl:someValuesFromhasModificationAgentModificationAgentPropertyShape a sh:PropertyShape ;
+    sh:class idmp-sub:ModificationAgent ;
+    sh:minCount 1 ;
+    sh:path idmp-sub:hasModificationAgent .
+
+iso11238-s-shacl:someValuesFromhasReferenceSourceTypeReferenceSourceTypePropertyShape a sh:PropertyShape ;
+    sh:class idmp-sub:ReferenceSourceType ;
+    sh:minCount 1 ;
+    sh:path idmp-sub:hasReferenceSourceType .
+
+iso11238-s-shacl:someValuesFromhasStructuralModificationTypeStructuralModificationTypePropertyShape a sh:PropertyShape ;
+    sh:class idmp-sub:StructuralModificationType ;
+    sh:minCount 1 ;
+    sh:path idmp-sub:hasStructuralModificationType .
+
+iso11238-s-shacl:someValuesFromhasStructureMolecularStructurePropertyShape a sh:PropertyShape ;
+    sh:class idmp-sub:MolecularStructure ;
+    sh:minCount 1 ;
+    sh:path idmp-sub:hasStructure .
+
+iso11238-s-shacl:someValuesFromhasSubjectRoleError12PropertyShape a sh:PropertyShape ;
+    sh:class <http://org.semanticweb.owlapi/error#Error12> ;
+    sh:minCount 1 ;
+    sh:path cmns-pts:hasSubjectRole .
+
+iso11238-s-shacl:someValuesFromhasSubstanceNameSubstanceNamePropertyShape a sh:PropertyShape ;
+    sh:class idmp-sub:SubstanceName ;
+    sh:minCount 1 ;
+    sh:path idmp-sub:hasSubstanceName .
+
+iso11238-s-shacl:someValuesFromhasSubstanceTypeSubstanceTypeClassifierPropertyShape a sh:PropertyShape ;
+    sh:class idmp-sub:SubstanceTypeClassifier ;
+    sh:minCount 1 ;
+    sh:path idmp-sub:hasSubstanceType .
+
+iso11238-s-shacl:someValuesFromisExperiencedByRadionuclidePropertyShape a sh:PropertyShape ;
+    sh:class idmp-sub:Radionuclide ;
+    sh:minCount 1 ;
+    sh:path cmns-pts:isExperiencedBy .
+
+iso11238-s-shacl:someValuesFromisManifestedInModificationPropertyShape a sh:PropertyShape ;
+    sh:class idmp-sub:Modification ;
+    sh:minCount 1 ;
+    sh:path cmns-pts:isManifestedIn .
+
+iso11238-s-shacl:someValuesFromisMoietyOfSubstancePropertyShape a sh:PropertyShape ;
+    sh:class idmp-sub:Substance ;
+    sh:minCount 1 ;
+    sh:path idmp-sub:isMoietyOf .
+
+iso11238-s-shacl:someValuesFromisPlayedByMaterialPropertyShape a sh:PropertyShape ;
+    sh:class idmp-sub:Material ;
+    sh:minCount 1 ;
+    sh:path cmns-pts:isPlayedBy .
+
+iso11238-s-shacl:someValuesFromisPlayedByMolecularFragmentPropertyShape a sh:PropertyShape ;
+    sh:class idmp-sub:MolecularFragment ;
+    sh:minCount 1 ;
+    sh:path cmns-pts:isPlayedBy .
+
+iso11238-s-shacl:someValuesFromisPlayedBySubstancePropertyShape a sh:PropertyShape ;
+    sh:class idmp-sub:Substance ;
+    sh:minCount 1 ;
+    sh:path cmns-pts:isPlayedBy .
+
+iso11238-s-shacl:someValuesFromisPlayedByTargetPropertyShape a sh:PropertyShape ;
+    sh:class idmp-sub:Target ;
+    sh:minCount 1 ;
+    sh:path cmns-pts:isPlayedBy .
+
+iso11238-s-shacl:someValuesFromisProducedByManufacturerPropertyShape a sh:PropertyShape ;
+    sh:class idmp-sub:Manufacturer ;
+    sh:minCount 1 ;
+    sh:path cmns-prd:isProducedBy .
+
+iso11238-s-shacl:someValuesFromisSpecifiedBySubstancePropertyShape a sh:PropertyShape ;
+    sh:class idmp-sub:Substance ;
+    sh:minCount 1 ;
+    sh:path cmns-doc:isSpecifiedBy .
+
+iso11238-s-shacl:someValuesFromspecifiesAnalysisPropertyShape a sh:PropertyShape ;
+    sh:class idmp-sub:Analysis ;
+    sh:minCount 1 ;
+    sh:path cmns-doc:specifies .
+
+iso11238-s-shacl:someValuesFromspecifiesMaterialPropertyShape a sh:PropertyShape ;
+    sh:class idmp-sub:Material ;
+    sh:minCount 1 ;
+    sh:path cmns-doc:specifies .
+
+iso11238-s-shacl:someValuesFromspecifiesModificationPropertyShape a sh:PropertyShape ;
+    sh:class idmp-sub:Modification ;
+    sh:minCount 1 ;
+    sh:path cmns-doc:specifies .
+
+iso11238-s-shacl:someValuesFromspecifiesOpticalRotationPropertyShape a sh:PropertyShape ;
+    sh:class idmp-sub:OpticalRotation ;
+    sh:minCount 1 ;
+    sh:path cmns-doc:specifies .
+
+iso11238-s-shacl:someValuesFromundergoesModificationPropertyShape a sh:PropertyShape ;
+    sh:class idmp-sub:Modification ;
+    sh:minCount 1 ;
+    sh:path cmns-pts:undergoes .
+
+iso11238-s-shacl:someValuesFromundergoesRadioactiveDecayPropertyShape a sh:PropertyShape ;
+    sh:class idmp-sub:RadioactiveDecay ;
+    sh:minCount 1 ;
+    sh:path cmns-pts:undergoes .
+

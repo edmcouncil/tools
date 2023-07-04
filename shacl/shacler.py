@@ -6,6 +6,9 @@ from rdflib import Graph, RDF, OWL, RDFS, SH, Namespace, XSD
 from rdflib.term import Node, BNode, URIRef, Literal
 
 
+OWL_RESTRICTION_SCOPE_PROPERTY = URIRef('https://www.omg.org/spec/Commons/AnnotationVocabulary/hasDataSupport')
+
+
 class RDFSHACLResource:
     rdf_shacl_identity_registry = dict()
     shacl_base_namespace = None
@@ -121,6 +124,7 @@ class OWLSHACLProperty(RDFSHACLResource):
 class OWLSHACLRestriction(RDFSHACLResource):
     restriction_registry = dict()
     equivalent_registry = dict()
+    out_of_scope_owl_restrictions = set()
     
     def __init__(
             self,
@@ -287,7 +291,8 @@ class SHACLNodeShape(SHACLShape):
         unfiltered_restrictions = set()
         for owl_shacl_class in self.rdf_shacl_resource.super_classes:
             if isinstance(owl_shacl_class, OWLSHACLRestriction):
-                unfiltered_restrictions.add(owl_shacl_class)
+                if not owl_shacl_class.iri in OWLSHACLRestriction.out_of_scope_owl_restrictions:
+                    unfiltered_restrictions.add(owl_shacl_class)
         filtered_out_restrictions = self.filter_out_owl_restrictions(unfiltered_restrictions=unfiltered_restrictions)
         
         for filtered_out_restriction in filtered_out_restrictions:
@@ -295,6 +300,9 @@ class SHACLNodeShape(SHACLShape):
             if shacl_property_shape in SHACLPropertyShape.serialisation_register:
                 relevant_shacl_property_shapes.add(shacl_property_shape)
         return relevant_shacl_property_shapes
+    
+    def __check_if_owl_restriction_is_to_be_ignored(self, owl_restriction: OWL.Restriction):
+        pass
     
     @staticmethod
     def filter_out_owl_restrictions(unfiltered_restrictions: set) -> set:
@@ -487,6 +495,21 @@ def __collect_owl_constructs(ontology_graph: Graph, use_equivalent_constraints: 
             __process_iri(iri=owl_class, ontology_graph=ontology_graph)
     if use_equivalent_constraints:
         __generate_inverse_restrictions(ontology_graph=ontology_graph)
+    __select_owl_restrictions_to_be_ignored(ontology_graph=ontology_graph)
+    
+    
+def __select_owl_restrictions_to_be_ignored(ontology_graph: Graph):
+    axioms = set(ontology_graph.subjects(predicate=RDF.type, object=OWL.Axiom))
+    for axiom in axioms:
+        in_scope_values = list(ontology_graph.objects(subject=axiom, predicate=OWL_RESTRICTION_SCOPE_PROPERTY))
+        if len(in_scope_values) == 1:
+            in_scope_value = in_scope_values[0]
+            if in_scope_value.value == False:
+                annotated_owl_restrictions = list(ontology_graph.objects(subject=axiom, predicate=OWL.annotatedTarget))
+                if len(annotated_owl_restrictions) == 1:
+                    out_of_scope_owl_restriction = annotated_owl_restrictions[0]
+                    OWLSHACLRestriction.out_of_scope_owl_restrictions.add(out_of_scope_owl_restriction)
+    
 
 
 def __generate_inverse_restrictions(ontology_graph: Graph):
@@ -593,14 +616,14 @@ def shacl(input_owl_path: str, output_shacl_path: str, use_equivalent_constraint
 
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description='Collects all ontologies imported from input ontology')
-    parser.add_argument('--input_owl', help='Path to input ontology', metavar='IN_ONT')
-    parser.add_argument('--output_shacl', help='Path to ontology mapping file', metavar='OUT_SHACL')
-    args = parser.parse_args()
-
-    shacl(input_owl_path=args.input_owl, output_shacl_path=args.output_shacl)
+    # parser = argparse.ArgumentParser(description='Collects all ontologies imported from input ontology')
+    # parser.add_argument('--input_owl', help='Path to input ontology', metavar='IN_ONT')
+    # parser.add_argument('--output_shacl', help='Path to ontology mapping file', metavar='OUT_SHACL')
+    # args = parser.parse_args()
+    #
+    # shacl(input_owl_path=args.input_owl, output_shacl_path=args.output_shacl)
     
-    # shacl(
-    #     input_owl_path='../resources/idmp/ISO11615-MedicinalProducts-Merged.ttl',
-    #     output_shacl_path='../resources/idmp/ISO11615-MedicinalProducts-SHACL.ttl',
-    #     use_equivalent_constraints=True)
+    shacl(
+        input_owl_path='ISO11238-Substances.ttl',
+        output_shacl_path='ISO11238-Substances-SHACL.ttl',
+        use_equivalent_constraints=True)
