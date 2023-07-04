@@ -7,8 +7,7 @@ def node_is_out_of_scope(node: Node, owl_ontology: Graph) -> bool:
         return True
     if (node, RDF.type, OWL.AnnotationProperty) in owl_ontology:
         return True
-    # if isinstance(node, Literal):
-    #     return True
+    
     return False
 
 

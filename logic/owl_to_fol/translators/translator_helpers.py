@@ -99,6 +99,8 @@ def __can_uri_be_cast_to_unary_predicate(uri: URIRef, owl_ontology: Graph) -> bo
         return True
     if uri == OWL.NamedIndividual:
         return True
+    if uri == OWL.Thing:
+        return True
     
     return \
         False

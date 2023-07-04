@@ -201,7 +201,13 @@ def __generate_fol_from_owl_min_qualified_restriction(
         if len(owl_qualifiedMinCardinality) > 0:
             minCardinality = int(owl_qualifiedMinCardinality[0])
             if minCardinality == 0:
-                return IdentityFormula(arguments=[restricted_variable, restricted_variable])
+                identity_formula = IdentityFormula(arguments=[restricted_variable, restricted_variable])
+                closed_identity_formula = \
+                    QuantifyingFormula(
+                        quantified_formula=identity_formula,
+                        variables=identity_formula.free_variables,
+                        quantifier=Quantifier.UNIVERSAL)
+                return closed_identity_formula
             conjunction = None
             restricting_variables = list()
             index = 1

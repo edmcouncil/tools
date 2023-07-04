@@ -34,8 +34,8 @@ if __name__ == "__main__":
     parser.add_argument('--folder_with_hygiene_tests', help='Path to folder with hygiene_tests hygiene_tests', metavar='HYGIENE')
     parser.add_argument('--ontology_path', help='Path to ontology file', metavar='ONTOLOGY')
     parser.add_argument('--error_label', help='Error label', metavar='ERROR')
-    parser.add_argument('--parameter_input_value', help='Hygiene test.py filter constant', metavar='HYGIENEPLACEHOLDER')
-    parser.add_argument('--parameter_output_value', help='Hygiene test.py filter variable', metavar='HYGIENEPLACEHOLDER')
+    parser.add_argument('--parameter_input_value', help='Hygiene startup.py filter constant', metavar='HYGIENEPLACEHOLDER')
+    parser.add_argument('--parameter_output_value', help='Hygiene startup.py filter variable', metavar='HYGIENEPLACEHOLDER')
     args = parser.parse_args()
     
     ontology_is_clean = \

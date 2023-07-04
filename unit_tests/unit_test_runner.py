@@ -42,10 +42,10 @@ def run_unit_test(ontology_location: str, root_folder: str, unit_test_config_fil
         with open(os.path.join(root_folder, unit_test_config['expected_output'])) as file:
             expected_query_result = json.loads(file.read())
         if not query_result_as_dict == expected_query_result:
-            print('Competency question', unit_test_config['sparql_template'], ' run a unit test.py failed.')
+            print('Competency question', unit_test_config['sparql_template'], ' run a unit startup.py failed.')
             cq_tests_passed = False
         else:
-            print('Competency question', unit_test_config['sparql_template'], ' run as a unit test.py passed.')
+            print('Competency question', unit_test_config['sparql_template'], ' run as a unit startup.py passed.')
     return cq_tests_passed
 
 run_unit_test(

@@ -29,14 +29,18 @@ class Symbol:
     @staticmethod
     def escape_tptp_chars(text: str):
         text = text.replace('-', '_')
+        text = text.replace('+', '_')
         text = text.replace('.', '_')
         text = text.replace('/', '_')
+        text = text.replace('!', '_')
         text = text.replace(':', '_')
         text = text.replace(';', '_')
         text = text.replace('?', '_')
         text = text.replace('=', '_')
         text = text.replace('%', '_')
         text = text.replace('&', '_')
+        text = text.replace('$', '_')
+        text = text.replace('@', '_')
         text = text.replace('|', '_')
         text = text.replace("'", '_')
         text = text.replace('"', '_')
@@ -46,7 +50,18 @@ class Symbol:
         text = text.replace('>', '_')
         text = text.replace('~', '_')
         text = text.replace('#', '_')
+        text = text.replace(',', '_')
+        text = text.replace('*', '_')
+        text = text.replace('^', '_')
+        text = text.replace('{', '_')
+        text = text.replace('}', '_')
+        text = text.replace('[', '_')
+        text = text.replace(']', '_')
+        text = text.replace('\n', '')
+        text = text.replace('\t', '')
         text = re.sub(r'[^\x00-\x7F]+', '_', text)
+        if text.startswith('_'):
+            text = 's' + text
         
         return text
         
