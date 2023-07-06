@@ -25,7 +25,7 @@ class TransformationConfiguration:
         self.ignored_namespace = 'http://purl.org/dc/terms/'
         self.wiki_description_max_length = 250
         self.wiki_description_truncate_sign = '...'
-        self.wiki_timeout = 800
+        self.wiki_timeout = 300
         self.dry_run = False
         
         self.login_credentials = None
@@ -669,7 +669,7 @@ def process_all_rdf_triples(scope: TransformationScope):
     for triple in tqdm(scope.graph, desc='added triples'):
         if not scope.config.dry_run:
             end = time.time()
-            if end - start > config.wiki_timeout:
+            if (end - start) > config.wiki_timeout:
                 scope.config.wikibase.api.session.close()
                 del scope.config.wikibase
                 logging.info(msg='DBG: auth')
@@ -685,7 +685,7 @@ def process_all_owl_restrictions(scope: TransformationScope):
     for owl_restriction in tqdm(owl_restrictions, desc='added restrictions'):
         if not scope.config.dry_run:
             end = time.time()
-            if end-start > scope.config.wiki_timeout:
+            if (end - start) > scope.config.wiki_timeout:
                 scope.config.wikibase.api.session.close()
                 del scope.config.wikibase
                 logging.info(msg='DBG: auth')
