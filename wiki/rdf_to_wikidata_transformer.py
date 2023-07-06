@@ -14,6 +14,7 @@ WIKIBASE_ITEM_TYPE = 'wikibase-item'
 WIKIBASE_PROPERTY_TYPE = 'wikibase-property'
 WIKIBASE_URL_TYPE = 'url'
 WIKIBASE_STRING_TYPE = 'string'
+WIKIBASE_QUANTITY_TYPE = 'quantity'
 
 
 class TransformationConfiguration:
@@ -24,7 +25,7 @@ class TransformationConfiguration:
         self.ignored_namespace = 'http://purl.org/dc/terms/'
         self.wiki_description_max_length = 250
         self.wiki_description_truncate_sign = '...'
-        self.wiki_timeout = 1200
+        self.wiki_timeout = 800
         self.dry_run = False
         
         self.login_credentials = None
@@ -36,6 +37,10 @@ class TransformationConfiguration:
         self.rdf_types_to_wiki_datatypes_map = \
             {
                 XSD.anyURI: WIKIBASE_URL_TYPE,
+                XSD.int: WIKIBASE_QUANTITY_TYPE,
+                XSD.integer: WIKIBASE_QUANTITY_TYPE,
+                XSD.float: WIKIBASE_QUANTITY_TYPE,
+                XSD.decimal: WIKIBASE_QUANTITY_TYPE,
                 # RDF.List: WIKIBASE_PROPERTY_TYPE,
                 # RDF.Bag: WIKIBASE_PROPERTY_TYPE,
                 # RDF.Alt: WIKIBASE_PROPERTY_TYPE,
@@ -55,7 +60,7 @@ class TransformationConfiguration:
         
         
 class TransformationScope:
-    def __init__(self, graph: Graph, config: TransformationConfiguration):
+    def __init__(self, graph: Graph, base_name_space: str, config: TransformationConfiguration):
         self.graph = graph
         self.config = config
         
@@ -69,11 +74,13 @@ class TransformationScope:
         self.annotations = dict()
         self.all_nodes = set()
         self.ignored_resources = set()
+        self.base_namespace = URIRef(base_name_space)
         
         self.rdf_to_wiki_map = dict()
         self.wiki_to_rdf_map = dict()
         self.item_wiki_properties = set()
         self.rdf_annotation_map = dict()
+        self.rdf_properties_to_wiki_datatypes_map = dict()
     
         
     def getwikiable_items(self):
@@ -154,6 +161,30 @@ def process_triple(triple: tuple, scope: TransformationScope):
             logging.info(msg='I will ignore a triple because its object is a literal of 0 length.')
             scope.ignored_resources.add(object)
             return
+        if scope.rdf_properties_to_wiki_datatypes_map[predicate_wiki] == WIKIBASE_ITEM_TYPE:
+            if object.datatype:
+                if object.datatype in scope.rdf_to_wiki_map:
+                    object_as_resource = URIRef(scope.base_namespace + str(object.datatype.fragment) + '#' + str(object.value))
+                    wiki_object_type = scope.rdf_to_wiki_map[object.datatype]
+                    object_wiki = get_or_create_wiki_from_resource(resource=object_as_resource, scope=scope, create_origin_link=False, is_wikiable_item=True)
+                    rdf_type_wiki = get_or_create_wiki_from_resource(resource=RDF.type, scope=scope)
+                    
+                    if not scope.config.dry_run:
+                        try:
+                            response = scope.config.wikibase.claim.add(
+                                entity_id=object_wiki,
+                                property_id=rdf_type_wiki,
+                                value=get_wiki_value(wiki_object_type))
+                        
+                        except Exception as exception:
+                            logging.warning(msg=exception)
+                            return
+                        
+                        wiki_value = get_wiki_value(object_wiki)
+                else:
+                    logging.warning(msg="I will ignore a triple because its object has the type that is different from the predicate's type")
+                    return
+                    
     else:
         is_object_literal = False
         object_wiki = get_or_create_wiki_from_resource(resource=object, scope=scope)
@@ -231,10 +262,10 @@ def get_wiki_value(object_wiki: str) -> str:
     return object_wiki
 
 
-def create_wiki_for_resource(resource: Identifier, scope: TransformationScope) -> object:
+def create_wiki_for_resource(resource: Identifier, scope: TransformationScope, create_origin_link: bool, is_wikiable_item: bool) -> object:
     if isinstance(resource, URIRef):
         annotations = get_relevant_annotations(resource=resource, scope=scope)
-        if resource in scope.getwikiable_items():
+        if is_wikiable_item or resource in scope.getwikiable_items():
             entity_type = 'item'
         elif resource in scope.getwikiable_properties():
             entity_type = 'property'
@@ -254,22 +285,23 @@ def create_wiki_for_resource(resource: Identifier, scope: TransformationScope) -
             if not response['success']:
                 logging.warning(msg='WARN: wikibase.entity.add(' + str(resource) + '): ' + str(response))
                 return None
-            
             wiki_id = response['entity']['id']
-            
-            try:
-                scope.config.wikibase.claim.add(
-                    entity_id=wiki_id,
-                    property_id=scope.config.external_origin_property_wiki,
-                    value=resource)
-            except Exception as exception:
-                logging.warning(
-                    msg='ERR: wikibase.claim.add(' + '|'.join(wiki_id) + '), external source="' + str(scope.config.external_origin_property_wiki) + '": ' + str(
-                        exception))
-                return None
+            if create_origin_link:
+                try:
+                    scope.config.wikibase.claim.add(
+                        entity_id=wiki_id,
+                        property_id=scope.config.external_origin_property_wiki,
+                        value=resource)
+                except Exception as exception:
+                    logging.warning(
+                        msg='ERR: wikibase.claim.add(' + '|'.join(wiki_id) + '), external source="' + str(scope.config.external_origin_property_wiki) + '": ' + str(
+                            exception))
+                    return wiki_id
         
         scope.rdf_to_wiki_map[resource] = wiki_id
         scope.wiki_to_rdf_map[wiki_id] = resource
+        if resource in scope.getwikiable_properties():
+            scope.rdf_properties_to_wiki_datatypes_map[wiki_id] = wiki_datatype
         
         return wiki_id
     else:
@@ -285,6 +317,8 @@ def get_relevant_annotations(resource: URIRef, scope: TransformationScope) -> di
             are_annotations_unique=True, scope=scope)
     if len(wiki_labels) == 0:
         iri_fragment = resource.fragment
+        if len(iri_fragment) == 0:
+            iri_fragment = str(resource).split(sep='/')[-1]
         wiki_labels['en'] = dict()
         wiki_labels['en']['language'] = 'en'
         wiki_labels['en']['value'] = iri_fragment
@@ -361,11 +395,11 @@ def get_wiki_annotation(
     return unique_label_value
 
 
-def get_or_create_wiki_from_resource(resource: Identifier, scope: TransformationScope) -> object:
+def get_or_create_wiki_from_resource(resource: Identifier, scope: TransformationScope, create_origin_link=True, is_wikiable_item=False) -> object:
     if resource in scope.rdf_to_wiki_map:
         wiki_entity = scope.rdf_to_wiki_map[resource]
     else:
-        wiki_entity = create_wiki_for_resource(resource=resource, scope=scope)
+        wiki_entity = create_wiki_for_resource(resource=resource, scope=scope, create_origin_link=create_origin_link, is_wikiable_item=is_wikiable_item)
     return wiki_entity
 
 
@@ -380,6 +414,9 @@ def get_wiki_datatype_for_property(property: URIRef, scope: TransformationScope)
     if len(wiki_datatype) > 0:
         return wiki_datatype
     
+    if len(property_ranges.intersection(scope.datatypes)) > 0:
+        return WIKIBASE_ITEM_TYPE
+    
     property_range_types = set()
     for property_range in property_ranges:
         property_range_types = property_range_types.union(set(scope.graph.objects(subject=property_range, predicate=RDF.type)))
@@ -391,9 +428,6 @@ def get_wiki_datatype_for_property(property: URIRef, scope: TransformationScope)
     if property in scope.object_properties:
         return WIKIBASE_ITEM_TYPE
     
-    if len(property_ranges.intersection(scope.datatypes)) > 0:
-        return WIKIBASE_ITEM_TYPE
-
     return WIKIBASE_STRING_TYPE
 
 
@@ -541,7 +575,7 @@ def add_wiki_infrastructure_properties(config: TransformationConfiguration):
     config.optionality_property = response['entity']['id']
 
 
-def collect_all_rdf_resources(config: TransformationConfiguration, graph_iri: str) -> TransformationScope:
+def collect_all_rdf_resources(config: TransformationConfiguration, graph_iri: str, base_namespace: str) -> TransformationScope:
     logging.info(msg='Uploading ontology')
     
     graph = Graph()
@@ -561,7 +595,7 @@ def collect_all_rdf_resources(config: TransformationConfiguration, graph_iri: st
 
     graph = graph + rdf + rdfs + owl + skos + dct + dce
     
-    scope = TransformationScope(graph=graph, config=config)
+    scope = TransformationScope(graph=graph, config=config, base_name_space=base_namespace)
 
     scope.all_nodes = graph.all_nodes()
     
@@ -622,14 +656,17 @@ def collect_all_rdf_resources(config: TransformationConfiguration, graph_iri: st
         
     return scope
 
+
 def process_needed_resources(scope: TransformationScope):
-    for datatype in scope.datatypes:
+    logging.info(msg='Adding needed resources to wikidata.')
+    for datatype in tqdm(scope.datatypes, desc='added datatypes'):
         get_or_create_wiki_from_resource(resource=datatype,scope=scope)
+
 
 def process_all_rdf_triples(scope: TransformationScope):
     logging.info(msg="Converting ontology's triples to wikidata")
     start = time.time()
-    for triple in tqdm(scope.graph):
+    for triple in tqdm(scope.graph, desc='added triples'):
         if not scope.config.dry_run:
             end = time.time()
             if end - start > config.wiki_timeout:
@@ -645,7 +682,7 @@ def process_all_owl_restrictions(scope: TransformationScope):
     logging.info(msg="Converting ontology's OWL restrictions to wikidata")
     start = time.time()
     owl_restrictions = set(scope.graph.subjects(predicate=RDF.type, object=OWL.Restriction))
-    for owl_restriction in tqdm(owl_restrictions):
+    for owl_restriction in tqdm(owl_restrictions, desc='added restrictions'):
         if not scope.config.dry_run:
             end = time.time()
             if end-start > scope.config.wiki_timeout:
@@ -666,7 +703,7 @@ if __name__ == "__main__":
     if not config.dry_run:
         establish_wiki_connection(config)
         add_wiki_infrastructure_properties(config=config)
-    scope = collect_all_rdf_resources(config=config, graph_iri='ontohgis.ttl')
+    scope = collect_all_rdf_resources(config=config, graph_iri='ontohgis.ttl', base_namespace='https://onto.kul.pl/ontohgis/')
     process_needed_resources(scope=scope)
     process_all_rdf_triples(scope=scope)
     process_all_owl_restrictions(scope=scope)

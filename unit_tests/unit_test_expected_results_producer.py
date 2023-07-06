@@ -43,8 +43,8 @@ def produce_unit_test_expected_results(ontology_location: str, root_folder: str,
 
 produce_unit_test_expected_results(
     ontology_location='/Users/pawel.garbacz/Documents/edmc/github/edmc/tools/resources/idmp_current/AboutIDMPDev-ReferenceIndividuals.ttl',
-    root_folder='',
-    unit_test_config_file_path='configs/unit_tests_config.yaml')
+    root_folder='/Users/pawel.garbacz/Documents/edmc/github/edmc/tools/unit_tests/',
+    unit_test_config_file_path='configs/idmp_tests_config.yaml')
 
 
 # if __name__ == "__main__":
