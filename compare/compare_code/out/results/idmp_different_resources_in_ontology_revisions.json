@@ -1,0 +1,137 @@
+[
+    {
+        "ontology": "ISO11616-PharmaceuticalProducts",
+        "delta": [
+            {
+                "type": "http://www.w3.org/2002/07/owl#Class",
+                "resources in master_v0.3.0 but not master ontology revision": 0,
+                "resources in master but not master_v0.3.0 ontology revision": 2
+            }
+        ]
+    },
+    {
+        "ontology": "TerlipressinExample",
+        "delta": [
+            {
+                "type": "http://www.w3.org/2002/07/owl#NamedIndividual",
+                "resources in master_v0.3.0 but not master ontology revision": 1,
+                "resources in master but not master_v0.3.0 ontology revision": 2
+            }
+        ]
+    },
+    {
+        "ontology": "AmlodipineExample",
+        "delta": [
+            {
+                "type": "http://www.w3.org/2002/07/owl#NamedIndividual",
+                "resources in master_v0.3.0 but not master ontology revision": 4,
+                "resources in master but not master_v0.3.0 ontology revision": 8
+            }
+        ]
+    },
+    {
+        "ontology": "QuantitiesAndUnits",
+        "delta": [
+            {
+                "type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+                "resources in master_v0.3.0 but not master ontology revision": 0,
+                "resources in master but not master_v0.3.0 ontology revision": 1
+            }
+        ]
+    },
+    {
+        "ontology": "ISO11239-PharmaceuticalDoseForms",
+        "delta": [
+            {
+                "type": "http://www.w3.org/2002/07/owl#Class",
+                "resources in master_v0.3.0 but not master ontology revision": 0,
+                "resources in master but not master_v0.3.0 ontology revision": 13
+            },
+            {
+                "type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+                "resources in master_v0.3.0 but not master ontology revision": 0,
+                "resources in master but not master_v0.3.0 ontology revision": 5
+            }
+        ]
+    },
+    {
+        "ontology": "ISO11238-Substances",
+        "delta": [
+            {
+                "type": "http://www.w3.org/2002/07/owl#Class",
+                "resources in master_v0.3.0 but not master ontology revision": 7,
+                "resources in master but not master_v0.3.0 ontology revision": 73
+            },
+            {
+                "type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+                "resources in master_v0.3.0 but not master ontology revision": 1,
+                "resources in master but not master_v0.3.0 ontology revision": 42
+            },
+            {
+                "type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
+                "resources in master_v0.3.0 but not master ontology revision": 1,
+                "resources in master but not master_v0.3.0 ontology revision": 12
+            },
+            {
+                "type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
+                "resources in master_v0.3.0 but not master ontology revision": 1,
+                "resources in master but not master_v0.3.0 ontology revision": 12
+            },
+            {
+                "type": "http://www.w3.org/2002/07/owl#NamedIndividual",
+                "resources in master_v0.3.0 but not master ontology revision": 0,
+                "resources in master but not master_v0.3.0 ontology revision": 28
+            }
+        ]
+    },
+    {
+        "ontology": "ISO11238-RegistrationAuthorities",
+        "delta": [
+            {
+                "type": "http://www.w3.org/2002/07/owl#Class",
+                "resources in master_v0.3.0 but not master ontology revision": 0,
+                "resources in master but not master_v0.3.0 ontology revision": 1
+            },
+            {
+                "type": "http://www.w3.org/2002/07/owl#NamedIndividual",
+                "resources in master_v0.3.0 but not master ontology revision": 0,
+                "resources in master but not master_v0.3.0 ontology revision": 5
+            }
+        ]
+    },
+    {
+        "ontology": "QlairaExample",
+        "delta": [
+            {
+                "type": "http://www.w3.org/2002/07/owl#NamedIndividual",
+                "resources in master_v0.3.0 but not master ontology revision": 74,
+                "resources in master but not master_v0.3.0 ontology revision": 74
+            }
+        ]
+    },
+    {
+        "ontology": "ISO11615-MedicinalProducts",
+        "delta": [
+            {
+                "type": "http://www.w3.org/2002/07/owl#Class",
+                "resources in master_v0.3.0 but not master ontology revision": 0,
+                "resources in master but not master_v0.3.0 ontology revision": 28
+            },
+            {
+                "type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+                "resources in master_v0.3.0 but not master ontology revision": 0,
+                "resources in master but not master_v0.3.0 ontology revision": 12
+            },
+            {
+                "type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
+                "resources in master_v0.3.0 but not master ontology revision": 0,
+                "resources in master but not master_v0.3.0 ontology revision": 2
+            },
+            {
+                "type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
+                "resources in master_v0.3.0 but not master ontology revision": 0,
+                "resources in master but not master_v0.3.0 ontology revision": 2
+            }
+        ]
+    }
+]
