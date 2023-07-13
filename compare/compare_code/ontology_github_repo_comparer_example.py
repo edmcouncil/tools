@@ -16,5 +16,5 @@ compare_ontology_github_repo(
     repo_github_url='https://github.com/edmcouncil/idmp',
     left_revision_id='master_v0.3.0',
     right_revision_id='master',
-    config=ComparisonConfig(verbose=False),
+    config=ComparisonConfig(verbose=True),
     outputs='out')

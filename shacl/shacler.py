@@ -281,9 +281,9 @@ class SHACLNodeShape(SHACLShape):
                     shacl_graph.add((alternative_paths_sublist, RDF.first, inverse_straight_property_shape))
                     shacl_graph.add((alternative_paths_sublist, RDF.rest, RDF.nil))
                     shacl_graph.add((shacl_shape, URIRef(str(SH) + 'or'), alternative_paths_bnode))
-            else:
-                self.shacl_graph.add(
-                    (shacl_shape, SH.property, SHACLPropertyShape.serialisation_register[relevant_restriction]))
+                else:
+                    self.shacl_graph.add(
+                        (shacl_shape, SH.property, SHACLPropertyShape.serialisation_register[relevant_restriction]))
     
     def __get_relevant_property_shapes(self) -> set:
         relevant_shacl_property_shapes = set()
@@ -624,6 +624,6 @@ if __name__ == "__main__":
     # shacl(input_owl_path=args.input_owl, output_shacl_path=args.output_shacl)
     
     shacl(
-        input_owl_path='ISO11238-Substances.ttl',
+        input_owl_path='../resources/idmp/AboutIDMPProd-Merged.rdf',
         output_shacl_path='ISO11238-Substances-SHACL.ttl',
         use_equivalent_constraints=True)

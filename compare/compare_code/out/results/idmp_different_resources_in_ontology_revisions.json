@@ -1,111 +1,26 @@
 [
     {
-        "ontology": "ISO11616-PharmaceuticalProducts",
-        "delta": [
-            {
-                "type": "http://www.w3.org/2002/07/owl#Class",
-                "resources in master_v0.3.0 but not master ontology revision": 0,
-                "resources in master but not master_v0.3.0 ontology revision": 2
-            }
-        ]
-    },
-    {
-        "ontology": "TerlipressinExample",
-        "delta": [
-            {
-                "type": "http://www.w3.org/2002/07/owl#NamedIndividual",
-                "resources in master_v0.3.0 but not master ontology revision": 1,
-                "resources in master but not master_v0.3.0 ontology revision": 2
-            }
-        ]
-    },
-    {
-        "ontology": "AmlodipineExample",
-        "delta": [
-            {
-                "type": "http://www.w3.org/2002/07/owl#NamedIndividual",
-                "resources in master_v0.3.0 but not master ontology revision": 4,
-                "resources in master but not master_v0.3.0 ontology revision": 8
-            }
-        ]
-    },
-    {
         "ontology": "QuantitiesAndUnits",
         "delta": [
             {
                 "type": "http://www.w3.org/2002/07/owl#ObjectProperty",
-                "resources in master_v0.3.0 but not master ontology revision": 0,
-                "resources in master but not master_v0.3.0 ontology revision": 1
+                "resources in master_v0.3.0 but not master ontology revision": [],
+                "resources in master but not master_v0.3.0 ontology revision": [
+                    "https://www.omg.org/spec/Commons/QuantitiesAndUnits/isValueOf"
+                ]
             }
         ]
     },
     {
-        "ontology": "ISO11239-PharmaceuticalDoseForms",
+        "ontology": "ISO11616-PharmaceuticalProducts",
         "delta": [
             {
                 "type": "http://www.w3.org/2002/07/owl#Class",
-                "resources in master_v0.3.0 but not master ontology revision": 0,
-                "resources in master but not master_v0.3.0 ontology revision": 13
-            },
-            {
-                "type": "http://www.w3.org/2002/07/owl#ObjectProperty",
-                "resources in master_v0.3.0 but not master ontology revision": 0,
-                "resources in master but not master_v0.3.0 ontology revision": 5
-            }
-        ]
-    },
-    {
-        "ontology": "ISO11238-Substances",
-        "delta": [
-            {
-                "type": "http://www.w3.org/2002/07/owl#Class",
-                "resources in master_v0.3.0 but not master ontology revision": 7,
-                "resources in master but not master_v0.3.0 ontology revision": 73
-            },
-            {
-                "type": "http://www.w3.org/2002/07/owl#ObjectProperty",
-                "resources in master_v0.3.0 but not master ontology revision": 1,
-                "resources in master but not master_v0.3.0 ontology revision": 42
-            },
-            {
-                "type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
-                "resources in master_v0.3.0 but not master ontology revision": 1,
-                "resources in master but not master_v0.3.0 ontology revision": 12
-            },
-            {
-                "type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
-                "resources in master_v0.3.0 but not master ontology revision": 1,
-                "resources in master but not master_v0.3.0 ontology revision": 12
-            },
-            {
-                "type": "http://www.w3.org/2002/07/owl#NamedIndividual",
-                "resources in master_v0.3.0 but not master ontology revision": 0,
-                "resources in master but not master_v0.3.0 ontology revision": 28
-            }
-        ]
-    },
-    {
-        "ontology": "ISO11238-RegistrationAuthorities",
-        "delta": [
-            {
-                "type": "http://www.w3.org/2002/07/owl#Class",
-                "resources in master_v0.3.0 but not master ontology revision": 0,
-                "resources in master but not master_v0.3.0 ontology revision": 1
-            },
-            {
-                "type": "http://www.w3.org/2002/07/owl#NamedIndividual",
-                "resources in master_v0.3.0 but not master ontology revision": 0,
-                "resources in master but not master_v0.3.0 ontology revision": 5
-            }
-        ]
-    },
-    {
-        "ontology": "QlairaExample",
-        "delta": [
-            {
-                "type": "http://www.w3.org/2002/07/owl#NamedIndividual",
-                "resources in master_v0.3.0 but not master ontology revision": 74,
-                "resources in master but not master_v0.3.0 ontology revision": 74
+                "resources in master_v0.3.0 but not master ontology revision": [],
+                "resources in master but not master_v0.3.0 ontology revision": [
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/AdministrableDoseForm",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/PharmaceuticalDoseForm"
+                ]
             }
         ]
     },
@@ -114,23 +29,550 @@
         "delta": [
             {
                 "type": "http://www.w3.org/2002/07/owl#Class",
-                "resources in master_v0.3.0 but not master ontology revision": 0,
-                "resources in master but not master_v0.3.0 ontology revision": 28
+                "resources in master_v0.3.0 but not master ontology revision": [],
+                "resources in master but not master_v0.3.0 ontology revision": [
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/BaseIngredient",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/CombinedPharmaceuticalDoseForm",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/PreservativeIngredient",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/AdditiveIngredient",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/Modification",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/PharmaceuticalDoseForm",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/AdministrableDoseForm",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/MedicalCondition",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/ModificationMethod",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/FlavorIngredient",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/QualitativeComposition",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/QuantitativeComposition",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/TargetPopulation",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/IntendedEffect",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/StabilizerIngredient",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/ManufacturedDoseForm",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/PopulationCharacteristic",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/RadioactiveDecay",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/ContaminantIngredient",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/MechanicalIngredient",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/DiseaseStatus",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/ColorIngredient",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/TherapeuticIndication",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/Comorbidity",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/MedicalConditionClassifier",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/Dose",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/IsotopicSubstitution",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/Contraindication"
+                ]
             },
             {
                 "type": "http://www.w3.org/2002/07/owl#ObjectProperty",
-                "resources in master_v0.3.0 but not master ontology revision": 0,
-                "resources in master but not master_v0.3.0 ontology revision": 12
+                "resources in master_v0.3.0 but not master ontology revision": [],
+                "resources in master but not master_v0.3.0 ontology revision": [
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/hasContraindication",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/hasDiseaseStatus",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/hasDoseForm",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/isTherapeuticIndicationFor",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/hasReferenceIngredientRole",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/isContraindicationFor",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/hasTherapeuticIndication",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/hasTargetPopulation",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/hasComorbidity",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/hasIntendedEffect",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/hasTimingDuration",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/hasMedicalCondition"
+                ]
             },
             {
                 "type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
-                "resources in master_v0.3.0 but not master ontology revision": 0,
-                "resources in master but not master_v0.3.0 ontology revision": 2
+                "resources in master_v0.3.0 but not master ontology revision": [],
+                "resources in master but not master_v0.3.0 ontology revision": [
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/hasContraindicationText",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/hasTherapeuticIndicationText"
+                ]
             },
             {
                 "type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
-                "resources in master_v0.3.0 but not master ontology revision": 0,
-                "resources in master but not master_v0.3.0 ontology revision": 2
+                "resources in master_v0.3.0 but not master ontology revision": [],
+                "resources in master but not master_v0.3.0 ontology revision": [
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/hasContraindicationText",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/hasTherapeuticIndicationText"
+                ]
+            }
+        ]
+    },
+    {
+        "ontology": "ISO11239-PharmaceuticalDoseForms",
+        "delta": [
+            {
+                "type": "http://www.w3.org/2002/07/owl#Class",
+                "resources in master_v0.3.0 but not master ontology revision": [],
+                "resources in master but not master_v0.3.0 ontology revision": [
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/OuterPackaging",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/PharmaceuticalDoseForm",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/CombinedPharmaceuticalDoseForm",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/AdministrableDoseForm",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/IntermediatePackaging",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11239-PharmaceuticalDoseForms/ReleaseCharacteristic",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/Container",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11239-PharmaceuticalDoseForms/IntendedSite",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/ImmediateContainer",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/ManufacturedDoseForm",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11239-PharmaceuticalDoseForms/BasicDoseForm",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11239-PharmaceuticalDoseForms/AdministrationMethod",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11239-PharmaceuticalDoseForms/Transformation"
+                ]
+            },
+            {
+                "type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+                "resources in master_v0.3.0 but not master ontology revision": [],
+                "resources in master but not master_v0.3.0 ontology revision": [
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11239-PharmaceuticalDoseForms/hasBasicDoseForm",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11239-PharmaceuticalDoseForms/hasIntendedSite",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11239-PharmaceuticalDoseForms/hasAdministrationMethod",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11239-PharmaceuticalDoseForms/hasReleaseCharacteristic",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11239-PharmaceuticalDoseForms/hasTransformationProcedure"
+                ]
+            }
+        ]
+    },
+    {
+        "ontology": "ISO11238-RegistrationAuthorities",
+        "delta": [
+            {
+                "type": "http://www.w3.org/2002/07/owl#Class",
+                "resources in master_v0.3.0 but not master ontology revision": [],
+                "resources in master but not master_v0.3.0 ontology revision": [
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-RegistrationAuthorities/MedDRAMedicalConditionIdentifier"
+                ]
+            },
+            {
+                "type": "http://www.w3.org/2002/07/owl#NamedIndividual",
+                "resources in master_v0.3.0 but not master ontology revision": [],
+                "resources in master but not master_v0.3.0 ontology revision": [
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-RegistrationAuthorities/RegulatoryContext-ActiveMoietyForFoodAndDrugAdministrationExclusivity",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-RegistrationAuthorities/InternationalCouncilForHarmonisationOfTechnicalRequirementsForPharmaceuticalsForHumanUse",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-RegistrationAuthorities/MedicalDictionaryForRegulatoryActivities",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-RegistrationAuthorities/RegulatoryContext-PatentExclusivity",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-RegistrationAuthorities/InternationalCouncilForHarmonisationOfTechnicalRequirementsForPharmaceuticalsForHumanUseRegistrationAuthority"
+                ]
+            }
+        ]
+    },
+    {
+        "ontology": "TerlipressinExample",
+        "delta": [
+            {
+                "type": "http://www.w3.org/2002/07/owl#NamedIndividual",
+                "resources in master_v0.3.0 but not master ontology revision": [
+                    "https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/TerlipressinExample/TerlipressinAcetateSUN",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/TerlipressinExample/TerlipressinAsReferenceStrengthInTerlipressinAcetate1MgPerAmpouleSolutionForInjection"
+                ],
+                "resources in master but not master_v0.3.0 ontology revision": [
+                    "https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/TerlipressinExample/TerlipressinSUN0.1MgPerMlSolutionForInjectionTherapeuticIndication",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/TerlipressinExample/TerlipressinAsActiveIngredientInTerlipressinAcetate1MgPerAmpouleSolutionForInjection",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/TerlipressinExample/TerlipressinAcetateSUN-PharmaceuticalProduct",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/TerlipressinExample/TerlipressinAcetateSUN-ManufacturedItem",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/TerlipressinExample/TerlipressinSUN1MgSolutionForInjectionTherapeuticIndication",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/TerlipressinExample/TerlipressinAcetateSUN0.12MgPerMlSolutionForInjectionTherapeuticIndication"
+                ]
+            }
+        ]
+    },
+    {
+        "ontology": "ISO11238-Substances",
+        "delta": [
+            {
+                "type": "http://www.w3.org/2002/07/owl#Class",
+                "resources in master_v0.3.0 but not master ontology revision": [
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/ExcipientRole",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/AdjuvantRole",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/InactiveIngredientRole",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/ActiveIngredientRole",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/SpecifiedAmount",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/SubstanceConstituency",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/IngredientRole"
+                ],
+                "resources in master but not master_v0.3.0 ontology revision": [
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/ReferenceSource",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/BaseIngredient",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/MolecularFragmentIdentifier",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/PreservativeIngredient",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/SubstanceRelationship",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/Isotope",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/ModificationMethodType",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/AdditiveIngredient",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/StructuralModificationType",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/MolecularConstituent",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/SubstanceClassificationSystem",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/Modification",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/TargetClassifier",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/ModificationRoleCode",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/SubstanceClassifierCode",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/GeneSequenceOrigin",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/ResidueModified",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/MolecularFragmentName",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/GeneName",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/ReferenceSourceCitation",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/SubstanceClassifier",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/NuclideName",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/GeneIdentifier",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/Radionuclide",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/ModificationMethod",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/FlavorIngredient",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/ReferenceSourceDocument",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/SubstanceRelationshipCode",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/SubstanceClassificationType",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/ReferenceSourceDocumentType",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/SubstanceClassificationSubtype",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/ParameterName",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/ReferenceInformation",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/MolecularGroup",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/ReferenceSourceDocumentIdentifier",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/MolecularFragment",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/ModificationRole",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/GeneElementName",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/StructuralModificationMethod",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/GeneElementType",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/PhysicalModificationMethod",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/ReferenceSourceDocumentClassification",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/StabilizerIngredient",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/GeneElement",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/IsotopicSubstitutionClassifier",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/Amount",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/NuclideIdentifier",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/InteractionType",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/ReferenceSourceType",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/SubstrateTargetInteraction",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/ContaminantIngredient",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/ModificationAgent",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/GeneElementIdentifier",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/ReferenceSourceClass",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/IsotopeComposition",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/MolecularComposition",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/Nuclide",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/Target",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/Gene",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/MechanicalIngredient",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/MolecularFragmentRole",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/SubstanceTypeClassifier",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/ColorIngredient",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/AgentModificationType",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/SubstanceRelationshipType",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/AgentModificationMethod",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/Parameter",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/IsotopicSubstitution",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/ReferenceSourceIdentifier",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/RadioactiveDecay",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/AmountType",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/SubstanceClassifierDomain",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/ChemicalElement"
+                ]
+            },
+            {
+                "type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+                "resources in master_v0.3.0 but not master ontology revision": [
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/hasDefiningOpticalActivity"
+                ],
+                "resources in master but not master_v0.3.0 ontology revision": [
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/hasRelatedSubstanceName",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/hasSubstanceType",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/hasAmount",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/isReferenceInformationFor",
+                    "https://www.omg.org/spec/Commons/QuantitiesAndUnits/hasQuantityValue",
+                    "https://www.omg.org/spec/Commons/QuantitiesAndUnits/hasQuantityValueRange",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/hasModificationRole",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/hasAmountType",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/hasReferenceQuantityValueRange",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/hasReferenceSourceDocumentType",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/hasModification",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/hasRelatedSubstanceIdentifier",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/hasAgentModificationType",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/hasModificationMoiety",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/hasTargetType",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/hasTargetName",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/hasParentNuclide",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/hasModifiedMolecularFragment",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/hasModificationAgent",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/hasSubstanceClassifierDomain",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/isGranularPartOf",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/hasInteractionType",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/hasStructuralModificationType",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/hasSubstanceClassificationSubtype",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/hasModificationType",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/hasNuclideName",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/hasResidueModified",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/hasDaughterNuclide",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/hasGranularPart",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/hasReferenceInformation",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/isSubjectSubstanceFor",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/hasParameter",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/hasReferenceSourceType",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/hasGranularMolecularPart",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/hasSubjectSubstance",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/hasIsotopeSubstitutionType",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/hasSubstanceClassificationType",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/hasTargetIdentifier",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/isGranularMolecularPartOf",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/hasRelatedSubstance",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/hasSubstanceNameDomain",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/hasHalfLife"
+                ]
+            },
+            {
+                "type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
+                "resources in master_v0.3.0 but not master ontology revision": [
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/hasChangeDate"
+                ],
+                "resources in master but not master_v0.3.0 ontology revision": [
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/hasCorrespondingDocument",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/hasNeutronNumber",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/hasNonNumericValue",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/hasOfficialNameStatusChangeDate",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/hasAmountText",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/hasReferenceSourceURL",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/hasMassNumber",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/hasPhysicalModificationRole",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/isDefiningSubstanceRelationship",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/hasModificationResidueSite",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/hasAtomicNumber",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/hasCodeChangeDate"
+                ]
+            },
+            {
+                "type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
+                "resources in master_v0.3.0 but not master ontology revision": [
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/hasChangeDate"
+                ],
+                "resources in master but not master_v0.3.0 ontology revision": [
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/hasCorrespondingDocument",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/hasNeutronNumber",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/hasNonNumericValue",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/hasOfficialNameStatusChangeDate",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/hasAmountText",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/hasReferenceSourceURL",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/hasMassNumber",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/hasPhysicalModificationRole",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/isDefiningSubstanceRelationship",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/hasModificationResidueSite",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/hasAtomicNumber",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/hasCodeChangeDate"
+                ]
+            },
+            {
+                "type": "http://www.w3.org/2002/07/owl#NamedIndividual",
+                "resources in master_v0.3.0 but not master ontology revision": [],
+                "resources in master but not master_v0.3.0 ontology revision": [
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/SubstanceTypeClassifier-SpecifiedSubstanceGroup1",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/SubstanceTypeClassifier-Polymer",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/ResidueModified-NonSpecificModifications",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/SubstanceTypeClassifier-SpecifiedSubstanceGroup2",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/ModificationMethodType-Structural",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/ReferenceSourceClass-Web",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/SubstanceTypeClassifier-Chemical",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/ReferenceSourceClass-RegulatorySubmission",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/AmountType-NLT",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/AmountType-Exact",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/ModificationMethodType-Agent",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/ModificationMethodType-Physical",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/SubstanceTypeClassifier-Mixture",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/AmountType-Approximate",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/ReferenceSourceClass-OfficialNameSource",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/IsotopicSubstitution-Specific",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/ReferenceSourceClass-PublicDatabase",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/SubstanceTypeClassifier-SpecifiedSubstanceGroup4",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/SubstanceTypeClassifier-NucleicAcid",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/AmountType-NMT",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/ReferenceSourceClass-OtherNameSource",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/ResidueModified-Random",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/SubstanceTypeClassifier-StructurallyDiverse",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/SubstanceTypeClassifier-SpecifiedSubstanceGroup3",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/ReferenceSourceClass-Literature",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/IsotopicSubstitution-Unknown",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/IsotopicSubstitution-NonSpecific",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/SubstanceTypeClassifier-Protein"
+                ]
+            }
+        ]
+    },
+    {
+        "ontology": "AmlodipineExample",
+        "delta": [
+            {
+                "type": "http://www.w3.org/2002/07/owl#NamedIndividual",
+                "resources in master_v0.3.0 but not master ontology revision": [
+                    "https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/AmlodipineExample/AmlodipineEMC",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/AmlodipineExample/AmlodipineAsReferenceSubstanceInNorvascPresentationStrength",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/AmlodipineExample/Norvasc",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/AmlodipineExample/AmlodipineAsReferenceSubstanceInAmlodipineEMCStrength"
+                ],
+                "resources in master but not master_v0.3.0 ontology revision": [
+                    "https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/AmlodipineExample/AmlodipineEMC-TherapeuticIndication-AnginaPectoris",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/AmlodipineExample/AmlodipineEMC-ManufacturedItem",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/AmlodipineExample/AmlodipineAsReferenceSubstance",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/AmlodipineExample/AmlodipineAsReferenceStrengthInNorvascPresentationStrength",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/AmlodipineExample/AmlodipineEMC-PharmaceuticalProduct",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/AmlodipineExample/Norvasc-ManufacturedItem",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/AmlodipineExample/AmlodipineAsReferenceStrengthInAmlodipineEMCStrength",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/AmlodipineExample/AmlodipineEMC-TherapeuticIndication-Hypertension",
+                    "https://spec.pistoiaalliance.org/idmp/ontology/EXT/Examples/AmlodipineExample/Norvasc-PharmaceuticalProduct"
+                ]
+            }
+        ]
+    },
+    {
+        "ontology": "QlairaExample",
+        "delta": [
+            {
+                "type": "http://www.w3.org/2002/07/owl#NamedIndividual",
+                "resources in master_v0.3.0 but not master ontology revision": [
+                    "https://spor.ema.europa.eu/smswi/#/products/IE-100000833-00000003-BlisterConsituent2",
+                    "https://spor.ema.europa.eu/smswi/#/products/00006006-2-MI-I-100000087105",
+                    "https://spor.ema.europa.eu/smswi/#/substances/100000080121",
+                    "https://spor.ema.europa.eu/smswi/#/products/IE-100000833-00000003-BlisterConsituent5",
+                    "https://spor.ema.europa.eu/smswi/#/products/00006006-2-MI-I-100000093305",
+                    "https://spor.ema.europa.eu/smswi/#/products/00006006-1-I-100000092217",
+                    "https://spor.ema.europa.eu/smswi/#/products/00006006-1-I-100000090493",
+                    "https://spor.ema.europa.eu/smswi/#/products/00006006-5-I-100000088586",
+                    "https://spor.ema.europa.eu/smswi/#/substances/100000078041",
+                    "https://spor.ema.europa.eu/smswi/#/products/IE-100000833-00000003-0001-SKU",
+                    "https://spor.ema.europa.eu/smswi/#/substances/100000093305",
+                    "https://spor.ema.europa.eu/smswi/#/products/00006006-2-MI-I-100000078762",
+                    "https://spor.ema.europa.eu/smswi/#/products/00006006-1",
+                    "https://spor.ema.europa.eu/smswi/#/products/00006006-1-I-100000076135",
+                    "https://spor.ema.europa.eu/smswi/#/products/00006006-2-MI-I-100000080121",
+                    "https://spor.ema.europa.eu/smswi/#/products/IE-100000833-00000003-ManufacturedItem5",
+                    "https://spor.ema.europa.eu/smswi/#/products/00006006-2-MI-I-100000090493",
+                    "https://spor.ema.europa.eu/smswi/#/products/00006006-5-I-100000087105",
+                    "https://spor.ema.europa.eu/smswi/#/products/00006006-5-I-100000078762",
+                    "https://spor.ema.europa.eu/smswi/#/products/IE-100000833-00000003-BlisterConsituent1",
+                    "https://spor.ema.europa.eu/smswi/#/products/00006006-2-MI-I-100000087133",
+                    "https://spor.ema.europa.eu/smswi/#/products/00006006-1-I-100000076429",
+                    "https://spor.ema.europa.eu/smswi/#/products/00006006-1-I-100000076427",
+                    "https://spor.ema.europa.eu/smswi/#/products/IE-100000833-00000003-0003-SKU",
+                    "https://spor.ema.europa.eu/smswi/#/products/IE-100000833-00000003-0002-1",
+                    "https://spor.ema.europa.eu/smswi/#/products/IE-100000833-00000003-0003-1-Constituency",
+                    "https://spor.ema.europa.eu/smswi/#/products/IE-100000833-00000003-BlisterConsituent3",
+                    "https://spor.ema.europa.eu/smswi/#/products/00006006-1-I-100000093305",
+                    "https://spor.ema.europa.eu/smswi/#/products/00006006-5-I-100000093305",
+                    "https://spor.ema.europa.eu/smswi/#/products/IE-100000833-00000003-Blister",
+                    "https://spor.ema.europa.eu/smswi/#/substances/100000092217",
+                    "https://spor.ema.europa.eu/smswi/#/products/00006006-1-I-100000088586",
+                    "https://spor.ema.europa.eu/smswi/#/products/IE-100000833-00000003-BlisterConsituency",
+                    "https://spor.ema.europa.eu/smswi/#/products/00006006-1-I-100000080121",
+                    "https://spor.ema.europa.eu/smswi/#/substances/100000076135",
+                    "https://spor.ema.europa.eu/smswi/#/products/00006006-5-I-100000080121",
+                    "https://spor.ema.europa.eu/smswi/#/products/00006006-5",
+                    "https://spor.ema.europa.eu/smswi/#/products/IE-100000833-00000003-0003",
+                    "https://spor.ema.europa.eu/smswi/#/substances/100000087105",
+                    "https://spor.ema.europa.eu/smswi/#/products/00006006-1-I-100000078041",
+                    "https://spor.ema.europa.eu/smswi/#/products/00006006-3",
+                    "https://spor.ema.europa.eu/smswi/#/products/IE-100000833-00000003-0002",
+                    "https://spor.ema.europa.eu/smswi/#/substances/100000078762",
+                    "https://spor.ema.europa.eu/smswi/#/products/00006006-5-I-100000092217",
+                    "https://spor.ema.europa.eu/smswi/#/products/00006006-2",
+                    "https://spor.ema.europa.eu/smswi/#/products/00006006-2-MI-I-100000076427",
+                    "https://spor.ema.europa.eu/smswi/#/products/IE-100000833-00000003-0003-1",
+                    "https://spor.ema.europa.eu/smswi/#/products/00006006-5-ProductComposition",
+                    "https://spor.ema.europa.eu/smswi/#/products/00006006-1-I-100000087105",
+                    "https://spor.ema.europa.eu/smswi/#/substances/100000076427",
+                    "https://spor.ema.europa.eu/smswi/#/products/IE-100000833-00000003-ManufacturedItem2",
+                    "https://spor.ema.europa.eu/smswi/#/products/00006006-4",
+                    "https://spor.ema.europa.eu/smswi/#/products/IE-100000833-00000003-BlisterConsituent4",
+                    "https://spor.ema.europa.eu/smswi/#/products/00006006-2-MI-I-100000088586",
+                    "https://spor.ema.europa.eu/smswi/#/products/00006006-2-MI-I-100000092217",
+                    "https://spor.ema.europa.eu/smswi/#/products/00006006-2-MI-I-100000076135",
+                    "https://spor.ema.europa.eu/smswi/#/products/00006006-2-MI-ProductComposition",
+                    "https://spor.ema.europa.eu/smswi/#/products/IE-100000833-00000003-0002-1-Constituency",
+                    "https://spor.ema.europa.eu/smswi/#/substances/100000088586",
+                    "https://spor.ema.europa.eu/smswi/#/products/IE-100000833-00000003-0001",
+                    "https://spor.ema.europa.eu/smswi/#/products/00006006-2-MI-I-100000078041",
+                    "https://spor.ema.europa.eu/smswi/#/products/00006006",
+                    "https://spor.ema.europa.eu/smswi/#/products/IE-100000833-00000003-0001-1",
+                    "https://spor.ema.europa.eu/smswi/#/substances/100000076429",
+                    "https://spor.ema.europa.eu/smswi/#/substances/100000087133",
+                    "https://spor.ema.europa.eu/smswi/#/products/00006006-5-I-100000076135",
+                    "https://spor.ema.europa.eu/smswi/#/products/IE-100000833-00000003-ManufacturedItem3",
+                    "https://spor.ema.europa.eu/smswi/#/products/00006006-1-I-100000078762",
+                    "https://spor.ema.europa.eu/smswi/#/products/IE-100000833-00000003-ManufacturedItem1",
+                    "https://spor.ema.europa.eu/smswi/#/products/IE-100000833-00000003-0001-1-Constituency",
+                    "https://spor.ema.europa.eu/smswi/#/products/IE-100000833-00000003-ManufacturedItem4",
+                    "https://spor.ema.europa.eu/smswi/#/products/00006006-1-ProductComposition",
+                    "https://spor.ema.europa.eu/smswi/#/substances/100000090493",
+                    "https://spor.ema.europa.eu/smswi/#/products/IE-100000833-00000003-0002-SKU"
+                ],
+                "resources in master but not master_v0.3.0 ontology revision": [
+                    "https://spor.ema.europa.eu/smswi/#/products//products/00006006-1-I-100000076427",
+                    "https://spor.ema.europa.eu/smswi/#/products//products/IE-100000833-00000003-ManufacturedItem4",
+                    "https://spor.ema.europa.eu/smswi/#/products//products/00006006-5-I-100000078762",
+                    "https://spor.ema.europa.eu/smswi/#/products//products/00006006-1-I-100000092217",
+                    "https://spor.ema.europa.eu/smswi/#/products//products/00006006-1-I-100000078041",
+                    "https://spor.ema.europa.eu/smswi/#/products//products/IE-100000833-00000003-0002-SKU",
+                    "https://spor.ema.europa.eu/smswi/#/products//products/00006006-5-I-100000076135",
+                    "https://spor.ema.europa.eu/smswi/#/products//products/IE-100000833-00000003-BlisterConsituent1",
+                    "https://spor.ema.europa.eu/smswi/#/products//products/IE-100000833-00000003-0001-SKU",
+                    "https://spor.ema.europa.eu/smswi/#/substances//substances/100000087105",
+                    "https://spor.ema.europa.eu/smswi/#/products//products/00006006-2-MI-I-100000076135",
+                    "https://spor.ema.europa.eu/smswi/#/products//products/00006006-5",
+                    "https://spor.ema.europa.eu/smswi/#/products//products/00006006-5-I-100000088586",
+                    "https://spor.ema.europa.eu/smswi/#/substances//substances/100000093305",
+                    "https://spor.ema.europa.eu/smswi/#/products//products/IE-100000833-00000003-0002-1-Constituency",
+                    "https://spor.ema.europa.eu/smswi/#/products//products/IE-100000833-00000003-BlisterConsituent2",
+                    "https://spor.ema.europa.eu/smswi/#/products//products/IE-100000833-00000003-ManufacturedItem5",
+                    "https://spor.ema.europa.eu/smswi/#/products//products/IE-100000833-00000003-0001",
+                    "https://spor.ema.europa.eu/smswi/#/products//products/IE-100000833-00000003-0003",
+                    "https://spor.ema.europa.eu/smswi/#/products//products/IE-100000833-00000003-0002",
+                    "https://spor.ema.europa.eu/smswi/#/substances//substances/100000076429",
+                    "https://spor.ema.europa.eu/smswi/#/products//products/00006006-1",
+                    "https://spor.ema.europa.eu/smswi/#/products//products/00006006-2-MI-I-100000076427",
+                    "https://spor.ema.europa.eu/smswi/#/products//products/00006006-1-ProductComposition",
+                    "https://spor.ema.europa.eu/smswi/#/products//products/IE-100000833-00000003-0001-1-Constituency",
+                    "https://spor.ema.europa.eu/smswi/#/substances//substances/100000076427",
+                    "https://spor.ema.europa.eu/smswi/#/products//products/00006006-1-I-100000076135",
+                    "https://spor.ema.europa.eu/smswi/#/products//products/IE-100000833-00000003-ManufacturedItem2",
+                    "https://spor.ema.europa.eu/smswi/#/substances//substances/100000090493",
+                    "https://spor.ema.europa.eu/smswi/#/products//products/IE-100000833-00000003-0003-SKU",
+                    "https://spor.ema.europa.eu/smswi/#/products//products/IE-100000833-00000003-BlisterConsituency",
+                    "https://spor.ema.europa.eu/smswi/#/products//products/00006006-2",
+                    "https://spor.ema.europa.eu/smswi/#/products//products/00006006-1-I-100000087105",
+                    "https://spor.ema.europa.eu/smswi/#/products//products/IE-100000833-00000003-ManufacturedItem3",
+                    "https://spor.ema.europa.eu/smswi/#/products//products/IE-100000833-00000003-ManufacturedItem1",
+                    "https://spor.ema.europa.eu/smswi/#/products//products/00006006-5-I-100000093305",
+                    "https://spor.ema.europa.eu/smswi/#/products//products/00006006-2-MI-I-100000078762",
+                    "https://spor.ema.europa.eu/smswi/#/products//products/00006006-1-I-100000093305",
+                    "https://spor.ema.europa.eu/smswi/#/substances//substances/100000087133",
+                    "https://spor.ema.europa.eu/smswi/#/products//products/00006006-4",
+                    "https://spor.ema.europa.eu/smswi/#/products//products/00006006-5-ProductComposition",
+                    "https://spor.ema.europa.eu/smswi/#/products//products/IE-100000833-00000003-0003-1",
+                    "https://spor.ema.europa.eu/smswi/#/products//products/IE-100000833-00000003-BlisterConsituent5",
+                    "https://spor.ema.europa.eu/smswi/#/products//products/00006006-2-MI-ProductComposition",
+                    "https://spor.ema.europa.eu/smswi/#/products//products/00006006-3",
+                    "https://spor.ema.europa.eu/smswi/#/substances//substances/100000088586",
+                    "https://spor.ema.europa.eu/smswi/#/products//products/00006006-1-I-100000076429",
+                    "https://spor.ema.europa.eu/smswi/#/products//products/IE-100000833-00000003-0002-1",
+                    "https://spor.ema.europa.eu/smswi/#/products//products/00006006-2-MI-I-100000092217",
+                    "https://spor.ema.europa.eu/smswi/#/products//products/00006006-1-I-100000090493",
+                    "https://spor.ema.europa.eu/smswi/#/products//products/00006006-1-I-100000088586",
+                    "https://spor.ema.europa.eu/smswi/#/products//products/00006006",
+                    "https://spor.ema.europa.eu/smswi/#/products//products/00006006-5-I-100000087105",
+                    "https://spor.ema.europa.eu/smswi/#/products//products/IE-100000833-00000003-Blister",
+                    "https://spor.ema.europa.eu/smswi/#/products//products/IE-100000833-00000003-0001-1",
+                    "https://spor.ema.europa.eu/smswi/#/products//products/00006006-2-MI-I-100000078041",
+                    "https://spor.ema.europa.eu/smswi/#/products//products/00006006-1-I-100000078762",
+                    "https://spor.ema.europa.eu/smswi/#/products//products/00006006-2-MI-I-100000080121",
+                    "https://spor.ema.europa.eu/smswi/#/products//products/IE-100000833-00000003-BlisterConsituent3",
+                    "https://spor.ema.europa.eu/smswi/#/substances//substances/100000078762",
+                    "https://spor.ema.europa.eu/smswi/#/products//products/IE-100000833-00000003-0003-1-Constituency",
+                    "https://spor.ema.europa.eu/smswi/#/substances//substances/100000078041",
+                    "https://spor.ema.europa.eu/smswi/#/products//products/00006006-2-MI-I-100000087133",
+                    "https://spor.ema.europa.eu/smswi/#/products//products/00006006-2-MI-I-100000090493",
+                    "https://spor.ema.europa.eu/smswi/#/products//products/00006006-5-I-100000092217",
+                    "https://spor.ema.europa.eu/smswi/#/substances//substances/100000092217",
+                    "https://spor.ema.europa.eu/smswi/#/products//products/00006006-2-MI-I-100000088586",
+                    "https://spor.ema.europa.eu/smswi/#/products//products/IE-100000833-00000003-BlisterConsituent4",
+                    "https://spor.ema.europa.eu/smswi/#/products//products/00006006-2-MI-I-100000093305",
+                    "https://spor.ema.europa.eu/smswi/#/products//products/00006006-1-I-100000080121",
+                    "https://spor.ema.europa.eu/smswi/#/products//products/00006006-2-MI-I-100000087105",
+                    "https://spor.ema.europa.eu/smswi/#/substances//substances/100000076135",
+                    "https://spor.ema.europa.eu/smswi/#/products//products/00006006-5-I-100000080121",
+                    "https://spor.ema.europa.eu/smswi/#/substances//substances/100000080121"
+                ]
             }
         ]
     }

@@ -1,313 +1,2612 @@
-@prefix cmns-doc: <https://www.omg.org/spec/Commons/Documents/> .
-@prefix cmns-id: <https://www.omg.org/spec/Commons/Identifiers/> .
-@prefix cmns-prd: <https://www.omg.org/spec/Commons/ProductsAndServices/> .
-@prefix cmns-pts: <https://www.omg.org/spec/Commons/PartiesAndSituations/> .
-@prefix idmp-sub: <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/> .
-@prefix iso11238-s-shacl: <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances-SHACL/> .
+@prefix Classifiers: <https://www.omg.org/spec/Commons/Classifiers/> .
+@prefix Collections: <https://www.omg.org/spec/Commons/Collections/> .
+@prefix CountryRepresentation: <https://www.omg.org/spec/LCC/Countries/CountryRepresentation/> .
+@prefix DatesAndTimes: <https://www.omg.org/spec/Commons/DatesAndTimes/> .
+@prefix Designators: <https://www.omg.org/spec/Commons/Designators/> .
+@prefix Documents: <https://www.omg.org/spec/Commons/Documents/> .
+@prefix ISO11238-Substances: <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/> .
+@prefix ISO21090-HarmonizedDatatypes: <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO21090-HarmonizedDatatypes/> .
+@prefix Identifiers: <https://www.omg.org/spec/Commons/Identifiers/> .
+@prefix LanguageRepresentation: <https://www.omg.org/spec/LCC/Languages/LanguageRepresentation/> .
+@prefix QuantitiesAndUnits: <https://www.omg.org/spec/Commons/QuantitiesAndUnits/> .
+@prefix TextDatatype: <https://www.omg.org/spec/Commons/TextDatatype/> .
+@prefix aidmpp-m-shacl: <https://spec.pistoiaalliance.org/idmp/ontology/AboutIDMPProd-Merged-SHACL/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-iso11238-s-shacl:AcidNodeShape a sh:NodeShape ;
-    sh:targetClass idmp-sub:Acid .
+aidmpp-m-shacl:AcidNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromhasSubstanceNameSubstanceNamePropertyShape,
+        aidmpp-m-shacl:someValuesFromhasSubstanceTypeSubstanceTypeClassifierPropertyShape ;
+    sh:targetClass ISO11238-Substances:Acid .
 
-iso11238-s-shacl:ActiveIngredientNodeShape a sh:NodeShape ;
-    sh:targetClass idmp-sub:ActiveIngredient .
+aidmpp-m-shacl:ActiveIngredientActiveMoietyBasisOfStrengthNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromhasStrengthStrengthPropertyShape,
+        aidmpp-m-shacl:someValuesFromisApplicableInRegulatoryContextPropertyShape,
+        aidmpp-m-shacl:someValuesFromisManifestedInManufacturedItemPropertyShape,
+        aidmpp-m-shacl:someValuesFromisPlayedBySubstancePropertyShape ;
+    sh:targetClass <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/ActiveIngredientActiveMoietyBasisOfStrength> .
 
-iso11238-s-shacl:AdditiveIngredientNodeShape a sh:NodeShape ;
-    sh:targetClass idmp-sub:AdditiveIngredient .
+aidmpp-m-shacl:ActiveIngredientEntireSubstanceBasisOfStrengthNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromhasStrengthStrengthPropertyShape,
+        aidmpp-m-shacl:someValuesFromisManifestedInManufacturedItemPropertyShape,
+        aidmpp-m-shacl:someValuesFromisPlayedBySubstancePropertyShape ;
+    sh:targetClass <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/ActiveIngredientEntireSubstanceBasisOfStrength> .
 
-iso11238-s-shacl:AdjuvantNodeShape a sh:NodeShape ;
-    sh:targetClass idmp-sub:Adjuvant .
+aidmpp-m-shacl:ActiveIngredientNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromisManifestedInManufacturedItemPropertyShape,
+        aidmpp-m-shacl:someValuesFromisPlayedBySubstancePropertyShape ;
+    sh:targetClass ISO11238-Substances:ActiveIngredient .
 
-iso11238-s-shacl:AgentModificationMethodNodeShape a sh:NodeShape ;
-    sh:targetClass idmp-sub:AgentModificationMethod .
+aidmpp-m-shacl:ActiveIngredientReferenceSubstanceBasisOfStrengthNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromhasReferenceStrengthReferenceStrengthPropertyShape,
+        aidmpp-m-shacl:someValuesFromhasReferenceSubstanceSubstancePropertyShape,
+        aidmpp-m-shacl:someValuesFromisManifestedInManufacturedItemPropertyShape,
+        aidmpp-m-shacl:someValuesFromisPlayedBySubstancePropertyShape ;
+    sh:targetClass <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/ActiveIngredientReferenceSubstanceBasisOfStrength> .
 
-iso11238-s-shacl:AnalyticalMethodNodeShape a sh:NodeShape ;
-    sh:targetClass idmp-sub:AnalyticalMethod .
+aidmpp-m-shacl:ActiveIngredientWithoutBasisOfStrengthNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromisManifestedInManufacturedItemPropertyShape,
+        aidmpp-m-shacl:someValuesFromisPlayedBySubstancePropertyShape ;
+    sh:targetClass <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/ActiveIngredientWithoutBasisOfStrength> .
 
-iso11238-s-shacl:BaseIngredientNodeShape a sh:NodeShape ;
-    sh:targetClass idmp-sub:BaseIngredient .
+aidmpp-m-shacl:ActiveMoietyRoleNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromisApplicableInRegulatoryContextPropertyShape ;
+    sh:targetClass ISO11238-Substances:ActiveMoietyRole .
 
-iso11238-s-shacl:BaseNodeShape a sh:NodeShape ;
-    sh:targetClass idmp-sub:Base .
+aidmpp-m-shacl:ActivityBasedStrengthNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromrefersToSubstancePropertyShape ;
+    sh:targetClass <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/ActivityBasedStrength> .
 
-iso11238-s-shacl:ChemicalElementNodeShape a sh:NodeShape ;
-    sh:targetClass idmp-sub:ChemicalElement .
+aidmpp-m-shacl:AdditiveIngredientNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromisManifestedInManufacturedItemPropertyShape,
+        aidmpp-m-shacl:someValuesFromisPlayedBySubstancePropertyShape ;
+    sh:targetClass ISO11238-Substances:AdditiveIngredient .
 
-iso11238-s-shacl:ChemicalSubstanceNodeShape a sh:NodeShape ;
-    sh:targetClass idmp-sub:ChemicalSubstance .
+aidmpp-m-shacl:AdjuvantNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromisManifestedInManufacturedItemPropertyShape,
+        aidmpp-m-shacl:someValuesFromisPlayedBySubstancePropertyShape ;
+    sh:targetClass ISO11238-Substances:Adjuvant .
 
-iso11238-s-shacl:ColorIngredientNodeShape a sh:NodeShape ;
-    sh:targetClass idmp-sub:ColorIngredient .
+aidmpp-m-shacl:AgentModificationMethodNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromhasModificationAgentModificationAgentPropertyShape,
+        aidmpp-m-shacl:someValuesFromspecifiesModificationPropertyShape ;
+    sh:targetClass ISO11238-Substances:AgentModificationMethod .
 
-iso11238-s-shacl:ContaminantIngredientNodeShape a sh:NodeShape ;
-    sh:targetClass idmp-sub:ContaminantIngredient .
+aidmpp-m-shacl:AgentModificationTypeNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromclassifiesAgentModificationMethodPropertyShape,
+        aidmpp-m-shacl:someValuesFromisMemberOfCodeSetPropertyShape ;
+    sh:targetClass ISO11238-Substances:AgentModificationType .
 
-iso11238-s-shacl:EsterNodeShape a sh:NodeShape ;
-    sh:targetClass idmp-sub:Ester .
+aidmpp-m-shacl:Alpha2LanguageCodeNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromhasTagstringPropertyShape,
+        aidmpp-m-shacl:someValuesFromidentifiesLanguagePropertyShape,
+        aidmpp-m-shacl:someValuesFromisMemberOfCodeSetPropertyShape ;
+    sh:targetClass LanguageRepresentation:Alpha2LanguageCode .
 
-iso11238-s-shacl:ExcipientNodeShape a sh:NodeShape ;
-    sh:targetClass idmp-sub:Excipient .
+aidmpp-m-shacl:Alpha2RegionCodeNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromhasTagstringPropertyShape,
+        aidmpp-m-shacl:someValuesFromidentifiesGeographicRegionPropertyShape,
+        aidmpp-m-shacl:someValuesFromisMemberOfCodeSetPropertyShape ;
+    sh:targetClass CountryRepresentation:Alpha2RegionCode .
 
-iso11238-s-shacl:FlavorIngredientNodeShape a sh:NodeShape ;
-    sh:targetClass idmp-sub:FlavorIngredient .
+aidmpp-m-shacl:Alpha3LanguageCodeNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromhasTagstringPropertyShape,
+        aidmpp-m-shacl:someValuesFromidentifiesLanguagePropertyShape,
+        aidmpp-m-shacl:someValuesFromisMemberOfCodeSetPropertyShape ;
+    sh:targetClass LanguageRepresentation:Alpha3LanguageCode .
 
-iso11238-s-shacl:GeneElementTypeNodeShape a sh:NodeShape ;
-    sh:targetClass idmp-sub:GeneElementType .
+aidmpp-m-shacl:Alpha3RegionCodeNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromhasTagstringPropertyShape,
+        aidmpp-m-shacl:someValuesFromidentifiesGeographicRegionPropertyShape,
+        aidmpp-m-shacl:someValuesFromisMemberOfCodeSetPropertyShape ;
+    sh:targetClass CountryRepresentation:Alpha3RegionCode .
 
-iso11238-s-shacl:HydrateNodeShape a sh:NodeShape ;
-    sh:targetClass idmp-sub:Hydrate .
+aidmpp-m-shacl:AmountTypeNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromisMemberOfCodeSetPropertyShape ;
+    sh:targetClass ISO11238-Substances:AmountType .
 
-iso11238-s-shacl:InactiveIngredientNodeShape a sh:NodeShape ;
-    sh:targetClass idmp-sub:InactiveIngredient .
+aidmpp-m-shacl:AnalyticalMethodNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromspecifiesAnalysisPropertyShape ;
+    sh:targetClass ISO11238-Substances:AnalyticalMethod .
 
-iso11238-s-shacl:IsotopeNodeShape a sh:NodeShape ;
-    sh:targetClass idmp-sub:Isotope .
+aidmpp-m-shacl:AnnualizedStandardDeviationNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromappliesToFinitePopulationPropertyShape,
+        aidmpp-m-shacl:someValuesFromhasObservedValueStructuredCollectionPropertyShape ;
+    sh:targetClass <https://www.omg.org/spec/Commons/StatisticalMeasures/AnnualizedStandardDeviation> .
 
-iso11238-s-shacl:ManufacturedItemNodeShape a sh:NodeShape ;
-    sh:targetClass idmp-sub:ManufacturedItem .
+aidmpp-m-shacl:ArbitraryUnitNodeShape a sh:NodeShape ;
+    sh:or ( aidmpp-m-shacl:someValuesFromisIdentifiedByUnitOfMeasureIdentifierPropertyShape aidmpp-m-shacl:someValuesFrominverseOfidentifiesMeasurementUnitPropertyShape ) ;
+    sh:property aidmpp-m-shacl:someValuesFromhasQuantityKindQuantityKindPropertyShape ;
+    sh:targetClass QuantitiesAndUnits:ArbitraryUnit .
 
-iso11238-s-shacl:MaterialRoleNodeShape a sh:NodeShape ;
-    sh:targetClass idmp-sub:MaterialRole .
+aidmpp-m-shacl:ArithmeticMeanNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromhasObservedValueStructuredCollectionPropertyShape ;
+    sh:targetClass <https://www.omg.org/spec/Commons/StatisticalMeasures/ArithmeticMean> .
 
-iso11238-s-shacl:MaterialSpecificationNodeShape a sh:NodeShape ;
-    sh:targetClass idmp-sub:MaterialSpecification .
+aidmpp-m-shacl:AuthorizationNodeShape a sh:NodeShape ;
+    sh:or ( aidmpp-m-shacl:someValuesFromhasAuthorizedPartyAuthorizedPartyPropertyShape aidmpp-m-shacl:someValuesFrominverseOfisAuthorizedThroughAuthorizationPropertyShape ) ;
+    sh:property aidmpp-m-shacl:someValuesFromhasSubjectRoleRolePropertyShape ;
+    sh:targetClass <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/Authorization> .
 
-iso11238-s-shacl:MechanicalIngredientNodeShape a sh:NodeShape ;
-    sh:targetClass idmp-sub:MechanicalIngredient .
+aidmpp-m-shacl:AuthorizedMedicinalProductNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromhasAuthorizationAuthorizationPropertyShape,
+        aidmpp-m-shacl:someValuesFromisPlayedByProductPropertyShape ;
+    sh:targetClass <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/AuthorizedMedicinalProduct> .
 
-iso11238-s-shacl:MixtureNodeShape a sh:NodeShape ;
-    sh:targetClass idmp-sub:Mixture .
+aidmpp-m-shacl:AuthorizedPartyNodeShape a sh:NodeShape ;
+    sh:or ( aidmpp-m-shacl:someValuesFromisAuthorizedThroughAuthorizationPropertyShape aidmpp-m-shacl:someValuesFrominverseOfhasAuthorizedPartyAuthorizedPartyPropertyShape ) ;
+    sh:targetClass <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/AuthorizedParty> .
 
-iso11238-s-shacl:ModificationAgentNodeShape a sh:NodeShape ;
-    sh:targetClass idmp-sub:ModificationAgent .
+aidmpp-m-shacl:AuthorizingPartyNodeShape a sh:NodeShape ;
+    sh:or ( aidmpp-m-shacl:someValuesFromauthorizesThroughAuthorizationPropertyShape aidmpp-m-shacl:someValuesFrominverseOfhasAuthorizingPartyAuthorizingPartyPropertyShape ) ;
+    sh:targetClass <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/AuthorizingParty> .
 
-iso11238-s-shacl:ModificationMethodNodeShape a sh:NodeShape ;
-    sh:targetClass idmp-sub:ModificationMethod .
+aidmpp-m-shacl:AverageAbsoluteDeviationNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromappliesToFinitePopulationPropertyShape,
+        aidmpp-m-shacl:someValuesFromhasObservedValueStructuredCollectionPropertyShape ;
+    sh:targetClass <https://www.omg.org/spec/Commons/StatisticalMeasures/AverageAbsoluteDeviation> .
 
-iso11238-s-shacl:ModificationRoleNodeShape a sh:NodeShape ;
-    sh:targetClass idmp-sub:ModificationRole .
+aidmpp-m-shacl:BaseIngredientNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromisManifestedInManufacturedItemPropertyShape,
+        aidmpp-m-shacl:someValuesFromisPlayedBySubstancePropertyShape ;
+    sh:targetClass ISO11238-Substances:BaseIngredient .
 
-iso11238-s-shacl:MoietyNodeShape a sh:NodeShape ;
-    sh:targetClass idmp-sub:Moiety .
+aidmpp-m-shacl:BaseNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromhasSubstanceNameSubstanceNamePropertyShape,
+        aidmpp-m-shacl:someValuesFromhasSubstanceTypeSubstanceTypeClassifierPropertyShape ;
+    sh:targetClass ISO11238-Substances:Base .
 
-iso11238-s-shacl:MolecularConstituentNodeShape a sh:NodeShape ;
-    sh:targetClass idmp-sub:MolecularConstituent .
+aidmpp-m-shacl:BaseUnitNodeShape a sh:NodeShape ;
+    sh:or ( aidmpp-m-shacl:someValuesFromisIdentifiedByUnitOfMeasureIdentifierPropertyShape aidmpp-m-shacl:someValuesFrominverseOfidentifiesMeasurementUnitPropertyShape ) ;
+    sh:property aidmpp-m-shacl:someValuesFromhasQuantityKindQuantityKindPropertyShape,
+        aidmpp-m-shacl:someValuesFromisDefinedInSystemOfUnitsPropertyShape ;
+    sh:targetClass QuantitiesAndUnits:BaseUnit .
 
-iso11238-s-shacl:MolecularFragmentNodeShape a sh:NodeShape ;
-    sh:targetClass idmp-sub:MolecularFragment .
+aidmpp-m-shacl:BatchNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromcomprisesMatterPropertyShape,
+        aidmpp-m-shacl:someValuesFromisConstituentOfProductPropertyShape,
+        aidmpp-m-shacl:someValuesFromisOutputOfBatchManufacturingProcessPropertyShape ;
+    sh:targetClass <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/Batch> .
 
-iso11238-s-shacl:MolecularFragmentRoleNodeShape a sh:NodeShape ;
-    sh:targetClass idmp-sub:MolecularFragmentRole .
+aidmpp-m-shacl:BatchNumberNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromdenotesBatchPropertyShape ;
+    sh:targetClass <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/BatchNumber> .
 
-iso11238-s-shacl:MoleculeNodeShape a sh:NodeShape ;
-    sh:targetClass idmp-sub:Molecule .
+aidmpp-m-shacl:BibliographicCodeNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromhasTagstringPropertyShape,
+        aidmpp-m-shacl:someValuesFromidentifiesLanguagePropertyShape,
+        aidmpp-m-shacl:someValuesFromisMemberOfCodeSetPropertyShape ;
+    sh:targetClass LanguageRepresentation:BibliographicCode .
 
-iso11238-s-shacl:MonodisperseSubstanceNodeShape a sh:NodeShape ;
-    sh:targetClass idmp-sub:MonodisperseSubstance .
+aidmpp-m-shacl:ChemicalElementNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromhasDefiningStructureMolecularStructurePropertyShape,
+        aidmpp-m-shacl:someValuesFromhasSubstanceNameSubstanceNamePropertyShape,
+        aidmpp-m-shacl:someValuesFromhasSubstanceTypeSubstanceTypeClassifierPropertyShape ;
+    sh:targetClass ISO11238-Substances:ChemicalElement .
 
-iso11238-s-shacl:NucleicAcidSubstanceNodeShape a sh:NodeShape ;
-    sh:targetClass idmp-sub:NucleicAcidSubstance .
+aidmpp-m-shacl:ChemicalSubstanceNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromhasDefiningStructureMolecularStructurePropertyShape,
+        aidmpp-m-shacl:someValuesFromhasSubstanceNameSubstanceNamePropertyShape,
+        aidmpp-m-shacl:someValuesFromhasSubstanceTypeSubstanceTypeClassifierPropertyShape ;
+    sh:targetClass ISO11238-Substances:ChemicalSubstance .
 
-iso11238-s-shacl:OpticalActivityNodeShape a sh:NodeShape ;
-    sh:targetClass idmp-sub:OpticalActivity .
+aidmpp-m-shacl:ClinicalTrialAuthorizationNodeShape a sh:NodeShape ;
+    sh:or ( aidmpp-m-shacl:someValuesFromhasAuthorizedPartyAuthorizedPartyPropertyShape aidmpp-m-shacl:someValuesFrominverseOfisAuthorizedThroughAuthorizationPropertyShape ) ;
+    sh:property aidmpp-m-shacl:someValuesFromappliesToClinicalTrialPropertyShape,
+        aidmpp-m-shacl:someValuesFromhasSubjectRoleRolePropertyShape,
+        aidmpp-m-shacl:someValuesFromisApplicableInGeographicRegionPropertyShape ;
+    sh:targetClass <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/ClinicalTrialAuthorization> .
 
-iso11238-s-shacl:PhysicalManufacturedItemNodeShape a sh:NodeShape ;
-    sh:targetClass idmp-sub:PhysicalManufacturedItem .
+aidmpp-m-shacl:ClinicalTrialIdentifierNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromisApplicableInContextPropertyShape,
+        aidmpp-m-shacl:someValuesFromisMemberOfCodeSetPropertyShape,
+        aidmpp-m-shacl:someValuesFromisRegisteredInRegistryPropertyShape ;
+    sh:targetClass <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/ClinicalTrialIdentifier> .
 
-iso11238-s-shacl:PhysicalModificationMethodNodeShape a sh:NodeShape ;
-    sh:targetClass idmp-sub:PhysicalModificationMethod .
+aidmpp-m-shacl:ClinicalTrialNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromevaluatesInvestigationalMedicinalProductPropertyShape,
+        aidmpp-m-shacl:someValuesFromhasSubjectRoleRolePropertyShape,
+        aidmpp-m-shacl:someValuesFrommanagesAdministrationOfInvestigationalMedicinalProductPropertyShape ;
+    sh:targetClass <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/ClinicalTrial> .
 
-iso11238-s-shacl:PhysicalSubstanceNodeShape a sh:NodeShape ;
-    sh:targetClass idmp-sub:PhysicalSubstance .
+aidmpp-m-shacl:CodeElementNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromisMemberOfCodeSetPropertyShape ;
+    sh:targetClass <https://www.omg.org/spec/Commons/CodesAndCodeSets/CodeElement> .
 
-iso11238-s-shacl:PolydisperseSubstanceNodeShape a sh:NodeShape ;
-    sh:targetClass idmp-sub:PolydisperseSubstance .
+aidmpp-m-shacl:CodeSystemIdentifierNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromidentifiesCodeSetPropertyShape ;
+    sh:targetClass <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11240-UnitsOfMeasurement/CodeSystemIdentifier> .
 
-iso11238-s-shacl:PolymerSubstanceNodeShape a sh:NodeShape ;
-    sh:targetClass idmp-sub:PolymerSubstance .
+aidmpp-m-shacl:CodingRationaleNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromhasLevelInHierarchynonNegativeIntegerPropertyShape,
+        aidmpp-m-shacl:someValuesFromisMemberOfCodeSetPropertyShape ;
+    sh:targetClass ISO21090-HarmonizedDatatypes:CodingRationale .
 
-iso11238-s-shacl:PreservativeIngredientNodeShape a sh:NodeShape ;
-    sh:targetClass idmp-sub:PreservativeIngredient .
+aidmpp-m-shacl:CoherentDerivedUnitNodeShape a sh:NodeShape ;
+    sh:or ( aidmpp-m-shacl:someValuesFromisIdentifiedByUnitOfMeasureIdentifierPropertyShape aidmpp-m-shacl:someValuesFrominverseOfidentifiesMeasurementUnitPropertyShape ) ;
+    sh:property aidmpp-m-shacl:someValuesFromhasQuantityKindQuantityKindPropertyShape,
+        aidmpp-m-shacl:someValuesFromisDefinedInSystemOfUnitsPropertyShape,
+        aidmpp-m-shacl:someValuesFromisDerivedFromBaseUnitPropertyShape ;
+    sh:targetClass QuantitiesAndUnits:CoherentDerivedUnit .
 
-iso11238-s-shacl:ProcessingMaterialRoleNodeShape a sh:NodeShape ;
-    sh:targetClass idmp-sub:ProcessingMaterialRole .
+aidmpp-m-shacl:CollectiveLanguageCodeNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromhasTagstringPropertyShape,
+        aidmpp-m-shacl:someValuesFromidentifiesLanguagePropertyShape,
+        aidmpp-m-shacl:someValuesFromisMemberOfCodeSetPropertyShape ;
+    sh:targetClass LanguageRepresentation:CollectiveLanguageCode .
 
-iso11238-s-shacl:ProteinSubstanceNodeShape a sh:NodeShape ;
-    sh:targetClass idmp-sub:ProteinSubstance .
+aidmpp-m-shacl:ColorIngredientNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromisManifestedInManufacturedItemPropertyShape,
+        aidmpp-m-shacl:someValuesFromisPlayedBySubstancePropertyShape ;
+    sh:targetClass ISO11238-Substances:ColorIngredient .
 
-iso11238-s-shacl:RadioactiveDecayNodeShape a sh:NodeShape ;
-    sh:targetClass idmp-sub:RadioactiveDecay .
+aidmpp-m-shacl:ComorbidityNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromisMemberOfCodeSetPropertyShape ;
+    sh:targetClass <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/Comorbidity> .
 
-iso11238-s-shacl:RadionuclideNodeShape a sh:NodeShape ;
-    sh:targetClass idmp-sub:Radionuclide .
+aidmpp-m-shacl:CompressionAlgorithmNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromhasLevelInHierarchynonNegativeIntegerPropertyShape,
+        aidmpp-m-shacl:someValuesFromisMemberOfCodeSetPropertyShape ;
+    sh:targetClass ISO21090-HarmonizedDatatypes:CompressionAlgorithm .
 
-iso11238-s-shacl:ReferenceSourceNodeShape a sh:NodeShape ;
-    sh:targetClass idmp-sub:ReferenceSource .
+aidmpp-m-shacl:ConcentrationNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromrefersToSubstancePropertyShape ;
+    sh:targetClass <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/Concentration> .
 
-iso11238-s-shacl:ResultantMaterialRoleNodeShape a sh:NodeShape ;
-    sh:targetClass idmp-sub:ResultantMaterialRole .
+aidmpp-m-shacl:ConformanceLevelNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromisMemberOfCodeSetPropertyShape ;
+    sh:targetClass ISO11238-Substances:ConformanceLevel .
 
-iso11238-s-shacl:SaltNodeShape a sh:NodeShape ;
-    sh:targetClass idmp-sub:Salt .
+aidmpp-m-shacl:ConstantNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromhasMeasurementUnitMeasurementUnitPropertyShape ;
+    sh:targetClass QuantitiesAndUnits:Constant .
 
-iso11238-s-shacl:SingleSubstanceNodeShape a sh:NodeShape ;
-    sh:targetClass idmp-sub:SingleSubstance .
+aidmpp-m-shacl:ContainerConstituencyNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromhasConstituentContainerConstituentPropertyShape,
+        aidmpp-m-shacl:someValuesFromisApplicableInPackagedMedicinalProductPropertyShape ;
+    sh:targetClass <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/ContainerConstituency> .
 
-iso11238-s-shacl:SourceMaterialRoleNodeShape a sh:NodeShape ;
-    sh:targetClass idmp-sub:SourceMaterialRole .
+aidmpp-m-shacl:ContainerSpecificationNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromspecifiesContainerPropertyShape ;
+    sh:targetClass <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/ContainerSpecification> .
 
-iso11238-s-shacl:SpecifiedSubstanceNodeShape a sh:NodeShape ;
-    sh:targetClass idmp-sub:SpecifiedSubstance .
+aidmpp-m-shacl:ContaminantIngredientNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromisManifestedInManufacturedItemPropertyShape,
+        aidmpp-m-shacl:someValuesFromisPlayedBySubstancePropertyShape ;
+    sh:targetClass ISO11238-Substances:ContaminantIngredient .
 
-iso11238-s-shacl:StabilizerIngredientNodeShape a sh:NodeShape ;
-    sh:targetClass idmp-sub:StabilizerIngredient .
+aidmpp-m-shacl:ContextualIdentificationSchemeNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromisApplicableInContextPropertyShape ;
+    sh:targetClass <https://www.omg.org/spec/Commons/ContextualIdentifiers/ContextualIdentificationScheme> .
 
-iso11238-s-shacl:StartingMaterialRoleNodeShape a sh:NodeShape ;
-    sh:targetClass idmp-sub:StartingMaterialRole .
+aidmpp-m-shacl:ContextualIdentifierNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromisApplicableInContextPropertyShape ;
+    sh:targetClass <https://www.omg.org/spec/Commons/ContextualIdentifiers/ContextualIdentifier> .
 
-iso11238-s-shacl:StructuralModificationMethodNodeShape a sh:NodeShape ;
-    sh:targetClass idmp-sub:StructuralModificationMethod .
+aidmpp-m-shacl:ContextualNameNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromisApplicableInContextPropertyShape ;
+    sh:targetClass <https://www.omg.org/spec/Commons/ContextualDesignators/ContextualName> .
 
-iso11238-s-shacl:StructurallyDiverseSubstanceNodeShape a sh:NodeShape ;
-    sh:targetClass idmp-sub:StructurallyDiverseSubstance .
+aidmpp-m-shacl:ContraindicationNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromisContraindicationForMedicinalProductPropertyShape ;
+    sh:targetClass <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/Contraindication> .
 
-iso11238-s-shacl:SubstanceNodeShape a sh:NodeShape ;
-    sh:targetClass idmp-sub:Substance .
+aidmpp-m-shacl:ConversionBasedUnitNodeShape a sh:NodeShape ;
+    sh:or ( aidmpp-m-shacl:someValuesFromisIdentifiedByUnitOfMeasureIdentifierPropertyShape aidmpp-m-shacl:someValuesFrominverseOfidentifiesMeasurementUnitPropertyShape ) ;
+    sh:property aidmpp-m-shacl:someValuesFromhasQuantityKindQuantityKindPropertyShape,
+        aidmpp-m-shacl:someValuesFromisDefinedInSystemOfUnitsPropertyShape,
+        aidmpp-m-shacl:someValuesFromisDerivedFromBaseUnitPropertyShape ;
+    sh:targetClass QuantitiesAndUnits:ConversionBasedUnit .
 
-iso11238-s-shacl:SubstanceRoleNodeShape a sh:NodeShape ;
-    sh:targetClass idmp-sub:SubstanceRole .
+aidmpp-m-shacl:CountrySubdivisionNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromisClassifiedByGeographicRegionKindPropertyShape ;
+    sh:targetClass CountryRepresentation:CountrySubdivision .
 
-iso11238-s-shacl:SubstrateTargetInteractionNodeShape a sh:NodeShape ;
-    sh:targetClass idmp-sub:SubstrateTargetInteraction .
+aidmpp-m-shacl:CountyNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromisClassifiedByGeographicRegionKindPropertyShape ;
+    sh:targetClass <https://www.omg.org/spec/Commons/Locations/County> .
 
-iso11238-s-shacl:someValuesFromclassifiesGeneElementPropertyShape a sh:PropertyShape ;
-    sh:class idmp-sub:GeneElement ;
+aidmpp-m-shacl:DatatypeFlavorNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromhasLevelInHierarchynonNegativeIntegerPropertyShape,
+        aidmpp-m-shacl:someValuesFromisMemberOfCodeSetPropertyShape ;
+    sh:targetClass ISO21090-HarmonizedDatatypes:DatatypeFlavor .
+
+aidmpp-m-shacl:DerivedQuantityKindNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromisDerivedFromQuantityKindPropertyShape ;
+    sh:targetClass QuantitiesAndUnits:DerivedQuantityKind .
+
+aidmpp-m-shacl:DerivedUnitNodeShape a sh:NodeShape ;
+    sh:or ( aidmpp-m-shacl:someValuesFromisIdentifiedByUnitOfMeasureIdentifierPropertyShape aidmpp-m-shacl:someValuesFrominverseOfidentifiesMeasurementUnitPropertyShape ) ;
+    sh:property aidmpp-m-shacl:someValuesFromhasQuantityKindQuantityKindPropertyShape,
+        aidmpp-m-shacl:someValuesFromisDefinedInSystemOfUnitsPropertyShape,
+        aidmpp-m-shacl:someValuesFromisDerivedFromBaseUnitPropertyShape ;
+    sh:targetClass QuantitiesAndUnits:DerivedUnit .
+
+aidmpp-m-shacl:DevolvedGovernmentNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromgovernsGeopoliticalEntityPropertyShape ;
+    sh:targetClass <https://www.omg.org/spec/Commons/GovernmentEntities/DevolvedGovernment> .
+
+aidmpp-m-shacl:DiseaseStatusNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromisMemberOfCodeSetPropertyShape ;
+    sh:targetClass <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/DiseaseStatus> .
+
+aidmpp-m-shacl:DispersionNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromappliesToFinitePopulationPropertyShape,
+        aidmpp-m-shacl:someValuesFromhasObservedValueStructuredCollectionPropertyShape ;
+    sh:targetClass <https://www.omg.org/spec/Commons/StatisticalMeasures/Dispersion> .
+
+aidmpp-m-shacl:DoseNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromhasMeasurementUnitMeasurementUnitPropertyShape ;
+    sh:targetClass <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/Dose> .
+
+aidmpp-m-shacl:ElementGroupNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromhasNameNamePropertyShape,
+        aidmpp-m-shacl:someValuesFromisIncludedInSpecifiedSubstanceGroupPropertyShape ;
+    sh:targetClass ISO11238-Substances:ElementGroup .
+
+aidmpp-m-shacl:EsterNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromhasSubstanceNameSubstanceNamePropertyShape,
+        aidmpp-m-shacl:someValuesFromhasSubstanceTypeSubstanceTypeClassifierPropertyShape ;
+    sh:targetClass ISO11238-Substances:Ester .
+
+aidmpp-m-shacl:ExcipientNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromisManifestedInManufacturedItemPropertyShape,
+        aidmpp-m-shacl:someValuesFromisPlayedBySubstancePropertyShape ;
+    sh:targetClass ISO11238-Substances:Excipient .
+
+aidmpp-m-shacl:FederalGovernmentNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromgovernsGeopoliticalEntityPropertyShape ;
+    sh:targetClass <https://www.omg.org/spec/Commons/GovernmentEntities/FederalGovernment> .
+
+aidmpp-m-shacl:FederalStateNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromisClassifiedByGeographicRegionKindPropertyShape ;
+    sh:targetClass <https://www.omg.org/spec/Commons/Locations/FederalState> .
+
+aidmpp-m-shacl:FederatedSovereigntyNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromhasSovereigntyOverGeopoliticalEntityPropertyShape,
+        aidmpp-m-shacl:someValuesFromisRepresentedByGovernmentPropertyShape ;
+    sh:targetClass <https://www.omg.org/spec/Commons/GovernmentEntities/FederatedSovereignty> .
+
+aidmpp-m-shacl:FlavorIngredientNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromisManifestedInManufacturedItemPropertyShape,
+        aidmpp-m-shacl:someValuesFromisPlayedBySubstancePropertyShape ;
+    sh:targetClass ISO11238-Substances:FlavorIngredient .
+
+aidmpp-m-shacl:GS1CompanyPrefixIssuerNodeShape a sh:NodeShape ;
+    sh:or ( aidmpp-m-shacl:someValuesFromprovidesServicePropertyShape aidmpp-m-shacl:someValuesFrominverseOfisProvidedByServiceProviderPropertyShape ) ;
+    sh:property aidmpp-m-shacl:someValuesFromissuesGS1CompanyPrefixPropertyShape ;
+    sh:targetClass <https://www.omg.org/spec/Commons/ProductsAndServices/GS1CompanyPrefixIssuer> .
+
+aidmpp-m-shacl:GS1CompanyPrefixNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromisApplicableInContextPropertyShape ;
+    sh:targetClass <https://www.omg.org/spec/Commons/ProductsAndServices/GS1CompanyPrefix> .
+
+aidmpp-m-shacl:GS1UserNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromisPlayedByLegalEntityPropertyShape ;
+    sh:targetClass <https://www.omg.org/spec/Commons/ProductsAndServices/GS1User> .
+
+aidmpp-m-shacl:GeneElementIdentifierNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromidentifiesGeneElementPropertyShape ;
+    sh:targetClass ISO11238-Substances:GeneElementIdentifier .
+
+aidmpp-m-shacl:GeneElementNameNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromisApplicableInContextPropertyShape,
+        aidmpp-m-shacl:someValuesFromisNameOfGeneElementPropertyShape ;
+    sh:targetClass ISO11238-Substances:GeneElementName .
+
+aidmpp-m-shacl:GeneElementTypeNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromclassifiesGeneElementPropertyShape,
+        aidmpp-m-shacl:someValuesFromisMemberOfCodeSetPropertyShape ;
+    sh:targetClass ISO11238-Substances:GeneElementType .
+
+aidmpp-m-shacl:GeneIdentifierNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromidentifiesGenePropertyShape ;
+    sh:targetClass ISO11238-Substances:GeneIdentifier .
+
+aidmpp-m-shacl:GeneNameNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromisApplicableInContextPropertyShape,
+        aidmpp-m-shacl:someValuesFromisNameOfGenePropertyShape ;
+    sh:targetClass ISO11238-Substances:GeneName .
+
+aidmpp-m-shacl:GeneSequenceOriginNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromisApplicableInContextPropertyShape,
+        aidmpp-m-shacl:someValuesFromisNameOfGenePropertyShape ;
+    sh:targetClass ISO11238-Substances:GeneSequenceOrigin .
+
+aidmpp-m-shacl:GeographicRegionIdentifierNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromhasTagstringPropertyShape,
+        aidmpp-m-shacl:someValuesFromidentifiesGeographicRegionPropertyShape,
+        aidmpp-m-shacl:someValuesFromisMemberOfCodeSetPropertyShape ;
+    sh:targetClass CountryRepresentation:GeographicRegionIdentifier .
+
+aidmpp-m-shacl:GeometricMeanNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromhasObservedValueStructuredCollectionPropertyShape ;
+    sh:targetClass <https://www.omg.org/spec/Commons/StatisticalMeasures/GeometricMean> .
+
+aidmpp-m-shacl:GlobalTradeItemNumberNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromclassifiesTradeItemPropertyShape,
+        aidmpp-m-shacl:someValuesFromdenotesTradeItemPropertyShape ;
+    sh:targetClass <https://www.omg.org/spec/Commons/ProductsAndServices/GlobalTradeItemNumber> .
+
+aidmpp-m-shacl:GovernmentDepartmentNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromisConstituentOfGovernmentBodyPropertyShape ;
+    sh:targetClass <https://www.omg.org/spec/Commons/GovernmentEntities/GovernmentDepartment> .
+
+aidmpp-m-shacl:GovernmentIssuedLicenseNodeShape a sh:NodeShape ;
+    sh:or ( aidmpp-m-shacl:someValuesFromisIssuedByLicensorPropertyShape aidmpp-m-shacl:someValuesFrominverseOfissuesLicensePropertyShape ) ;
+    sh:property aidmpp-m-shacl:someValuesFromhasPartyRoleLicenseePropertyShape,
+        aidmpp-m-shacl:someValuesFromisIssuedByRegulatoryAgencyPropertyShape ;
+    sh:targetClass <https://www.omg.org/spec/Commons/RegulatoryAgencies/GovernmentIssuedLicense> .
+
+aidmpp-m-shacl:GovernmentNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromgovernsGeopoliticalEntityPropertyShape ;
+    sh:targetClass <https://www.omg.org/spec/Commons/GovernmentEntities/Government> .
+
+aidmpp-m-shacl:HydrateNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromhasSubstanceNameSubstanceNamePropertyShape,
+        aidmpp-m-shacl:someValuesFromhasSubstanceTypeSubstanceTypeClassifierPropertyShape ;
+    sh:targetClass ISO11238-Substances:Hydrate .
+
+aidmpp-m-shacl:ISO11240LexiconCodeEntryNodeShape a sh:NodeShape ;
+    sh:or ( aidmpp-m-shacl:someValuesFromidentifiesMeasurementUnitPropertyShape aidmpp-m-shacl:someValuesFrominverseOfisIdentifiedByUnitOfMeasureIdentifierPropertyShape ) ;
+    sh:property aidmpp-m-shacl:someValuesFromcompliesWithUnitOfMeasureIdentificationSchemePropertyShape,
+        aidmpp-m-shacl:someValuesFromhasLanguageCodeLanguageIdentifierPropertyShape,
+        aidmpp-m-shacl:someValuesFromhasRegionCodeGeographicRegionIdentifierPropertyShape,
+        aidmpp-m-shacl:someValuesFromisMemberOfCodeSetPropertyShape ;
+    sh:targetClass <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11240-UnitsOfMeasurement/ISO11240LexiconCodeEntry> .
+
+aidmpp-m-shacl:ISO21090-BooleanNonNullDatatypeNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromhasBooleanValuebooleanPropertyShape ;
+    sh:targetClass ISO21090-HarmonizedDatatypes:ISO21090-BooleanNonNullDatatype .
+
+aidmpp-m-shacl:ISO21090-ConceptDescriptorNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromisMemberOfCodeSetPropertyShape ;
+    sh:targetClass ISO21090-HarmonizedDatatypes:ISO21090-ConceptDescriptor .
+
+aidmpp-m-shacl:ISO21090-EntityNameNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromisApplicableInContextPropertyShape ;
+    sh:targetClass ISO21090-HarmonizedDatatypes:ISO21090-EntityName .
+
+aidmpp-m-shacl:ImmediateContainerNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromisRoleInContainerConstituencyPropertyShape ;
+    sh:targetClass <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/ImmediateContainer> .
+
+aidmpp-m-shacl:InactiveIngredientNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromisManifestedInManufacturedItemPropertyShape,
+        aidmpp-m-shacl:someValuesFromisPlayedBySubstancePropertyShape ;
+    sh:targetClass ISO11238-Substances:InactiveIngredient .
+
+aidmpp-m-shacl:InactiveMoietyRoleNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromisApplicableInRegulatoryContextPropertyShape ;
+    sh:targetClass ISO11238-Substances:InactiveMoietyRole .
+
+aidmpp-m-shacl:IndividualLanguageIdentifierNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromhasTagstringPropertyShape,
+        aidmpp-m-shacl:someValuesFromidentifiesLanguagePropertyShape,
+        aidmpp-m-shacl:someValuesFromisMemberOfCodeSetPropertyShape ;
+    sh:targetClass LanguageRepresentation:IndividualLanguageIdentifier .
+
+aidmpp-m-shacl:IngredientNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromisManifestedInManufacturedItemPropertyShape ;
+    sh:targetClass ISO11238-Substances:Ingredient .
+
+aidmpp-m-shacl:IngredientRoleCodeNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromisMemberOfCodeSetPropertyShape ;
+    sh:targetClass <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/IngredientRoleCode> .
+
+aidmpp-m-shacl:InstrumentalityNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromisInstrumentOfGovernmentPropertyShape ;
+    sh:targetClass <https://www.omg.org/spec/Commons/GovernmentEntities/Instrumentality> .
+
+aidmpp-m-shacl:IntegrityCheckAlgorithmNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromhasLevelInHierarchynonNegativeIntegerPropertyShape,
+        aidmpp-m-shacl:someValuesFromisMemberOfCodeSetPropertyShape ;
+    sh:targetClass ISO21090-HarmonizedDatatypes:IntegrityCheckAlgorithm .
+
+aidmpp-m-shacl:IntendedEffectNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromisMemberOfCodeSetPropertyShape ;
+    sh:targetClass <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/IntendedEffect> .
+
+aidmpp-m-shacl:InteractionTypeNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromisMemberOfCodeSetPropertyShape ;
+    sh:targetClass ISO11238-Substances:InteractionType .
+
+aidmpp-m-shacl:IntermediatePackagingNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromisPlayedByMedicinalProductContainerPropertyShape,
+        aidmpp-m-shacl:someValuesFromisRoleInContainerConstituencyPropertyShape ;
+    sh:targetClass <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/IntermediatePackaging> .
+
+aidmpp-m-shacl:IntervalScaleNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromclassifiesMeasurementUnitPropertyShape ;
+    sh:targetClass QuantitiesAndUnits:IntervalScale .
+
+aidmpp-m-shacl:InvestigationalMedicinalProductIdentifierNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromisApplicableInContextPropertyShape,
+        aidmpp-m-shacl:someValuesFromisMemberOfCodeSetPropertyShape,
+        aidmpp-m-shacl:someValuesFromisRegisteredInRegistryPropertyShape ;
+    sh:targetClass <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/InvestigationalMedicinalProductIdentifier> .
+
+aidmpp-m-shacl:InvestigationalMedicinalProductNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromisPlayedByProductPropertyShape ;
+    sh:targetClass <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/InvestigationalMedicinalProduct> .
+
+aidmpp-m-shacl:IsotopeCompositionNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromdefinesSubstancePropertyShape ;
+    sh:targetClass ISO11238-Substances:IsotopeComposition .
+
+aidmpp-m-shacl:IsotopeNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromhasDefiningStructureMolecularStructurePropertyShape,
+        aidmpp-m-shacl:someValuesFromhasSubstanceNameSubstanceNamePropertyShape,
+        aidmpp-m-shacl:someValuesFromhasSubstanceTypeSubstanceTypeClassifierPropertyShape ;
+    sh:targetClass ISO11238-Substances:Isotope .
+
+aidmpp-m-shacl:IsotopicSubstitutionClassifierNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromclassifiesIsotopicSubstitutionPropertyShape ;
+    sh:targetClass ISO11238-Substances:IsotopicSubstitutionClassifier .
+
+aidmpp-m-shacl:JudiciaryNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromhasPartCourtOfLawPropertyShape ;
+    sh:targetClass <https://www.omg.org/spec/Commons/GovernmentEntities/Judiciary> .
+
+aidmpp-m-shacl:JurisdictionNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromhasReachGeographicRegionPropertyShape ;
+    sh:targetClass <https://www.omg.org/spec/Commons/RegulatoryAgencies/Jurisdiction> .
+
+aidmpp-m-shacl:LanguageIdentifierNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromhasTagstringPropertyShape,
+        aidmpp-m-shacl:someValuesFromidentifiesLanguagePropertyShape,
+        aidmpp-m-shacl:someValuesFromisMemberOfCodeSetPropertyShape ;
+    sh:targetClass LanguageRepresentation:LanguageIdentifier .
+
+aidmpp-m-shacl:LicenseIdentifierNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromisApplicableInContextPropertyShape ;
+    sh:targetClass <https://www.omg.org/spec/Commons/RegulatoryAgencies/LicenseIdentifier> .
+
+aidmpp-m-shacl:LicenseNodeShape a sh:NodeShape ;
+    sh:or ( aidmpp-m-shacl:someValuesFromisIssuedByLicensorPropertyShape aidmpp-m-shacl:someValuesFrominverseOfissuesLicensePropertyShape ) ;
+    sh:property aidmpp-m-shacl:someValuesFromhasPartyRoleLicenseePropertyShape ;
+    sh:targetClass <https://www.omg.org/spec/Commons/RegulatoryAgencies/License> .
+
+aidmpp-m-shacl:LicensorNodeShape a sh:NodeShape ;
+    sh:or ( aidmpp-m-shacl:someValuesFromissuesLicensePropertyShape aidmpp-m-shacl:someValuesFrominverseOfisIssuedByLicensorPropertyShape ) ;
+    sh:targetClass <https://www.omg.org/spec/Commons/RegulatoryAgencies/Licensor> .
+
+aidmpp-m-shacl:LogarithmicScaleNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromclassifiesMeasurementUnitPropertyShape ;
+    sh:targetClass QuantitiesAndUnits:LogarithmicScale .
+
+aidmpp-m-shacl:LotNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromcomprisesMatterPropertyShape ;
+    sh:targetClass <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/Lot> .
+
+aidmpp-m-shacl:LotNumberNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromdenotesLotPropertyShape ;
+    sh:targetClass <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/LotNumber> .
+
+aidmpp-m-shacl:MacrolanguageIdentifierNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromhasTagstringPropertyShape,
+        aidmpp-m-shacl:someValuesFromidentifiesLanguagePropertyShape,
+        aidmpp-m-shacl:someValuesFromisMemberOfCodeSetPropertyShape ;
+    sh:targetClass LanguageRepresentation:MacrolanguageIdentifier .
+
+aidmpp-m-shacl:ManufacturedItemNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromhasManufacturedItemQuantityQuantityValuePropertyShape,
+        aidmpp-m-shacl:someValuesFromisProducedByManufacturerPropertyShape ;
+    sh:targetClass ISO11238-Substances:ManufacturedItem .
+
+aidmpp-m-shacl:ManufacturerNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromproducesGoodPropertyShape ;
+    sh:targetClass ISO11238-Substances:Manufacturer .
+
+aidmpp-m-shacl:ManufacturingAuthorizationNodeShape a sh:NodeShape ;
+    sh:or ( aidmpp-m-shacl:someValuesFromhasAuthorizedPartyAuthorizedPartyPropertyShape aidmpp-m-shacl:someValuesFrominverseOfisAuthorizedThroughAuthorizationPropertyShape ) ;
+    sh:property aidmpp-m-shacl:someValuesFromappliesToMedicinalProductPropertyShape,
+        aidmpp-m-shacl:someValuesFromhasAuthorizedPartyManufacturerPropertyShape,
+        aidmpp-m-shacl:someValuesFromhasSubjectRoleRolePropertyShape,
+        aidmpp-m-shacl:someValuesFromisApplicableInGeographicRegionPropertyShape ;
+    sh:targetClass <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/ManufacturingAuthorization> .
+
+aidmpp-m-shacl:MarketingAuthorizationHolderIdentifierNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromisApplicableInContextPropertyShape,
+        aidmpp-m-shacl:someValuesFromisMemberOfCodeSetPropertyShape,
+        aidmpp-m-shacl:someValuesFromisRegisteredInRegistryPropertyShape ;
+    sh:targetClass <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/MarketingAuthorizationHolderIdentifier> .
+
+aidmpp-m-shacl:MarketingAuthorizationHolderNodeShape a sh:NodeShape ;
+    sh:or ( aidmpp-m-shacl:someValuesFromisAuthorizedThroughAuthorizationPropertyShape aidmpp-m-shacl:someValuesFrominverseOfhasAuthorizedPartyAuthorizedPartyPropertyShape ) ;
+    sh:targetClass <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/MarketingAuthorizationHolder> .
+
+aidmpp-m-shacl:MarketingAuthorizationNodeShape a sh:NodeShape ;
+    sh:or ( aidmpp-m-shacl:someValuesFromhasAuthorizedPartyAuthorizedPartyPropertyShape aidmpp-m-shacl:someValuesFrominverseOfisAuthorizedThroughAuthorizationPropertyShape ) ;
+    sh:property aidmpp-m-shacl:someValuesFromappliesToMedicinalProductPropertyShape,
+        aidmpp-m-shacl:someValuesFromhasSubjectRoleRolePropertyShape,
+        aidmpp-m-shacl:someValuesFromisApplicableInGeographicRegionPropertyShape ;
+    sh:targetClass <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/MarketingAuthorization> .
+
+aidmpp-m-shacl:MarketingAuthorizationNumberNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromisApplicableInContextPropertyShape,
+        aidmpp-m-shacl:someValuesFromisMemberOfCodeSetPropertyShape,
+        aidmpp-m-shacl:someValuesFromisRegisteredInRegistryPropertyShape ;
+    sh:targetClass <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/MarketingAuthorizationNumber> .
+
+aidmpp-m-shacl:MassBasedStrengthNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromrefersToSubstancePropertyShape ;
+    sh:targetClass <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/MassBasedStrength> .
+
+aidmpp-m-shacl:MaterialClassifierNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromclassifiesMaterialPropertyShape ;
+    sh:targetClass ISO11238-Substances:MaterialClassifier .
+
+aidmpp-m-shacl:MaterialRoleNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromisPlayedByMaterialPropertyShape ;
+    sh:targetClass ISO11238-Substances:MaterialRole .
+
+aidmpp-m-shacl:MaterialSpecificationNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromspecifiesMaterialPropertyShape ;
+    sh:targetClass ISO11238-Substances:MaterialSpecification .
+
+aidmpp-m-shacl:MeanNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromhasObservedValueStructuredCollectionPropertyShape ;
+    sh:targetClass <https://www.omg.org/spec/Commons/StatisticalMeasures/Mean> .
+
+aidmpp-m-shacl:MeasurementScaleNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromclassifiesMeasurementUnitPropertyShape ;
+    sh:targetClass QuantitiesAndUnits:MeasurementScale .
+
+aidmpp-m-shacl:MeasurementUnitNodeShape a sh:NodeShape ;
+    sh:or ( aidmpp-m-shacl:someValuesFromisIdentifiedByUnitOfMeasureIdentifierPropertyShape aidmpp-m-shacl:someValuesFrominverseOfidentifiesMeasurementUnitPropertyShape ) ;
+    sh:property aidmpp-m-shacl:someValuesFromhasQuantityKindQuantityKindPropertyShape ;
+    sh:targetClass QuantitiesAndUnits:MeasurementUnit .
+
+aidmpp-m-shacl:MechanicalIngredientNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromisManifestedInManufacturedItemPropertyShape,
+        aidmpp-m-shacl:someValuesFromisPlayedBySubstancePropertyShape ;
+    sh:targetClass ISO11238-Substances:MechanicalIngredient .
+
+aidmpp-m-shacl:MedianAbsoluteDeviationNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromappliesToFinitePopulationPropertyShape,
+        aidmpp-m-shacl:someValuesFromhasArgumentMedianPropertyShape,
+        aidmpp-m-shacl:someValuesFromhasObservedValueStructuredCollectionPropertyShape ;
+    sh:targetClass <https://www.omg.org/spec/Commons/StatisticalMeasures/MedianAbsoluteDeviation> .
+
+aidmpp-m-shacl:MedianNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromhasObservedValueStructuredCollectionPropertyShape ;
+    sh:targetClass <https://www.omg.org/spec/Commons/StatisticalMeasures/Median> .
+
+aidmpp-m-shacl:MedicalConditionClassifierNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromclassifiesMedicalConditionPropertyShape,
+        aidmpp-m-shacl:someValuesFromisMemberOfCodeSetPropertyShape ;
+    sh:targetClass <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/MedicalConditionClassifier> .
+
+aidmpp-m-shacl:MedicalConditionNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromhasSubjectRoleRolePropertyShape ;
+    sh:targetClass <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/MedicalCondition> .
+
+aidmpp-m-shacl:MedicinalProductBatchIdentifierForImmediatePackagingNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromcomprisesExplicitDatePropertyShape,
+        aidmpp-m-shacl:someValuesFromcomprisesPharmaceuticalProductBatchNumberPropertyShape,
+        aidmpp-m-shacl:someValuesFromdenotesBatchPropertyShape ;
+    sh:targetClass <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/MedicinalProductBatchIdentifierForImmediatePackaging> .
+
+aidmpp-m-shacl:MedicinalProductBatchIdentifierForOuterPackagingNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromcomprisesExplicitDatePropertyShape,
+        aidmpp-m-shacl:someValuesFromcomprisesPharmaceuticalProductBatchNumberPropertyShape,
+        aidmpp-m-shacl:someValuesFromdenotesBatchPropertyShape ;
+    sh:targetClass <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/MedicinalProductBatchIdentifierForOuterPackaging> .
+
+aidmpp-m-shacl:MedicinalProductCodeSegmentNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromisMemberOfCodeSetPropertyShape ;
+    sh:targetClass <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/MedicinalProductCodeSegment> .
+
+aidmpp-m-shacl:MedicinalProductContainerNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromisPartOfMedicinalProductPropertyShape,
+        aidmpp-m-shacl:someValuesFromspecifiesContainerPropertyShape ;
+    sh:targetClass <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/MedicinalProductContainer> .
+
+aidmpp-m-shacl:MedicinalProductIdentifierNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromcomprisesAlpha2RegionCodePropertyShape,
+        aidmpp-m-shacl:someValuesFromcomprisesMarketingAuthorizationHolderIdentifierPropertyShape,
+        aidmpp-m-shacl:someValuesFromcomprisesMedicinalProductCodeSegmentPropertyShape,
+        aidmpp-m-shacl:someValuesFromisApplicableInContextPropertyShape,
+        aidmpp-m-shacl:someValuesFromisMemberOfCodeSetPropertyShape,
+        aidmpp-m-shacl:someValuesFromisRegisteredInRegistryPropertyShape ;
+    sh:targetClass <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/MedicinalProductIdentifier> .
+
+aidmpp-m-shacl:MedicinalProductNameNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromisApplicableInContextPropertyShape,
+        aidmpp-m-shacl:someValuesFromisNameOfMedicinalProductPropertyShape ;
+    sh:targetClass <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/MedicinalProductName> .
+
+aidmpp-m-shacl:MedicinesRegulatoryAgencyNodeShape a sh:NodeShape ;
+    sh:or ( aidmpp-m-shacl:someValuesFromauthorizesThroughAuthorizationPropertyShape aidmpp-m-shacl:someValuesFrominverseOfhasAuthorizingPartyAuthorizingPartyPropertyShape ),
+        ( aidmpp-m-shacl:someValuesFromprovidesServicePropertyShape aidmpp-m-shacl:someValuesFrominverseOfisProvidedByServiceProviderPropertyShape ) ;
+    sh:property aidmpp-m-shacl:someValuesFromhasJurisdictionJurisdictionPropertyShape ;
+    sh:targetClass <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/MedicinesRegulatoryAgency> .
+
+aidmpp-m-shacl:MembershipNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromhasOrganizationMemberOrganizationMemberPropertyShape,
+        aidmpp-m-shacl:someValuesFromhasSubjectRoleRolePropertyShape ;
+    sh:targetClass <https://www.omg.org/spec/Commons/Organizations/Membership> .
+
+aidmpp-m-shacl:MixtureNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromhasSubstanceNameSubstanceNamePropertyShape,
+        aidmpp-m-shacl:someValuesFromhasSubstanceTypeSubstanceTypeClassifierPropertyShape ;
+    sh:targetClass ISO11238-Substances:Mixture .
+
+aidmpp-m-shacl:ModificationAgentNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromisManifestedInModificationPropertyShape ;
+    sh:targetClass ISO11238-Substances:ModificationAgent .
+
+aidmpp-m-shacl:ModificationMethodNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromspecifiesModificationPropertyShape ;
+    sh:targetClass ISO11238-Substances:ModificationMethod .
+
+aidmpp-m-shacl:ModificationMethodTypeNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromisMemberOfCodeSetPropertyShape ;
+    sh:targetClass ISO11238-Substances:ModificationMethodType .
+
+aidmpp-m-shacl:ModificationRoleCodeNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromisMemberOfCodeSetPropertyShape ;
+    sh:targetClass ISO11238-Substances:ModificationRoleCode .
+
+aidmpp-m-shacl:ModificationRoleNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromisManifestedInModificationPropertyShape ;
+    sh:targetClass ISO11238-Substances:ModificationRole .
+
+aidmpp-m-shacl:MoietyIdentifierNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromidentifiesMoietyPropertyShape ;
+    sh:targetClass ISO11238-Substances:MoietyIdentifier .
+
+aidmpp-m-shacl:MoietyNameNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromisApplicableInContextPropertyShape,
+        aidmpp-m-shacl:someValuesFromisNameOfMoietyPropertyShape ;
+    sh:targetClass ISO11238-Substances:MoietyName .
+
+aidmpp-m-shacl:MoietyNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromhasGranularMolecularPartMolecularEntityPropertyShape,
+        aidmpp-m-shacl:someValuesFromisConstituentOfMolecularCompositionPropertyShape,
+        aidmpp-m-shacl:someValuesFromisMoietyOfSubstancePropertyShape ;
+    sh:targetClass ISO11238-Substances:Moiety .
+
+aidmpp-m-shacl:MoietyRoleNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromisApplicableInRegulatoryContextPropertyShape ;
+    sh:targetClass ISO11238-Substances:MoietyRole .
+
+aidmpp-m-shacl:MolecularCompositionNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromdefinesSubstancePropertyShape ;
+    sh:targetClass ISO11238-Substances:MolecularComposition .
+
+aidmpp-m-shacl:MolecularConstituentNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromhasGranularMolecularPartMolecularEntityPropertyShape,
+        aidmpp-m-shacl:someValuesFromisConstituentOfMolecularCompositionPropertyShape ;
+    sh:targetClass ISO11238-Substances:MolecularConstituent .
+
+aidmpp-m-shacl:MolecularFormulaByMoietyNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromhasTextValuestringPropertyShape ;
+    sh:targetClass ISO11238-Substances:MolecularFormulaByMoiety .
+
+aidmpp-m-shacl:MolecularFormulaNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromhasTextValuestringPropertyShape ;
+    sh:targetClass ISO11238-Substances:MolecularFormula .
+
+aidmpp-m-shacl:MolecularFragmentIdentifierNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromidentifiesMolecularFragmentPropertyShape,
+        aidmpp-m-shacl:someValuesFromisApplicableInContextPropertyShape,
+        aidmpp-m-shacl:someValuesFromisMemberOfCodeSetPropertyShape,
+        aidmpp-m-shacl:someValuesFromisRegisteredInRegistryPropertyShape ;
+    sh:targetClass ISO11238-Substances:MolecularFragmentIdentifier .
+
+aidmpp-m-shacl:MolecularFragmentNameNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromisApplicableInContextPropertyShape ;
+    sh:targetClass ISO11238-Substances:MolecularFragmentName .
+
+aidmpp-m-shacl:MolecularFragmentNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromhasGranularMolecularPartMolecularEntityPropertyShape,
+        aidmpp-m-shacl:someValuesFromisConstituentOfMolecularCompositionPropertyShape ;
+    sh:targetClass ISO11238-Substances:MolecularFragment .
+
+aidmpp-m-shacl:MolecularFragmentRoleNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromisPlayedByMolecularFragmentPropertyShape,
+        aidmpp-m-shacl:someValuesFromundergoesModificationPropertyShape ;
+    sh:targetClass ISO11238-Substances:MolecularFragmentRole .
+
+aidmpp-m-shacl:MolecularGraphIdentifierNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromidentifiesMolecularGraphPropertyShape ;
+    sh:targetClass ISO11238-Substances:MolecularGraphIdentifier .
+
+aidmpp-m-shacl:MolecularGroupNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromcomprisesAtomPropertyShape,
+        aidmpp-m-shacl:someValuesFromisPartOfMolecularEntityPropertyShape ;
+    sh:targetClass ISO11238-Substances:MolecularGroup .
+
+aidmpp-m-shacl:MolecularStructureIdentifierNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromidentifiesMolecularStructurePropertyShape ;
+    sh:targetClass ISO11238-Substances:MolecularStructureIdentifier .
+
+aidmpp-m-shacl:MolecularStructureNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromisDescribedByStructuralRepresentationPropertyShape ;
+    sh:targetClass ISO11238-Substances:MolecularStructure .
+
+aidmpp-m-shacl:MolecularWeightNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromhasMeasurementUnitMeasurementUnitPropertyShape ;
+    sh:targetClass ISO11238-Substances:MolecularWeight .
+
+aidmpp-m-shacl:MoleculeNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromhasStructureMolecularStructurePropertyShape ;
+    sh:targetClass ISO11238-Substances:Molecule .
+
+aidmpp-m-shacl:MonodisperseSubstanceNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromhasSubstanceNameSubstanceNamePropertyShape,
+        aidmpp-m-shacl:someValuesFromhasSubstanceTypeSubstanceTypeClassifierPropertyShape ;
+    sh:targetClass ISO11238-Substances:MonodisperseSubstance .
+
+aidmpp-m-shacl:MunicipalEntityNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromhasSovereigntyOverGeopoliticalEntityPropertyShape,
+        aidmpp-m-shacl:someValuesFromisRepresentedByGovernmentPropertyShape ;
+    sh:targetClass <https://www.omg.org/spec/Commons/GovernmentEntities/MunicipalEntity> .
+
+aidmpp-m-shacl:MunicipalGovernmentNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromgovernsGeopoliticalEntityPropertyShape ;
+    sh:targetClass <https://www.omg.org/spec/Commons/GovernmentEntities/MunicipalGovernment> .
+
+aidmpp-m-shacl:NationalGovernmentNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromgovernsGeopoliticalEntityPropertyShape ;
+    sh:targetClass <https://www.omg.org/spec/Commons/GovernmentEntities/NationalGovernment> .
+
+aidmpp-m-shacl:NominalScaleNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromclassifiesMeasurementUnitPropertyShape ;
+    sh:targetClass QuantitiesAndUnits:NominalScale .
+
+aidmpp-m-shacl:NucleicAcidSubstanceNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromhasSubstanceNameSubstanceNamePropertyShape,
+        aidmpp-m-shacl:someValuesFromhasSubstanceTypeSubstanceTypeClassifierPropertyShape ;
+    sh:targetClass ISO11238-Substances:NucleicAcidSubstance .
+
+aidmpp-m-shacl:NuclideIdentifierNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromclassifiesNuclidePropertyShape,
+        aidmpp-m-shacl:someValuesFromidentifiesIsotopePropertyShape,
+        aidmpp-m-shacl:someValuesFromisApplicableInContextPropertyShape,
+        aidmpp-m-shacl:someValuesFromisMemberOfCodeSetPropertyShape,
+        aidmpp-m-shacl:someValuesFromisRegisteredInRegistryPropertyShape ;
+    sh:targetClass ISO11238-Substances:NuclideIdentifier .
+
+aidmpp-m-shacl:NuclideNameNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromisApplicableInContextPropertyShape,
+        aidmpp-m-shacl:someValuesFromisNameOfNuclidePropertyShape ;
+    sh:targetClass ISO11238-Substances:NuclideName .
+
+aidmpp-m-shacl:NullFlavorNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromhasLevelInHierarchynonNegativeIntegerPropertyShape,
+        aidmpp-m-shacl:someValuesFromisMemberOfCodeSetPropertyShape ;
+    sh:targetClass ISO21090-HarmonizedDatatypes:NullFlavor .
+
+aidmpp-m-shacl:NumericIndexValueNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromhasMeasurementUnitMeasurementUnitPropertyShape ;
+    sh:targetClass <https://www.omg.org/spec/Commons/StatisticalMeasures/NumericIndexValue> .
+
+aidmpp-m-shacl:OfficialNameNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromhasLanguageCodeLanguageIdentifierPropertyShape,
+        aidmpp-m-shacl:someValuesFromisApplicableInContextPropertyShape,
+        aidmpp-m-shacl:someValuesFromisApplicableInJurisdictionGeographicRegionIdentifierPropertyShape,
+        aidmpp-m-shacl:someValuesFromisClassifiedByOfficialNameStatusPropertyShape ;
+    sh:targetClass ISO11238-Substances:OfficialName .
+
+aidmpp-m-shacl:OpticalActivityNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromspecifiesOpticalRotationPropertyShape ;
+    sh:targetClass ISO11238-Substances:OpticalActivity .
+
+aidmpp-m-shacl:OpticalRotationNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromhasMeasurementUnitMeasurementUnitPropertyShape ;
+    sh:targetClass ISO11238-Substances:OpticalRotation .
+
+aidmpp-m-shacl:OrdinalScaleNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromclassifiesMeasurementUnitPropertyShape ;
+    sh:targetClass QuantitiesAndUnits:OrdinalScale .
+
+aidmpp-m-shacl:OrganizationNameNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromisApplicableInContextPropertyShape ;
+    sh:targetClass <https://www.omg.org/spec/Commons/Organizations/OrganizationName> .
+
+aidmpp-m-shacl:OuterPackagingNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromisPlayedByMedicinalProductContainerPropertyShape,
+        aidmpp-m-shacl:someValuesFromisRoleInContainerConstituencyPropertyShape ;
+    sh:targetClass <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/OuterPackaging> .
+
+aidmpp-m-shacl:PackageDescriptionCodeSegmentNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromisMemberOfCodeSetPropertyShape ;
+    sh:targetClass <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/PackageDescriptionCodeSegment> .
+
+aidmpp-m-shacl:PackageIdentifierNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromcomprisesMedicinalProductIdentifierPropertyShape,
+        aidmpp-m-shacl:someValuesFromcomprisesPackageDescriptionCodeSegmentPropertyShape,
+        aidmpp-m-shacl:someValuesFromidentifiesPackagedMedicinalProductPropertyShape,
+        aidmpp-m-shacl:someValuesFromisApplicableInContextPropertyShape,
+        aidmpp-m-shacl:someValuesFromisMemberOfCodeSetPropertyShape,
+        aidmpp-m-shacl:someValuesFromisRegisteredInRegistryPropertyShape ;
+    sh:targetClass <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/PackageIdentifier> .
+
+aidmpp-m-shacl:PackageItemNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromisPartOfMedicinalProductPropertyShape,
+        aidmpp-m-shacl:someValuesFromspecifiesContainerPropertyShape ;
+    sh:targetClass <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/PackageItem> .
+
+aidmpp-m-shacl:PackagedMedicinalProductNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromcontainsPackageItemPropertyShape ;
+    sh:targetClass <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/PackagedMedicinalProduct> .
+
+aidmpp-m-shacl:ParameterNameNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromisApplicableInContextPropertyShape ;
+    sh:targetClass ISO11238-Substances:ParameterName .
+
+aidmpp-m-shacl:ParameterNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromhasNameParameterNamePropertyShape ;
+    sh:targetClass ISO11238-Substances:Parameter .
+
+aidmpp-m-shacl:PercentageNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromhasMeasurementUnitMeasurementUnitPropertyShape ;
+    sh:targetClass <https://www.omg.org/spec/Commons/StatisticalMeasures/Percentage> .
+
+aidmpp-m-shacl:PharmaceuticalProductBatchNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromcomprisesMatterPropertyShape,
+        aidmpp-m-shacl:someValuesFromhasExpirationDateExplicitDatePropertyShape,
+        aidmpp-m-shacl:someValuesFromhasQuantityValueQuantityValuePropertyShape,
+        aidmpp-m-shacl:someValuesFromisConstituentOfProductPropertyShape,
+        aidmpp-m-shacl:someValuesFromisOutputOfBatchManufacturingProcessPropertyShape ;
+    sh:targetClass <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/PharmaceuticalProductBatch> .
+
+aidmpp-m-shacl:PharmaceuticalProductBatchNumberNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromdenotesBatchPropertyShape ;
+    sh:targetClass <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/PharmaceuticalProductBatchNumber> .
+
+aidmpp-m-shacl:PharmaceuticalProductNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromcomprisesSubstancePropertyShape,
+        aidmpp-m-shacl:someValuesFromisDefinedInProductCompositionPropertyShape ;
+    sh:targetClass <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/PharmaceuticalProduct> .
+
+aidmpp-m-shacl:PharmacopoeialGradeClassifierNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromclassifiesPharmacopoeialGradePropertyShape ;
+    sh:targetClass ISO11238-Substances:PharmacopoeialGradeClassifier .
+
+aidmpp-m-shacl:PharmacopoeialGradeNameNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromisApplicableInContextPropertyShape ;
+    sh:targetClass ISO11238-Substances:PharmacopoeialGradeName .
+
+aidmpp-m-shacl:PhysicalManufacturedItemNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromisProducedByManufacturerPropertyShape ;
+    sh:targetClass ISO11238-Substances:PhysicalManufacturedItem .
+
+aidmpp-m-shacl:PhysicalMedicinalProductContainerNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromisPartOfPhysicalMedicinalProductPropertyShape,
+        aidmpp-m-shacl:someValuesFromisProducedByManufacturerPropertyShape ;
+    sh:targetClass <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/PhysicalMedicinalProductContainer> .
+
+aidmpp-m-shacl:PhysicalMedicinalProductNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromisProducedByManufacturerPropertyShape ;
+    sh:targetClass <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/PhysicalMedicinalProduct> .
+
+aidmpp-m-shacl:PhysicalModificationMethodNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromspecifiesModificationPropertyShape ;
+    sh:targetClass ISO11238-Substances:PhysicalModificationMethod .
+
+aidmpp-m-shacl:PhysicalSubstanceNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromisSpecifiedBySubstancePropertyShape ;
+    sh:targetClass ISO11238-Substances:PhysicalSubstance .
+
+aidmpp-m-shacl:PhysicalUnitNodeShape a sh:NodeShape ;
+    sh:or ( aidmpp-m-shacl:someValuesFromisIdentifiedByUnitOfMeasureIdentifierPropertyShape aidmpp-m-shacl:someValuesFrominverseOfidentifiesMeasurementUnitPropertyShape ) ;
+    sh:property aidmpp-m-shacl:someValuesFromhasQuantityKindQuantityKindPropertyShape,
+        aidmpp-m-shacl:someValuesFromisDefinedInSystemOfUnitsPropertyShape ;
+    sh:targetClass QuantitiesAndUnits:PhysicalUnit .
+
+aidmpp-m-shacl:PlaceboNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromisPlayedByProductPropertyShape ;
+    sh:targetClass <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/Placebo> .
+
+aidmpp-m-shacl:PolityNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromhasSovereigntyOverGeopoliticalEntityPropertyShape,
+        aidmpp-m-shacl:someValuesFromisRepresentedByGovernmentPropertyShape ;
+    sh:targetClass <https://www.omg.org/spec/Commons/GovernmentEntities/Polity> .
+
+aidmpp-m-shacl:PolydisperseSubstanceNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromhasSubstanceNameSubstanceNamePropertyShape,
+        aidmpp-m-shacl:someValuesFromhasSubstanceTypeSubstanceTypeClassifierPropertyShape ;
+    sh:targetClass ISO11238-Substances:PolydisperseSubstance .
+
+aidmpp-m-shacl:PolymerSubstanceNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromhasSubstanceNameSubstanceNamePropertyShape,
+        aidmpp-m-shacl:someValuesFromhasSubstanceTypeSubstanceTypeClassifierPropertyShape ;
+    sh:targetClass ISO11238-Substances:PolymerSubstance .
+
+aidmpp-m-shacl:PopulationCharacteristicNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromclassifiesTargetPopulationPropertyShape ;
+    sh:targetClass <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/PopulationCharacteristic> .
+
+aidmpp-m-shacl:PrefixedUnitNodeShape a sh:NodeShape ;
+    sh:or ( aidmpp-m-shacl:someValuesFromisIdentifiedByUnitOfMeasureIdentifierPropertyShape aidmpp-m-shacl:someValuesFrominverseOfidentifiesMeasurementUnitPropertyShape ) ;
+    sh:property aidmpp-m-shacl:someValuesFromhasFactorPrefixPropertyShape,
+        aidmpp-m-shacl:someValuesFromhasQuantityKindQuantityKindPropertyShape,
+        aidmpp-m-shacl:someValuesFromisDefinedInSystemOfUnitsPropertyShape,
+        aidmpp-m-shacl:someValuesFromisDerivedFromBaseUnitPropertyShape ;
+    sh:targetClass QuantitiesAndUnits:PrefixedUnit .
+
+aidmpp-m-shacl:PresentationStrengthNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromrefersToSubstancePropertyShape ;
+    sh:targetClass <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/PresentationStrength> .
+
+aidmpp-m-shacl:PreservativeIngredientNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromisManifestedInManufacturedItemPropertyShape,
+        aidmpp-m-shacl:someValuesFromisPlayedBySubstancePropertyShape ;
+    sh:targetClass ISO11238-Substances:PreservativeIngredient .
+
+aidmpp-m-shacl:ProcessIdentifierNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromdenotesProcessPropertyShape ;
+    sh:targetClass <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/ProcessIdentifier> .
+
+aidmpp-m-shacl:ProcessStepIdentifierNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromdenotesProcessStepPropertyShape ;
+    sh:targetClass <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/ProcessStepIdentifier> .
+
+aidmpp-m-shacl:ProcessStepNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromisPartOfProcessPropertyShape ;
+    sh:targetClass <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/ProcessStep> .
+
+aidmpp-m-shacl:ProcessingMaterialRoleNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromisPlayedByMaterialPropertyShape ;
+    sh:targetClass ISO11238-Substances:ProcessingMaterialRole .
+
+aidmpp-m-shacl:ProducerNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromproducesGoodPropertyShape ;
+    sh:targetClass <https://www.omg.org/spec/Commons/ProductsAndServices/Producer> .
+
+aidmpp-m-shacl:ProductCompositionNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromhasIngredientIngredientPropertyShape ;
+    sh:targetClass <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/ProductComposition> .
+
+aidmpp-m-shacl:ProductIdentifierNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromisApplicableInContextPropertyShape ;
+    sh:targetClass <https://www.omg.org/spec/Commons/ProductsAndServices/ProductIdentifier> .
+
+aidmpp-m-shacl:ProductRoleNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromisPlayedByProductPropertyShape ;
+    sh:targetClass <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/ProductRole> .
+
+aidmpp-m-shacl:ProteinSubstanceNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromhasSubstanceNameSubstanceNamePropertyShape,
+        aidmpp-m-shacl:someValuesFromhasSubstanceTypeSubstanceTypeClassifierPropertyShape ;
+    sh:targetClass ISO11238-Substances:ProteinSubstance .
+
+aidmpp-m-shacl:QualitativeCompositionNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromdefinesMedicinalProductPropertyShape,
+        aidmpp-m-shacl:someValuesFromhasIngredientIngredientPropertyShape ;
+    sh:targetClass <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/QualitativeComposition> .
+
+aidmpp-m-shacl:QuantitativeCompositionNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromdefinesMedicinalProductPropertyShape,
+        aidmpp-m-shacl:someValuesFromhasIngredientIngredientPropertyShape ;
+    sh:targetClass <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/QuantitativeComposition> .
+
+aidmpp-m-shacl:QuantityKindPowerFactorNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromhasQuantityKindQuantityKindPropertyShape ;
+    sh:targetClass QuantitiesAndUnits:QuantityKindPowerFactor .
+
+aidmpp-m-shacl:QuantityNameNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromisApplicableInContextPropertyShape,
+        aidmpp-m-shacl:someValuesFromisNameOfQuantityPropertyShape ;
+    sh:targetClass QuantitiesAndUnits:QuantityName .
+
+aidmpp-m-shacl:QuantityNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromhasQuantityKindQuantityKindPropertyShape ;
+    sh:targetClass QuantitiesAndUnits:Quantity .
+
+aidmpp-m-shacl:QuantityValueNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromhasMeasurementUnitMeasurementUnitPropertyShape ;
+    sh:targetClass QuantitiesAndUnits:QuantityValue .
+
+aidmpp-m-shacl:RadioactiveDecayNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromisExperiencedByRadionuclidePropertyShape ;
+    sh:targetClass ISO11238-Substances:RadioactiveDecay .
+
+aidmpp-m-shacl:RadionuclideNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromundergoesRadioactiveDecayPropertyShape ;
+    sh:targetClass ISO11238-Substances:Radionuclide .
+
+aidmpp-m-shacl:RatioScaleNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromclassifiesMeasurementUnitPropertyShape ;
+    sh:targetClass QuantitiesAndUnits:RatioScale .
+
+aidmpp-m-shacl:RatioValueNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromhasMeasurementUnitMeasurementUnitPropertyShape ;
+    sh:targetClass <https://www.omg.org/spec/Commons/StatisticalMeasures/RatioValue> .
+
+aidmpp-m-shacl:ReferenceSourceCitationNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromdescribesReferenceSourcePropertyShape,
+        aidmpp-m-shacl:someValuesFromhasTextValuestringPropertyShape ;
+    sh:targetClass ISO11238-Substances:ReferenceSourceCitation .
+
+aidmpp-m-shacl:ReferenceSourceDocumentIdentifierNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromidentifiesReferenceSourceDocumentPropertyShape ;
+    sh:targetClass ISO11238-Substances:ReferenceSourceDocumentIdentifier .
+
+aidmpp-m-shacl:ReferenceSourceIdentifierNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromidentifiesReferenceSourcePropertyShape ;
+    sh:targetClass ISO11238-Substances:ReferenceSourceIdentifier .
+
+aidmpp-m-shacl:ReferenceSourceNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromhasReferenceSourceTypeReferenceSourceTypePropertyShape ;
+    sh:targetClass ISO11238-Substances:ReferenceSource .
+
+aidmpp-m-shacl:ReferenceStrengthNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromrefersToSubstancePropertyShape ;
+    sh:targetClass <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/ReferenceStrength> .
+
+aidmpp-m-shacl:RegionalGovernmentNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromgovernsGeopoliticalEntityPropertyShape ;
+    sh:targetClass <https://www.omg.org/spec/Commons/GovernmentEntities/RegionalGovernment> .
+
+aidmpp-m-shacl:RegionalSovereigntyNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromhasSovereigntyOverGeopoliticalEntityPropertyShape,
+        aidmpp-m-shacl:someValuesFromisRepresentedByGovernmentPropertyShape ;
+    sh:targetClass <https://www.omg.org/spec/Commons/GovernmentEntities/RegionalSovereignty> .
+
+aidmpp-m-shacl:RegisteredIdentifierNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromisApplicableInContextPropertyShape,
+        aidmpp-m-shacl:someValuesFromisRegisteredInRegistryPropertyShape ;
+    sh:targetClass <https://www.omg.org/spec/Commons/RegistrationAuthorities/RegisteredIdentifier> .
+
+aidmpp-m-shacl:RegistrarNodeShape a sh:NodeShape ;
+    sh:or ( aidmpp-m-shacl:someValuesFromprovidesServicePropertyShape aidmpp-m-shacl:someValuesFrominverseOfisProvidedByServiceProviderPropertyShape ) ;
+    sh:property aidmpp-m-shacl:someValuesFromisDesignatedByRegistrationAuthorityPropertyShape ;
+    sh:targetClass <https://www.omg.org/spec/Commons/RegistrationAuthorities/Registrar> .
+
+aidmpp-m-shacl:RegistrationAuthorityNodeShape a sh:NodeShape ;
+    sh:or ( aidmpp-m-shacl:someValuesFromprovidesServicePropertyShape aidmpp-m-shacl:someValuesFrominverseOfisProvidedByServiceProviderPropertyShape ) ;
+    sh:targetClass <https://www.omg.org/spec/Commons/RegistrationAuthorities/RegistrationAuthority> .
+
+aidmpp-m-shacl:RegistrationNumberNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromisApplicableInContextPropertyShape,
+        aidmpp-m-shacl:someValuesFromisApplicableInJurisdictionGeographicRegionPropertyShape,
+        aidmpp-m-shacl:someValuesFromisMemberOfCodeSetPropertyShape,
+        aidmpp-m-shacl:someValuesFromisRegisteredByMedicinesRegulatoryAgencyPropertyShape,
+        aidmpp-m-shacl:someValuesFromisRegisteredInRegistryPropertyShape ;
+    sh:targetClass <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/RegistrationNumber> .
+
+aidmpp-m-shacl:RegistrationServiceNodeShape a sh:NodeShape ;
+    sh:or ( aidmpp-m-shacl:someValuesFromisProvidedByServiceProviderPropertyShape aidmpp-m-shacl:someValuesFrominverseOfprovidesServicePropertyShape ) ;
+    sh:targetClass <https://www.omg.org/spec/Commons/RegistrationAuthorities/RegistrationService> .
+
+aidmpp-m-shacl:RegistryEntryNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromcomprisesRegisteredIdentifierPropertyShape ;
+    sh:targetClass <https://www.omg.org/spec/Commons/RegistrationAuthorities/RegistryEntry> .
+
+aidmpp-m-shacl:RegulatoryAgencyNodeShape a sh:NodeShape ;
+    sh:or ( aidmpp-m-shacl:someValuesFromprovidesServicePropertyShape aidmpp-m-shacl:someValuesFrominverseOfisProvidedByServiceProviderPropertyShape ) ;
+    sh:property aidmpp-m-shacl:someValuesFromhasJurisdictionJurisdictionPropertyShape ;
+    sh:targetClass <https://www.omg.org/spec/Commons/RegulatoryAgencies/RegulatoryAgency> .
+
+aidmpp-m-shacl:RegulatoryReportNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromisReportedByReportingPartyPropertyShape,
+        aidmpp-m-shacl:someValuesFromisReportedToPartyRolePropertyShape ;
+    sh:targetClass <https://www.omg.org/spec/Commons/RegulatoryAgencies/RegulatoryReport> .
+
+aidmpp-m-shacl:RegulatoryServiceNodeShape a sh:NodeShape ;
+    sh:or ( aidmpp-m-shacl:someValuesFromisProvidedByServiceProviderPropertyShape aidmpp-m-shacl:someValuesFrominverseOfprovidesServicePropertyShape ) ;
+    sh:targetClass <https://www.omg.org/spec/Commons/RegulatoryAgencies/RegulatoryService> .
+
+aidmpp-m-shacl:ReportNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromisReportedByReportingPartyPropertyShape,
+        aidmpp-m-shacl:someValuesFromisReportedToPartyRolePropertyShape ;
+    sh:targetClass Documents:Report .
+
+aidmpp-m-shacl:ReportingPartyNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromauthorsReportPropertyShape ;
+    sh:targetClass Documents:ReportingParty .
+
+aidmpp-m-shacl:ResultantMaterialRoleNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromisPlayedByMaterialPropertyShape ;
+    sh:targetClass ISO11238-Substances:ResultantMaterialRole .
+
+aidmpp-m-shacl:SaltNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromhasSubstanceNameSubstanceNamePropertyShape,
+        aidmpp-m-shacl:someValuesFromhasSubstanceTypeSubstanceTypeClassifierPropertyShape ;
+    sh:targetClass ISO11238-Substances:Salt .
+
+aidmpp-m-shacl:SampleNodeShape a sh:NodeShape ;
+    sh:or ( aidmpp-m-shacl:someValuesFromisApplicableInStatisticalProgramPropertyShape aidmpp-m-shacl:someValuesFrominverseOfappliesToStatisticalUniversePropertyShape ) ;
+    sh:targetClass <https://www.omg.org/spec/Commons/StatisticalMeasures/Sample> .
+
+aidmpp-m-shacl:SamplingVarianceNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromappliesToFinitePopulationPropertyShape,
+        aidmpp-m-shacl:someValuesFromhasArgumentMeanPropertyShape,
+        aidmpp-m-shacl:someValuesFromhasObservedValueStructuredCollectionPropertyShape ;
+    sh:targetClass <https://www.omg.org/spec/Commons/StatisticalMeasures/SamplingVariance> .
+
+aidmpp-m-shacl:ServiceNodeShape a sh:NodeShape ;
+    sh:or ( aidmpp-m-shacl:someValuesFromisProvidedByServiceProviderPropertyShape aidmpp-m-shacl:someValuesFrominverseOfprovidesServicePropertyShape ) ;
+    sh:targetClass <https://www.omg.org/spec/Commons/ProductsAndServices/Service> .
+
+aidmpp-m-shacl:ServiceProviderNodeShape a sh:NodeShape ;
+    sh:or ( aidmpp-m-shacl:someValuesFromprovidesServicePropertyShape aidmpp-m-shacl:someValuesFrominverseOfisProvidedByServiceProviderPropertyShape ) ;
+    sh:targetClass <https://www.omg.org/spec/Commons/ProductsAndServices/ServiceProvider> .
+
+aidmpp-m-shacl:SimplifiedMolecularInputLineEntryNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromhasTextValuestringPropertyShape ;
+    sh:targetClass ISO11238-Substances:SimplifiedMolecularInputLineEntry .
+
+aidmpp-m-shacl:SingleSubstanceNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromhasSubstanceNameSubstanceNamePropertyShape,
+        aidmpp-m-shacl:someValuesFromhasSubstanceTypeSubstanceTypeClassifierPropertyShape ;
+    sh:targetClass ISO11238-Substances:SingleSubstance .
+
+aidmpp-m-shacl:SituationNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromhasSubjectRoleRolePropertyShape ;
+    sh:targetClass <https://www.omg.org/spec/Commons/PartiesAndSituations/Situation> .
+
+aidmpp-m-shacl:SourceMaterialClassifierCodeNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromisMemberOfCodeSetPropertyShape ;
+    sh:targetClass ISO11238-Substances:SourceMaterialClassifierCode .
+
+aidmpp-m-shacl:SourceMaterialClassifierNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromclassifiesMaterialPropertyShape ;
+    sh:targetClass ISO11238-Substances:SourceMaterialClassifier .
+
+aidmpp-m-shacl:SourceMaterialRoleNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromisPlayedByMaterialPropertyShape ;
+    sh:targetClass ISO11238-Substances:SourceMaterialRole .
+
+aidmpp-m-shacl:SovereignStateNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromhasSovereigntyOverGeopoliticalEntityPropertyShape,
+        aidmpp-m-shacl:someValuesFromisRepresentedByGovernmentPropertyShape ;
+    sh:targetClass <https://www.omg.org/spec/Commons/GovernmentEntities/SovereignState> .
+
+aidmpp-m-shacl:SpecialPurposeCodeNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromhasTagstringPropertyShape,
+        aidmpp-m-shacl:someValuesFromidentifiesLanguagePropertyShape,
+        aidmpp-m-shacl:someValuesFromisMemberOfCodeSetPropertyShape ;
+    sh:targetClass LanguageRepresentation:SpecialPurposeCode .
+
+aidmpp-m-shacl:SpecifiedItemCountNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromhasIntegerValueintegerPropertyShape ;
+    sh:targetClass ISO11238-Substances:SpecifiedItemCount .
+
+aidmpp-m-shacl:SpecifiedSubstanceGroup1NodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromhasMemberAspectPropertyShape,
+        aidmpp-m-shacl:someValuesFromisIncludedInSpecifiedSubstancePropertyShape ;
+    sh:targetClass ISO11238-Substances:SpecifiedSubstanceGroup1 .
+
+aidmpp-m-shacl:SpecifiedSubstanceGroup2NodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromhasMemberAspectPropertyShape,
+        aidmpp-m-shacl:someValuesFromisIncludedInSpecifiedSubstancePropertyShape ;
+    sh:targetClass ISO11238-Substances:SpecifiedSubstanceGroup2 .
+
+aidmpp-m-shacl:SpecifiedSubstanceGroup3NodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromhasMemberAspectPropertyShape,
+        aidmpp-m-shacl:someValuesFromisIncludedInSpecifiedSubstancePropertyShape ;
+    sh:targetClass ISO11238-Substances:SpecifiedSubstanceGroup3 .
+
+aidmpp-m-shacl:SpecifiedSubstanceGroup4NodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromhasMemberAspectPropertyShape,
+        aidmpp-m-shacl:someValuesFromisIncludedInSpecifiedSubstancePropertyShape ;
+    sh:targetClass ISO11238-Substances:SpecifiedSubstanceGroup4 .
+
+aidmpp-m-shacl:SpecifiedSubstanceGroupNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromhasMemberAspectPropertyShape,
+        aidmpp-m-shacl:someValuesFromisIncludedInSpecifiedSubstancePropertyShape ;
+    sh:targetClass ISO11238-Substances:SpecifiedSubstanceGroup .
+
+aidmpp-m-shacl:SpecifiedSubstanceNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromhasSubstanceNameSubstanceNamePropertyShape,
+        aidmpp-m-shacl:someValuesFromhasSubstanceTypeSubstanceTypeClassifierPropertyShape,
+        aidmpp-m-shacl:someValuesFromspecializesSubstancePropertyShape ;
+    sh:targetClass ISO11238-Substances:SpecifiedSubstance .
+
+aidmpp-m-shacl:SponsorNodeShape a sh:NodeShape ;
+    sh:or ( aidmpp-m-shacl:someValuesFromsponsorsClinicalTrialPropertyShape aidmpp-m-shacl:someValuesFrominverseOfhasSponsorSponsorPropertyShape ) ;
+    sh:targetClass <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/Sponsor> .
+
+aidmpp-m-shacl:StabilizerIngredientNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromisManifestedInManufacturedItemPropertyShape,
+        aidmpp-m-shacl:someValuesFromisPlayedBySubstancePropertyShape ;
+    sh:targetClass ISO11238-Substances:StabilizerIngredient .
+
+aidmpp-m-shacl:StandardDeviationNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromappliesToFinitePopulationPropertyShape,
+        aidmpp-m-shacl:someValuesFromhasObservedValueStructuredCollectionPropertyShape ;
+    sh:targetClass <https://www.omg.org/spec/Commons/StatisticalMeasures/StandardDeviation> .
+
+aidmpp-m-shacl:StartingMaterialRoleNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromisPlayedByMaterialPropertyShape ;
+    sh:targetClass ISO11238-Substances:StartingMaterialRole .
+
+aidmpp-m-shacl:StatisticalAreaIdentifierNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromhasTagstringPropertyShape,
+        aidmpp-m-shacl:someValuesFromidentifiesGeographicRegionPropertyShape,
+        aidmpp-m-shacl:someValuesFromisMemberOfCodeSetPropertyShape ;
+    sh:targetClass <https://www.omg.org/spec/Commons/StatisticalMeasures/StatisticalAreaIdentifier> .
+
+aidmpp-m-shacl:StatisticalAreaNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromisIdentifiedByStatisticalAreaIdentifierPropertyShape ;
+    sh:targetClass <https://www.omg.org/spec/Commons/StatisticalMeasures/StatisticalArea> .
+
+aidmpp-m-shacl:StatisticalPopulationNodeShape a sh:NodeShape ;
+    sh:or ( aidmpp-m-shacl:someValuesFromisApplicableInStatisticalProgramPropertyShape aidmpp-m-shacl:someValuesFrominverseOfappliesToStatisticalUniversePropertyShape ) ;
+    sh:targetClass <https://www.omg.org/spec/Commons/StatisticalMeasures/StatisticalPopulation> .
+
+aidmpp-m-shacl:StatisticalProgramNodeShape a sh:NodeShape ;
+    sh:or ( aidmpp-m-shacl:someValuesFromappliesToStatisticalUniversePropertyShape aidmpp-m-shacl:someValuesFrominverseOfisApplicableInStatisticalProgramPropertyShape ) ;
+    sh:property aidmpp-m-shacl:someValuesFromhasCoverageAreaStatisticalAreaPropertyShape,
+        aidmpp-m-shacl:someValuesFromprovidesStatisticalMeasurePropertyShape ;
+    sh:targetClass <https://www.omg.org/spec/Commons/StatisticalMeasures/StatisticalProgram> .
+
+aidmpp-m-shacl:StatisticalUniverseNodeShape a sh:NodeShape ;
+    sh:or ( aidmpp-m-shacl:someValuesFromisApplicableInStatisticalProgramPropertyShape aidmpp-m-shacl:someValuesFrominverseOfappliesToStatisticalUniversePropertyShape ) ;
+    sh:targetClass <https://www.omg.org/spec/Commons/StatisticalMeasures/StatisticalUniverse> .
+
+aidmpp-m-shacl:StockKeepingUnitNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromclassifiesTradeItemPropertyShape,
+        aidmpp-m-shacl:someValuesFromdenotesTradeItemPropertyShape ;
+    sh:targetClass <https://www.omg.org/spec/Commons/ProductsAndServices/StockKeepingUnit> .
+
+aidmpp-m-shacl:StrengthNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromrefersToSubstancePropertyShape ;
+    sh:targetClass <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/Strength> .
+
+aidmpp-m-shacl:StructuralModificationMethodNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromhasStructuralModificationTypeStructuralModificationTypePropertyShape,
+        aidmpp-m-shacl:someValuesFromspecifiesModificationPropertyShape ;
+    sh:targetClass ISO11238-Substances:StructuralModificationMethod .
+
+aidmpp-m-shacl:StructuralModificationTypeNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromclassifiesStructuralModificationMethodPropertyShape ;
+    sh:targetClass ISO11238-Substances:StructuralModificationType .
+
+aidmpp-m-shacl:StructurallyDiverseSubstanceNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromhasSubstanceNameSubstanceNamePropertyShape,
+        aidmpp-m-shacl:someValuesFromhasSubstanceTypeSubstanceTypeClassifierPropertyShape ;
+    sh:targetClass ISO11238-Substances:StructurallyDiverseSubstance .
+
+aidmpp-m-shacl:SubstanceClassifierCodeNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromisMemberOfCodeSetPropertyShape ;
+    sh:targetClass ISO11238-Substances:SubstanceClassifierCode .
+
+aidmpp-m-shacl:SubstanceCodeNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromisApplicableInContextPropertyShape,
+        aidmpp-m-shacl:someValuesFromisMemberOfCodeSetPropertyShape,
+        aidmpp-m-shacl:someValuesFromisRegisteredInRegistryPropertyShape ;
+    sh:targetClass ISO11238-Substances:SubstanceCode .
+
+aidmpp-m-shacl:SubstanceCompositionNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromdefinesSubstancePropertyShape ;
+    sh:targetClass ISO11238-Substances:SubstanceComposition .
+
+aidmpp-m-shacl:SubstanceIdentifierNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromisApplicableInContextPropertyShape,
+        aidmpp-m-shacl:someValuesFromisMemberOfCodeSetPropertyShape,
+        aidmpp-m-shacl:someValuesFromisRegisteredInRegistryPropertyShape ;
+    sh:targetClass ISO11238-Substances:SubstanceIdentifier .
+
+aidmpp-m-shacl:SubstanceNameNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromhasLanguageCodeLanguageIdentifierPropertyShape,
+        aidmpp-m-shacl:someValuesFromisApplicableInContextPropertyShape,
+        aidmpp-m-shacl:someValuesFromisApplicableInJurisdictionGeographicRegionIdentifierPropertyShape ;
+    sh:targetClass ISO11238-Substances:SubstanceName .
+
+aidmpp-m-shacl:SubstanceNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromhasSubstanceNameSubstanceNamePropertyShape,
+        aidmpp-m-shacl:someValuesFromhasSubstanceTypeSubstanceTypeClassifierPropertyShape ;
+    sh:targetClass ISO11238-Substances:Substance .
+
+aidmpp-m-shacl:SubstanceRelationshipCodeNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromisMemberOfCodeSetPropertyShape ;
+    sh:targetClass ISO11238-Substances:SubstanceRelationshipCode .
+
+aidmpp-m-shacl:SubstanceRelationshipTypeNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromisMemberOfCodeSetPropertyShape ;
+    sh:targetClass ISO11238-Substances:SubstanceRelationshipType .
+
+aidmpp-m-shacl:SubstanceRoleNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromisPlayedBySubstancePropertyShape ;
+    sh:targetClass ISO11238-Substances:SubstanceRole .
+
+aidmpp-m-shacl:SubstrateTargetInteractionNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromhasSubjectRoleRolePropertyShape ;
+    sh:targetClass ISO11238-Substances:SubstrateTargetInteraction .
+
+aidmpp-m-shacl:SupranationalEntityNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromhasSovereigntyOverGeopoliticalEntityPropertyShape,
+        aidmpp-m-shacl:someValuesFromisRepresentedByGovernmentBodyPropertyShape,
+        aidmpp-m-shacl:someValuesFromisRepresentedByGovernmentPropertyShape ;
+    sh:targetClass <https://www.omg.org/spec/Commons/GovernmentEntities/SupranationalEntity> .
+
+aidmpp-m-shacl:SystemOfQuantitiesNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromdefinesQuantityKindPropertyShape ;
+    sh:targetClass QuantitiesAndUnits:SystemOfQuantities .
+
+aidmpp-m-shacl:SystemOfUnitsNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromdefinesMeasurementUnitPropertyShape ;
+    sh:targetClass QuantitiesAndUnits:SystemOfUnits .
+
+aidmpp-m-shacl:TargetPopulationNodeShape a sh:NodeShape ;
+    sh:or ( aidmpp-m-shacl:someValuesFromisApplicableInStatisticalProgramPropertyShape aidmpp-m-shacl:someValuesFrominverseOfappliesToStatisticalUniversePropertyShape ) ;
+    sh:targetClass <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/TargetPopulation> .
+
+aidmpp-m-shacl:TerminologyCodeNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromhasTagstringPropertyShape,
+        aidmpp-m-shacl:someValuesFromidentifiesLanguagePropertyShape,
+        aidmpp-m-shacl:someValuesFromisMemberOfCodeSetPropertyShape ;
+    sh:targetClass LanguageRepresentation:TerminologyCode .
+
+aidmpp-m-shacl:TherapeuticIndicationNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromhasTargetPopulationTargetPopulationPropertyShape,
+        aidmpp-m-shacl:someValuesFromisTherapeuticIndicationForMedicinalProductPropertyShape ;
+    sh:targetClass <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/TherapeuticIndication> .
+
+aidmpp-m-shacl:TranscriptionNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromusesWritingSystemPropertyShape ;
+    sh:targetClass LanguageRepresentation:Transcription .
+
+aidmpp-m-shacl:TransliterationNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromusesScriptPropertyShape ;
+    sh:targetClass LanguageRepresentation:Transliteration .
+
+aidmpp-m-shacl:TribalEntityNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromhasSovereigntyOverGeopoliticalEntityPropertyShape,
+        aidmpp-m-shacl:someValuesFromisRepresentedByGovernmentPropertyShape ;
+    sh:targetClass <https://www.omg.org/spec/Commons/GovernmentEntities/TribalEntity> .
+
+aidmpp-m-shacl:TribalGovernmentNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromgovernsGeopoliticalEntityPropertyShape ;
+    sh:targetClass <https://www.omg.org/spec/Commons/GovernmentEntities/TribalGovernment> .
+
+aidmpp-m-shacl:UPCCompanyPrefixNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromisApplicableInContextPropertyShape ;
+    sh:targetClass <https://www.omg.org/spec/Commons/ProductsAndServices/UPCCompanyPrefix> .
+
+aidmpp-m-shacl:UniformProductCodeNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromclassifiesTradeItemPropertyShape,
+        aidmpp-m-shacl:someValuesFromdenotesTradeItemPropertyShape ;
+    sh:targetClass <https://www.omg.org/spec/Commons/ProductsAndServices/UniformProductCode> .
+
+aidmpp-m-shacl:UnitOfMeasureIdentifierNodeShape a sh:NodeShape ;
+    sh:or ( aidmpp-m-shacl:someValuesFromidentifiesMeasurementUnitPropertyShape aidmpp-m-shacl:someValuesFrominverseOfisIdentifiedByUnitOfMeasureIdentifierPropertyShape ) ;
+    sh:property aidmpp-m-shacl:someValuesFromcompliesWithUnitOfMeasureIdentificationSchemePropertyShape,
+        aidmpp-m-shacl:someValuesFromisMemberOfCodeSetPropertyShape ;
+    sh:targetClass <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11240-UnitsOfMeasurement/UnitOfMeasureIdentifier> .
+
+aidmpp-m-shacl:UnitOfPresentationNodeShape a sh:NodeShape ;
+    sh:or ( aidmpp-m-shacl:someValuesFromisIdentifiedByUnitOfMeasureIdentifierPropertyShape aidmpp-m-shacl:someValuesFrominverseOfidentifiesMeasurementUnitPropertyShape ) ;
+    sh:property aidmpp-m-shacl:someValuesFromhasQuantityKindQuantityKindPropertyShape ;
+    sh:targetClass <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11240-UnitsOfMeasurement/UnitOfPresentation> .
+
+aidmpp-m-shacl:UpdateModeNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromhasLevelInHierarchynonNegativeIntegerPropertyShape,
+        aidmpp-m-shacl:someValuesFromisMemberOfCodeSetPropertyShape ;
+    sh:targetClass ISO21090-HarmonizedDatatypes:UpdateMode .
+
+aidmpp-m-shacl:ValueDomainIdentifierNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromidentifiesValueDomainPropertyShape ;
+    sh:targetClass ISO21090-HarmonizedDatatypes:ValueDomainIdentifier .
+
+aidmpp-m-shacl:VariableNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromhasMeasurementUnitMeasurementUnitPropertyShape ;
+    sh:targetClass QuantitiesAndUnits:Variable .
+
+aidmpp-m-shacl:VarianceNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromappliesToFinitePopulationPropertyShape,
+        aidmpp-m-shacl:someValuesFromhasArgumentMeanPropertyShape,
+        aidmpp-m-shacl:someValuesFromhasObservedValueStructuredCollectionPropertyShape ;
+    sh:targetClass <https://www.omg.org/spec/Commons/StatisticalMeasures/Variance> .
+
+aidmpp-m-shacl:WritingSystemNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromcomprisesOrthographyPropertyShape,
+        aidmpp-m-shacl:someValuesFromcomprisesScriptPropertyShape,
+        aidmpp-m-shacl:someValuesFromisUsedByLanguagePropertyShape ;
+    sh:targetClass LanguageRepresentation:WritingSystem .
+
+aidmpp-m-shacl:WrittenLanguageNodeShape a sh:NodeShape ;
+    sh:property aidmpp-m-shacl:someValuesFromusesOrthographyPropertyShape ;
+    sh:targetClass LanguageRepresentation:WrittenLanguage .
+
+aidmpp-m-shacl:someValuesFromdenotesPharmaceuticalProductBatchPropertyShape a sh:PropertyShape ;
+    sh:class <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/PharmaceuticalProductBatch> ;
     sh:minCount 1 ;
-    sh:path cmns-id:classifies .
+    sh:path Designators:denotes .
 
-iso11238-s-shacl:someValuesFromhasDefiningStructureMolecularStructurePropertyShape a sh:PropertyShape ;
-    sh:class idmp-sub:MolecularStructure ;
+aidmpp-m-shacl:someValuesFromgovernsCountryPropertyShape a sh:PropertyShape ;
+    sh:class CountryRepresentation:Country ;
     sh:minCount 1 ;
-    sh:path idmp-sub:hasDefiningStructure .
+    sh:path <https://www.omg.org/spec/Commons/RegulatoryAgencies/governs> .
 
-iso11238-s-shacl:someValuesFromhasGranularMolecularPartMolecularEntityPropertyShape a sh:PropertyShape ;
-    sh:class idmp-sub:MolecularEntity ;
+aidmpp-m-shacl:someValuesFromgovernsMunicipalityPropertyShape a sh:PropertyShape ;
+    sh:class <https://www.omg.org/spec/Commons/Locations/Municipality> ;
     sh:minCount 1 ;
-    sh:path idmp-sub:hasGranularMolecularPart .
+    sh:path <https://www.omg.org/spec/Commons/RegulatoryAgencies/governs> .
 
-iso11238-s-shacl:someValuesFromhasGranularMolecularPartMolecularGroupPropertyShape a sh:PropertyShape ;
-    sh:class idmp-sub:MolecularGroup ;
+aidmpp-m-shacl:someValuesFromgovernsTribalAreaPropertyShape a sh:PropertyShape ;
+    sh:class <https://www.omg.org/spec/Commons/GovernmentEntities/TribalArea> ;
     sh:minCount 1 ;
-    sh:path idmp-sub:hasGranularMolecularPart .
+    sh:path <https://www.omg.org/spec/Commons/RegulatoryAgencies/governs> .
 
-iso11238-s-shacl:someValuesFromhasModificationAgentModificationAgentPropertyShape a sh:PropertyShape ;
-    sh:class idmp-sub:ModificationAgent ;
+aidmpp-m-shacl:someValuesFromhasAuthorizedPartyMarketingAuthorizationHolderPropertyShape a sh:PropertyShape ;
+    sh:class <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/MarketingAuthorizationHolder> ;
     sh:minCount 1 ;
-    sh:path idmp-sub:hasModificationAgent .
+    sh:path <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/hasAuthorizedParty> .
 
-iso11238-s-shacl:someValuesFromhasReferenceSourceTypeReferenceSourceTypePropertyShape a sh:PropertyShape ;
-    sh:class idmp-sub:ReferenceSourceType ;
+aidmpp-m-shacl:someValuesFromhasAuthorizingPartyAuthorizingPartyPropertyShape a sh:PropertyShape ;
+    sh:class <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/AuthorizingParty> ;
     sh:minCount 1 ;
-    sh:path idmp-sub:hasReferenceSourceType .
+    sh:path <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/hasAuthorizingParty> .
 
-iso11238-s-shacl:someValuesFromhasStructuralModificationTypeStructuralModificationTypePropertyShape a sh:PropertyShape ;
-    sh:class idmp-sub:StructuralModificationType ;
+aidmpp-m-shacl:someValuesFromhasAuthorizingPartyMedicinesRegulatoryAgencyPropertyShape a sh:PropertyShape ;
+    sh:class <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/MedicinesRegulatoryAgency> ;
     sh:minCount 1 ;
-    sh:path idmp-sub:hasStructuralModificationType .
+    sh:path <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/hasAuthorizingParty> .
 
-iso11238-s-shacl:someValuesFromhasStructureMolecularStructurePropertyShape a sh:PropertyShape ;
-    sh:class idmp-sub:MolecularStructure ;
+aidmpp-m-shacl:someValuesFromhasFullSovereigntyOverCountryPropertyShape a sh:PropertyShape ;
+    sh:class CountryRepresentation:Country ;
     sh:minCount 1 ;
-    sh:path idmp-sub:hasStructure .
+    sh:path <https://www.omg.org/spec/Commons/GovernmentEntities/hasFullSovereigntyOver> .
 
-iso11238-s-shacl:someValuesFromhasSubjectRoleError12PropertyShape a sh:PropertyShape ;
-    sh:class <http://org.semanticweb.owlapi/error#Error12> ;
+aidmpp-m-shacl:someValuesFromhasGranularMolecularPartMolecularGroupPropertyShape a sh:PropertyShape ;
+    sh:class ISO11238-Substances:MolecularGroup ;
     sh:minCount 1 ;
-    sh:path cmns-pts:hasSubjectRole .
+    sh:path ISO11238-Substances:hasGranularMolecularPart .
 
-iso11238-s-shacl:someValuesFromhasSubstanceNameSubstanceNamePropertyShape a sh:PropertyShape ;
-    sh:class idmp-sub:SubstanceName ;
+aidmpp-m-shacl:someValuesFromhasMemberPartyPropertyShape a sh:PropertyShape ;
+    sh:class <https://www.omg.org/spec/Commons/PartiesAndSituations/Party> ;
     sh:minCount 1 ;
-    sh:path idmp-sub:hasSubstanceName .
+    sh:path Collections:hasMember .
 
-iso11238-s-shacl:someValuesFromhasSubstanceTypeSubstanceTypeClassifierPropertyShape a sh:PropertyShape ;
-    sh:class idmp-sub:SubstanceTypeClassifier ;
+aidmpp-m-shacl:someValuesFromhasMembershipMemberBearingOrganizationPropertyShape a sh:PropertyShape ;
+    sh:class <https://www.omg.org/spec/Commons/Organizations/MemberBearingOrganization> ;
     sh:minCount 1 ;
-    sh:path idmp-sub:hasSubstanceType .
+    sh:path <https://www.omg.org/spec/Commons/Organizations/hasMembership> .
 
-iso11238-s-shacl:someValuesFromisExperiencedByRadionuclidePropertyShape a sh:PropertyShape ;
-    sh:class idmp-sub:Radionuclide ;
+aidmpp-m-shacl:someValuesFromhasSharedSovereigntyOverGeopoliticalEntityPropertyShape a sh:PropertyShape ;
+    sh:class CountryRepresentation:GeopoliticalEntity ;
     sh:minCount 1 ;
-    sh:path cmns-pts:isExperiencedBy .
+    sh:path <https://www.omg.org/spec/Commons/GovernmentEntities/hasSharedSovereigntyOver> .
 
-iso11238-s-shacl:someValuesFromisManifestedInModificationPropertyShape a sh:PropertyShape ;
-    sh:class idmp-sub:Modification ;
+aidmpp-m-shacl:someValuesFromhasSharedSovereigntyOverTribalAreaPropertyShape a sh:PropertyShape ;
+    sh:class <https://www.omg.org/spec/Commons/GovernmentEntities/TribalArea> ;
     sh:minCount 1 ;
-    sh:path cmns-pts:isManifestedIn .
+    sh:path <https://www.omg.org/spec/Commons/GovernmentEntities/hasSharedSovereigntyOver> .
 
-iso11238-s-shacl:someValuesFromisMoietyOfSubstancePropertyShape a sh:PropertyShape ;
-    sh:class idmp-sub:Substance ;
+aidmpp-m-shacl:someValuesFromhasSovereigntyOverMunicipalityPropertyShape a sh:PropertyShape ;
+    sh:class <https://www.omg.org/spec/Commons/Locations/Municipality> ;
     sh:minCount 1 ;
-    sh:path idmp-sub:isMoietyOf .
+    sh:path <https://www.omg.org/spec/Commons/GovernmentEntities/hasSovereigntyOver> .
 
-iso11238-s-shacl:someValuesFromisPlayedByMaterialPropertyShape a sh:PropertyShape ;
-    sh:class idmp-sub:Material ;
+aidmpp-m-shacl:someValuesFromhasSponsorSponsorPropertyShape a sh:PropertyShape ;
+    sh:class <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/Sponsor> ;
     sh:minCount 1 ;
-    sh:path cmns-pts:isPlayedBy .
+    sh:path <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/hasSponsor> .
 
-iso11238-s-shacl:someValuesFromisPlayedByMolecularFragmentPropertyShape a sh:PropertyShape ;
-    sh:class idmp-sub:MolecularFragment ;
+aidmpp-m-shacl:someValuesFrominverseOfauthorizesThroughAuthorizationPropertyShape a sh:PropertyShape ;
+    sh:class <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/AuthorizingParty> ;
     sh:minCount 1 ;
-    sh:path cmns-pts:isPlayedBy .
+    sh:path [ sh:inversePath <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/authorizesThrough> ] .
 
-iso11238-s-shacl:someValuesFromisPlayedBySubstancePropertyShape a sh:PropertyShape ;
-    sh:class idmp-sub:Substance ;
+aidmpp-m-shacl:someValuesFrominverseOfsponsorsClinicalTrialPropertyShape a sh:PropertyShape ;
+    sh:class <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/Sponsor> ;
     sh:minCount 1 ;
-    sh:path cmns-pts:isPlayedBy .
+    sh:path [ sh:inversePath <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/sponsors> ] .
 
-iso11238-s-shacl:someValuesFromisPlayedByTargetPropertyShape a sh:PropertyShape ;
-    sh:class idmp-sub:Target ;
+aidmpp-m-shacl:someValuesFromisAPartyToLicensePropertyShape a sh:PropertyShape ;
+    sh:class <https://www.omg.org/spec/Commons/RegulatoryAgencies/License> ;
     sh:minCount 1 ;
-    sh:path cmns-pts:isPlayedBy .
+    sh:path <https://www.omg.org/spec/Commons/PartiesAndSituations/isAPartyTo> .
 
-iso11238-s-shacl:someValuesFromisProducedByManufacturerPropertyShape a sh:PropertyShape ;
-    sh:class idmp-sub:Manufacturer ;
+aidmpp-m-shacl:someValuesFromisConstituentOfPhysicalPharmaceuticalProductPropertyShape a sh:PropertyShape ;
+    sh:class <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/PhysicalPharmaceuticalProduct> ;
     sh:minCount 1 ;
-    sh:path cmns-prd:isProducedBy .
+    sh:path Collections:isConstituentOf .
 
-iso11238-s-shacl:someValuesFromisSpecifiedBySubstancePropertyShape a sh:PropertyShape ;
-    sh:class idmp-sub:Substance ;
+aidmpp-m-shacl:someValuesFromisMemberOfUnitOfMeasureIdentificationSchemePropertyShape a sh:PropertyShape ;
+    sh:class <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11240-UnitsOfMeasurement/UnitOfMeasureIdentificationScheme> ;
     sh:minCount 1 ;
-    sh:path cmns-doc:isSpecifiedBy .
+    sh:path Collections:isMemberOf .
 
-iso11238-s-shacl:someValuesFromspecifiesAnalysisPropertyShape a sh:PropertyShape ;
-    sh:class idmp-sub:Analysis ;
+aidmpp-m-shacl:someValuesFromisPlayedByTargetPropertyShape a sh:PropertyShape ;
+    sh:class ISO11238-Substances:Target ;
     sh:minCount 1 ;
-    sh:path cmns-doc:specifies .
+    sh:path <https://www.omg.org/spec/Commons/PartiesAndSituations/isPlayedBy> .
 
-iso11238-s-shacl:someValuesFromspecifiesMaterialPropertyShape a sh:PropertyShape ;
-    sh:class idmp-sub:Material ;
+aidmpp-m-shacl:someValuesFromisProvidedByRegulatoryAgencyPropertyShape a sh:PropertyShape ;
+    sh:class <https://www.omg.org/spec/Commons/RegulatoryAgencies/RegulatoryAgency> ;
     sh:minCount 1 ;
-    sh:path cmns-doc:specifies .
+    sh:path <https://www.omg.org/spec/Commons/ProductsAndServices/isProvidedBy> .
 
-iso11238-s-shacl:someValuesFromspecifiesModificationPropertyShape a sh:PropertyShape ;
-    sh:class idmp-sub:Modification ;
+aidmpp-m-shacl:someValuesFromisRepresentedByMunicipalGovernmentPropertyShape a sh:PropertyShape ;
+    sh:class <https://www.omg.org/spec/Commons/GovernmentEntities/MunicipalGovernment> ;
     sh:minCount 1 ;
-    sh:path cmns-doc:specifies .
+    sh:path <https://www.omg.org/spec/Commons/GovernmentEntities/isRepresentedBy> .
 
-iso11238-s-shacl:someValuesFromspecifiesOpticalRotationPropertyShape a sh:PropertyShape ;
-    sh:class idmp-sub:OpticalRotation ;
+aidmpp-m-shacl:someValuesFromisRepresentedByNationalGovernmentPropertyShape a sh:PropertyShape ;
+    sh:class <https://www.omg.org/spec/Commons/GovernmentEntities/NationalGovernment> ;
     sh:minCount 1 ;
-    sh:path cmns-doc:specifies .
+    sh:path <https://www.omg.org/spec/Commons/GovernmentEntities/isRepresentedBy> .
 
-iso11238-s-shacl:someValuesFromundergoesModificationPropertyShape a sh:PropertyShape ;
-    sh:class idmp-sub:Modification ;
+aidmpp-m-shacl:someValuesFromisRepresentedByTribalGovernmentPropertyShape a sh:PropertyShape ;
+    sh:class <https://www.omg.org/spec/Commons/GovernmentEntities/TribalGovernment> ;
     sh:minCount 1 ;
-    sh:path cmns-pts:undergoes .
+    sh:path <https://www.omg.org/spec/Commons/GovernmentEntities/isRepresentedBy> .
 
-iso11238-s-shacl:someValuesFromundergoesRadioactiveDecayPropertyShape a sh:PropertyShape ;
-    sh:class idmp-sub:RadioactiveDecay ;
+aidmpp-m-shacl:someValuesFromprovidesRegistrationServicePropertyShape a sh:PropertyShape ;
+    sh:class <https://www.omg.org/spec/Commons/RegistrationAuthorities/RegistrationService> ;
     sh:minCount 1 ;
-    sh:path cmns-pts:undergoes .
+    sh:path <https://www.omg.org/spec/Commons/ProductsAndServices/provides> .
+
+aidmpp-m-shacl:someValuesFromappliesToClinicalTrialPropertyShape a sh:PropertyShape ;
+    sh:class <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/ClinicalTrial> ;
+    sh:minCount 1 ;
+    sh:path <https://www.omg.org/spec/Commons/ContextualDesignators/appliesTo> .
+
+aidmpp-m-shacl:someValuesFromappliesToStatisticalUniversePropertyShape a sh:PropertyShape ;
+    sh:class <https://www.omg.org/spec/Commons/StatisticalMeasures/StatisticalUniverse> ;
+    sh:minCount 1 ;
+    sh:path <https://www.omg.org/spec/Commons/ContextualDesignators/appliesTo> .
+
+aidmpp-m-shacl:someValuesFromauthorsReportPropertyShape a sh:PropertyShape ;
+    sh:class Documents:Report ;
+    sh:minCount 1 ;
+    sh:path Documents:authors .
+
+aidmpp-m-shacl:someValuesFromclassifiesAgentModificationMethodPropertyShape a sh:PropertyShape ;
+    sh:class ISO11238-Substances:AgentModificationMethod ;
+    sh:minCount 1 ;
+    sh:path Classifiers:classifies .
+
+aidmpp-m-shacl:someValuesFromclassifiesGeneElementPropertyShape a sh:PropertyShape ;
+    sh:class ISO11238-Substances:GeneElement ;
+    sh:minCount 1 ;
+    sh:path Identifiers:classifies .
+
+aidmpp-m-shacl:someValuesFromclassifiesIsotopicSubstitutionPropertyShape a sh:PropertyShape ;
+    sh:class ISO11238-Substances:IsotopicSubstitution ;
+    sh:minCount 1 ;
+    sh:path Classifiers:classifies .
+
+aidmpp-m-shacl:someValuesFromclassifiesMedicalConditionPropertyShape a sh:PropertyShape ;
+    sh:class <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/MedicalCondition> ;
+    sh:minCount 1 ;
+    sh:path Classifiers:classifies .
+
+aidmpp-m-shacl:someValuesFromclassifiesNuclidePropertyShape a sh:PropertyShape ;
+    sh:class ISO11238-Substances:Nuclide ;
+    sh:minCount 1 ;
+    sh:path Classifiers:classifies .
+
+aidmpp-m-shacl:someValuesFromclassifiesPharmacopoeialGradePropertyShape a sh:PropertyShape ;
+    sh:class ISO11238-Substances:PharmacopoeialGrade ;
+    sh:minCount 1 ;
+    sh:path Classifiers:classifies .
+
+aidmpp-m-shacl:someValuesFromclassifiesStructuralModificationMethodPropertyShape a sh:PropertyShape ;
+    sh:class ISO11238-Substances:StructuralModificationMethod ;
+    sh:minCount 1 ;
+    sh:path Classifiers:classifies .
+
+aidmpp-m-shacl:someValuesFromclassifiesTargetPopulationPropertyShape a sh:PropertyShape ;
+    sh:class <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/TargetPopulation> ;
+    sh:minCount 1 ;
+    sh:path Classifiers:classifies .
+
+aidmpp-m-shacl:someValuesFromcomprisesAlpha2RegionCodePropertyShape a sh:PropertyShape ;
+    sh:class CountryRepresentation:Alpha2RegionCode ;
+    sh:minCount 1 ;
+    sh:path Collections:comprises .
+
+aidmpp-m-shacl:someValuesFromcomprisesAtomPropertyShape a sh:PropertyShape ;
+    sh:class ISO11238-Substances:Atom ;
+    sh:minCount 1 ;
+    sh:path Collections:comprises .
+
+aidmpp-m-shacl:someValuesFromcomprisesMarketingAuthorizationHolderIdentifierPropertyShape a sh:PropertyShape ;
+    sh:class <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/MarketingAuthorizationHolderIdentifier> ;
+    sh:minCount 1 ;
+    sh:path Collections:comprises .
+
+aidmpp-m-shacl:someValuesFromcomprisesMedicinalProductCodeSegmentPropertyShape a sh:PropertyShape ;
+    sh:class <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/MedicinalProductCodeSegment> ;
+    sh:minCount 1 ;
+    sh:path Collections:comprises .
+
+aidmpp-m-shacl:someValuesFromcomprisesMedicinalProductIdentifierPropertyShape a sh:PropertyShape ;
+    sh:class <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/MedicinalProductIdentifier> ;
+    sh:minCount 1 ;
+    sh:path Collections:comprises .
+
+aidmpp-m-shacl:someValuesFromcomprisesOrthographyPropertyShape a sh:PropertyShape ;
+    sh:class LanguageRepresentation:Orthography ;
+    sh:minCount 1 ;
+    sh:path Collections:comprises .
+
+aidmpp-m-shacl:someValuesFromcomprisesPackageDescriptionCodeSegmentPropertyShape a sh:PropertyShape ;
+    sh:class <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/PackageDescriptionCodeSegment> ;
+    sh:minCount 1 ;
+    sh:path Collections:comprises .
+
+aidmpp-m-shacl:someValuesFromcomprisesRegisteredIdentifierPropertyShape a sh:PropertyShape ;
+    sh:class <https://www.omg.org/spec/Commons/RegistrationAuthorities/RegisteredIdentifier> ;
+    sh:minCount 1 ;
+    sh:path Collections:comprises .
+
+aidmpp-m-shacl:someValuesFromcomprisesScriptPropertyShape a sh:PropertyShape ;
+    sh:class LanguageRepresentation:Script ;
+    sh:minCount 1 ;
+    sh:path Collections:comprises .
+
+aidmpp-m-shacl:someValuesFromcomprisesSubstancePropertyShape a sh:PropertyShape ;
+    sh:class ISO11238-Substances:Substance ;
+    sh:minCount 1 ;
+    sh:path Collections:comprises .
+
+aidmpp-m-shacl:someValuesFromcontainsPackageItemPropertyShape a sh:PropertyShape ;
+    sh:class <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/PackageItem> ;
+    sh:minCount 1 ;
+    sh:path <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/contains> .
+
+aidmpp-m-shacl:someValuesFromdefinesMeasurementUnitPropertyShape a sh:PropertyShape ;
+    sh:class QuantitiesAndUnits:MeasurementUnit ;
+    sh:minCount 1 ;
+    sh:path Designators:defines .
+
+aidmpp-m-shacl:someValuesFromdefinesQuantityKindPropertyShape a sh:PropertyShape ;
+    sh:class QuantitiesAndUnits:QuantityKind ;
+    sh:minCount 1 ;
+    sh:path Designators:defines .
+
+aidmpp-m-shacl:someValuesFromdenotesLotPropertyShape a sh:PropertyShape ;
+    sh:class <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/Lot> ;
+    sh:minCount 1 ;
+    sh:path Designators:denotes .
+
+aidmpp-m-shacl:someValuesFromdenotesProcessPropertyShape a sh:PropertyShape ;
+    sh:class <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/Process> ;
+    sh:minCount 1 ;
+    sh:path Designators:denotes .
+
+aidmpp-m-shacl:someValuesFromdenotesProcessStepPropertyShape a sh:PropertyShape ;
+    sh:class <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/ProcessStep> ;
+    sh:minCount 1 ;
+    sh:path Designators:denotes .
+
+aidmpp-m-shacl:someValuesFromdescribesReferenceSourcePropertyShape a sh:PropertyShape ;
+    sh:class ISO11238-Substances:ReferenceSource ;
+    sh:minCount 1 ;
+    sh:path Designators:describes .
+
+aidmpp-m-shacl:someValuesFromevaluatesInvestigationalMedicinalProductPropertyShape a sh:PropertyShape ;
+    sh:class <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/InvestigationalMedicinalProduct> ;
+    sh:minCount 1 ;
+    sh:path <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/evaluates> .
+
+aidmpp-m-shacl:someValuesFromhasArgumentMedianPropertyShape a sh:PropertyShape ;
+    sh:class <https://www.omg.org/spec/Commons/StatisticalMeasures/Median> ;
+    sh:minCount 1 ;
+    sh:path QuantitiesAndUnits:hasArgument .
+
+aidmpp-m-shacl:someValuesFromhasAuthorizationAuthorizationPropertyShape a sh:PropertyShape ;
+    sh:class <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/Authorization> ;
+    sh:minCount 1 ;
+    sh:path <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/hasAuthorization> .
+
+aidmpp-m-shacl:someValuesFromhasAuthorizedPartyManufacturerPropertyShape a sh:PropertyShape ;
+    sh:class ISO11238-Substances:Manufacturer ;
+    sh:minCount 1 ;
+    sh:path <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/hasAuthorizedParty> .
+
+aidmpp-m-shacl:someValuesFromhasBooleanValuebooleanPropertyShape a sh:PropertyShape ;
+    sh:datatype xsd:boolean ;
+    sh:minCount 1 ;
+    sh:path ISO21090-HarmonizedDatatypes:hasBooleanValue .
+
+aidmpp-m-shacl:someValuesFromhasConstituentContainerConstituentPropertyShape a sh:PropertyShape ;
+    sh:class <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/ContainerConstituent> ;
+    sh:minCount 1 ;
+    sh:path Collections:hasConstituent .
+
+aidmpp-m-shacl:someValuesFromhasCoverageAreaStatisticalAreaPropertyShape a sh:PropertyShape ;
+    sh:class <https://www.omg.org/spec/Commons/StatisticalMeasures/StatisticalArea> ;
+    sh:minCount 1 ;
+    sh:path <https://www.omg.org/spec/Commons/Locations/hasCoverageArea> .
+
+aidmpp-m-shacl:someValuesFromhasExpirationDateExplicitDatePropertyShape a sh:PropertyShape ;
+    sh:class DatesAndTimes:ExplicitDate ;
+    sh:minCount 1 ;
+    sh:path Documents:hasExpirationDate .
+
+aidmpp-m-shacl:someValuesFromhasFactorPrefixPropertyShape a sh:PropertyShape ;
+    sh:class QuantitiesAndUnits:Prefix ;
+    sh:minCount 1 ;
+    sh:path QuantitiesAndUnits:hasFactor .
+
+aidmpp-m-shacl:someValuesFromhasIntegerValueintegerPropertyShape a sh:PropertyShape ;
+    sh:datatype xsd:integer ;
+    sh:minCount 1 ;
+    sh:path ISO21090-HarmonizedDatatypes:hasIntegerValue .
+
+aidmpp-m-shacl:someValuesFromhasManufacturedItemQuantityQuantityValuePropertyShape a sh:PropertyShape ;
+    sh:class QuantitiesAndUnits:QuantityValue ;
+    sh:minCount 1 ;
+    sh:path <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/hasManufacturedItemQuantity> .
+
+aidmpp-m-shacl:someValuesFromhasModificationAgentModificationAgentPropertyShape a sh:PropertyShape ;
+    sh:class ISO11238-Substances:ModificationAgent ;
+    sh:minCount 1 ;
+    sh:path ISO11238-Substances:hasModificationAgent .
+
+aidmpp-m-shacl:someValuesFromhasNameNamePropertyShape a sh:PropertyShape ;
+    sh:class Designators:Name ;
+    sh:minCount 1 ;
+    sh:path Designators:hasName .
+
+aidmpp-m-shacl:someValuesFromhasNameParameterNamePropertyShape a sh:PropertyShape ;
+    sh:class ISO11238-Substances:ParameterName ;
+    sh:minCount 1 ;
+    sh:path Designators:hasName .
+
+aidmpp-m-shacl:someValuesFromhasOrganizationMemberOrganizationMemberPropertyShape a sh:PropertyShape ;
+    sh:class <https://www.omg.org/spec/Commons/Organizations/OrganizationMember> ;
+    sh:minCount 1 ;
+    sh:path <https://www.omg.org/spec/Commons/Organizations/hasOrganizationMember> .
+
+aidmpp-m-shacl:someValuesFromhasPartCourtOfLawPropertyShape a sh:PropertyShape ;
+    sh:class <https://www.omg.org/spec/Commons/GovernmentEntities/CourtOfLaw> ;
+    sh:minCount 1 ;
+    sh:path Collections:hasPart .
+
+aidmpp-m-shacl:someValuesFromhasQuantityValueQuantityValuePropertyShape a sh:PropertyShape ;
+    sh:class QuantitiesAndUnits:QuantityValue ;
+    sh:minCount 1 ;
+    sh:path QuantitiesAndUnits:hasQuantityValue .
+
+aidmpp-m-shacl:someValuesFromhasReachGeographicRegionPropertyShape a sh:PropertyShape ;
+    sh:class CountryRepresentation:GeographicRegion ;
+    sh:minCount 1 ;
+    sh:path <https://www.omg.org/spec/Commons/RegulatoryAgencies/hasReach> .
+
+aidmpp-m-shacl:someValuesFromhasReferenceSourceTypeReferenceSourceTypePropertyShape a sh:PropertyShape ;
+    sh:class ISO11238-Substances:ReferenceSourceType ;
+    sh:minCount 1 ;
+    sh:path ISO11238-Substances:hasReferenceSourceType .
+
+aidmpp-m-shacl:someValuesFromhasReferenceStrengthReferenceStrengthPropertyShape a sh:PropertyShape ;
+    sh:class <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/ReferenceStrength> ;
+    sh:minCount 1 ;
+    sh:path <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/hasReferenceStrength> .
+
+aidmpp-m-shacl:someValuesFromhasReferenceSubstanceSubstancePropertyShape a sh:PropertyShape ;
+    sh:class ISO11238-Substances:Substance ;
+    sh:minCount 1 ;
+    sh:path <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/hasReferenceSubstance> .
+
+aidmpp-m-shacl:someValuesFromhasRegionCodeGeographicRegionIdentifierPropertyShape a sh:PropertyShape ;
+    sh:class CountryRepresentation:GeographicRegionIdentifier ;
+    sh:minCount 1 ;
+    sh:path <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11240-UnitsOfMeasurement/hasRegionCode> .
+
+aidmpp-m-shacl:someValuesFromhasStructuralModificationTypeStructuralModificationTypePropertyShape a sh:PropertyShape ;
+    sh:class ISO11238-Substances:StructuralModificationType ;
+    sh:minCount 1 ;
+    sh:path ISO11238-Substances:hasStructuralModificationType .
+
+aidmpp-m-shacl:someValuesFromhasStructureMolecularStructurePropertyShape a sh:PropertyShape ;
+    sh:class ISO11238-Substances:MolecularStructure ;
+    sh:minCount 1 ;
+    sh:path ISO11238-Substances:hasStructure .
+
+aidmpp-m-shacl:someValuesFromhasTargetPopulationTargetPopulationPropertyShape a sh:PropertyShape ;
+    sh:class <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/TargetPopulation> ;
+    sh:minCount 1 ;
+    sh:path <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/hasTargetPopulation> .
+
+aidmpp-m-shacl:someValuesFromidentifiesCodeSetPropertyShape a sh:PropertyShape ;
+    sh:class <https://www.omg.org/spec/Commons/CodesAndCodeSets/CodeSet> ;
+    sh:minCount 1 ;
+    sh:path Identifiers:identifies .
+
+aidmpp-m-shacl:someValuesFromidentifiesGeneElementPropertyShape a sh:PropertyShape ;
+    sh:class ISO11238-Substances:GeneElement ;
+    sh:minCount 1 ;
+    sh:path Identifiers:identifies .
+
+aidmpp-m-shacl:someValuesFromidentifiesGenePropertyShape a sh:PropertyShape ;
+    sh:class ISO11238-Substances:Gene ;
+    sh:minCount 1 ;
+    sh:path Identifiers:identifies .
+
+aidmpp-m-shacl:someValuesFromidentifiesIsotopePropertyShape a sh:PropertyShape ;
+    sh:class ISO11238-Substances:Isotope ;
+    sh:minCount 1 ;
+    sh:path Identifiers:identifies .
+
+aidmpp-m-shacl:someValuesFromidentifiesMoietyPropertyShape a sh:PropertyShape ;
+    sh:class ISO11238-Substances:Moiety ;
+    sh:minCount 1 ;
+    sh:path Identifiers:identifies .
+
+aidmpp-m-shacl:someValuesFromidentifiesMolecularFragmentPropertyShape a sh:PropertyShape ;
+    sh:class ISO11238-Substances:MolecularFragment ;
+    sh:minCount 1 ;
+    sh:path Identifiers:identifies .
+
+aidmpp-m-shacl:someValuesFromidentifiesMolecularGraphPropertyShape a sh:PropertyShape ;
+    sh:class ISO11238-Substances:MolecularGraph ;
+    sh:minCount 1 ;
+    sh:path Identifiers:identifies .
+
+aidmpp-m-shacl:someValuesFromidentifiesMolecularStructurePropertyShape a sh:PropertyShape ;
+    sh:class ISO11238-Substances:MolecularStructure ;
+    sh:minCount 1 ;
+    sh:path Identifiers:identifies .
+
+aidmpp-m-shacl:someValuesFromidentifiesPackagedMedicinalProductPropertyShape a sh:PropertyShape ;
+    sh:class <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/PackagedMedicinalProduct> ;
+    sh:minCount 1 ;
+    sh:path Identifiers:identifies .
+
+aidmpp-m-shacl:someValuesFromidentifiesReferenceSourceDocumentPropertyShape a sh:PropertyShape ;
+    sh:class ISO11238-Substances:ReferenceSourceDocument ;
+    sh:minCount 1 ;
+    sh:path Identifiers:identifies .
+
+aidmpp-m-shacl:someValuesFromidentifiesReferenceSourcePropertyShape a sh:PropertyShape ;
+    sh:class ISO11238-Substances:ReferenceSource ;
+    sh:minCount 1 ;
+    sh:path Identifiers:identifies .
+
+aidmpp-m-shacl:someValuesFromidentifiesValueDomainPropertyShape a sh:PropertyShape ;
+    sh:class ISO21090-HarmonizedDatatypes:ValueDomain ;
+    sh:minCount 1 ;
+    sh:path Identifiers:identifies .
+
+aidmpp-m-shacl:someValuesFrominverseOfhasSponsorSponsorPropertyShape a sh:PropertyShape ;
+    sh:class <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/ClinicalTrial> ;
+    sh:minCount 1 ;
+    sh:path [ sh:inversePath <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/hasSponsor> ] .
+
+aidmpp-m-shacl:someValuesFrominverseOfisApplicableInStatisticalProgramPropertyShape a sh:PropertyShape ;
+    sh:class <https://www.omg.org/spec/Commons/StatisticalMeasures/StatisticalUniverse> ;
+    sh:minCount 1 ;
+    sh:path [ sh:inversePath <https://www.omg.org/spec/Commons/ContextualDesignators/isApplicableIn> ] .
+
+aidmpp-m-shacl:someValuesFrominverseOfisIssuedByLicensorPropertyShape a sh:PropertyShape ;
+    sh:class <https://www.omg.org/spec/Commons/RegulatoryAgencies/License> ;
+    sh:minCount 1 ;
+    sh:path [ sh:inversePath <https://www.omg.org/spec/Commons/ProductsAndServices/isIssuedBy> ] .
+
+aidmpp-m-shacl:someValuesFromisApplicableInJurisdictionGeographicRegionPropertyShape a sh:PropertyShape ;
+    sh:class CountryRepresentation:GeographicRegion ;
+    sh:minCount 1 ;
+    sh:path <https://www.omg.org/spec/Commons/RegulatoryAgencies/isApplicableInJurisdiction> .
+
+aidmpp-m-shacl:someValuesFromisApplicableInPackagedMedicinalProductPropertyShape a sh:PropertyShape ;
+    sh:class <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/PackagedMedicinalProduct> ;
+    sh:minCount 1 ;
+    sh:path <https://www.omg.org/spec/Commons/ContextualDesignators/isApplicableIn> .
+
+aidmpp-m-shacl:someValuesFromisClassifiedByOfficialNameStatusPropertyShape a sh:PropertyShape ;
+    sh:class ISO11238-Substances:OfficialNameStatus ;
+    sh:minCount 1 ;
+    sh:path Classifiers:isClassifiedBy .
+
+aidmpp-m-shacl:someValuesFromisConstituentOfGovernmentBodyPropertyShape a sh:PropertyShape ;
+    sh:class <https://www.omg.org/spec/Commons/GovernmentEntities/GovernmentBody> ;
+    sh:minCount 1 ;
+    sh:path Collections:isConstituentOf .
+
+aidmpp-m-shacl:someValuesFromisContraindicationForMedicinalProductPropertyShape a sh:PropertyShape ;
+    sh:class <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/MedicinalProduct> ;
+    sh:minCount 1 ;
+    sh:path <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/isContraindicationFor> .
+
+aidmpp-m-shacl:someValuesFromisDefinedInProductCompositionPropertyShape a sh:PropertyShape ;
+    sh:class <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/ProductComposition> ;
+    sh:minCount 1 ;
+    sh:path Designators:isDefinedIn .
+
+aidmpp-m-shacl:someValuesFromisDerivedFromQuantityKindPropertyShape a sh:PropertyShape ;
+    sh:class QuantitiesAndUnits:QuantityKind ;
+    sh:minCount 1 ;
+    sh:path QuantitiesAndUnits:isDerivedFrom .
+
+aidmpp-m-shacl:someValuesFromisDescribedByStructuralRepresentationPropertyShape a sh:PropertyShape ;
+    sh:class ISO11238-Substances:StructuralRepresentation ;
+    sh:minCount 1 ;
+    sh:path Designators:isDescribedBy .
+
+aidmpp-m-shacl:someValuesFromisDesignatedByRegistrationAuthorityPropertyShape a sh:PropertyShape ;
+    sh:class <https://www.omg.org/spec/Commons/RegistrationAuthorities/RegistrationAuthority> ;
+    sh:minCount 1 ;
+    sh:path <https://www.omg.org/spec/Commons/RegistrationAuthorities/isDesignatedBy> .
+
+aidmpp-m-shacl:someValuesFromisExperiencedByRadionuclidePropertyShape a sh:PropertyShape ;
+    sh:class ISO11238-Substances:Radionuclide ;
+    sh:minCount 1 ;
+    sh:path <https://www.omg.org/spec/Commons/PartiesAndSituations/isExperiencedBy> .
+
+aidmpp-m-shacl:someValuesFromisIdentifiedByStatisticalAreaIdentifierPropertyShape a sh:PropertyShape ;
+    sh:class <https://www.omg.org/spec/Commons/StatisticalMeasures/StatisticalAreaIdentifier> ;
+    sh:minCount 1 ;
+    sh:path Identifiers:isIdentifiedBy .
+
+aidmpp-m-shacl:someValuesFromisIncludedInSpecifiedSubstanceGroupPropertyShape a sh:PropertyShape ;
+    sh:class ISO11238-Substances:SpecifiedSubstanceGroup ;
+    sh:minCount 1 ;
+    sh:path Collections:isIncludedIn .
+
+aidmpp-m-shacl:someValuesFromisInstrumentOfGovernmentPropertyShape a sh:PropertyShape ;
+    sh:class <https://www.omg.org/spec/Commons/GovernmentEntities/Government> ;
+    sh:minCount 1 ;
+    sh:path <https://www.omg.org/spec/Commons/GovernmentEntities/isInstrumentOf> .
+
+aidmpp-m-shacl:someValuesFromisIssuedByRegulatoryAgencyPropertyShape a sh:PropertyShape ;
+    sh:class <https://www.omg.org/spec/Commons/RegulatoryAgencies/RegulatoryAgency> ;
+    sh:minCount 1 ;
+    sh:path <https://www.omg.org/spec/Commons/ProductsAndServices/isIssuedBy> .
+
+aidmpp-m-shacl:someValuesFromisMoietyOfSubstancePropertyShape a sh:PropertyShape ;
+    sh:class ISO11238-Substances:Substance ;
+    sh:minCount 1 ;
+    sh:path ISO11238-Substances:isMoietyOf .
+
+aidmpp-m-shacl:someValuesFromisNameOfGeneElementPropertyShape a sh:PropertyShape ;
+    sh:class ISO11238-Substances:GeneElement ;
+    sh:minCount 1 ;
+    sh:path Designators:isNameOf .
+
+aidmpp-m-shacl:someValuesFromisNameOfMedicinalProductPropertyShape a sh:PropertyShape ;
+    sh:class <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/MedicinalProduct> ;
+    sh:minCount 1 ;
+    sh:path Designators:isNameOf .
+
+aidmpp-m-shacl:someValuesFromisNameOfMoietyPropertyShape a sh:PropertyShape ;
+    sh:class ISO11238-Substances:Moiety ;
+    sh:minCount 1 ;
+    sh:path Designators:isNameOf .
+
+aidmpp-m-shacl:someValuesFromisNameOfNuclidePropertyShape a sh:PropertyShape ;
+    sh:class ISO11238-Substances:Nuclide ;
+    sh:minCount 1 ;
+    sh:path Designators:isNameOf .
+
+aidmpp-m-shacl:someValuesFromisNameOfQuantityPropertyShape a sh:PropertyShape ;
+    sh:class QuantitiesAndUnits:Quantity ;
+    sh:minCount 1 ;
+    sh:path Designators:isNameOf .
+
+aidmpp-m-shacl:someValuesFromisPartOfMolecularEntityPropertyShape a sh:PropertyShape ;
+    sh:class ISO11238-Substances:MolecularEntity ;
+    sh:minCount 1 ;
+    sh:path Collections:isPartOf .
+
+aidmpp-m-shacl:someValuesFromisPartOfPhysicalMedicinalProductPropertyShape a sh:PropertyShape ;
+    sh:class <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/PhysicalMedicinalProduct> ;
+    sh:minCount 1 ;
+    sh:path Collections:isPartOf .
+
+aidmpp-m-shacl:someValuesFromisPartOfProcessPropertyShape a sh:PropertyShape ;
+    sh:class <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/Process> ;
+    sh:minCount 1 ;
+    sh:path Collections:isPartOf .
+
+aidmpp-m-shacl:someValuesFromisPlayedByLegalEntityPropertyShape a sh:PropertyShape ;
+    sh:class <https://www.omg.org/spec/Commons/Organizations/LegalEntity> ;
+    sh:minCount 1 ;
+    sh:path <https://www.omg.org/spec/Commons/PartiesAndSituations/isPlayedBy> .
+
+aidmpp-m-shacl:someValuesFromisPlayedByMolecularFragmentPropertyShape a sh:PropertyShape ;
+    sh:class ISO11238-Substances:MolecularFragment ;
+    sh:minCount 1 ;
+    sh:path <https://www.omg.org/spec/Commons/PartiesAndSituations/isPlayedBy> .
+
+aidmpp-m-shacl:someValuesFromisRegisteredByMedicinesRegulatoryAgencyPropertyShape a sh:PropertyShape ;
+    sh:class <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/MedicinesRegulatoryAgency> ;
+    sh:minCount 1 ;
+    sh:path <https://www.omg.org/spec/Commons/RegistrationAuthorities/isRegisteredBy> .
+
+aidmpp-m-shacl:someValuesFromisRepresentedByGovernmentBodyPropertyShape a sh:PropertyShape ;
+    sh:class <https://www.omg.org/spec/Commons/GovernmentEntities/GovernmentBody> ;
+    sh:minCount 1 ;
+    sh:path <https://www.omg.org/spec/Commons/GovernmentEntities/isRepresentedBy> .
+
+aidmpp-m-shacl:someValuesFromisSpecifiedBySubstancePropertyShape a sh:PropertyShape ;
+    sh:class ISO11238-Substances:Substance ;
+    sh:minCount 1 ;
+    sh:path Documents:isSpecifiedBy .
+
+aidmpp-m-shacl:someValuesFromisTherapeuticIndicationForMedicinalProductPropertyShape a sh:PropertyShape ;
+    sh:class <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/MedicinalProduct> ;
+    sh:minCount 1 ;
+    sh:path <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/isTherapeuticIndicationFor> .
+
+aidmpp-m-shacl:someValuesFromisUsedByLanguagePropertyShape a sh:PropertyShape ;
+    sh:class LanguageRepresentation:Language ;
+    sh:minCount 1 ;
+    sh:path <https://www.omg.org/spec/Commons/ContextualDesignators/isUsedBy> .
+
+aidmpp-m-shacl:someValuesFromissuesGS1CompanyPrefixPropertyShape a sh:PropertyShape ;
+    sh:class <https://www.omg.org/spec/Commons/ProductsAndServices/GS1CompanyPrefix> ;
+    sh:minCount 1 ;
+    sh:path <https://www.omg.org/spec/Commons/ProductsAndServices/issues> .
+
+aidmpp-m-shacl:someValuesFromissuesLicensePropertyShape a sh:PropertyShape ;
+    sh:class <https://www.omg.org/spec/Commons/RegulatoryAgencies/License> ;
+    sh:minCount 1 ;
+    sh:path <https://www.omg.org/spec/Commons/ProductsAndServices/issues> .
+
+aidmpp-m-shacl:someValuesFrommanagesAdministrationOfInvestigationalMedicinalProductPropertyShape a sh:PropertyShape ;
+    sh:class <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/InvestigationalMedicinalProduct> ;
+    sh:minCount 1 ;
+    sh:path <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/managesAdministrationOf> .
+
+aidmpp-m-shacl:someValuesFromprovidesStatisticalMeasurePropertyShape a sh:PropertyShape ;
+    sh:class <https://www.omg.org/spec/Commons/StatisticalMeasures/StatisticalMeasure> ;
+    sh:minCount 1 ;
+    sh:path <https://www.omg.org/spec/Commons/ProductsAndServices/provides> .
+
+aidmpp-m-shacl:someValuesFromspecializesSubstancePropertyShape a sh:PropertyShape ;
+    sh:class ISO11238-Substances:Substance ;
+    sh:minCount 1 ;
+    sh:path QuantitiesAndUnits:specializes .
+
+aidmpp-m-shacl:someValuesFromspecifiesAnalysisPropertyShape a sh:PropertyShape ;
+    sh:class ISO11238-Substances:Analysis ;
+    sh:minCount 1 ;
+    sh:path Documents:specifies .
+
+aidmpp-m-shacl:someValuesFromspecifiesMaterialPropertyShape a sh:PropertyShape ;
+    sh:class ISO11238-Substances:Material ;
+    sh:minCount 1 ;
+    sh:path Documents:specifies .
+
+aidmpp-m-shacl:someValuesFromspecifiesOpticalRotationPropertyShape a sh:PropertyShape ;
+    sh:class ISO11238-Substances:OpticalRotation ;
+    sh:minCount 1 ;
+    sh:path Documents:specifies .
+
+aidmpp-m-shacl:someValuesFromsponsorsClinicalTrialPropertyShape a sh:PropertyShape ;
+    sh:class <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/ClinicalTrial> ;
+    sh:minCount 1 ;
+    sh:path <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/sponsors> .
+
+aidmpp-m-shacl:someValuesFromundergoesModificationPropertyShape a sh:PropertyShape ;
+    sh:class ISO11238-Substances:Modification ;
+    sh:minCount 1 ;
+    sh:path <https://www.omg.org/spec/Commons/PartiesAndSituations/undergoes> .
+
+aidmpp-m-shacl:someValuesFromundergoesRadioactiveDecayPropertyShape a sh:PropertyShape ;
+    sh:class ISO11238-Substances:RadioactiveDecay ;
+    sh:minCount 1 ;
+    sh:path <https://www.omg.org/spec/Commons/PartiesAndSituations/undergoes> .
+
+aidmpp-m-shacl:someValuesFromusesOrthographyPropertyShape a sh:PropertyShape ;
+    sh:class LanguageRepresentation:Orthography ;
+    sh:minCount 1 ;
+    sh:path <https://www.omg.org/spec/Commons/ContextualDesignators/uses> .
+
+aidmpp-m-shacl:someValuesFromusesScriptPropertyShape a sh:PropertyShape ;
+    sh:class LanguageRepresentation:Script ;
+    sh:minCount 1 ;
+    sh:path <https://www.omg.org/spec/Commons/ContextualDesignators/uses> .
+
+aidmpp-m-shacl:someValuesFromusesWritingSystemPropertyShape a sh:PropertyShape ;
+    sh:class LanguageRepresentation:WritingSystem ;
+    sh:minCount 1 ;
+    sh:path <https://www.omg.org/spec/Commons/ContextualDesignators/uses> .
+
+aidmpp-m-shacl:someValuesFromappliesToMedicinalProductPropertyShape a sh:PropertyShape ;
+    sh:class <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/MedicinalProduct> ;
+    sh:minCount 1 ;
+    sh:path <https://www.omg.org/spec/Commons/ContextualDesignators/appliesTo> .
+
+aidmpp-m-shacl:someValuesFromauthorizesThroughAuthorizationPropertyShape a sh:PropertyShape ;
+    sh:class <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/Authorization> ;
+    sh:minCount 1 ;
+    sh:path <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/authorizesThrough> .
+
+aidmpp-m-shacl:someValuesFromclassifiesMaterialPropertyShape a sh:PropertyShape ;
+    sh:class ISO11238-Substances:Material ;
+    sh:minCount 1 ;
+    sh:path Classifiers:classifies .
+
+aidmpp-m-shacl:someValuesFromcompliesWithUnitOfMeasureIdentificationSchemePropertyShape a sh:PropertyShape ;
+    sh:class <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11240-UnitsOfMeasurement/UnitOfMeasureIdentificationScheme> ;
+    sh:minCount 1 ;
+    sh:path Collections:compliesWith .
+
+aidmpp-m-shacl:someValuesFromcomprisesExplicitDatePropertyShape a sh:PropertyShape ;
+    sh:class DatesAndTimes:ExplicitDate ;
+    sh:minCount 1 ;
+    sh:path Collections:comprises .
+
+aidmpp-m-shacl:someValuesFromcomprisesPharmaceuticalProductBatchNumberPropertyShape a sh:PropertyShape ;
+    sh:class <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/PharmaceuticalProductBatchNumber> ;
+    sh:minCount 1 ;
+    sh:path Collections:comprises .
+
+aidmpp-m-shacl:someValuesFromdefinesMedicinalProductPropertyShape a sh:PropertyShape ;
+    sh:class <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/MedicinalProduct> ;
+    sh:minCount 1 ;
+    sh:path Designators:defines .
+
+aidmpp-m-shacl:someValuesFromhasArgumentMeanPropertyShape a sh:PropertyShape ;
+    sh:class <https://www.omg.org/spec/Commons/StatisticalMeasures/Mean> ;
+    sh:minCount 1 ;
+    sh:path QuantitiesAndUnits:hasArgument .
+
+aidmpp-m-shacl:someValuesFromhasJurisdictionJurisdictionPropertyShape a sh:PropertyShape ;
+    sh:class <https://www.omg.org/spec/Commons/RegulatoryAgencies/Jurisdiction> ;
+    sh:minCount 1 ;
+    sh:path <https://www.omg.org/spec/Commons/RegulatoryAgencies/hasJurisdiction> .
+
+aidmpp-m-shacl:someValuesFromhasPartyRoleLicenseePropertyShape a sh:PropertyShape ;
+    sh:class <https://www.omg.org/spec/Commons/RegulatoryAgencies/Licensee> ;
+    sh:minCount 1 ;
+    sh:path <https://www.omg.org/spec/Commons/PartiesAndSituations/hasPartyRole> .
+
+aidmpp-m-shacl:someValuesFromhasStrengthStrengthPropertyShape a sh:PropertyShape ;
+    sh:class <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/Strength> ;
+    sh:minCount 1 ;
+    sh:path <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/hasStrength> .
+
+aidmpp-m-shacl:someValuesFromidentifiesMeasurementUnitPropertyShape a sh:PropertyShape ;
+    sh:class QuantitiesAndUnits:MeasurementUnit ;
+    sh:minCount 1 ;
+    sh:path Identifiers:identifies .
+
+aidmpp-m-shacl:someValuesFrominverseOfhasAuthorizedPartyAuthorizedPartyPropertyShape a sh:PropertyShape ;
+    sh:class <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/Authorization> ;
+    sh:minCount 1 ;
+    sh:path [ sh:inversePath <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/hasAuthorizedParty> ] .
+
+aidmpp-m-shacl:someValuesFrominverseOfhasAuthorizingPartyAuthorizingPartyPropertyShape a sh:PropertyShape ;
+    sh:class <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/Authorization> ;
+    sh:minCount 1 ;
+    sh:path [ sh:inversePath <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/hasAuthorizingParty> ] .
+
+aidmpp-m-shacl:someValuesFrominverseOfisIdentifiedByUnitOfMeasureIdentifierPropertyShape a sh:PropertyShape ;
+    sh:class QuantitiesAndUnits:MeasurementUnit ;
+    sh:minCount 1 ;
+    sh:path [ sh:inversePath Identifiers:isIdentifiedBy ] .
+
+aidmpp-m-shacl:someValuesFrominverseOfissuesLicensePropertyShape a sh:PropertyShape ;
+    sh:class <https://www.omg.org/spec/Commons/RegulatoryAgencies/Licensor> ;
+    sh:minCount 1 ;
+    sh:path [ sh:inversePath <https://www.omg.org/spec/Commons/ProductsAndServices/issues> ] .
+
+aidmpp-m-shacl:someValuesFromisApplicableInJurisdictionGeographicRegionIdentifierPropertyShape a sh:PropertyShape ;
+    sh:class CountryRepresentation:GeographicRegionIdentifier ;
+    sh:minCount 1 ;
+    sh:path <https://www.omg.org/spec/Commons/RegulatoryAgencies/isApplicableInJurisdiction> .
+
+aidmpp-m-shacl:someValuesFromisAuthorizedThroughAuthorizationPropertyShape a sh:PropertyShape ;
+    sh:class <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/Authorization> ;
+    sh:minCount 1 ;
+    sh:path <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/isAuthorizedThrough> .
+
+aidmpp-m-shacl:someValuesFromisConstituentOfProductPropertyShape a sh:PropertyShape ;
+    sh:class <https://www.omg.org/spec/Commons/ProductsAndServices/Product> ;
+    sh:minCount 1 ;
+    sh:path Collections:isConstituentOf .
+
+aidmpp-m-shacl:someValuesFromisIssuedByLicensorPropertyShape a sh:PropertyShape ;
+    sh:class <https://www.omg.org/spec/Commons/RegulatoryAgencies/Licensor> ;
+    sh:minCount 1 ;
+    sh:path <https://www.omg.org/spec/Commons/ProductsAndServices/isIssuedBy> .
+
+aidmpp-m-shacl:someValuesFromisManifestedInModificationPropertyShape a sh:PropertyShape ;
+    sh:class ISO11238-Substances:Modification ;
+    sh:minCount 1 ;
+    sh:path <https://www.omg.org/spec/Commons/PartiesAndSituations/isManifestedIn> .
+
+aidmpp-m-shacl:someValuesFromisNameOfGenePropertyShape a sh:PropertyShape ;
+    sh:class ISO11238-Substances:Gene ;
+    sh:minCount 1 ;
+    sh:path Designators:isNameOf .
+
+aidmpp-m-shacl:someValuesFromisOutputOfBatchManufacturingProcessPropertyShape a sh:PropertyShape ;
+    sh:class <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/BatchManufacturingProcess> ;
+    sh:minCount 1 ;
+    sh:path <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/isOutputOf> .
+
+aidmpp-m-shacl:someValuesFromisPartOfMedicinalProductPropertyShape a sh:PropertyShape ;
+    sh:class <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/MedicinalProduct> ;
+    sh:minCount 1 ;
+    sh:path Collections:isPartOf .
+
+aidmpp-m-shacl:someValuesFromisPlayedByMedicinalProductContainerPropertyShape a sh:PropertyShape ;
+    sh:class <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/MedicinalProductContainer> ;
+    sh:minCount 1 ;
+    sh:path <https://www.omg.org/spec/Commons/PartiesAndSituations/isPlayedBy> .
+
+aidmpp-m-shacl:someValuesFromisReportedByReportingPartyPropertyShape a sh:PropertyShape ;
+    sh:class Documents:ReportingParty ;
+    sh:minCount 1 ;
+    sh:path Documents:isReportedBy .
+
+aidmpp-m-shacl:someValuesFromisReportedToPartyRolePropertyShape a sh:PropertyShape ;
+    sh:class <https://www.omg.org/spec/Commons/PartiesAndSituations/PartyRole> ;
+    sh:minCount 1 ;
+    sh:path Documents:isReportedTo .
+
+aidmpp-m-shacl:someValuesFromproducesGoodPropertyShape a sh:PropertyShape ;
+    sh:class <https://www.omg.org/spec/Commons/ProductsAndServices/Good> ;
+    sh:minCount 1 ;
+    sh:path <https://www.omg.org/spec/Commons/ProductsAndServices/produces> .
+
+aidmpp-m-shacl:someValuesFromclassifiesTradeItemPropertyShape a sh:PropertyShape ;
+    sh:minCount 1 ;
+    sh:path Classifiers:classifies .
+
+aidmpp-m-shacl:someValuesFromcomprisesMatterPropertyShape a sh:PropertyShape ;
+    sh:class ISO11238-Substances:Matter ;
+    sh:minCount 1 ;
+    sh:path Collections:comprises .
+
+aidmpp-m-shacl:someValuesFromdefinesSubstancePropertyShape a sh:PropertyShape ;
+    sh:class ISO11238-Substances:Substance ;
+    sh:minCount 1 ;
+    sh:path Designators:defines .
+
+aidmpp-m-shacl:someValuesFromdenotesTradeItemPropertyShape a sh:PropertyShape ;
+    sh:minCount 1 ;
+    sh:path Designators:denotes .
+
+aidmpp-m-shacl:someValuesFromhasDefiningStructureMolecularStructurePropertyShape a sh:PropertyShape ;
+    sh:class ISO11238-Substances:MolecularStructure ;
+    sh:minCount 1 ;
+    sh:path ISO11238-Substances:hasDefiningStructure .
+
+aidmpp-m-shacl:someValuesFromhasGranularMolecularPartMolecularEntityPropertyShape a sh:PropertyShape ;
+    sh:class ISO11238-Substances:MolecularEntity ;
+    sh:minCount 1 ;
+    sh:path ISO11238-Substances:hasGranularMolecularPart .
+
+aidmpp-m-shacl:someValuesFromhasIngredientIngredientPropertyShape a sh:PropertyShape ;
+    sh:class ISO11238-Substances:Ingredient ;
+    sh:minCount 1 ;
+    sh:path ISO11238-Substances:hasIngredient .
+
+aidmpp-m-shacl:someValuesFromhasLanguageCodeLanguageIdentifierPropertyShape a sh:PropertyShape ;
+    sh:class LanguageRepresentation:LanguageIdentifier ;
+    sh:minCount 1 ;
+    sh:path ISO21090-HarmonizedDatatypes:hasLanguageCode .
+
+aidmpp-m-shacl:someValuesFrominverseOfprovidesServicePropertyShape a sh:PropertyShape ;
+    sh:class <https://www.omg.org/spec/Commons/ProductsAndServices/ServiceProvider> ;
+    sh:minCount 1 ;
+    sh:path [ sh:inversePath <https://www.omg.org/spec/Commons/ProductsAndServices/provides> ] .
+
+aidmpp-m-shacl:someValuesFromisApplicableInGeographicRegionPropertyShape a sh:PropertyShape ;
+    sh:class CountryRepresentation:GeographicRegion ;
+    sh:minCount 1 ;
+    sh:path <https://www.omg.org/spec/Commons/ContextualDesignators/isApplicableIn> .
+
+aidmpp-m-shacl:someValuesFromisClassifiedByGeographicRegionKindPropertyShape a sh:PropertyShape ;
+    sh:class CountryRepresentation:GeographicRegionKind ;
+    sh:minCount 1 ;
+    sh:path Classifiers:isClassifiedBy .
+
+aidmpp-m-shacl:someValuesFromisConstituentOfMolecularCompositionPropertyShape a sh:PropertyShape ;
+    sh:class ISO11238-Substances:MolecularComposition ;
+    sh:minCount 1 ;
+    sh:path Collections:isConstituentOf .
+
+aidmpp-m-shacl:someValuesFromisProvidedByServiceProviderPropertyShape a sh:PropertyShape ;
+    sh:class <https://www.omg.org/spec/Commons/ProductsAndServices/ServiceProvider> ;
+    sh:minCount 1 ;
+    sh:path <https://www.omg.org/spec/Commons/ProductsAndServices/isProvidedBy> .
+
+aidmpp-m-shacl:someValuesFromisRoleInContainerConstituencyPropertyShape a sh:PropertyShape ;
+    sh:class <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/ContainerConstituency> ;
+    sh:minCount 1 ;
+    sh:path <https://www.omg.org/spec/Commons/PartiesAndSituations/isRoleIn> .
+
+aidmpp-m-shacl:someValuesFromspecifiesContainerPropertyShape a sh:PropertyShape ;
+    sh:class <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/Container> ;
+    sh:minCount 1 ;
+    sh:path Documents:specifies .
+
+aidmpp-m-shacl:someValuesFromdenotesBatchPropertyShape a sh:PropertyShape ;
+    sh:class <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/Batch> ;
+    sh:minCount 1 ;
+    sh:path Designators:denotes .
+
+aidmpp-m-shacl:someValuesFromhasAuthorizedPartyAuthorizedPartyPropertyShape a sh:PropertyShape ;
+    sh:class <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/AuthorizedParty> ;
+    sh:minCount 1 ;
+    sh:path <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/hasAuthorizedParty> .
+
+aidmpp-m-shacl:someValuesFromhasTextValuestringPropertyShape a sh:PropertyShape ;
+    sh:datatype xsd:string ;
+    sh:minCount 1 ;
+    sh:path TextDatatype:hasTextValue .
+
+aidmpp-m-shacl:someValuesFromidentifiesGeographicRegionPropertyShape a sh:PropertyShape ;
+    sh:class CountryRepresentation:GeographicRegion ;
+    sh:minCount 1 ;
+    sh:path Identifiers:identifies .
+
+aidmpp-m-shacl:someValuesFrominverseOfappliesToStatisticalUniversePropertyShape a sh:PropertyShape ;
+    sh:class <https://www.omg.org/spec/Commons/StatisticalMeasures/StatisticalProgram> ;
+    sh:minCount 1 ;
+    sh:path [ sh:inversePath <https://www.omg.org/spec/Commons/ContextualDesignators/appliesTo> ] .
+
+aidmpp-m-shacl:someValuesFrominverseOfisAuthorizedThroughAuthorizationPropertyShape a sh:PropertyShape ;
+    sh:class <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/AuthorizedParty> ;
+    sh:minCount 1 ;
+    sh:path [ sh:inversePath <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/isAuthorizedThrough> ] .
+
+aidmpp-m-shacl:someValuesFromisApplicableInRegulatoryContextPropertyShape a sh:PropertyShape ;
+    sh:class ISO11238-Substances:RegulatoryContext ;
+    sh:minCount 1 ;
+    sh:path <https://www.omg.org/spec/Commons/ContextualDesignators/isApplicableIn> .
+
+aidmpp-m-shacl:someValuesFromisApplicableInStatisticalProgramPropertyShape a sh:PropertyShape ;
+    sh:class <https://www.omg.org/spec/Commons/StatisticalMeasures/StatisticalProgram> ;
+    sh:minCount 1 ;
+    sh:path <https://www.omg.org/spec/Commons/ContextualDesignators/isApplicableIn> .
+
+aidmpp-m-shacl:someValuesFromisDerivedFromBaseUnitPropertyShape a sh:PropertyShape ;
+    sh:class QuantitiesAndUnits:BaseUnit ;
+    sh:minCount 1 ;
+    sh:path QuantitiesAndUnits:isDerivedFrom .
+
+aidmpp-m-shacl:someValuesFromisPlayedByProductPropertyShape a sh:PropertyShape ;
+    sh:class <https://www.omg.org/spec/Commons/ProductsAndServices/Product> ;
+    sh:minCount 1 ;
+    sh:path <https://www.omg.org/spec/Commons/PartiesAndSituations/isPlayedBy> .
+
+aidmpp-m-shacl:someValuesFromisProducedByManufacturerPropertyShape a sh:PropertyShape ;
+    sh:class ISO11238-Substances:Manufacturer ;
+    sh:minCount 1 ;
+    sh:path <https://www.omg.org/spec/Commons/ProductsAndServices/isProducedBy> .
+
+aidmpp-m-shacl:someValuesFromspecifiesModificationPropertyShape a sh:PropertyShape ;
+    sh:class ISO11238-Substances:Modification ;
+    sh:minCount 1 ;
+    sh:path Documents:specifies .
+
+aidmpp-m-shacl:someValuesFromhasMemberAspectPropertyShape a sh:PropertyShape ;
+    sh:class Classifiers:Aspect ;
+    sh:minCount 1 ;
+    sh:path Collections:hasMember .
+
+aidmpp-m-shacl:someValuesFromisIncludedInSpecifiedSubstancePropertyShape a sh:PropertyShape ;
+    sh:class ISO11238-Substances:SpecifiedSubstance ;
+    sh:minCount 1 ;
+    sh:path Collections:isIncludedIn .
+
+aidmpp-m-shacl:someValuesFromisPlayedByMaterialPropertyShape a sh:PropertyShape ;
+    sh:class ISO11238-Substances:Material ;
+    sh:minCount 1 ;
+    sh:path <https://www.omg.org/spec/Commons/PartiesAndSituations/isPlayedBy> .
+
+aidmpp-m-shacl:someValuesFromclassifiesMeasurementUnitPropertyShape a sh:PropertyShape ;
+    sh:class QuantitiesAndUnits:MeasurementUnit ;
+    sh:minCount 1 ;
+    sh:path Classifiers:classifies .
+
+aidmpp-m-shacl:someValuesFromhasLevelInHierarchynonNegativeIntegerPropertyShape a sh:PropertyShape ;
+    sh:datatype xsd:nonNegativeInteger ;
+    sh:minCount 1 ;
+    sh:path ISO21090-HarmonizedDatatypes:hasLevelInHierarchy .
+
+aidmpp-m-shacl:someValuesFrominverseOfisProvidedByServiceProviderPropertyShape a sh:PropertyShape ;
+    sh:class <https://www.omg.org/spec/Commons/ProductsAndServices/Service> ;
+    sh:minCount 1 ;
+    sh:path [ sh:inversePath <https://www.omg.org/spec/Commons/ProductsAndServices/isProvidedBy> ] .
+
+aidmpp-m-shacl:someValuesFromisDefinedInSystemOfUnitsPropertyShape a sh:PropertyShape ;
+    sh:class QuantitiesAndUnits:SystemOfUnits ;
+    sh:minCount 1 ;
+    sh:path Designators:isDefinedIn .
+
+aidmpp-m-shacl:someValuesFromprovidesServicePropertyShape a sh:PropertyShape ;
+    sh:class <https://www.omg.org/spec/Commons/ProductsAndServices/Service> ;
+    sh:minCount 1 ;
+    sh:path <https://www.omg.org/spec/Commons/ProductsAndServices/provides> .
+
+aidmpp-m-shacl:someValuesFromrefersToSubstancePropertyShape a sh:PropertyShape ;
+    sh:class ISO11238-Substances:Substance ;
+    sh:minCount 1 ;
+    sh:path Documents:refersTo .
+
+aidmpp-m-shacl:someValuesFromappliesToFinitePopulationPropertyShape a sh:PropertyShape ;
+    sh:class <https://www.omg.org/spec/Commons/StatisticalMeasures/FinitePopulation> ;
+    sh:minCount 1 ;
+    sh:path <https://www.omg.org/spec/Commons/ContextualDesignators/appliesTo> .
+
+aidmpp-m-shacl:someValuesFromgovernsGeopoliticalEntityPropertyShape a sh:PropertyShape ;
+    sh:class CountryRepresentation:GeopoliticalEntity ;
+    sh:minCount 1 ;
+    sh:path <https://www.omg.org/spec/Commons/RegulatoryAgencies/governs> .
+
+aidmpp-m-shacl:someValuesFromhasSovereigntyOverGeopoliticalEntityPropertyShape a sh:PropertyShape ;
+    sh:class CountryRepresentation:GeopoliticalEntity ;
+    sh:minCount 1 ;
+    sh:path <https://www.omg.org/spec/Commons/GovernmentEntities/hasSovereigntyOver> .
+
+aidmpp-m-shacl:someValuesFromisRepresentedByGovernmentPropertyShape a sh:PropertyShape ;
+    sh:class <https://www.omg.org/spec/Commons/GovernmentEntities/Government> ;
+    sh:minCount 1 ;
+    sh:path <https://www.omg.org/spec/Commons/GovernmentEntities/isRepresentedBy> .
+
+aidmpp-m-shacl:someValuesFromhasMeasurementUnitMeasurementUnitPropertyShape a sh:PropertyShape ;
+    sh:class QuantitiesAndUnits:MeasurementUnit ;
+    sh:minCount 1 ;
+    sh:path QuantitiesAndUnits:hasMeasurementUnit .
+
+aidmpp-m-shacl:someValuesFromhasSubjectRoleRolePropertyShape a sh:PropertyShape ;
+    sh:class <https://www.omg.org/spec/Commons/PartiesAndSituations/Role> ;
+    sh:minCount 1 ;
+    sh:path <https://www.omg.org/spec/Commons/PartiesAndSituations/hasSubjectRole> .
+
+aidmpp-m-shacl:someValuesFromidentifiesLanguagePropertyShape a sh:PropertyShape ;
+    sh:class LanguageRepresentation:Language ;
+    sh:minCount 1 ;
+    sh:path Identifiers:identifies .
+
+aidmpp-m-shacl:someValuesFrominverseOfidentifiesMeasurementUnitPropertyShape a sh:PropertyShape ;
+    sh:class <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11240-UnitsOfMeasurement/UnitOfMeasureIdentifier> ;
+    sh:minCount 1 ;
+    sh:path [ sh:inversePath Identifiers:identifies ] .
+
+aidmpp-m-shacl:someValuesFromisIdentifiedByUnitOfMeasureIdentifierPropertyShape a sh:PropertyShape ;
+    sh:class <https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11240-UnitsOfMeasurement/UnitOfMeasureIdentifier> ;
+    sh:minCount 1 ;
+    sh:path Identifiers:isIdentifiedBy .
+
+aidmpp-m-shacl:someValuesFromhasObservedValueStructuredCollectionPropertyShape a sh:PropertyShape ;
+    sh:class Collections:StructuredCollection ;
+    sh:minCount 1 ;
+    sh:path <https://www.omg.org/spec/Commons/StatisticalMeasures/hasObservedValue> .
+
+aidmpp-m-shacl:someValuesFromhasQuantityKindQuantityKindPropertyShape a sh:PropertyShape ;
+    sh:class QuantitiesAndUnits:QuantityKind ;
+    sh:minCount 1 ;
+    sh:path QuantitiesAndUnits:hasQuantityKind .
+
+aidmpp-m-shacl:someValuesFromisRegisteredInRegistryPropertyShape a sh:PropertyShape ;
+    sh:class <https://www.omg.org/spec/Commons/RegistrationAuthorities/Registry> ;
+    sh:minCount 1 ;
+    sh:path <https://www.omg.org/spec/Commons/RegistrationAuthorities/isRegisteredIn> .
+
+aidmpp-m-shacl:someValuesFromhasTagstringPropertyShape a sh:PropertyShape ;
+    sh:datatype xsd:string ;
+    sh:minCount 1 ;
+    sh:path LanguageRepresentation:hasTag .
+
+aidmpp-m-shacl:someValuesFromisManifestedInManufacturedItemPropertyShape a sh:PropertyShape ;
+    sh:class ISO11238-Substances:ManufacturedItem ;
+    sh:minCount 1 ;
+    sh:path <https://www.omg.org/spec/Commons/PartiesAndSituations/isManifestedIn> .
+
+aidmpp-m-shacl:someValuesFromisPlayedBySubstancePropertyShape a sh:PropertyShape ;
+    sh:class ISO11238-Substances:Substance ;
+    sh:minCount 1 ;
+    sh:path <https://www.omg.org/spec/Commons/PartiesAndSituations/isPlayedBy> .
+
+aidmpp-m-shacl:someValuesFromhasSubstanceNameSubstanceNamePropertyShape a sh:PropertyShape ;
+    sh:class ISO11238-Substances:SubstanceName ;
+    sh:minCount 1 ;
+    sh:path ISO11238-Substances:hasSubstanceName .
+
+aidmpp-m-shacl:someValuesFromhasSubstanceTypeSubstanceTypeClassifierPropertyShape a sh:PropertyShape ;
+    sh:class ISO11238-Substances:SubstanceTypeClassifier ;
+    sh:minCount 1 ;
+    sh:path ISO11238-Substances:hasSubstanceType .
+
+aidmpp-m-shacl:someValuesFromisApplicableInContextPropertyShape a sh:PropertyShape ;
+    sh:class <https://www.omg.org/spec/Commons/ContextualDesignators/Context> ;
+    sh:minCount 1 ;
+    sh:path <https://www.omg.org/spec/Commons/ContextualDesignators/isApplicableIn> .
+
+aidmpp-m-shacl:someValuesFromisMemberOfCodeSetPropertyShape a sh:PropertyShape ;
+    sh:class <https://www.omg.org/spec/Commons/CodesAndCodeSets/CodeSet> ;
+    sh:minCount 1 ;
+    sh:path Collections:isMemberOf .
 
