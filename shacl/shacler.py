@@ -132,15 +132,14 @@ class OWLSHACLRestriction(RDFSHACLResource):
             restricting_property: OWLSHACLProperty,
             restricting_class: RDFSSHACLClass,
             restricting_cardinality: int,
-            restricted_classes: set):
+            restricted_classes=set()):
         super().__init__(owl_construct_type=OWL.Restriction, iri=None)
         self.restriction_type = restriction_type
         self.restricting_property = restricting_property
         self.restricting_class = restricting_class
         self.restricting_cardinality = restricting_cardinality
         self.restricted_classes = restricted_classes
-        OWLSHACLRestriction.restriction_registry[
-            restriction_type, restricting_property, restricting_class, restricting_cardinality] = self
+        OWLSHACLRestriction.restriction_registry[restriction_type, restricting_property, restricting_class, restricting_cardinality] = self
     
     def __get_hashable_attributes(self) -> list:
         return [self.restriction_type, self.restricting_property, self.restricting_class, self.restricting_cardinality]
@@ -341,6 +340,8 @@ class SHACLNodeShape(SHACLShape):
 
 
 def __process_node(node: Node, ontology_graph: Graph) -> RDFSHACLResource:
+    if node in RDFSHACLResource.rdf_shacl_identity_registry:
+        return RDFSHACLResource.rdf_shacl_identity_registry[node]
     if isinstance(node, BNode):
         return __process_bnode(bnode=node, ontology_graph=ontology_graph)
     if isinstance(node, URIRef):
@@ -374,9 +375,6 @@ def __process_bnode(bnode: BNode, ontology_graph: Graph) -> RDFSHACLResource:
 
 def __process_iri(iri: URIRef, ontology_graph: Graph) -> RDFSHACLResource:
     owl_shacl_resource = None
-    
-    if iri in RDFSHACLResource.rdf_shacl_identity_registry:
-        return RDFSHACLResource.rdf_shacl_identity_registry[iri]
     
     owl_type = RDFS.Resource
     owl_parents = list()
@@ -439,12 +437,7 @@ def __process_owl_restriction(owl_restriction: Node, ontology_graph: Graph) -> R
     if len(owl_someValuesFrom) > 0:
         restricting_node = owl_someValuesFrom[0]
         restricting_owl_shacl_class = __process_node(node=restricting_node, ontology_graph=ontology_graph)
-        restricted_classes = set()
-        restricted_nodes = set(ontology_graph.transitive_subjects(object=owl_restriction, predicate=RDFS.subClassOf))
-        for restricted_node in restricted_nodes:
-            if not restricted_node == owl_restriction:
-                restricted_class = __process_node(node=restricted_node, ontology_graph=ontology_graph)
-                restricted_classes.add(restricted_class)
+        
         if restricting_owl_shacl_class and restricting_owl_shacl_property:
             if restricting_owl_shacl_class.iri is not None:
                 owl_shacl_restriction = \
@@ -452,8 +445,17 @@ def __process_owl_restriction(owl_restriction: Node, ontology_graph: Graph) -> R
                         restriction_type=OWL.someValuesFrom,
                         restricting_property=restricting_owl_shacl_property,
                         restricting_class=restricting_owl_shacl_class,
-                        restricting_cardinality=1,
-                        restricted_classes=restricted_classes)
+                        restricting_cardinality=1)
+                
+                restricted_classes = set()
+                restricted_nodes = set(
+                    ontology_graph.transitive_subjects(object=owl_restriction, predicate=RDFS.subClassOf))
+                for restricted_node in restricted_nodes:
+                    if not restricted_node == owl_restriction:
+                        restricted_class = __process_node(node=restricted_node, ontology_graph=ontology_graph)
+                        restricted_classes.add(restricted_class)
+                owl_shacl_restriction.restricted_classes = restricted_classes
+                
                 return owl_shacl_restriction
     
     # logging.warning(msg='Cannot get formula from a restriction')
@@ -624,6 +626,6 @@ if __name__ == "__main__":
     shacl(input_owl_path=args.input_owl, output_shacl_path=args.output_shacl)
     
     # shacl(
-    #     input_owl_path='../resources/idmp/AboutIDMPProd-Merged.rdf',
-    #     output_shacl_path='ISO11238-Substances-SHACL.ttl',
+    #     input_owl_path='../resources/idmp/AboutIDMPDev-Merged.rdf',
+    #     output_shacl_path='AboutIDMPDev-SHACL.ttl',
     #     use_equivalent_constraints=True)

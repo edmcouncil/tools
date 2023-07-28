@@ -42,7 +42,7 @@ def produce_unit_test_expected_results(ontology_location: str, root_folder: str,
             file.write(json.dumps(query_result_as_dict))
 
 produce_unit_test_expected_results(
-    ontology_location='/Users/pawel.garbacz/Documents/edmc/github/edmc/tools/resources/idmp_current/AboutIDMPDev-ReferenceIndividuals.ttl',
+    ontology_location='/Users/pawel.garbacz/Documents/edmc/github/edmc/tools/resources/idmp_quick/AboutIDMPDev-ReferenceIndividuals.ttl',
     root_folder='/Users/pawel.garbacz/Documents/edmc/github/edmc/tools/unit_tests/',
     unit_test_config_file_path='configs/idmp_tests_config.yaml')
 

@@ -1,8 +1,8 @@
 from pyshacl import validate
 from rdflib import Graph
 
-data_graph = Graph().parse('../resources/idmp_current/dev.idmp-quickstart.ttl')
-shacl_graph = Graph().parse('../resources/idmp_current/dev.idmp-quickstart.shacl')
+data_graph = Graph().parse('../resources/idmp_quick/dev.idmp-quickstart.ttl')
+shacl_graph = Graph().parse('../resources/idmp_quick/dev.idmp-quickstart.shacl')
 
 
 conforms, results_graph, results_text = \

@@ -109,7 +109,7 @@ def edge_can_be_added_to_paths(edge: list, paths: list) -> bool:
 
 
 semantic_graph = SemanticGraph()
-semantic_graph.parse('resources/idmp_current/dev.idmp-quickstart.ttl')
+semantic_graph.parse('resources/idmp_quick/dev.idmp-quickstart.ttl')
 generate_shacl_model_from_ontology(ontology=semantic_graph)
 graph = DiGraph()
 traverse_graph_from(

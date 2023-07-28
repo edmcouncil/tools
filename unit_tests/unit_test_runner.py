@@ -49,7 +49,7 @@ def run_unit_test(ontology_location: str, root_folder: str, unit_test_config_fil
     return cq_tests_passed
 
 run_unit_test(
-    ontology_location='/Users/pawel.garbacz/Documents/edmc/github/edmc/tools/resources/idmp_current/dev.idmp-quickstart.ttl',
+    ontology_location='/Users/pawel.garbacz/Documents/edmc/github/edmc/tools/resources/idmp_quick/dev.idmp-quickstart.ttl',
     root_folder='',
     unit_test_config_file_path='configs/unit_tests_config.yaml')
 
