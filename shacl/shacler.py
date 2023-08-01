@@ -626,6 +626,6 @@ if __name__ == "__main__":
     shacl(input_owl_path=args.input_owl, output_shacl_path=args.output_shacl)
     
     # shacl(
-    #     input_owl_path='../resources/idmp/AboutIDMPDev-Merged.rdf',
-    #     output_shacl_path='AboutIDMPDev-SHACL.ttl',
+    #     input_owl_path='../resources/idmp/LoadIDMPDev-Merged.rdf',
+    #     output_shacl_path='LoadIDMPDev-SHACL.ttl',
     #     use_equivalent_constraints=True)
