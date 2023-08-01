@@ -6,7 +6,7 @@ from rdflib import Graph, RDF, OWL, RDFS, SH, Namespace, XSD
 from rdflib.term import Node, BNode, URIRef, Literal
 
 
-OWL_RESTRICTION_SCOPE_PROPERTY = URIRef('https://www.omg.org/spec/Commons/AnnotationVocabulary/hasDataSupport')
+OWL_RESTRICTION_SCOPE_PROPERTY = URIRef('https://spec.pistoiaalliance.org/idmp/ontology/META/ChangeManagement/hasDataSupport')
 
 
 class RDFSHACLResource:
