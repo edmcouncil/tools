@@ -124,16 +124,19 @@ class OWLSHACLProperty(RDFSHACLResource):
 class OWLSHACLRestriction(RDFSHACLResource):
     restriction_registry = dict()
     equivalent_registry = dict()
-    out_of_scope_owl_restrictions = set()
+    out_of_scope_bnodes = set()
     
     def __init__(
             self,
+            restriction_bnode: BNode,
             restriction_type: str,
             restricting_property: OWLSHACLProperty,
             restricting_class: RDFSSHACLClass,
             restricting_cardinality: int,
             restricted_classes=set()):
         super().__init__(owl_construct_type=OWL.Restriction, iri=None)
+        
+        self.restriction_bnode = restriction_bnode
         self.restriction_type = restriction_type
         self.restricting_property = restricting_property
         self.restricting_class = restricting_class
@@ -189,7 +192,7 @@ class SHACLShape:
 
 class SHACLPropertyShape(SHACLShape):
     serialisation_register = dict()
-    serialisation_alterntive_register = dict()
+    serialisation_alternative_register = dict()
     
     def __init__(self, owl_shacl_restriction: OWLSHACLRestriction):
         super().__init__(rdf_shacl_resource=owl_shacl_restriction)
@@ -225,7 +228,7 @@ class SHACLPropertyShape(SHACLShape):
                         restricting_property_iri=owl_shacl_inverse_restricton.restricting_property.iri,
                         restricting_class=self.rdf_shacl_resource.restricting_class,
                         cardinality=owl_shacl_inverse_restricton.restricting_cardinality)
-                    SHACLPropertyShape.serialisation_alterntive_register[self] = inverse_shacl_shape
+                    SHACLPropertyShape.serialisation_alternative_register[self] = inverse_shacl_shape
     
     def __serialise_someValuesFrom(self, shacl_shape: URIRef, owl_shacl_restricton: OWLSHACLRestriction):
         self.shacl_graph.add((shacl_shape, SH.path, owl_shacl_restricton.restricting_property.iri))
@@ -269,9 +272,9 @@ class SHACLNodeShape(SHACLShape):
         
         for relevant_restriction in relevant_shacl_property_shapes:
             if use_equivalent_constraints:
-                if relevant_restriction in SHACLPropertyShape.serialisation_alterntive_register:
+                if relevant_restriction in SHACLPropertyShape.serialisation_alternative_register:
                     straight_property_shape = SHACLPropertyShape.serialisation_register[relevant_restriction]
-                    inverse_straight_property_shape = SHACLPropertyShape.serialisation_alterntive_register[
+                    inverse_straight_property_shape = SHACLPropertyShape.serialisation_alternative_register[
                         relevant_restriction]
                     alternative_paths_bnode = BNode()
                     alternative_paths_sublist = BNode()
@@ -290,7 +293,7 @@ class SHACLNodeShape(SHACLShape):
         unfiltered_restrictions = set()
         for owl_shacl_class in self.rdf_shacl_resource.super_classes:
             if isinstance(owl_shacl_class, OWLSHACLRestriction):
-                if not owl_shacl_class.iri in OWLSHACLRestriction.out_of_scope_owl_restrictions:
+                if owl_shacl_class.restriction_bnode not in OWLSHACLRestriction.out_of_scope_bnodes:
                     unfiltered_restrictions.add(owl_shacl_class)
         filtered_out_restrictions = self.filter_out_owl_restrictions(unfiltered_restrictions=unfiltered_restrictions)
         
@@ -299,10 +302,7 @@ class SHACLNodeShape(SHACLShape):
             if shacl_property_shape in SHACLPropertyShape.serialisation_register:
                 relevant_shacl_property_shapes.add(shacl_property_shape)
         return relevant_shacl_property_shapes
-    
-    def __check_if_owl_restriction_is_to_be_ignored(self, owl_restriction: OWL.Restriction):
-        pass
-    
+
     @staticmethod
     def filter_out_owl_restrictions(unfiltered_restrictions: set) -> set:
         filtered_out_restrictions = unfiltered_restrictions.copy()
@@ -427,7 +427,7 @@ def __process_iri(iri: URIRef, ontology_graph: Graph) -> RDFSHACLResource:
     return owl_shacl_resource
 
 
-def __process_owl_restriction(owl_restriction: Node, ontology_graph: Graph) -> RDFSHACLResource:
+def __process_owl_restriction(owl_restriction: BNode, ontology_graph: Graph) -> RDFSHACLResource:
     owl_properties = list(ontology_graph.objects(subject=owl_restriction, predicate=OWL.onProperty))
     owl_property = owl_properties[0]
     owl_someValuesFrom = list(ontology_graph.objects(subject=owl_restriction, predicate=OWL.someValuesFrom))
@@ -442,6 +442,7 @@ def __process_owl_restriction(owl_restriction: Node, ontology_graph: Graph) -> R
             if restricting_owl_shacl_class.iri is not None:
                 owl_shacl_restriction = \
                     OWLSHACLRestriction(
+                        restriction_bnode=owl_restriction,
                         restriction_type=OWL.someValuesFrom,
                         restricting_property=restricting_owl_shacl_property,
                         restricting_class=restricting_owl_shacl_class,
@@ -506,13 +507,12 @@ def __select_owl_restrictions_to_be_ignored(ontology_graph: Graph):
         in_scope_values = list(ontology_graph.objects(subject=axiom, predicate=OWL_RESTRICTION_SCOPE_PROPERTY))
         if len(in_scope_values) == 1:
             in_scope_value = in_scope_values[0]
-            if in_scope_value.value == False:
+            if in_scope_value.value is False:
                 annotated_owl_restrictions = list(ontology_graph.objects(subject=axiom, predicate=OWL.annotatedTarget))
                 if len(annotated_owl_restrictions) == 1:
                     out_of_scope_owl_restriction = annotated_owl_restrictions[0]
-                    OWLSHACLRestriction.out_of_scope_owl_restrictions.add(out_of_scope_owl_restriction)
+                    OWLSHACLRestriction.out_of_scope_bnodes.add(out_of_scope_owl_restriction)
     
-
 
 def __generate_inverse_restrictions(ontology_graph: Graph):
     for owl_shacl_restriction_1 in OWLSHACLRestriction.restriction_registry.values():
@@ -558,7 +558,8 @@ def __serialise_shacl_shape_objects(ontology_graph: Graph, output_shacl_path: st
     
     for shacl_shape in SHACLShape.identity_registry.values():
         if isinstance(shacl_shape, SHACLPropertyShape):
-            shacl_shape.serialise(use_equivalent_constraints=use_equivalent_constraints)
+            if shacl_shape.owl_shacl_restriction.restriction_bnode not in OWLSHACLRestriction.out_of_scope_bnodes:
+                shacl_shape.serialise(use_equivalent_constraints=use_equivalent_constraints)
     
     for shacl_shape in SHACLShape.identity_registry.values():
         if isinstance(shacl_shape, SHACLNodeShape):
@@ -626,6 +627,6 @@ if __name__ == "__main__":
     shacl(input_owl_path=args.input_owl, output_shacl_path=args.output_shacl)
     
     # shacl(
-    #     input_owl_path='../resources/idmp/LoadIDMPDev-Merged.rdf',
-    #     output_shacl_path='LoadIDMPDev-SHACL.ttl',
+    #     input_owl_path='../resources/idmp/AboutIDMPDev-ReferenceIndividuals-Merged.rdf',
+    #     output_shacl_path='AboutIDMPDev-ReferenceIndividuals-SHACL.ttl',
     #     use_equivalent_constraints=True)
