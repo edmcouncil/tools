@@ -20,4 +20,5 @@ def translate_rdf_triple_about_individual_subject_to_fol(rdf_triple: tuple, owl_
     if rdf_triple[1] == OWL.differentFrom:
         Negation(arguments=[IdentityFormula(arguments=[triple_subject, triple_object])])
         return
+    
     AtomicFormula(predicate=triple_predicate, arguments=[triple_subject, triple_object], is_self_standing=True)
