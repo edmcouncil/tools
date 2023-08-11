@@ -1,7 +1,7 @@
 import uuid
 
 
-class Formula():
+class Formula:
     registry = list()
     
     def __init__(self, is_self_standing=False, is_fol=True):

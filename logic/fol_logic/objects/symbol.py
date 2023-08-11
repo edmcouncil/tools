@@ -6,23 +6,20 @@ from rdflib import URIRef
 class Symbol:
     def __init__(self, origin):
         self.origin = origin
-        if isinstance(origin, URIRef):
-            if '#' in str(self.origin):
-                self.letter = origin.fragment
-            else:
-                origin_fragments = str(self.origin).split(sep='/')
-                origin_fragments.reverse()
-                for index in range(len(origin_fragments)):
-                    origin_fragment = origin_fragments[index]
-                    if len(origin_fragment) > 0:
-                        self.letter = origin_fragment
-                        if index + 1 < len(origin_fragments):
-                            if len(origin_fragments[index+1]) > 0:
-                                self.letter = origin_fragments[index+1] + '-' + self.letter
-                        return
-        else:
-            self.letter = str(origin)
+        self.__set_symbol_letter()
         
+    def __set_symbol_letter(self):
+        if isinstance(self.origin, URIRef):
+            uri_parts = self.origin.split(sep='/')
+            uri_namespace_parts = uri_parts[3:-1]
+            namespace = '-'.join([part[0] for part in uri_namespace_parts])
+            if '#' in str(self.origin):
+                self.letter = namespace + ':' + self.origin.fragment
+            else:
+                self.letter = namespace + ':' + uri_parts[-1]
+        else:
+            self.letter = str(self.origin)
+
     def to_tptp(self):
         pass
     

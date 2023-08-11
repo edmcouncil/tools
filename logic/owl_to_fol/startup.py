@@ -11,6 +11,7 @@ fibo.parse('../resources/fibo/fibo.ttl')
 
 
 translate_owl_ontology_to_fol_theory(owl_ontology=fibo)
+
 f = open('fibo_axioms.tptp', mode='w')
 for formula in Formula.registry:
     if formula.is_self_standing:
