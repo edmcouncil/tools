@@ -10,13 +10,12 @@ from logic.fol_logic.objects.symbol import Symbol
 from logic.fol_logic.objects.variable import Variable
 
 
-def translate_owl_construct_to_fol_formula(owl_type: URIRef, arguments: list, variables: list) -> Formula:
+def translate_owl_construct_to_self_standing_fol_formula(owl_type: URIRef, arguments: list, variables: list):
     if owl_type in owl_to_fol_map:
-        formula = owl_to_fol_map[owl_type](arguments, variables)
-        return formula
+        owl_to_fol_map[owl_type](arguments, variables)
     
 
-def __translate_owl_inverse_of(arguments: list, variables: list) -> Formula:
+def __translate_owl_inverse_of(arguments: list, variables: list):
     if not len(arguments) == 2:
         logging.exception(msg='Wrong number of owl:inverseOf arguments')
         return None
@@ -29,8 +28,6 @@ def __translate_owl_inverse_of(arguments: list, variables: list) -> Formula:
         logging.exception(msg='Wrong type of second argument of owl:inverseOf')
         return None
     inverse_argument2 = argument2.swap_arguments()
-    # first_variable = Variable(letter=Variable.get_next_variable_letter())
-    # second_variable = Variable(letter=Variable.get_next_variable_letter())
     inverse_formula = \
         QuantifyingFormula(
             quantified_formula=Equivalence(arguments=[argument1, inverse_argument2]),
@@ -39,9 +36,21 @@ def __translate_owl_inverse_of(arguments: list, variables: list) -> Formula:
             is_self_standing=True)
     return inverse_formula
 
+def __translate_owl_equivalent(arguments: list, variables: list):
+    if not len(arguments) == 2:
+        logging.exception(msg='Wrong number of owl:inverseOf arguments')
+        return None
+    argument1 = arguments[0]
+    argument2 = arguments[1]
+    QuantifyingFormula(
+        quantified_formula=Equivalence(arguments=[argument1, argument2]),
+        variables=variables,
+        quantifier=Quantifier.UNIVERSAL,
+        is_self_standing=True)
 
 owl_to_fol_map = \
     {
-        OWL.inverseOf : __translate_owl_inverse_of
+        OWL.inverseOf : __translate_owl_inverse_of,
+        OWL.equivalentClass: __translate_owl_equivalent
     }
 
