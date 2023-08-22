@@ -1,4 +1,5 @@
 import logging
+from typing import Optional, Union
 
 from rdflib import Graph, OWL, RDF
 from rdflib.term import Node, BNode, URIRef
@@ -17,25 +18,24 @@ from logic.owl_to_fol.translators.translator_helpers import get_subformula_from_
     try_to_cast_bnode_as_typed_list
 
 
-def get_simple_subformula_from_node(node: Node, owl_ontology: Graph, variables: list) -> Formula:
+def get_subformula_from_node(node: Node, owl_ontology: Graph, variables: list) -> Union[Formula, list, None]:
     if isinstance(node, BNode):
         return get_subformula_from_bnode(bnode=node, owl_ontology=owl_ontology, variables=variables)
     if isinstance(node, URIRef):
-       return get_subformula_from_uri(uri=node, owl_ontology=owl_ontology, variables=variables)
+        return get_subformula_from_uri(uri=node, owl_ontology=owl_ontology, variables=variables)
 
 
-def get_subformula_from_bnode(bnode: BNode, owl_ontology: Graph, variables: list) -> Formula:
+def get_subformula_from_bnode(bnode: BNode, owl_ontology: Graph, variables: list) -> Union[Formula, list, None]:
     if (bnode, RDF.type, OWL.Restriction) in owl_ontology:
         formula = generate_fol_from_owl_restriction(owl_restriction=bnode, owl_ontology=owl_ontology, variables=variables)
         return formula
     
     if len(list(owl_ontology.objects(subject=bnode, predicate=OWL.inverseOf))) > 0:
         inversed_properties = list(owl_ontology.objects(subject=bnode, predicate=OWL.inverseOf))
-        inversed_property_formula = get_simple_subformula_from_node(node=inversed_properties[0], owl_ontology=owl_ontology, variables=variables)
-        if not isinstance(inversed_property_formula, AtomicFormula):
-            return None
-        formula = inversed_property_formula.swap_arguments(inplace=False)
-        return formula
+        inversed_property_formula = get_subformula_from_node(node=inversed_properties[0], owl_ontology=owl_ontology, variables=variables)
+        if isinstance(inversed_property_formula, AtomicFormula):
+            formula = inversed_property_formula.swap_arguments(inplace=False)
+            return formula
     
     if len(list(owl_ontology.subjects(object=bnode, predicate=OWL.propertyChainAxiom))) > 0:
         formula = __get_subformula_from_property_chain(bnode=bnode, owl_ontology=owl_ontology, variables=variables)
@@ -45,7 +45,7 @@ def get_subformula_from_bnode(bnode: BNode, owl_ontology: Graph, variables: list
     
     if typed_list:
         if typed_list[0] == OWL.complementOf:
-            formulas = [get_simple_subformula_from_node(node=typed_list[1],owl_ontology=owl_ontology, variables=variables)]
+            formulas = [get_subformula_from_node(node=typed_list[1], owl_ontology=owl_ontology, variables=variables)]
         else:
             formulas = get_listed_resources(rdf_list_object=typed_list[1],ontology=owl_ontology,rdf_list=list(),variables=variables)
         if typed_list[0] == OWL.unionOf:
@@ -56,8 +56,15 @@ def get_subformula_from_bnode(bnode: BNode, owl_ontology: Graph, variables: list
             return Negation(arguments=formulas)
         if typed_list[0] == OWL.oneOf:
             return __get_one_of_formula(formulas=formulas)
+        if typed_list[0] == OWL.distinctMembers:
+            return None
     
-    logging.warning(msg='Something is wrong with the list: ' + str(typed_list))
+    listed_resources = get_listed_resources(rdf_list_object=bnode, ontology=owl_ontology, variables=variables, rdf_list=list())
+
+    if len(listed_resources) > 0:
+        return listed_resources
+    
+    logging.warning(msg='Not yet implemented: ' + str(typed_list))
 
 
 def generate_fol_from_owl_restriction(owl_restriction: Node, owl_ontology: Graph, variables: list) -> Formula:
@@ -77,11 +84,11 @@ def generate_fol_from_owl_restriction(owl_restriction: Node, owl_ontology: Graph
     owl_qualifiedMaxCardinality = list(owl_ontology.objects(subject=owl_restriction, predicate=OWL.maxQualifiedCardinality))
     
     restricted_variable = Variable(letter=Variable.get_next_variable_letter())
-    restricting_relation_formula = get_simple_subformula_from_node(node=owl_property, owl_ontology=owl_ontology, variables=variables + [restricted_variable])
+    restricting_relation_formula = get_subformula_from_node(node=owl_property, owl_ontology=owl_ontology, variables=variables + [restricted_variable])
 
     if len(owl_someValuesFrom) > 0:
         restricting_node = owl_someValuesFrom[0]
-        restricting_class_formula = get_simple_subformula_from_node(node=restricting_node, owl_ontology=owl_ontology, variables=[restricted_variable])
+        restricting_class_formula = get_subformula_from_node(node=restricting_node, owl_ontology=owl_ontology, variables=[restricted_variable])
         if restricting_class_formula and restricting_relation_formula:
             formula = \
                 QuantifyingFormula(
@@ -92,7 +99,7 @@ def generate_fol_from_owl_restriction(owl_restriction: Node, owl_ontology: Graph
         
     if len(owl_allValuesFrom) > 0:
         restricting_node = owl_allValuesFrom[0]
-        restricting_class_formula = get_simple_subformula_from_node(node=restricting_node, owl_ontology=owl_ontology, variables=[restricted_variable])
+        restricting_class_formula = get_subformula_from_node(node=restricting_node, owl_ontology=owl_ontology, variables=[restricted_variable])
         if restricting_class_formula and restricting_relation_formula:
             formula = \
                 QuantifyingFormula(
@@ -184,7 +191,7 @@ def get_listed_resources(rdf_list_object: Node, ontology: Graph, variables: list
     first_items_in_rdf_list = list(ontology.objects(subject=rdf_list_object, predicate=RDF.first))
     if len(first_items_in_rdf_list) == 0:
         return rdf_list
-    resource = get_simple_subformula_from_node(node=first_items_in_rdf_list[0], owl_ontology=ontology, variables=variables)
+    resource = get_subformula_from_node(node=first_items_in_rdf_list[0], owl_ontology=ontology, variables=variables)
     rdf_list.append(resource)
     rest_items_in_rdf_list = list(ontology.objects(subject=rdf_list_object, predicate=RDF.rest))
     rdf_list = get_listed_resources(rdf_list_object=rest_items_in_rdf_list[0], ontology=ontology, rdf_list=rdf_list, variables=variables)
@@ -214,7 +221,7 @@ def __generate_fol_from_owl_min_qualified_restriction(
             while index <= minCardinality:
                 restricting_variable = Variable(letter=Variable.get_next_variable_letter())
                 restricting_class_formula = \
-                    get_simple_subformula_from_node(
+                    get_subformula_from_node(
                         node=restricting_node,
                         owl_ontology=owl_ontology,
                         variables=[restricting_variable])
@@ -275,7 +282,7 @@ def __generate_fol_from_owl_max_qualified_restriction(
             conjunction = None
             if maxCardinality == 0:
                 restricting_class_formula = \
-                    get_simple_subformula_from_node(
+                    get_subformula_from_node(
                         node=restricting_node,
                         owl_ontology=owl_ontology,
                         variables=[restricted_variable])
@@ -293,7 +300,7 @@ def __generate_fol_from_owl_max_qualified_restriction(
                 indexed_variable_letter = Variable.get_next_variable_letter()
                 restricting_variable = Variable(letter=indexed_variable_letter)
                 restricting_class_formula = \
-                    get_simple_subformula_from_node(
+                    get_subformula_from_node(
                         node=restricting_node,
                         owl_ontology=owl_ontology,
                         variables=[restricting_variable])

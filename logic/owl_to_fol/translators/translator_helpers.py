@@ -81,7 +81,6 @@ def __can_uri_be_cast_to_unary_predicate(uri: URIRef, owl_ontology: Graph) -> bo
         return True
     if (uri, RDF.type, RDFS.Class) in owl_ontology:
         return True
-    
     if (uri, RDF.type, OWL.Class) in owl_ontology:
         return True
     if (uri, RDF.type, OWL.DataRange) in owl_ontology:
@@ -123,6 +122,10 @@ def try_to_cast_bnode_as_typed_list(bnode: BNode, owl_ontology: Graph) -> tuple:
     owl_oneOfs = list(owl_ontology.objects(subject=bnode, predicate=OWL.oneOf))
     if len(owl_oneOfs) > 0:
         return OWL.oneOf, owl_oneOfs[0]
+    
+    distinctMembers = list(owl_ontology.objects(subject=bnode, predicate=OWL.distinctMembers))
+    if len(distinctMembers) > 0:
+        return OWL.oneOf, distinctMembers[0]
     
     
 
