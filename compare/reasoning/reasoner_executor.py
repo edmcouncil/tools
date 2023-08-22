@@ -1,7 +1,7 @@
 import json
 import subprocess
 import time
-import glob, os
+import os
 
 import pandas
 from rdflib import Graph
@@ -34,22 +34,18 @@ def run_reasoner_over_folder(folder_path: str):
                 subprocess.Popen(
                     "java -jar ./onto-viewer-toolkit.jar --goal consistency-check --data " + file_path + " --output " + output_file_path,
                     shell=True)
-            reasoning_process.wait(timeout=1200)
-            end = time.time()
-            reasoning_time = (end - start) - empty_ontology_reasoning_time
+            try:
+                reasoning_process.wait(timeout=300)
+            except subprocess.TimeoutExpired as exception:
+                print(exception.output)
+                reasoning_time = 300
+            else:
+                end = time.time()
+                reasoning_time = (end - start) - empty_ontology_reasoning_time
             reasoning_time_datetime = consolidated_ontologies_register[file_name]
             reasoning_times_register[reasoning_time_datetime] = reasoning_time
-    # with open(os.path.join(folder_path, 'ontology_reasoning_times.json'), 'w') as outputs_file:
-    #     json.dump(reasoning_times_register, outputs_file)
     reasoning_times_dataframe = pandas.DataFrame.from_dict(data=reasoning_times_register, orient='index')
     reasoning_times_dataframe.reset_index(inplace=True)
     reasoning_times_dataframe.columns = ['time_stamp', 'time_length']
     reasoning_times_dataframe.to_excel(os.path.join(folder_path, 'ontology_reasoning_times.xlsx'), index=False)
-        
-# vampire_process = subprocess.Popen(cmd_to_run_vampire, shell=True)
-#     vampire_process.wait()
-        
-# java -jar onto-viewer-toolkit.jar \
-#     --goal consitency-check \
-#     --data my-ontology.rdf \
-#     --output consitency-check-result.txt
+    
