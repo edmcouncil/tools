@@ -8,7 +8,6 @@ from logic.fol_logic.objects.formula import Formula
 from logic.fol_logic.objects.predicate import Predicate
 from logic.fol_logic.objects.symbol import Symbol
 from logic.fol_logic.objects.term import Term
-from logic.fol_logic.objects.variable import Variable
 
 
 def get_subformula_from_uri(uri: URIRef, owl_ontology: Graph, variables: list) -> Formula:
@@ -38,20 +37,20 @@ def get_subformula_from_uri(uri: URIRef, owl_ontology: Graph, variables: list) -
     logging.warning(msg='Cannot get formula from ' + str(uri))
 
 
-def get_fol_symbol_for_owl_node(node: Node, owl_ontology: Graph, arity=1) -> Symbol:
-    if (node, RDF.type, OWL.NamedIndividual) in owl_ontology or (node, RDF.type, RDFS.Literal) in owl_ontology:
+def get_fol_symbol_for_owl_node(node: Node, rdf_graph: Graph, arity=1) -> Symbol:
+    if (node, RDF.type, OWL.NamedIndividual) in rdf_graph or (node, RDF.type, RDFS.Literal) in rdf_graph:
         if node in Term.registry:
             return Term.registry[node]
         else:
             return Term(origin=node)
         
-    if (node, RDF.type, OWL.Class) in owl_ontology:
+    if (node, RDF.type, OWL.Class) in rdf_graph:
         if node in Predicate.registry:
             return Predicate.registry[node]
         else:
             return Predicate(origin=node, arity=arity)
     
-    if len(set(owl_ontology.objects(subject=node, predicate=RDF.type))) == 0:
+    if len(set(rdf_graph.objects(subject=node, predicate=RDF.type))) == 0:
         if node in Term.registry:
             return Term.registry[node]
         else:
@@ -135,3 +134,5 @@ def __can_uri_be_cast_to_term(uri: URIRef, owl_ontology: Graph) -> bool:
         return True
     else:
         return True
+
+

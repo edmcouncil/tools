@@ -1,7 +1,6 @@
 import logging
 
 from rdflib import RDF, RDFS, OWL
-from rdflib.namespace import DefinedNamespace
 
 from logic.fol_logic.objects.predicate import Predicate
 

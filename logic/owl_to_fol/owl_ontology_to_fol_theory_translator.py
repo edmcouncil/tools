@@ -1,20 +1,20 @@
-import logging
-
 from rdflib import Graph
 
+from logic.fol_logic.objects.variable import Variable
 from logic.owl_to_fol.owl_to_fol_preparer import populate_default_predicates
-from logic.owl_to_fol.translators.owl_triple_to_fol_translator import translate_rdf_triple_to_fol
+from logic.owl_to_fol.translators.triple_translators.sw_triple_to_fol_formula_translator import \
+    translate_sw_triple_to_fol_formula
+from logic.owl_to_fol.translators.triple_translators.sw_triple_to_fol_subformula_translator import \
+    translate_sw_triple_to_fol_subformula
 
 
-def translate_owl_ontology_to_fol_theory(owl_ontology:Graph):
-    logging.info(msg='Importing W3C ontologies')
-    # rdf = Graph()
-    # rdf.parse('http://www.w3.org/1999/02/22-rdf-syntax-ns')
-    # rdfs = Graph()
-    # rdfs.parse('http://www.w3.org/2000/01/rdf-schema')
-    # owl = Graph()
-    # owl.parse('http://www.w3.org/2002/07/owl')
-    # owl_ontology = owl_ontology + rdf + rdfs + owl
+def translate_owl_ontology_to_fol_theory(owl_ontology: Graph):
     populate_default_predicates()
-    for rdf_triple in owl_ontology:
-        translate_rdf_triple_to_fol(rdf_triple=rdf_triple, owl_ontology=owl_ontology)
+    for sw_triple in owl_ontology:
+        Variable.clear_used_variable_letters()
+        variables = [Variable(letter=Variable.get_next_variable_letter()),Variable(letter=Variable.get_next_variable_letter())]
+        translate_sw_triple_to_fol_subformula(sw_triple=sw_triple, rdf_graph=owl_ontology, variables=variables)
+    for sw_triple in owl_ontology:
+        Variable.clear_used_variable_letters()
+        variables = [Variable(letter=Variable.get_next_variable_letter()),Variable(letter=Variable.get_next_variable_letter())]
+        translate_sw_triple_to_fol_formula(sw_triple=sw_triple, rdf_graph=owl_ontology, variables=variables)

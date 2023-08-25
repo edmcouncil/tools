@@ -8,14 +8,14 @@ from logic.fol_logic.objects.implication import Implication
 from logic.fol_logic.objects.negation import Negation
 from logic.fol_logic.objects.quantifying_formula import QuantifyingFormula, Quantifier
 from logic.fol_logic.objects.variable import Variable
-from logic.owl_to_fol.translators.owl_node_to_fol_translator import get_subformula_from_node, \
-    translate_all_disjoint_classes_triple
+from logic.owl_to_fol.translators.owl_node_to_fol_translator import translate_all_disjoint_classes_triple
+from logic.owl_to_fol.translators.sw_node_to_fol_translator import get_subformula_from_node
 
 
 def translate_rdf_triple_about_class_like_to_fol(rdf_triple: tuple, owl_ontology: Graph):
     variable = Variable(letter=Variable.get_next_variable_letter())
-    left_class = get_subformula_from_node(node=rdf_triple[0], owl_ontology=owl_ontology, variables=[variable])
-    right_class = get_subformula_from_node(node=rdf_triple[2], owl_ontology=owl_ontology, variables=[variable])
+    left_class = get_subformula_from_node(node=rdf_triple[0], rdf_graph=owl_ontology, variables=[variable])
+    right_class = get_subformula_from_node(node=rdf_triple[2], rdf_graph=owl_ontology, variables=[variable])
 
     if rdf_triple[1] == OWL.disjointUnionOf:
         logging.warning(msg='owl:disjointUnionOf not yet implemented')
