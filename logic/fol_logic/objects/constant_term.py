@@ -1,4 +1,3 @@
-from logic.fol_logic.objects.symbol import Symbol
 from logic.fol_logic.objects.term import Term
 
 

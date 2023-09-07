@@ -1,3 +1,5 @@
+import logging
+
 from rdflib import OWL, URIRef, Graph
 
 from logic.fol_logic.objects.atomic_formula import AtomicFormula
@@ -6,6 +8,7 @@ from logic.fol_logic.objects.disjunction import Disjunction
 from logic.fol_logic.objects.equivalence import Equivalence
 from logic.fol_logic.objects.formula import Formula
 from logic.fol_logic.objects.identity_formula import IdentityFormula
+from logic.fol_logic.objects.implication import Implication
 from logic.fol_logic.objects.negation import Negation
 from logic.fol_logic.objects.quantifying_formula import QuantifyingFormula, Quantifier
 from logic.fol_logic.objects.variable import Variable
@@ -13,7 +16,6 @@ from logic.owl_to_fol.translators.formula_origin_registry import FormulaOriginRe
 from logic.owl_to_fol.translators.node_translators import sw_node_to_fol_translator
 from logic.owl_to_fol.translators.node_translators.sw_node_to_fol_translator import get_subformula_from_node, \
     get_fol_formulae_from_rdf_list
-from logic.owl_to_fol.translators.translator_helpers import get_fol_symbol_for_owl_node
 
 
 def translate_owl_construct_to_fol_formula(owl_predicate: URIRef, sw_arguments: list, rdf_graph: Graph, variables: list) -> Formula:
@@ -33,8 +35,8 @@ def translate_owl_construct_to_fol_formula(owl_predicate: URIRef, sw_arguments: 
         case OWL.differentFrom:
             return __translate_differentFrom(sw_arguments=sw_arguments, rdf_graph=rdf_graph, variables=variables)
         case OWL.propertyChainAxiom:
-            return __translate_propertyChainAxiom(sw_arguments=sw_arguments,rdf_graph=rdf_graph,variables=variables)
-    return None
+            return __translate_propertyChainAxiom(sw_arguments=sw_arguments, rdf_graph=rdf_graph, variables=variables)
+  
 
 def __translate_inverse_of(sw_arguments: list, rdf_graph: Graph, variables: list) -> Formula:
     argument1 = get_subformula_from_node(node=sw_arguments[0],rdf_graph=rdf_graph, variables=variables)
@@ -59,7 +61,9 @@ def __translate_equivalentClass(sw_arguments: list, variables: list, rdf_graph: 
     else:
         argument2 = get_subformula_from_node(node=sw_arguments[1], rdf_graph=rdf_graph, variables=variables)
     if not argument1 or not argument2:
-        return None
+        logging.warning(
+            msg='Cannot process owl class equivalence relation between: ' + '|'.join([sw_arguments[0], sw_arguments[1]]))
+        return
     formula = \
         QuantifyingFormula(
             quantified_formula=Equivalence(arguments=[argument1, argument2]),
@@ -141,37 +145,41 @@ def __translate_differentFrom(sw_arguments: list, rdf_graph: Graph, variables: l
 
 
 def __translate_propertyChainAxiom(sw_arguments: list, rdf_graph: Graph, variables: list) -> Formula:
-    fol_term1 = get_fol_symbol_for_owl_node(node=sw_arguments[0], rdf_graph=rdf_graph)
-    fol_other_terms = sw_node_to_fol_translator.get_fol_terms_from_rdf_list(rdf_list_object=sw_arguments[1],rdf_graph=rdf_graph, fol_terms=list())
-    fol_terms = [fol_term1] + fol_other_terms
+    subproperty_formula = get_subformula_from_node(node=sw_arguments[0], rdf_graph=rdf_graph, variables=variables)
+    chained_properties = sw_node_to_fol_translator.get_fol_terms_from_rdf_list(rdf_list_object=sw_arguments[1],rdf_graph=rdf_graph, fol_terms=list())
     chain_links = list()
-    chained_variables = list()
+    chained_variables = set()
     last_second_variable_used = variables[1]
-    for index in range(len(fol_terms)):
+    for index in range(len(chained_properties)):
         if index == 0:
             first_argument = variables[0]
             second_argument = Variable.get_next_variable()
             last_second_variable_used = second_argument
-            chained_variables.append(second_argument)
-        elif index == len(fol_terms) - 1:
+            chained_variables.add(second_argument)
+        elif index == len(chained_properties) - 1:
             first_argument = last_second_variable_used
             second_argument = variables[1]
             last_second_variable_used = second_argument
-            chained_variables.append(first_argument)
+            chained_variables.add(first_argument)
         else:
             first_argument = last_second_variable_used
             second_argument = Variable.get_next_variable()
             last_second_variable_used = second_argument
-            chained_variables.append(first_argument)
-            chained_variables.append(second_argument)
-        chain_link = AtomicFormula(predicate=fol_terms[index],arguments=[first_argument, second_argument])
+            chained_variables.add(first_argument)
+            chained_variables.add(second_argument)
+        chain_link = AtomicFormula(predicate=chained_properties[index],arguments=[first_argument, second_argument])
         chain_links.append(chain_link)
     chain_links_conjunction = Conjunction(arguments=chain_links)
-    formula = \
+    chain_formula = \
         QuantifyingFormula(
             quantified_formula=chain_links_conjunction,
-            variables=chained_variables,
-            quantifier=Quantifier.EXISTENTIAL,
+            variables=list(chained_variables),
+            quantifier=Quantifier.EXISTENTIAL)
+    formula = \
+        QuantifyingFormula(
+            quantified_formula=Implication(arguments=[chain_formula, subproperty_formula]),
+            variables=variables,
+            quantifier=Quantifier.UNIVERSAL,
             is_self_standing=True)
     return formula
     

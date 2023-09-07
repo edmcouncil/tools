@@ -1,6 +1,3 @@
-import datetime
-from datetime import date
-
 from rdflib import XSD, OWL
 
 SW_TO_PYTHON_DATATYPE_MAP = \

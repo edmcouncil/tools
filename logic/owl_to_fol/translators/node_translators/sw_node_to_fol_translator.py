@@ -4,7 +4,8 @@ from typing import Optional
 from rdflib import URIRef, Graph, BNode, RDF, OWL, RDFS
 from rdflib.term import Node
 
-import logic.owl_to_fol.translators.triple_translators.sw_to_fol_helper
+import \
+    logic.owl_to_fol.translators.triple_translators.sw_to_fol_translation_filterers as sw_to_fol_translation_filterers
 import \
     logic.owl_to_fol.translators.triple_translators.sw_triple_to_fol_subformula_translator as sw_to_fol_subformula_translator
 from logic.fol_logic.objects.atomic_formula import AtomicFormula
@@ -53,11 +54,11 @@ def get_subformula_from_node(node: Node, rdf_graph: Graph, variables: list) -> O
         return get_subformula_from_uri(uri=node, owl_ontology=rdf_graph, variables=variables)
 
 
-def get_subformula_from_bnode(bnode: BNode, rdf_graph: Graph, variables: list) -> Optional[Formula]:
+def get_subformula_from_bnode(bnode: BNode, rdf_graph: Graph, variables: list) -> Formula:
     bnode_predictes_objects = list(rdf_graph.predicate_objects(subject=bnode))
     bnode_inscope_triples = list()
     for bnode_predicte, bnode_object in bnode_predictes_objects:
-        if not logic.owl_to_fol.translators.triple_translators.sw_to_fol_helper.is_triple_out_of_scope(sw_triple=(bnode, bnode_predicte, bnode_object), rdf_graph=rdf_graph):
+        if not sw_to_fol_translation_filterers.is_triple_out_of_scope_for_direct_translation(sw_triple=(bnode, bnode_predicte, bnode_object), rdf_graph=rdf_graph):
             bnode_inscope_triples.append((bnode, bnode_predicte, bnode_object))
             
     if len(bnode_inscope_triples) == 1:
@@ -71,7 +72,9 @@ def get_subformula_from_bnode(bnode: BNode, rdf_graph: Graph, variables: list) -
         if (bnode, RDF.type, RDFS.Datatype) in rdf_graph:
             formula = translate_datatype_description(sw_datatype_description=bnode, rdf_graph=rdf_graph, variables=variables)
             return formula
-        return None
+        
+        logging.warning(msg='Cannot process bnode: ' + str(bnode))
+
 
 def get_fol_formulae_from_rdf_list(rdf_list_object: Node, rdf_graph: Graph, variables: list, fol_formulae: list) -> list:
     first_items_in_rdf_list = list(rdf_graph.objects(subject=rdf_list_object, predicate=RDF.first))

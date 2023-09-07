@@ -1,3 +1,5 @@
+import logging
+
 from rdflib import OWL, URIRef, Graph
 
 import logic.owl_to_fol.translators.node_translators.sw_node_to_fol_translator as sw_node_to_fol_translator
@@ -25,7 +27,6 @@ def translate_owl_construct_to_fol_subformula(owl_predicate: URIRef, sw_argument
             return __translate_distinctMembers(sw_arguments=sw_arguments, rdf_graph=rdf_graph)
         case OWL.equivalentProperty:
             return __translate_equivalentPropertyof(sw_arguments=sw_arguments, rdf_graph=rdf_graph, variables=variables)
-    return None
 
         
 def __translate_unionof(sw_arguments: list, rdf_graph: Graph, variables: list) -> Formula:
@@ -38,7 +39,8 @@ def __translate_unionof(sw_arguments: list, rdf_graph: Graph, variables: list) -
 def __translate_intersectionof(sw_arguments: list, rdf_graph: Graph, variables: list) -> Formula:
     intesectioned_fol_formulae = sw_node_to_fol_translator.get_fol_formulae_from_rdf_list(rdf_list_object=sw_arguments[1], rdf_graph=rdf_graph, variables=variables, fol_formulae=list())
     if None in intesectioned_fol_formulae:
-        return None
+        logging.warning(msg='Cannot process owl intersection for: ' + '|'.join(sw_arguments))
+        return
     formula = Conjunction(arguments=intesectioned_fol_formulae)
     FormulaOriginRegistry.sw_to_fol_map[sw_arguments[0]] = formula
     return formula
@@ -85,7 +87,3 @@ def __translate_equivalentPropertyof(sw_arguments: list, variables: list, rdf_gr
             variables=variables,
             quantifier=Quantifier.EXISTENTIAL)
     return formula
-
-#
-# def __translate_withRestrictions(sw_arguments: list, rdf_graph: Graph, variables: list) -> Formula:
-#     sw_with_restrictions = sw_arguments

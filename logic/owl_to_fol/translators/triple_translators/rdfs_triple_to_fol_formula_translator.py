@@ -1,3 +1,5 @@
+import logging
+
 from rdflib import URIRef, RDFS, Graph
 
 from logic.fol_logic.objects.formula import Formula
@@ -18,9 +20,8 @@ def translate_rdfs_construct_to_fol_formula(rdfs_predicate: URIRef, sw_arguments
             return __translate_domain(sw_arguments=sw_arguments, rdf_graph=rdf_graph, variables=variables)
         case RDFS.range:
             return __translate_range(sw_arguments=sw_arguments, rdf_graph=rdf_graph, variables=variables)
-    return None
 
-
+    
 def __translate_subclassof(sw_arguments: list, variables: list, rdf_graph: Graph) -> Formula:
     if sw_arguments[0] in FormulaOriginRegistry.sw_to_fol_map:
         argument1 = FormulaOriginRegistry.sw_to_fol_map[sw_arguments[0]]
@@ -31,7 +32,8 @@ def __translate_subclassof(sw_arguments: list, variables: list, rdf_graph: Graph
     else:
         argument2 = get_subformula_from_node(node=sw_arguments[1], rdf_graph=rdf_graph, variables=variables)
     if not argument1 or not argument2:
-        return None
+        logging.warning(msg='Cannot process rdfs subclass relation between: ' + '|'.join([sw_arguments[0], sw_arguments[1]]))
+        return
     formula = \
         QuantifyingFormula(
             quantified_formula=Implication(arguments=[argument1, argument2]),
@@ -42,8 +44,17 @@ def __translate_subclassof(sw_arguments: list, variables: list, rdf_graph: Graph
 
 
 def __translate_subpropertyof(sw_arguments: list, variables: list, rdf_graph: Graph) -> Formula:
-    argument1 = get_subformula_from_node(node=sw_arguments[0], rdf_graph=rdf_graph, variables=variables)
-    argument2 = get_subformula_from_node(node=sw_arguments[1], rdf_graph=rdf_graph, variables=variables)
+    if sw_arguments[0] in FormulaOriginRegistry.sw_to_fol_map:
+        argument1 = FormulaOriginRegistry.sw_to_fol_map[sw_arguments[0]]
+    else:
+        argument1 = get_subformula_from_node(node=sw_arguments[0], rdf_graph=rdf_graph, variables=variables)
+    if sw_arguments[1] in FormulaOriginRegistry.sw_to_fol_map:
+        argument2 = FormulaOriginRegistry.sw_to_fol_map[sw_arguments[1]]
+    else:
+        argument2 = get_subformula_from_node(node=sw_arguments[1], rdf_graph=rdf_graph, variables=variables)
+    if not argument1 or not argument2:
+        logging.warning(msg='Cannot process rdfs subproperty relation between: ' + '|'.join([sw_arguments[0], sw_arguments[1]]))
+        return
     formula = \
         QuantifyingFormula(
             quantified_formula=Implication(arguments=[argument1, argument2]),
@@ -87,7 +98,8 @@ def __translate_range(sw_arguments: list, variables: list, rdf_graph: Graph) -> 
 def __adapt_variable_in_formula(formula: Formula, new_variable: Variable) -> Formula:
     free_variables_in_formula = formula.free_variables
     if not len(free_variables_in_formula) == 1:
-        return None
+        logging.warning(msg='Cannot adapt variable' + str(new_variable) + ' in ' + str(formula))
+        return
     free_variable_in_formula = list(free_variables_in_formula)[0]
     formula_copy = formula.copy()
     formula_copy.replace_free_variable(old_variable=free_variable_in_formula, new_variable=new_variable)

@@ -10,6 +10,7 @@ fibo = Graph()
 fibo.parse('../resources/fibo/fibo.ttl')
 
 translate_owl_ontology_to_fol_theory(owl_ontology=fibo)
+# compare_owl_to_fol(owl_ontology=fibo)
 
 with open(file='fibo_axioms.tptp', mode='w') as file:
     for formula in Formula.registry:

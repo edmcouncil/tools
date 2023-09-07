@@ -1,8 +1,12 @@
+import logging
+
 from rdflib import Graph
 
 from logic.fol_logic.objects.variable import Variable
 from logic.owl_to_fol.owl_to_fol_preparer import populate_default_predicates, import_default_sw_ontologies
 from logic.owl_to_fol.translators.formula_origin_registry import FormulaOriginRegistry
+from logic.owl_to_fol.translators.triple_translators.sw_to_fol_translation_filterers import \
+    is_triple_out_of_scope_for_direct_translation
 from logic.owl_to_fol.translators.triple_translators.sw_triple_to_fol_formula_translator import \
     translate_sw_triple_to_fol_formula
 from logic.owl_to_fol.translators.triple_translators.sw_triple_to_fol_subformula_translator import \
@@ -22,4 +26,15 @@ def translate_owl_ontology_to_fol_theory(owl_ontology: Graph):
         if sw_triple not in FormulaOriginRegistry.parsed_sw_triples:
             Variable.clear_used_variable_letters()
             variables = [Variable.get_next_variable(),Variable.get_next_variable()]
-            translate_sw_triple_to_fol_formula(sw_triple=sw_triple, rdf_graph=owl_ontology, variables=variables)
+            formula = translate_sw_triple_to_fol_formula(sw_triple=sw_triple, rdf_graph=owl_ontology, variables=variables)
+            if formula:
+                FormulaOriginRegistry.parsed_sw_triples.add(sw_triple)
+                
+                
+def compare_owl_to_fol(owl_ontology: Graph):
+    for sw_triple in owl_ontology:
+        if not sw_triple in FormulaOriginRegistry.parsed_sw_triples:
+            if not is_triple_out_of_scope_for_direct_translation(sw_triple=sw_triple, rdf_graph=owl_ontology):
+                logging.warning(msg='Inscope triple ' + '|'.join(sw_triple) + ' was not parsed.')
+            
+    

@@ -17,6 +17,9 @@ from logic.owl_to_fol.translators.translator_helpers import get_fol_symbol_for_o
 
 
 def generate_fol_from_owl_restriction(owl_restriction: Node, rdf_graph: Graph, variables: list) -> Formula:
+    formula = None
+    restricting_node = None
+    
     owl_properties = list(rdf_graph.objects(subject=owl_restriction, predicate=OWL.onProperty))
     owl_property = owl_properties[0]
     owl_someValuesFrom = list(rdf_graph.objects(subject=owl_restriction, predicate=OWL.someValuesFrom))
@@ -48,7 +51,6 @@ def generate_fol_from_owl_restriction(owl_restriction: Node, rdf_graph: Graph, v
                     quantified_formula=Conjunction(arguments=[restricting_relation_formula, restricting_class_formula]),
                     quantifier=Quantifier.EXISTENTIAL,
                     variables=[Variable(letter=restricted_variable)])
-            return formula
         
     if len(owl_allValuesFrom) > 0:
         restricting_node = owl_allValuesFrom[0]
@@ -59,10 +61,7 @@ def generate_fol_from_owl_restriction(owl_restriction: Node, rdf_graph: Graph, v
                     quantified_formula=Implication(arguments=[restricting_relation_formula, restricting_class_formula]),
                     quantifier=Quantifier.UNIVERSAL,
                     variables=[Variable(letter=restricted_variable)])
-            return formula
 
-    formula = None
-    restricting_node = None
     if len(owl_onClass) > 0:
         restricting_node = owl_onClass[0]
     if len(owl_onDataRange) > 0:
@@ -137,7 +136,7 @@ def generate_fol_from_owl_restriction(owl_restriction: Node, rdf_graph: Graph, v
     if formula:
         return formula
     
-    logging.warning(msg='Cannot get formula from a restriction')
+    logging.warning(msg='Cannot get formula from restriction ' + str(owl_restriction.skolemize()))
 
 
 def __generate_fol_from_owl_min_qualified_restriction(

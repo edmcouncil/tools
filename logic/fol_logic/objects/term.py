@@ -1,5 +1,3 @@
-from typing import Union
-
 from logic.fol_logic.objects.symbol import Symbol
 
 
