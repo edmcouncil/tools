@@ -1,21 +1,23 @@
 import logging
 
-from rdflib import URIRef, Graph, RDF, OWL, RDFS, BNode, XSD
+from rdflib import URIRef, Graph, RDF, OWL, RDFS, BNode, XSD, Literal
 from rdflib.term import Node
 
 from logic.fol_logic.objects.atomic_formula import AtomicFormula
+from logic.fol_logic.objects.constant_term import ConstantTerm
 from logic.fol_logic.objects.formula import Formula
 from logic.fol_logic.objects.predicate import Predicate
 from logic.fol_logic.objects.symbol import Symbol
 from logic.fol_logic.objects.term import Term
+from logic.owl_to_fol.translators.translator_maps import SW_TO_PYTHON_DATATYPE_MAP
 
 
 def get_subformula_from_uri(uri: URIRef, owl_ontology: Graph, variables: list) -> Formula:
-    if __can_uri_be_cast_to_unary_predicate(uri=uri, owl_ontology=owl_ontology):
+    if __can_uri_be_cast_to_unary_predicate(uri=uri, rdf_graph=owl_ontology):
         if uri in Predicate.registry:
             predicate = Predicate.registry[uri]
         else:
-            predicate = Predicate(origin=uri, arity=1)
+            predicate = Predicate(origin_value=uri, arity=1)
         return \
             AtomicFormula(predicate=predicate, arguments=variables[:1])
     
@@ -23,7 +25,7 @@ def get_subformula_from_uri(uri: URIRef, owl_ontology: Graph, variables: list) -
         if uri in Predicate.registry:
             predicate = Predicate.registry[uri]
         else:
-            predicate = Predicate(origin=uri, arity=2)
+            predicate = Predicate(origin_value=uri, arity=2)
         return \
             AtomicFormula(predicate=predicate, arguments=variables)
     
@@ -31,35 +33,36 @@ def get_subformula_from_uri(uri: URIRef, owl_ontology: Graph, variables: list) -
         if uri in Term.registry:
             term = Term.registry[uri]
         else:
-            term = Term(origin=uri)
+            term = Term(origin_value=uri)
         return term
     
     logging.warning(msg='Cannot get formula from ' + str(uri))
 
 
-def get_fol_symbol_for_owl_node(node: Node, rdf_graph: Graph, arity=1) -> Symbol:
+def get_fol_symbol_for_owl_node(node: URIRef, rdf_graph: Graph, arity=1) -> Symbol:
     if (node, RDF.type, OWL.NamedIndividual) in rdf_graph or (node, RDF.type, RDFS.Literal) in rdf_graph:
-        if node in Term.registry:
-            return Term.registry[node]
+        if node in ConstantTerm.registry:
+            return ConstantTerm.registry[node]
         else:
-            return Term(origin=node)
+            return ConstantTerm(origin_value=node)
         
-    if (node, RDF.type, OWL.Class) in rdf_graph:
+    if __can_uri_be_cast_to_unary_predicate(uri=node, rdf_graph=rdf_graph) or __can_uri_be_cast_to_binary_predicate(uri=node, owl_ontology=rdf_graph):
         if node in Predicate.registry:
             return Predicate.registry[node]
         else:
-            return Predicate(origin=node, arity=arity)
+            return Predicate(origin_value=node, arity=arity)
     
-    if len(set(rdf_graph.objects(subject=node, predicate=RDF.type))) == 0:
-        if node in Term.registry:
-            return Term.registry[node]
+    if isinstance(node, Literal):
+        if node in ConstantTerm.registry:
+            return ConstantTerm.registry[node]
         else:
-            return Term(origin=node)
-    
-    if node in Predicate.registry:
-        return Predicate.registry[node]
-    else:
-        return Predicate(origin=node, arity=arity)
+            if node.datatype in SW_TO_PYTHON_DATATYPE_MAP:
+                origin_value = node.value
+                origin_type = SW_TO_PYTHON_DATATYPE_MAP[node.datatype]
+            else:
+                origin_value = str(node.value)
+                origin_type = str
+            return ConstantTerm(origin_value=origin_value, origin_type=origin_type)
 
 
 def __can_uri_be_cast_to_binary_predicate(uri: Node, owl_ontology: Graph) -> bool:
@@ -72,36 +75,24 @@ def __can_uri_be_cast_to_binary_predicate(uri: Node, owl_ontology: Graph) -> boo
     return False
 
 
-def __can_uri_be_cast_to_unary_predicate(uri: URIRef, owl_ontology: Graph) -> bool:
+def __can_uri_be_cast_to_unary_predicate(uri: URIRef, rdf_graph: Graph) -> bool:
     if uri in XSD:
         return True
-    
-    if (uri, RDF.type, RDFS.Datatype) in owl_ontology:
+    if (uri, RDF.type, RDFS.Datatype) in rdf_graph:
         return True
-    if (uri, RDF.type, RDFS.Class) in owl_ontology:
+    if (uri, RDF.type, RDFS.Class) in rdf_graph:
         return True
-    if (uri, RDF.type, OWL.Class) in owl_ontology:
+    if (uri, RDF.type, OWL.Class) in rdf_graph:
         return True
-    if (uri, RDF.type, OWL.DataRange) in owl_ontology:
-        return True
-    if (uri, RDF.type, OWL.Restriction) in owl_ontology:
-        return True
-    if (uri, RDF.type, OWL.AllDisjointClasses) in owl_ontology:
-        return True
-    
-    if uri == RDFS.Literal:
+    if (uri, RDF.type, OWL.DataRange) in rdf_graph:
         return True
     if uri == OWL.rational:
         return True
     if uri == OWL.real:
         return True
-    if uri == OWL.NamedIndividual:
-        return True
     if uri == OWL.Thing:
         return True
-    
-    return \
-        False
+    return False
 
 
 

@@ -3,7 +3,7 @@ from rdflib import Graph, RDF, OWL
 from logic.fol_logic.objects.atomic_formula import AtomicFormula
 from logic.fol_logic.objects.identity_formula import IdentityFormula
 from logic.fol_logic.objects.negation import Negation
-from logic.owl_to_fol.translators.sw_node_to_fol_translator import get_subformula_from_node
+from logic.owl_to_fol.translators.node_translators.sw_node_to_fol_translator import get_subformula_from_node
 from logic.owl_to_fol.translators.translator_helpers import get_fol_symbol_for_owl_node
 
 

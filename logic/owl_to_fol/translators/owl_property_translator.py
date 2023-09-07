@@ -9,13 +9,13 @@ from logic.fol_logic.objects.implication import Implication
 from logic.fol_logic.objects.negation import Negation
 from logic.fol_logic.objects.quantifying_formula import QuantifyingFormula, Quantifier
 from logic.fol_logic.objects.variable import Variable
-from logic.owl_to_fol.translators.sw_node_to_fol_translator import get_subformula_from_node
+from logic.owl_to_fol.translators.node_translators.sw_node_to_fol_translator import get_subformula_from_node
 
 
 def translate_rdf_triple_about_property_to_fol(rdf_triple: tuple, owl_ontology: Graph):
-    first_variable = Variable(letter=Variable.get_next_variable_letter())
-    second_variable = Variable(letter=Variable.get_next_variable_letter())
-    third_variable = Variable(letter=Variable.get_next_variable_letter())
+    first_variable = Variable.get_next_variable()
+    second_variable = Variable.get_next_variable()
+    third_variable = Variable.get_next_variable()
     if rdf_triple[1] == RDF.type:
         if rdf_triple[2] == OWL.TransitiveProperty:
             property_formula_1 = get_subformula_from_node(node=rdf_triple[0], rdf_graph=owl_ontology, variables=[first_variable, second_variable])

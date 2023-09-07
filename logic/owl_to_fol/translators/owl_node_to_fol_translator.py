@@ -7,7 +7,7 @@ from logic.fol_logic.objects.identity_formula import IdentityFormula
 from logic.fol_logic.objects.negation import Negation
 from logic.fol_logic.objects.quantifying_formula import QuantifyingFormula, Quantifier
 from logic.fol_logic.objects.variable import Variable
-from logic.owl_to_fol.translators.sw_node_to_fol_translator import get_fol_formulae_from_rdf_list
+from logic.owl_to_fol.translators.node_translators.sw_node_to_fol_translator import get_fol_formulae_from_rdf_list
 
 
 def __get_subformula_from_property_chain(bnode: BNode, owl_ontology: Graph, variables: list) -> Formula:
@@ -15,7 +15,7 @@ def __get_subformula_from_property_chain(bnode: BNode, owl_ontology: Graph, vari
     chained_variables = list()
     formulas = get_fol_formulae_from_rdf_list(rdf_list_object=bnode, rdf_graph=owl_ontology, fol_formulae=list(), variables=variables)
     first_formula = formulas[0]
-    initial_variable_in_chain = Variable(letter=Variable.get_next_variable_letter())
+    initial_variable_in_chain = Variable.get_next_variable()
     chained_formula = first_formula.replace_argument(argument=initial_variable_in_chain, index=1)
     chained_formulas.append(chained_formula)
     chained_variables.append(initial_variable_in_chain)
@@ -23,7 +23,7 @@ def __get_subformula_from_property_chain(bnode: BNode, owl_ontology: Graph, vari
     for index in range(1, len(formulas) - 1):
         formula = formulas[index]
         first_variable = chained_variables[-1]
-        second_variable = Variable(letter=Variable.get_next_variable_letter())
+        second_variable = Variable.get_next_variable()
         chained_formula = formula.replace_argument(argument=first_variable, index=0)
         chained_formula = chained_formula.replace_argument(argument=second_variable, index=1)
         chained_formulas.append(chained_formula)
