@@ -18,6 +18,31 @@ from logic.owl_to_fol.translators.node_translators.sw_node_to_fol_translator imp
     get_fol_formulae_from_rdf_list
 
 
+OWL_CONSTRUCTS_IGNORED = \
+    {
+        OWL.real,
+        OWL.withRestrictions,
+        OWL.onDataRange,
+        OWL.onProperty,
+        OWL.onProperties,
+        OWL.onClass,
+        OWL.qualifiedCardinality,
+        OWL.maxCardinality,
+        OWL.minCardinality,
+        OWL.cardinality,
+        OWL.minQualifiedCardinality,
+        OWL.maxQualifiedCardinality,
+        OWL.rational,
+        OWL.oneOf,
+        OWL.onDatatype,
+        OWL.complementOf,
+        OWL.unionOf,
+        OWL.intersectionOf,
+        OWL.hasValue,
+        OWL.someValuesFrom,
+        OWL.allValuesFrom
+    }
+
 def translate_owl_construct_to_fol_formula(owl_predicate: URIRef, sw_arguments: list, rdf_graph: Graph, variables: list) -> Formula:
     match owl_predicate:
         case OWL.disjointUnionOf:
@@ -36,6 +61,9 @@ def translate_owl_construct_to_fol_formula(owl_predicate: URIRef, sw_arguments: 
             return __translate_differentFrom(sw_arguments=sw_arguments, rdf_graph=rdf_graph, variables=variables)
         case OWL.propertyChainAxiom:
             return __translate_propertyChainAxiom(sw_arguments=sw_arguments, rdf_graph=rdf_graph, variables=variables)
+    
+    if not owl_predicate in OWL_CONSTRUCTS_IGNORED:
+        logging.warning(msg='Cannot process OWL triple ' + '|'.join([sw_arguments[0], owl_predicate, sw_arguments[1]]))
   
 
 def __translate_inverse_of(sw_arguments: list, rdf_graph: Graph, variables: list) -> Formula:

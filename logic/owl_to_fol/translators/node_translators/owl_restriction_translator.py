@@ -13,7 +13,7 @@ from logic.fol_logic.objects.implication import Implication
 from logic.fol_logic.objects.negation import Negation
 from logic.fol_logic.objects.quantifying_formula import QuantifyingFormula, Quantifier
 from logic.fol_logic.objects.variable import Variable
-from logic.owl_to_fol.translators.translator_helpers import get_fol_symbol_for_owl_node
+from logic.owl_to_fol.translators.translator_getters import get_fol_symbol_for_owl_node
 
 
 def generate_fol_from_owl_restriction(owl_restriction: Node, rdf_graph: Graph, variables: list) -> Formula:
@@ -129,8 +129,8 @@ def generate_fol_from_owl_restriction(owl_restriction: Node, rdf_graph: Graph, v
         formula = Conjunction(arguments=[max_formula, min_formula])
         
     if len(owl_hasValue) > 0:
-        restricting_relation_symbol = get_fol_symbol_for_owl_node(node=owl_property, rdf_graph=rdf_graph, arity=2)
-        restricting_individual_symbol = get_fol_symbol_for_owl_node(node=owl_hasValue[0], rdf_graph=rdf_graph)
+        restricting_relation_symbol = get_fol_symbol_for_owl_node(identifier=owl_property, rdf_graph=rdf_graph, arity=2)
+        restricting_individual_symbol = get_fol_symbol_for_owl_node(identifier=owl_hasValue[0], rdf_graph=rdf_graph)
         formula = AtomicFormula(predicate=restricting_relation_symbol, arguments=[variables[0], restricting_individual_symbol])
     
     if formula:

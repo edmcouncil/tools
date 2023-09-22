@@ -66,10 +66,10 @@ class Symbol:
         return self.value
     
     def __eq__(self, other):
+        if not isinstance(other, Symbol):
+            return False
         if isinstance(other, Symbol):
-            return self.value == other.value
-        if isinstance(other, str):
-            return self.value == other
+            return self.value == other.value and self.origin_type == self.origin_type
     
     def __hash__(self):
-        return self.value.__hash__()
+        return (str(self.value)+str(self.origin_type)).__hash__()

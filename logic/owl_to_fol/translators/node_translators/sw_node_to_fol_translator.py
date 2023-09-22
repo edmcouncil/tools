@@ -16,7 +16,7 @@ from logic.owl_to_fol.translators.formula_origin_registry import FormulaOriginRe
 from logic.owl_to_fol.translators.node_translators.owl_restriction_translator import generate_fol_from_owl_restriction
 from logic.owl_to_fol.translators.node_translators.rdfs_datatype_restriction_translator import \
     translate_datatype_description
-from logic.owl_to_fol.translators.translator_helpers import __can_uri_be_cast_to_unary_predicate, \
+from logic.owl_to_fol.translators.translator_getters import __can_uri_be_cast_to_unary_predicate, \
     __can_uri_be_cast_to_binary_predicate, __can_uri_be_cast_to_term, get_fol_symbol_for_owl_node
 
 
@@ -91,7 +91,7 @@ def get_fol_terms_from_rdf_list(rdf_list_object: Node, rdf_graph: Graph, fol_ter
     first_items_in_rdf_list = list(rdf_graph.objects(subject=rdf_list_object, predicate=RDF.first))
     if len(first_items_in_rdf_list) == 0:
         return fol_terms
-    fol_term = get_fol_symbol_for_owl_node(node=first_items_in_rdf_list[0], rdf_graph=rdf_graph)
+    fol_term = get_fol_symbol_for_owl_node(identifier=first_items_in_rdf_list[0], rdf_graph=rdf_graph)
     fol_terms.append(fol_term)
     rest_items_in_rdf_list = list(rdf_graph.objects(subject=rdf_list_object, predicate=RDF.rest))
     fol_terms = get_fol_terms_from_rdf_list(rdf_list_object=rest_items_in_rdf_list[0], rdf_graph=rdf_graph, fol_terms=fol_terms)
