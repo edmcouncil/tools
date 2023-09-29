@@ -23,6 +23,7 @@ def get_local_ontology_map(ontology_catalog_path: str):
     except Exception as exception:
         print('Exception occurred while getting local ontology map', str(exception))
         sys.exit(-1)
+    return local_ontology_map
 
 
 def collect_ontologies(
