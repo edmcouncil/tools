@@ -17,3 +17,4 @@ pyjsonviewer
 gitpython
 PyYAML
 xlsxwriter
+pyspellchecker
