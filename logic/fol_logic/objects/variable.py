@@ -6,10 +6,25 @@ DEFAULT_LETTER_3 = 'Z'
 
 DEFAULT_LETTERS = [DEFAULT_LETTER_1, DEFAULT_LETTER_2, DEFAULT_LETTER_3]
 
+
 class Variable(Term):
     registry = dict()
     used_variable_letters = list()
     last_user_variable_index = 0
+    
+    def __repr__(self):
+        return self.value
+    
+    def __init__(self, letter=DEFAULT_LETTER_1):
+        super().__init__(origin_value=letter)
+        
+    def __eq__(self, other):
+        if not isinstance(other, Variable):
+            return False
+        return self.value == other.value
+    
+    def __hash__(self):
+        return self.value.__hash__()
     
     @staticmethod
     def get_next_variable_letter():
@@ -22,20 +37,16 @@ class Variable(Term):
         return next_variable_letter
     
     @staticmethod
+    def get_next_variable():
+        return Variable(letter=Variable.get_next_variable_letter())
+    
+    @staticmethod
     def clear_used_variable_letters():
         Variable.used_variable_letters.clear()
         Variable.last_user_variable_index = 0
-    
-    
-    def __init__(self, letter=DEFAULT_LETTER_1):
-        super().__init__(origin=letter)
-        if letter not in Variable.used_variable_letters:
-            Variable.used_variable_letters.append(letter)
-            Variable.last_user_variable_index += 1
 
     def to_tptp(self):
-        return self.letter.upper()
+        return self.value.upper()
     
-    def __repr__(self):
-        return self.letter
+    
     

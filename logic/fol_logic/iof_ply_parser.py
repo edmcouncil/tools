@@ -121,19 +121,19 @@ def p_variable_seq(p):
             variable_seq.append(p[2])
         parsed_variables = list()
         for variable in variable_seq:
-            parsed_variables.append(Term(origin=variable))
+            parsed_variables.append(Term(origin_value=variable))
             
         p[0] = parsed_variables
 
     else:
-        p[0] = [Term(origin=p[1])]
+        p[0] = [Term(origin_value=p[1])]
 
 
 def p_atom(p):
     """
     atom : PREDICATE LPAREN variable_seq RPAREN
     """
-    predicate = Predicate(origin=p[1],arity=len(p[3]))
+    predicate = Predicate(origin_value=p[1], arity=len(p[3]))
     parsed_arguments = p[3]
     p[0] = AtomicFormula(predicate=predicate, arguments=parsed_arguments)
 

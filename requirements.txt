@@ -13,8 +13,8 @@ ply
 pyshacl
 owlready2
 openai
-Github
 pyjsonviewer
 gitpython
 PyYAML
 xlsxwriter
+pyspellchecker
