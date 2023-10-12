@@ -61,4 +61,4 @@ def __get_phrases_from_annotation_property(ontology: Graph, annotation_property:
     return phrases
 
 
-check_ontology_annotations('../resources/AboutFIBODevMerged.ttl')
+check_ontology_annotations('https://spec.pistoiaalliance.org/idmp/ontology/master/latest/QuickIDMPDev.ttl')

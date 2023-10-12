@@ -15,9 +15,7 @@ def analyse_definitions_in_ontology(ontology: Graph) -> dict:
     
     
 def __get_owl_class_definitional_consistency(owl_class: URIRef, ontology: Graph) -> float:
-    s=owl_class.defrag()
     owl_class_definitional_consistency = 0.0
-    owl_class_label = ontology.label(subject=owl_class)
     owl_class_definitions = list(ontology.objects(subject=owl_class, predicate=SKOS.definition))
     if len(owl_class_definitions) == 0:
         return 0.0
@@ -42,7 +40,10 @@ def __get_owl_class_definitional_consistency(owl_class: URIRef, ontology: Graph)
     
     
 def __get_owl_named_resource_definition_overlap(definition: str, named_resource: URIRef, ontology: Graph) -> float:
-    named_resource_label = ontology.label(subject=named_resource)
+    named_resource_labels = list(ontology.objects(subject=named_resource, predicate=RDFS.label))
+    if len(named_resource_labels) == 0:
+        return 0.0
+    named_resource_label = named_resource_labels[0].value
     if named_resource_label in definition:
         return len(named_resource_label.replace(' ', ''))/len(definition.replace(' ', ''))
     else:
@@ -97,12 +98,12 @@ def __get_owl_restriction_definition_overlap(definition: str, owl_restriction: B
     return owl_restriction_definition_overlap
     
 
-fibo = Graph()
-fibo.parse('../resources/AboutFIBODevMerged.ttl')
-definition_analysis = analyse_definitions_in_ontology(ontology=fibo)
-for owl_class, overlap in definition_analysis.items():
-    if overlap == 0:
-        fibo = fibo.remove((owl_class, None, None))
-        fibo = fibo.remove((None, None, owl_class))
-fibo.serialize('../resources/AboutFIBODevMerged.ttl')
-fibo.close()
+idmp = Graph()
+idmp.parse('https://spec.pistoiaalliance.org/idmp/ontology/master/latest/QuickIDMPDev.ttl')
+definition_analysis = analyse_definitions_in_ontology(ontology=idmp)
+# for owl_class, overlap in definition_analysis.items():
+#     if overlap == 0:
+#         fibo = fibo.remove((owl_class, None, None))
+#         fibo = fibo.remove((None, None, owl_class))
+# fibo.serialize('../resources/AboutFIBODevMerged.ttl')
+# fibo.close()
