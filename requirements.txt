@@ -18,3 +18,5 @@ gitpython
 PyYAML
 xlsxwriter
 pyspellchecker
+pdf2docx
+pymupdf
