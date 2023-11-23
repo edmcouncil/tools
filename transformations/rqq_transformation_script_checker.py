@@ -5,7 +5,7 @@ from rdflib import Graph, URIRef
 
 IRI_BRACKET_PATTERN = re.compile(pattern='<.+>')
 PREFIX_PATTERN = re.compile(pattern='([a-z]+-[a-z]+)\s*:(\s*<.+>)')
-IRI_PREFIX_PATTERN = re.compile(pattern='[a-z]+-[a-z]+\s*:\s*\w+')
+IRI_PREFIX_PATTERN = re.compile(pattern='[a-z]+-[a-z]+\s*:\s*[\w\-]+')
 
 def __get_simple_iris_from_rqg_transformation_script(rqg_transformation_script: str) -> set:
     iris_in_brackets = set(IRI_BRACKET_PATTERN.findall(string=rqg_transformation_script))
@@ -51,3 +51,7 @@ def check_rqg_transformation_scripts_in_folder(rqg_transformation_scripts_folder
                 if URIRef(iri) not in ontology_resources:
                     print(rqg_file_path, iri)
     
+check_rqg_transformation_scripts_in_folder(
+    rqg_transformation_scripts_folder='/Users/pawel.garbacz/idmp/etc/transformation',
+    ontology_location='/Users/pawel.garbacz/idmp/AboutIDMPDev-ReferenceIndividuals.ttl',
+    resource_filter='spec.pistoiaalliance.org')
