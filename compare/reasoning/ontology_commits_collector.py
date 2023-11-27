@@ -31,9 +31,12 @@ def collect_consolidated_ontology_commits(
             ontology_path = os.path.join(repo_folder, 'AboutIDMPDev-ReferenceIndividuals.rdf')
             if os.path.isfile(ontology_path):
                 catalog_file_path = os.path.join(repo_folder, 'catalog-v001.xml')
-                merged_ontology_at_commit = merge(ontology_folder=repo_folder, ontology_file_path=ontology_path, catalog_file_path=catalog_file_path)
-                merged_ontology_path = os.path.join(consolidated_ontologies_folder,  commit_id + '.ttl')
-                merged_ontology_at_commit.serialize(merged_ontology_path)
+                try:
+                    merged_ontology_at_commit = merge(ontology_folder=repo_folder, ontology_file_path=ontology_path, catalog_file_path=catalog_file_path)
+                    merged_ontology_path = os.path.join(consolidated_ontologies_folder,  commit_id + '.ttl')
+                    merged_ontology_at_commit.serialize(merged_ontology_path)
+                except Exception as error:
+                    print(commit_id, error)
     with open(os.path.join(consolidated_ontologies_folder, 'ontologies_register.json'), 'w') as file:
         json.dump(consolidated_ontologies_register, file)
     git_repo.close()
