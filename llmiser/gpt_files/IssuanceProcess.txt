@@ -1,0 +1,26 @@
+
+Allotment information is defined as information about the allotment of quantities of the issue to different subscribers. This relates a single instrument allotment against the subscription amounts allotted to each Subscriber.. Allotment information is a kind of traded instrument issuance process information. It comprises some subscription closing information. It describes allotment of some security.
+ Announcement is a kind of issuance process activity. It offering requestor some potential issuer.
+Competitive sale method is defined as no definition. Competitive sale method is a kind of security offering sale method.
+ Issuance process activity is a kind of occurrence kind.
+Issuance programme is defined as a series of issuances over time.. Issuance programme is a kind of Thing. It comprises some securities offering.
+Issue subscription information is defined as information relating to the subscription of the issue.. Issue subscription information is a kind of traded instrument issuance process information.
+Issued security issue information is defined as fIBIM: "Elements relating to issue preparation/bringing to market (also known as primary market or Initial Public Offering (IPO) issuance) through to issue date."  Information about the Issuance of a Security, which is maintained throughout the life of the Security.. Issued security issue information is a kind of document. It has partially paid issuance schedule only payment schedule. It is about some security.
+Negotiated sale method is defined as no definition. Negotiated sale method is a kind of security offering sale method.
+Offering is defined as the process step of offering a security for issue. This is the making available of a new securities issue through an underwriting.. Offering is a kind of issuance process activity. It gives rise to some issued security issue information. It has distribution type some security offering distribution method. It has sale method some security offering sale method. It required to make eligible some offering document.
+ Potential issuer is a kind of securities issuance process actor. It is potential issuer some securities issuance process.
+Potential underwriter is defined as the entity which will become the underwriter for an issue. Term origin:MBS PoC Reviews. Potential underwriter is a kind of securities issuance process actor.
+Primary identifier issuer is defined as the party which formally issues the primary security identifier to the security. Term origin:MBS PoC Reviews. Primary identifier issuer is a kind of contract third party.
+Primary security offering distribution is defined as the original sale of a company's securities, in which the proceeds from the sale are received directly by the company.. Primary security offering distribution is a kind of security offering distribution method.
+Registration information is defined as information relating to the registration of a registered security.. Registration information is a kind of traded instrument issuance process information.
+Secondary security offering distribution is defined as an Offering of a security which has been previously issued.. Secondary security offering distribution is a kind of security offering distribution method.
+Securities issuance process is defined as the process by which a financial security is issued.. Securities issuance process is a kind of Thing. It has issuance guarantor some security issuance guarantor. It has potential issuer some potential issuer. It produces some traded instrument issuance process information. It subscriber some subscriber.
+ Securities issuance process actor is a kind of agent-in-role.
+ Security issuance guarantor is a kind of securities issuance process actor. It is issuance guarantor some securities issuance process.
+Security offering distribution method is defined as the distribution type of a securities Offering.. Security offering distribution method is a kind of distribution strategy.
+Security offering sale method is defined as method for sale of a new security offering.. Security offering sale method is a kind of sales strategy.
+ Subscriber is a kind of agent-in-role. It subscribes to some securities underwriting issuance process.
+ Subscription closing information is a kind of traded instrument issuance process information. It applies to some subscriber.
+Traded instrument issuance process information is defined as information on one Security issue, arising from the Issuance Process. Note that one Issuance Process (Offering) may relate to more than on Issue, which itself may be the issue of more than one Traded Security.. Traded instrument issuance process information is a kind of document. It is part of some issued security issue information.
+Underwriter takedown is defined as infomation on Takedown quantity of the security handled by the underwriter (that will be brought into DTC).. Underwriter takedown is a kind of underwriting process details. It taken down by some muni issue underwriter. It underwriter takedown shares at most one integer.
+Underwriting process details is defined as information specific to the Underwriting of the Issue.. Underwriting process details is a kind of traded instrument issuance process information.

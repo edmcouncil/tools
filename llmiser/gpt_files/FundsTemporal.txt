@@ -1,0 +1,11 @@
+
+ Accrued fees is a kind of Thing.
+ Accrued income is a kind of Thing.
+ Accrued taxes is a kind of Thing.
+ Fee payable is a kind of Thing.
+ Fund price is a kind of security price.
+ Fund unit performance is a kind of Thing.
+ Funds tax is a kind of Thing. It applies to some investor.
+ Sigma value of holdings is a kind of Thing.
+ Swing is a kind of Thing.
+ Swing price is a kind of fund price.

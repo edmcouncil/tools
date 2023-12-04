@@ -1,0 +1,6 @@
+
+Market transaction is defined as any transaction which defines a supply of some negotiable item in return for some Consideration. The Market Transaction has a Principal and a Counterparty, i.e. it is not symmetrical.. Market transaction is a kind of economic transaction. It consideration some economic resource. It has counterparty some transaction counterparty. It has principal party some transaction principal. It payment terms some market transaction payment terms.
+ Market transaction invoicing terms is a kind of economic contract commitment.
+ Market transaction payment terms is a kind of economic contract commitment. It governs some payment.
+ Transaction counterparty is a kind of counterparty, transaction party.
+ Transaction principal is a kind of contract principal, transaction party. It transacts with some transaction counterparty.

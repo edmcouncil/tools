@@ -1,0 +1,6 @@
+
+Electronic mail address is defined as virtual address that defines an electronic messaging endpoint to which email messages can be delivered, typically via an Simple Mail Transfer Protocol (SMTP) based communications system. Electronic mail address is a kind of virtual address.
+Network location is defined as a virtual location that may be identified by a network address (an identifier for a node or interface). Network location is a kind of virtual location. It is identified by exactly one address.
+Notional place is defined as an abstract place; one of many commonly understood concepts such as domestic, Eurozone etc.. Notional place is a kind of location.
+Telephone number is defined as virtual address that may be assigned to a fixed-line telephone subscriber station connected to a telephone line or to a wireless electronic telephony device, such as a radio telephone or a mobile telephone, or to other devices or services for data transmission via the public switched telephone network (PSTN) or other public and private networks. Telephone number is a kind of virtual address.
+Virtual location is defined as place that is not located in any single physical location; a network location without geographic boundaries. Virtual location is a kind of location.

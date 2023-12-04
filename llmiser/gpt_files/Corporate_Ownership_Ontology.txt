@@ -1,0 +1,5 @@
+
+Beneficial owner is defined as party that enjoys the benefits of ownership (such as receipt of income) of something even though its ownership (title) may be in the name of another party (called a nominee or registered owner). Beneficial owner is a kind of beneficiary, controlling party. It has identity exactly one legally competent natural person. It is beneficial owner of some controlled thing.
+Beneficial ownership is defined as control situation linking something at least one beneficial owner. Beneficial ownership is a kind of control. It has party in control some beneficial owner. It involves controlled thing some controlled thing.
+Shareholder is defined as party that owns shares in and has rights and responsibilities with respect to some asset, provided in exchange for investment. Shareholder has synonyms stockholder -us. Shareholder is a kind of constitutional owner, counterparty.
+Shareholding is defined as financial asset that takes the form of shares considered as a unit. Shareholding is a kind of financial asset. It is held by only shareholder.

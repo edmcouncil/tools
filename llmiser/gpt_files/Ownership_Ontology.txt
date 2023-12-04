@@ -1,0 +1,6 @@
+
+Asset is defined as something of monetary value that is owned or provides benefit to some party. Asset has synonyms economic resource. Asset is a kind of undergoer. It has acquisition date exactly one combined date time. It is asset of some owner. It is owned asset some ownership.
+Intangible asset is defined as identifiable, non-monetary asset that lacks physical substance. Intangible asset has examples Intangible assets may include intellectual property, patents, copyrights, trademarks, rights-of-way (easements), brands, organizational abilities (know-how), and data.. Intangible asset is a kind of asset.
+Owner is defined as party that is legally recognized as having the right to possess, the privilege to use, and ability to transfer any rights or privileges associated with something, as permitted by law. Owner is a kind of actor. It is asset owner some asset. It is owning party some ownership.
+Ownership is defined as situation in which some party holds the legal title to something (explicitly or implicitly) and has the right to transfer that title and/or possession. Ownership is a kind of situation. It has owned asset some asset. It has owning party some owner.
+Tangible asset is defined as asset that is a physical, measurable resource, i.e., one that takes a physical form. Tangible asset is a kind of asset.

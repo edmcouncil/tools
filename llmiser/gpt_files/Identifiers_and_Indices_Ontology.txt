@@ -1,0 +1,5 @@
+
+ CompositeIdentifier is a kind of Thing.
+Index is defined as indirect shortcut derived from and pointing into, a greater volume of values, data, information or knowledge. Index is a kind of reference. It is defined in exactly one indexing scheme. It is index to exactly one Thing.
+Indexing scheme is defined as system for indexing values, data, information, or knowledge. Indexing scheme is a kind of scheme. It defines some index.
+Reassignable identifier is defined as identifier that uniquely identifies something for a given time period, and that may be reused to identify something else at a different point in time. Reassignable identifier has examples ticker symbol, vehicle license number, such as a vanity plate that can be reassigned and moved from one car to another. Reassignable identifier is a kind of identifier. It has assignment termination date at most one combined date time. It has initial assignment date at most one combined date time.

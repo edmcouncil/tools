@@ -1,0 +1,5 @@
+
+Credit o k is defined as not defaulted.. Credit o k is a kind of security credit status.
+In default is defined as the issuer has failed to pay somthing that they are contractually obliged to pay.. In default is a kind of security credit status.
+Security cashflow status is defined as the status of the cashflow due to the holder from the security.. Security cashflow status is a kind of lifecycle status.
+ Security credit status is a kind of lifecycle status. It applies to some security.

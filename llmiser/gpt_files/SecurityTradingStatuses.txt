@@ -1,0 +1,12 @@
+
+Active is defined as security is actively traded. Active is a kind of security trading status.
+Actively trading is defined as security is actively traded on the exchange or trading facility. Actively trading is a kind of exchange security trading status.
+Exchange security trading status is defined as trading status of a listed security on a given trading exchange. Exchange security trading status is a kind of lifecycle status. It classifies some listing.
+ Inactive is a kind of security trading status.
+Issued is defined as the security has been issued into the secondary market.. Issued is a kind of security lifecycle status.
+Security lifecycle status is defined as status of a security within its lifecycle. Security lifecycle status is a kind of lifecycle status. It classifies some security.
+Security trading status is defined as status of the security in terms of whether it is trading or not, and any special considerations relating to trading. Security trading status is a kind of lifecycle status. It classifies some security.
+ Trading halted is a kind of exchange security trading status.
+When distributed is defined as used to refer to a security that trades after the date of issue but before the time at which the certificates are delivered. When distributed is a kind of security lifecycle status.
+When issued is defined as when Issued or Gray Market trading is when a security is traded ahead of the date at which it is to be issued.. When issued is a kind of security lifecycle status.
+Worthless is defined as announcement by the regulator that the security has become worthless.. Worthless is a kind of security lifecycle status.

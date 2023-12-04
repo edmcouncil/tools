@@ -1,0 +1,2 @@
+
+Action group is defined as classifier that differentiates corporate actions based on a GLEIF specific grouping. Action group is a kind of classifier. It classifies some action. It has tag some string.

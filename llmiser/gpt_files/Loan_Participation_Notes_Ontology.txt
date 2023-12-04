@@ -1,0 +1,5 @@
+
+Lead manager is defined as the party that organizes the potential lenders into a syndicate and arranges the details of the or any potential loan. Lead manager is a kind of responsible party.
+Loan participation note facility is defined as a facility formed as part of a LPN which can be drawn down by the borrower.. Loan participation note facility is a kind of sub-facility. It has responsible party some lead manager. It has syndicate member some loan participation note syndicate member.
+ Loan participation note syndicate member is a kind of party in role.
+Syndicated loan participation note is defined as a fixed-income security that permits investors to buy portions of an outstanding loan or package of loans; LPN holders participate, on a pro rata basis, in collecting interest and principal payments. Banks or other financial institutions often enter into loan participation agreements with local businesses, and also offer loan participation notes as a type of short-term investment.. Syndicated loan participation note is a kind of tradable debt instrument. It defines terms for some loan participation note facility. It is issued by some lead manager.

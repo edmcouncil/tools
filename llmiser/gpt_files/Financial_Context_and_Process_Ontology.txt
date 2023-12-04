@@ -1,0 +1,33 @@
+
+Clearing is defined as the process by which securities trades are cleared.. Clearing is a kind of clearing and settlement.
+Clearing and settlement is defined as the business process or service area of securities clearing and settlement.. Clearing and settlement is a kind of financial industry context.
+Financial industry context is defined as the context in which business activites take place within the financial industry, i.e. investment management, wholesale financial markets trading and so on.. Financial industry context is a kind of context.
+ Financial markets regulation is a kind of financial industry context.
+ Investment management is a kind of financial industry context.
+ Market data provision is a kind of pre trade.
+ Portfolio management is a kind of investment management.
+ Pre trade is a kind of investment management.
+ Pretrade quotes is a kind of pre trade.
+ Pretrade reference data provision is a kind of pre trade.
+Primary market is defined as issuance and primary market trading of new Traded Financial Instruments. Primary market is a kind of financial industry context.
+ Primary market closing is a kind of primary market.
+ Primary market indications of interest is a kind of pre trade.
+ Secondary market trading context is a kind of financial industry context.
+ Securities custody is a kind of financial industry context.
+ Securities post trade is a kind of financial industry context.
+ Securities post trade position management is a kind of securities post trade.
+ Securities trade is a kind of financial industry context.
+ Securities trade allocation is a kind of securities post trade.
+ Securities trade capture and validation is a kind of securities post trade.
+ Securities trade confirmation affirmation is a kind of securities post trade.
+ Securities trade date position reporting is a kind of securities trade.
+ Securities trade execution is a kind of securities trade.
+ Securities trade order routing is a kind of securities trade.
+Securities trades matching is defined as matching of trade allegations to identify confirmed trades, on an Over the Counter market in Traded Securities.. Securities trades matching is a kind of securities post trade.
+ Securities trades reporting is a kind of securities post trade.
+ Security retirement is a kind of Thing. It is retirement of some security.
+ Short sale locate is a kind of pre trade.
+ Trade advertisements is a kind of pre trade.
+ Traded security lifecycle is a kind of Thing.
+ Trades reference data provision is a kind of securities trade.
+ When issued trading is a kind of primary market.

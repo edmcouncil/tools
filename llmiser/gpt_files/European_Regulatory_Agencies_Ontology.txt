@@ -1,0 +1,2 @@
+
+Credit Institution Register entry is defined as entry in the Credit Institution Register, a repository of credit institutions collected by the European Banking Authority (EBA) as provided by the various national banking authorities for those institutions that qualify. Credit Institution Register entry is a kind of registry entry. It applies to only credit institution. It comprises some credit institution. It is included in value Credit Institution Register.

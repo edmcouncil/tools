@@ -1,0 +1,3 @@
+
+Reference is defined as concept that stands in for how something may be interpreted/understood in some context. Reference is a kind of Thing.
+Referent is defined as something that another concept stands for, exemplifies, symbolizes, or otherwise mentions. Referent is a kind of Thing.

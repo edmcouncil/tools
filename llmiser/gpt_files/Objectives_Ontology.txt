@@ -1,0 +1,11 @@
+
+Business objective is defined as objective that reflects the strategic goals and direction of a business within a time frame and available resources. Business objective is a kind of objective.
+Business strategy is defined as strategy for achieving a specific business goal, objective, solution or outcome. Business strategy is a kind of strategy. It has objective some business objective.
+Distribution strategy is defined as strategy for making a product or service available, or for distributing funds, such as in the form of a dividend or coupon. Distribution strategy is a kind of strategy.
+Financial objective is defined as objective that reflects the strategic financial goals and direction of a party within a time frame and available resources. Financial objective is a kind of objective.
+Goal is defined as desired result that a party envisions, plans, and to which it commits, in order to achieve a desired state. Goal is a kind of Thing.
+Investment objective is defined as financial objective used by an investor to determine whether or not a given potential investment is appropriate for themselves or on behalf of another party. Investment objective has examples An investor whose objective is capital growth might choose to invest in more aggressive, growth-oriented mutual funds and/or stocks, over income-generating mutual funds and/or bonds.. Investment objective is a kind of financial objective.
+Objective is defined as short-term, quantitative, measurable result that a party seeks to attain in order to achieve its long-term goals. Objective is a kind of Thing. It has date period some date period.
+Program is defined as coordinated set of activities designed to obtain benefits not available from managing them individually. Program is a kind of Thing. It has goal at least zero goal. It has objective at least zero objective.
+Sales strategy is defined as strategy for selling something, including allocating resources to the sales process, reducing costs, and optimizing revenues. Sales strategy is a kind of business strategy.
+Strategy is defined as plan or method for achieving a specific goal, objective, solution or outcome. Strategy is a kind of Thing. It has goal at least zero goal. It has objective at least zero objective.

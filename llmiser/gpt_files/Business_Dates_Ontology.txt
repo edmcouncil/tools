@@ -1,0 +1,9 @@
+
+Business day adjustment is defined as convention that specifies what happens when a date falls on a day that is a weekend or a holiday in one or more business centers. Business day adjustment is a kind of convention. It has business center some business center. It has business day convention exactly one business day convention.
+Business day convention is defined as convention that enumerates the possible ways to handle a date that falls on a weekend or holiday. Business day convention is a kind of convention.
+Business recurrence interval is defined as recurrence interval that is defined per a specific convention that determines how recurring days should be handled. Business recurrence interval is a kind of recurrence interval. It has business recurrence interval convention exactly one business recurrence interval convention.
+Business recurrence interval convention is defined as convention that specifies how recurring days should be handled, such as the end of the month, a particular day of the month, a day of the week, or more specifically, a t-bill auction date. Business recurrence interval convention is a kind of convention.
+Convention is defined as widely accepted or established way of doing 'something' within some community of practice. Convention is a kind of Thing.
+Day of month is defined as specific, recurring day of the month. Day of month is a kind of business recurrence interval. It has ordinal number exactly one nonNegativeInteger.
+Day of the week is defined as specific, recurring day of the week. Day of the week is a kind of business recurrence interval.
+End of the month is defined as the last day of a calendar month, irrespective of the length of the calendar month. End of the month is a kind of business recurrence interval.

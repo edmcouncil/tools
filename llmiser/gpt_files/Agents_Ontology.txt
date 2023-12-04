@@ -1,0 +1,4 @@
+
+ Name is a kind of Thing.
+Automated system is defined as system that reduces or eliminates the need for human involvement in order to complete a task. Automated system is a kind of autonomous agent.
+Autonomous agent is defined as something autonomous that can adapt to and interact with its environment. Autonomous agent is a kind of Thing. It has name at least zero name. It has textual name at least zero text.

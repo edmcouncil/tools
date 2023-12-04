@@ -1,0 +1,7 @@
+
+Report is defined as document that provides a structured description of something, prepared on ad hoc, periodic, recurring, regular, or as required basis. Report is a kind of document. It has report date at least zero explicit date. It has report date time at least zero date time. It has reporting period at least zero date period. It is provided by some reporting party. It is reported to some party in role. It is submitted by at least zero submitter. It is submitted to at least zero party in role.
+Reporting party is defined as party providing a report, typically in response to some contractual, legal, regulatory or other business requirement. Reporting party is a kind of party in role. It provides some report.
+Request is defined as event in which some party asks another party for something at some point in time. Request is a kind of occurrence. It exemplifies some request activity. It has request date at least zero explicit date. It has request date time at least zero date time. It is requested by some requester. It is requested of some party in role.
+Request activity is defined as activity in which some party asks another party for something or to do something. Request activity is a kind of occurrence kind. It requests some Thing.
+Requester is defined as party that asks for something. Requester is a kind of party in role.
+Submitter is defined as party presenting something, such as a regulatory report. Submitter is a kind of party in role. It submits some report.

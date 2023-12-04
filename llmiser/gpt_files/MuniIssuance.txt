@@ -1,0 +1,43 @@
+
+ Announce securities issue is a kind of Thing. It announces issue of some security. It announces some securities offering.
+ Bond counsel is a kind of Thing. It is bond counsel some debt underwriting issuance process.
+Correspondent is defined as a bank, brokerage or other financial institution that is not a direct DTC member. Correspondents rely on direct DTC Participants to perform their DTC settlement services. Correspondent is a kind of muni issuance process participant. It participates in some securities underwriting issuance process.
+D t c c member is defined as a firm which is a member of DTCC. Note: this Actor may perform any of the Roles described elsewhere in this Issuance model, i.e. the DTCC Member may also be any of the Actors defined. REVIEW: does this apply to ALL the defined Actor types?. D t c c member is a kind of muni issuance process participant. It participates in some securities underwriting issuance process.
+ Debt auction process is a kind of securities issuance process.
+Debt issue over allotment terms is defined as terms for Change to an Issue Amount for Debt securities. Debt issue over allotment terms is a kind of issue over allotment terms.
+ Debt underwriting closing is a kind of underwriting issuance closing. It refers to some underwriter takedown for debt.
+ Debt underwriting issuance process is a kind of securities underwriting issuance process. It has bond counsel some bond counsel. It step some debt offering.
+ Dissemination is a kind of underwriting process activity.
+ Dissemination underwriter is a kind of potential muni underwriter. It makes decision on some dissemination.
+ Equity demutualization process is a kind of securities issuance process.
+ Equity i p o process is a kind of registered security issuance process.
+ Equity underwriting issuance process is a kind of registered security issuance process.
+ Issuance agent is a kind of Thing. It is agent in some securities underwriting issuance process.
+Issuance closing is defined as the process of crediting the DTC participant account on settlement date with the position for the new issue. The overall closing process includes the exchange of funds that happens outside of DTC.. Issuance closing is a kind of issuance process activity.
+ Issuance crediting participant is a kind of Thing. It is crediting participant some securities underwriting issuance process.
+ Issuance financial advisor is a kind of Thing. It advises some securities underwriting issuance process.
+ Issuance printer is a kind of Thing. It prints some securities underwriting issuance process.
+ Issuance process participant is a kind of process participant.
+ Issuance settlement is a kind of issuance process activity.
+Issue over allotment terms is defined as terms for Change to an Issue Amount. A provision in an underwriting agreement, which allows members of the underwriting syndicate to purchase additional shares at the original price.. Issue over allotment terms is a kind of offering document terms. It maximum over allotment amount at most one monetary amount.
+ Issuer counsel is a kind of Thing. It is issuer counsel some securities underwriting issuance process.
+Muni debt offering is defined as the process step of offering a Municipal Debt security for issue.. Muni debt offering is a kind of debt offering.
+ Muni issuance process participant is a kind of issuance process participant.
+ Obligor is a kind of Thing. It obligor to some securities underwriting issuance process.
+ Paying agent is a kind of issuance agent. It facilitates payment some securities underwriting issuance process.
+Potential muni underwriter is defined as an intermediary between an issuer of a security and the investing public. An underwriter can either be DTC Participant or Correspondent who would clear the underwriting deal using the Crediting Participant.. Potential muni underwriter is a kind of potential underwriter. It underwrites some securities underwriting issuance process.
+ Private placement is a kind of securities issuance process.
+ Process participant is a kind of Thing.
+ Registered security issuance process is a kind of securities issuance process. It includes step some registration.
+ Registration is a kind of issuance process activity. It registered under some jurisdiction.
+ Remarketing agent is a kind of Thing. It facililtates remarketing some securities underwriting issuance process.
+ Securities issuance context is a kind of primary market. It refers to some security.
+Securities underwriting issuance is defined as underwriting, as a method of Securities Issuance.. Securities underwriting issuance is a kind of securities issuance context. It refers to some security.
+Securities underwriting issuance process is defined as the process by which debt instruments are offered to the market by a syndicate of underwriters who underwrite the issue.. Securities underwriting issuance process is a kind of securities issuance process. It has agent some issuance agent. It has financial advisor some issuance financial advisor. It has issuer counsel some issuer counsel. It has obligor some obligor. It has paying agent some paying agent. It has printer some issuance printer. It has remarketing agent some remarketing agent. It has servicer some servicer. It has subscriber some subscriber. It has transfer agent some transfer agent. It has trustee some trustee. It produces some underwriting process details. It requested by some underwriting issuance requestor. It underwritten by some potential muni underwriter.
+ Servicer is a kind of Thing. It services some securities underwriting issuance process.
+ Transfer agent is a kind of issuance agent. It facilitates transfer some securities underwriting issuance process.
+ Trustee is a kind of Thing. It is trustee some securities underwriting issuance process.
+ Underwriting issuance closing is a kind of issuance closing. It refers to some underwriter takedown.
+ Underwriting issuance requestor is a kind of potential issuer. It requests some securities underwriting issuance process.
+ Underwriting process activity is a kind of issuance process activity.
+Underwriting process actor is defined as any actor within the DTYCC Underwriting Process or any other Underwriting Process. Note: At present all these Actors (e.g. Underwriter) are defined simply as Process Actors and not as specializations of this type of Actor. Therefore this Actor is a Union of all of those.. Underwriting process actor is a kind of Thing. It underwriting process actor has identity some that correspondent or d t c c member.

@@ -1,0 +1,19 @@
+
+ Auto loan purpose is a kind of loan purpose.
+ Bridging loan purpose is a kind of loan purpose.
+ Construction loan purpose is a kind of loan purpose.
+ Credit card receivable purpose is a kind of loan purpose.
+ Home equity loan purpose is a kind of loan purpose.
+Line item is defined as description of a product or service including its unit cost, number of units and total cost. Line item is a kind of constituent. It has cost some monetary amount. It has numeric value at least zero decimal. It has unit cost at least zero monetary amount. It refers to some that product or charge category.
+Loan market category is defined as category indicating the market domain in which the loan product is offered. Loan market category is a kind of industry sector classifier.
+Loan offering is defined as offering related to a loan product that may be a tailored to particular circumstances, aimed at a group of borrowers or individual borrower. Loan offering is a kind of offering. It applies to some loan product. It has constituent at least zero line item.
+Loan product is defined as financial product that is realized as a loan that a party may acquire from a lending institution with specific characteristics and terms. Loan product is a kind of credit facility, financial product. It has preconditions at least zero condition precedent. It is realized by at least zero loan. It refers to at least zero collateral.
+Loan product disclosure right is defined as right to fair representation of the facts about Loan products before entrering into agreements for same.. Loan product disclosure right is a kind of product disclosure right.
+Loan purpose is defined as a selection of different types of loan purpose, being the purpose for which and manner in which loan (credit) draw-down amounts are to be used. This shows the purpose for which credit is to be used, and implies certain kinds of fact that relate to that specific type of loan e.g. mortgages. These are also identified as tranche types in tranches of a credit facility.. Loan purpose is a kind of objective.
+ Mortgage product is a kind of loan product. It is realized by at least zero mortgage.
+ Motorhome loan purpose is a kind of loan purpose.
+ Ordinary loan purpose is a kind of loan purpose.
+ Overdraft facility purpose is a kind of loan purpose.
+ Residential houseboat loan purpose is a kind of loan purpose.
+ Student loan purpose is a kind of loan purpose.
+ Working capital purpose is a kind of loan purpose.

@@ -1,0 +1,4 @@
+
+Constitution is defined as set of basic principles by which an organization is governed, especially in relation to the rights of the people it governs. Constitution is a kind of collection. It governs some law.
+Court of law is defined as person or body of persons having judicial authority to hear and resolve disputes on the basis of statutes or the common law. Court of law is a kind of formal organization.
+Law is defined as rule recognized by some community as regulating the behavior of its members and that it may enforce through the imposition of penalties. Law is a kind of Thing.

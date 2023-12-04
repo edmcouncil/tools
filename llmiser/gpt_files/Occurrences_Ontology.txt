@@ -1,0 +1,4 @@
+
+Occurrence is defined as happening of an OccurrenceKind, i.e., an event. Occurrence has synonyms event. Occurrence is a kind of Thing. It exemplifies exactly one occurrence kind. It is located at at least zero location. It that holds during exactly one date period or that has event date exactly one date or that has event date value exactly one combined date time.
+Occurrence kind is defined as classifier that specifies the general nature of an occurrence (event). Occurrence kind has examples loan origination trade settlement. Occurrence kind is a kind of classifier. It classifies some occurrence.
+Occurrence-based date is defined as calculated date that is defined with respect to the occurrence of some occurrence kind. Occurrence-based date is a kind of calculated date. It is triggered by exactly one occurrence kind.

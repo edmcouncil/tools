@@ -1,0 +1,5 @@
+
+ PublishingHouse is a kind of Thing.
+Market data provider is defined as publisher of data relevant to financial markets. Market data provider is a kind of publisher.
+Publication is defined as anything made public by print (such as a newspaper, magazine, pamphlet, letter, telegram, via computer modem or program, or in a poster, brochure or pamphlet), orally, or by broadcast (radio, television). Publication is a kind of document.
+Publisher is defined as party responsible for the printing or distribution of digital or printed information. Publisher is a kind of party in role. It is played by exactly one independent party.

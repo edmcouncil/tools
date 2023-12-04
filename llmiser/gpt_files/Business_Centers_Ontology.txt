@@ -1,0 +1,4 @@
+
+Business center code is defined as code used to denote a metropolitan area where business is conducted. Business center code is a kind of geographic region identifier. It identifies some business center.
+Business center code set is defined as coding scheme used to define a set of codes for municipalities or business centers. Business center code set is a kind of code set.
+Business day adjustment code is defined as code used to denote a convention for specifying what happens when a date falls on a day that is weekend or holiday in some municipality or business center. Business day adjustment code is a kind of code element. It identifies some business day adjustment.

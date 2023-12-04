@@ -1,0 +1,10 @@
+
+Capital surplus is defined as capital contributed in excess of the par value (stated value) of the ownership interest issued. Capital surplus is a kind of paid-in capital.
+Financial asset is defined as non-physical, tangible asset whose value is derived from a contractual claim, such as bank deposits, bonds, stocks, rights, certificates, and bank balances. Financial asset is a kind of tangible asset. It has acquisition price only price.
+Income is defined as revenue received during a period of time. Income is a kind of monetary amount. It has date period exactly one date period.
+Owners' equity is defined as owners' share in a business plus operating profit. Owners' equity has synonyms capital  contributed capital  equity net worth. Owners' equity is a kind of expression. It applies to at least zero formal organization. It has argument some paid-in capital. It has argument some retained earnings.
+Paid-in capital is defined as assets received from investors in exchange for an ownership interest. Paid-in capital is a kind of owners' equity.
+Physical asset is defined as tangible asset that has a material form, such as property, equipment, and inventory. Physical asset is a kind of tangible asset.
+Retained earnings is defined as net profits kept to accumulate in a business after dividends are paid. Retained earnings is a kind of owners' equity.
+Retained earnings before interest, taxes, depreciation and amortization is defined as measure of profitability to net income prior to payment of interest, taxes, depreciation and amortization. Retained earnings before interest, taxes, depreciation and amortization is a kind of owners' equity.
+Shareholders' equity is defined as equity that is manifested in the form of shares in an entity, fund or structured product. Shareholders' equity is a kind of owners' equity.

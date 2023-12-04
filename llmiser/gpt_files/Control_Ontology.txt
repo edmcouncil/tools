@@ -1,0 +1,6 @@
+
+Control is defined as situation in which some party has the power to direct or strongly influence the direction of the management and policies related to something. Control is a kind of situation. It has party in control some controlling party. It involves controlled thing some controlled thing.
+Controlled thing is defined as something over which some party exercises some form of control with respect to some situation. Controlled thing is a kind of undergoer. It has controlling party some controlling party. It is controlled thing in some control. It is initially controlled on exactly one combined date time.
+Controlling party is defined as actor that exercises some form of control in the context of some situation. Controlling party is a kind of actor. It is controlling party in some control. It is party controlling some controlled thing.
+De facto control is defined as control that exists informally and is accepted, although not formally recognized. De facto control is a kind of control.
+De jure control is defined as control that exists as a matter of law, i.e., legitimate, legal control of something. De jure control is a kind of control, legal construct.

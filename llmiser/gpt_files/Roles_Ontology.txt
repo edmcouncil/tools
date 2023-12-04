@@ -1,0 +1,3 @@
+
+Agent-in-role is defined as relative concept that ties an agent to a part they play in a given situational context. Agent-in-role is a kind of thing-in-role. It has identity exactly one autonomous agent.
+Thing-in-role is defined as relative concept that ties something to a part it plays in a given situational context. Thing-in-role is a kind of Thing. It has identity exactly one Thing.

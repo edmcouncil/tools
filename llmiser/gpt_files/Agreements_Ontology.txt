@@ -1,0 +1,11 @@
+
+Agreement is defined as negotiated understanding between two or more parties, reflecting the offer and acceptance of commitments on the part of either party. Agreement is a kind of Thing. It confers some commitment. It has party in role at least 2 party in role.
+Beneficiary is defined as party that receives some benefit or advantage or profits from something. Beneficiary is a kind of party in role. It is played by some that is a party to at least zero agreement.
+Commitment is defined as promise made by some party to act or refrain from acting in some manner. Commitment is a kind of Thing.
+Commitment at large is defined as commitment made by some party without direct involvement from the potential beneficiaries of that commitment. Commitment at large is a kind of unilateral commitment.
+Individual unilateral commitment is defined as commitment made by some party unilaterally to another specific party. Individual unilateral commitment is a kind of unilateral commitment.
+Mutual agreement is defined as agreement between two or more specific named parties whereby the rights and obligations embodied in the agreement cannot be transferred to another party without prior agreement. Mutual agreement is a kind of agreement. It confers some mutual commitment.
+Mutual commitment is defined as commitment between two or more parties. Mutual commitment is a kind of commitment. It has party in role at least 2 party in role.
+Obligee is defined as party to whom some commitment or obligation is owed, either legally or per the terms of an agreement. Obligee is a kind of party in role. It is played by some that is a party to at least zero agreement.
+Obligor is defined as party that is bound legally or by agreement to repay a debt, make a payment, do something, or refrain from doing something. Obligor has synonyms obligated party obligator. Obligor is a kind of party in role. It has obligation some commitment. It is played by some that is a party to at least zero agreement.
+Unilateral commitment is defined as commitment made by one party without reference any other the party to which the commitment is made. Unilateral commitment is a kind of commitment.

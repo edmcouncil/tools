@@ -1,0 +1,32 @@
+
+ Acquire mortgage is a kind of issuance process activity. It purchase some mortgage.
+ Add mortgage to pool is a kind of issuance process activity. It adds to pool some mortgage.
+ Agency mortgage pool creation process is a kind of retail asset pool creation process. It has end date some date. It has start date some date. It precedes some pass through m b s securitization process.
+ Allocate primary identifier is a kind of issuance process activity.
+ Assess pool suitablility for issuance is a kind of issuance process activity.
+ Classify mortgage is a kind of issuance process activity. It is assessment of some mortgage.
+ Define mortgage pool is a kind of issuance process activity. It is defining of some not yet issued agency mortgage pool.
+Draft pass through termsheet is defined as draft of set of information defining the pass thorugh security terms. These will eventually become the contractual terms of the instrument. Term origin:MBS PoC Reviews. Draft pass through termsheet is a kind of term sheet.
+ Draw up offering memorandum is a kind of issuance process activity.
+ Draw up termsheet is a kind of issuance process activity.
+ Finalize pool content is a kind of issuance process activity.
+ Finalize prospectus is a kind of issuance process activity.
+Identify conforming mortgage is defined as identify mortgage conforming to overall requirements for this issuer.. Identify conforming mortgage is a kind of issuance process activity. It refers to some mortgage.
+ Identify underwriter is a kind of issuance process activity. It results in appointment of some potential pass through issuance underwriter.
+ In assembly agency mortgage pool is a kind of agency mortgage pool. It has stage some in assembly.
+ In issuance agency mortgage pool is a kind of agency mortgage pool. It has stage some in issuance.
+ Make securities availabe in market is a kind of issuance process activity.
+ Market issue is a kind of issuance process activity. It has resource some pass through m b s draft prospectus.
+ Not yet issued agency mortgage pool is a kind of agency mortgage pool. It has stage some not yet issued.
+Pass through issue prospectus part is defined as a part or section of a prospectus for a pass through MBS issue. Term origin:MBS PoC Reviews. Pass through issue prospectus part is a kind of prospectus part.
+Pass through m b s draft prospectus is defined as the draft prospectus for a pass through Mortgage Backed Securities issue, as determined by the issuing agency prior to marketing the issue. Certain terms in the draft prospectus will be finalized later in the issuance process to become the actual Prospectus. Term origin:MBS PoC Reviews. Pass through m b s draft prospectus is a kind of preliminary prospectus. It precedes some pass through m b s final prospectus.
+Pass through m b s final prospectus is defined as term origin:MBS PoC Reviews. Pass through m b s final prospectus is a kind of mortgage-backed security offering prospectus.
+Pass through m b s final termsheet is defined as the final termsheet for the pass through MBS issue. This defines the terms for the MBS contract itself. Term origin:MBS PoC Reviews. Pass through m b s final termsheet is a kind of pass through issue prospectus part, term sheet. It has contractual element some bond amortization payment terms. It has contractual element some coupon payment terms.
+ Pass through m b s securitization process is a kind of m b s securitization process. It has end date some date. It has start date some date.
+Pass through offering memorandum is defined as the offering memorandum for a pass through MBS issue, setting out basic information about a future issue, for the information of prospective investors and their agents. Term origin:MBS PoC Reviews. Pass through offering memorandum is a kind of offering document. It includes details about some pass through m b s final termsheet.
+ Pool conformance criteria is a kind of Thing. It defines criteria for some not yet issued agency mortgage pool.
+Potential agency m b s issuer is defined as the entity which will become the issuing party for the pass through MBS Issue. This entity is the principal actor in most of the activities involved in the issue. Term origin:MBS PoC Reviews. Potential agency m b s issuer is a kind of pool backed security securitization process actor. It adds some add mortgage to pool. It evaluates some assess pool suitablility for issuance. It evaluates some classify mortgage. It finalizes some finalize pool content. It identifies some identify conforming mortgage. It purchases some acquire mortgage. It validates some validate conformance.
+Potential pass through issuance underwriter is defined as the entity which will become the underwriter for the pass through MBS issue. Term origin:MBS PoC Reviews. Potential pass through issuance underwriter is a kind of potential underwriter.
+ Register security is a kind of issuance process activity.
+ Suitable for issue is a kind of Thing.
+Validate conformance is defined as the mortgage is automatically validated for conformance to the requirements of the pool in which it is to be included.. Validate conformance is a kind of issuance process activity. It refers to some pool conformance criteria.

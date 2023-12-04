@@ -117,20 +117,20 @@ def check_spelling_in_ontology(new_spell_file_path: str, ontology_location: str,
         sys.exit(1)
 
 
-# if __name__ == "__main__":
-#     parser = argparse.ArgumentParser(description='Run spelling check')
-#     parser.add_argument('--spell', help='Path to file with new spells', metavar='SPELL')
-#     parser.add_argument('--ontology', help='Path to ontology file', metavar='ONTOLOGY')
-#     parser.add_argument('--filter', help='IRI filter', metavar='FILTER')
-#     args = parser.parse_args()
-#
-#     logging.basicConfig(
-#         format='%(message)s',
-#         filename='spellcheck_log.log')
-#
-#     check_spelling_in_ontology(
-#         new_spell_file_path=args.spell,
-#         ontology_location=args.ontology,
-#         resource_filter=args.filter)
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description='Run spelling check')
+    parser.add_argument('--spell', help='Path to file with new spells', metavar='SPELL')
+    parser.add_argument('--ontology', help='Path to ontology file', metavar='ONTOLOGY')
+    parser.add_argument('--filter', help='IRI filter', metavar='FILTER')
+    args = parser.parse_args()
 
-check_spelling_in_ontology(new_spell_file_path='domain_specific_spellings.json', ontology_location='/Users/pawel.garbacz/idmp/EXT/Examples/TerlipressinExample.rdf',resource_filter='idmp')
+    logging.basicConfig(
+        format='%(message)s',
+        filename='spellcheck_log.log')
+
+    check_spelling_in_ontology(
+        new_spell_file_path=args.spell,
+        ontology_location=args.ontology,
+        resource_filter=args.filter)
+
+# check_spelling_in_ontology(new_spell_file_path='domain_specific_spellings.json', ontology_location='',resource_filter='idmp')

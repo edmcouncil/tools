@@ -1,0 +1,10 @@
+
+ Exchange futures price is a kind of security price.
+ Futures closing price is a kind of exchange futures price.
+Futures daily settlement price is defined as review whether this exists. Futures daily settlement price is a kind of security price.
+Futures greek is defined as quantity representing the sensitivity of the price of a future or futures to a change in underlying parameters on which the value depends. Futures greek is a kind of price analytic.
+ Futures theta is a kind of futures greek.
+Futures trading account holder is defined as a party who has an account for futures trading at a derivatives exchange. Further notes: The trader opens an account with a given amount known as a margin.. Futures trading account holder is a kind of Thing.
+ Futures vega is a kind of futures greek.
+Initial margin is defined as money or securities put up as a good faith deposit assuring that a future contract will be fulfilled. Initial margin has synonyms security deposit. Initial margin is a kind of asset. It has as-of date some explicit date. It is held by some futures trading account holder.
+Minimum margin is defined as the lowest amount an account can reach before needing to be replenished.. Minimum margin is a kind of asset. It has as-of date some explicit date. It is held by some futures trading account holder.

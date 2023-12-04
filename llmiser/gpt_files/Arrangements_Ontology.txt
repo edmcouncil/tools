@@ -1,0 +1,4 @@
+
+ CollectionConstituent is a kind of Thing.
+ StructuredCollection is a kind of Thing.
+Scheme is defined as structure or means of organizing information such as a blueprint, schema, numbering system, organization structure, measurement system, plan, taxonomy, or language for organizing information. Scheme is a kind of arrangement. It defines at least zero Thing.

@@ -1,8 +1,6 @@
 import re
 
-from rdflib import Graph
 import pandas
-import numpy
 
 
 def prepare_gpt_file_from_data_dictionary(data_dictionary_file_path: str, gpt_file_path: str):

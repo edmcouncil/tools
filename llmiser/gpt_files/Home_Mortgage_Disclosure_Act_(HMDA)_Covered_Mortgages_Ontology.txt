@@ -1,0 +1,8 @@
+
+HMDA covered loan contract is defined as a closed-end mortgage loan or open-end line of credit that is not an excluded transaction for HMDA reporting under US section 1003.3(c) of the Revised Home Mortgage Disclosure Act of 2015. HMDA covered loan contract is a kind of mortgage. It is classified by some how submitted.
+HMDA disposition is defined as a type of action taken regarding an application for a HMDA covered loan. HMDA disposition is a kind of classifier.
+HMDA pre-approval request is defined as a request for pre-approval of a home purchase loan up to a certain amount, and subject to certain non-credit related conditions. HMDA pre-approval request is a kind of pre-approval request.
+HMDA report is defined as a report prepared to satisfy HMDA regulatory reporting requirements as described US section 1003.3(c) of the Revised Home Mortgage Disclosure Act of 2015. HMDA report is a kind of report. It has number of entries some positiveInteger. It is submitted by at least zero that is played by some that legal person and formal organization. It is submitted to some regulatory agency.
+Ethnicity is defined as category based on a cultural factors, including nationality, regional culture, ancestry, and language. Ethnicity is a kind of classifier. It classifies some legally competent natural person.
+How submitted is defined as category indicating whether the applicant or borrower submitted the application for the covered loan directly to the reporting financial institution. How submitted is a kind of classifier.
+Race is defined as a category based on a person's physical characteristics, such as bone structure and skin, hair, or eye color. Race is a kind of classifier. It broaderTransitive some race. It classifies some legally competent natural person.

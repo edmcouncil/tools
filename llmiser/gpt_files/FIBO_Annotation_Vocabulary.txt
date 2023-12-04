@@ -1,0 +1,3 @@
+
+Maturity level is defined as classifier used to indicate the state of an artifact with respect to its development lifecycle. Maturity level is a kind of classifier, lifecycle stage.
+Module is defined as classifier used to indicate a category used to modularize something based on principles of the model driven architecture methodology (MDA), including but not limited to separation of concerns, coherence, and establishing clear logical boundaries in order to increase reusability and maintainability. Module is a kind of classifier.

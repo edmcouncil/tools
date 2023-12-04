@@ -1,0 +1,13 @@
+
+Auto asset-backed security is defined as asset-backed security that is backed by an underlying pool of auto-related loans and/or leases. Auto asset-backed security is a kind of asset-backed security. It has underlier some auto debt pool.
+Auto debt pool is defined as debt pool of loans and/or leases that are motor vehicle-related. Auto debt pool is a kind of debt pool. It has some constituent that is that motor vehicle lease or motor vehicle loan.
+Bond pool is defined as debt pool of consisting of bonds. Bond pool is a kind of debt pool. It has constituent some bond.
+Consumer asset-backed security is defined as structured finance securities collateralized by pools of auto loans and leases (auto ABS), credit card receivables (credit card ABS) or student loans (student loan ABS). Consumer asset-backed security is a kind of asset-backed security, structured finance instrument.
+Controlled amortization asset-backed security is defined as asset-backed security based on a pool of bonds securitized using a controlled amortization structure. Controlled amortization asset-backed security is a kind of asset-backed security. It has repayment terms some bond amortization payment terms. It has underlier some debt pool.
+Credit card account pool is defined as pool of credit card receivables associated with designated accounts. Credit card account pool is a kind of debt pool. It has constituent some credit card account.
+Credit card asset-backed security is defined as asset-backed security based on credit card receivables. Credit card asset-backed security is a kind of asset-backed security. It has underlier some credit card account pool.
+Fully amortizing asset-backed security is defined as asset-backed security based on a pool of debt instruments that returns principal to investors over the life of the security. Fully amortizing asset-backed security is a kind of asset-backed security. It has underlier some debt pool.
+Home equity line of credit pool is defined as debt pool consisting of home equity loans. Home equity line of credit pool is a kind of debt pool. It has constituent some home equity line of credit.
+Home equity loan asset-backed security is defined as asset-backed security based on home equity loan receivables. Home equity loan asset-backed security is a kind of asset-backed security. It has underlier some home equity line of credit pool.
+Student loan asset-backed security is defined as asset-backed security based on student loan receivables. Student loan asset-backed security is a kind of asset-backed security. It has underlier some student loan pool.
+Student loan pool is defined as debt pool consisting of student loans. Student loan pool is a kind of debt pool. It has constituent some student loan.

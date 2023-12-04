@@ -1,0 +1,35 @@
+
+ Agree basis for allocation is a kind of initial public offering process step.
+ Allocation is a kind of initial public offering process step.
+ Allocation basis details is a kind of document.
+ Allocation details is a kind of document.
+ Announce equity issue is a kind of initial public offering process step.
+ Application for shares is a kind of document.
+ Appoint advisors is a kind of initial public offering process step. It designates some that corporate broker or reporting accountant or sponsor or registration authority. It plays role some issuer.
+ Approve for flotation is a kind of initial public offering process step. It is provided by some exchange.
+ Corporate broker is a kind of broker.
+ Equity announcement is a kind of notice.
+ Filing details is a kind of document.
+ Formal approval for listing and trading is a kind of initial public offering process step. It is provided by some exchange.
+ I p o full prospectus is a kind of final prospectus.
+ I p o preliminary prospectus is a kind of preliminary prospectus. It precedes some i p o full prospectus.
+ I p o process is a kind of Thing. It has date period some date period.
+ I p o settlement details is a kind of document.
+ Indication of interest is a kind of document.
+ Initial public offering process step is a kind of occurrence kind. It applies to some i p o process.
+ Marketing of share issue is a kind of initial public offering process step.
+ Notice of allocation is a kind of initial public offering process step.
+ Potential share underwriter is a kind of potential underwriter.
+ Publish initial prospectus is a kind of initial public offering process step.
+ Purchase price is a kind of monetary price.
+ Purchase unallocated stock is a kind of initial public offering process step.
+ Receive applications is a kind of initial public offering process step.
+ Register with regulatory authority is a kind of initial public offering process step. It is provided by some exchange.
+ Registration statement document is a kind of document.
+ Reporting accountant is a kind of party in role.
+ Set price is a kind of initial public offering process step.
+ Settlement of allocated shares is a kind of initial public offering process step.
+ Share register is a kind of registry.
+ Sponsor is a kind of party in role. It may be some corporate broker.
+ Syndicate member is a kind of party in role.
+ Underwriting is a kind of Thing. It share underwriter some potential share underwriter. It syndicate member some syndicate member.

@@ -1,0 +1,36 @@
+
+ A b s securitization process is a kind of pool backed security securitization process.
+Advance refunding is defined as refunding in which bond issuance in which new bonds are sold at a lower rate than outstanding ones. Advance refunding is a kind of refunding purpose.
+ Asset pool creation process is a kind of Thing. It precedes some debt securitization process.
+Bond issuance programme is defined as a debt issuance programe under which an entity may, from time to time, issue bonds under the terms and conditions specified in the base prospectus for that programme. Bond issuance programme is a kind of debt issuance programme. It comprises some bond offering.
+Bond offering is defined as a debt offering of one or more bonds, as all or part of an issuance programme. Bond offering is a kind of debt offering.
+Bond offering with warrant is defined as a bond offering where the issue includes a warrant; Further notes: ISO 10962 CFI definition is A bond that is issued together with one or more warrant(s) attached as part of the offer, the warrant(s) granting the holder the right to purchase a designated security, often the common stock of the issuer of the debt, at a specified price. Review notes: This need not be any specific type of bond. The warrant is used as a sweetener to encourage people to subscribe to a new bond issue. The Bond and the Warrant trade together as a unit (called "Bond Unit").. Bond offering with warrant is a kind of bond offering. It applies to some that traditional warrant or bond.
+ C d o securitization process is a kind of debt securitization process.
+ Completed debts pool is a kind of debt pool. It has stage some in issuance.
+ Credit card pool creation process is a kind of retail asset pool creation process.
+ Debt instrument pool creation process is a kind of asset pool creation process.
+Debt issuance process information is defined as information specific to the issuance of a debt security. Debt issuance process information is a kind of traded instrument issuance process information. It has debt issuance purpose some debt issuance purpose.
+Debt issuance programme is defined as a series of debt security issuances over time. Debt issuance programme is a kind of issuance programme. It comprises some debt offering.
+Debt issuance purpose is defined as purpose for the issuance of a debt security; also defines processes to be followed in some instances. Debt issuance purpose is a kind of objective.
+ Debt securitization process is a kind of securities issuance process.
+ Home equity line of credit pool creation process is a kind of retail asset pool creation process.
+ In assembly is a kind of PoolLifecycleStateSelection.
+ In assembly debts pool is a kind of debt pool. It has stage some in assembly.
+ In issuance is a kind of PoolLifecycleStateSelection.
+Issuance process activity is defined as an activity within the process of securities issuance.. Issuance process activity is a kind of Thing.
+ Issued is a kind of PoolLifecycleStateSelection.
+ Loan pool creation process is a kind of retail asset pool creation process.
+ M t n registration is a kind of registration. It is about some medium term note issuance programme.
+Medium term note issuance programme is defined as a program of offerings of medium term notes; a set of issues where the maturity is defined after the rest of the terms have been registered with some authority; these are registered up front so that then the company wants to borrow more money they don't have to go through the registration period but have the facility up front to issue another security.. Medium term note issuance programme is a kind of bond issuance programme. It comprises some medium term note offering.
+ Medium term note offering is a kind of bond offering.
+Muni issue underwriter is defined as the party which agrees to buy any certificates that are not bought by investors Term origin:DTCC. Muni issue underwriter is a kind of security underwriter.
+New money purpose is defined as securities issued to raise funds for a new project or purpose. New money purpose is a kind of debt issuance purpose.
+ Not yet issued is a kind of PoolLifecycleStateSelection.
+ Not yet issued debts pool is a kind of debt pool. It has stage some not yet issued.
+ Pool backed security securitization process is a kind of debt securitization process.
+ Pool backed security securitization process actor is a kind of securitization process actor. It evaluates some issuance process activity.
+Refunding purpose is defined as a procedure whereby an issuer refinances outstanding bonds by issuing new bonds. Refunding purpose is a kind of debt issuance purpose.
+Remarketing purpose is defined as the process of reselling securities to the public that have been tendered for purchase by the previous owners thereof. Remarketing purpose is a kind of debt issuance purpose.
+Retail asset pool creation process is defined as the process by which pools of assets are created. These may then be used in the issue of securities based on those asset pools as underlying.. Retail asset pool creation process is a kind of asset pool creation process. It is produced by some debt pool. It precedes some pool backed security securitization process.
+ Securitization process actor is a kind of securities issuance process actor.
+Underwriter takedown for debt is defined as information on takedown quantity of the debt security handled by the underwriter (that will be brought into DTC). Underwriter takedown for debt is a kind of underwriter takedown.
