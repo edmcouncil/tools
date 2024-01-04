@@ -7,12 +7,14 @@ IRI_BRACKET_PATTERN = re.compile(pattern='<.+>')
 PREFIX_PATTERN = re.compile(pattern='([a-z]+-[a-z]+)\s*:(\s*<.+>)')
 IRI_PREFIX_PATTERN = re.compile(pattern='[a-z]+-[a-z]+\s*:\s*[\w\-]+')
 
+
 def __get_simple_iris_from_rqg_transformation_script(rqg_transformation_script: str) -> set:
     iris_in_brackets = set(IRI_BRACKET_PATTERN.findall(string=rqg_transformation_script))
     iris = set()
     for iri_in_bracket in iris_in_brackets:
         iris.add(iri_in_bracket[1:-1])
     return iris
+    
     
 def __get_prefixed_iris_from_rqg_transformation_script(rqg_transformation_script: str) -> tuple:
     truncated_rqg_transformation_script = rqg_transformation_script
@@ -29,6 +31,7 @@ def __get_prefixed_iris_from_rqg_transformation_script(rqg_transformation_script
         truncated_rqg_transformation_script = truncated_rqg_transformation_script.replace(namespace_iri, '')
         
     return iris, truncated_rqg_transformation_script
+
 
 def check_rqg_transformation_scripts_in_folder(rqg_transformation_scripts_folder: str, ontology_location: str, resource_filter: str):
     rqg_file_contents = dict()
@@ -50,6 +53,7 @@ def check_rqg_transformation_scripts_in_folder(rqg_transformation_scripts_folder
             if resource_filter in iri:
                 if URIRef(iri) not in ontology_resources:
                     print(rqg_file_path, iri)
+    
     
 check_rqg_transformation_scripts_in_folder(
     rqg_transformation_scripts_folder='/Users/pawel.garbacz/idmp/etc/transformation',

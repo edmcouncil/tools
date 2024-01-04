@@ -40,6 +40,7 @@ def get_restriction_modality_and_cardinality_value(restriction: BNode, ontology:
     restricting_classes_all_values = list(ontology.objects(subject=restriction, predicate=OWL.allValuesFrom))
     restricting_values = list(ontology.objects(subject=restriction, predicate=OWL.hasValue))
     restricting_datatypes = list(ontology.objects(subject=restriction, predicate=OWL.onDataRange))
+    restricting_hasSelf = list(ontology.objects(subject=restriction, predicate=OWL.hasSelf))
     
     if len(restricting_cardinality_min) == 1:
         return tuple([OWL.minCardinality, restricting_cardinality_min[0]])
@@ -61,4 +62,6 @@ def get_restriction_modality_and_cardinality_value(restriction: BNode, ontology:
         return tuple([OWL.cardinality, 1])
     if len(restricting_qualified_cardinality) == 1:
         return tuple([OWL.qualifiedCardinality, restricting_qualified_cardinality[0]])
+    if len(restricting_hasSelf) == 1:
+        return tuple([OWL.hasSelf, restricting_hasSelf[0]])
     sys.exit(-1)

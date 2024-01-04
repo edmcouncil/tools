@@ -28,20 +28,21 @@
 				// Get the prompt
 				var prompt = $('#prompt').val();
 				var dateTime = new Date();
-				var time = dateTime.toLocaleTimeString();
+				var promptTime = dateTime.toLocaleTimeString();
 				// Add the prompt to the response div
-				$('#response').append('<p id="GFG1">('+ time + ') <i class="bi bi-person"></i>: ' + prompt + '</p>');
+				$('#response').append('<p id="GFG1">('+ promptTime + ') <i class="bi bi-person"></i>: ' + prompt + '</p>');
 				$('#response #GFG1').css({"color": "green", "width": "90%", "float": "left"});
 				// Clear the prompt
 				$('#prompt').val('');
+				var responseTime = dateTime.toLocaleTimeString();
 				$.ajax({
 					url: '/',
 					type: 'POST',
 					data: {prompt: prompt},
 					dataType: 'json',
 					success: function(data) {
-						$('#response').append('<p id="GFG2">('+ time + ') <i class="bi bi-robot"></i>: ' + data.response + '</p>');
-						$('#response #GFG2').css({"color": "red", "width": "90%", "float": "right"});
+						$('#response').append('<p id="GFG2">('+ responseTime + ') <i class="bi bi-robot"></i>: ' + data.response + '</p>');
+						$('#response #GFG2').css({"color": "blue", "width": "90%", "float": "right"});
 					}
 				});
 			});
@@ -50,19 +51,19 @@
 </head>
 <body>
 	<div class="container p-3">
-		<h3>GFG ChatGPT Clone</h3>
+		<h3>fibot</h3>
 		<div class="mb-3">
 			<form method="post" action="">
 
-				<label for="prompt" class="form-label"><strong>Prompt: </strong></label>
+				<label for="prompt" class="form-label"><strong>your question</strong></label>
 				<textarea class="form-control" type="textarea" id="prompt" name="prompt" rows="3"></textarea>
 				<br>
-				<button class="btn btn-primary " type="submit">Submit</button>
+				<button class="btn btn-primary " type="submit">ask it!</button>
 			</form>
 		</div>
 		<br>
 		<div class="mb-3">
-			<h6>Response:</h6>
+			<h6>fibot's answer</h6>
 			<div class="container border overflow-auto h-50" id="response"></div>
 
 		</div>

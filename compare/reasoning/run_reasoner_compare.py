@@ -11,5 +11,5 @@ collect_consolidated_ontology_commits(
     consolidated_ontologies_folder='./idmp_ontology_versions/',
     nearest_commit_ignore_span=1,
     merge_ontology_file='AboutIDMPDev-ReferenceIndividuals.rdf',
-    first_commit_date=datetime.date(year=2023, month=7, day=1))
+    first_commit_date=datetime.date(year=2023, month=11, day=30))
 run_reasoner_over_folder(folder_path='./idmp_ontology_versions/')

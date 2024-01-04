@@ -26,3 +26,5 @@ langchain
 tiktoken
 faiss-cpu
 flask
+boto3
+
