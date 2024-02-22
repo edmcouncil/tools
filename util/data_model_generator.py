@@ -4,13 +4,13 @@ from tqdm import tqdm
 
 loopy_classes = []
 
-onto = get_ontology(r'/Users/pawel.garbacz/Documents/makolab/honu/makolab/FinancialInstrumentsMerged.rdf').load()
+onto = get_ontology('file:////Users/pawel.garbacz/idmp/AboutIDMPDevMerged.rdf').load()
 
 def len_list(l):
     return len(l)
 
 
-def collect_neighours(ont_class_to_add, ont_class_to_search, graph: networkx.DiGraph) -> networkx.DiGraph:
+def collect_neighbours(ont_class_to_add, ont_class_to_search, graph: networkx.DiGraph) -> networkx.DiGraph:
     if ont_class_to_add in loopy_classes:
         return graph
     ont_class_superclasses = ont_class_to_search.is_a
@@ -26,6 +26,13 @@ def collect_neighours(ont_class_to_add, ont_class_to_search, graph: networkx.DiG
                 if restricted_resource is None:
                     restricted_resource = 'str'
                 new_graph = graph.copy()
+                if isinstance(restricted_resource, LogicalClassConstruct):
+                    for logical_class in restricted_resource.Classes:
+                        if isinstance(restricted_resource, Or):
+                            new_graph.add_edge(ont_class_to_add, logical_class, label=restricting_property)
+                        if isinstance(restricted_resource, And):
+                            new_graph.add_edge(ont_class_to_add, logical_class, label=restricting_property)
+                        new_graph = collect_neighbours(logical_class, logical_class, new_graph)
                 new_graph.add_edge(ont_class_to_add, restricted_resource, label=restricting_property)
                 if len(list(graph.edges)) == len(list(new_graph.edges)):
                     loopy_classes.append(ont_class_to_add)
@@ -34,23 +41,28 @@ def collect_neighours(ont_class_to_add, ont_class_to_search, graph: networkx.DiG
                     graph = new_graph
                     
                 if isinstance(restricted_resource, ThingClass):
-                    graph = collect_neighours(restricted_resource, restricted_resource, graph)
-                else:
-                    return graph
+                    graph = collect_neighbours(restricted_resource, restricted_resource, graph)
+                # else:
+                #     return graph
             
         else:
             # graph.add_edge(ont_class_to_add, ont_class_superclass, label=rdfs_subclassof)
-            graph = collect_neighours(ont_class_to_add, ont_class_superclass, graph)
+            graph = collect_neighbours(ont_class_to_add, ont_class_superclass, graph)
 
     return graph
 
 
 
-ont_classes = onto.search(iri='https://www.honu.ai/ontologies/fibo/FinancialInstruments/Loan')
+ont_classes = onto.search(iri='https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/Substance')
 ont_class = ont_classes[0]
-graph = collect_neighours(ont_class, ont_class, networkx.DiGraph())
+graph = collect_neighbours(ont_class, ont_class, networkx.DiGraph())
 networkx.write_edgelist(G=graph,path='graph.txt',delimiter='|')
-paths = list(networkx.all_simple_paths(graph, source=ont_class, target=str))
+# paths = list(networkx.all_simple_paths(graph, source=ont_class, target=str))
+# paths = list(networkx.simple_path(graph, source=ont_class).values())
+paths = list()
+for node in list(graph.nodes):
+    paths += list(networkx.all_simple_paths(graph, source=ont_class, target=node))
+# paths = list(networkx.all_simple_paths(graph, source=ont_class, target=list(graph.nodes)[1]))
 paths.sort(key=len_list, reverse=False)
 subclasses_map = dict()
 subproperties_map = dict()
@@ -75,40 +87,45 @@ for path in paths:
             if sink not in subclasses_map:
                 subclasses_map[sink] = list(onto.search(subclass_of=sink))
     extended_paths.append(extended_path)
-redundant_paths = list()
-
-for i in tqdm(range(0, len(extended_paths)-1)):
-    extended_path_1 = extended_paths[i]
-    if extended_path_1 in redundant_paths:
-        continue
-    for j in range(i+1, len(extended_paths)-2):
-        extended_path_2 = extended_paths[j]
-        if extended_path_2 in redundant_paths:
-            continue
-        drop_2 = False
-        scope = len(extended_path_1)
-        for k in range(0, scope-2, 2):
-            triple_1 = [extended_path_1[k], extended_path_1[k+1], extended_path_1[k+2]]
-            triple_2 = [extended_path_2[k], extended_path_2[k+1], extended_path_2[k+2]]
-            if not triple_1 == triple_2:
-                if triple_1[0] in subclasses_map[triple_2[0]] and triple_1[1] in subproperties_map[triple_2[1]]:
-                    if isinstance(triple_1[2], ThingClass) and isinstance(triple_2[2], ThingClass):
-                        if triple_1[2] in subclasses_map[triple_2[2]]:
-                            drop_2 = True
-                            break
-                break
-        if drop_2:
-            if extended_path_2 not in redundant_paths:
-                redundant_paths.append(extended_path_2)
-        
-# redundant_paths = list(set(tuple(path) for path in redundant_paths))
-# print(redundant_paths)
-print(len(redundant_paths))
-print(len(extended_paths))
-# print(relevant_extended_paths)
-# print('***')
-paths_file = open('paths.txt', 'w')
+    
+short_paths = list()
 for path in extended_paths:
+    path_cutoff = -1
+    for i in range(len(path)):
+        try:
+            inverse = path[i].inverse_property
+        except:
+            inverse = None
+        for j in range(i + 1, len(path)):
+            if path[j] == inverse:
+                path_cutoff = j
+                break
+        if path_cutoff > -1:
+            break
+    if path_cutoff > -1:
+        path = path[0:path_cutoff]
+    short_paths.append(path)
+
+redundant_paths = list()
+for i in range(len(short_paths)):
+    path1 = short_paths[i]
+    if Thing in path1:
+        redundant_paths.append(path1)
+    for j in range(i+1, len(short_paths)):
+        path2 = short_paths[j]
+        if path1 == path2:
+            redundant_paths.append(path2)
+        if all(elem in path1 for elem in path2):
+            redundant_paths.append(path2)
+        if all(elem in path2 for elem in path1):
+            redundant_paths.append(path1)
+
+print(len(extended_paths))
+print(len(short_paths))
+print(len(redundant_paths))
+
+paths_file = open('paths.txt', 'w')
+for path in short_paths:
     if path not in redundant_paths:
         paths_file.write(str(path)+'\n')
 paths_file.close()

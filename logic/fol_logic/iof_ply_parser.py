@@ -237,8 +237,8 @@ def p_equivalence(p):
         
 
 def p_error(p):
-    # print("Syntax error in input!")
-    # print(p)
+    print("Syntax error in input!")
+    print(p)
     pass
 
 

@@ -27,4 +27,5 @@ tiktoken
 faiss-cpu
 flask
 boto3
+more-itertools
 

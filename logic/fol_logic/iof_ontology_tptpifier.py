@@ -25,7 +25,7 @@ def tptpify(axiom_annotatation_properties: set, ontology: Graph) -> str:
     
             
 iof_ontology = Graph()
-iof_ontology.parse('../resources/iof/dev.iof-quickstart.ttl')
+iof_ontology.parse('/Users/pawel.garbacz/iof/core/core.rdf')
 
 iof_axiom_properties = \
     {

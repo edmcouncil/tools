@@ -619,14 +619,14 @@ def shacl(input_owl_path: str, output_shacl_path: str, use_equivalent_constraint
 
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description='Collects all ontologies imported from input ontology')
-    parser.add_argument('--input_owl', help='Path to input ontology', metavar='IN_ONT')
-    parser.add_argument('--output_shacl', help='Path to ontology mapping file', metavar='OUT_SHACL')
-    args = parser.parse_args()
-
-    shacl(input_owl_path=args.input_owl, output_shacl_path=args.output_shacl)
+    # parser = argparse.ArgumentParser(description='Collects all ontologies imported from input ontology')
+    # parser.add_argument('--input_owl', help='Path to input ontology', metavar='IN_ONT')
+    # parser.add_argument('--output_shacl', help='Path to ontology mapping file', metavar='OUT_SHACL')
+    # args = parser.parse_args()
+    #
+    # shacl(input_owl_path=args.input_owl, output_shacl_path=args.output_shacl)
     
-    # shacl(
-    #     input_owl_path='../resources/idmp/AboutIDMPDev-ReferenceIndividuals-Merged.rdf',
-    #     output_shacl_path='AboutIDMPDev-ReferenceIndividuals-SHACL.ttl',
-    #     use_equivalent_constraints=True)
+    shacl(
+        input_owl_path='../resources/AS3170OntologyMerged.ttl',
+        output_shacl_path='AS3170Ontology-SHACL.ttl',
+        use_equivalent_constraints=True)

@@ -27,7 +27,7 @@ def check_axioms_in_annotations(axiom_annotatation_properties: set, ontology: Gr
                 logging.warning(msg='|'.join(['ill-formed', resource, one_line_axiom]))
             
 iof_ontology = Graph()
-iof_ontology.parse('/Users/pawel.garbacz/iof/supplychain/SupplyChainReferenceOntology.rdf')
+iof_ontology.parse('/Users/pawel.garbacz/iof/supplychain/SupplyChain.rdf')
 
 iof_axiom_properties = \
     {

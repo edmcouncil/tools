@@ -1,0 +1,498 @@
+@prefix : <https://spec.sae.com/sae/ontology/AS3179Ontology/> .
+@prefix as3179o-shacl: <https://spec.sae.com/sae/ontology/AS3179Ontology-SHACL/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+as3179o-shacl:AS3179-03NodeShape a sh:NodeShape ;
+    sh:property as3179o-shacl:someValuesFromisObjectOfBoltMachineDoubleHexExtendedWasherHeadDrilledCloseTolShankHasPropertyPropertyShape ;
+    sh:targetClass :AS3179-03 .
+
+as3179o-shacl:AS3179-04NodeShape a sh:NodeShape ;
+    sh:property as3179o-shacl:someValuesFromisObjectOfBoltMachineDoubleHexExtendedWasherHeadDrilledCloseTolShankHasPropertyPropertyShape ;
+    sh:targetClass :AS3179-04 .
+
+as3179o-shacl:AS3179-05NodeShape a sh:NodeShape ;
+    sh:property as3179o-shacl:someValuesFromisObjectOfBoltMachineDoubleHexExtendedWasherHeadDrilledCloseTolShankHasPropertyPropertyShape ;
+    sh:targetClass :AS3179-05 .
+
+as3179o-shacl:AS3179-06NodeShape a sh:NodeShape ;
+    sh:property as3179o-shacl:someValuesFromisObjectOfBoltMachineDoubleHexExtendedWasherHeadDrilledCloseTolShankHasPropertyPropertyShape ;
+    sh:targetClass :AS3179-06 .
+
+as3179o-shacl:AS3179-07NodeShape a sh:NodeShape ;
+    sh:property as3179o-shacl:someValuesFromisObjectOfBoltMachineDoubleHexExtendedWasherHeadDrilledCloseTolShankHasPropertyPropertyShape ;
+    sh:targetClass :AS3179-07 .
+
+as3179o-shacl:AS3179-08NodeShape a sh:NodeShape ;
+    sh:property as3179o-shacl:someValuesFromisObjectOfBoltMachineDoubleHexExtendedWasherHeadDrilledCloseTolShankHasPropertyPropertyShape ;
+    sh:targetClass :AS3179-08 .
+
+as3179o-shacl:AS3179-09NodeShape a sh:NodeShape ;
+    sh:property as3179o-shacl:someValuesFromisObjectOfBoltMachineDoubleHexExtendedWasherHeadDrilledCloseTolShankHasPropertyPropertyShape ;
+    sh:targetClass :AS3179-09 .
+
+as3179o-shacl:AS3179-10NodeShape a sh:NodeShape ;
+    sh:property as3179o-shacl:someValuesFromisObjectOfBoltMachineDoubleHexExtendedWasherHeadDrilledCloseTolShankHasPropertyPropertyShape ;
+    sh:targetClass :AS3179-10 .
+
+as3179o-shacl:AS3179-11NodeShape a sh:NodeShape ;
+    sh:property as3179o-shacl:someValuesFromisObjectOfBoltMachineDoubleHexExtendedWasherHeadDrilledCloseTolShankHasPropertyPropertyShape ;
+    sh:targetClass :AS3179-11 .
+
+as3179o-shacl:AS3179-12NodeShape a sh:NodeShape ;
+    sh:property as3179o-shacl:someValuesFromisObjectOfBoltMachineDoubleHexExtendedWasherHeadDrilledCloseTolShankHasPropertyPropertyShape ;
+    sh:targetClass :AS3179-12 .
+
+as3179o-shacl:AS3179-13NodeShape a sh:NodeShape ;
+    sh:property as3179o-shacl:someValuesFromisObjectOfBoltMachineDoubleHexExtendedWasherHeadDrilledCloseTolShankHasPropertyPropertyShape ;
+    sh:targetClass :AS3179-13 .
+
+as3179o-shacl:AS3179-14NodeShape a sh:NodeShape ;
+    sh:property as3179o-shacl:someValuesFromisObjectOfBoltMachineDoubleHexExtendedWasherHeadDrilledCloseTolShankHasPropertyPropertyShape ;
+    sh:targetClass :AS3179-14 .
+
+as3179o-shacl:AS3179-15NodeShape a sh:NodeShape ;
+    sh:property as3179o-shacl:someValuesFromisObjectOfBoltMachineDoubleHexExtendedWasherHeadDrilledCloseTolShankHasPropertyPropertyShape ;
+    sh:targetClass :AS3179-15 .
+
+as3179o-shacl:AS3179-16NodeShape a sh:NodeShape ;
+    sh:property as3179o-shacl:someValuesFromisObjectOfBoltMachineDoubleHexExtendedWasherHeadDrilledCloseTolShankHasPropertyPropertyShape ;
+    sh:targetClass :AS3179-16 .
+
+as3179o-shacl:AS3179-17NodeShape a sh:NodeShape ;
+    sh:property as3179o-shacl:someValuesFromisObjectOfBoltMachineDoubleHexExtendedWasherHeadDrilledCloseTolShankHasPropertyPropertyShape ;
+    sh:targetClass :AS3179-17 .
+
+as3179o-shacl:AS3179-18NodeShape a sh:NodeShape ;
+    sh:property as3179o-shacl:someValuesFromisObjectOfBoltMachineDoubleHexExtendedWasherHeadDrilledCloseTolShankHasPropertyPropertyShape ;
+    sh:targetClass :AS3179-18 .
+
+as3179o-shacl:AS3179-19NodeShape a sh:NodeShape ;
+    sh:property as3179o-shacl:someValuesFromisObjectOfBoltMachineDoubleHexExtendedWasherHeadDrilledCloseTolShankHasPropertyPropertyShape ;
+    sh:targetClass :AS3179-19 .
+
+as3179o-shacl:AS3179-20NodeShape a sh:NodeShape ;
+    sh:property as3179o-shacl:someValuesFromisObjectOfBoltMachineDoubleHexExtendedWasherHeadDrilledCloseTolShankHasPropertyPropertyShape ;
+    sh:targetClass :AS3179-20 .
+
+as3179o-shacl:AS3179-21NodeShape a sh:NodeShape ;
+    sh:property as3179o-shacl:someValuesFromisObjectOfBoltMachineDoubleHexExtendedWasherHeadDrilledCloseTolShankHasPropertyPropertyShape ;
+    sh:targetClass :AS3179-21 .
+
+as3179o-shacl:AS3179-22NodeShape a sh:NodeShape ;
+    sh:property as3179o-shacl:someValuesFromisObjectOfBoltMachineDoubleHexExtendedWasherHeadDrilledCloseTolShankHasPropertyPropertyShape ;
+    sh:targetClass :AS3179-22 .
+
+as3179o-shacl:AS3179-23NodeShape a sh:NodeShape ;
+    sh:property as3179o-shacl:someValuesFromisObjectOfBoltMachineDoubleHexExtendedWasherHeadDrilledCloseTolShankHasPropertyPropertyShape ;
+    sh:targetClass :AS3179-23 .
+
+as3179o-shacl:AS3179-24NodeShape a sh:NodeShape ;
+    sh:property as3179o-shacl:someValuesFromisObjectOfBoltMachineDoubleHexExtendedWasherHeadDrilledCloseTolShankHasPropertyPropertyShape ;
+    sh:targetClass :AS3179-24 .
+
+as3179o-shacl:AS3179-25NodeShape a sh:NodeShape ;
+    sh:property as3179o-shacl:someValuesFromisObjectOfBoltMachineDoubleHexExtendedWasherHeadDrilledCloseTolShankHasPropertyPropertyShape ;
+    sh:targetClass :AS3179-25 .
+
+as3179o-shacl:AS3179-26NodeShape a sh:NodeShape ;
+    sh:property as3179o-shacl:someValuesFromisObjectOfBoltMachineDoubleHexExtendedWasherHeadDrilledCloseTolShankHasPropertyPropertyShape ;
+    sh:targetClass :AS3179-26 .
+
+as3179o-shacl:AS3179-27NodeShape a sh:NodeShape ;
+    sh:property as3179o-shacl:someValuesFromisObjectOfBoltMachineDoubleHexExtendedWasherHeadDrilledCloseTolShankHasPropertyPropertyShape ;
+    sh:targetClass :AS3179-27 .
+
+as3179o-shacl:AS3179-28NodeShape a sh:NodeShape ;
+    sh:property as3179o-shacl:someValuesFromisObjectOfBoltMachineDoubleHexExtendedWasherHeadDrilledCloseTolShankHasPropertyPropertyShape ;
+    sh:targetClass :AS3179-28 .
+
+as3179o-shacl:AS3179-29NodeShape a sh:NodeShape ;
+    sh:property as3179o-shacl:someValuesFromisObjectOfBoltMachineDoubleHexExtendedWasherHeadDrilledCloseTolShankHasPropertyPropertyShape ;
+    sh:targetClass :AS3179-29 .
+
+as3179o-shacl:AS3179-30NodeShape a sh:NodeShape ;
+    sh:property as3179o-shacl:someValuesFromisObjectOfBoltMachineDoubleHexExtendedWasherHeadDrilledCloseTolShankHasPropertyPropertyShape ;
+    sh:targetClass :AS3179-30 .
+
+as3179o-shacl:AS3179-31NodeShape a sh:NodeShape ;
+    sh:property as3179o-shacl:someValuesFromisObjectOfBoltMachineDoubleHexExtendedWasherHeadDrilledCloseTolShankHasPropertyPropertyShape ;
+    sh:targetClass :AS3179-31 .
+
+as3179o-shacl:AS3179-32NodeShape a sh:NodeShape ;
+    sh:property as3179o-shacl:someValuesFromisObjectOfBoltMachineDoubleHexExtendedWasherHeadDrilledCloseTolShankHasPropertyPropertyShape ;
+    sh:targetClass :AS3179-32 .
+
+as3179o-shacl:AS3179-33NodeShape a sh:NodeShape ;
+    sh:property as3179o-shacl:someValuesFromisObjectOfBoltMachineDoubleHexExtendedWasherHeadDrilledCloseTolShankHasPropertyPropertyShape ;
+    sh:targetClass :AS3179-33 .
+
+as3179o-shacl:AS3179-34NodeShape a sh:NodeShape ;
+    sh:property as3179o-shacl:someValuesFromisObjectOfBoltMachineDoubleHexExtendedWasherHeadDrilledCloseTolShankHasPropertyPropertyShape ;
+    sh:targetClass :AS3179-34 .
+
+as3179o-shacl:AS3179-35NodeShape a sh:NodeShape ;
+    sh:property as3179o-shacl:someValuesFromisObjectOfBoltMachineDoubleHexExtendedWasherHeadDrilledCloseTolShankHasPropertyPropertyShape ;
+    sh:targetClass :AS3179-35 .
+
+as3179o-shacl:AS3179-36NodeShape a sh:NodeShape ;
+    sh:property as3179o-shacl:someValuesFromisObjectOfBoltMachineDoubleHexExtendedWasherHeadDrilledCloseTolShankHasPropertyPropertyShape ;
+    sh:targetClass :AS3179-36 .
+
+as3179o-shacl:AS3179-37NodeShape a sh:NodeShape ;
+    sh:property as3179o-shacl:someValuesFromisObjectOfBoltMachineDoubleHexExtendedWasherHeadDrilledCloseTolShankHasPropertyPropertyShape ;
+    sh:targetClass :AS3179-37 .
+
+as3179o-shacl:AS3179-38NodeShape a sh:NodeShape ;
+    sh:property as3179o-shacl:someValuesFromisObjectOfBoltMachineDoubleHexExtendedWasherHeadDrilledCloseTolShankHasPropertyPropertyShape ;
+    sh:targetClass :AS3179-38 .
+
+as3179o-shacl:AS3179-39NodeShape a sh:NodeShape ;
+    sh:property as3179o-shacl:someValuesFromisObjectOfBoltMachineDoubleHexExtendedWasherHeadDrilledCloseTolShankHasPropertyPropertyShape ;
+    sh:targetClass :AS3179-39 .
+
+as3179o-shacl:AS3179-40NodeShape a sh:NodeShape ;
+    sh:property as3179o-shacl:someValuesFromisObjectOfBoltMachineDoubleHexExtendedWasherHeadDrilledCloseTolShankHasPropertyPropertyShape ;
+    sh:targetClass :AS3179-40 .
+
+as3179o-shacl:AS3179-41NodeShape a sh:NodeShape ;
+    sh:property as3179o-shacl:someValuesFromisObjectOfBoltMachineDoubleHexExtendedWasherHeadDrilledCloseTolShankHasPropertyPropertyShape ;
+    sh:targetClass :AS3179-41 .
+
+as3179o-shacl:AS3179-42NodeShape a sh:NodeShape ;
+    sh:property as3179o-shacl:someValuesFromisObjectOfBoltMachineDoubleHexExtendedWasherHeadDrilledCloseTolShankHasPropertyPropertyShape ;
+    sh:targetClass :AS3179-42 .
+
+as3179o-shacl:AS3179-43NodeShape a sh:NodeShape ;
+    sh:property as3179o-shacl:someValuesFromisObjectOfBoltMachineDoubleHexExtendedWasherHeadDrilledCloseTolShankHasPropertyPropertyShape ;
+    sh:targetClass :AS3179-43 .
+
+as3179o-shacl:AS3179-44NodeShape a sh:NodeShape ;
+    sh:property as3179o-shacl:someValuesFromisObjectOfBoltMachineDoubleHexExtendedWasherHeadDrilledCloseTolShankHasPropertyPropertyShape ;
+    sh:targetClass :AS3179-44 .
+
+as3179o-shacl:AS3179-45NodeShape a sh:NodeShape ;
+    sh:property as3179o-shacl:someValuesFromisObjectOfBoltMachineDoubleHexExtendedWasherHeadDrilledCloseTolShankHasPropertyPropertyShape ;
+    sh:targetClass :AS3179-45 .
+
+as3179o-shacl:AS3179-46NodeShape a sh:NodeShape ;
+    sh:property as3179o-shacl:someValuesFromisObjectOfBoltMachineDoubleHexExtendedWasherHeadDrilledCloseTolShankHasPropertyPropertyShape ;
+    sh:targetClass :AS3179-46 .
+
+as3179o-shacl:AS3179-47NodeShape a sh:NodeShape ;
+    sh:property as3179o-shacl:someValuesFromisObjectOfBoltMachineDoubleHexExtendedWasherHeadDrilledCloseTolShankHasPropertyPropertyShape ;
+    sh:targetClass :AS3179-47 .
+
+as3179o-shacl:AS3179-48NodeShape a sh:NodeShape ;
+    sh:property as3179o-shacl:someValuesFromisObjectOfBoltMachineDoubleHexExtendedWasherHeadDrilledCloseTolShankHasPropertyPropertyShape ;
+    sh:targetClass :AS3179-48 .
+
+as3179o-shacl:AS3179-49NodeShape a sh:NodeShape ;
+    sh:property as3179o-shacl:someValuesFromisObjectOfBoltMachineDoubleHexExtendedWasherHeadDrilledCloseTolShankHasPropertyPropertyShape ;
+    sh:targetClass :AS3179-49 .
+
+as3179o-shacl:AS3179-50NodeShape a sh:NodeShape ;
+    sh:property as3179o-shacl:someValuesFromisObjectOfBoltMachineDoubleHexExtendedWasherHeadDrilledCloseTolShankHasPropertyPropertyShape ;
+    sh:targetClass :AS3179-50 .
+
+as3179o-shacl:AS3179-51NodeShape a sh:NodeShape ;
+    sh:property as3179o-shacl:someValuesFromisObjectOfBoltMachineDoubleHexExtendedWasherHeadDrilledCloseTolShankHasPropertyPropertyShape ;
+    sh:targetClass :AS3179-51 .
+
+as3179o-shacl:AS3179-52NodeShape a sh:NodeShape ;
+    sh:property as3179o-shacl:someValuesFromisObjectOfBoltMachineDoubleHexExtendedWasherHeadDrilledCloseTolShankHasPropertyPropertyShape ;
+    sh:targetClass :AS3179-52 .
+
+as3179o-shacl:AS3179-53NodeShape a sh:NodeShape ;
+    sh:property as3179o-shacl:someValuesFromisObjectOfBoltMachineDoubleHexExtendedWasherHeadDrilledCloseTolShankHasPropertyPropertyShape ;
+    sh:targetClass :AS3179-53 .
+
+as3179o-shacl:AS3179-54NodeShape a sh:NodeShape ;
+    sh:property as3179o-shacl:someValuesFromisObjectOfBoltMachineDoubleHexExtendedWasherHeadDrilledCloseTolShankHasPropertyPropertyShape ;
+    sh:targetClass :AS3179-54 .
+
+as3179o-shacl:AS3179-55NodeShape a sh:NodeShape ;
+    sh:property as3179o-shacl:someValuesFromisObjectOfBoltMachineDoubleHexExtendedWasherHeadDrilledCloseTolShankHasPropertyPropertyShape ;
+    sh:targetClass :AS3179-55 .
+
+as3179o-shacl:AS3179-56NodeShape a sh:NodeShape ;
+    sh:property as3179o-shacl:someValuesFromisObjectOfBoltMachineDoubleHexExtendedWasherHeadDrilledCloseTolShankHasPropertyPropertyShape ;
+    sh:targetClass :AS3179-56 .
+
+as3179o-shacl:AS3179-57NodeShape a sh:NodeShape ;
+    sh:property as3179o-shacl:someValuesFromisObjectOfBoltMachineDoubleHexExtendedWasherHeadDrilledCloseTolShankHasPropertyPropertyShape ;
+    sh:targetClass :AS3179-57 .
+
+as3179o-shacl:AS3179-58NodeShape a sh:NodeShape ;
+    sh:property as3179o-shacl:someValuesFromisObjectOfBoltMachineDoubleHexExtendedWasherHeadDrilledCloseTolShankHasPropertyPropertyShape ;
+    sh:targetClass :AS3179-58 .
+
+as3179o-shacl:AS3179-59NodeShape a sh:NodeShape ;
+    sh:property as3179o-shacl:someValuesFromisObjectOfBoltMachineDoubleHexExtendedWasherHeadDrilledCloseTolShankHasPropertyPropertyShape ;
+    sh:targetClass :AS3179-59 .
+
+as3179o-shacl:AS3179-60NodeShape a sh:NodeShape ;
+    sh:property as3179o-shacl:someValuesFromisObjectOfBoltMachineDoubleHexExtendedWasherHeadDrilledCloseTolShankHasPropertyPropertyShape ;
+    sh:targetClass :AS3179-60 .
+
+as3179o-shacl:AS3179-61NodeShape a sh:NodeShape ;
+    sh:property as3179o-shacl:someValuesFromisObjectOfBoltMachineDoubleHexExtendedWasherHeadDrilledCloseTolShankHasPropertyPropertyShape ;
+    sh:targetClass :AS3179-61 .
+
+as3179o-shacl:AS3179-62NodeShape a sh:NodeShape ;
+    sh:property as3179o-shacl:someValuesFromisObjectOfBoltMachineDoubleHexExtendedWasherHeadDrilledCloseTolShankHasPropertyPropertyShape ;
+    sh:targetClass :AS3179-62 .
+
+as3179o-shacl:AS3179-63NodeShape a sh:NodeShape ;
+    sh:property as3179o-shacl:someValuesFromisObjectOfBoltMachineDoubleHexExtendedWasherHeadDrilledCloseTolShankHasPropertyPropertyShape ;
+    sh:targetClass :AS3179-63 .
+
+as3179o-shacl:AS3179-64NodeShape a sh:NodeShape ;
+    sh:property as3179o-shacl:someValuesFromisObjectOfBoltMachineDoubleHexExtendedWasherHeadDrilledCloseTolShankHasPropertyPropertyShape ;
+    sh:targetClass :AS3179-64 .
+
+as3179o-shacl:AS3179-65NodeShape a sh:NodeShape ;
+    sh:property as3179o-shacl:someValuesFromisObjectOfBoltMachineDoubleHexExtendedWasherHeadDrilledCloseTolShankHasPropertyPropertyShape ;
+    sh:targetClass :AS3179-65 .
+
+as3179o-shacl:AS3179-66NodeShape a sh:NodeShape ;
+    sh:property as3179o-shacl:someValuesFromisObjectOfBoltMachineDoubleHexExtendedWasherHeadDrilledCloseTolShankHasPropertyPropertyShape ;
+    sh:targetClass :AS3179-66 .
+
+as3179o-shacl:AS3179-67NodeShape a sh:NodeShape ;
+    sh:property as3179o-shacl:someValuesFromisObjectOfBoltMachineDoubleHexExtendedWasherHeadDrilledCloseTolShankHasPropertyPropertyShape ;
+    sh:targetClass :AS3179-67 .
+
+as3179o-shacl:AS3179-68NodeShape a sh:NodeShape ;
+    sh:property as3179o-shacl:someValuesFromisObjectOfBoltMachineDoubleHexExtendedWasherHeadDrilledCloseTolShankHasPropertyPropertyShape ;
+    sh:targetClass :AS3179-68 .
+
+as3179o-shacl:AS3179-69NodeShape a sh:NodeShape ;
+    sh:property as3179o-shacl:someValuesFromisObjectOfBoltMachineDoubleHexExtendedWasherHeadDrilledCloseTolShankHasPropertyPropertyShape ;
+    sh:targetClass :AS3179-69 .
+
+as3179o-shacl:AS3179-70NodeShape a sh:NodeShape ;
+    sh:property as3179o-shacl:someValuesFromisObjectOfBoltMachineDoubleHexExtendedWasherHeadDrilledCloseTolShankHasPropertyPropertyShape ;
+    sh:targetClass :AS3179-70 .
+
+as3179o-shacl:AS3179-71NodeShape a sh:NodeShape ;
+    sh:property as3179o-shacl:someValuesFromisObjectOfBoltMachineDoubleHexExtendedWasherHeadDrilledCloseTolShankHasPropertyPropertyShape ;
+    sh:targetClass :AS3179-71 .
+
+as3179o-shacl:AS3179-72NodeShape a sh:NodeShape ;
+    sh:property as3179o-shacl:someValuesFromisObjectOfBoltMachineDoubleHexExtendedWasherHeadDrilledCloseTolShankHasPropertyPropertyShape ;
+    sh:targetClass :AS3179-72 .
+
+as3179o-shacl:AS3179-73NodeShape a sh:NodeShape ;
+    sh:property as3179o-shacl:someValuesFromisObjectOfBoltMachineDoubleHexExtendedWasherHeadDrilledCloseTolShankHasPropertyPropertyShape ;
+    sh:targetClass :AS3179-73 .
+
+as3179o-shacl:AS3179-74NodeShape a sh:NodeShape ;
+    sh:property as3179o-shacl:someValuesFromisObjectOfBoltMachineDoubleHexExtendedWasherHeadDrilledCloseTolShankHasPropertyPropertyShape ;
+    sh:targetClass :AS3179-74 .
+
+as3179o-shacl:AS3179-75NodeShape a sh:NodeShape ;
+    sh:property as3179o-shacl:someValuesFromisObjectOfBoltMachineDoubleHexExtendedWasherHeadDrilledCloseTolShankHasPropertyPropertyShape ;
+    sh:targetClass :AS3179-75 .
+
+as3179o-shacl:AS3179-76NodeShape a sh:NodeShape ;
+    sh:property as3179o-shacl:someValuesFromisObjectOfBoltMachineDoubleHexExtendedWasherHeadDrilledCloseTolShankHasPropertyPropertyShape ;
+    sh:targetClass :AS3179-76 .
+
+as3179o-shacl:AS3179LengthValueNodeShape a sh:NodeShape ;
+    sh:property as3179o-shacl:someValuesFromhasMeasurementUnitMeasurementUnitPropertyShape ;
+    sh:targetClass :AS3179LengthValue .
+
+as3179o-shacl:AS3179MassValueNodeShape a sh:NodeShape ;
+    sh:property as3179o-shacl:someValuesFromhasMeasurementUnitMeasurementUnitPropertyShape ;
+    sh:targetClass :AS3179MassValue .
+
+as3179o-shacl:ArbitraryUnitNodeShape a sh:NodeShape ;
+    sh:property as3179o-shacl:someValuesFromhasQuantityKindQuantityKindPropertyShape ;
+    sh:targetClass <https://www.omg.org/spec/Commons/QuantitiesAndUnits/ArbitraryUnit> .
+
+as3179o-shacl:BaseUnitNodeShape a sh:NodeShape ;
+    sh:property as3179o-shacl:someValuesFromhasQuantityKindQuantityKindPropertyShape,
+        as3179o-shacl:someValuesFromisDefinedInSystemOfUnitsPropertyShape ;
+    sh:targetClass <https://www.omg.org/spec/Commons/QuantitiesAndUnits/BaseUnit> .
+
+as3179o-shacl:BoltMachineDoubleHexExtendedWasherHeadDrilledCloseTolShankNodeShape a sh:NodeShape ;
+    sh:property as3179o-shacl:someValuesFromisObjectOfBoltMachineDoubleHexExtendedWasherHeadDrilledCloseTolShankHasPropertyPropertyShape ;
+    sh:targetClass :BoltMachineDoubleHexExtendedWasherHeadDrilledCloseTolShank .
+
+as3179o-shacl:CoherentDerivedUnitNodeShape a sh:NodeShape ;
+    sh:property as3179o-shacl:someValuesFromhasQuantityKindQuantityKindPropertyShape,
+        as3179o-shacl:someValuesFromisDefinedInSystemOfUnitsPropertyShape,
+        as3179o-shacl:someValuesFromisDerivedFromBaseUnitPropertyShape ;
+    sh:targetClass <https://www.omg.org/spec/Commons/QuantitiesAndUnits/CoherentDerivedUnit> .
+
+as3179o-shacl:ConstantNodeShape a sh:NodeShape ;
+    sh:property as3179o-shacl:someValuesFromhasMeasurementUnitMeasurementUnitPropertyShape ;
+    sh:targetClass <https://www.omg.org/spec/Commons/QuantitiesAndUnits/Constant> .
+
+as3179o-shacl:ContextualNameNodeShape a sh:NodeShape ;
+    sh:property as3179o-shacl:someValuesFromisApplicableInContextPropertyShape ;
+    sh:targetClass <https://www.omg.org/spec/Commons/ContextualDesignators/ContextualName> .
+
+as3179o-shacl:ConversionBasedUnitNodeShape a sh:NodeShape ;
+    sh:property as3179o-shacl:someValuesFromhasQuantityKindQuantityKindPropertyShape,
+        as3179o-shacl:someValuesFromisDefinedInSystemOfUnitsPropertyShape,
+        as3179o-shacl:someValuesFromisDerivedFromBaseUnitPropertyShape ;
+    sh:targetClass <https://www.omg.org/spec/Commons/QuantitiesAndUnits/ConversionBasedUnit> .
+
+as3179o-shacl:CyclicRatioScaleNodeShape a sh:NodeShape ;
+    sh:property as3179o-shacl:someValuesFromclassifiesMeasurementUnitPropertyShape ;
+    sh:targetClass <https://www.omg.org/spec/Commons/QuantitiesAndUnits/CyclicRatioScale> .
+
+as3179o-shacl:DerivedQuantityKindNodeShape a sh:NodeShape ;
+    sh:property as3179o-shacl:someValuesFromisDerivedFromQuantityKindPropertyShape ;
+    sh:targetClass <https://www.omg.org/spec/Commons/QuantitiesAndUnits/DerivedQuantityKind> .
+
+as3179o-shacl:DerivedUnitNodeShape a sh:NodeShape ;
+    sh:property as3179o-shacl:someValuesFromhasQuantityKindQuantityKindPropertyShape,
+        as3179o-shacl:someValuesFromisDefinedInSystemOfUnitsPropertyShape,
+        as3179o-shacl:someValuesFromisDerivedFromBaseUnitPropertyShape ;
+    sh:targetClass <https://www.omg.org/spec/Commons/QuantitiesAndUnits/DerivedUnit> .
+
+as3179o-shacl:IntervalScaleNodeShape a sh:NodeShape ;
+    sh:property as3179o-shacl:someValuesFromclassifiesMeasurementUnitPropertyShape ;
+    sh:targetClass <https://www.omg.org/spec/Commons/QuantitiesAndUnits/IntervalScale> .
+
+as3179o-shacl:LogarithmicScaleNodeShape a sh:NodeShape ;
+    sh:property as3179o-shacl:someValuesFromclassifiesMeasurementUnitPropertyShape ;
+    sh:targetClass <https://www.omg.org/spec/Commons/QuantitiesAndUnits/LogarithmicScale> .
+
+as3179o-shacl:MeasurementScaleNodeShape a sh:NodeShape ;
+    sh:property as3179o-shacl:someValuesFromclassifiesMeasurementUnitPropertyShape ;
+    sh:targetClass <https://www.omg.org/spec/Commons/QuantitiesAndUnits/MeasurementScale> .
+
+as3179o-shacl:MeasurementUnitNodeShape a sh:NodeShape ;
+    sh:property as3179o-shacl:someValuesFromhasQuantityKindQuantityKindPropertyShape ;
+    sh:targetClass <https://www.omg.org/spec/Commons/QuantitiesAndUnits/MeasurementUnit> .
+
+as3179o-shacl:NominalScaleNodeShape a sh:NodeShape ;
+    sh:property as3179o-shacl:someValuesFromclassifiesMeasurementUnitPropertyShape ;
+    sh:targetClass <https://www.omg.org/spec/Commons/QuantitiesAndUnits/NominalScale> .
+
+as3179o-shacl:OrdinalScaleNodeShape a sh:NodeShape ;
+    sh:property as3179o-shacl:someValuesFromclassifiesMeasurementUnitPropertyShape ;
+    sh:targetClass <https://www.omg.org/spec/Commons/QuantitiesAndUnits/OrdinalScale> .
+
+as3179o-shacl:PhysicalUnitNodeShape a sh:NodeShape ;
+    sh:property as3179o-shacl:someValuesFromhasQuantityKindQuantityKindPropertyShape,
+        as3179o-shacl:someValuesFromisDefinedInSystemOfUnitsPropertyShape ;
+    sh:targetClass <https://www.omg.org/spec/Commons/QuantitiesAndUnits/PhysicalUnit> .
+
+as3179o-shacl:PrefixedUnitNodeShape a sh:NodeShape ;
+    sh:property as3179o-shacl:someValuesFromhasFactorPrefixPropertyShape,
+        as3179o-shacl:someValuesFromhasQuantityKindQuantityKindPropertyShape,
+        as3179o-shacl:someValuesFromisDefinedInSystemOfUnitsPropertyShape,
+        as3179o-shacl:someValuesFromisDerivedFromBaseUnitPropertyShape ;
+    sh:targetClass <https://www.omg.org/spec/Commons/QuantitiesAndUnits/PrefixedUnit> .
+
+as3179o-shacl:QuantityKindPowerFactorNodeShape a sh:NodeShape ;
+    sh:property as3179o-shacl:someValuesFromhasQuantityKindQuantityKindPropertyShape ;
+    sh:targetClass <https://www.omg.org/spec/Commons/QuantitiesAndUnits/QuantityKindPowerFactor> .
+
+as3179o-shacl:QuantityNameNodeShape a sh:NodeShape ;
+    sh:property as3179o-shacl:someValuesFromisApplicableInContextPropertyShape,
+        as3179o-shacl:someValuesFromisNameOfScalarQuantityPropertyShape ;
+    sh:targetClass <https://www.omg.org/spec/Commons/QuantitiesAndUnits/QuantityName> .
+
+as3179o-shacl:RatioScaleNodeShape a sh:NodeShape ;
+    sh:property as3179o-shacl:someValuesFromclassifiesMeasurementUnitPropertyShape ;
+    sh:targetClass <https://www.omg.org/spec/Commons/QuantitiesAndUnits/RatioScale> .
+
+as3179o-shacl:RatioScaleWithAdditionalLimitValuesNodeShape a sh:NodeShape ;
+    sh:property as3179o-shacl:someValuesFromclassifiesMeasurementUnitPropertyShape ;
+    sh:targetClass <https://www.omg.org/spec/Commons/QuantitiesAndUnits/RatioScaleWithAdditionalLimitValues> .
+
+as3179o-shacl:ScalarQuantityNodeShape a sh:NodeShape ;
+    sh:property as3179o-shacl:someValuesFromhasQuantityKindQuantityKindPropertyShape ;
+    sh:targetClass <https://www.omg.org/spec/Commons/QuantitiesAndUnits/ScalarQuantity> .
+
+as3179o-shacl:ScalarQuantityValueNodeShape a sh:NodeShape ;
+    sh:property as3179o-shacl:someValuesFromhasMeasurementUnitMeasurementUnitPropertyShape ;
+    sh:targetClass <https://www.omg.org/spec/Commons/QuantitiesAndUnits/ScalarQuantityValue> .
+
+as3179o-shacl:SituationNodeShape a sh:NodeShape ;
+    sh:property as3179o-shacl:someValuesFromhasSubjectRoleRolePropertyShape ;
+    sh:targetClass <https://www.omg.org/spec/Commons/PartiesAndSituations/Situation> .
+
+as3179o-shacl:SystemOfQuantitiesNodeShape a sh:NodeShape ;
+    sh:property as3179o-shacl:someValuesFromdefinesQuantityKindPropertyShape ;
+    sh:targetClass <https://www.omg.org/spec/Commons/QuantitiesAndUnits/SystemOfQuantities> .
+
+as3179o-shacl:SystemOfUnitsNodeShape a sh:NodeShape ;
+    sh:property as3179o-shacl:someValuesFromdefinesMeasurementUnitPropertyShape ;
+    sh:targetClass <https://www.omg.org/spec/Commons/QuantitiesAndUnits/SystemOfUnits> .
+
+as3179o-shacl:VariableNodeShape a sh:NodeShape ;
+    sh:property as3179o-shacl:someValuesFromhasMeasurementUnitMeasurementUnitPropertyShape ;
+    sh:targetClass <https://www.omg.org/spec/Commons/QuantitiesAndUnits/Variable> .
+
+as3179o-shacl:someValuesFromdefinesMeasurementUnitPropertyShape a sh:PropertyShape ;
+    sh:class <https://www.omg.org/spec/Commons/QuantitiesAndUnits/MeasurementUnit> ;
+    sh:minCount 1 ;
+    sh:path <https://www.omg.org/spec/Commons/Designators/defines> .
+
+as3179o-shacl:someValuesFromdefinesQuantityKindPropertyShape a sh:PropertyShape ;
+    sh:class <https://www.omg.org/spec/Commons/QuantitiesAndUnits/QuantityKind> ;
+    sh:minCount 1 ;
+    sh:path <https://www.omg.org/spec/Commons/Designators/defines> .
+
+as3179o-shacl:someValuesFromhasFactorPrefixPropertyShape a sh:PropertyShape ;
+    sh:class <https://www.omg.org/spec/Commons/QuantitiesAndUnits/Prefix> ;
+    sh:minCount 1 ;
+    sh:path <https://www.omg.org/spec/Commons/QuantitiesAndUnits/hasFactor> .
+
+as3179o-shacl:someValuesFromhasSubjectRoleRolePropertyShape a sh:PropertyShape ;
+    sh:class <https://www.omg.org/spec/Commons/PartiesAndSituations/Role> ;
+    sh:minCount 1 ;
+    sh:path <https://www.omg.org/spec/Commons/PartiesAndSituations/hasSubjectRole> .
+
+as3179o-shacl:someValuesFromisDerivedFromQuantityKindPropertyShape a sh:PropertyShape ;
+    sh:class <https://www.omg.org/spec/Commons/QuantitiesAndUnits/QuantityKind> ;
+    sh:minCount 1 ;
+    sh:path <https://www.omg.org/spec/Commons/QuantitiesAndUnits/isDerivedFrom> .
+
+as3179o-shacl:someValuesFromisNameOfScalarQuantityPropertyShape a sh:PropertyShape ;
+    sh:class <https://www.omg.org/spec/Commons/QuantitiesAndUnits/ScalarQuantity> ;
+    sh:minCount 1 ;
+    sh:path <https://www.omg.org/spec/Commons/Designators/isNameOf> .
+
+as3179o-shacl:someValuesFromisApplicableInContextPropertyShape a sh:PropertyShape ;
+    sh:class <https://www.omg.org/spec/Commons/ContextualDesignators/Context> ;
+    sh:minCount 1 ;
+    sh:path <https://www.omg.org/spec/Commons/ContextualDesignators/isApplicableIn> .
+
+as3179o-shacl:someValuesFromisDerivedFromBaseUnitPropertyShape a sh:PropertyShape ;
+    sh:class <https://www.omg.org/spec/Commons/QuantitiesAndUnits/BaseUnit> ;
+    sh:minCount 1 ;
+    sh:path <https://www.omg.org/spec/Commons/QuantitiesAndUnits/isDerivedFrom> .
+
+as3179o-shacl:someValuesFromhasMeasurementUnitMeasurementUnitPropertyShape a sh:PropertyShape ;
+    sh:class <https://www.omg.org/spec/Commons/QuantitiesAndUnits/MeasurementUnit> ;
+    sh:minCount 1 ;
+    sh:path <https://www.omg.org/spec/Commons/QuantitiesAndUnits/hasMeasurementUnit> .
+
+as3179o-shacl:someValuesFromisDefinedInSystemOfUnitsPropertyShape a sh:PropertyShape ;
+    sh:class <https://www.omg.org/spec/Commons/QuantitiesAndUnits/SystemOfUnits> ;
+    sh:minCount 1 ;
+    sh:path <https://www.omg.org/spec/Commons/Designators/isDefinedIn> .
+
+as3179o-shacl:someValuesFromclassifiesMeasurementUnitPropertyShape a sh:PropertyShape ;
+    sh:class <https://www.omg.org/spec/Commons/QuantitiesAndUnits/MeasurementUnit> ;
+    sh:minCount 1 ;
+    sh:path <https://www.omg.org/spec/Commons/Classifiers/classifies> .
+
+as3179o-shacl:someValuesFromhasQuantityKindQuantityKindPropertyShape a sh:PropertyShape ;
+    sh:class <https://www.omg.org/spec/Commons/QuantitiesAndUnits/QuantityKind> ;
+    sh:minCount 1 ;
+    sh:path <https://www.omg.org/spec/Commons/QuantitiesAndUnits/hasQuantityKind> .
+
+as3179o-shacl:someValuesFromisObjectOfBoltMachineDoubleHexExtendedWasherHeadDrilledCloseTolShankHasPropertyPropertyShape a sh:PropertyShape ;
+    sh:class :BoltMachineDoubleHexExtendedWasherHeadDrilledCloseTolShankHasProperty ;
+    sh:minCount 1 ;
+    sh:path <https://spec.sae.com/sae/ontology/foundations/isObjectOf> .
+
