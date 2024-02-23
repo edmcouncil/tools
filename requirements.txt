@@ -14,7 +14,6 @@ pyshacl~=0.23.0
 owlready2~=0.44
 openai~=0.27.8
 pyjsonviewer
-gitpython
 PyYAML~=6.0.1
 xlsxwriter
 pyspellchecker
@@ -28,4 +27,5 @@ faiss-cpu
 flask
 boto3
 more-itertools
+
 
