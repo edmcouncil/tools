@@ -1,19 +1,15 @@
 import collections
 
 import networkx
-import owlready2
-import xlsxwriter
 from owlready2 import *
 from networkx import Graph
 from xlsxwriter import Workbook
-from xlsxwriter.worksheet import Worksheet
 
 loopy_classes = []
-
 type_map = {str: 'xsd.string', normstr: 'xsd:anyURI', bool: 'xsd:boolean', float: 'xsd:float'}
 
 
-def list_length(l):
+def list_length(l: list):
     return len(l)
 
 
@@ -95,7 +91,6 @@ def __extend_paths(paths: list, ontology: Ontology, graph: Graph) -> list:
             sink = path[i+1]
             edge_dict = graph.edges[source, sink]
             edge = edge_dict['label']
-            triple = [source, edge, sink]
             if i == 0:
                 extended_path.append(source)
             extended_path.append(edge)
@@ -166,7 +161,7 @@ def __get_node_typed_triples(paths: list) -> dict:
     type_nodes = set()
     for path in paths:
         for node_index in range(len(path)):
-            if (node_index%2) == 0:
+            if (node_index % 2) == 0:
                 type_nodes.add(path[node_index])
     type_nodes = list(type_nodes)
     for node_type in type_nodes:
@@ -218,7 +213,6 @@ def generate_model_for_class(ontology_file_path: str, ont_class_iri: str):
     ont_class = ont_classes[0]
     graph = __collect_neighbours(ont_class, ont_class, networkx.DiGraph())
     pruned_graph = __remove_inferrable_edges(graph=graph)
-    # networkx.write_edgelist(G=graph,path='graph.txt',delimiter='|')
     paths = __get_paths_from_graph(graph=pruned_graph, ont_class=ont_class)
     extended_paths = __extend_paths(paths=paths, ontology=ontology, graph=pruned_graph)
     short_paths = __shorten_paths(paths=extended_paths)
